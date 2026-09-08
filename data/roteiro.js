@@ -218,11 +218,11 @@ window.ROTEIRO = {
         'imigração mesmo em trânsito, e essa fila leva de 20 a 45 minutos. Sobram 1h35 a 2h ' +
         'de margem real. Não é apertado, mas também não é para passear.',
         pesquisa: '2026-09-08' },
-      { tipo: 'atencao', texto:
-        'Se as duas passagens forem bilhete único, a bagagem vai despachada até Orlando e ' +
-        'vocês só seguem para o portão. Se forem bilhetes separados, precisam retirar e ' +
-        'redespachar em Bogotá — e aí 2h20 fica justo. Confirmem isso com a agência antes ' +
-        'de viajar.' },
+      { tipo: 'bom', texto:
+        'CONFIRMADO em 08/09: é bilhete único. A bagagem vai despachada de ponta a ponta ' +
+        'até Orlando e em Bogotá vocês só passam pela imigração e seguem para o portão — ' +
+        'sem retirar e sem redespachar mala. Isso tira o único cenário em que as 2h20 de ' +
+        'conexão ficariam apertadas.' },
       { tipo: 'bom', texto:
         'Voos internacionais chegam no Terminal C do MCO, que é novo e rápido. O ponto de ' +
         'Uber fica no NÍVEL 6 do Terminal C, sinalizado como "Rideshare Pickup". Só peçam a ' +
@@ -341,11 +341,20 @@ window.ROTEIRO = {
         motivo: 'Cookie de meio quilo, fama justificada. A fila é longa e costuma ter espera ' +
                 'virtual pelo app — entrem na lista assim que chegarem e passeiem enquanto isso.',
         pesquisa: '2026-09-08' },
-      { nome: 'Amphicar Tour', quando: 'decidir: hoje não cabe', custo: '~US$ 125 por carro',
-        motivo: 'Passeio de 20 min num conversível anfíbio de 1960 que entra no lago. Sai do ' +
-                'píer do próprio Boathouse, onde vocês jantam. Com 1h30 antes do jantar, ' +
-                'não cabe junto com o World of Disney — e no dia 21 vocês têm ainda menos ' +
-                'tempo. Se quiserem, é hoje e cortando a loja.',
+      { nome: 'Amphicar Tour', quando: 'decidir na hora, depois do jantar',
+        custo: 'US$ 125 por carro (não por pessoa) · até 4 pessoas',
+        motivo: 'Um carro que entra no lago. Conversível alemão dos anos 60, um dos poucos ' +
+                'carros de produção que navegavam de verdade — o Boathouse restaurou uma ' +
+                'frota. Um capitão dirige, desce a rampa e entra na água COM o carro; vocês ' +
+                'flutuam 20 min pelo lago e ele sobe de volta para o asfalto. A graça é a ' +
+                'estranheza, não o passeio.\n\n' +
+                'Sai do píer do próprio Boathouse, funciona até 22h e é por ordem de ' +
+                'chegada — inscrição na Boathouse Boutique, sem reserva. Ou seja: dá para ' +
+                'decidir na hora, saindo do jantar por volta das 20h30. Não precisa cortar ' +
+                'o World of Disney.\n\n' +
+                'O contra não é tempo, é cansaço: vocês vão estar acordados há quase 24h e ' +
+                'saem às 6h45 no dia seguinte para o Magic Kingdom. US$ 62 por cabeça por ' +
+                '20 minutos, num dia em que dormir vale muito.',
         pesquisa: '2026-09-08' },
       { nome: 'Aerophile — balão cativo', quando: 'fica para o dia 21', custo: '~US$ 25',
         motivo: 'Sobe 120 m preso por cabo, 8 minutos, vista de até 16 km. Não voa com vento ' +
@@ -460,7 +469,9 @@ window.ROTEIRO = {
         titulo: 'Voltar ao hotel',
         descricao: 'Amanhã é Magic Kingdom com saída às 6h45',
         contexto:
-          'Não estiquem. O dia 11 começa às 6h45 e é o dia mais denso da primeira semana.',
+          'Não estiquem. O dia 11 começa às 6h45 e é o dia mais denso da primeira semana. ' +
+          'A única coisa que justifica atrasar a volta é o Amphicar, que fica no píer do ' +
+          'próprio Boathouse e leva 20 minutos — e só se vocês estiverem inteiros.',
         localId: 'hotel-travelodge', acesso: [] },
     ],
     renuncias: null,
