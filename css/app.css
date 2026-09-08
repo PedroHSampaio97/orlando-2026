@@ -565,6 +565,7 @@ body {
 
 .selos-dia { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
 .selo-dia {
+  flex: 0 0 auto; white-space: nowrap;
   font-size: 10.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
   padding: 4px 8px; border-radius: var(--r-selo);
   background: var(--superficie-2); color: var(--texto-fraco);
@@ -640,13 +641,13 @@ body {
   border-radius: var(--r-card); box-shadow: var(--sombra-1); padding: 14px 16px;
 }
 .cartao-cabeca { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
-.ct-hora { font-size: 18px; font-weight: 800; color: var(--op);
+.ct-hora { flex: 0 0 auto; white-space: nowrap; font-size: 18px; font-weight: 800; color: var(--op);
   font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
-.ct-hora-antiga { font-size: 11.5px; font-weight: 700; color: var(--texto-fraco);
+.ct-hora-antiga { flex: 0 0 auto; white-space: nowrap; font-size: 11.5px; font-weight: 700; color: var(--texto-fraco);
   text-decoration: line-through; }
 .ct-pin { width: 6px; height: 6px; border-radius: 50%; background: var(--acento);
   flex: 0 0 auto; }
-.ct-dur { font-size: 11.5px; color: var(--texto-fraco); font-weight: 650; }
+.ct-dur { flex: 0 0 auto; white-space: nowrap; font-size: 11.5px; color: var(--texto-fraco); font-weight: 650; }
 
 .ct-check {
   margin-left: auto; flex: 0 0 auto; width: 40px; height: 40px; border-radius: 12px;
@@ -1056,6 +1057,7 @@ body {
 
 .selo-dia.fechado { background: var(--ok-fundo); color: var(--ok); }
 .ct-fuso {
+  flex: 0 0 auto; white-space: nowrap;
   font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
   color: var(--texto-fraco); background: var(--superficie-2);
   padding: 3px 6px; border-radius: var(--r-selo);
@@ -1114,21 +1116,22 @@ body {
 .nao-perca:first-child { padding-top: 0; }
 .nao-perca:last-child { border-bottom: 0; padding-bottom: 0; }
 .np-topo { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-.np-nome { font-size: 15.5px; font-weight: 700; letter-spacing: -.01em; }
+/* o nome e quem encolhe e quebra linha; o badge nunca. */
+.np-nome { flex: 1 1 auto; min-width: 0;
+  font-size: 15.5px; font-weight: 700; letter-spacing: -.01em; }
 .np-quando {
+  flex: 0 0 auto; white-space: nowrap;
   font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
   padding: 4px 7px; border-radius: var(--r-selo);
 }
 .np-quando.agora   { background: var(--ok-fundo);     color: var(--ok); }
 .np-quando.decidir { background: var(--alerta-fundo); color: var(--alerta); }
 .np-quando.depois  { background: var(--superficie-2); color: var(--texto-fraco); }
-.np-custo { font-size: 12.5px; color: var(--acento); font-weight: 700; margin-top: 4px; }
-.np-motivo { font-size: 13.5px; color: var(--texto-fraco); margin-top: 6px; line-height: 1.6; }
-.np-quando.fora { background: var(--superficie-2); color: var(--texto-fraco);
-  text-decoration: line-through; }
-.np-condicao {
-  font-size: 11.5px; font-weight: 650; color: var(--texto-fraco);
-  font-style: italic;
-}
+.np-quando.fora    { background: var(--superficie-2); color: var(--texto-fraco);
+                     text-decoration: line-through; }
+.np-condicao { flex: 0 0 auto; font-size: 11.5px; font-weight: 650;
+  color: var(--texto-fraco); font-style: italic; }
 .nao-perca.fora { opacity: .5; }
 .nao-perca.fora .np-nome { text-decoration: line-through; }
+.np-custo { font-size: 12.5px; color: var(--acento); font-weight: 700; margin-top: 4px; }
+.np-motivo { font-size: 13.5px; color: var(--texto-fraco); margin-top: 6px; line-height: 1.6; }

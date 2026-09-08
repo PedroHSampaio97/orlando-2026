@@ -9,7 +9,7 @@
    novo precache e a limpeza do cache velho.
    ========================================================================== */
 
-const VERSAO = 'orlando2026-v5';
+const VERSAO = 'orlando2026-v6';
 const CACHE = VERSAO;
 
 const ARQUIVOS = [
