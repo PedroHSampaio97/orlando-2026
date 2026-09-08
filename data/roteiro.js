@@ -254,7 +254,8 @@ window.ROTEIRO = {
         gatilho: 'Vocês saem do Terminal C entre 14h00 e 16h00.',
         passos: [
           'Corta o Walmart para o essencial: água, protetor solar, ibuprofeno e barrinhas. ' +
-          '20 minutos, sem passear pelos corredores.',
+          '20 minutos, sem passear pelos corredores — e a volta ao hotel para largar as ' +
+          'compras continua obrigatória, senão vocês carregam o fardo a noite inteira.',
           'O resto da lista vai para o dia 12, que é dia de outlet na I-Drive e comporta ' +
           'uma parada de mercado sem custo nenhum de roteiro.',
           'Disney Springs direto, mesmo que chegue só 18h15. Uma hora lá dentro já dá o ' +
@@ -337,30 +338,22 @@ window.ROTEIRO = {
       { nome: 'A beira da água ao pôr do sol', quando: 'hoje', custo: 'grátis',
         motivo: 'O sol se põe às 17h35 em novembro. Vocês chegam exatamente na hora certa: ' +
                 'pegam a luz do fim de tarde e depois a iluminação acendendo.' },
-      { nome: 'Gideon’s Bakehouse', quando: 'hoje, se a fila deixar', custo: '~US$ 6 o cookie',
+      { nome: 'Gideon’s Bakehouse', quando: 'hoje', condicao: 'se a fila deixar',
+        custo: '~US$ 6 o cookie',
         motivo: 'Cookie de meio quilo, fama justificada. A fila é longa e costuma ter espera ' +
                 'virtual pelo app — entrem na lista assim que chegarem e passeiem enquanto isso.',
         pesquisa: '2026-09-08' },
-      { nome: 'Amphicar Tour', quando: 'decidir na hora, depois do jantar',
-        custo: 'US$ 125 por carro (não por pessoa) · até 4 pessoas',
-        motivo: 'Um carro que entra no lago. Conversível alemão dos anos 60, um dos poucos ' +
-                'carros de produção que navegavam de verdade — o Boathouse restaurou uma ' +
-                'frota. Um capitão dirige, desce a rampa e entra na água COM o carro; vocês ' +
-                'flutuam 20 min pelo lago e ele sobe de volta para o asfalto. A graça é a ' +
-                'estranheza, não o passeio.\n\n' +
-                'Sai do píer do próprio Boathouse, funciona até 22h e é por ordem de ' +
-                'chegada — inscrição na Boathouse Boutique, sem reserva. Ou seja: dá para ' +
-                'decidir na hora, saindo do jantar por volta das 20h30. Não precisa cortar ' +
-                'o World of Disney.\n\n' +
-                'O contra não é tempo, é cansaço: vocês vão estar acordados há quase 24h e ' +
-                'saem às 6h45 no dia seguinte para o Magic Kingdom. US$ 62 por cabeça por ' +
-                '20 minutos, num dia em que dormir vale muito.',
+      { nome: 'Amphicar Tour', quando: 'descartado', custo: 'US$ 125 por carro',
+        motivo: 'DESCARTADO em 08/09 por preço. Um carro dos anos 60 que entra no lago com ' +
+                'vocês dentro, 20 minutos. Fica registrado aqui só para não ser reproposto: ' +
+                'US$ 62 por cabeça por 20 minutos não passa no teste.',
         pesquisa: '2026-09-08' },
-      { nome: 'Aerophile — balão cativo', quando: 'fica para o dia 21', custo: '~US$ 25',
+      { nome: 'Aerophile — balão cativo', quando: 'dia 21', custo: '~US$ 25',
         motivo: 'Sobe 120 m preso por cabo, 8 minutos, vista de até 16 km. Não voa com vento ' +
                 'forte, então nunca dá para contar com ele.',
         pesquisa: '2026-09-08' },
-      { nome: 'Christmas Tree Stroll', quando: 'só existe no dia 21', custo: 'grátis',
+      { nome: 'Christmas Tree Stroll', quando: 'dia 21', condicao: 'só existe a partir de 13/11',
+        custo: 'grátis',
         motivo: 'A decoração de Natal do Disney Springs começa em 13/11. Hoje não existe. ' +
                 'É exatamente por isso que vocês voltam no dia 21.' },
     ],
@@ -369,7 +362,7 @@ window.ROTEIRO = {
       { id: 'b-1011-0140', hora: '01:40', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voo GIG → Bogotá',
         descricao: 'Decolagem 01h40 · pouso 06h00 em Bogotá',
-        fuso: 'Brasília',
+        fuso: 'Rio',
         contexto:
           'Cerca de 6h20 de voo, à noite. Durmam o que der: vocês só vão deitar de novo ' +
           'em Orlando, quase 24 horas depois de sair de casa. Máscara de olho e água.',
@@ -423,36 +416,53 @@ window.ROTEIRO = {
         localId: 'mco', acesso: [], critico: true, pesquisa: '2026-09-08' },
 
       { id: 'b-1011-1445', hora: '14:45', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Uber para o hotel · check-in',
+        titulo: 'Uber para o hotel',
         descricao: '~30 min, US$ 35–45',
         contexto:
-          'Check-in costuma abrir às 15h. Se chegarem antes, deixem as malas na recepção e ' +
-          'sigam — esperar no saguão é o pior uso possível da primeira tarde.',
+          'Check-in abre às 15h. Vocês chegam quinze minutos antes, o que dá certo: sobem, ' +
+          'largam as malas no quarto e saem leves para o mercado.',
+        localId: 'hotel-travelodge', acesso: [] },
+
+      { id: 'b-1011-1500', hora: '15:00', ancora: 'referencia', tipo: 'tarefa',
+        titulo: 'Check-in e largar as malas',
+        descricao: 'Check-in abre às 15h em ponto',
+        contexto:
+          'Subam, larguem tudo e desçam. Não desfaçam mala agora — isso é para depois do ' +
+          'jantar, ou para amanhã.',
         localId: 'hotel-travelodge', acesso: [] },
 
       { id: 'b-1011-1530', hora: '15:30', ancora: 'referencia', tipo: 'compras',
         titulo: 'Walmart Supercenter',
-        descricao: 'Lista completa na ficha do dia. 45 a 60 min',
+        descricao: 'Lista completa na ficha do dia. 45 min, ~15 min de Uber',
         contexto:
-          'A compra que abastece os 16 dias. Se o dia estiver atrasado, façam só os quatro ' +
+          'A compra que abastece os 16 dias. Se o dia estiver atrasado, façam só os oito ' +
           'itens essenciais e joguem o resto para o dia 12.',
         endereco: '1471 E Osceola Pkwy', localId: 'walmart-osceola', acesso: [] },
 
-      { id: 'b-1011-1730', hora: '17:30', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Disney Springs',
+      { id: 'b-1011-1645', hora: '16:45', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Voltar ao hotel e guardar as compras',
+        descricao: 'Fardo de água não vai para o Disney Springs',
+        contexto:
+          'Esta volta existe por um motivo só: ninguém anda pelo Disney Springs com uma ' +
+          'caixa de 24 garrafas. Guardem tudo, separem só o que vai para o dia 11 — duas ' +
+          'garrafas, protetor solar e barrinhas na mochila — e saiam de novo.\n\n' +
+          'Custa uma corrida de Uber a mais (~US$ 12), e é dinheiro bem gasto.',
+        localId: 'hotel-travelodge', acesso: [] },
+
+      { id: 'b-1011-1710', hora: '17:10', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Sair para o Disney Springs',
         descricao: 'Uber, ~20 min. Pôr do sol às 17h35',
         contexto:
           'Entrada livre, sem ingresso e sem catraca. Vocês chegam junto com o pôr do sol, ' +
           'que é a melhor hora do lugar.',
         localId: 'disney-springs', acesso: [] },
 
-      { id: 'b-1011-1745', hora: '17:45', ancora: 'referencia', tipo: 'compras',
+      { id: 'b-1011-1745', hora: '17:35', ancora: 'referencia', tipo: 'compras',
         titulo: 'The Landing → Marketplace → Town Center',
         descricao: 'World of Disney é a maior loja Disney do mundo',
         contexto:
-          'São 1h15 até o jantar. Dá para o World of Disney com calma e a beira da água. ' +
-          'Não dá para somar Amphicar e balão — esses estão na lista de decisão da ficha ' +
-          'do dia.',
+          'São 1h25 até o jantar, de mãos livres. Dá para o World of Disney com calma e a ' +
+          'beira da água no fim de tarde, que é a melhor hora do lugar.',
         localId: 'disney-springs', acesso: [] },
 
       { id: 'b-1011-1900', hora: '19:00', ancora: 'fixo', tipo: 'refeicao',

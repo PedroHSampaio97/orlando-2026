@@ -315,15 +315,18 @@ window.Fase3 = (function () {
     d.appendChild(el('summary', null, '⭐  O que não perder — e o que fica para depois'));
     const c = el('div', 'acordeao-corpo');
     itens.forEach(function (x) {
-      const b = el('div', 'nao-perca');
+      const b = el('div', 'nao-perca' + (x.quando === 'descartado' ? ' fora' : ''));
       const topo = el('div', 'np-topo');
       topo.appendChild(el('span', 'np-nome', x.nome));
       if (x.quando) {
+        // etiqueta fechada: hoje | dia NN | decidir | descartado
         const q = String(x.quando);
-        const classe = /hoje/.test(q) && !/não cabe/.test(q) ? 'agora'
-                     : /decidir/.test(q) ? 'decidir' : 'depois';
+        const classe = q === 'hoje' ? 'agora'
+                     : q === 'decidir' ? 'decidir'
+                     : q === 'descartado' ? 'fora' : 'depois';
         topo.appendChild(el('span', 'np-quando ' + classe, q));
       }
+      if (x.condicao) topo.appendChild(el('span', 'np-condicao', x.condicao));
       b.appendChild(topo);
       if (x.custo) b.appendChild(el('div', 'np-custo', x.custo));
       if (x.motivo) b.appendChild(el('div', 'np-motivo', x.motivo));

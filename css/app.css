@@ -1124,3 +1124,11 @@ body {
 .np-quando.depois  { background: var(--superficie-2); color: var(--texto-fraco); }
 .np-custo { font-size: 12.5px; color: var(--acento); font-weight: 700; margin-top: 4px; }
 .np-motivo { font-size: 13.5px; color: var(--texto-fraco); margin-top: 6px; line-height: 1.6; }
+.np-quando.fora { background: var(--superficie-2); color: var(--texto-fraco);
+  text-decoration: line-through; }
+.np-condicao {
+  font-size: 11.5px; font-weight: 650; color: var(--texto-fraco);
+  font-style: italic;
+}
+.nao-perca.fora { opacity: .5; }
+.nao-perca.fora .np-nome { text-decoration: line-through; }
