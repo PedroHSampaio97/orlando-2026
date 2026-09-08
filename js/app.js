@@ -1,6 +1,6 @@
 /* =============================================================================
    Orlando 2026 — interface
-   Fase 2: Home (contagem, dia de hoje, próximo compromisso) + Timeline do dia.
+   Home por urgência · timeline com trilho na cor da operadora · linha do agora
    ========================================================================== */
 
 (function () {
@@ -10,8 +10,26 @@
   const E = window.Estado;
   const $ = (s) => document.querySelector(s);
 
+  const el = (tag, cls, texto) => {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (texto != null) n.textContent = texto;
+    return n;
+  };
+  function svg(d, extra) {
+    const s = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    s.setAttribute('viewBox', '0 0 24 24');
+    if (extra) s.setAttribute('class', extra);
+    String(d).split('|').forEach(function (p) {
+      const n = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      n.setAttribute('d', p);
+      s.appendChild(n);
+    });
+    return s;
+  }
+
   /* ---------------------------------------------------------------------------
-     Tempo — sempre em minutos desde a meia-noite, sempre data civil pura.
+     Tempo — minutos desde a meia-noite, datas civis puras
      ------------------------------------------------------------------------ */
   const paraMin = (h) => { const p = String(h).split(':'); return (+p[0]) * 60 + (+p[1]); };
   const paraHora = (m) => {
@@ -23,20 +41,32 @@
     return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' +
            String(d.getDate()).padStart(2, '0');
   };
+  const agoraMin = () => new Date().getHours() * 60 + new Date().getMinutes();
   const diasEntre = (a, b) =>
     Math.round((new Date(b + 'T00:00:00') - new Date(a + 'T00:00:00')) / 86400000);
-
-  const MESES = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun',
-                 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
-  const dataCurta = (iso) => {
+  const MES = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+  const ddmm = (iso) => { const p = iso.split('-'); return (+p[2]) + '/' + p[1]; };
+  const dataExtenso = (iso) => {
     const p = iso.split('-');
-    return (+p[2]) + ' de ' + { '01':'janeiro','02':'fevereiro','03':'março','04':'abril',
-      '05':'maio','06':'junho','07':'julho','08':'agosto','09':'setembro','10':'outubro',
-      '11':'novembro','12':'dezembro' }[p[1]];
+    return (+p[2]) + ' de ' + ['janeiro','fevereiro','março','abril','maio','junho','julho',
+      'agosto','setembro','outubro','novembro','dezembro'][(+p[1]) - 1];
   };
+  const plural = (n, s, p) => n + ' ' + (Math.abs(n) === 1 ? s : p);
 
   /* ---------------------------------------------------------------------------
-     Núcleo: horário efetivo de um bloco.
+     Cor da operadora — é o que faz os 17 dias parecerem 17 dias
+     ------------------------------------------------------------------------ */
+  function chaveOp(dia) {
+    if (dia.operadora) return dia.operadora;
+    if (dia.tipo === 'logistica') return 'logistica';
+    return 'livre';
+  }
+  const corOp = (dia) =>
+    getComputedStyle(document.documentElement)
+      .getPropertyValue('--op-' + chaveOp(dia)).trim() || '#0E4C5E';
+
+  /* ---------------------------------------------------------------------------
+     Horário efetivo dos blocos
      ------------------------------------------------------------------------ */
   function refDoDia(dia) {
     if (!dia.referencia) return null;
@@ -46,9 +76,8 @@
     return !!(dia.referencia && E.referencia(dia.id) &&
               E.referencia(dia.id) !== dia.referencia.padrao);
   }
-  function ancoraDe(bloco) { return E.ancora(bloco.id) || bloco.ancora; }
+  const ancoraDe = (b) => E.ancora(b.id) || b.ancora;
 
-  // Devolve os blocos do dia com hora efetiva, ordenados, com colisões marcadas.
   function blocosDoDia(dia) {
     const padrao = dia.referencia ? paraMin(dia.referencia.padrao) : null;
     const real   = dia.referencia ? paraMin(refDoDia(dia)) : null;
@@ -58,25 +87,16 @@
       const anc = ancoraDe(b);
       const base = paraMin(b.hora);
       const efet = (anc === 'referencia' && padrao !== null) ? base + delta : base;
-      return {
-        dados: b, ancora: anc, minOriginal: base, min: efet,
-        hora: paraHora(efet), deslocado: efet !== base, colisao: null,
-      };
+      return { dados: b, ancora: anc, minOriginal: base, min: efet,
+               hora: paraHora(efet), deslocado: efet !== base, colisao: null };
     });
-
     lista.sort((a, b) => a.min - b.min || a.minOriginal - b.minOriginal);
 
-    // Colisão: dois blocos que ficaram a menos de 15 min um do outro, mas que no
-    // documento estavam separados por 15 min ou mais. Ou seja, o deslocamento criou
-    // o conflito — não é um aperto que já existia.
     for (let i = 1; i < lista.length; i++) {
       const a = lista[i - 1], b = lista[i];
-      const agora = b.min - a.min;
-      const antes = Math.abs(b.minOriginal - a.minOriginal);
-      if (agora < 15 && antes >= 15) {
-        // Cada lado nomeia o OUTRO bloco, nunca a si mesmo.
-        const frase = (outro) => 'Choca com "' + outro.dados.titulo + '"' +
-          (outro.ancora === 'fixo' ? ', que tem horário fixo e não desloca.' : '.');
+      if ((b.min - a.min) < 15 && Math.abs(b.minOriginal - a.minOriginal) >= 15) {
+        const frase = (o) => 'Choca com "' + o.dados.titulo + '"' +
+          (o.ancora === 'fixo' ? ', que tem horário fixo e não desloca.' : '.');
         a.colisao = a.colisao || frase(b);
         b.colisao = frase(a);
       }
@@ -85,78 +105,186 @@
   }
 
   const contarFeitos = (dia) => dia.blocos.filter((b) => E.feito(b.id)).length;
-  // Blocos "vazio proposital" não contam como tarefa a cumprir.
   const contaveis = (dia) => dia.blocos.filter((b) => b.tipo !== 'vazio');
 
   /* ---------------------------------------------------------------------------
-     Estado da navegação
+     Navegação
      ------------------------------------------------------------------------ */
   const diaDeHoje = () => R.dias.find((d) => d.data === hojeISO()) || null;
   let diaAtual = diaDeHoje() || R.dias[0];
   let soFalta = false;
 
-  /* ---------------------------------------------------------------------------
-     HOME
-     ------------------------------------------------------------------------ */
+  const TELAS = ['home', 'dia', 'comer', 'guia', 'pendencias', 'ajustes'];
+
+  function aplicarCorTopo(dia) {
+    const raiz = $('#topo');
+    raiz.setAttribute('data-op', dia ? chaveOp(dia) : 'logistica');
+    const m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', dia ? corOp(dia) : '#0E4C5E');
+  }
+
+  function mostrarTela(nome) {
+    TELAS.forEach(function (t) {
+      const alvo = $('#tela-' + t);
+      if (alvo) alvo.classList.toggle('oculto', t !== nome);
+    });
+    document.querySelectorAll('.aba').forEach(function (a) {
+      a.classList.toggle('ativa', a.dataset.tela === nome);
+    });
+    window.scrollTo(0, 0);
+
+    if (nome === 'dia') { aplicarCorTopo(diaAtual); pintarDia(); }
+    else {
+      aplicarCorTopo(null);
+      if (nome === 'home') pintarHome();
+      else if (nome === 'comer') Fase3.pintarRestaurantes();
+      else if (nome === 'guia') Fase4.pintarGuia();
+      else if (nome === 'pendencias') Fase3.pintarPendencias();
+      else if (nome === 'ajustes') Fase5.pintarAjustes();
+    }
+  }
+  function irParaDia(dia) { diaAtual = dia; mostrarTela('dia'); }
+  window.AppNav = { irParaDia: irParaDia, mostrarTela: mostrarTela,
+                    acharDia: (id) => R.dias.find((d) => d.id === id) };
+
+  /* =========================================================================
+     HOME — ordenada por urgência
+     ====================================================================== */
+  function pendenciasAbertas() {
+    const hoje = hojeISO();
+    return R.checklist
+      .filter((c) => !E.checkFeito(c.id))
+      .map(function (c) {
+        const data = E.dataChecklist(c.id) || c.dataAlvo;
+        return { c: c, data: data, faltam: diasEntre(hoje, data) };
+      })
+      .sort((a, b) => a.faltam - b.faltam);
+  }
+
   function pintarHome() {
     const hoje = hojeISO();
-    const faltam = diasEntre(hoje, R.viagem.inicio);
     const dHoje = diaDeHoje();
+    const faltamViagem = diasEntre(hoje, R.viagem.inicio);
 
-    const cx = $('#contagem');
+    /* faixa fina */
+    const f = $('#faixa-viagem');
+    f.innerHTML = '';
     if (dHoje) {
       const n = diasEntre(R.viagem.inicio, hoje) + 1;
-      $('#contagem-num').textContent = n;
-      $('#contagem-unid').textContent = 'de ' + R.dias.length;
-      $('#contagem-alvo').textContent = dHoje.emoji + ' ' + dHoje.titulo;
-      $('#contagem .contagem-rotulo').textContent = 'dia da viagem';
-    } else if (faltam > 0) {
-      $('#contagem-num').textContent = faltam;
-      $('#contagem-unid').textContent = faltam === 1 ? 'dia' : 'dias';
-      $('#contagem-alvo').textContent = 'para 10 de novembro de 2026';
-      $('#contagem .contagem-rotulo').textContent = 'faltam';
+      f.appendChild(el('b', null, 'Dia ' + n + ' de ' + R.dias.length));
+      f.appendChild(document.createTextNode('· ' + dHoje.titulo));
+    } else if (faltamViagem > 0) {
+      f.appendChild(el('b', null, 'faltam ' + faltamViagem));
+      f.appendChild(document.createTextNode(faltamViagem === 1 ? 'dia' : 'dias'));
     } else {
-      $('#contagem-num').textContent = '✓';
-      $('#contagem-unid').textContent = 'viagem concluída';
-      $('#contagem-alvo').textContent = '10 a 26 de novembro de 2026';
-      $('#contagem .contagem-rotulo').textContent = '';
+      f.appendChild(el('b', null, 'viagem concluída'));
     }
-    cx.hidden = false;
+    f.appendChild(el('span', null, '10 a 26 nov 2026'));
 
-    pintarProximo(dHoje);
-    pintarGradeDias();
-    pintarAlertaHome();
+    pintarCartaoAcao(dHoje);
+    pintarHomePendencias();
+    pintarListaDias();
+    pintarResumo();
   }
 
-  function pintarProximo(dHoje) {
-    const alvo = $('#cartao-proximo');
+  /* O herói da Home: o que exige ação agora */
+  function pintarCartaoAcao(dHoje) {
+    const alvo = $('#cartao-acao');
     alvo.innerHTML = '';
-    if (!dHoje) return;
+    const card = el('div', 'acao');
 
-    const agoraMin = new Date().getHours() * 60 + new Date().getMinutes();
-    const prox = blocosDoDia(dHoje).find((b) => b.min >= agoraMin && !E.feito(b.dados.id));
-    if (!prox) return;
+    if (dHoje) {
+      /* durante a viagem: o dia de hoje */
+      card.setAttribute('data-op', chaveOp(dHoje));
+      const total = contaveis(dHoje).length, feitos = contarFeitos(dHoje);
+      const prox = blocosDoDia(dHoje)
+        .find((b) => b.min >= agoraMin() && !E.feito(b.dados.id));
 
-    const falta = prox.min - agoraMin;
-    const h = Math.floor(falta / 60), m = falta % 60;
-    const txt = falta <= 0 ? 'agora' :
-      (h > 0 ? 'em ' + h + 'h' + (m ? String(m).padStart(2, '0') : '') : 'em ' + m + ' min');
+      const rot = el('div', 'acao-rot');
+      rot.appendChild(document.createTextNode('hoje · ' + dHoje.emoji + ' ' + dHoje.titulo));
+      card.appendChild(rot);
 
-    const el = document.createElement('div');
-    el.className = 'proximo';
-    el.innerHTML =
-      '<div class="proximo-rotulo">próximo compromisso</div>' +
-      '<div class="proximo-hora">' + prox.hora + '</div>' +
-      '<div class="proximo-titulo"></div>' +
-      '<div class="proximo-falta">' + txt + '</div>';
-    el.querySelector('.proximo-titulo').textContent = prox.dados.titulo;
-    el.addEventListener('click', function () { irParaDia(dHoje); });
-    alvo.appendChild(el);
+      if (prox) {
+        const falta = prox.min - agoraMin();
+        card.appendChild(el('div', 'acao-prazo', prox.hora));
+        card.appendChild(el('div', 'acao-titulo', prox.dados.titulo));
+        card.appendChild(el('div', 'acao-meta',
+          falta <= 0 ? 'agora' :
+          falta < 60 ? 'em ' + falta + ' min' :
+          'em ' + Math.floor(falta / 60) + 'h' +
+            (falta % 60 ? String(falta % 60).padStart(2, '0') : '')));
+      } else {
+        card.appendChild(el('div', 'acao-prazo', feitos + '/' + total));
+        card.appendChild(el('div', 'acao-titulo', 'Nada mais marcado para hoje'));
+      }
+      const prog = el('div', 'acao-prog');
+      prog.appendChild(el('i')).style.width = (total ? (feitos / total) * 100 : 0) + '%';
+      card.appendChild(prog);
+
+      const b = el('button', 'acao-botao', 'Abrir o roteiro de hoje');
+      b.addEventListener('click', function () { irParaDia(dHoje); });
+      card.appendChild(b);
+
+    } else {
+      /* antes da viagem: a pendência mais próxima */
+      const abertas = pendenciasAbertas();
+      const atrasadas = abertas.filter((p) => p.faltam < 0).length;
+      const prox = abertas[0];
+
+      if (!prox) {
+        card.appendChild(el('div', 'acao-rot', 'tudo em ordem'));
+        card.appendChild(el('div', 'acao-prazo', '✓'));
+        card.appendChild(el('div', 'acao-titulo', 'Nenhuma pendência aberta'));
+      } else {
+        card.setAttribute('data-op', prox.faltam < 0 ? 'universal' : 'logistica');
+        card.appendChild(el('div', 'acao-rot',
+          prox.faltam < 0 ? 'atrasada' : 'próxima pendência'));
+        card.appendChild(el('div', 'acao-prazo',
+          prox.faltam < 0 ? plural(-prox.faltam, 'dia', 'dias') :
+          prox.faltam === 0 ? 'hoje' : plural(prox.faltam, 'dia', 'dias')));
+        card.appendChild(el('div', 'acao-titulo', prox.c.texto));
+        card.appendChild(el('div', 'acao-meta',
+          dataExtenso(prox.data) + (prox.c.hora ? ' às ' + prox.c.hora + ' ' +
+            (prox.c.fuso || '') : '') +
+          (atrasadas ? '  ·  ' + plural(atrasadas, 'atrasada', 'atrasadas') : '')));
+        const b = el('button', 'acao-botao', 'Ver todas as pendências');
+        b.addEventListener('click', function () { mostrarTela('pendencias'); });
+        card.appendChild(b);
+      }
+    }
+    alvo.appendChild(card);
   }
 
-  function pintarGradeDias() {
-    const grade = $('#grade-dias');
-    grade.innerHTML = '';
+  function pintarHomePendencias() {
+    const alvo = $('#home-pendencias');
+    alvo.innerHTML = '';
+    const hoje = hojeISO();
+    const lista = pendenciasAbertas().slice(0, 4);
+    $('#rot-pendencias').classList.toggle('oculto', !lista.length);
+    if (!lista.length) return;
+
+    lista.forEach(function (p) {
+      const b = el('button', 'mini-pend' +
+        (p.faltam < 0 ? ' atrasada' : p.faltam <= 7 ? ' urgente' : ''));
+      const d = el('div', 'mini-pend-dias');
+      d.appendChild(el('b', null, p.faltam < 0 ? -p.faltam : p.faltam));
+      d.appendChild(el('span', null,
+        p.faltam < 0 ? (p.faltam === -1 ? 'dia atrás' : 'dias atrás')
+                     : p.faltam === 0 ? 'hoje' : (p.faltam === 1 ? 'dia' : 'dias')));
+      b.appendChild(d);
+      const t = el('div', 'mini-pend-txt');
+      t.appendChild(document.createTextNode(p.c.texto));
+      t.appendChild(el('div', 'mini-pend-data',
+        ddmm(p.data) + (p.c.dataEstimada ? ' · estimada' : '')));
+      b.appendChild(t);
+      b.addEventListener('click', function () { mostrarTela('pendencias'); });
+      alvo.appendChild(b);
+    });
+  }
+
+  function pintarListaDias() {
+    const alvo = $('#lista-dias');
+    alvo.innerHTML = '';
     const hoje = hojeISO();
 
     R.dias.forEach(function (dia) {
@@ -164,48 +292,67 @@
       const feitos = contarFeitos(dia);
       const pct = total ? Math.round((feitos / total) * 100) : 0;
 
-      const b = document.createElement('button');
-      b.className = 'cartao-dia' + (dia.data === hoje ? ' e-hoje' : '');
-      b.innerHTML =
-        '<span class="cd-data"></span>' +
-        '<span class="cd-emoji"></span>' +
-        '<span class="cd-nome"></span>' +
-        '<span class="cd-prog"><i style="width:' + pct + '%"></i></span>';
-      b.querySelector('.cd-data').textContent = (+dia.data.split('-')[2]) + '/11';
-      b.querySelector('.cd-emoji').textContent = dia.emoji;
-      b.querySelector('.cd-nome').textContent = dia.titulo;
+      const b = el('button', 'linha-dia' + (dia.data === hoje ? ' e-hoje' : ''));
+      b.setAttribute('data-op', chaveOp(dia));
+      b.appendChild(el('div', 'ld-faixa'));
+
+      const d = el('div', 'ld-data');
+      d.appendChild(el('b', null, +dia.data.split('-')[2]));
+      d.appendChild(el('span', null, dia.diaSemana.slice(0, 3)));
+      b.appendChild(d);
+
+      const c = el('div', 'ld-corpo');
+      const topo = el('div', 'ld-topo');
+      topo.appendChild(el('span', 'ld-emoji', dia.emoji));
+      topo.appendChild(el('span', 'ld-nome', dia.titulo));
+      if (dia.data === hoje) topo.appendChild(el('span', 'ld-hoje', 'hoje'));
+      else if (dia.custoZero) topo.appendChild(el('span', 'ld-zero', 'custo zero'));
+      c.appendChild(topo);
+      if (dia.subtitulo) c.appendChild(el('div', 'ld-sub', dia.subtitulo));
+      if (feitos) {
+        const p = el('div', 'ld-prog');
+        p.appendChild(el('i')).style.width = pct + '%';
+        c.appendChild(p);
+      }
+      b.appendChild(c);
       b.addEventListener('click', function () { irParaDia(dia); });
-      grade.appendChild(b);
+      alvo.appendChild(b);
     });
   }
 
-  function pintarAlertaHome() {
-    const alvo = $('#secao-alerta');
+  function pintarResumo() {
+    const alvo = $('#resumo-viagem');
     alvo.innerHTML = '';
-    const al = R.estrategiaPasses.disney.compra.alerta;
-    if (!al) return;
-    alvo.innerHTML = '<h2>Atenção</h2>';
-    const d = document.createElement('div');
-    d.className = 'aviso perigo';
-    d.innerHTML = '<strong></strong>';
-    d.querySelector('strong').textContent = al.titulo;
-    d.appendChild(document.createTextNode(
-      al.texto.split('\n')[0] + ' Veja a ficha do parque para o detalhe.'));
-    alvo.appendChild(d);
+    const abertas = R.checklist.filter((c) => !E.checkFeito(c.id)).length;
+    const aReservar = R.restaurantes.filter(function (r) {
+      if (!r.precisaReserva) return false;
+      const s = E.reserva(r.id);
+      return !s || !s.status || s.status === 'a-reservar';
+    }).length;
+    [
+      [R.dias.filter((d) => d.tipo === 'parque').length, 'dias de parque'],
+      [R.dias.reduce((n, d) => n + contaveis(d).length, 0), 'blocos'],
+      [aReservar, 'a reservar'],
+      [abertas, 'pendências'],
+    ].forEach(function ([n, r]) {
+      const i = el('div', 'resumo-item');
+      i.appendChild(el('b', null, n));
+      i.appendChild(el('span', null, r));
+      alvo.appendChild(i);
+    });
   }
 
-  /* ---------------------------------------------------------------------------
+  /* =========================================================================
      DIA
-     ------------------------------------------------------------------------ */
+     ====================================================================== */
   function pintarNavDias() {
     const nav = $('#nav-dias');
     nav.innerHTML = '';
     R.dias.forEach(function (dia) {
-      const b = document.createElement('button');
-      b.className = 'pilula' + (dia.id === diaAtual.id ? ' ativa' : '');
-      b.innerHTML = '<b></b><span></span>';
-      b.querySelector('b').textContent = +dia.data.split('-')[2];
-      b.querySelector('span').textContent = dia.diaSemana.slice(0, 3);
+      const b = el('button', 'pilula' + (dia.id === diaAtual.id ? ' ativa' : ''));
+      b.style.setProperty('--op-p', corOp(dia));
+      b.appendChild(el('b', null, +dia.data.split('-')[2]));
+      b.appendChild(el('span', null, dia.diaSemana.slice(0, 3)));
       b.addEventListener('click', function () { irParaDia(dia); });
       nav.appendChild(b);
       if (dia.id === diaAtual.id) {
@@ -218,38 +365,77 @@
 
   function pintarDia() {
     const dia = diaAtual;
+    $('#tela-dia').setAttribute('data-op', chaveOp(dia));
 
     $('#dia-emoji').textContent = dia.emoji;
     $('#dia-titulo').textContent = dia.titulo;
-    $('#dia-data').textContent =
-      dia.diaSemana + ', ' + dataCurta(dia.data) +
+    $('#dia-data').textContent = dia.diaSemana + ', ' + dataExtenso(dia.data) +
       (dia.subtitulo ? ' · ' + dia.subtitulo : '');
     $('#dia-resumo').textContent = dia.resumo || '';
     $('#dia-resumo').hidden = !dia.resumo;
 
-    // selos do dia
     const selos = $('#dia-selos');
     selos.innerHTML = '';
-    if (dia.custoZero) {
-      const s = document.createElement('span');
-      s.className = 'selo-dia custo-zero';
-      s.textContent = 'entrada extra · custo zero';
-      selos.appendChild(s);
-    }
-    if (dia.operadora) {
-      const s = document.createElement('span');
-      s.className = 'selo-dia';
-      s.textContent = dia.operadora;
-      selos.appendChild(s);
-    }
+    if (dia.operadora) selos.appendChild(el('span', 'selo-dia op', dia.operadora));
+    else selos.appendChild(el('span', 'selo-dia op',
+      dia.tipo === 'logistica' ? 'logística' : 'dia livre'));
+    if (dia.custoZero) selos.appendChild(el('span', 'selo-dia custo-zero',
+      'entrada extra · custo zero'));
 
+    pintarRotaDia(dia);
     pintarReferencia(dia);
     pintarAvisos(dia);
     pintarLinhaTempo(dia);
     pintarProgresso(dia);
     Fase3.pintarFicha(dia);
-    pintarNotas(dia);
+    $('#notas-texto').value = E.nota(dia.id);
+    $('#notas-status').textContent = '';
     pintarNavDias();
+  }
+
+  /* Rota do dia inteiro no Maps — conceito do Wanderlog */
+  const LIMITE_WAYPOINTS = 8;
+  function pintarRotaDia(dia) {
+    const alvo = $('#dia-rota');
+    alvo.innerHTML = '';
+    const base = R.locais.find((l) => l.id === R.viagem.baseLocalId);
+    if (!base || base.lat == null) return;
+
+    // locais distintos do dia, na ordem em que aparecem
+    const vistos = new Set();
+    const paradas = [];
+    blocosDoDia(dia).forEach(function (b) {
+      const id = b.dados.localId;
+      if (!id || id === R.viagem.baseLocalId || vistos.has(id)) return;
+      const l = R.locais.find((x) => x.id === id);
+      if (!l || l.lat == null) return;
+      vistos.add(id); paradas.push(l);
+    });
+    if (!paradas.length) return;
+
+    const usadas = paradas.slice(0, LIMITE_WAYPOINTS + 1);
+    const destino = usadas[usadas.length - 1];
+    const meio = usadas.slice(0, -1);
+
+    let url = 'https://www.google.com/maps/dir/?api=1' +
+      '&origin=' + base.lat + ',' + base.lng +
+      '&destination=' + destino.lat + ',' + destino.lng + '&travelmode=driving';
+    if (meio.length) {
+      url += '&waypoints=' + meio.map((l) => l.lat + ',' + l.lng).join('|');
+    }
+
+    const a = el('a', 'btn-rota-dia');
+    a.href = url; a.target = '_blank'; a.rel = 'noopener';
+    a.appendChild(svg('M9 20l-5.5 2V6L9 4M9 20l6-2M9 20V4M15 18l5.5 2V4L15 6M15 18V6M9 4l6 2'));
+    a.appendChild(document.createTextNode(
+      'Rota do dia no Maps · ' + plural(usadas.length, 'parada', 'paradas')));
+    alvo.appendChild(a);
+
+    if (paradas.length > usadas.length) {
+      alvo.appendChild(el('p', 'rota-nota',
+        'O Google aceita ' + (LIMITE_WAYPOINTS + 1) + ' paradas por rota. ' +
+        (paradas.length - usadas.length) + ' ficaram de fora.'));
+    }
   }
 
   function pintarReferencia(dia) {
@@ -267,12 +453,11 @@
     const ajuda = $('#referencia-ajuda');
     if (editada) {
       const d = paraMin(refDoDia(dia)) - paraMin(dia.referencia.padrao);
-      const sinal = d > 0 ? '+' : '−';
       const abs = Math.abs(d);
-      ajuda.textContent = 'Documento assumia ' + dia.referencia.padrao + '. ' +
-        'Os blocos ancorados deslocaram ' + sinal +
-        (abs >= 60 ? Math.floor(abs / 60) + 'h' + (abs % 60 ? String(abs % 60).padStart(2,'0') : '')
-                   : abs + ' min') + '.';
+      ajuda.textContent = 'O documento assumia ' + dia.referencia.padrao + '. Os blocos ' +
+        'ancorados deslocaram ' + (d > 0 ? '+' : '−') +
+        (abs >= 60 ? Math.floor(abs / 60) + 'h' +
+          (abs % 60 ? String(abs % 60).padStart(2, '0') : '') : abs + ' min') + '.';
       ajuda.classList.add('ativa');
     } else {
       ajuda.textContent = 'Premissa do documento. Ajuste quando saírem os horários oficiais — ' +
@@ -285,78 +470,61 @@
     const alvo = $('#avisos-dia');
     alvo.innerHTML = '';
     (dia.avisos || []).forEach(function (t) {
-      const d = document.createElement('div');
-      d.className = 'aviso';
-      d.textContent = t;
-      alvo.appendChild(d);
+      alvo.appendChild(el('div', 'aviso', t));
     });
     (dia.notas || []).forEach(function (n) {
-      const d = document.createElement('div');
-      d.className = 'aviso ' + (n.tipo === 'bom' ? 'bom' : n.tipo === 'atencao' ? '' : 'bom');
+      const d = el('div', 'aviso ' + (n.tipo === 'atencao' ? '' : 'bom'));
       d.textContent = n.texto;
       if (n.pesquisa) {
-        const s = document.createElement('span');
-        s.className = 'marca-pesquisa';
-        s.textContent = 'verificado na web em ' + n.pesquisa.split('-').reverse().join('/');
-        d.appendChild(s);
+        d.appendChild(el('span', 'marca-pesquisa',
+          'verificado na web em ' + n.pesquisa.split('-').reverse().join('/')));
       }
       alvo.appendChild(d);
     });
-    if (dia.notaCusto) {
-      const d = document.createElement('div');
-      d.className = 'aviso bom';
-      d.textContent = dia.notaCusto;
-      alvo.appendChild(d);
-    }
+    if (dia.notaCusto) alvo.appendChild(el('div', 'aviso bom', dia.notaCusto));
   }
+
+  /* ---------------------------------------------------------------------------
+     Ícones: formas específicas onde importa, não estrela genérica
+     ------------------------------------------------------------------------ */
+  const ICONES = {
+    // montanha-russa: trilho com looping
+    atracao: 'M3 20V9a3 3 0 0 1 6 0v6a3 3 0 0 0 6 0V8|M21 20V8|M3 20h4|M17 20h4|M6 12h.01',
+    refeicao: 'M4 3v7a2.5 2.5 0 0 0 5 0V3|M6.5 11v10|M17 3c-1.4 0-2.5 2-2.5 4.5S15.6 12 17 12v9',
+    deslocamento: 'M5 12h13|M13 6l6 6-6 6',
+    show: 'M4 5h16v11H4z|M9 20h6|M12 16v4|M10 8.5l4 2.2-4 2.3z',
+    compras: 'M6 8h12l-1 12H7z|M9 8V6a3 3 0 0 1 6 0v2',
+    espera: 'M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18z|M12 7.5V12l3 1.8',
+    tarefa: 'M9 11l2.5 2.5L16 9|M5 4h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z',
+    // roda-gigante para dia livre
+    livre: 'M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18z|M12 3v18|M3 12h18|M5.6 5.6l12.8 12.8|M18.4 5.6L5.6 18.4',
+    vazio: 'M20 14a8 8 0 1 1-9.9-9.9A7 7 0 0 0 20 14z',
+  };
+  const I_PIN = 'M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z|M12 8a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z';
+  const I_LUPA = 'M11 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14z|M20 20l-4-4';
 
   const ROTULO_ACESSO = {
     'rope-drop': 'rope drop', 'multi-pass': 'multi pass',
     'single-pass': 'single pass', 'standby': 'standby', 'reserva': 'reserva',
   };
 
-  /* ---------------------------------------------------------------------------
-     Ícones por categoria — SVG inline, nada externo.
-     ------------------------------------------------------------------------ */
-  const ICONES = {
-    atracao:      'M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.2l5.9-.9z',
-    refeicao:     'M4 3v7a2.5 2.5 0 0 0 5 0V3M6.5 12v9M17 3c-1.4 0-2.5 2-2.5 4.5S15.6 12 17 12v9',
-    deslocamento: 'M5 12h14M13 6l6 6-6 6',
-    show:         'M4 5h16v11H4zM9 20h6M12 16v4M9 8l5 2.5L9 13z',
-    compras:      'M6 8h12l-1 12H7zM9 8V6a3 3 0 0 1 6 0v2',
-    espera:       'M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18zM12 7v5l3.5 2',
-    tarefa:       'M9 11l2.5 2.5L16 9M5 4h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z',
-    livre:        'M13 4a2 2 0 1 0 0-.1zM11 21l1.5-6L9 12l1-5 4 2 3 1M9 21l2-5',
-    vazio:        'M20 14a8 8 0 1 1-9.9-9.9A7 7 0 0 0 20 14z',
-  };
-  const ICONE_LOCAL = 'M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11zM12 8a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z';
-  const ICONE_SETA  = 'M12 5v14M6 13l6 6 6-6';
-
-  function svg(d, cls) {
-    const s = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    s.setAttribute('viewBox', '0 0 24 24');
-    if (cls) s.setAttribute('class', cls);
-    const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    p.setAttribute('d', d);
-    s.appendChild(p);
-    return s;
-  }
-
-  // Deep link do Google Maps. Sem mapa embutido — abre o app nativo.
-  function linkMaps(local) {
-    if (local && local.lat != null && local.lng != null) {
-      return 'https://maps.google.com/?q=' + local.lat + ',' + local.lng;
-    }
-    return 'https://maps.google.com/?q=' + encodeURIComponent(
-      (local && local.nome) || '');
-  }
   const acharLocal = (id) => R.locais.find((l) => l.id === id) || null;
-
-  function intervaloTexto(min) {
-    if (min < 60) return min + ' min';
-    const h = Math.floor(min / 60), m = min % 60;
-    return h + 'h' + (m ? String(m).padStart(2, '0') : '');
+  function linkLocal(l) {
+    const c = E.coordLocal(l.id);
+    const lat = c ? c.lat : l.lat, lng = c ? c.lng : l.lng;
+    if (lat != null && lng != null) return 'https://maps.google.com/?q=' + lat + ',' + lng;
+    return 'https://www.google.com/maps/search/?api=1&query=' +
+      encodeURIComponent(l.nome + ', Orlando FL');
   }
+  // Atração não tem coordenada: busca por nome + parque resolve bem no Google.
+  function linkAtracao(bloco, dia) {
+    const parque = dia.parqueId ? (acharLocal(dia.parqueId) || {}).nome : null;
+    return 'https://www.google.com/maps/search/?api=1&query=' +
+      encodeURIComponent(bloco.titulo + (parque ? ', ' + parque : ', Orlando FL'));
+  }
+
+  const intervaloTexto = (m) => m < 60 ? m + ' min'
+    : Math.floor(m / 60) + 'h' + (m % 60 ? String(m % 60).padStart(2, '0') : '');
 
   function pintarLinhaTempo(dia) {
     const ol = $('#linha-tempo');
@@ -365,88 +533,72 @@
     if (soFalta) lista = lista.filter((b) => !E.feito(b.dados.id));
 
     if (!lista.length) {
-      ol.innerHTML = '<li class="vazio-lista">Tudo feito neste dia. 🎉</li>';
+      const v = el('li', 'vazio-lista');
+      v.appendChild(svg('M9 11l2.5 2.5L16 9|M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18z'));
+      v.appendChild(el('p', null, 'Tudo feito neste dia.'));
+      ol.appendChild(v);
       return;
     }
 
+    const ehHoje = dia.data === hojeISO();
+    const agora = agoraMin();
+    let agoraPosto = false;
+
     lista.forEach(function (item, i) {
+      // linha do agora antes do primeiro bloco que ainda não passou
+      if (ehHoje && !agoraPosto && item.min > agora) {
+        ol.appendChild(linhaAgora(agora));
+        agoraPosto = true;
+      }
       ol.appendChild(paradaEl(item, dia));
 
-      // conector até a próxima parada
       const prox = lista[i + 1];
       if (!prox) return;
       const gap = prox.min - item.min;
-      const conector = document.createElement('li');
-      conector.className = 'conector';
+      const conector = el('li', 'conector');
+      if (gap > 0) conector.appendChild(el('span', 'conector-tempo', intervaloTexto(gap)));
 
-      if (gap > 0) {
-        const t = document.createElement('span');
-        t.className = 'conector-tempo';
-        t.textContent = intervaloTexto(gap);
-        conector.appendChild(t);
-      }
-
-      // Se a próxima parada muda de lugar, oferece a rota — conceito do Wanderlog:
-      // o intervalo entre paradas é clicável e abre a navegação.
-      const localProx = prox.dados.localId ? acharLocal(prox.dados.localId) : null;
-      if (localProx && prox.dados.localId !== item.dados.localId) {
-        const a = document.createElement('a');
-        a.className = 'btn-maps';
-        a.href = linkMaps(localProx);
-        a.target = '_blank';
-        a.rel = 'noopener';
-        a.appendChild(svg(ICONE_LOCAL));
-        a.appendChild(document.createTextNode(localProx.nome.split('—')[0].trim()));
+      const lp = prox.dados.localId ? acharLocal(prox.dados.localId) : null;
+      if (lp && prox.dados.localId !== item.dados.localId) {
+        const a = el('a', 'btn-maps');
+        a.href = linkLocal(lp); a.target = '_blank'; a.rel = 'noopener';
+        a.appendChild(svg(I_PIN));
+        a.appendChild(document.createTextNode(lp.nome.split('—')[0].trim()));
         conector.appendChild(a);
       }
-
       if (conector.children.length) ol.appendChild(conector);
     });
+
+    if (ehHoje && !agoraPosto) ol.appendChild(linhaAgora(agora));
+  }
+
+  function linhaAgora(min) {
+    const li = el('li', 'agora');
+    li.appendChild(el('span', 'agora-rot', paraHora(min)));
+    li.appendChild(el('div', 'agora-linha'));
+    return li;
   }
 
   function paradaEl(item, dia) {
     const b = item.dados;
-    const li = document.createElement('li');
-    li.className = 'parada t-' + b.tipo +
-      (E.feito(b.id) ? ' feita' : '') + (item.colisao ? ' colide' : '');
+    const li = el('li', 'parada t-' + b.tipo +
+      (E.feito(b.id) ? ' feita' : '') + (item.colisao ? ' colide' : ''));
 
-    /* marcador no trilho */
-    const marca = document.createElement('div');
-    marca.className = 'marcador';
+    const marca = el('div', 'marcador');
     marca.appendChild(svg(ICONES[b.tipo] || ICONES.livre));
     li.appendChild(marca);
 
-    /* card */
-    const card = document.createElement('div');
-    card.className = 'cartao';
-
-    const cab = document.createElement('div');
-    cab.className = 'cartao-cabeca';
-    const h = document.createElement('span');
-    h.className = 'ct-hora';
-    h.textContent = item.hora;
-    cab.appendChild(h);
-
+    const card = el('div', 'cartao');
+    const cab = el('div', 'cartao-cabeca');
+    cab.appendChild(el('span', 'ct-hora', item.hora));
     if (item.deslocado) {
-      const pin = document.createElement('span');
-      pin.className = 'ct-pin';
-      pin.title = 'deslocado pelo horário de referência';
-      cab.appendChild(pin);
-      const antiga = document.createElement('span');
-      antiga.className = 'ct-hora-antiga';
-      antiga.textContent = b.hora;
-      cab.appendChild(antiga);
+      cab.appendChild(el('span', 'ct-pin'));
+      cab.appendChild(el('span', 'ct-hora-antiga', b.hora));
     }
-    if (b.duracaoMin) {
-      const d = document.createElement('span');
-      d.className = 'ct-dur';
-      d.textContent = '· ' + b.duracaoMin + ' min';
-      cab.appendChild(d);
-    }
+    if (b.duracaoMin) cab.appendChild(el('span', 'ct-dur', '· ' + b.duracaoMin + ' min'));
 
     if (b.tipo !== 'vazio') {
-      const chk = document.createElement('button');
-      chk.className = 'ct-check';
+      const chk = el('button', 'ct-check');
       chk.setAttribute('aria-pressed', E.feito(b.id) ? 'true' : 'false');
       chk.setAttribute('aria-label', 'Marcar como feito: ' + b.titulo);
       chk.appendChild(svg('M4 12l6 6L20 6'));
@@ -457,156 +609,82 @@
       cab.appendChild(chk);
     }
     card.appendChild(cab);
+    card.appendChild(el('div', 'ct-titulo', b.titulo));
+    if (b.descricao) card.appendChild(el('div', 'ct-desc', b.descricao));
 
-    const tit = document.createElement('div');
-    tit.className = 'ct-titulo';
-    tit.textContent = b.titulo;
-    card.appendChild(tit);
-
-    if (b.descricao) {
-      const d = document.createElement('div');
-      d.className = 'ct-desc'; d.textContent = b.descricao;
-      card.appendChild(d);
-    }
     if (b.areaParque || b.endereco) {
-      const a = document.createElement('div');
-      a.className = 'ct-area';
-      a.appendChild(svg(ICONE_LOCAL));
+      const a = el('div', 'ct-area');
+      a.appendChild(svg(I_PIN));
       a.appendChild(document.createTextNode(b.areaParque || b.endereco));
       card.appendChild(a);
     }
 
-    /* selos */
-    const selos = document.createElement('div');
-    selos.className = 'ct-selos';
+    const selos = el('div', 'ct-selos');
     (b.acesso || []).forEach(function (ac) {
-      const s = document.createElement('span');
-      s.className = 'selo selo-' + ac;
-      s.textContent = ROTULO_ACESSO[ac] || ac;
-      selos.appendChild(s);
+      selos.appendChild(el('span', 'selo selo-' + ac, ROTULO_ACESSO[ac] || ac));
     });
-    if (b.acessoAlt) {
-      const s = document.createElement('span');
-      s.className = 'selo selo-' + b.acessoAlt;
-      s.textContent = 'ou ' + (ROTULO_ACESSO[b.acessoAlt] || b.acessoAlt);
-      selos.appendChild(s);
-    }
-    if (b.confirmarHorario) {
-      const s = document.createElement('span');
-      s.className = 'selo selo-confirmar'; s.textContent = '⚠ confirmar horário';
-      selos.appendChild(s);
-    }
-    if (b.molha) {
-      const s = document.createElement('span');
-      s.className = 'selo selo-molha'; s.textContent = '💧 molha';
-      selos.appendChild(s);
-    }
-    if (b.locker) {
-      const s = document.createElement('span');
-      s.className = 'selo selo-locker';
-      s.textContent = b.locker === 'detector' ? '🔒 locker + detector' : '🔒 locker';
-      selos.appendChild(s);
-    }
-    if (b.critico) {
-      const s = document.createElement('span');
-      s.className = 'selo selo-critico'; s.textContent = 'crítico';
-      selos.appendChild(s);
-    }
+    if (b.acessoAlt) selos.appendChild(el('span', 'selo selo-' + b.acessoAlt,
+      'ou ' + (ROTULO_ACESSO[b.acessoAlt] || b.acessoAlt)));
+    if (b.confirmarHorario) selos.appendChild(el('span', 'selo selo-confirmar',
+      '⚠ confirmar horário'));
+    if (b.molha) selos.appendChild(el('span', 'selo selo-molha', '💧 molha'));
+    if (b.locker) selos.appendChild(el('span', 'selo selo-locker',
+      b.locker === 'detector' ? '🔒 locker + detector' : '🔒 locker'));
+    if (b.critico) selos.appendChild(el('span', 'selo selo-critico', 'crítico'));
     if (selos.children.length) card.appendChild(selos);
 
-    if (b.condicao) {
-      const d = document.createElement('div');
-      d.className = 'ct-nota'; d.textContent = '→ ' + b.condicao;
-      card.appendChild(d);
+    if (b.condicao) card.appendChild(el('div', 'ct-nota', '→ ' + b.condicao));
+    if (b.nota) card.appendChild(el('div', 'ct-nota', b.nota));
+    if (item.colisao) card.appendChild(el('div', 'ct-colisao', '⚠ ' + item.colisao));
+
+    // atração ganha busca no Maps por nome — sem coordenada inventada
+    if (b.tipo === 'atracao' && !b.localId) {
+      const a = el('a', 'ct-maps');
+      a.href = linkAtracao(b, dia); a.target = '_blank'; a.rel = 'noopener';
+      a.appendChild(svg(I_LUPA));
+      a.appendChild(document.createTextNode('achar no Maps'));
+      card.appendChild(a);
     }
-    if (b.nota) {
-      const d = document.createElement('div');
-      d.className = 'ct-nota'; d.textContent = b.nota;
-      card.appendChild(d);
-    }
-    if (item.colisao) {
-      const d = document.createElement('div');
-      d.className = 'ct-colisao'; d.textContent = '⚠ ' + item.colisao;
-      card.appendChild(d);
-    }
-    if (b.contexto) {
-      const d = document.createElement('div');
-      d.className = 'ct-contexto'; d.textContent = b.contexto;
-      card.appendChild(d);
-    }
+    if (b.contexto) card.appendChild(el('div', 'ct-contexto', b.contexto));
 
     li.appendChild(card);
     return li;
   }
 
   function pintarProgresso(dia) {
-    const total = contaveis(dia).length;
-    const feitos = contarFeitos(dia);
-    const pct = total ? (feitos / total) * 100 : 0;
-    $('#progresso-fill').style.width = pct + '%';
+    const total = contaveis(dia).length, feitos = contarFeitos(dia);
+    $('#progresso-fill').style.width = (total ? (feitos / total) * 100 : 0) + '%';
     $('#progresso-texto').textContent = feitos + ' de ' + total + ' feitos';
-    pintarGradeDias();
   }
 
-  let timerNota = null;
-  function pintarNotas(dia) {
-    const ta = $('#notas-texto');
-    ta.value = E.nota(dia.id);
-    $('#notas-status').textContent = '';
-  }
-
-  /* ---------------------------------------------------------------------------
-     Navegação
-     ------------------------------------------------------------------------ */
-  const TELAS = ['home', 'dia', 'comer', 'guia', 'pendencias'];
-
-  function mostrarTela(nome) {
-    TELAS.forEach(function (t) {
-      const alvo = $('#tela-' + t);
-      if (alvo) alvo.classList.toggle('oculto', t !== nome);
-    });
-    document.querySelectorAll('.aba').forEach(function (a) {
-      a.classList.toggle('ativa', a.dataset.tela === nome);
-    });
-    window.scrollTo(0, 0);
-    if (nome === 'home') pintarHome();
-    else if (nome === 'dia') pintarDia();
-    else if (nome === 'comer') Fase3.pintarRestaurantes();
-    else if (nome === 'guia') Fase4.pintarGuia();
-    else if (nome === 'pendencias') Fase3.pintarPendencias();
-  }
-
-  function irParaDia(dia) { diaAtual = dia; mostrarTela('dia'); }
-
-  /* ---------------------------------------------------------------------------
+  /* =========================================================================
      Eventos
-     ------------------------------------------------------------------------ */
+     ====================================================================== */
   document.querySelectorAll('.aba').forEach(function (a) {
     a.addEventListener('click', function () { mostrarTela(a.dataset.tela); });
   });
-
   $('#btn-hoje').addEventListener('click', function () {
     const d = diaDeHoje();
-    if (d) irParaDia(d);
-    else { diaAtual = R.dias[0]; mostrarTela('dia'); }
+    if (d) irParaDia(d); else { diaAtual = R.dias[0]; mostrarTela('dia'); }
   });
+  $('#btn-ajustes').addEventListener('click', function () { mostrarTela('ajustes'); });
+  $('#btn-busca').addEventListener('click', function () { Busca.abrir(); });
 
   $('#inp-referencia').addEventListener('change', function (e) {
     if (!e.target.value) return;
     E.definirReferencia(diaAtual.id, e.target.value);
     pintarDia();
   });
-
   $('#btn-ref-reset').addEventListener('click', function () {
     E.definirReferencia(diaAtual.id, null);
     pintarDia();
   });
-
   $('#chk-falta').addEventListener('change', function (e) {
     soFalta = e.target.checked;
     pintarLinhaTempo(diaAtual);
   });
 
+  let timerNota = null;
   $('#notas-texto').addEventListener('input', function (e) {
     clearTimeout(timerNota);
     $('#notas-status').textContent = 'digitando…';
@@ -617,40 +695,42 @@
   });
 
   /* tema */
-  const TEMA_CHAVE = 'orlando2026:tema';
+  const TEMA = 'orlando2026:tema';
   function aplicarTema(t) {
     if (t) document.documentElement.setAttribute('data-tema', t);
     else document.documentElement.removeAttribute('data-tema');
-    try { t ? localStorage.setItem(TEMA_CHAVE, t) : localStorage.removeItem(TEMA_CHAVE); }
-    catch (e) {}
+    try { t ? localStorage.setItem(TEMA, t) : localStorage.removeItem(TEMA); } catch (e) {}
   }
-  try { aplicarTema(localStorage.getItem(TEMA_CHAVE)); } catch (e) {}
+  try { aplicarTema(localStorage.getItem(TEMA)); } catch (e) {}
   $('#btn-tema').addEventListener('click', function () {
     const atual = document.documentElement.getAttribute('data-tema');
-    const escuroDoSistema = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (!atual) aplicarTema(escuroDoSistema ? 'claro' : 'escuro');
-    else if (atual === 'escuro') aplicarTema('claro');
-    else aplicarTema('escuro');
+    const escuroSistema = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (!atual) aplicarTema(escuroSistema ? 'claro' : 'escuro');
+    else aplicarTema(atual === 'escuro' ? 'claro' : 'escuro');
+    if (!$('#tela-dia').classList.contains('oculto')) pintarNavDias();
   });
 
-  /* ---------------------------------------------------------------------------
-     Arranque — se estivermos dentro da viagem, abre direto no dia de hoje.
-     ------------------------------------------------------------------------ */
+  /* =========================================================================
+     Arranque
+     ====================================================================== */
   $('#topo-nome').textContent = R.viagem.titulo;
   $('#topo-sub').textContent = R.viagem.subtitulo;
 
-  // Pinta as pendências uma vez no arranque para o contador de atrasadas
-  // aparecer na barra inferior sem precisar abrir a aba.
   Fase3.pintarPendencias();
-
-  // Service worker, status do cache e exportar/importar.
   Fase5.ligar();
+  Busca.ligar();
 
-  // Atalhos do manifest: ?tela=dia abre direto no roteiro.
   const pedida = new URLSearchParams(location.search).get('tela');
   if (pedida && TELAS.indexOf(pedida) >= 0) mostrarTela(pedida);
   else if (diaDeHoje()) mostrarTela('dia');
   else mostrarTela('home');
 
-  console.log('[app] pronto. Dia atual:', diaAtual.data, diaAtual.titulo);
+  // a linha do agora precisa andar sozinha
+  setInterval(function () {
+    if (!$('#tela-dia').classList.contains('oculto') && diaAtual.data === hojeISO()) {
+      pintarLinhaTempo(diaAtual);
+    }
+  }, 60000);
+
+  console.log('[app] pronto —', diaAtual.data, diaAtual.titulo);
 })();

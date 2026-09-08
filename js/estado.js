@@ -22,6 +22,8 @@ window.Estado = (function () {
     reservas:    {},  // restId -> { status, confirmacao, em }
     checklist:   {},  // ckId   -> { feito, em }
     notas:       {},  // diaId  -> { texto, em }
+    datasCheck:  {},  // ckId   -> { data, em }
+    coordsLocal: {},  // localId-> { lat, lng, em }
   });
 
   let dados = vazio();
@@ -67,6 +69,8 @@ window.Estado = (function () {
   const nota        = (id) => (dados.notas[id] ? dados.notas[id].texto : '');
   const reserva     = (id) => dados.reservas[id] || null;
   const checkFeito  = (id) => !!(dados.checklist[id] && dados.checklist[id].feito);
+  const dataChecklist = (id) => (dados.datasCheck[id] ? dados.datasCheck[id].data : null);
+  const coordLocal  = (id) => dados.coordsLocal[id] || null;
 
   /* ---- escrita ---- */
   function marcarFeito(id, valor) {
@@ -97,6 +101,18 @@ window.Estado = (function () {
     salvar();
   }
 
+  function definirDataChecklist(id, data) {
+    if (data) dados.datasCheck[id] = { data: data, em: agora() };
+    else delete dados.datasCheck[id];
+    salvar();
+  }
+  function definirCoordLocal(id, lat, lng) {
+    if (lat != null && lng != null) {
+      dados.coordsLocal[id] = { lat: lat, lng: lng, em: agora() };
+    } else { delete dados.coordsLocal[id]; }
+    salvar();
+  }
+
   /* ---- exportar / importar (a base do sync manual e do automático depois) ---- */
   function exportar() {
     return JSON.stringify(dados, null, 2);
@@ -112,7 +128,8 @@ window.Estado = (function () {
       return { modo: 'substituir', aplicados: -1 };
     }
     let aplicados = 0, ignorados = 0;
-    ['referencias', 'ancoras', 'feitos', 'reservas', 'checklist', 'notas'].forEach(function (grupo) {
+    ['referencias', 'ancoras', 'feitos', 'reservas', 'checklist', 'notas',
+     'datasCheck', 'coordsLocal'].forEach(function (grupo) {
       const origem = entrando[grupo] || {};
       Object.keys(origem).forEach(function (id) {
         const novo = origem[id], atual = dados[grupo][id];
@@ -136,6 +153,8 @@ window.Estado = (function () {
     nota: nota, definirNota: definirNota,
     reserva: reserva, definirReserva: definirReserva,
     checkFeito: checkFeito, marcarChecklist: marcarChecklist,
+    dataChecklist: dataChecklist, definirDataChecklist: definirDataChecklist,
+    coordLocal: coordLocal, definirCoordLocal: definirCoordLocal,
     exportar: exportar, importar: importar, limpar: limpar,
     bruto: function () { return dados; },
   };

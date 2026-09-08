@@ -22,6 +22,17 @@ window.Fase3 = (function () {
   const ddmm = (iso) => { const p = iso.split('-'); return (+p[2]) + '/' + p[1]; };
   const dataExtenso = (iso) => { const p = iso.split('-'); return (+p[2]) + ' ' + MES[+p[1]-1]; };
 
+  const ddmmP = (iso) => { const p = iso.split('-'); return (+p[2]) + '/' + p[1]; };
+  function svgP(d) {
+    const s = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    s.setAttribute('viewBox', '0 0 24 24');
+    String(d).split('|').forEach(function (p) {
+      const n = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      n.setAttribute('d', p); s.appendChild(n);
+    });
+    return s;
+  }
+
   const el = (tag, cls, texto) => {
     const n = document.createElement(tag);
     if (cls) n.className = cls;
@@ -356,34 +367,27 @@ window.Fase3 = (function () {
   }
 
   /* ===========================================================================
-     PENDÊNCIAS
+     PENDÊNCIAS — toda uma com data, agrupadas por mês, ordenadas por prazo
      ======================================================================== */
-  const GRUPOS = {
-    'prazo-curto':  'Prazo curto — setembro',
-    'prazo-medio':  'Prazo médio — outubro',
-    'ja-em-orlando':'Já em Orlando',
-  };
+  const MESES_EXT = ['janeiro','fevereiro','março','abril','maio','junho','julho',
+                     'agosto','setembro','outubro','novembro','dezembro'];
   let pendSoFalta = false;
 
-  function ordenar(a, b) {
-    if (a.dataAlvo && b.dataAlvo) return a.dataAlvo.localeCompare(b.dataAlvo);
-    if (a.dataAlvo) return -1;
-    if (b.dataAlvo) return 1;
-    return 0;
-  }
+  const dataDe = (c) => E.dataChecklist(c.id) || c.dataAlvo;
 
   function pintarPendencias() {
     const hoje = hojeISO();
     const total = R.checklist.length;
     const feitos = R.checklist.filter((c) => E.checkFeito(c.id)).length;
     const atrasadas = R.checklist.filter(
-      (c) => !E.checkFeito(c.id) && c.dataAlvo && c.dataAlvo < hoje).length;
+      (c) => !E.checkFeito(c.id) && dataDe(c) < hoje).length;
 
     $('#pend-fill').style.width = (total ? (feitos / total) * 100 : 0) + '%';
     $('#pend-texto').textContent = feitos + ' de ' + total + ' feitas';
     $('#pend-sub').textContent = atrasadas
-      ? atrasadas + ' em atraso · ' + (total - feitos) + ' abertas no total'
-      : (total - feitos) + ' abertas';
+      ? atrasadas + (atrasadas === 1 ? ' em atraso · ' : ' em atraso · ') +
+        (total - feitos) + ' abertas no total'
+      : (total - feitos) + ' abertas, nenhuma em atraso';
 
     const badge = $('#badge-pend');
     if (atrasadas > 0) { badge.textContent = atrasadas; badge.classList.remove('oculto'); }
@@ -392,31 +396,50 @@ window.Fase3 = (function () {
     const alvo = $('#lista-pendencias');
     alvo.innerHTML = '';
 
-    Object.keys(GRUPOS).forEach(function (g) {
-      let itens = R.checklist.filter((c) => c.grupo === g).sort(ordenar);
-      if (pendSoFalta) itens = itens.filter((c) => !E.checkFeito(c.id));
-      if (!itens.length) return;
-      alvo.appendChild(el('div', 'pend-grupo', GRUPOS[g]));
-      itens.forEach((c) => alvo.appendChild(cartaoPendencia(c, hoje)));
+    let itens = R.checklist.slice();
+    if (pendSoFalta) itens = itens.filter((c) => !E.checkFeito(c.id));
+    itens.sort(function (a, b) {
+      const fa = E.checkFeito(a.id) ? 1 : 0, fb = E.checkFeito(b.id) ? 1 : 0;
+      if (fa !== fb) return fa - fb;               // feitas por último
+      return dataDe(a).localeCompare(dataDe(b));   // resto por prazo
     });
 
-    if (!alvo.children.length)
-      alvo.appendChild(el('div', 'vazio-lista', 'Nada pendente. 🎉'));
+    if (!itens.length) {
+      const v = el('div', 'vazio-lista');
+      v.appendChild(svgP('M9 11l2.5 2.5L16 9|M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18z'));
+      v.appendChild(el('p', null, 'Nada pendente.'));
+      alvo.appendChild(v);
+      return;
+    }
+
+    let mesAtual = null;
+    itens.forEach(function (c) {
+      const d = dataDe(c);
+      const mes = E.checkFeito(c.id) ? 'feitas' : d.slice(0, 7);
+      if (mes !== mesAtual) {
+        mesAtual = mes;
+        alvo.appendChild(el('div', 'pend-mes', mes === 'feitas'
+          ? 'Concluídas'
+          : MESES_EXT[(+d.split('-')[1]) - 1] + ' de ' + d.split('-')[0]));
+      }
+      alvo.appendChild(cartaoPendencia(c, hoje));
+    });
   }
 
   function cartaoPendencia(c, hoje) {
     const feito = E.checkFeito(c.id);
-    const faltam = c.dataAlvo ? diasEntre(hoje, c.dataAlvo) : null;
-    const atrasada = !feito && faltam !== null && faltam < 0;
+    const data = dataDe(c);
+    const faltam = diasEntre(hoje, data);
+    const atrasada = !feito && faltam < 0;
+    const editada = !!E.dataChecklist(c.id);
 
-    const cx = el('div', 'pend' +
-      (feito ? ' feita' : '') + (atrasada ? ' atrasada' : '') +
-      (!feito && faltam === 0 ? ' hoje' : ''));
+    const cx = el('div', 'pend' + (feito ? ' feita' : '') +
+      (atrasada ? ' atrasada' : '') + (!feito && faltam === 0 ? ' hoje' : ''));
 
     const chk = el('button', 'bl-check');
     chk.setAttribute('aria-pressed', feito ? 'true' : 'false');
     chk.setAttribute('aria-label', 'Concluir: ' + c.texto);
-    chk.innerHTML = '<svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>';
+    chk.appendChild(svgP('M4 12l6 6L20 6'));
     chk.addEventListener('click', function () {
       E.marcarChecklist(c.id, !E.checkFeito(c.id));
       pintarPendencias();
@@ -424,31 +447,44 @@ window.Fase3 = (function () {
     cx.appendChild(chk);
 
     const corpo = el('div', 'pend-corpo');
-    if (c.dataAlvo) {
-      corpo.appendChild(el('div', 'pend-quando',
-        ddmm(c.dataAlvo) + (c.hora ? ' · ' + c.hora + ' ' + (c.fuso || '') : '') +
-        (feito ? '' :
-          faltam > 0 ? '  ·  em ' + faltam + ' dia' + (faltam > 1 ? 's' : '')
-          : faltam === 0 ? '  ·  HOJE'
-          : '  ·  ATRASADA ' + (-faltam) + ' dia' + (faltam < -1 ? 's' : ''))));
-    } else {
-      corpo.appendChild(el('div', 'pend-quando', 'sem data definida'));
+    const quando = el('div', 'pend-quando');
+    quando.appendChild(document.createTextNode(
+      ddmmP(data) + (c.hora ? ' · ' + c.hora + ' ' + (c.fuso || '') : '')));
+    if (!feito) {
+      quando.appendChild(document.createTextNode(
+        faltam > 0 ? ' · em ' + faltam + (faltam === 1 ? ' dia' : ' dias')
+        : faltam === 0 ? ' · HOJE'
+        : ' · ATRASADA ' + (-faltam) + (faltam === -1 ? ' dia' : ' dias')));
     }
+    corpo.appendChild(quando);
     corpo.appendChild(el('div', 'pend-texto', c.texto));
+
+    if (c.dataEstimada && c.motivoData && !editada) {
+      corpo.appendChild(el('div', 'pend-motivo', 'Data estimada: ' + c.motivoData));
+    }
     if (c.nota) corpo.appendChild(el('div', 'pend-nota', c.nota));
 
     const selos = el('div', 'pend-selos');
-    if (c.janelaReserva) {
-      const s = el('span', 'selo selo-reserva', 'janela de reserva'); selos.appendChild(s);
-    }
-    if (c.critico) {
-      const s = el('span', 'selo selo-critico', 'crítico'); selos.appendChild(s);
-    }
+    if (c.janelaReserva) selos.appendChild(el('span', 'selo selo-reserva', 'janela de reserva'));
+    if (c.critico) selos.appendChild(el('span', 'selo selo-critico', 'crítico'));
+    if (c.dataEstimada && !editada) selos.appendChild(el('span', 'selo selo-estimada', 'data estimada'));
+    if (editada) selos.appendChild(el('span', 'selo selo-tipo', 'data ajustada'));
     (c.restauranteIds || []).forEach(function (rid) {
       const r = R.restaurantes.find((x) => x.id === rid);
       if (r) selos.appendChild(el('span', 'selo selo-tipo', r.nome));
     });
     if (selos.children.length) corpo.appendChild(selos);
+
+    // a data é editável: estimativa minha não vira lei
+    const inp = el('input', 'pend-data-edit');
+    inp.type = 'date';
+    inp.value = data;
+    inp.setAttribute('aria-label', 'Ajustar a data de: ' + c.texto);
+    inp.addEventListener('change', function () {
+      E.definirDataChecklist(c.id, inp.value === c.dataAlvo ? null : inp.value);
+      pintarPendencias();
+    });
+    corpo.appendChild(inp);
 
     cx.appendChild(corpo);
     return cx;

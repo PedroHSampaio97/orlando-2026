@@ -2736,7 +2736,7 @@ window.ROTEIRO = {
       texto: 'Epcot, se quiserem mesa em vez das barracas',
       restauranteIds: ['r-epcot-mesa'] },
 
-    { id: 'ck-ingresso', grupo: 'prazo-curto', dataAlvo: null, hora: null, fuso: null,
+    { id: 'ck-ingresso', grupo: 'prazo-curto', dataAlvo: '2026-09-15', dataEstimada: true, motivoData: 'Bloqueia o plano de Lightning Lane inteiro', hora: null, fuso: null,
       janelaReserva: false, critico: true,
       texto: 'Confirmar com a agência a regra exata de validade do ingresso Disney de 4 dias',
       nota:
@@ -2745,45 +2745,45 @@ window.ROTEIRO = {
         'Isso muda as quatro tarefas de Lightning Lane deste checklist.',
       restauranteIds: [] },
 
-    { id: 'ck-carro', grupo: 'prazo-curto', dataAlvo: null, hora: null, fuso: null,
+    { id: 'ck-carro', grupo: 'prazo-curto', dataAlvo: '2026-10-06', dataEstimada: true, motivoData: 'Preço de locadora sobe perto da data', hora: null, fuso: null,
       janelaReserva: false, critico: true,
       texto: 'Reservar o carro para 20 a 25/11, em filial de bairro na 192',
       restauranteIds: [] },
 
-    { id: 'ck-columbia', grupo: 'prazo-curto', dataAlvo: null, hora: null, fuso: null,
+    { id: 'ck-columbia', grupo: 'prazo-curto', dataAlvo: '2026-10-15', dataEstimada: true, motivoData: '30 dias antes do almoço de 14/11', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Reservar o Columbia Restaurant para o almoço de 14/11 (Celebration)',
       restauranteIds: ['r-columbia'] },
 
-    { id: 'ck-boggy', grupo: 'prazo-curto', dataAlvo: null, hora: null, fuso: null,
+    { id: 'ck-boggy', grupo: 'prazo-curto', dataAlvo: '2026-10-21', dataEstimada: true, motivoData: '30 dias antes do passeio de 20/11', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Reservar o Boggy Creek Airboat online para 20/11',
       restauranteIds: [] },
 
     /* --- prazo médio (outubro) --- */
-    { id: 'ck-sharks', grupo: 'prazo-medio', dataAlvo: null, hora: null, fuso: null,
+    { id: 'ck-sharks', grupo: 'prazo-medio', dataAlvo: '2026-10-01', dataEstimada: true, motivoData: 'O documento situa em outubro', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Reservar Sharks Underwater Grill (SeaWorld, direto no site do parque)',
       restauranteIds: ['r-sharks'] },
 
-    { id: 'ck-mythos', grupo: 'prazo-medio', dataAlvo: null, hora: null, fuso: null,
+    { id: 'ck-mythos', grupo: 'prazo-medio', dataAlvo: '2026-10-20', dataEstimada: true, motivoData: '30 dias antes do jantar de 19/11', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Reservar o Mythos para o jantar de 19/11 (Islands of Adventure)',
       restauranteIds: ['r-mythos'] },
 
-    { id: 'ck-atlantic', grupo: 'prazo-medio', dataAlvo: null, hora: null, fuso: null,
+    { id: 'ck-atlantic', grupo: 'prazo-medio', dataAlvo: '2026-10-24', dataEstimada: true, motivoData: '30 dias antes do jantar de 23/11', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Reservar o Atlantic para o jantar de 23/11 (Epic Universe)',
       nota: 'Marcado como reserva necessária por decisão de vocês, para forçar a revisitar ' +
             'e confirmar — mesmo que na prática aceite walk-in.',
       restauranteIds: ['r-atlantic'] },
 
-    { id: 'ck-powerband', grupo: 'prazo-medio', dataAlvo: null, hora: null, fuso: null,
+    { id: 'ck-powerband', grupo: 'prazo-medio', dataAlvo: '2026-10-15', dataEstimada: true, motivoData: 'O documento situa em outubro', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Decidir sobre a Power-Up Band do Epic Universe (~US$ 40)',
       restauranteIds: [] },
 
-    { id: 'ck-natal-datas', grupo: 'prazo-medio', dataAlvo: null, hora: null, fuso: null,
+    { id: 'ck-natal-datas', grupo: 'prazo-medio', dataAlvo: '2026-10-15', dataEstimada: true, motivoData: 'As datas dos eventos saem com antecedência', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Confirmar que 22/11 tem Christmas Celebration (SeaWorld) e 24/11 tem ' +
              'Christmas Town (Busch Gardens) — ambos rodam em datas selecionadas',
@@ -2814,13 +2814,13 @@ window.ROTEIRO = {
       nota: 'Só necessário se o ingresso NÃO for date-based.',
       restauranteIds: [] },
 
-    { id: 'ck-horarios', grupo: 'ja-em-orlando', dataAlvo: null, hora: null, fuso: null,
+    { id: 'ck-horarios', grupo: 'ja-em-orlando', dataAlvo: '2026-10-10', dataEstimada: true, motivoData: 'A Disney publica os horários ~60 dias antes', hora: null, fuso: null,
       janelaReserva: false, critico: true,
       texto: 'Conferir horários oficiais dos parques e ajustar a referência de cada dia',
       nota: 'É só editar o horário de abertura no dia — os blocos ancorados deslocam sozinhos.',
       restauranteIds: [] },
 
-    { id: 'ck-shows', grupo: 'ja-em-orlando', dataAlvo: null, hora: null, fuso: null,
+    { id: 'ck-shows', grupo: 'ja-em-orlando', dataAlvo: '2026-11-01', dataEstimada: true, motivoData: 'Horários de show só saem perto da data', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Confirmar horário do Grinchmas (14/11), do desfile da Macy’s (17/11) e do ' +
              'Fantasmic! (15/11)',
@@ -2836,151 +2836,151 @@ window.ROTEIRO = {
      ------------------------------------------------------------------------ */
   locais: [
     { id: 'hotel-travelodge', nome: 'Travelodge by Wyndham Orlando Lake Buena Vista South',
-      tipo: 'hotel', lat: 28.3390, lng: -81.5010, verificado: false,
+      tipo: 'hotel', lat: 28.3390, lng: -81.5010, verificado: false, fonteCoord: null, precisaColar: 'Endereço exato da reserva não informado. Cole a coordenada do Google Maps.',
       endereco: 'US-192, Kissimmee', doHotel: null,
       nota: 'A base. Todos os tempos de deslocamento partem daqui.' },
 
     { id: 'mco', nome: 'Orlando International Airport (MCO)', tipo: 'transporte',
-      lat: 28.4312, lng: -81.3081, verificado: false, endereco: null,
+      lat: 28.42944444, lng: -81.30888889, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 30, tempoFonte: 'documento',
                  uberUSD: { min: 35, max: 45 }, uberFonte: 'documento' } },
 
     { id: 'walmart-osceola', nome: 'Walmart Supercenter', tipo: 'compras',
-      lat: 28.3300, lng: -81.4180, verificado: false, endereco: '1471 E Osceola Pkwy',
+      lat: 28.3437905, lng: -81.3860363, verificado: true, fonteCoord: 'osm', endereco: '1471 E Osceola Pkwy',
       doHotel: { tempoMin: 15, tempoFonte: 'estimado',
                  uberUSD: { min: 10, max: 16 }, uberFonte: 'estimado' } },
 
     { id: 'magic-kingdom', nome: 'Magic Kingdom', tipo: 'parque',
-      lat: 28.4177, lng: -81.5812, verificado: false, endereco: null,
+      lat: 28.41861111, lng: -81.58111111, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 30, tempoFonte: 'estimado',
                  uberUSD: { min: 22, max: 32 }, uberFonte: 'estimado' },
       nota: 'O Uber não deixa aqui. Deixa no TTC.' },
 
     { id: 'mk-ttc', nome: 'Ticket & Transportation Center (TTC)', tipo: 'transporte',
-      lat: 28.4048, lng: -81.5807, verificado: false, endereco: null,
+      lat: 28.4060892, lng: -81.5804985, verificado: true, fonteCoord: 'osm', endereco: null,
       doHotel: { tempoMin: 30, tempoFonte: 'estimado',
                  uberUSD: { min: 22, max: 32 }, uberFonte: 'estimado' },
       nota: 'É aqui que o Uber deixa. Do TTC ainda são 15–20 min de monotrilho ou barco.' },
 
     { id: 'animal-kingdom', nome: 'Disney’s Animal Kingdom', tipo: 'parque',
-      lat: 28.3553, lng: -81.5901, verificado: false, endereco: null,
+      lat: 28.358, lng: -81.59, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 25, tempoFonte: 'estimado',
                  uberUSD: { min: 20, max: 30 }, uberFonte: 'estimado' } },
 
     { id: 'ak-lodge', nome: 'Animal Kingdom Lodge (Sanaa)', tipo: 'restaurante',
-      lat: 28.3553, lng: -81.6014, verificado: false, endereco: null,
+      lat: 28.353637, lng: -81.602756, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 25, tempoFonte: 'estimado',
                  uberUSD: { min: 20, max: 30 }, uberFonte: 'estimado' },
       nota: 'Não é dentro do parque. É outro endereço.' },
 
     { id: 'hollywood-studios', nome: 'Disney’s Hollywood Studios', tipo: 'parque',
-      lat: 28.3575, lng: -81.5583, verificado: false, endereco: null,
+      lat: 28.3575, lng: -81.56, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 25, tempoFonte: 'estimado',
                  uberUSD: { min: 20, max: 30 }, uberFonte: 'estimado' } },
 
     { id: 'epcot', nome: 'Epcot', tipo: 'parque',
-      lat: 28.3747, lng: -81.5494, verificado: false, endereco: null,
+      lat: 28.371, lng: -81.55, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 25, tempoFonte: 'estimado',
                  uberUSD: { min: 20, max: 30 }, uberFonte: 'estimado' } },
 
     { id: 'disney-springs', nome: 'Disney Springs', tipo: 'compras',
-      lat: 28.3700, lng: -81.5190, verificado: false, endereco: null,
+      lat: 28.3702539, lng: -81.5209851, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 20, tempoFonte: 'documento',
                  uberUSD: { min: 15, max: 25 }, uberFonte: 'estimado' },
       nota: 'Estacionamento gratuito — no dia 21 vocês vão de carro.' },
 
     { id: 'universal-studios', nome: 'Universal Studios Florida', tipo: 'parque',
-      lat: 28.4749, lng: -81.4664, verificado: false, endereco: null,
+      lat: 28.4752, lng: -81.467, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 33, tempoFonte: 'documento',
                  uberUSD: { min: 28, max: 40 }, uberFonte: 'estimado' },
       nota: 'Documento: 30–35 min de Kissimmee. Do estacionamento à catraca são +15–20 min a pé.' },
 
     { id: 'islands-of-adventure', nome: 'Islands of Adventure', tipo: 'parque',
-      lat: 28.4713, lng: -81.4707, verificado: false, endereco: null,
+      lat: 28.47166667, lng: -81.47138889, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 33, tempoFonte: 'documento',
                  uberUSD: { min: 28, max: 40 }, uberFonte: 'estimado' } },
 
     { id: 'citywalk', nome: 'Universal CityWalk', tipo: 'compras',
-      lat: 28.4735, lng: -81.4685, verificado: false, endereco: null,
+      lat: 28.4733226, lng: -81.466124, verificado: true, fonteCoord: 'osm', endereco: null,
       doHotel: { tempoMin: 30, tempoFonte: 'documento',
                  uberUSD: { min: 28, max: 40 }, uberFonte: 'estimado' } },
 
     { id: 'epic-universe', nome: 'Universal Epic Universe', tipo: 'parque',
-      lat: 28.4076, lng: -81.4436, verificado: false, endereco: null,
+      lat: 28.4422, lng: -81.449, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 30, tempoFonte: 'documento',
                  uberUSD: { min: 25, max: 38 }, uberFonte: 'estimado' },
       nota: 'Dia 23 e 25 vocês vão de carro. A caminhada do estacionamento é longa.' },
 
     { id: 'seaworld', nome: 'SeaWorld Orlando', tipo: 'parque',
-      lat: 28.4114, lng: -81.4617, verificado: false, endereco: null,
+      lat: 28.41083333, lng: -81.4625, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 25, tempoFonte: 'estimado',
                  uberUSD: { min: 22, max: 32 }, uberFonte: 'estimado' } },
 
     { id: 'busch-gardens', nome: 'Busch Gardens Tampa Bay', tipo: 'parque',
-      lat: 28.0369, lng: -82.4194, verificado: false, endereco: null,
+      lat: 28.0375, lng: -82.4225, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 90, tempoFonte: 'documento',
                  uberUSD: null, uberFonte: null },
       nota: 'Só de carro. 1h30 de cada lado. Uber não é opção viável aqui.' },
 
     { id: 'premium-outlets', nome: 'Orlando International Premium Outlets', tipo: 'compras',
-      lat: 28.4258, lng: -81.4700, verificado: false, endereco: '4951 International Dr',
+      lat: 28.4750673, lng: -81.4514825, verificado: true, fonteCoord: 'osm', endereco: '4951 International Dr',
       doHotel: { tempoMin: 25, tempoFonte: 'documento',
                  uberUSD: { min: 20, max: 30 }, uberFonte: 'estimado' },
       nota: 'Peçam o cupom book grátis no balcão de informações.' },
 
     { id: 'icon-park', nome: 'ICON Park', tipo: 'compras',
-      lat: 28.4433, lng: -81.4692, verificado: false, endereco: '8375 International Dr',
+      lat: 28.4432, lng: -81.4693, verificado: true, fonteCoord: 'wikipedia', endereco: '8375 International Dr',
       doHotel: { tempoMin: 25, tempoFonte: 'estimado',
                  uberUSD: { min: 20, max: 30 }, uberFonte: 'estimado' } },
 
     { id: 'millenia', nome: 'The Mall at Millenia', tipo: 'compras',
-      lat: 28.4859, lng: -81.4318, verificado: false, endereco: '4200 Conroy Rd',
+      lat: 28.48538, lng: -81.431312, verificado: true, fonteCoord: 'wikipedia', endereco: '4200 Conroy Rd',
       doHotel: { tempoMin: 30, tempoFonte: 'documento',
                  uberUSD: { min: 28, max: 40 }, uberFonte: 'estimado' } },
 
     { id: 'best-buy', nome: 'Best Buy (Millenia ou I-Drive)', tipo: 'compras',
-      lat: 28.4830, lng: -81.4290, verificado: false, endereco: null,
+      lat: 28.4830, lng: -81.4290, verificado: false, fonteCoord: null, precisaColar: 'O documento diz "Millenia ou I-Drive" — são duas lojas. Escolha uma e cole a coordenada.', endereco: null,
       doHotel: { tempoMin: 30, tempoFonte: 'estimado',
                  uberUSD: { min: 28, max: 40 }, uberFonte: 'estimado' } },
 
     { id: 'lake-eola', nome: 'Lake Eola Park', tipo: 'livre',
-      lat: 28.5440, lng: -81.3730, verificado: false, endereco: null,
+      lat: 28.54361111, lng: -81.37277778, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 35, tempoFonte: 'estimado',
                  uberUSD: { min: 32, max: 45 }, uberFonte: 'estimado' },
       nota: 'Grátis. 10 min do Kia Center. Melhor pôr do sol da cidade.' },
 
     { id: 'kia-center', nome: 'Kia Center', tipo: 'evento',
-      lat: 28.5392, lng: -81.3839, verificado: false, endereco: null,
+      lat: 28.53916667, lng: -81.38361111, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 35, tempoFonte: 'estimado',
                  uberUSD: { min: 32, max: 45 }, uberFonte: 'estimado' },
       nota: 'Não permite mochila. Bolsa pequena. Andem 2 quarteirões antes de chamar o Uber ' +
             'na saída — a tarifa dinâmica é brutal.' },
 
     { id: 'celebration', nome: 'Celebration', tipo: 'livre',
-      lat: 28.3255, lng: -81.5330, verificado: false, endereco: null,
+      lat: 28.31027778, lng: -81.55083333, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 10, tempoFonte: 'documento',
                  uberUSD: { min: 10, max: 15 }, uberFonte: 'documento' } },
 
     { id: 'boggy-creek', nome: 'Boggy Creek Airboat Adventures', tipo: 'atracao',
-      lat: 28.2286, lng: -81.3608, verificado: false, endereco: '2001 E Southport Rd',
+      lat: 28.1394935, lng: -81.3622451, verificado: true, fonteCoord: 'osm', endereco: '2001 E Southport Rd',
       doHotel: { tempoMin: 20, tempoFonte: 'documento',
                  uberUSD: { min: 18, max: 28 }, uberFonte: 'estimado' } },
 
     { id: 'lakefront-park', nome: 'Kissimmee Lakefront Park', tipo: 'livre',
-      lat: 28.2872, lng: -81.4034, verificado: false, endereco: 'Lake Tohopekaliga',
+      lat: 28.2891459, lng: -81.4068058, verificado: true, fonteCoord: 'osm', endereco: 'Lake Tohopekaliga',
       doHotel: { tempoMin: 15, tempoFonte: 'estimado',
                  uberUSD: { min: 12, max: 20 }, uberFonte: 'estimado' },
       nota: 'Grátis.' },
 
     { id: 'old-town', nome: 'Old Town Kissimmee', tipo: 'livre',
-      lat: 28.3399, lng: -81.4867, verificado: false,
+      lat: 28.33161, lng: -81.515838, verificado: true, fonteCoord: 'wikipedia',
       endereco: '5770 W Irlo Bronson Memorial Hwy',
       doHotel: { tempoMin: 10, tempoFonte: 'estimado',
                  uberUSD: { min: 10, max: 15 }, uberFonte: 'estimado' },
       nota: 'Entrada e estacionamento gratuitos.' },
 
     { id: 'winter-garden', nome: 'Winter Garden — Downtown Pavilion', tipo: 'livre',
-      lat: 28.5652, lng: -81.5862, verificado: false, endereco: '104 S. Lakeview Ave',
+      lat: 28.5647018, lng: -81.5877242, verificado: true, fonteCoord: 'osm', endereco: '104 S. Lakeview Ave',
       doHotel: { tempoMin: 40, tempoFonte: 'documento',
                  uberUSD: null, uberFonte: null },
       nota: 'De carro. Farmers Market das 8h às 13h, só aos sábados.' },
@@ -3166,7 +3166,17 @@ window.ROTEIRO = {
     }
   });
 
+  R.locais.forEach((l) => {
+    if (l.verificado && !l.fonteCoord) {
+      erros.push(`local ${l.id}: verificado:true sem fonteCoord`);
+    }
+    if (l.lat == null || l.lng == null) {
+      erros.push(`local ${l.id}: sem coordenada`);
+    }
+  });
+
   R.checklist.forEach((c) => {
+    if (!c.dataAlvo) erros.push(`checklist ${c.id}: sem dataAlvo`);
     (c.restauranteIds || []).forEach((rid) => {
       if (!idsRest.has(rid)) erros.push(`checklist ${c.id}: restaurante "${rid}" não existe`);
     });

@@ -214,5 +214,22 @@ window.Fase5 = (function () {
     registrar();
   }
 
-  return { ligar: ligar, pintarStatus: pintarStatus };
+  function pintarAjustes() {
+    pintarStatus();
+    const R = window.ROTEIRO;
+    const alvo = document.querySelector('#sobre-dados');
+    if (!alvo) return;
+    const verif = R.locais.filter((l) => l.verificado).length;
+    const est = R.checklist.filter((c) => c.dataEstimada).length;
+    alvo.textContent =
+      R.dias.length + ' dias, ' +
+      R.dias.reduce((n, d) => n + d.blocos.length, 0) + ' blocos, ' +
+      R.restaurantes.length + ' restaurantes, ' + R.checklist.length + ' pendências e ' +
+      R.locais.length + ' locais, extraídos de ' + R.meta.fontes.join(' e ') + '. ' +
+      verif + ' locais têm coordenada conferida contra Wikipedia e OpenStreetMap. ' +
+      est + ' pendências têm data estimada por mim, não pelo documento — todas editáveis. ' +
+      'Onde o texto veio de pesquisa e não do roteiro, o app diz.';
+  }
+
+  return { ligar: ligar, pintarStatus: pintarStatus, pintarAjustes: pintarAjustes };
 })();

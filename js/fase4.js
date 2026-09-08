@@ -41,18 +41,28 @@ window.Fase4 = (function () {
   };
 
   // Deep link. Sem mapa embutido.
+  const E = window.Estado;
+  // coordenada colada pelo usuário vence a do arquivo
+  function coordDe(l) {
+    const c = E.coordLocal(l.id);
+    return c ? { lat: c.lat, lng: c.lng, colada: true }
+             : { lat: l.lat, lng: l.lng, colada: false };
+  }
   function urlMaps(local) {
-    if (local.lat != null && local.lng != null) {
-      return 'https://maps.google.com/?q=' + local.lat + ',' + local.lng;
+    const c = coordDe(local);
+    if (c.lat != null && c.lng != null) {
+      return 'https://maps.google.com/?q=' + c.lat + ',' + c.lng;
     }
-    return 'https://maps.google.com/?q=' + encodeURIComponent(local.nome + ', Orlando FL');
+    return 'https://www.google.com/maps/search/?api=1&query=' +
+      encodeURIComponent(local.nome + ', Orlando FL');
   }
   // Rota a partir do hotel, que é a pergunta real de todo dia.
   function urlRota(local, base) {
-    if (!base || base.lat == null) return urlMaps(local);
-    return 'https://www.google.com/maps/dir/?api=1' +
-      '&origin=' + base.lat + ',' + base.lng +
-      '&destination=' + local.lat + ',' + local.lng;
+    const b = coordDe(base), l = coordDe(local);
+    if (b.lat == null || l.lat == null) return urlMaps(local);
+    return 'https://www.google.com/maps/dir/?api=1&travelmode=driving' +
+      '&origin=' + b.lat + ',' + b.lng +
+      '&destination=' + l.lat + ',' + l.lng;
   }
 
   const tempoTexto = (min) => min == null ? '—'
@@ -98,10 +108,17 @@ window.Fase4 = (function () {
     const naoVerif = R.locais.filter((l) => !l.verificado).length;
 
     const av = $('#aviso-coords');
-    av.textContent =
-      naoVerif + ' dos ' + R.locais.length + ' locais têm coordenada aproximada, não ' +
-      'confirmada. Vieram de conhecimento público, não do roteiro. Confiram os pinos ' +
-      'antes de depender deles — principalmente o do hotel, de onde saem todos os tempos.';
+    av.className = naoVerif ? 'aviso' : 'aviso bom';
+    av.innerHTML = '';
+    const verif = R.locais.length - naoVerif;
+    av.appendChild(document.createElement('strong')).textContent =
+      verif + ' de ' + R.locais.length + ' locais com coordenada conferida';
+    av.appendChild(document.createTextNode(
+      naoVerif
+        ? 'As conferidas vieram da Wikipedia e do OpenStreetMap. Faltam ' + naoVerif +
+          ': abra o local e cole a coordenada do Google Maps (segure o dedo no ponto ' +
+          'e copie os números).'
+        : 'Todas checadas contra Wikipedia e OpenStreetMap.'));
 
     /* filtros */
     const fx = $('#filtros-local');
@@ -147,8 +164,15 @@ window.Fase4 = (function () {
     if (ehBase) nome.appendChild(el('div', 'local-end', 'A base da viagem'));
     topo.appendChild(nome);
 
-    if (!l.verificado) topo.appendChild(el('span', 'selo-verificar', 'verificar'));
+    const co = coordDe(l);
+    if (co.colada) topo.appendChild(el('span', 'selo-fonte', 'você conferiu'));
+    else if (l.verificado) topo.appendChild(el('span', 'selo-fonte', l.fonteCoord));
+    else topo.appendChild(el('span', 'selo-verificar', 'colar coordenada'));
     cx.appendChild(topo);
+
+    if (!l.verificado && !co.colada && l.precisaColar) {
+      cx.appendChild(el('div', 'local-nota', l.precisaColar));
+    }
 
     /* métricas do hotel */
     if (l.doHotel && !ehBase) {
@@ -179,6 +203,24 @@ window.Fase4 = (function () {
     }
 
     if (l.nota) cx.appendChild(el('div', 'local-nota', l.nota));
+
+    if (!l.verificado) {
+      const linha = el('div', 'colar-coord');
+      const inp = el('input');
+      inp.type = 'text';
+      inp.placeholder = '28.3390, -81.5010';
+      inp.value = co.colada ? co.lat + ', ' + co.lng : '';
+      inp.setAttribute('aria-label', 'Colar coordenada de ' + l.nome);
+      const btn = el('button', 'btn-secundario', 'Salvar');
+      btn.addEventListener('click', function () {
+        const m = inp.value.match(/(-?\d+\.?\d*)\s*,\s*(-?\d+\.?\d*)/);
+        if (!m) { inp.value = ''; inp.placeholder = 'formato: 28.3390, -81.5010'; return; }
+        E.definirCoordLocal(l.id, parseFloat(m[1]), parseFloat(m[2]));
+        pintarLocais();
+      });
+      linha.appendChild(inp); linha.appendChild(btn);
+      cx.appendChild(linha);
+    }
 
     /* ações */
     const acoes = el('div', 'local-acoes');
