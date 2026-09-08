@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0d3b52">
+<meta name="description" content="Roteiro de viagem offline para Orlando, 10 a 26 de novembro de 2026.">
+<title>Orlando 2026</title>
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+<!-- iOS: sem isto, "Adicionar à Tela de Início" abre como aba do Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Orlando 2026">
+<meta name="mobile-web-app-capable" content="yes">
+
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<header class="topo" id="topo">
+  <div class="topo-linha">
+    <button class="btn-icone" id="btn-tema" aria-label="Alternar tema">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+    </button>
+    <div class="topo-titulo">
+      <strong id="topo-nome">Orlando 2026</strong>
+      <span id="topo-sub">10 a 26 de novembro</span>
+    </div>
+    <button class="btn-icone" id="btn-hoje" aria-label="Ir para hoje">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v3M17 2v3M3 9h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ====================== HOME ====================== -->
+<main class="tela" id="tela-home">
+
+  <section class="contagem" id="contagem">
+    <span class="contagem-rotulo">faltam</span>
+    <span class="contagem-num" id="contagem-num">—</span>
+    <span class="contagem-unid" id="contagem-unid">dias</span>
+    <span class="contagem-alvo" id="contagem-alvo">para 10 de novembro</span>
+  </section>
+
+  <section id="cartao-proximo"></section>
+
+  <section class="bloco-secao">
+    <h2>Os 17 dias</h2>
+    <div class="grade-dias" id="grade-dias"></div>
+  </section>
+
+  <section class="bloco-secao" id="secao-alerta"></section>
+
+  <section class="bloco-secao">
+    <h2>Offline e sincronização</h2>
+    <div id="status-offline"></div>
+
+    <div class="painel-sync">
+      <p class="sync-ajuda">
+        Vocês são dois aparelhos sem servidor. Exportem de um e importem no outro
+        para juntar as marcações. O <strong>Mesclar</strong> compara registro a
+        registro e mantém sempre o mais recente — ninguém apaga o trabalho do outro.
+      </p>
+      <div class="sync-linha">
+        <span class="sync-rot">Exportar</span>
+        <div class="sync-botoes">
+          <button class="btn-secundario" id="btn-exp-copiar">Copiar</button>
+          <button class="btn-secundario" id="btn-exp-arquivo">Baixar</button>
+          <button class="btn-secundario" id="btn-exp-enviar">Enviar</button>
+        </div>
+      </div>
+      <div class="sync-linha">
+        <span class="sync-rot">Importar</span>
+        <div class="sync-botoes">
+          <button class="btn-secundario destaque" id="btn-importar">Importar do outro celular</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ====================== MODAL IMPORTAR ====================== -->
+<div class="modal oculto" id="modal-importar">
+  <div class="modal-caixa">
+    <div class="modal-topo">
+      <strong>Importar do outro celular</strong>
+      <button class="btn-icone escuro" id="btn-imp-fechar" aria-label="Fechar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="modal-corpo">
+      <p class="sync-ajuda">Cole aqui o texto exportado no outro aparelho, ou escolha o arquivo.</p>
+      <textarea id="imp-texto" rows="6" placeholder="{ &quot;versao&quot;: 1, … }"></textarea>
+      <label class="btn-secundario arquivo-label">
+        Escolher arquivo…
+        <input type="file" id="imp-arquivo" accept="application/json,.json" hidden>
+      </label>
+      <p class="imp-resultado" id="imp-resultado"></p>
+    </div>
+    <div class="modal-acoes">
+      <button class="btn-secundario" id="btn-imp-substituir">Substituir tudo</button>
+      <button class="btn-primario" id="btn-imp-mesclar">Mesclar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ====================== DIA ====================== -->
+<main class="tela oculto" id="tela-dia">
+
+  <nav class="nav-dias" id="nav-dias" aria-label="Navegação entre dias"></nav>
+
+  <section class="cabeca-dia">
+    <div class="cabeca-topo">
+      <span class="cabeca-emoji" id="dia-emoji"></span>
+      <div>
+        <h1 id="dia-titulo"></h1>
+        <p id="dia-data"></p>
+      </div>
+    </div>
+
+    <div id="dia-selos" class="selos-dia"></div>
+    <p class="dia-resumo" id="dia-resumo"></p>
+
+    <div class="referencia" id="referencia">
+      <label for="inp-referencia" id="lbl-referencia">Abertura do parque</label>
+      <div class="referencia-controle">
+        <input type="time" id="inp-referencia" step="300">
+        <button class="btn-secundario" id="btn-ref-reset">Reverter</button>
+      </div>
+      <p class="referencia-ajuda" id="referencia-ajuda"></p>
+    </div>
+
+    <div class="progresso">
+      <div class="progresso-barra"><div class="progresso-fill" id="progresso-fill"></div></div>
+      <div class="progresso-info">
+        <span id="progresso-texto">0 de 0</span>
+        <label class="chave">
+          <input type="checkbox" id="chk-falta">
+          <span>Só o que falta</span>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <div id="avisos-dia"></div>
+  <ol class="linha-tempo" id="linha-tempo"></ol>
+
+  <div id="ficha-dia"></div>
+
+  <section class="bloco-secao" id="notas-secao">
+    <h2>Notas do dia</h2>
+    <textarea id="notas-texto" rows="4"
+      placeholder="O que vocês quiserem lembrar deste dia…"></textarea>
+    <p class="nota-salva" id="notas-status"></p>
+  </section>
+
+</main>
+
+<!-- ====================== RESTAURANTES ====================== -->
+<main class="tela oculto" id="tela-comer">
+  <h1 class="tela-titulo">Restaurantes</h1>
+  <p class="tela-sub" id="comer-sub"></p>
+  <div id="janelas-reserva"></div>
+  <div id="lista-restaurantes"></div>
+</main>
+
+<!-- ====================== CHECKLIST ====================== -->
+<main class="tela oculto" id="tela-pendencias">
+  <h1 class="tela-titulo">Pendências</h1>
+  <p class="tela-sub" id="pend-sub"></p>
+  <div class="progresso">
+    <div class="progresso-barra"><div class="progresso-fill" id="pend-fill"></div></div>
+    <div class="progresso-info">
+      <span id="pend-texto"></span>
+      <label class="chave">
+        <input type="checkbox" id="chk-pend-falta">
+        <span>Só o que falta</span>
+      </label>
+    </div>
+  </div>
+  <div id="lista-pendencias"></div>
+</main>
+
+<!-- ====================== GUIA (locais + dicas) ====================== -->
+<main class="tela oculto" id="tela-guia">
+  <h1 class="tela-titulo">Guia</h1>
+  <p class="tela-sub">Dicas de campo e os endereços da viagem.</p>
+
+  <h2 class="secao-rotulo">Dicas</h2>
+  <div id="lista-dicas"></div>
+
+  <h2 class="secao-rotulo">Locais</h2>
+  <div class="aviso" id="aviso-coords"></div>
+  <div class="filtros-local" id="filtros-local"></div>
+  <div id="lista-locais"></div>
+</main>
+
+<nav class="barra-inferior barra-5">
+  <button class="aba ativa" data-tela="home">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>
+    <span>Início</span>
+  </button>
+  <button class="aba" data-tela="dia">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+    <span>Roteiro</span>
+  </button>
+  <button class="aba" data-tela="comer">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3v8a3 3 0 0 0 6 0V3M7 11v10M17 3c-1.7 0-3 2.2-3 5s1.3 4 3 4v9"/></svg>
+    <span>Comer</span>
+  </button>
+  <button class="aba" data-tela="guia">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11zM12 8a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg>
+    <span>Guia</span>
+  </button>
+  <button class="aba" data-tela="pendencias">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11l2 2 4-4M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg>
+    <span>Pendências</span>
+    <i class="badge oculto" id="badge-pend"></i>
+  </button>
+</nav>
+
+<script src="data/roteiro.js"></script>
+<script src="js/estado.js"></script>
+<script src="js/fase3.js"></script>
+<script src="js/fase4.js"></script>
+<script src="js/fase5.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

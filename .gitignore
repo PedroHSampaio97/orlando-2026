@@ -1,0 +1,11 @@
+# OneDrive / Windows
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# temporários de trabalho
+_*.js
+*.tmp
+
+# nada de node aqui — o projeto é sem build
+node_modules/
