@@ -92,6 +92,7 @@
     });
     lista.sort((a, b) => a.min - b.min || a.minOriginal - b.minOriginal);
 
+    // (1) aperto: dois blocos que ficaram colados sem estar antes
     for (let i = 1; i < lista.length; i++) {
       const a = lista[i - 1], b = lista[i];
       if ((b.min - a.min) < 15 && Math.abs(b.minOriginal - a.minOriginal) >= 15) {
@@ -99,6 +100,22 @@
           (o.ancora === 'fixo' ? ', que tem horário fixo e não desloca.' : '.');
         a.colisao = a.colisao || frase(b);
         b.colisao = frase(a);
+      }
+    }
+
+    // (2) inversão: o deslocamento jogou um bloco para depois de outro que ele
+    // deveria preceder. É o caso do voo atrasado que empurra o passeio para
+    // depois do jantar — aperto nenhum, ordem completamente errada.
+    for (let i = 0; i < lista.length; i++) {
+      for (let j = i + 1; j < lista.length; j++) {
+        const a = lista[i], b = lista[j];
+        if (a.minOriginal <= b.minOriginal) continue;
+        // A culpa é de quem se moveu, não de quem ficou parado.
+        const moveu = b.deslocado ? b : (a.deslocado ? a : b);
+        const outro = moveu === b ? a : b;
+        moveu.colisao = moveu.colisao ||
+          'Caiu para depois de "' + outro.dados.titulo +
+          '", que no plano vinha só depois deste bloco.';
       }
     }
     return lista;
@@ -381,6 +398,8 @@
       dia.tipo === 'logistica' ? 'logística' : 'dia livre'));
     if (dia.custoZero) selos.appendChild(el('span', 'selo-dia custo-zero',
       'entrada extra · custo zero'));
+    if (dia.fechado) selos.appendChild(el('span', 'selo-dia fechado',
+      '✓ dia revisado em ' + dia.revisadoEm.split('-').reverse().join('/')));
 
     pintarRotaDia(dia);
     pintarReferencia(dia);
@@ -388,6 +407,7 @@
     pintarLinhaTempo(dia);
     pintarProgresso(dia);
     Fase3.pintarFicha(dia);
+    Fase3.pintarFechamento(dia);
     $('#notas-texto').value = E.nota(dia.id);
     $('#notas-status').textContent = '';
     pintarNavDias();
@@ -595,7 +615,12 @@
       cab.appendChild(el('span', 'ct-pin'));
       cab.appendChild(el('span', 'ct-hora-antiga', b.hora));
     }
-    if (b.duracaoMin) cab.appendChild(el('span', 'ct-dur', '· ' + b.duracaoMin + ' min'));
+    if (b.fuso) cab.appendChild(el('span', 'ct-fuso', b.fuso));
+    if (b.duracaoMin) {
+      const h = Math.floor(b.duracaoMin / 60), m = b.duracaoMin % 60;
+      cab.appendChild(el('span', 'ct-dur', '· ' +
+        (h ? h + 'h' + (m ? String(m).padStart(2, '0') : '') : m + ' min')));
+    }
 
     if (b.tipo !== 'vazio') {
       const chk = el('button', 'ct-check');

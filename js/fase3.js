@@ -43,7 +43,10 @@ window.Fase3 = (function () {
   /* ===========================================================================
      FICHA DO PARQUE — renderizada dentro da tela do dia
      ======================================================================== */
+  let diaEmFoco = null;
+
   function pintarFicha(dia) {
+    diaEmFoco = dia;
     const alvo = $('#ficha-dia');
     alvo.innerHTML = '';
     const f = dia.ficha;
@@ -232,6 +235,105 @@ window.Fase3 = (function () {
   }
 
   /* ===========================================================================
+     DIA FECHADO — planos A/B/C, listas de compra, o que não perder
+     ======================================================================== */
+  function pintarFechamento(dia) {
+    const alvo = $('#fechamento-dia');
+    alvo.innerHTML = '';
+    if (!dia.fechado) return;
+
+    if ((dia.planos || []).length) alvo.appendChild(blocoPlanos(dia.planos));
+    (dia.listas || []).forEach((l) => alvo.appendChild(blocoLista(l)));
+    if ((dia.naoPerca || []).length) alvo.appendChild(blocoNaoPerca(dia.naoPerca));
+  }
+
+  const LETRA_COR = { A: 'plano-a', B: 'plano-b', C: 'plano-c' };
+
+  function blocoPlanos(planos) {
+    const d = el('details', 'acordeao');
+    d.setAttribute('open', '');
+    d.appendChild(el('summary', null, '🧭  Plano A, B e C — o que fazer se o dia virar'));
+    const c = el('div', 'acordeao-corpo');
+
+    planos.forEach(function (p) {
+      const bloco = el('div', 'plano ' + (LETRA_COR[p.letra] || ''));
+      const topo = el('div', 'plano-topo');
+      topo.appendChild(el('span', 'plano-letra', p.letra));
+      const t = el('div');
+      t.appendChild(el('div', 'plano-titulo', p.titulo));
+      t.appendChild(el('div', 'plano-gatilho', p.gatilho));
+      topo.appendChild(t);
+      bloco.appendChild(topo);
+
+      const ol = el('ol', 'plano-passos');
+      p.passos.forEach((x) => ol.appendChild(el('li', null, x)));
+      bloco.appendChild(ol);
+      c.appendChild(bloco);
+    });
+    d.appendChild(c);
+    return d;
+  }
+
+  function blocoLista(lista) {
+    const feitos = lista.itens.filter((i) => E.feito('lista:' + lista.id + ':' + i.texto)).length;
+    const d = el('details', 'acordeao');
+    d.appendChild(el('summary', null,
+      '🛒  ' + lista.titulo + '  ·  ' + feitos + '/' + lista.itens.length));
+    const c = el('div', 'acordeao-corpo');
+    if (lista.intro) c.appendChild(el('p', 'lista-intro', lista.intro));
+
+    lista.itens.forEach(function (item) {
+      const chave = 'lista:' + lista.id + ':' + item.texto;
+      const marcado = E.feito(chave);
+      const li = el('div', 'item-lista' + (marcado ? ' marcado' : ''));
+
+      const chk = el('button', 'bl-check');
+      chk.setAttribute('aria-pressed', marcado ? 'true' : 'false');
+      chk.setAttribute('aria-label', 'Marcar: ' + item.texto);
+      chk.appendChild(svgP('M4 12l6 6L20 6'));
+      chk.addEventListener('click', function () {
+        E.marcarFeito(chave, !E.feito(chave));
+        pintarFechamento(diaEmFoco);
+      });
+      li.appendChild(chk);
+
+      const t = el('div', 'item-corpo');
+      const linha = el('div', 'item-texto');
+      linha.appendChild(document.createTextNode(item.texto));
+      if (item.essencial) linha.appendChild(el('span', 'selo selo-critico', 'essencial'));
+      t.appendChild(linha);
+      if (item.motivo) t.appendChild(el('div', 'item-motivo', item.motivo));
+      li.appendChild(t);
+      c.appendChild(li);
+    });
+    d.appendChild(c);
+    return d;
+  }
+
+  function blocoNaoPerca(itens) {
+    const d = el('details', 'acordeao');
+    d.appendChild(el('summary', null, '⭐  O que não perder — e o que fica para depois'));
+    const c = el('div', 'acordeao-corpo');
+    itens.forEach(function (x) {
+      const b = el('div', 'nao-perca');
+      const topo = el('div', 'np-topo');
+      topo.appendChild(el('span', 'np-nome', x.nome));
+      if (x.quando) {
+        const q = String(x.quando);
+        const classe = /hoje/.test(q) && !/não cabe/.test(q) ? 'agora'
+                     : /decidir/.test(q) ? 'decidir' : 'depois';
+        topo.appendChild(el('span', 'np-quando ' + classe, q));
+      }
+      b.appendChild(topo);
+      if (x.custo) b.appendChild(el('div', 'np-custo', x.custo));
+      if (x.motivo) b.appendChild(el('div', 'np-motivo', x.motivo));
+      c.appendChild(b);
+    });
+    d.appendChild(c);
+    return d;
+  }
+
+  /* ===========================================================================
      RESTAURANTES
      ======================================================================== */
   const STATUS = [
@@ -242,7 +344,14 @@ window.Fase3 = (function () {
   ];
   const statusDe = (r) => {
     const s = E.reserva(r.id);
-    return (s && s.status) || (r.precisaReserva ? 'a-reservar' : null);
+    if (s && s.status) return s.status;
+    if (r.statusPadrao) return r.statusPadrao;
+    return r.precisaReserva ? 'a-reservar' : null;
+  };
+  const confirmacaoDe = (r) => {
+    const s = E.reserva(r.id);
+    if (s && s.confirmacao) return s.confirmacao;
+    return r.confirmacaoPadrao || '';
   };
 
   function pintarRestaurantes() {
@@ -322,7 +431,7 @@ window.Fase3 = (function () {
         inp.id = 'conf-' + r.id;
         inp.type = 'text';
         inp.placeholder = 'ex.: 1234567890';
-        inp.value = (E.reserva(r.id) || {}).confirmacao || '';
+        inp.value = confirmacaoDe(r);
         inp.addEventListener('change', function () {
           E.definirReserva(r.id, { confirmacao: inp.value.trim() });
         });
@@ -500,7 +609,7 @@ window.Fase3 = (function () {
   });
 
   return {
-    pintarFicha: pintarFicha,
+    pintarFicha: pintarFicha, pintarFechamento: pintarFechamento,
     pintarRestaurantes: pintarRestaurantes,
     pintarPendencias: pintarPendencias,
   };

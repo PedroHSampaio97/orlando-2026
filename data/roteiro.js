@@ -179,75 +179,289 @@ window.ROTEIRO = {
   dias: [
 
   /* ===== 10/11 · TERÇA · CHEGADA ========================================== */
+  /* DIA FECHADO — revisado em 08/09/2026 com os voos reais.                  */
   {
     id: 'd-2026-11-10',
     data: '2026-11-10',
     diaSemana: 'terça',
     emoji: '🛬',
     titulo: 'Chegada',
-    subtitulo: 'MCO · hotel · Walmart · Disney Springs',
+    subtitulo: 'GIG → Bogotá → MCO · Walmart · Disney Springs',
     tipo: 'logistica',
     operadora: null,
     parqueId: null,
     custoZero: false,
-    referencia: null,
-    resumo:
-      'Dia de aterrissar e abastecer. Disney Springs ainda SEM decoração de Natal — ' +
-      'ela começa em 13/11, e é por isso que vocês voltam lá no dia 21.',
-    avisos: [
-      'Chip/eSIM: ativem ainda no aeroporto, com o wifi do MCO, antes de precisar do Uber.',
-    ],
-    blocos: [
-      { id: 'b-1011-1200', hora: '12:00', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Pouso no MCO',
-        descricao: 'Imigração leva de 40 min a 2h',
-        contexto:
-          'O tempo é imprevisível e não dá para planejar em cima dele. Se sair rápido, sobra ' +
-          'tempo no Walmart; se demorar, o Walmart encolhe. Nada depois disso é hora marcada ' +
-          'até o jantar.',
-        localId: 'mco', acesso: [], horaAprox: true },
+    fechado: true,
+    revisadoEm: '2026-09-08',
 
-      { id: 'b-1011-1430', hora: '14:30', ancora: 'fixo', tipo: 'deslocamento',
+    // A âncora do dia é o pouso. Atrasou o voo, a tarde inteira desloca junto —
+    // menos o jantar, que tem hora marcada.
+    referencia: { rotulo: 'Pouso no MCO', padrao: '12:35', confirmado: true },
+
+    resumo:
+      'O dia mais fácil de salvar da viagem inteira: não tem ingresso, não tem hora de ' +
+      'parque, e o único compromisso de relógio é o jantar às 19h. Tudo o mais é ' +
+      'sacrificável sem perda real — inclusive o Disney Springs, porque vocês voltam lá ' +
+      'no dia 21, quando estiver decorado de Natal.',
+
+    avisos: [
+      'O dia começa na véspera: com decolagem 01h40, vocês precisam estar no GIG por volta ' +
+      'das 22h30 de 09/11.',
+      'Chip/eSIM: ativem no wifi do aeroporto ANTES de precisar do Uber. Sem internet não ' +
+      'tem corrida.',
+    ],
+
+    notas: [
+      { tipo: 'atencao', texto:
+        'CONEXÃO EM BOGOTÁ — 2h20. O mínimo oficial para internacional-internacional em El ' +
+        'Dorado é 1h30, então vocês têm folga. Mas a Colômbia faz vocês passarem pela ' +
+        'imigração mesmo em trânsito, e essa fila leva de 20 a 45 minutos. Sobram 1h35 a 2h ' +
+        'de margem real. Não é apertado, mas também não é para passear.',
+        pesquisa: '2026-09-08' },
+      { tipo: 'atencao', texto:
+        'Se as duas passagens forem bilhete único, a bagagem vai despachada até Orlando e ' +
+        'vocês só seguem para o portão. Se forem bilhetes separados, precisam retirar e ' +
+        'redespachar em Bogotá — e aí 2h20 fica justo. Confirmem isso com a agência antes ' +
+        'de viajar.' },
+      { tipo: 'bom', texto:
+        'Voos internacionais chegam no Terminal C do MCO, que é novo e rápido. O ponto de ' +
+        'Uber fica no NÍVEL 6 do Terminal C, sinalizado como "Rideshare Pickup". Só peçam a ' +
+        'corrida depois de pegar as malas — o motorista tem poucos minutos de espera.',
+        pesquisa: '2026-09-08' },
+      { tipo: 'atencao', texto:
+        'Check-in do hotel costuma ser só a partir das 15h. Se chegarem antes, deixem as ' +
+        'malas na recepção e sigam para o Walmart — não fiquem esperando no saguão.' },
+    ],
+
+    /* ---------------------------------------------------------------------
+       PLANOS A / B / C — o dia decide-se na fila da imigração do MCO
+       ------------------------------------------------------------------ */
+    planos: [
+      {
+        letra: 'A',
+        titulo: 'Tudo no horário',
+        gatilho: 'Vocês saem do Terminal C até as 14h00.',
+        passos: [
+          'Uber para o hotel, deixar malas, check-in se já liberou.',
+          'Walmart com calma — a lista completa, 45 a 60 min.',
+          'Disney Springs às 17h30, com 1h30 antes do jantar.',
+          'The Boathouse 19h. Voltar 21h.',
+        ],
+      },
+      {
+        letra: 'B',
+        titulo: 'Imigração demorou',
+        gatilho: 'Vocês saem do Terminal C entre 14h00 e 16h00.',
+        passos: [
+          'Corta o Walmart para o essencial: água, protetor solar, ibuprofeno e barrinhas. ' +
+          '20 minutos, sem passear pelos corredores.',
+          'O resto da lista vai para o dia 12, que é dia de outlet na I-Drive e comporta ' +
+          'uma parada de mercado sem custo nenhum de roteiro.',
+          'Disney Springs direto, mesmo que chegue só 18h15. Uma hora lá dentro já dá o ' +
+          'World of Disney e a beira da água.',
+          'O jantar das 19h não se mexe. É a única hora marcada do dia.',
+        ],
+      },
+      {
+        letra: 'C',
+        titulo: 'Perdeu a conexão ou chegou depois das 17h',
+        gatilho: 'Atraso grande em Bogotá, remarcação, ou pouso no MCO depois das 17h.',
+        passos: [
+          'PRIMEIRA COISA: cancelem o The Boathouse assim que souberem, por telefone ou ' +
+          'pelo app. Restaurante de Disney Springs cobra taxa por não comparecimento.',
+          'Esqueçam o Disney Springs hoje. Vocês voltam no dia 21 e, honestamente, o dia 21 ' +
+          'é melhor: tem o Christmas Tree Stroll e a decoração de Natal, que hoje ainda ' +
+          'não existe.',
+          'Uber direto para o hotel. Jantem na 192 mesmo — Black Angus, Miller’s Ale ' +
+          'House, ou qualquer coisa aberta perto.',
+          'Walmart passa para o dia 12. Durmam. O dia 11 é Magic Kingdom com saída às 6h45 ' +
+          'e é ele que vocês não podem estragar.',
+        ],
+      },
+    ],
+
+    /* ---------------------------------------------------------------------
+       LISTA DO WALMART — montada a partir do que os 16 dias exigem
+       ------------------------------------------------------------------ */
+    listas: [
+      {
+        id: 'lista-walmart',
+        titulo: 'Walmart Supercenter — a compra que abastece a viagem inteira',
+        intro:
+          'É a parada que mais economiza dinheiro na viagem. Água dentro do parque custa ' +
+          'US$ 4; aqui sai a US$ 0,25. Capa de chuva custa US$ 10 lá dentro e US$ 1 aqui. ' +
+          'Marcados como essenciais são os que, se faltarem, vocês vão comprar caro depois.',
+        itens: [
+          { texto: 'Água — caixa de 24 garrafas', essencial: true,
+            motivo: 'No documento. Levem 2 garrafas por pessoa em todo dia de parque.' },
+          { texto: 'Protetor solar FPS 50 + bastão para o rosto', essencial: true,
+            motivo: 'No documento. O bastão é para reaplicar na fila sem sujar a mão.' },
+          { texto: 'Ibuprofeno e analgésico', essencial: true,
+            motivo: 'No documento. Nos EUA sai muito mais barato que no Brasil.' },
+          { texto: 'Barrinhas de cereal e frutas', essencial: true,
+            motivo: 'No documento. Café da manhã dos dias de rope drop, quando vocês saem ' +
+                    'do hotel antes de 7h.' },
+          { texto: 'Café', essencial: false,
+            motivo: 'No documento. Confiram se o quarto tem cafeteira antes de comprar cápsula.' },
+          { texto: 'Capas de chuva descartáveis — 4 unidades', essencial: true,
+            motivo: 'ACRÉSCIMO. Jurassic Park River Adventure no dia 19, Journey to Atlantis ' +
+                    'no 22 e Fyre Drill no 23 molham de verdade. US$ 1 aqui, US$ 10 no parque.' },
+          { texto: 'Curativos e protetor de bolha (Band-Aid Blister / Moleskin)', essencial: true,
+            motivo: 'ACRÉSCIMO. São 16 dias andando 15 a 25 mil passos. Bolha no dia 3 ' +
+                    'estraga o resto da viagem, e é a lesão mais evitável que existe.' },
+          { texto: 'Meias extras — 3 pares de secagem rápida', essencial: true,
+            motivo: 'ACRÉSCIMO. Meia molhada depois do Jurassic Park às 12h significa pé ' +
+                    'macerado até as 20h.' },
+          { texto: 'Power bank e cabo', essencial: true,
+            motivo: 'ACRÉSCIMO. Este app, o app da Disney, o da Universal, mapa e foto o dia ' +
+                    'todo. Celular descarregado às 16h é o roteiro perdido.' },
+          { texto: 'Sacos Ziploc grandes', essencial: false,
+            motivo: 'ACRÉSCIMO. Para o celular nas atrações que molham e para o troco.' },
+          { texto: 'Eletrólito em pó ou isotônico', essencial: false,
+            motivo: 'ACRÉSCIMO. Novembro é ameno, mas 12 horas em pé desidratam.' },
+          { texto: 'Pomada anti-atrito (Body Glide ou vaselina)', essencial: false,
+            motivo: 'ACRÉSCIMO. Assadura de coxa em dia de 25 mil passos é real.' },
+          { texto: 'Antiácido', essencial: false,
+            motivo: 'ACRÉSCIMO. A porção americana e o horário de refeição fora do normal.' },
+        ],
+      },
+    ],
+
+    /* ---------------------------------------------------------------------
+       DISNEY SPRINGS — o que cabe em 1h30 e o que fica para o dia 21
+       ------------------------------------------------------------------ */
+    naoPerca: [
+      { nome: 'World of Disney', quando: 'hoje', custo: 'grátis entrar',
+        motivo: 'A maior loja Disney do mundo. Os fundos da loja têm o que quase nenhum ' +
+                'turista acha — vale atravessar até o final em vez de parar na primeira sala.' },
+      { nome: 'A beira da água ao pôr do sol', quando: 'hoje', custo: 'grátis',
+        motivo: 'O sol se põe às 17h35 em novembro. Vocês chegam exatamente na hora certa: ' +
+                'pegam a luz do fim de tarde e depois a iluminação acendendo.' },
+      { nome: 'Gideon’s Bakehouse', quando: 'hoje, se a fila deixar', custo: '~US$ 6 o cookie',
+        motivo: 'Cookie de meio quilo, fama justificada. A fila é longa e costuma ter espera ' +
+                'virtual pelo app — entrem na lista assim que chegarem e passeiem enquanto isso.',
+        pesquisa: '2026-09-08' },
+      { nome: 'Amphicar Tour', quando: 'decidir: hoje não cabe', custo: '~US$ 125 por carro',
+        motivo: 'Passeio de 20 min num conversível anfíbio de 1960 que entra no lago. Sai do ' +
+                'píer do próprio Boathouse, onde vocês jantam. Com 1h30 antes do jantar, ' +
+                'não cabe junto com o World of Disney — e no dia 21 vocês têm ainda menos ' +
+                'tempo. Se quiserem, é hoje e cortando a loja.',
+        pesquisa: '2026-09-08' },
+      { nome: 'Aerophile — balão cativo', quando: 'fica para o dia 21', custo: '~US$ 25',
+        motivo: 'Sobe 120 m preso por cabo, 8 minutos, vista de até 16 km. Não voa com vento ' +
+                'forte, então nunca dá para contar com ele.',
+        pesquisa: '2026-09-08' },
+      { nome: 'Christmas Tree Stroll', quando: 'só existe no dia 21', custo: 'grátis',
+        motivo: 'A decoração de Natal do Disney Springs começa em 13/11. Hoje não existe. ' +
+                'É exatamente por isso que vocês voltam no dia 21.' },
+    ],
+
+    blocos: [
+      { id: 'b-1011-0140', hora: '01:40', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voo GIG → Bogotá',
+        descricao: 'Decolagem 01h40 · pouso 06h00 em Bogotá',
+        fuso: 'Brasília',
+        contexto:
+          'Cerca de 6h20 de voo, à noite. Durmam o que der: vocês só vão deitar de novo ' +
+          'em Orlando, quase 24 horas depois de sair de casa. Máscara de olho e água.',
+        localId: null, acesso: [], duracaoMin: 380 },
+
+      { id: 'b-1011-0600', hora: '06:00', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Conexão em Bogotá — El Dorado',
+        descricao: '2h20 de conexão. Imigração colombiana leva de 20 a 45 min',
+        fuso: 'Bogotá',
+        contexto:
+          'Mesmo em trânsito, a Colômbia faz passar pela imigração. Vá direto, sem parar ' +
+          'em loja: a fila é o único risco real. Depois dela sobram 1h35 a 2h, aí sim dá ' +
+          'para tomar um café. A conexão internacional da Avianca costuma sair do Terminal 1.',
+        acesso: [], critico: true, duracaoMin: 140, pesquisa: '2026-09-08' },
+
+      { id: 'b-1011-0820', hora: '08:20', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voo Bogotá → Orlando',
+        descricao: 'Decolagem 08h20 · pouso 12h35 no MCO',
+        fuso: 'Bogotá',
+        contexto:
+          'Cerca de 4h15. Preencham a declaração de alfândega em papel se distribuírem a ' +
+          'bordo — resolve tempo na chegada. Bogotá não tem pré-inspeção americana, então ' +
+          'a imigração dos EUA é toda em Orlando.',
+        acesso: [], duracaoMin: 255 },
+
+      { id: 'b-1011-1235', hora: '12:35', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Pouso no MCO — Terminal C',
+        descricao: 'Internacionais chegam no Terminal C',
+        fuso: 'Orlando',
+        contexto:
+          'Este é o horário que ancora o resto do dia. Se o voo atrasar, mude a referência ' +
+          'aqui em cima e a tarde inteira desloca junto — menos o jantar, que tem hora marcada.',
+        localId: 'mco', acesso: [], pesquisa: '2026-09-08' },
+
+      { id: 'b-1011-1250', hora: '12:50', ancora: 'referencia', tipo: 'espera',
+        titulo: 'Imigração, bagagem e alfândega',
+        descricao: 'De 40 min a 2h. É esta fila que decide se o dia é plano A, B ou C',
+        contexto:
+          'A caminhada do portão até a esteira já leva de 15 a 25 minutos no Terminal C. ' +
+          'Enquanto esperam, olhem o relógio: saindo até 14h é plano A; até 16h é plano B; ' +
+          'depois disso, plano C.',
+        localId: 'mco', acesso: [], critico: true },
+
+      { id: 'b-1011-1415', hora: '14:15', ancora: 'referencia', tipo: 'tarefa',
+        titulo: 'Ativar o eSIM e chamar o Uber',
+        descricao: 'Rideshare Pickup no NÍVEL 6 do Terminal C',
+        contexto:
+          'Ativem o chip no wifi do aeroporto antes de tudo — sem internet não existe Uber. ' +
+          'E só chamem a corrida depois de estarem com as malas na mão: o motorista tem ' +
+          'poucos minutos de tolerância e cancela.',
+        localId: 'mco', acesso: [], critico: true, pesquisa: '2026-09-08' },
+
+      { id: 'b-1011-1445', hora: '14:45', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Uber para o hotel · check-in',
         descricao: '~30 min, US$ 35–45',
+        contexto:
+          'Check-in costuma abrir às 15h. Se chegarem antes, deixem as malas na recepção e ' +
+          'sigam — esperar no saguão é o pior uso possível da primeira tarde.',
         localId: 'hotel-travelodge', acesso: [] },
 
-      { id: 'b-1011-1530', hora: '15:30', ancora: 'fixo', tipo: 'compras',
+      { id: 'b-1011-1530', hora: '15:30', ancora: 'referencia', tipo: 'compras',
         titulo: 'Walmart Supercenter',
-        descricao:
-          'Água (caixa de 24), café, protetor solar, ibuprofeno, barrinhas e frutas para os ' +
-          'dias de rope drop',
+        descricao: 'Lista completa na ficha do dia. 45 a 60 min',
         contexto:
-          'Essa parada é a que mais economiza dinheiro na viagem inteira. Garrafa de água ' +
-          'dentro do parque custa US$ 4 e no Walmart sai a menos de US$ 0,25. Aproveitem e ' +
-          'levem também capas de chuva descartáveis — custam ~US$ 1 aqui e ~US$ 10 no parque, ' +
-          'e vocês vão precisar no Jurassic Park do dia 19.',
+          'A compra que abastece os 16 dias. Se o dia estiver atrasado, façam só os quatro ' +
+          'itens essenciais e joguem o resto para o dia 12.',
         endereco: '1471 E Osceola Pkwy', localId: 'walmart-osceola', acesso: [] },
 
-      { id: 'b-1011-1730', hora: '17:30', ancora: 'fixo', tipo: 'deslocamento',
+      { id: 'b-1011-1730', hora: '17:30', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Disney Springs',
-        descricao: 'Uber, ~20 min',
+        descricao: 'Uber, ~20 min. Pôr do sol às 17h35',
+        contexto:
+          'Entrada livre, sem ingresso e sem catraca. Vocês chegam junto com o pôr do sol, ' +
+          'que é a melhor hora do lugar.',
         localId: 'disney-springs', acesso: [] },
 
-      { id: 'b-1011-1745', hora: '17:45', ancora: 'fixo', tipo: 'compras',
+      { id: 'b-1011-1745', hora: '17:45', ancora: 'referencia', tipo: 'compras',
         titulo: 'The Landing → Marketplace → Town Center',
         descricao: 'World of Disney é a maior loja Disney do mundo',
         contexto:
-          'Disney Springs é aberto ao público, sem ingresso e sem catraca. São quatro áreas ' +
-          'coladas; o percurso do documento vai da mais gastronômica (The Landing) para a de ' +
-          'lojas Disney (Marketplace) e termina nas marcas de rua (Town Center).',
+          'São 1h15 até o jantar. Dá para o World of Disney com calma e a beira da água. ' +
+          'Não dá para somar Amphicar e balão — esses estão na lista de decisão da ficha ' +
+          'do dia.',
         localId: 'disney-springs', acesso: [] },
 
       { id: 'b-1011-1900', hora: '19:00', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — The Boathouse',
-        descricao: 'Reserva',
+        descricao: 'Reserva confirmada · 2111918775',
         contexto:
-          'Frutos do mar e carnes na beira da água, no Landing. É das casas mais concorridas ' +
-          'de Disney Springs — a reserva abre em 11/09 e é a primeira pendência da lista.',
-        restauranteId: 'r-boathouse', acesso: ['reserva'] },
+          'Frutos do mar e carnes na beira da água, no The Landing. Cheguem 15 minutos ' +
+          'antes. HORÁRIO FIXO: não desloca nem se o voo atrasar — se o dia virar plano C, ' +
+          'cancelem em vez de perder a reserva por não comparecimento.',
+        restauranteId: 'r-boathouse', localId: 'disney-springs', acesso: ['reserva'],
+        critico: true },
 
       { id: 'b-1011-2100', hora: '21:00', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Voltar ao hotel', descricao: '', acesso: [] },
+        titulo: 'Voltar ao hotel',
+        descricao: 'Amanhã é Magic Kingdom com saída às 6h45',
+        contexto:
+          'Não estiquem. O dia 11 começa às 6h45 e é o dia mais denso da primeira semana.',
+        localId: 'hotel-travelodge', acesso: [] },
     ],
     renuncias: null,
     ficha: null,
@@ -365,13 +579,13 @@ window.ROTEIRO = {
         areaParque: 'Fantasyland', acesso: ['single-pass'] },
 
       { id: 'b-1111-1230', hora: '12:30', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Almoço',
-        descricao: 'Liberty Tree Tavern ou Columbia Harbour House',
+        titulo: 'Almoço — Columbia Harbour House',
+        descricao: 'Balcão, sem reserva. Segundo andar',
         contexto:
           'Liberty Tree Tavern é serviço à mesa, estilo ceia colonial americana, e precisa de ' +
           'reserva. Columbia Harbour House é balcão, peixe e sanduíches, e tem um segundo ' +
           'andar que quase ninguém acha — o lugar mais silencioso do Magic Kingdom.',
-        restauranteId: 'r-liberty-tree', areaParque: 'Liberty Square', acesso: [] },
+        restauranteId: 'r-columbia-harbour', areaParque: 'Liberty Square', acesso: [] },
 
       { id: 'b-1111-1345', hora: '13:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mansão Mal-Assombrada',
@@ -428,8 +642,8 @@ window.ROTEIRO = {
         areaParque: 'Tomorrowland', acesso: ['single-pass'], condicional: true },
 
       { id: 'b-1111-1745', hora: '17:45', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Jantar',
-        descricao: 'Casey’s Corner ou Skipper Canteen',
+        titulo: 'Jantar — Casey’s Corner',
+        descricao: 'Balcão na Main Street. Sentem fora, de frente para o pianista',
         contexto:
           'Casey’s Corner é balcão de cachorro-quente na Main Street, com pianista ao vivo na ' +
           'porta. Skipper Canteen é serviço à mesa, comida bem mais interessante e quase sempre ' +
@@ -2571,22 +2785,28 @@ window.ROTEIRO = {
       refeicao: 'jantar', local: 'Disney Springs · The Landing', alternativas: [],
       precisaReserva: true, janelaAbre: '2026-09-11', janelaHora: '06:00 ET',
       canal: 'Disney Springs / OpenTable', blocoId: 'b-1011-1900',
-      nota: 'Frutos do mar e carnes na beira da água. Muito concorrido.' },
+      statusPadrao: 'confirmado', confirmacaoPadrao: '2111918775',
+      nota: 'RESERVADO em 08/09 — confirmação 2111918775. Frutos do mar e carnes na ' +
+            'beira da água. Cheguem 15 min antes; a fila de check-in do restaurante ' +
+            'anda devagar quando o Springs está cheio.' },
 
-    { id: 'r-liberty-tree', nome: 'Liberty Tree Tavern', data: '2026-11-11', hora: '12:30',
-      refeicao: 'almoco', local: 'Magic Kingdom · Liberty Square',
-      alternativas: ['Columbia Harbour House', 'Skipper Canteen'],
-      precisaReserva: true, janelaAbre: '2026-09-12', janelaHora: '06:00 ET',
-      canal: 'My Disney Experience', blocoId: 'b-1111-1230',
-      nota: 'O documento cita Columbia Harbour House (balcão) como alternativa no bloco, e ' +
-            'Skipper Canteen na pendência. Qualquer uma resolve.' },
+    { id: 'r-columbia-harbour', nome: 'Columbia Harbour House', data: '2026-11-11',
+      hora: '12:30', refeicao: 'almoco', local: 'Magic Kingdom · Liberty Square',
+      alternativas: [],
+      precisaReserva: false, janelaAbre: null, janelaHora: null,
+      canal: 'Mobile order pelo My Disney Experience', blocoId: 'b-1111-1230',
+      nota: 'DECIDIDO em 08/09: parque corrido, almoço de balcão sem reserva. Peixe e ' +
+            'sanduíches. Subam para o segundo andar — quase ninguém acha, e é o lugar ' +
+            'mais silencioso do Magic Kingdom. Liberty Tree Tavern e Skipper Canteen ' +
+            'ficaram de fora.' },
 
     { id: 'r-caseys', nome: 'Casey’s Corner', data: '2026-11-11', hora: '17:45',
-      refeicao: 'jantar', local: 'Magic Kingdom · Main Street',
-      alternativas: ['Skipper Canteen'],
+      refeicao: 'jantar', local: 'Magic Kingdom · Main Street', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: null, blocoId: 'b-1111-1745',
-      nota: 'Balcão, cachorro-quente, pianista ao vivo na porta. Mobile order.' },
+      canal: 'Mobile order pelo My Disney Experience', blocoId: 'b-1111-1745',
+      nota: 'DECIDIDO em 08/09: escolhido pela experiência do pianista, que toca na porta ' +
+            'ao ar livre. Usem mobile order e comam nas mesas de fora, de frente para o ' +
+            'piano — comer dentro perde o motivo da escolha.' },
 
     { id: 'r-satuli', nome: 'Satu’li Canteen', data: '2026-11-13', hora: '12:15',
       refeicao: 'almoco', local: 'Animal Kingdom · Pandora', alternativas: [],
@@ -2712,14 +2932,15 @@ window.ROTEIRO = {
 
     /* --- prazo curto (setembro) --- */
     { id: 'ck-0911', grupo: 'prazo-curto', dataAlvo: '2026-09-11', hora: '06:00', fuso: 'ET',
-      janelaReserva: true, critico: false,
-      texto: 'Restaurantes de 10/11 (Disney Springs) — The Boathouse',
+      janelaReserva: true, critico: false, feitoPadrao: true,
+      texto: 'The Boathouse (10/11) — RESERVADO, confirmação 2111918775',
       restauranteIds: ['r-boathouse'] },
 
     { id: 'ck-1209', grupo: 'prazo-curto', dataAlvo: '2026-09-12', hora: '06:00', fuso: 'ET',
-      janelaReserva: true, critico: false,
-      texto: 'Magic Kingdom: Liberty Tree Tavern ou Skipper Canteen',
-      restauranteIds: ['r-liberty-tree'] },
+      janelaReserva: false, critico: false, feitoPadrao: true,
+      texto: 'Magic Kingdom — DISPENSADA. Almoço e jantar do dia 11 viraram balcão ' +
+             '(Columbia Harbour House e Casey’s), sem reserva. A janela de 12/09 caiu.',
+      restauranteIds: ['r-columbia-harbour'] },
 
     { id: 'ck-1409', grupo: 'prazo-curto', dataAlvo: '2026-09-14', hora: '06:00', fuso: 'ET',
       janelaReserva: true, critico: false,
@@ -3164,6 +3385,18 @@ window.ROTEIRO = {
     if (r.blocoId && !idsBloco.has(r.blocoId)) {
       erros.push(`restaurante ${r.id}: blocoId "${r.blocoId}" não existe`);
     }
+  });
+
+  R.dias.filter((d) => d.fechado).forEach((d) => {
+    if (!d.revisadoEm) erros.push(`dia ${d.data}: fechado sem revisadoEm`);
+    (d.planos || []).forEach((p) => {
+      if (!p.letra || !p.gatilho || !(p.passos || []).length) {
+        erros.push(`dia ${d.data}: plano ${p.letra || "?"} incompleto`);
+      }
+    });
+    (d.listas || []).forEach((l) => {
+      if (!(l.itens || []).length) erros.push(`dia ${d.data}: lista ${l.id} vazia`);
+    });
   });
 
   R.locais.forEach((l) => {

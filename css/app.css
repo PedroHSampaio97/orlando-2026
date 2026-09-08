@@ -1049,3 +1049,78 @@ body {
   background: var(--fundo); color: var(--texto);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
+
+/* =============================================================================
+   DIA FECHADO — planos A/B/C, listas de compra, o que não perder
+   ========================================================================== */
+
+.selo-dia.fechado { background: var(--ok-fundo); color: var(--ok); }
+.ct-fuso {
+  font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--texto-fraco); background: var(--superficie-2);
+  padding: 3px 6px; border-radius: var(--r-selo);
+}
+
+/* ---------- planos ---------- */
+.plano {
+  border-left: 3px solid var(--borda); padding: 0 0 0 14px; margin-bottom: 20px;
+}
+.plano:last-child { margin-bottom: 0; }
+.plano.plano-a { border-left-color: var(--ok); }
+.plano.plano-b { border-left-color: var(--alerta); }
+.plano.plano-c { border-left-color: var(--perigo); }
+
+.plano-topo { display: flex; gap: 12px; align-items: flex-start; }
+.plano-letra {
+  flex: 0 0 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
+  font-size: 15px; font-weight: 800; color: #fff; background: var(--texto-fraco);
+}
+.plano-a .plano-letra { background: var(--ok); }
+.plano-b .plano-letra { background: var(--alerta); color: #21170A; }
+.plano-c .plano-letra { background: var(--perigo); }
+.plano-titulo { font-size: 16px; font-weight: 750; letter-spacing: -.01em; line-height: 1.25; }
+.plano-gatilho {
+  font-size: 13px; color: var(--texto-fraco); margin-top: 3px; font-weight: 650;
+  line-height: 1.45;
+}
+.plano-passos { margin: 12px 0 0; padding-left: 20px; }
+.plano-passos li { font-size: 14px; line-height: 1.6; margin-bottom: 8px;
+  color: var(--texto-fraco); }
+.plano-passos li:last-child { margin-bottom: 0; }
+.plano-passos li::marker { color: var(--texto-fraco); font-weight: 700; }
+
+/* ---------- listas de compra ---------- */
+.lista-intro {
+  font-size: 13.5px; color: var(--texto-fraco); line-height: 1.6; margin: 0 0 16px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--borda);
+}
+.item-lista {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 12px 0; border-bottom: 1px solid var(--borda);
+}
+.item-lista:last-child { border-bottom: 0; padding-bottom: 0; }
+.item-lista.marcado { opacity: .45; }
+.item-lista.marcado .item-texto { text-decoration: line-through; }
+.item-corpo { flex: 1; min-width: 0; padding-top: 4px; }
+.item-texto {
+  font-size: 15px; font-weight: 650; line-height: 1.35;
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+}
+.item-motivo { font-size: 12.5px; color: var(--texto-fraco); margin-top: 4px;
+  line-height: 1.55; }
+
+/* ---------- não perca ---------- */
+.nao-perca { padding: 14px 0; border-bottom: 1px solid var(--borda); }
+.nao-perca:first-child { padding-top: 0; }
+.nao-perca:last-child { border-bottom: 0; padding-bottom: 0; }
+.np-topo { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.np-nome { font-size: 15.5px; font-weight: 700; letter-spacing: -.01em; }
+.np-quando {
+  font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  padding: 4px 7px; border-radius: var(--r-selo);
+}
+.np-quando.agora   { background: var(--ok-fundo);     color: var(--ok); }
+.np-quando.decidir { background: var(--alerta-fundo); color: var(--alerta); }
+.np-quando.depois  { background: var(--superficie-2); color: var(--texto-fraco); }
+.np-custo { font-size: 12.5px; color: var(--acento); font-weight: 700; margin-top: 4px; }
+.np-motivo { font-size: 13.5px; color: var(--texto-fraco); margin-top: 6px; line-height: 1.6; }

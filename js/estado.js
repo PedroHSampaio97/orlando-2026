@@ -68,7 +68,17 @@ window.Estado = (function () {
   const ancora      = (id) => (dados.ancoras[id] ? dados.ancoras[id].ancora : null);
   const nota        = (id) => (dados.notas[id] ? dados.notas[id].texto : '');
   const reserva     = (id) => dados.reservas[id] || null;
-  const checkFeito  = (id) => !!(dados.checklist[id] && dados.checklist[id].feito);
+  // Um item pode já vir concluído do arquivo de dados (decisão registrada fora do
+  // app). O toque do usuário sempre vence esse padrão.
+  function padraoChecklist(id) {
+    const R = window.ROTEIRO;
+    if (!R) return false;
+    const c = R.checklist.find((x) => x.id === id);
+    return !!(c && c.feitoPadrao);
+  }
+  const checkFeito = (id) => dados.checklist[id]
+    ? !!dados.checklist[id].feito
+    : padraoChecklist(id);
   const dataChecklist = (id) => (dados.datasCheck[id] ? dados.datasCheck[id].data : null);
   const coordLocal  = (id) => dados.coordsLocal[id] || null;
 
