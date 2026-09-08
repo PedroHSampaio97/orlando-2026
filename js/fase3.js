@@ -247,7 +247,7 @@ window.Fase3 = (function () {
     if ((dia.naoPerca || []).length) alvo.appendChild(blocoNaoPerca(dia.naoPerca));
   }
 
-  const LETRA_COR = { A: 'plano-a', B: 'plano-b', C: 'plano-c' };
+  const LETRA_COR = { A: 'pl-a', B: 'pl-b', C: 'pl-c' };
 
   function blocoPlanos(planos) {
     const d = el('details', 'acordeao');
@@ -315,15 +315,15 @@ window.Fase3 = (function () {
     d.appendChild(el('summary', null, '⭐  O que não perder — e o que fica para depois'));
     const c = el('div', 'acordeao-corpo');
     itens.forEach(function (x) {
-      const b = el('div', 'nao-perca' + (x.quando === 'descartado' ? ' fora' : ''));
+      const b = el('div', 'nao-perca' + (x.quando === 'descartado' ? ' np-fora' : ''));
       const topo = el('div', 'np-topo');
       topo.appendChild(el('span', 'np-nome', x.nome));
       if (x.quando) {
         // etiqueta fechada: hoje | dia NN | decidir | descartado
         const q = String(x.quando);
-        const classe = q === 'hoje' ? 'agora'
-                     : q === 'decidir' ? 'decidir'
-                     : q === 'descartado' ? 'fora' : 'depois';
+        const classe = q === 'hoje' ? 'np-hoje'
+                     : q === 'decidir' ? 'np-decidir'
+                     : q === 'descartado' ? 'np-fora' : 'np-depois';
         topo.appendChild(el('span', 'np-quando ' + classe, q));
       }
       if (x.condicao) topo.appendChild(el('span', 'np-condicao', x.condicao));
