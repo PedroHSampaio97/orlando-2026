@@ -3299,18 +3299,18 @@ window.ROTEIRO = {
   checklist: [
 
     /* --- prazo curto (setembro) --- */
-    { id: 'ck-0911', grupo: 'prazo-curto', dataAlvo: '2026-09-11', hora: '06:00', fuso: 'ET',
+    { id: 'ck-0911', dataAlvo: '2026-09-11', hora: '06:00', fuso: 'ET',
       janelaReserva: true, critico: false, feitoPadrao: true,
       texto: 'The Boathouse (10/11) — RESERVADO, confirmação 2111918775',
       restauranteIds: ['r-boathouse'] },
 
-    { id: 'ck-1209', grupo: 'prazo-curto', dataAlvo: '2026-09-12', hora: '06:00', fuso: 'ET',
+    { id: 'ck-1209', dataAlvo: '2026-09-12', hora: '06:00', fuso: 'ET',
       janelaReserva: false, critico: false, feitoPadrao: true,
       texto: 'Magic Kingdom — DISPENSADA. Almoço e jantar do dia 11 viraram balcão ' +
              '(Columbia Harbour House e Casey’s), sem reserva. A janela de 12/09 caiu.',
       restauranteIds: ['r-columbia-harbour'] },
 
-    { id: 'ck-1409', grupo: 'prazo-curto', dataAlvo: '2026-09-14', hora: '06:00', fuso: 'ET',
+    { id: 'ck-1409', dataAlvo: '2026-09-14', hora: '06:00', fuso: 'ET',
       janelaReserva: true, critico: false,
       texto: 'Reservar Sanaa para o jantar de 13/11 (janela de 60 dias)',
       nota:
@@ -3322,17 +3322,17 @@ window.ROTEIRO = {
         'a savana. A escolha é pela comida.',
       restauranteIds: ['r-sanaa'] },
 
-    { id: 'ck-1609', grupo: 'prazo-curto', dataAlvo: '2026-09-16', hora: '06:00', fuso: 'ET',
+    { id: 'ck-1609', dataAlvo: '2026-09-16', hora: '06:00', fuso: 'ET',
       janelaReserva: true, critico: false,
       texto: 'Hollywood Studios: Oga’s Cantina e Sci-Fi Dine-In',
       restauranteIds: ['r-ogas', 'r-scifi'] },
 
-    { id: 'ck-1709', grupo: 'prazo-curto', dataAlvo: '2026-09-17', hora: '06:00', fuso: 'ET',
+    { id: 'ck-1709', dataAlvo: '2026-09-17', hora: '06:00', fuso: 'ET',
       janelaReserva: true, critico: false,
       texto: 'Epcot, se quiserem mesa em vez das barracas',
       restauranteIds: ['r-epcot-mesa'] },
 
-    { id: 'ck-ingresso', grupo: 'prazo-curto', dataAlvo: '2026-09-15', dataEstimada: true, motivoData: 'Bloqueia o plano de Lightning Lane inteiro', hora: null, fuso: null,
+    { id: 'ck-ingresso', dataAlvo: '2026-09-15', dataEstimada: true, motivoData: 'Bloqueia o plano de Lightning Lane inteiro', hora: null, fuso: null,
       janelaReserva: false, critico: true,
       texto: 'Confirmar com a agência a regra exata de validade do ingresso Disney de 4 dias',
       nota:
@@ -3341,7 +3341,7 @@ window.ROTEIRO = {
         'Isso muda as quatro tarefas de Lightning Lane deste checklist.',
       restauranteIds: [] },
 
-    { id: 'ck-shuttle', grupo: 'prazo-curto', dataAlvo: '2026-10-06', dataEstimada: true,
+    { id: 'ck-shuttle', dataAlvo: '2026-10-06', dataEstimada: true,
       motivoData: 'Junto com a reserva do carro, para decidir transporte de uma vez',
       hora: null, fuso: null, janelaReserva: false, critico: false,
       texto: 'Confirmar o transfer gratuito do hotel para Magic Kingdom e Hollywood Studios',
@@ -3353,52 +3353,77 @@ window.ROTEIRO = {
         'antes de contar com ele. Se a primeira saída for depois das 7h30, ignorem.',
       restauranteIds: [] },
 
-    { id: 'ck-carro', grupo: 'prazo-curto', dataAlvo: '2026-10-06', dataEstimada: true, motivoData: 'Preço de locadora sobe perto da data', hora: null, fuso: null,
+    { id: 'ck-carro', dataAlvo: '2026-10-06', dataEstimada: true, motivoData: 'Preço de locadora sobe perto da data', hora: null, fuso: null,
       janelaReserva: false, critico: true,
       texto: 'Reservar o carro para 20 a 25/11, em filial de bairro na 192',
       restauranteIds: [] },
 
-    { id: 'ck-columbia', grupo: 'prazo-curto', dataAlvo: '2026-10-15', dataEstimada: true, motivoData: '30 dias antes do almoço de 14/11', hora: null, fuso: null,
+    { id: 'ck-columbia', dataAlvo: '2026-10-15', dataEstimada: true, motivoData: '30 dias antes do almoço de 14/11', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Reservar o Columbia Restaurant para o almoço de 14/11 (Celebration)',
       restauranteIds: ['r-columbia'] },
 
-    { id: 'ck-boggy', grupo: 'prazo-curto', dataAlvo: '2026-10-21', dataEstimada: true, motivoData: '30 dias antes do passeio de 20/11', hora: null, fuso: null,
+    { id: 'ck-boggy', dataAlvo: '2026-10-21', dataEstimada: true, motivoData: '30 dias antes do passeio de 20/11', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Reservar o Boggy Creek Airboat online para 20/11',
       restauranteIds: [] },
 
     /* --- prazo médio (outubro) --- */
-    { id: 'ck-sharks', grupo: 'prazo-medio', dataAlvo: '2026-10-01', dataEstimada: true, motivoData: 'O documento situa em outubro', hora: null, fuso: null,
+    { id: 'ck-sharks', dataAlvo: '2026-10-01', dataEstimada: true, motivoData: 'O documento situa em outubro', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Reservar Sharks Underwater Grill (SeaWorld, direto no site do parque)',
       restauranteIds: ['r-sharks'] },
 
-    { id: 'ck-mythos', grupo: 'prazo-medio', dataAlvo: '2026-10-20', dataEstimada: true, motivoData: '30 dias antes do jantar de 19/11', hora: null, fuso: null,
+    { id: 'ck-mythos', dataAlvo: '2026-10-20', dataEstimada: true, motivoData: '30 dias antes do jantar de 19/11', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Reservar o Mythos para o jantar de 19/11 (Islands of Adventure)',
       restauranteIds: ['r-mythos'] },
 
-    { id: 'ck-atlantic', grupo: 'prazo-medio', dataAlvo: '2026-10-24', dataEstimada: true, motivoData: '30 dias antes do jantar de 23/11', hora: null, fuso: null,
+    { id: 'ck-homecomin', dataAlvo: '2026-10-22', dataEstimada: true,
+      motivoData: '30 dias antes do jantar de 21/11',
+      hora: null, fuso: null, janelaReserva: false, critico: false,
+      texto: 'Reservar o Homecomin\u2019 para o jantar de 21/11 (Disney Springs)',
+      nota:
+        'É o restaurante mais concorrido de Disney Springs e passa de uma hora de ' +
+        'espera sem reserva — num dia que já termina tarde, vindo de Winter Garden. ' +
+        'Se não conseguirem, o Polite Pig é a alternativa de balcão, sem espera, no ' +
+        'mesmo lugar.',
+      restauranteIds: ['r-homecomin'] },
+
+    { id: 'ck-atlantic', dataAlvo: '2026-10-24', dataEstimada: true, motivoData: '30 dias antes do jantar de 23/11', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Reservar o Atlantic para o jantar de 23/11 (Epic Universe)',
       nota: 'Marcado como reserva necessária por decisão de vocês, para forçar a revisitar ' +
             'e confirmar — mesmo que na prática aceite walk-in.',
       restauranteIds: ['r-atlantic'] },
 
-    { id: 'ck-powerband', grupo: 'prazo-medio', dataAlvo: '2026-10-15', dataEstimada: true, motivoData: 'O documento situa em outubro', hora: null, fuso: null,
+    { id: 'ck-powerband', dataAlvo: '2026-10-15', dataEstimada: true, motivoData: 'O documento situa em outubro', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Decidir sobre a Power-Up Band do Epic Universe (~US$ 40)',
       restauranteIds: [] },
 
-    { id: 'ck-natal-datas', grupo: 'prazo-medio', dataAlvo: '2026-10-15', dataEstimada: true, motivoData: 'As datas dos eventos saem com antecedência', hora: null, fuso: null,
+    { id: 'ck-esim', dataAlvo: '2026-10-25', dataEstimada: true,
+      motivoData: 'Duas semanas antes, para dar tempo de chip físico chegar pelo correio',
+      hora: null, fuso: null, janelaReserva: false, critico: true,
+      texto: 'Comprar o eSIM ou chip internacional para os dois celulares',
+      nota:
+        'O dia 10 manda ATIVAR o chip no wifi do MCO, mas nada mandava comprar. Sem ' +
+        'internet no aeroporto não tem Uber, e sem Uber não tem hotel.\n\n' +
+        'eSIM resolve na hora por QR code e é o caminho mais simples — confiram antes ' +
+        'se os dois aparelhos aceitam. Chip físico precisa chegar pelo correio, por ' +
+        'isso a data é duas semanas antes.\n\n' +
+        'Comprem para os DOIS celulares. Um só vira ponto único de falha justamente no ' +
+        'dia em que vocês estão mais cansados.',
+      restauranteIds: [] },
+
+    { id: 'ck-natal-datas', dataAlvo: '2026-10-15', dataEstimada: true, motivoData: 'As datas dos eventos saem com antecedência', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Confirmar que 22/11 tem Christmas Celebration (SeaWorld) e 24/11 tem ' +
              'Christmas Town (Busch Gardens) — ambos rodam em datas selecionadas',
       restauranteIds: [] },
 
     /* --- já em Orlando --- */
-    { id: 'ck-ll-0811', grupo: 'ja-em-orlando', dataAlvo: '2026-11-08', hora: '07:00', fuso: 'ET',
+    { id: 'ck-ll-0811', dataAlvo: '2026-11-08', hora: '07:00', fuso: 'ET',
       janelaReserva: false, critico: true,
       texto: 'Lightning Lane — Magic Kingdom (11/11): Multi Pass + Single Pass do Seven Dwarfs',
       nota:
@@ -3410,25 +3435,25 @@ window.ROTEIRO = {
         'reserva — por isso o Peter Pan está marcado para as 10h15.',
       restauranteIds: [] },
 
-    { id: 'ck-ll-1011', grupo: 'ja-em-orlando', dataAlvo: '2026-11-10', hora: '07:00', fuso: 'ET',
+    { id: 'ck-ll-1011', dataAlvo: '2026-11-10', hora: '07:00', fuso: 'ET',
       janelaReserva: false, critico: true,
       texto: 'Lightning Lane — Single Pass do Flight of Passage (para 13/11)',
       nota: 'Só necessário se o ingresso NÃO for date-based. Confirmem com a agência antes.',
       restauranteIds: [] },
 
-    { id: 'ck-ll-1211', grupo: 'ja-em-orlando', dataAlvo: '2026-11-12', hora: '07:00', fuso: 'ET',
+    { id: 'ck-ll-1211', dataAlvo: '2026-11-12', hora: '07:00', fuso: 'ET',
       janelaReserva: false, critico: true,
       texto: 'Lightning Lane — Single Pass do Rise of the Resistance (para 15/11)',
       nota: 'Peçam janela até as 11h. Só necessário se o ingresso NÃO for date-based.',
       restauranteIds: [] },
 
-    { id: 'ck-ll-1311', grupo: 'ja-em-orlando', dataAlvo: '2026-11-13', hora: '07:00', fuso: 'ET',
+    { id: 'ck-ll-1311', dataAlvo: '2026-11-13', hora: '07:00', fuso: 'ET',
       janelaReserva: false, critico: true,
       texto: 'Lightning Lane — Single Pass do Cosmic Rewind (para 16/11)',
       nota: 'Só necessário se o ingresso NÃO for date-based.',
       restauranteIds: [] },
 
-    { id: 'ck-horarios-mk', grupo: 'prazo-curto', dataAlvo: '2026-09-13', dataEstimada: true,
+    { id: 'ck-horarios-mk', dataAlvo: '2026-09-13', dataEstimada: true,
       motivoData: 'A Disney publica com 60 dias de antecedência, e 60 dias antes de 11/11 é 12/09',
       hora: null, fuso: null, janelaReserva: false, critico: true,
       texto: 'Conferir o horário oficial do Magic Kingdom em 11/11 e ajustar a referência do dia',
@@ -3441,13 +3466,13 @@ window.ROTEIRO = {
         'da reforma antes do previsto.',
       restauranteIds: [] },
 
-    { id: 'ck-horarios', grupo: 'ja-em-orlando', dataAlvo: '2026-10-10', dataEstimada: true, motivoData: 'A Disney publica os horários ~60 dias antes', hora: null, fuso: null,
+    { id: 'ck-horarios', dataAlvo: '2026-10-10', dataEstimada: true, motivoData: 'A Disney publica os horários ~60 dias antes', hora: null, fuso: null,
       janelaReserva: false, critico: true,
       texto: 'Conferir horários oficiais dos demais parques e ajustar a referência de cada dia',
       nota: 'É só editar o horário de abertura no dia — os blocos ancorados deslocam sozinhos.',
       restauranteIds: [] },
 
-    { id: 'ck-shows', grupo: 'ja-em-orlando', dataAlvo: '2026-11-01', dataEstimada: true, motivoData: 'Horários de show só saem perto da data', hora: null, fuso: null,
+    { id: 'ck-shows', dataAlvo: '2026-11-01', dataEstimada: true, motivoData: 'Horários de show só saem perto da data', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Confirmar horário do Grinchmas (14/11), do desfile da Macy’s (17/11) e do ' +
              'Fantasmic! (15/11)',

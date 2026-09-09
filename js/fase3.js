@@ -635,6 +635,18 @@ window.Fase3 = (function () {
     if (c.nota) corpo.appendChild(el('div', 'pend-nota', c.nota));
 
     const selos = el('div', 'pend-selos');
+    // Onde vocês estarão nessa data. Calculado, nunca guardado — o campo
+    // `grupo` fazia isso à mão e passou a mentir em 7 dos 22 itens.
+    const ondeEstarao = (function () {
+      const ini = R.viagem.inicio, fim = R.viagem.fim;
+      if (data < ini) return { txt: 'no Brasil', cls: 'onde-brasil' };
+      if (data === ini) return { txt: 'em viagem', cls: 'onde-viagem' };
+      if (data <= fim) return { txt: 'em Orlando', cls: 'onde-orlando' };
+      return null;
+    })();
+    if (ondeEstarao) {
+      selos.appendChild(el('span', 'selo ' + ondeEstarao.cls, ondeEstarao.txt));
+    }
     if (c.janelaReserva) selos.appendChild(el('span', 'selo selo-reserva', 'janela de reserva'));
     if (c.critico) selos.appendChild(el('span', 'selo selo-critico', 'crítico'));
     if (c.dataEstimada && !editada) selos.appendChild(el('span', 'selo selo-estimada', 'data estimada'));
