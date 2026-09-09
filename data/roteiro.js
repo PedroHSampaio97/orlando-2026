@@ -41,7 +41,7 @@ window.ROTEIRO = {
 
     // Vocabulários fechados. A interface valida contra isto no load.
     tiposBloco: ['atracao', 'refeicao', 'deslocamento', 'show', 'compras',
-                 'espera', 'tarefa', 'livre', 'vazio'],
+                 'espera', 'tarefa', 'livre', 'vazio', 'pausa'],
     tiposAcesso: ['rope-drop', 'multi-pass', 'single-pass', 'standby', 'reserva'],
     tiposAncora: ['referencia', 'fixo'],
   },
@@ -859,7 +859,7 @@ window.ROTEIRO = {
           'Montanha-russa de 1975 no escuro total, sem inversões. Não é rápida pelos padrões ' +
           'de hoje (~45 km/h), mas o escuro completo faz parecer muito mais. Sacode bastante ' +
           '— é uma das mais desconfortáveis para coluna do complexo.',
-        areaParque: 'Tomorrowland', acesso: ['standby'], duracaoMin: 35 },
+        areaParque: 'Tomorrowland', acesso: ['standby'], duracaoMin: 35, coberto: true },
 
       { id: 'b-1111-1015', hora: '10:15', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Peter Pan’s Flight',
@@ -872,7 +872,7 @@ window.ROTEIRO = {
           'vocês passarem a catraca, a restrição de lista cai e vocês podem reservar o Big ' +
           'Thunder, que é lista alta e de outra forma não caberia. Reservem ali mesmo, de ' +
           'pé na saída, antes de andar.',
-        areaParque: 'Fantasyland', acesso: ['multi-pass'], critico: true, duracaoMin: 30 },
+        areaParque: 'Fantasyland', acesso: ['multi-pass'], critico: true, duracaoMin: 30, coberto: true },
 
       { id: 'b-1111-1045', hora: '10:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Seven Dwarfs Mine Train',
@@ -883,16 +883,28 @@ window.ROTEIRO = {
           'compra separada, e é a fila mais persistente do parque o dia inteiro.',
         areaParque: 'Fantasyland', acesso: ['single-pass'], duracaoMin: 30 },
 
-      { id: 'b-1111-1115', hora: '11:15', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1111-1115p', hora: '11:15', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Parada — água, banheiro e sentar',
+        descricao: 'Quinze minutos. Não é folga, é o que faz o resto funcionar',
+        contexto:
+          'Vocês estão de pé desde as 5h45 e vieram emendando desde as 9h. Banheiro, ' +
+          'encher as garrafas num balcão de comida (a água gelada é de graça, é só ' +
+          'pedir) e sentar num banco.\n\n' +
+          'Toda land tem banheiro, normalmente ao lado do maior balcão de comida — ' +
+          'vocês nunca estão a mais de dois minutos de um. Não vale a pena procurar ' +
+          'no mapa; vale parar quando o corpo pedir.',
+        areaParque: 'Fantasyland', acesso: [], duracaoMin: 15 },
+
+      { id: 'b-1111-1115', hora: '11:30', ancora: 'referencia', tipo: 'atracao',
         titulo: 'it’s a small world',
         descricao: 'Standby. Capacidade alta, a fila anda',
         contexto:
           'Passeio de barco de 1964 com centenas de bonecos animatrônicos e a música que ' +
           'gruda na cabeça por três dias. Lento e climatizado — serve de descanso no meio ' +
           'da manhã, e a fila engana: some rápido.',
-        areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 35 },
+        areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 35, coberto: true },
 
-      { id: 'b-1111-1150', hora: '11:50', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1111-1150', hora: '12:05', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mansão Mal-Assombrada',
         descricao: 'Multi Pass · lista baixa',
         contexto:
@@ -900,9 +912,9 @@ window.ROTEIRO = {
           'feito com truques de ilusão óptica do século XIX que continuam funcionando. É ' +
           'assombrado de brincadeira, não de susto. Um dos melhores da Disney e não depende ' +
           'de idioma.',
-        areaParque: 'Liberty Square', acesso: ['multi-pass'], duracaoMin: 40 },
+        areaParque: 'Liberty Square', acesso: ['multi-pass'], duracaoMin: 40, coberto: true },
 
-      { id: 'b-1111-1230', hora: '12:30', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-1111-1230', hora: '12:45', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Columbia Harbour House',
         descricao: 'Balcão, sem reserva. Mobile order. Segundo andar',
         contexto:
@@ -911,9 +923,9 @@ window.ROTEIRO = {
           'Duas coisas: peçam pelo mobile order, que economiza 20 a 30 minutos de fila; e ' +
           'subam para o segundo andar, que quase ninguém acha e é o lugar mais silencioso ' +
           'do Magic Kingdom.',
-        restauranteId: 'r-columbia-harbour', areaParque: 'Liberty Square', acesso: [], duracaoMin: 60 },
+        restauranteId: 'r-columbia-harbour', areaParque: 'Liberty Square', acesso: [], duracaoMin: 60, coberto: true },
 
-      { id: 'b-1111-1330', hora: '13:30', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1111-1330', hora: '13:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Big Thunder Mountain',
         descricao: 'Multi Pass rolando — o que vocês reservaram às 10h15',
         contexto:
@@ -923,14 +935,14 @@ window.ROTEIRO = {
           'Ao usar esta, reservem a Jungle Cruise. O ciclo continua.',
         areaParque: 'Frontierland', acesso: ['multi-pass'], duracaoMin: 40 },
 
-      { id: 'b-1111-1410', hora: '14:10', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1111-1410', hora: '14:25', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Piratas do Caribe',
         descricao: 'Standby. Capacidade alta',
         contexto:
           'Passeio de barco de 1967, o clássico que originou os filmes. Cenários com ' +
           'animatrônicos, uma queda pequena no escuro, quase não molha. A capacidade é ' +
           'altíssima, então a fila anda mesmo quando parece grande — não vale gastar passe.',
-        areaParque: 'Adventureland', acesso: ['standby'], duracaoMin: 50 },
+        areaParque: 'Adventureland', acesso: ['standby'], duracaoMin: 35, coberto: true },
 
       { id: 'b-1111-1500', hora: '15:00', ancora: 'fixo', tipo: 'show',
         titulo: 'Festival of Fantasy Parade',
@@ -942,6 +954,17 @@ window.ROTEIRO = {
           'varia conforme o horário do parque.',
         areaParque: 'Frontierland', acesso: [], duracaoMin: 12, confirmarHorario: true },
 
+      { id: 'b-1111-1515p', hora: '15:15', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Parada — água, banheiro e sentar',
+        descricao: 'O desfile acabou e a multidão ainda está se desfazendo',
+        contexto:
+          'Melhor momento do dia para parar: todo mundo está saindo do desfile ao mesmo ' +
+          'tempo e as filas ficam piores por uns quinze minutos. Deixem passar sentados, ' +
+          'com água.\n\n' +
+          'Vocês estão do lado oeste do parque e a próxima é a Jungle Cruise, que é do ' +
+          'mesmo lado. Não atravessem.',
+        areaParque: 'Frontierland', acesso: [], duracaoMin: 15 },
+
       { id: 'b-1111-1545', hora: '15:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Jungle Cruise',
         descricao: 'Multi Pass rolando',
@@ -950,7 +973,7 @@ window.ROTEIRO = {
           'da atração.\n\n' +
           'ATENÇÃO: é a única do dia que depende inteiramente de inglês falado. Se o humor ' +
           'não pegar, é o primeiro bloco a sacrificar quando o dia atrasar.',
-        areaParque: 'Adventureland', acesso: ['multi-pass'], duracaoMin: 45 },
+        areaParque: 'Adventureland', acesso: ['multi-pass'], duracaoMin: 45, coberto: true },
 
       { id: 'b-1111-1630', hora: '16:30', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mickey’s PhilharMagic',
@@ -959,7 +982,17 @@ window.ROTEIRO = {
           'Filme 3D com efeitos no teatro — cheiro, água, ar. Praticamente sem diálogo ' +
           'relevante, então não sofre com a barreira de idioma. É o melhor bloco de descanso ' +
           'do parque, e cai na pior hora de calor de propósito.',
-        areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 12 },
+        areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 12, coberto: true },
+
+      { id: 'b-1111-1645p', hora: '16:45', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Parada — água, banheiro e sentar',
+        descricao: 'Última parada antes da reta final até os fogos',
+        contexto:
+          'Daqui até a saída, às 21h, são mais quatro horas. Banheiro, garrafas cheias e ' +
+          'protetor solar antes de encarar a Main Street lotada.\n\n' +
+          'É também a hora de ligar o power bank, se o celular estiver abaixo de 40%: ' +
+          'o resto do dia é foto, mobile order e a espera dos fogos.',
+        areaParque: 'Fantasyland', acesso: [], duracaoMin: 15 },
 
       { id: 'b-1111-1700', hora: '17:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Buzz Lightyear',
@@ -967,7 +1000,7 @@ window.ROTEIRO = {
         contexto:
           'Dark ride onde vocês atiram em alvos e disputam pontuação. Girem a cabine com o ' +
           'joystick central para mirar melhor, e os alvos com Z valem mais.',
-        areaParque: 'Tomorrowland', acesso: ['multi-pass'], duracaoMin: 45 },
+        areaParque: 'Tomorrowland', acesso: ['multi-pass'], duracaoMin: 45, coberto: true },
 
       { id: 'b-1111-1745', hora: '17:45', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Jantar — Casey’s Corner',
@@ -1039,7 +1072,7 @@ window.ROTEIRO = {
           'rolando, porque a restrição de lista cai depois da primeira reserva usada.',
         nota:
           'Rolando, na ordem: Big Thunder (reservar às 10h15) e depois Jungle Cruise ' +
-          '(reservar às 13h30). Lista alta hoje: Jungle Cruise, Peter Pan, Space Mountain e ' +
+          '(reservar às 13h45). Lista alta hoje: Jungle Cruise, Peter Pan, Space Mountain e ' +
           'Big Thunder — a Tiana’s saiu porque está fechada.',
       },
       singlePass: {
@@ -3958,6 +3991,47 @@ window.ROTEIRO = {
      aqui de proposito: o certo para o bilhete de voces esta no proprio bilhete,
      e numero de companhia aerea achado em busca costuma ser de revenda.
      ------------------------------------------------------------------------ */
+  /* ---------------------------------------------------------------------------
+     TOPOGRAFIA DOS PARQUES
+     Nao e mapa e nao quer ser. Sao as arestas de que temos certeza — quais areas
+     encostam em quais e quanto custa atravessar — e o app calcula o resto por
+     caminho mais curto.
+
+     Por que nao tempo atracao a atracao: quem tem esse dado medido e base
+     proprietaria, e o que circula publicado e vago ("a few minutes if you
+     hustle"). Numero com casa decimal aqui seria chute com cara de precisao, e
+     a variacao real por multidao e carrinho engole qualquer precisao fingida.
+     Por isso: area a area, com a margem dita na cara.
+     ------------------------------------------------------------------------ */
+  topografia: {
+    'magic-kingdom': {
+      forma: 'Cubo e seis raios. Do hub, em frente ao castelo, sai tudo.',
+      margem: 'Somem 50% em dia cheio, e mais ainda com desfile na rua.',
+      arestas: [
+        ['Main Street', 'Hub', 4],
+        ['Hub', 'Adventureland', 3],
+        ['Hub', 'Tomorrowland', 3],
+        ['Hub', 'Fantasyland', 3],
+        ['Adventureland', 'Frontierland', 3],
+        ['Frontierland', 'Liberty Square', 3],
+        ['Liberty Square', 'Fantasyland', 3],
+        ['Fantasyland', 'Tomorrowland', 4],
+      ],
+      // O desfile corta o parque em dois enquanto passa. Verificado em 09/09.
+      corte: {
+        blocoId: 'b-1111-1500',
+        minutos: 25,
+        texto:
+          'ENQUANTO O DESFILE PASSA, O PARQUE FICA CORTADO AO MEIO. A rota vai da ' +
+          'Frontierland pela Liberty Square, contorna o hub e desce a Main Street — ' +
+          'e ninguém atravessa essa linha até acabar. Se vocês estiverem do lado ' +
+          'oeste (Frontierland, Liberty Square, Adventureland), fiquem lá: a próxima ' +
+          'atração do roteiro é a Jungle Cruise, que é do mesmo lado, de propósito.',
+        pesquisa: '2026-09-09',
+      },
+    },
+  },
+
   contatos: [
     { id: 'tel-emergencia', nome: 'Emergência — polícia, bombeiro, ambulância',
       numero: '911', critico: true,

@@ -53,14 +53,17 @@ No Islands, o Hagrid's saiu do Express em julho de 2026 — vocês pagariam e ai
 | **9h40** | **Space Mountain** | Standby. Mesma área |
 | **10h15** | **Peter Pan's Flight** | Multi Pass. Ao sair, reserve o Big Thunder |
 | **10h45** | **Seven Dwarfs Mine Train** | Single Pass |
-| **11h15** | **it's a small world** | Standby. Capacidade alta, fila anda |
-| **11h50** | **Mansão Mal-Assombrada** | Multi Pass |
-| **12h30** | **Almoço — Columbia Harbour House** | Balcão, mobile order, segundo andar |
-| **13h30** | **Big Thunder Mountain** | Multi Pass rolando |
-| **14h10** | **Piratas do Caribe** | Standby. Capacidade alta |
+| **11h15** | **Parada — água, banheiro e sentar** | 15 min. Não é folga, é o que faz o resto funcionar |
+| **11h30** | **it's a small world** | Standby. Capacidade alta, fila anda |
+| **12h05** | **Mansão Mal-Assombrada** | Multi Pass |
+| **12h45** | **Almoço — Columbia Harbour House** | Balcão, mobile order, segundo andar |
+| **13h45** | **Big Thunder Mountain** | Multi Pass rolando |
+| **14h25** | **Piratas do Caribe** | Standby. Capacidade alta |
 | **15h00** | **Festival of Fantasy Parade** | Fique em Frontierland, não na Main Street |
-| **15h45** | **Jungle Cruise** | Multi Pass rolando |
+| **15h15** | **Parada** | O desfile corta o parque em dois e a multidão leva 15 min para se desfazer |
+| **15h45** | **Jungle Cruise** | Multi Pass rolando. Mesmo lado do parque, de propósito |
 | **16h30** | **Mickey's PhilharMagic** | Standby. 12 min, ar-condicionado, ótimo |
+| **16h45** | **Parada** | Última antes da reta final. Power bank, se o celular estiver abaixo de 40% |
 | **17h00** | **Buzz Lightyear** | Multi Pass. Repaginado em 2026 |
 | **17h45** | **Jantar — Casey's Corner** | Mesas de fora, de frente para o pianista |
 | **19h00** | Main Street | Compras, fotos com o castelo iluminado |
@@ -68,6 +71,16 @@ No Islands, o Hagrid's saiu do Express em julho de 2026 — vocês pagariam e ai
 | **20h00** | **Happily Ever After** | Em novembro é às 20h — o horário de verão acaba em 01/11 |
 | **20h30** | Mais uma, com a fila já curta | A multidão vai embora depois dos fogos |
 | **21h00** | Sair | O pior do fluxo de saída já passou |
+
+> **Sobre as três paradas:** elas não são enfeite. Sem elas o dia ia das 9h às 12h30
+> sem um minuto de folga — três horas e meia sem banheiro, sem sentar e sem encher a
+> garrafa. Um dia sem folga nenhuma não é um dia otimizado, é uma conta que não fecha.
+> Toda land tem banheiro, normalmente ao lado do maior balcão de comida, e qualquer
+> balcão dá copo de água gelada de graça. Não procurem no mapa: parem quando o corpo pedir.
+
+> **O desfile corta o parque ao meio.** A rota sai da Frontierland, desce a Liberty
+> Square, contorna o hub e vai pela Main Street — e ninguém atravessa essa linha até
+> acabar. É por isso que a Jungle Cruise vem logo depois: é do mesmo lado.
 
 ### Renúncias — não vão render para vocês
 Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's Undersea Adventure, Enchanted Tales with Belle, Tapete Mágico, Tom Sawyer Island, Liberty Belle.

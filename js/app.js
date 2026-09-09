@@ -621,7 +621,10 @@
     // roda-gigante para dia livre
     livre: 'M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18z|M12 3v18|M3 12h18|M5.6 5.6l12.8 12.8|M18.4 5.6L5.6 18.4',
     vazio: 'M20 14a8 8 0 1 1-9.9-9.9A7 7 0 0 0 20 14z',
+    // banco de praca: parar, sentar, beber agua
+    pausa: 'M4 10h16|M4 14h16|M6 14v6|M18 14v6|M6 10V6|M18 10V6',
   };
+  const I_PASSOS = 'M8 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4z|M7 9h2l1 5-1 6H8l-1-6z|M16 8a2 2 0 1 1 0 4 2 2 0 0 1 0-4z|M15 13h2l1 4-1 5h-2l-1-5z';
   const I_PIN = 'M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z|M12 8a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z';
   const I_LUPA = 'M11 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14z|M20 20l-4-4';
 
@@ -680,6 +683,19 @@
       const conector = el('li', 'conector');
       if (gap > 0) conector.appendChild(el('span', 'conector-tempo', intervaloTexto(gap)));
 
+      // TRAVESSIA entre areas do parque. O "35 min" do conector e folga de
+      // cronograma, nao caminhada — e a pergunta que se faz em voz alta a cada
+      // vinte minutos e quanto custa atravessar. Vem do grafo de topografia,
+      // que declara so as arestas de que temos certeza.
+      const tv = travessia(dia, item.dados.areaParque, prox.dados.areaParque);
+      if (tv) {
+        const w = el('span', 'conector-travessia');
+        w.appendChild(svg(I_PASSOS));
+        w.appendChild(document.createTextNode(
+          '~' + tv.min + ' min até ' + prox.dados.areaParque));
+        conector.appendChild(w);
+      }
+
       const lp = prox.dados.localId ? acharLocal(prox.dados.localId) : null;
       if (lp && prox.dados.localId !== item.dados.localId) {
         const a = el('a', 'btn-maps');
@@ -731,6 +747,41 @@
       if (!marca) return;
       marca.scrollIntoView({ block: 'center' });
     });
+  }
+
+  /* Caminho mais curto entre duas areas do parque. Sao sete nos: qualquer coisa
+     serve, entao vai o mais simples que da para ler. */
+  const memoTravessia = {};
+  function travessia(dia, de, para) {
+    if (!de || !para || de === para) return null;
+    const topo = (R.topografia || {})[dia.parqueId];
+    if (!topo) return null;
+    const chave = dia.parqueId + '|' + de + '|' + para;
+    if (chave in memoTravessia) return memoTravessia[chave];
+
+    const viz = {};
+    topo.arestas.forEach(function (a) {
+      (viz[a[0]] = viz[a[0]] || []).push([a[1], a[2]]);
+      (viz[a[1]] = viz[a[1]] || []).push([a[0], a[2]]);
+    });
+    if (!viz[de] || !viz[para]) { memoTravessia[chave] = null; return null; }
+
+    const dist = {}; dist[de] = 0;
+    const fila = [de];
+    while (fila.length) {
+      fila.sort(function (x, y) { return dist[x] - dist[y]; });
+      const atual = fila.shift();
+      (viz[atual] || []).forEach(function (p) {
+        const novo = dist[atual] + p[1];
+        if (dist[p[0]] == null || novo < dist[p[0]]) {
+          dist[p[0]] = novo;
+          if (fila.indexOf(p[0]) < 0) fila.push(p[0]);
+        }
+      });
+    }
+    const r = dist[para] == null ? null : { min: dist[para], margem: topo.margem };
+    memoTravessia[chave] = r;
+    return r;
   }
 
   function linhaAgora(min) {
@@ -849,6 +900,12 @@
         bt.addEventListener('click', function () { mostrarTela('comer'); });
         card.appendChild(bt);
       }
+    }
+
+    // O desfile corta o parque em dois enquanto passa. Nao e opiniao: e a rota.
+    const topoDia = (R.topografia || {})[dia.parqueId];
+    if (topoDia && topoDia.corte && topoDia.corte.blocoId === b.id) {
+      card.appendChild(el('div', 'ct-corte', topoDia.corte.texto));
     }
 
     if (b.condicao) card.appendChild(el('div', 'ct-nota', '→ ' + b.condicao));

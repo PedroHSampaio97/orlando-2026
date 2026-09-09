@@ -253,7 +253,6 @@ window.Fase3 = (function () {
 
   function blocoPlanos(planos) {
     const d = el('details', 'acordeao');
-    d.setAttribute('open', '');
     d.appendChild(el('summary', null, '🧭  Plano A, B e C — o que fazer se o dia virar'));
     const c = el('div', 'acordeao-corpo');
 
