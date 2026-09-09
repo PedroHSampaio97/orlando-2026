@@ -89,6 +89,42 @@ jsFiles.filter((f) => f.startsWith('js/')).forEach(function (f) {
   [...j.matchAll(/\$\('#([a-zA-Z0-9_-]+)'\)/g)].forEach((m) => idsJS.add(m[1]));
   [...j.matchAll(/querySelector\('#([a-zA-Z0-9_-]+)'\)/g)].forEach((m) => idsJS.add(m[1]));
 });
+/* Campo escrito nos dados e lido por ninguem.
+   Foi a classe de bug que mais apareceu na auditoria: `opcional` marcava um
+   bloco como dispensavel e a tela mostrava igual ao obrigatorio; `restauranteId`
+   estava em 51 blocos e o numero da reserva vivia escrito a mao na descricao;
+   `locker` faltava justamente no TRON. Dado que ninguem le e promessa que
+   ninguem cumpre. */
+const CAMPOS_BLOCO = [
+  'hora', 'ancora', 'tipo', 'titulo', 'descricao', 'contexto', 'fuso', 'acesso',
+  'acessoAlt', 'condicao', 'confirmarHorario', 'molha', 'locker', 'critico',
+  'duracaoMin', 'areaParque', 'endereco', 'localId', 'restauranteId', 'pesquisa',
+  'nota', 'opcional', 'coberto',
+];
+/* Campos que existem de proposito sem uso na tela. Cada um precisa de motivo. */
+const MORTOS_DE_PROPOSITO = {
+  singleRider: 'decisao do Pedro: nao usar. Fica como fato, a interface nao destaca.',
+  horaAprox:   'so em dias ainda nao fechados; entra quando o dia for fechado.',
+  lockerNota:  'idem.',
+  singleRiderNota: 'idem singleRider.',
+};
+const jsTelas = jsFiles.filter((f) => f.startsWith('js/')).map(ler).join('\n');
+const usadosNosDados = new Set();
+R.dias.forEach((d) => d.blocos.forEach(function (b) {
+  Object.keys(b).forEach((k) => { if (b[k] != null) usadosNosDados.add(k); });
+}));
+const naoLidos = [...usadosNosDados].filter(function (campo) {
+  if (campo === 'id') return false;
+  if (MORTOS_DE_PROPOSITO[campo]) return false;
+  return jsTelas.indexOf('.' + campo) < 0 && jsTelas.indexOf("'" + campo + "'") < 0;
+});
+ok(naoLidos.length === 0, 'todo campo dos blocos e lido por alguma tela',
+   naoLidos.length ? naoLidos.join(', ') + ' — ou renderize, ou registre em MORTOS_DE_PROPOSITO' : '');
+
+const semUso = CAMPOS_BLOCO.filter((c) => !usadosNosDados.has(c));
+ok(true, 'campos do esquema ainda sem nenhum uso nos dados: ' +
+   (semUso.length ? semUso.join(', ') : 'nenhum'));
+
 const idsFaltando = [...idsJS].filter((id) => html.indexOf('id="' + id + '"') < 0);
 ok(idsFaltando.length === 0, 'todo id usado no JS existe no HTML', idsFaltando.join(', '));
 

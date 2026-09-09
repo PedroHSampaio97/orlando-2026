@@ -156,8 +156,11 @@
   // O iOS mata a pagina em segundo plano num dia de 14 horas. Sem persistir,
   // o filtro voltava desmarcado toda vez que eles reabriam o app.
   const CHAVE_FILTRO = 'orlando2026:so-falta';
+  const CHAVE_CHUVA = 'orlando2026:so-coberto';
   let soFalta = false;
+  let soCoberto = false;
   try { soFalta = localStorage.getItem(CHAVE_FILTRO) === '1'; } catch (e) { soFalta = false; }
+  try { soCoberto = localStorage.getItem(CHAVE_CHUVA) === '1'; } catch (e) { soCoberto = false; }
 
   const TELAS = ['home', 'dia', 'comer', 'guia', 'pendencias', 'ajustes'];
 
@@ -473,6 +476,12 @@
       '✓ dia revisado em ' + dia.revisadoEm.split('-').reverse().join('/')));
 
     pintarRotaDia(dia);
+    const temCoberto = dia.blocos.some((b) => b.coberto);
+    $('#chave-chuva').classList.toggle('oculto', !temCoberto);
+    $('#chk-chuva').checked = soCoberto && temCoberto;
+    // O valor persiste desde a sessao passada; sem isto a caixa aparecia
+    // desmarcada com a lista ja filtrada, que e a pior combinacao possivel.
+    $('#chk-falta').checked = soFalta;
     pintarReferencia(dia);
     pintarVenceHoje(dia);
     pintarAvisos(dia);
@@ -656,6 +665,11 @@
     ol.innerHTML = '';
     let lista = blocosDoDia(dia);
     if (soFalta) lista = lista.filter((b) => !E.feito(b.dados.id));
+    // Chuva de novembro na Flórida passa rápido, mas passa forte. A pergunta é
+    // sempre a mesma: o que dá para fazer agora sem me molhar. Pausa entra —
+    // é justamente hora de sentar sob um teto.
+    if (soCoberto) lista = lista.filter(
+      (b) => b.dados.coberto || b.dados.tipo === 'refeicao' || b.dados.tipo === 'pausa');
 
     if (!lista.length) {
       const v = el('li', 'vazio-lista');
@@ -953,6 +967,11 @@
   $('#btn-ref-reset').addEventListener('click', function () {
     E.definirReferencia(diaAtual.id, null);
     pintarDia();
+  });
+  $('#chk-chuva').addEventListener('change', function (e) {
+    soCoberto = e.target.checked;
+    try { localStorage.setItem(CHAVE_CHUVA, soCoberto ? '1' : '0'); } catch (err) {}
+    pintarLinhaTempo(diaAtual);
   });
   $('#chk-falta').addEventListener('change', function (e) {
     soFalta = e.target.checked;
