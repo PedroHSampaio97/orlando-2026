@@ -859,7 +859,7 @@ window.ROTEIRO = {
           'Montanha-russa de 1975 no escuro total, sem inversões. Não é rápida pelos padrões ' +
           'de hoje (~45 km/h), mas o escuro completo faz parecer muito mais. Sacode bastante ' +
           '— é uma das mais desconfortáveis para coluna do complexo.',
-        areaParque: 'Tomorrowland', acesso: ['standby'], duracaoMin: 35, coberto: true },
+        areaParque: 'Tomorrowland', acesso: ['standby'], duracaoMin: 35 },
 
       { id: 'b-1111-1015', hora: '10:15', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Peter Pan’s Flight',
@@ -872,7 +872,7 @@ window.ROTEIRO = {
           'vocês passarem a catraca, a restrição de lista cai e vocês podem reservar o Big ' +
           'Thunder, que é lista alta e de outra forma não caberia. Reservem ali mesmo, de ' +
           'pé na saída, antes de andar.',
-        areaParque: 'Fantasyland', acesso: ['multi-pass'], critico: true, duracaoMin: 30, coberto: true },
+        areaParque: 'Fantasyland', acesso: ['multi-pass'], critico: true, duracaoMin: 30 },
 
       { id: 'b-1111-1045', hora: '10:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Seven Dwarfs Mine Train',
@@ -902,7 +902,7 @@ window.ROTEIRO = {
           'Passeio de barco de 1964 com centenas de bonecos animatrônicos e a música que ' +
           'gruda na cabeça por três dias. Lento e climatizado — serve de descanso no meio ' +
           'da manhã, e a fila engana: some rápido.',
-        areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 35, coberto: true },
+        areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 35 },
 
       { id: 'b-1111-1150', hora: '12:05', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mansão Mal-Assombrada',
@@ -912,7 +912,7 @@ window.ROTEIRO = {
           'feito com truques de ilusão óptica do século XIX que continuam funcionando. É ' +
           'assombrado de brincadeira, não de susto. Um dos melhores da Disney e não depende ' +
           'de idioma.',
-        areaParque: 'Liberty Square', acesso: ['multi-pass'], duracaoMin: 40, coberto: true },
+        areaParque: 'Liberty Square', acesso: ['multi-pass'], duracaoMin: 40 },
 
       { id: 'b-1111-1230', hora: '12:45', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Columbia Harbour House',
@@ -923,7 +923,7 @@ window.ROTEIRO = {
           'Duas coisas: peçam pelo mobile order, que economiza 20 a 30 minutos de fila; e ' +
           'subam para o segundo andar, que quase ninguém acha e é o lugar mais silencioso ' +
           'do Magic Kingdom.',
-        restauranteId: 'r-columbia-harbour', areaParque: 'Liberty Square', acesso: [], duracaoMin: 60, coberto: true },
+        restauranteId: 'r-columbia-harbour', areaParque: 'Liberty Square', acesso: [], duracaoMin: 60 },
 
       { id: 'b-1111-1330', hora: '13:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Big Thunder Mountain',
@@ -942,7 +942,7 @@ window.ROTEIRO = {
           'Passeio de barco de 1967, o clássico que originou os filmes. Cenários com ' +
           'animatrônicos, uma queda pequena no escuro, quase não molha. A capacidade é ' +
           'altíssima, então a fila anda mesmo quando parece grande — não vale gastar passe.',
-        areaParque: 'Adventureland', acesso: ['standby'], duracaoMin: 35, coberto: true },
+        areaParque: 'Adventureland', acesso: ['standby'], duracaoMin: 35 },
 
       { id: 'b-1111-1500', hora: '15:00', ancora: 'fixo', tipo: 'show',
         titulo: 'Festival of Fantasy Parade',
@@ -973,7 +973,7 @@ window.ROTEIRO = {
           'da atração.\n\n' +
           'ATENÇÃO: é a única do dia que depende inteiramente de inglês falado. Se o humor ' +
           'não pegar, é o primeiro bloco a sacrificar quando o dia atrasar.',
-        areaParque: 'Adventureland', acesso: ['multi-pass'], duracaoMin: 45, coberto: true },
+        areaParque: 'Adventureland', acesso: ['multi-pass'], duracaoMin: 45 },
 
       { id: 'b-1111-1630', hora: '16:30', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mickey’s PhilharMagic',
@@ -982,7 +982,7 @@ window.ROTEIRO = {
           'Filme 3D com efeitos no teatro — cheiro, água, ar. Praticamente sem diálogo ' +
           'relevante, então não sofre com a barreira de idioma. É o melhor bloco de descanso ' +
           'do parque, e cai na pior hora de calor de propósito.',
-        areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 12, coberto: true },
+        areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 12 },
 
       { id: 'b-1111-1645p', hora: '16:45', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
@@ -1000,7 +1000,7 @@ window.ROTEIRO = {
         contexto:
           'Dark ride onde vocês atiram em alvos e disputam pontuação. Girem a cabine com o ' +
           'joystick central para mirar melhor, e os alvos com Z valem mais.',
-        areaParque: 'Tomorrowland', acesso: ['multi-pass'], duracaoMin: 45, coberto: true },
+        areaParque: 'Tomorrowland', acesso: ['multi-pass'], duracaoMin: 45 },
 
       { id: 'b-1111-1745', hora: '17:45', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Jantar — Casey’s Corner',
