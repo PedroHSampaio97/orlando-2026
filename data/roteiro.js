@@ -3441,25 +3441,30 @@ window.ROTEIRO = {
       restauranteIds: [] },
 
     { id: 'ck-esim', dataAlvo: '2026-10-25', dataEstimada: true,
-      motivoData: 'Duas semanas antes, para dar tempo de resolver a linha da Bianca se ela não estiver coberta',
+      motivoData: 'Duas semanas antes, com folga para contratar pacote se a linha da Bianca for cobrada por dia',
       hora: null, fuso: null, janelaReserva: false, critico: true,
-      texto: 'Ativar o roaming internacional nas DUAS linhas e conferir a franquia',
+      texto: 'Ativar o roaming nas duas linhas e confirmar se a da Bianca é cobrada por dia',
       nota:
-        'O Passaporte Américas da Claro vem sem custo extra em todo plano PÓS-PAGO e ' +
-        'cobre 46 países das Américas, usando a mesma franquia de internet do plano ' +
-        'brasileiro. Ativação pelo *468, ligação gratuita, ou pelo Minha Claro.\n\n' +
-        'TRÊS COISAS PARA CONFERIR:\n\n' +
-        '1. A LINHA DA BIANCA. O benefício é do plano, não da viagem. Se ela não for ' +
-        'Claro pós-paga, não está coberta — e aí precisa de eSIM próprio. Um celular ' +
-        'com internet para os dois é ponto único de falha justamente nos dias em que ' +
-        'vocês mais dependem do telefone.\n\n' +
-        '2. O TAMANHO DA FRANQUIA. São 17 dias usando mapa, app da Disney, app da ' +
-        'Universal, este app e foto o dia inteiro. Se a franquia do plano acabar, a ' +
-        'Claro passa a cobrar R$ 39,90 POR DIA nas Américas — o que pode virar centenas ' +
-        'de reais por linha até o fim da viagem.\n\n' +
-        '3. A COLÔMBIA. Se estiver entre os 46 países, o roaming já funciona na conexão ' +
-        'de Bogotá — e aí a compra do Single Pass do Flight of Passage às 7h ET do dia ' +
-        '10 deixa de depender do wifi do aeroporto.',
+        'São duas operadoras diferentes, com regras diferentes. Isso é bom — dá ' +
+        'redundância, e dentro de parque lotado uma pode pegar sinal onde a outra não ' +
+        'pega. Mas o custo funciona de jeito oposto nas duas.\n\n' +
+        'PEDRO · CLARO PASSAPORTE AMÉRICAS\n' +
+        'Vem incluso em todo plano pós-pago, sem custo extra, e usa a MESMA franquia do ' +
+        'plano brasileiro. Só passa a cobrar R$ 39,90 por dia SE a franquia acabar. ' +
+        'Ativação pelo *468, gratuito, ou pelo Minha Claro.\n\n' +
+        'BIANCA · VIVO TRAVEL\n' +
+        'Aqui está a pergunta que vale dinheiro. O Vivo Travel padrão custa R$ 39,99 POR ' +
+        'DIA nas Américas, cobrado sempre que o serviço é usado pela primeira vez no dia ' +
+        '— a menos que o plano dela já inclua. Em 17 dias, cobrado, dá cerca de R$ 680.\n\n' +
+        'CONFIRMAR: o plano dela INCLUI o roaming ou ATIVA o pacote pago? \u201cTer o ' +
+        'serviço\u201d pode significar as duas coisas.\n\n' +
+        'SE FOR COBRADO POR DIA, existe saída: ela usa o roteador do celular do Pedro na ' +
+        'maior parte do tempo e só liga o dela nos dias em que vocês se separam, ou se a ' +
+        'franquia dele estourar. A cobrança é por dia de uso, então dia sem usar não ' +
+        'custa nada.\n\n' +
+        'NOS DOIS CASOS: ligar o roaming de dados nos ajustes do aparelho, além de ativar ' +
+        'no app da operadora. E confirmar que a Colômbia está coberta — se estiver, a ' +
+        'compra do Single Pass às 7h ET do dia 10 deixa de depender do wifi de Bogotá.',
       restauranteIds: [] },
 
     { id: 'ck-natal-datas', dataAlvo: '2026-10-15', dataEstimada: true, motivoData: 'As datas dos eventos saem com antecedência', hora: null, fuso: null,
