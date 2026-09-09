@@ -459,10 +459,25 @@ window.ROTEIRO = {
 
       { id: 'b-1011-1745', hora: '17:35', ancora: 'referencia', tipo: 'compras',
         titulo: 'The Landing → Marketplace → Town Center',
-        descricao: 'World of Disney é a maior loja Disney do mundo',
+        descricao: 'World of Disney — a compra de roupa da viagem inteira acontece aqui',
         contexto:
           'São 1h25 até o jantar, de mãos livres. Dá para o World of Disney com calma e a ' +
-          'beira da água no fim de tarde, que é a melhor hora do lugar.',
+          'beira da água no fim de tarde, que é a melhor hora do lugar.\n\n' +
+          'É a única loja da viagem com merch dos quatro parques da Disney sob o mesmo ' +
+          'teto. Dentro de cada parque só existe o do parque em que você está — por isso a ' +
+          'compra é aqui, e não lá.\n\n' +
+          'COMPRAR:\n' +
+          '• Boné (dad hat ou five panel) — fila no sol já amanhã, e o aerobarco do dia 20 ' +
+          'pede. US$ 25–40\n' +
+          '• Camiseta EPCOT Center retrô de 1982, a tee cinza com o pôster no peito — ' +
+          'VESTE NO DIA 16. US$ 35–45\n' +
+          '• Opcional: Pandora / RDA, tons de terra — VESTE NO DIA 13. US$ 35–45\n' +
+          '• Opcional: Spirit Jersey — não é camiseta, é camada: a peça dos fogos das 21h. ' +
+          '~US$ 80\n\n' +
+          'PROVE ANTES. O corte é unissex americano, mais largo e curto que Insider e ' +
+          'Minimal — vindo de M brasileiro, o M da Disney fica boxy. A fila do caixa às 18h ' +
+          'é longa demais para voltar e trocar.\n\n' +
+          'NÃO COMPRE PARTE DE BAIXO. Os dois Future Shorts e as três calças cobrem os 17 dias.',
         localId: 'disney-springs', acesso: [] },
 
       { id: 'b-1011-1900', hora: '19:00', ancora: 'fixo', tipo: 'refeicao',
@@ -772,7 +787,12 @@ window.ROTEIRO = {
           'Outlet a céu aberto com cerca de 180 lojas. O cupom book é gratuito mas não é ' +
           'oferecido — tem que pedir no balcão de informações, e costuma ter descontos ' +
           'adicionais de 10 a 25% em marcas grandes. Turistas estrangeiros conseguem pedindo ' +
-          'com o passaporte.',
+          'com o passaporte.\n\n' +
+          'DISNEY\'S CHARACTER WAREHOUSE fica dentro deste mesmo outlet — é o outlet oficial ' +
+          'da Disney, com merch de parque de temporada passada por uma fração do preço. Abre ' +
+          '10h de segunda a sábado.\n\n' +
+          'Ressalva: é estoque de sobra. O sortimento é aleatório e não dá para escolher ' +
+          'tamanho nem estampa. É bônus, não plano — a compra de verdade foi no dia 10.',
         endereco: '4951 International Dr', localId: 'premium-outlets', acesso: [] },
 
       { id: 'b-1211-1300', hora: '13:00', ancora: 'fixo', tipo: 'refeicao',
@@ -1458,6 +1478,19 @@ window.ROTEIRO = {
           'comunicação humana em cenários com animatrônicos, subindo em espiral. Lento, ' +
           'climatizado e com narração em inglês, mas totalmente compreensível pelo visual.',
         areaParque: 'World Celebration', acesso: ['standby'] },
+
+      { id: 'b-1611-1930', hora: '19:30', ancora: 'referencia', tipo: 'compras',
+        titulo: 'Creations Shop — só se quiserem a peça datada',
+        descricao: 'A linha Food & Wine 2026 só existe hoje',
+        contexto:
+          'A loja-carro-chefe do Epcot, com a linha gráfica mais forte de toda a Disney: o ' +
+          'logo hexagonal EPCOT Center de 1982, a Spaceship Earth "Forever" (cinza-mescla, ' +
+          'estilo Tron) e a linha retrô de Dreamfinder e Figment de 1983.\n\n' +
+          'Se compraram a EPCOT retrô no dia 10, vocês estão vestindo ela agora e não ' +
+          'precisam de nada aqui.\n\n' +
+          'O que só existe neste dia é a linha FOOD & WINE 2026 — ela muda todo ano e traz o ' +
+          'ano estampado. É a única peça que marca esta viagem, e não uma viagem qualquer.',
+        areaParque: 'World Celebration', acesso: [] },
 
       { id: 'b-1611-2000', hora: '20:00', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Jantar leve ou mais barracas', descricao: '', acesso: [] },
@@ -2444,6 +2477,25 @@ window.ROTEIRO = {
           'outros barcos e da plateia. Molha de verdade. Deixem para o fim do dia por isso.',
         areaParque: 'Isle of Berk', acesso: ['standby'], molha: true },
 
+      { id: 'b-2311-1800', hora: '18:00', ancora: 'referencia', tipo: 'compras',
+        titulo: 'A camiseta que vocês vestem no dia 25',
+        descricao: 'Dark Universe ou Ministry of Magic — escolham uma',
+        contexto:
+          'Este é o único parque da viagem em que comprar e vestir cabem na mesma viagem, ' +
+          'porque vocês voltam no dia 25. A peça comprada hoje é a roupa de depois de amanhã.\n\n' +
+          'DARK UNIVERSE — Pretorius\' Scientific Oddities, The Manor Storehouse, Guild of ' +
+          'Mystics. Os monstros clássicos da Universal: gótico preto e branco, tipografia de ' +
+          'cinema de terror dos anos 30. A mais "roupa" e menos "fantasia" do parque, e a ' +
+          'que mais combina com o resto da mala.\n\n' +
+          'MINISTRY OF MAGIC — Métro Floo (Tour En Floo) e Les Galeries Mirifiques. Art déco ' +
+          'parisiense dos anos 1920; a coleção British Ministry of Magic traz o emblema da ' +
+          'Wizarding Authority.\n\n' +
+          'As duas ficam no caminho: vocês passam pelo Ministry no rope drop das 9h e por ' +
+          'Dark Universe no Monsters Unchained às 14h40.\n\n' +
+          'O CRITÉRIO: por estilo, Dark Universe. Por sincronia, Ministry of Magic — o dia 25 ' +
+          'tem "Ministry of Magic à noite" às 18h30.',
+        acesso: [] },
+
       { id: 'b-2311-1820', hora: '18:20', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Atlantic ou Mead Hall',
         descricao: '',
@@ -2704,7 +2756,14 @@ window.ROTEIRO = {
 
       { id: 'b-2511-1530', hora: '15:30', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Sair para o Epic Universe',
-        descricao: '', localId: 'epic-universe', acesso: [] },
+        descricao: 'Vistam a camiseta comprada no dia 23',
+        contexto:
+          'HOJE É O DIA DA FOTO, não o dia 23. O dia 23 era enfrentar fila grande; hoje é ' +
+          'repetir os favoritos sem pressa e tirar as fotos que não deram tempo. A camiseta ' +
+          'de Dark Universe ou de Ministry of Magic tem que estar no corpo agora.\n\n' +
+          'Nada de roupa a comprar de manhã: Best Buy, Ross, Marshalls e Walgreens são ' +
+          'eletrônicos, vitaminas e cosméticos. A mala já está fechada em peça de vestir.',
+        localId: 'epic-universe', acesso: [] },
 
       { id: 'b-2511-1630', hora: '16:30', ancora: 'fixo', tipo: 'livre',
         titulo: 'O que ficou faltando do dia 23',

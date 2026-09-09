@@ -102,6 +102,11 @@ Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's
 | **18h30** | Sair | |
 | **19h45** | **Jantar — Sanaa** | Animal Kingdom Lodge. Peçam mesa na janela: girafas e zebras |
 
+### 🛒 Compras do dia
+**Windtraders**, na saída do Flight of Passage (11h20), é a melhor loja de Pandora do parque — RDA, Na'vi, tons de terra.
+
+**Só compre aqui se não tiver comprado no dia 10.** A camiseta de Pandora serve *este* dia, e você já vai estar vestido quando passar pela loja. Comprada aqui, ela vira lembrança, não roupa da viagem.
+
 ### Renúncias
 Feathered Friends in Flight, Bluey's Wild World, Wildlife Express Train, Rafiki's Planet Watch, Discovery Island Trails, The Animation Experience.
 
@@ -186,6 +191,11 @@ Dia de **Food & Wine** (o festival vai até 21/11). A tarde é comida, não fila
 | **19h00** | **Spaceship Earth** | A fila some à noite. A esfera por dentro |
 | **20h00** | Jantar leve ou mais barracas | |
 | **21h00** | **Luminous: The Symphony of Us** | Fiquem na margem entre México e Noruega |
+
+### 🛒 Compras do dia
+**Creations Shop** é a loja-carro-chefe do Epcot e tem a linha gráfica mais forte de toda a Disney: o logo hexagonal **EPCOT Center de 1982**, a Spaceship Earth "Forever" (cinza-mescla, estilo Tron) e a linha retrô de Dreamfinder e Figment de 1983.
+
+**Se você comprou a EPCOT retrô no dia 10, está vestindo ela agora** e não precisa de nada aqui. O que só existe neste dia é a linha **Food & Wine 2026**, que muda todo ano e traz o ano estampado — é a única peça que marca *esta* viagem, e não uma viagem qualquer.
 
 ### Estratégia do Food & Wine
 Peguem o passaporte na entrada. **Dividam cada prato entre os dois** e provem 8 a 10 barracas, em vez de fazer três refeições. Destaques recorrentes: Canadá (sopa de cheddar com bacon), Alemanha, Grécia, Bélgica (waffle).
@@ -302,7 +312,19 @@ O melhor dia da semana para o parque mais concorrido de Orlando. Sem Early Park 
 | **18h20** | **Jantar — Atlantic** ou **Mead Hall** | |
 | **19h45** | **Constellation Carousel** e Celestial Park iluminado | O parque à noite é outro lugar |
 
-**Power-Up Band:** comprem se quiserem jogar os desafios interativos da Super Nintendo World. Sem ela, metade da área vira só cenário. Custa ~US$ 40.
+### 🛒 Compras do dia
+**Este é o único parque da viagem em que comprar e vestir cabem na mesma viagem** — vocês voltam no dia 25. A peça comprada hoje é a roupa de depois de amanhã.
+
+| Linha | Onde | Estética |
+|---|---|---|
+| **Dark Universe** | Pretorius' Scientific Oddities · The Manor Storehouse · Guild of Mystics | Os monstros clássicos da Universal. Gótico preto e branco, tipografia de cinema de terror dos anos 30. A mais "roupa" e menos "fantasia" do parque |
+| **Ministry of Magic** | Métro Floo (*Tour En Floo*) · Les Galeries Mirifiques | Art déco parisiense dos anos 1920. A coleção *British Ministry of Magic* traz o emblema da Wizarding Authority |
+
+As duas ficam no caminho: vocês passam pelo Ministry no rope drop das 9h e por Dark Universe no Monsters Unchained às 14h40.
+
+**Escolham uma.** Por estilo, Dark Universe. Por sincronia com o dia 25 — que tem "Ministry of Magic à noite" às 18h30 —, Ministry of Magic.
+
+**Power-Up Band:** comprem se quiserem jogar os desafios interativos da Super Nintendo World. Sem ela, metade da área vira só cenário. Custa ~US$ 40. Decisão à parte da camiseta.
 
 ---
 
@@ -348,6 +370,11 @@ De manhã, compras. À tarde, o parque de novo — de graça, com o ingresso que
 | **18h30** | **Ministry of Magic à noite** — a área muda completamente no escuro |
 | **19h30** | **Super Nintendo World iluminada** e as fotos que vocês não pararam para tirar no dia 23 |
 | **21h00** | Sair. Arrumar as malas |
+
+### 🛒 Vista hoje o que comprou no dia 23
+**Hoje é o dia da foto, não o dia 23.** O roteiro do dia 23 é enfrentar fila grande; o de hoje é repetir os favoritos sem pressa e tirar as fotos que não deram tempo. A camiseta de Dark Universe ou de Ministry of Magic tem que estar no corpo hoje.
+
+**Nada de roupa a comprar de manhã** — Best Buy, Ross, Marshalls e Walgreens são eletrônicos, vitaminas e cosméticos. A mala já está fechada em peça de vestir.
 
 ---
 

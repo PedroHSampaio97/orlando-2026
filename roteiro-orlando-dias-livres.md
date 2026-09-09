@@ -25,6 +25,23 @@ Os blocos marcados como **VAZIO PROPOSITAL** não são falha de planejamento. Re
 | **19h00** | **Jantar — The Boathouse** (reserva) | |
 | **21h00** | Voltar | |
 
+### 🛒 Compras do dia
+
+**Walmart, 15h30** — protetor solar, ibuprofeno, barrinhas e frutas, água em caixa, café e o resto da farmacinha. Tudo que não saiu do Brasil por ser peso e ser mais barato aqui.
+
+**Disney Springs, 17h35 — World of Disney, no Marketplace.** É a única loja da viagem com merch dos quatro parques da Disney sob o mesmo teto. Dentro de cada parque só existe o do parque em que você está — por isso a compra é aqui, e não lá.
+
+| Comprar | Para quê | Faixa |
+|---|---|---|
+| **Boné** — dad hat ou five panel | Fila no sol já amanhã, e o aerobarco do dia 20 pede explicitamente | US$ 25–40 |
+| **Camiseta EPCOT Center retrô de 1982** | **Veste no dia 16.** A tee cinza com o pôster original no peito — o grafismo mais bonito do complexo | US$ 35–45 |
+| *Opcional:* **Pandora / RDA** | **Veste no dia 13.** Logo corporativo em tons de terra, o mais discreto da linha | US$ 35–45 |
+| *Opcional:* **Spirit Jersey** | Não é camiseta, é **camada** — a peça dos fogos das 21h, do Luminous e do Fantasmic! | ~US$ 80 |
+
+**Prove antes de pagar.** O corte é unissex americano, mais largo e mais curto que Insider e Minimal. Vindo de M brasileiro, o M da Disney fica boxy — e a fila do caixa às 18h é longa demais para voltar e trocar.
+
+**Não compre parte de baixo.** Os dois Future Shorts e as três calças já cobrem os 17 dias.
+
 **Chip/eSIM:** ativem ainda no aeroporto, com o wifi do MCO, antes de precisar do Uber.
 
 **Ainda sem decoração de Natal** — ela começa em 13/11. Vocês voltam ao Disney Springs no dia 21 justamente para ver isso.
@@ -39,6 +56,7 @@ Este dia perdeu a festa de Natal do Magic Kingdom. Reorganizei a geografia para 
 |---|---|---|
 | **8h30** | **Café da manhã no hotel** | Incluso. Aproveitem — nos dias de parque vocês não conseguem |
 | **10h00** | **Orlando International Premium Outlets** — 4951 International Dr | ~25 min. Peguem o cupom book grátis no balcão de informações |
+| | ↳ **Disney's Character Warehouse**, dentro do mesmo outlet | Outlet oficial da Disney. Merch de parque de temporada passada por uma fração. Abre 10h |
 | **13h00** | **Almoço no outlet ou no Sweet Tomatoes da I-Drive** | |
 | **14h30** | **VAZIO PROPOSITAL** — voltar ao hotel, piscina, dormir | Vocês vêm de Magic Kingdom até 21h no dia anterior |
 | **17h30** | **ICON Park** — 8375 International Dr | Entrada da área é livre; cada atração é paga |
