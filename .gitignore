@@ -10,5 +10,3 @@ _*.js
 # nada de node aqui — o projeto é sem build
 node_modules/
 
-# ferramenta de conferencia
-tools/

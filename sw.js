@@ -5,11 +5,12 @@
    O app inteiro cabe em ~260 KB, então não há motivo para cache parcial:
    ou está tudo lá, ou o app não cumpre a promessa de funcionar sem sinal.
 
-   IMPORTANTE: ao mudar qualquer arquivo, suba a VERSAO. É o que dispara o
-   novo precache e a limpeza do cache velho.
+   A VERSAO deriva do HASH do conteúdo precacheado, não de um número manual.
+   Mudou um arquivo, muda o hash, muda o nome do cache, o precache refaz.
+   Depois de editar qualquer arquivo do app:  node tools/checar.js --selar
    ========================================================================== */
 
-const VERSAO = 'orlando2026-v8';
+const VERSAO = 'orlando2026-f381c979';
 const CACHE = VERSAO;
 
 const ARQUIVOS = [

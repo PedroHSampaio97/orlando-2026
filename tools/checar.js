@@ -115,8 +115,8 @@ const reais = [];
 (function anda(d) {
   fs.readdirSync(path.join(raiz, d), { withFileTypes: true }).forEach(function (e) {
     if (e.name.startsWith('.') || e.name === 'node_modules' || e.name === 'tools') return;
-    // avulsos na raiz que não fazem parte do app instalável (ex.: mala-*.html)
-    if (!d && /^mala-/.test(e.name)) return;
+    // na raiz, só o index.html pertence ao app; o resto é avulso
+    if (!d && /\.html$/.test(e.name) && e.name !== 'index.html') return;
     const p = d ? d + '/' + e.name : e.name;
     if (e.isDirectory()) anda(p);
     else if (/\.(js|css|html|json|png)$/.test(p) && p !== 'sw.js') reais.push(p);
@@ -125,6 +125,33 @@ const reais = [];
 const foraDaCache = reais.filter((p) => !naCache.has(p));
 ok(foraDaCache.length === 0, 'todo arquivo servido está no precache', foraDaCache.join(', '));
 console.log('  versão: ' + versao);
+
+/* ---------- 6. versão do SW x conteúdo ---------- */
+/* O cache é cache-first e versionado pelo nome. Se o conteúdo muda e a VERSAO
+   não, todo aparelho que já instalou continua servindo o arquivo velho para
+   sempre. Por isso a VERSAO deriva do hash do conteúdo precacheado. */
+const crypto = require('crypto');
+function hashConteudo() {
+  const h = crypto.createHash('sha256');
+  lista.map((p) => p.replace('./', ''))
+    .filter((p) => p && p !== 'sw.js')
+    .sort()
+    .forEach(function (p) {
+      const abs = path.join(raiz, p);
+      if (fs.existsSync(abs)) { h.update(p); h.update(fs.readFileSync(abs)); }
+    });
+  return h.digest('hex').slice(0, 8);
+}
+const esperado = 'orlando2026-' + hashConteudo();
+const selar = process.argv.includes('--selar');
+if (versao !== esperado && selar) {
+  fs.writeFileSync(path.join(raiz, 'sw.js'),
+    sw.replace(/const VERSAO = '[^']+'/, "const VERSAO = '" + esperado + "'"), 'utf8');
+  console.log('  ✓ VERSAO selada em ' + esperado);
+} else {
+  ok(versao === esperado, 'VERSAO do SW corresponde ao conteúdo',
+     versao === esperado ? '' : 'rode: node tools/checar.js --selar');
+}
 
 console.log('\n' + (falhas ? '>>> ' + falhas + ' FALHA(S)' : '>>> TUDO OK') + '\n');
 process.exit(falhas ? 1 : 0);
