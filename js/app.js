@@ -92,15 +92,31 @@
     });
     lista.sort((a, b) => a.min - b.min || a.minOriginal - b.minOriginal);
 
-    // (1) aperto: dois blocos que ficaram colados sem estar antes
+    // (1) não cabe: o bloco ainda estaria acontecendo quando o próximo começa.
+    // É ESTE o aviso que faltava. A versão antiga comparava só início contra
+    // início, com limiar de 15 min — então um atraso de 1h30 no dia 10 não
+    // gerava alerta nenhum, e o cartão do Disney Springs seguia prometendo
+    // 1h40 de passeio com quinze minutos até o jantar. Com `duracaoMin`, o
+    // aperto aparece na hora em que o tempo deixa de caber, não depois que a
+    // ordem já inverteu.
     for (let i = 1; i < lista.length; i++) {
       const a = lista[i - 1], b = lista[i];
-      if ((b.min - a.min) < 15 && Math.abs(b.minOriginal - a.minOriginal) >= 15) {
-        const frase = (o) => 'Choca com "' + o.dados.titulo + '"' +
-          (o.ancora === 'fixo' ? ', que tem horário fixo e não desloca.' : '.');
-        a.colisao = a.colisao || frase(b);
-        b.colisao = frase(a);
-      }
+      const dur = a.dados.duracaoMin;
+      if (!dur) continue;
+      // Sem isenção por localId: o Boathouse fica DENTRO do Disney Springs e
+      // mesmo assim é hora marcada. Quem separa etapa de compromisso é a
+      // duração declarada, não o endereço.
+      // Fusos diferentes: 01h40 no Rio ate 06h00 em Bogota sao 6h20 de voo, nao
+      // 4h20. O `hora` de cada bloco esta no relogio local dele, entao comparar
+      // os dois na mao daria alerta falso todo dia. Sem conversao, nao opinamos.
+      if (a.dados.fuso && b.dados.fuso && a.dados.fuso !== b.dados.fuso) continue;
+      const sobra = b.min - a.min;
+      if (sobra >= dur) continue;
+      a.colisao = a.colisao ||
+        'NÃO CABE: sobram ' + intervaloTexto(Math.max(sobra, 0)) + ' e o plano ' +
+        'previa ' + intervaloTexto(dur) + '. Faltam ' + intervaloTexto(dur - sobra) +
+        ' para "' + b.dados.titulo + '"' +
+        (b.ancora === 'fixo' ? ', que tem hora marcada e não desloca.' : '.');
     }
 
     // (2) inversão: o deslocamento jogou um bloco para depois de outro que ele
@@ -113,9 +129,14 @@
         // A culpa é de quem se moveu, não de quem ficou parado.
         const moveu = b.deslocado ? b : (a.deslocado ? a : b);
         const outro = moveu === b ? a : b;
-        moveu.colisao = moveu.colisao ||
-          'Caiu para depois de "' + outro.dados.titulo +
-          '", que no plano vinha só depois deste bloco.';
+        // A frase precisa seguir a direção do movimento. Escrita só para o
+        // caso do atraso, ela dizia o oposto quando o parque abria mais cedo.
+        const caiu = (moveu === b);
+        moveu.colisao = moveu.colisao || (caiu
+          ? 'Caiu para depois de "' + outro.dados.titulo +
+            '", que no plano vinha só depois deste bloco.'
+          : 'Subiu para antes de "' + outro.dados.titulo +
+            '", que no plano vinha antes deste bloco.');
       }
     }
     return lista;
@@ -408,8 +429,6 @@
     pintarProgresso(dia);
     Fase3.pintarFicha(dia);
     Fase3.pintarFechamento(dia);
-    $('#notas-texto').value = E.nota(dia.id);
-    $('#notas-status').textContent = '';
     pintarNavDias();
   }
 
@@ -707,16 +726,6 @@
   $('#chk-falta').addEventListener('change', function (e) {
     soFalta = e.target.checked;
     pintarLinhaTempo(diaAtual);
-  });
-
-  let timerNota = null;
-  $('#notas-texto').addEventListener('input', function (e) {
-    clearTimeout(timerNota);
-    $('#notas-status').textContent = 'digitando…';
-    timerNota = setTimeout(function () {
-      E.definirNota(diaAtual.id, e.target.value);
-      $('#notas-status').textContent = 'salvo no aparelho';
-    }, 500);
   });
 
   /* tema */

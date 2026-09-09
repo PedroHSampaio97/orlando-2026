@@ -246,7 +246,7 @@ window.ROTEIRO = {
       {
         letra: 'A',
         titulo: 'Tudo no horário',
-        gatilho: 'Vocês saem do Terminal C até as 14h00.',
+        gatilho: 'Vocês saem do Terminal C até as 14h15.',
         passos: [
           'Uber para o hotel, deixar malas, check-in se já liberou.',
           'Walmart com calma — a lista completa, 45 min. Fica a 4 min do hotel.',
@@ -258,7 +258,7 @@ window.ROTEIRO = {
       {
         letra: 'B',
         titulo: 'Imigração demorou',
-        gatilho: 'Vocês saem do Terminal C entre 14h00 e 16h00.',
+        gatilho: 'Vocês saem do Terminal C entre 14h15 e 16h00.',
         passos: [
           'Corta o Walmart para o essencial: água, protetor solar, ibuprofeno e barrinhas. ' +
           '20 minutos, sem passear pelos corredores. A volta ao hotel continua ' +
@@ -278,8 +278,9 @@ window.ROTEIRO = {
         passos: [
           'Abram o processo ali mesmo, no balcão da companhia dentro da área de ' +
           'bagagem. Saindo sem protocolo, resolver depois vira telefonema internacional.',
-          'Guardem o número do protocolo e o endereço do hotel por escrito. Eles ' +
-          'entregam no hotel quando a mala aparece, normalmente no voo seguinte.',
+          'Guardem o número do protocolo. O endereço e o telefone do hotel estão no ' +
+          'Guia: 5367 W Irlo Bronson Memorial Hwy, +1 407-449-2357. Eles entregam no ' +
+          'hotel quando a mala aparece, normalmente no voo seguinte.',
           'O Walmart deixa de ser conveniência e vira necessidade: somem escova de ' +
           'dentes, desodorante, uma muda de roupa e o que for de uso diário. Fica a ' +
           '4 minutos do hotel, então dá para voltar amanhã se faltar alguma coisa.',
@@ -288,11 +289,13 @@ window.ROTEIRO = {
       },
       {
         letra: 'C',
-        titulo: 'Perdeu a conexão ou chegou depois das 17h',
-        gatilho: 'Atraso grande em Bogotá, remarcação, ou pouso no MCO depois das 17h.',
+        titulo: 'Saíram do terminal depois das 16h',
+        gatilho: 'Vocês saem do Terminal C depois das 16h, perderam a conexão em Bogotá, ' +
+                 'ou foram remarcados.',
         passos: [
-          'PRIMEIRA COISA: cancelem o The Boathouse assim que souberem, por telefone ou ' +
-          'pelo app. Restaurante de Disney Springs cobra taxa por não comparecimento.',
+          'PRIMEIRA COISA: cancelem o The Boathouse assim que souberem — +1 407-939-3463, ' +
+          'ou pelo My Disney Experience. Com menos de 2 horas de antecedência a Disney ' +
+          'cobra a taxa de não comparecimento no cartão. Os telefones estão no Guia.',
           'Esqueçam o Disney Springs hoje. Vocês voltam no dia 21 e, honestamente, o dia 21 ' +
           'é melhor: tem o Christmas Tree Stroll e a decoração de Natal, que hoje ainda ' +
           'não existe.',
@@ -408,7 +411,7 @@ window.ROTEIRO = {
                   'cochilo. Dois alarmes em aparelhos diferentes, não dois no mesmo.' },
 
         { texto: 'Celular e power bank carregando a noite inteira', critico: true,
-          motivo: 'O dia 11 vai das 6h45 às 21h30. Celular morto às 16h é o roteiro, ' +
+          motivo: 'O dia 11 vai das 6h45 às 22h. Celular morto às 16h é o roteiro, ' +
                   'o Lightning Lane e o mobile order perdidos de uma vez.' },
 
         { texto: 'My Disney Experience: login feito, ingressos vinculados e os dois no mesmo grupo',
@@ -420,9 +423,11 @@ window.ROTEIRO = {
 
         { texto: 'Conferir se as reservas de Lightning Lane do dia 11 aparecem no app',
           critico: true,
-          motivo: 'Compradas em 08/11: Peter Pan, Big Thunder e Mansão no Multi Pass, ' +
-                  'mais o Seven Dwarfs no Single Pass. Se alguma não estiver lá, hoje ' +
-                  'ainda dá tempo de rever o plano do dia. Amanhã às 9h, não.' },
+          motivo: 'Compradas em 08/11: Peter Pan, Mansão e Buzz Lightyear no Multi Pass, ' +
+                  'mais o Seven Dwarfs no Single Pass. O BIG THUNDER NÃO ESTÁ AÍ — ele se ' +
+                  'reserva amanhã às 10h15, de pé na saída do Peter Pan. Se alguma das ' +
+                  'quatro não estiver lá, hoje ainda dá tempo de rever o plano. Amanhã ' +
+                  'às 9h, não.' },
 
         { texto: 'Conferir o horário real de abertura do Magic Kingdom e ajustar aqui no app',
           critico: true,
@@ -490,16 +495,17 @@ window.ROTEIRO = {
         contexto:
           'Este é o horário que ancora o resto do dia. Se o voo atrasar, mude a referência ' +
           'aqui em cima e a tarde inteira desloca junto — menos o jantar, que tem hora marcada.',
-        localId: 'mco', acesso: [], pesquisa: '2026-09-08' },
+        localId: 'mco', acesso: [], pesquisa: '2026-09-08', duracaoMin: 15 },
 
       { id: 'b-1011-1250', hora: '12:50', ancora: 'referencia', tipo: 'espera',
         titulo: 'Imigração, bagagem e alfândega',
         descricao: 'De 40 min a 2h. É esta fila que decide se o dia é plano A, B ou C',
         contexto:
           'A caminhada do portão até a esteira já leva de 15 a 25 minutos no Terminal C. ' +
-          'Enquanto esperam, olhem o relógio: saindo até 14h é plano A; até 16h é plano B; ' +
-          'depois disso, plano C.',
-        localId: 'mco', acesso: [], critico: true },
+          'Enquanto esperam, olhem o relógio: saindo até 14h15 é plano A; até 16h é plano ' +
+          'B; depois das 16h, plano C. É a hora de SAIR do terminal que decide, não a do ' +
+          'pouso.',
+        localId: 'mco', acesso: [], critico: true, duracaoMin: 85 },
 
       { id: 'b-1011-1415', hora: '14:15', ancora: 'referencia', tipo: 'tarefa',
         titulo: 'Confirmar a internet e chamar o Uber',
@@ -510,34 +516,35 @@ window.ROTEIRO = {
           'do MCO resolve enquanto vocês ligam o roaming nos ajustes.\n\n' +
           'E só chamem a corrida depois de estarem com as malas na mão: o motorista tem ' +
           'poucos minutos de tolerância e cancela.',
-        localId: 'mco', acesso: [], critico: true, pesquisa: '2026-09-08' },
+        localId: 'mco', acesso: [], critico: true, pesquisa: '2026-09-08', duracaoMin: 30 },
 
       { id: 'b-1011-1445', hora: '14:45', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Uber para o hotel',
         descricao: '~30 min, US$ 35–45',
         contexto:
-          'Check-in abre às 15h. Vocês chegam quinze minutos antes, o que dá certo: sobem, ' +
-          'largam as malas no quarto e saem leves para o mercado.',
-        localId: 'hotel-travelodge', acesso: [] },
+          'Saindo 14h45 com ~30 min de corrida, vocês chegam por volta das 15h15 — com o ' +
+          'check-in já aberto, sem espera. Subam, larguem as malas e desçam: o Walmart é ' +
+          'a quatro minutos daqui.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 30 },
 
-      { id: 'b-1011-1500', hora: '15:00', ancora: 'referencia', tipo: 'tarefa',
+      { id: 'b-1011-1500', hora: '15:15', ancora: 'referencia', tipo: 'tarefa',
         titulo: 'Check-in e largar as malas',
-        descricao: 'Check-in abre às 15h em ponto',
+        descricao: 'O check-in abre às 15h. Vocês chegam 15h15',
         contexto:
           'Subam, larguem tudo e desçam. Não desfaçam mala agora — isso é para depois do ' +
           'jantar, ou para amanhã.',
-        localId: 'hotel-travelodge', acesso: [] },
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 20 },
 
-      { id: 'b-1011-1530', hora: '15:30', ancora: 'referencia', tipo: 'compras',
+      { id: 'b-1011-1530', hora: '15:35', ancora: 'referencia', tipo: 'compras',
         titulo: 'Walmart Supercenter — Vineland Rd',
         descricao: '4 min do hotel. 45 min de compras. Lista completa na ficha do dia',
         contexto:
           'A compra que abastece os 16 dias. Fica a 1,5 km do hotel — a corrida sai por ' +
           'US$ 7 a 10 e leva 4 minutos. Se o dia estiver atrasado, façam só os oito itens ' +
           'essenciais e joguem o resto para o dia 12.',
-        endereco: '3250 Vineland Rd', localId: 'walmart-vineland', acesso: [] },
+        endereco: '3250 Vineland Rd', localId: 'walmart-vineland', acesso: [], duracaoMin: 45 },
 
-      { id: 'b-1011-1645', hora: '16:20', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-1011-1645', hora: '16:25', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel e guardar as compras',
         descricao: '4 min. Fardo de água não vai para o Disney Springs',
         contexto:
@@ -546,9 +553,9 @@ window.ROTEIRO = {
           'garrafas, protetor solar e barrinhas na mochila — e saiam de novo.\n\n' +
           'Com o Walmart certo, essa ida e volta custa ~US$ 16 no total e come 8 minutos ' +
           'de carro. Sobra meia hora a mais no Disney Springs.',
-        localId: 'hotel-travelodge', acesso: [] },
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 5 },
 
-      { id: 'b-1011-1625', hora: '16:25', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-1011-1625', hora: '16:30', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Comer alguma coisa',
         descricao: 'Do que acabou de ser comprado. 6h desde o pouso',
         contexto:
@@ -559,22 +566,21 @@ window.ROTEIRO = {
           'sair da sacola. Comam enquanto guardam as compras.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 20 },
 
-      { id: 'b-1011-1710', hora: '16:50', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-1011-1710', hora: '16:55', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Sair para o Disney Springs',
         descricao: 'Uber, ~20 min. Pôr do sol às 17h35',
         contexto:
           'Entrada livre, sem ingresso e sem catraca. Vocês chegam junto com o pôr do sol, ' +
           'que é a melhor hora do lugar.',
-        localId: 'disney-springs', acesso: [] },
+        localId: 'disney-springs', acesso: [], duracaoMin: 25 },
 
-      { id: 'b-1011-1745', hora: '17:15', ancora: 'referencia', tipo: 'compras',
+      { id: 'b-1011-1745', hora: '17:20', ancora: 'referencia', tipo: 'compras',
         titulo: 'The Landing → Marketplace → Town Center',
         descricao: 'World of Disney é a maior loja Disney do mundo',
         contexto:
-          'São 1h45 até o jantar, de mãos livres — meia hora a mais do que no plano ' +
-          'antigo, porque o Walmart certo fica a 4 minutos do hotel. Dá para o World ' +
-          'of Disney sem correr e ainda pegar o pôr do sol às 17h35 na beira da água.',
-        localId: 'disney-springs', acesso: [] },
+          'São 1h40 até o jantar, de mãos livres. Dá para o World of Disney sem correr e ' +
+          'ainda pegar o pôr do sol às 17h35 na beira da água.',
+        localId: 'disney-springs', acesso: [], duracaoMin: 100 },
 
       { id: 'b-1011-1900', hora: '19:00', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — The Boathouse',
@@ -584,16 +590,16 @@ window.ROTEIRO = {
           'antes. HORÁRIO FIXO: não desloca nem se o voo atrasar — se o dia virar plano C, ' +
           'cancelem em vez de perder a reserva por não comparecimento.',
         restauranteId: 'r-boathouse', localId: 'disney-springs', acesso: ['reserva'],
-        critico: true },
+        critico: true, duracaoMin: 90 },
 
       { id: 'b-1011-2100', hora: '21:00', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel',
         descricao: 'Amanhã é Magic Kingdom com saída às 6h45',
         contexto:
           'Não estiquem. O dia 11 começa às 6h45 e é o dia mais denso da primeira semana. ' +
-          'A única coisa que justifica atrasar a volta é o Amphicar, que fica no píer do ' +
-          'próprio Boathouse e leva 20 minutos — e só se vocês estiverem inteiros.',
-        localId: 'hotel-travelodge', acesso: [] },
+          'Nada aqui justifica atrasar a volta — vocês revisitam o Disney Springs no dia ' +
+          '21, decorado de Natal e sem parque no dia seguinte.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 45 },
     ],
     renuncias: null,
     ficha: null,
@@ -763,12 +769,17 @@ window.ROTEIRO = {
       paraODia: '2026-11-12',
       titulo: 'Outlet e ICON Park · café no hotel às 8h30',
       aviso:
-        'Depois de um dia de 6h45 às 21h30, o dia 12 é de propósito o mais leve da ' +
+        'Depois de um dia de 6h45 às 22h, o dia 12 é de propósito o mais leve da ' +
         'primeira semana. A lista é curta porque tem que ser.',
       itens: [
-        { texto: 'Dormir até acordar', critico: true,
-          motivo: 'Não coloquem alarme. O café do hotel vai até tarde e o outlet abre às ' +
-                  '10h — nada no dia 12 depende de vocês acordarem cedo.' },
+        { texto: 'Conferir se o Single Pass do dia 15 precisa ser comprado às 7h de amanhã',
+          critico: true,
+          motivo: 'Se o ingresso NÃO for date-based, o Rise of the Resistance se compra ' +
+                  'amanhã às 7h ET e aí PRECISA de alarme. Se for date-based, já está ' +
+                  'coberto e amanhã não tem hora. Decidam isso hoje, não às 6h59.' },
+        { texto: 'Se não houver compra, dormir até acordar', critico: true,
+          motivo: 'O café do hotel vai até tarde e o outlet abre às 10h. Fora a compra ' +
+                  'das 7h, nada no dia 12 depende de vocês acordarem cedo.' },
         { texto: 'Guardar as compras do parque e esvaziar a mochila',
           motivo: 'Amanhã é dia de comprar. Sair com a mochila cheia do dia anterior é ' +
                   'começar errado.' },
@@ -795,7 +806,7 @@ window.ROTEIRO = {
           'O Magic Kingdom é o único parque da Disney sem acesso direto de carro. O Uber ' +
           'para no Ticket & Transportation Center e de lá ainda são 15 a 20 minutos de ' +
           'monotrilho ou barco. É por isso que a saída é tão cedo.',
-        localId: 'mk-ttc', acesso: [], critico: true },
+        localId: 'mk-ttc', acesso: [], critico: true, duracaoMin: 60 },
 
       { id: 'b-1111-0745', hora: '07:45', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Portão',
@@ -810,7 +821,7 @@ window.ROTEIRO = {
           'aqui, parados na fila, que é o único momento do dia em que sobra tempo.\n\n' +
           'Água: qualquer balcão de comida do parque dá copo de água gelada de graça, é ' +
           'só pedir. Não comprem garrafa a US$ 4 lá dentro — recarreguem as de vocês.',
-        localId: 'magic-kingdom', acesso: [] },
+        localId: 'magic-kingdom', acesso: [], duracaoMin: 75 },
 
       { id: 'b-1111-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'TRON Lightcycle / Run',
@@ -823,7 +834,7 @@ window.ROTEIRO = {
           '20 minutos de fila e nada.\n\n' +
           'Guardem tudo no locker antes — o TRON não permite nada solto.',
         areaParque: 'Tomorrowland', acesso: ['rope-drop', 'standby'],
-        critico: true, pesquisa: '2026-09-09' },
+        critico: true, pesquisa: '2026-09-09', duracaoMin: 40 },
 
       { id: 'b-1111-0940', hora: '09:40', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Space Mountain',
@@ -832,7 +843,7 @@ window.ROTEIRO = {
           'Montanha-russa de 1975 no escuro total, sem inversões. Não é rápida pelos padrões ' +
           'de hoje (~45 km/h), mas o escuro completo faz parecer muito mais. Sacode bastante ' +
           '— é uma das mais desconfortáveis para coluna do complexo.',
-        areaParque: 'Tomorrowland', acesso: ['standby'] },
+        areaParque: 'Tomorrowland', acesso: ['standby'], duracaoMin: 35 },
 
       { id: 'b-1111-1015', hora: '10:15', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Peter Pan’s Flight',
@@ -845,7 +856,7 @@ window.ROTEIRO = {
           'vocês passarem a catraca, a restrição de lista cai e vocês podem reservar o Big ' +
           'Thunder, que é lista alta e de outra forma não caberia. Reservem ali mesmo, de ' +
           'pé na saída, antes de andar.',
-        areaParque: 'Fantasyland', acesso: ['multi-pass'], critico: true },
+        areaParque: 'Fantasyland', acesso: ['multi-pass'], critico: true, duracaoMin: 30 },
 
       { id: 'b-1111-1045', hora: '10:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Seven Dwarfs Mine Train',
@@ -854,7 +865,7 @@ window.ROTEIRO = {
           'Montanha-russa familiar cujos carrinhos balançam lateralmente nas curvas. Suave, ' +
           'curta, com uma cena final de animatrônicos muito boa. Não está no Multi Pass: é ' +
           'compra separada, e é a fila mais persistente do parque o dia inteiro.',
-        areaParque: 'Fantasyland', acesso: ['single-pass'] },
+        areaParque: 'Fantasyland', acesso: ['single-pass'], duracaoMin: 30 },
 
       { id: 'b-1111-1115', hora: '11:15', ancora: 'referencia', tipo: 'atracao',
         titulo: 'it’s a small world',
@@ -863,7 +874,7 @@ window.ROTEIRO = {
           'Passeio de barco de 1964 com centenas de bonecos animatrônicos e a música que ' +
           'gruda na cabeça por três dias. Lento e climatizado — serve de descanso no meio ' +
           'da manhã, e a fila engana: some rápido.',
-        areaParque: 'Fantasyland', acesso: ['standby'] },
+        areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 35 },
 
       { id: 'b-1111-1150', hora: '11:50', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mansão Mal-Assombrada',
@@ -873,7 +884,7 @@ window.ROTEIRO = {
           'feito com truques de ilusão óptica do século XIX que continuam funcionando. É ' +
           'assombrado de brincadeira, não de susto. Um dos melhores da Disney e não depende ' +
           'de idioma.',
-        areaParque: 'Liberty Square', acesso: ['multi-pass'] },
+        areaParque: 'Liberty Square', acesso: ['multi-pass'], duracaoMin: 40 },
 
       { id: 'b-1111-1230', hora: '12:30', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Columbia Harbour House',
@@ -884,7 +895,7 @@ window.ROTEIRO = {
           'Duas coisas: peçam pelo mobile order, que economiza 20 a 30 minutos de fila; e ' +
           'subam para o segundo andar, que quase ninguém acha e é o lugar mais silencioso ' +
           'do Magic Kingdom.',
-        restauranteId: 'r-columbia-harbour', areaParque: 'Liberty Square', acesso: [] },
+        restauranteId: 'r-columbia-harbour', areaParque: 'Liberty Square', acesso: [], duracaoMin: 60 },
 
       { id: 'b-1111-1330', hora: '13:30', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Big Thunder Mountain',
@@ -894,7 +905,7 @@ window.ROTEIRO = {
           '— é velocidade e curva, não terror. Uma das mais divertidas para quem não quer ' +
           'intensidade.\n\n' +
           'Ao usar esta, reservem a Jungle Cruise. O ciclo continua.',
-        areaParque: 'Frontierland', acesso: ['multi-pass'] },
+        areaParque: 'Frontierland', acesso: ['multi-pass'], duracaoMin: 40 },
 
       { id: 'b-1111-1410', hora: '14:10', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Piratas do Caribe',
@@ -903,7 +914,7 @@ window.ROTEIRO = {
           'Passeio de barco de 1967, o clássico que originou os filmes. Cenários com ' +
           'animatrônicos, uma queda pequena no escuro, quase não molha. A capacidade é ' +
           'altíssima, então a fila anda mesmo quando parece grande — não vale gastar passe.',
-        areaParque: 'Adventureland', acesso: ['standby'] },
+        areaParque: 'Adventureland', acesso: ['standby'], duracaoMin: 50 },
 
       { id: 'b-1111-1500', hora: '15:00', ancora: 'fixo', tipo: 'show',
         titulo: 'Festival of Fantasy Parade',
@@ -923,7 +934,7 @@ window.ROTEIRO = {
           'da atração.\n\n' +
           'ATENÇÃO: é a única do dia que depende inteiramente de inglês falado. Se o humor ' +
           'não pegar, é o primeiro bloco a sacrificar quando o dia atrasar.',
-        areaParque: 'Adventureland', acesso: ['multi-pass'] },
+        areaParque: 'Adventureland', acesso: ['multi-pass'], duracaoMin: 45 },
 
       { id: 'b-1111-1630', hora: '16:30', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mickey’s PhilharMagic',
@@ -940,7 +951,7 @@ window.ROTEIRO = {
         contexto:
           'Dark ride onde vocês atiram em alvos e disputam pontuação. Girem a cabine com o ' +
           'joystick central para mirar melhor, e os alvos com Z valem mais.',
-        areaParque: 'Tomorrowland', acesso: ['multi-pass'] },
+        areaParque: 'Tomorrowland', acesso: ['multi-pass'], duracaoMin: 45 },
 
       { id: 'b-1111-1745', hora: '17:45', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Jantar — Casey’s Corner',
@@ -949,7 +960,7 @@ window.ROTEIRO = {
           'Cachorro-quente de balcão, com pianista tocando ao vivo na porta. Foi por isso ' +
           'que vocês escolheram — comer dentro perde o motivo da escolha.\n\n' +
           'Mobile order aqui também.',
-        restauranteId: 'r-caseys', areaParque: 'Main Street', acesso: [] },
+        restauranteId: 'r-caseys', areaParque: 'Main Street', acesso: [], duracaoMin: 75 },
 
       { id: 'b-1111-1900', hora: '19:00', ancora: 'referencia', tipo: 'compras',
         titulo: 'Main Street',
@@ -958,7 +969,7 @@ window.ROTEIRO = {
           'As lojas da Main Street ficam abertas até depois dos fogos e esvaziam justamente ' +
           'quando todo mundo está se posicionando. Se sobrar compra, façam depois — mas ' +
           'hoje vocês saem às 21h, então não deixem para o fim.',
-        areaParque: 'Main Street', acesso: [] },
+        areaParque: 'Main Street', acesso: [], duracaoMin: 20 },
 
       { id: 'b-1111-1920', hora: '19:20', ancora: 'fixo', tipo: 'espera',
         titulo: 'Posição para os fogos',
@@ -968,7 +979,7 @@ window.ROTEIRO = {
           'fogos, então o ângulo importa: de frente, e não muito perto, senão vocês perdem a ' +
           'projeção.\n\n' +
           'HORÁRIO FIXO, colado no show.',
-        areaParque: 'Main Street', acesso: [] },
+        areaParque: 'Main Street', acesso: [], duracaoMin: 40 },
 
       { id: 'b-1111-2000', hora: '20:00', ancora: 'fixo', tipo: 'show',
         titulo: 'Happily Ever After',
@@ -990,7 +1001,7 @@ window.ROTEIRO = {
           'Escolham o que mais gostaram: TRON e Space Mountain ficam na Tomorrowland, perto ' +
           'da saída; o Seven Dwarfs fica na Fantasyland. Uma só, sem esticar — vocês ainda ' +
           'estão no segundo dia de viagem.',
-        areaParque: 'Tomorrowland', acesso: ['standby'] },
+        areaParque: 'Tomorrowland', acesso: ['standby'], duracaoMin: 30 },
 
       { id: 'b-1111-2100', hora: '21:00', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Sair',
@@ -998,7 +1009,7 @@ window.ROTEIRO = {
         contexto:
           'Saindo às 21h vocês pegam o monotrilho depois da onda das 20h25 e antes da do ' +
           'fechamento. Com o TTC e o Uber, contem 45 a 60 minutos até o hotel.',
-        localId: 'mk-ttc', acesso: [] },
+        localId: 'mk-ttc', acesso: [], duracaoMin: 60 },
     ],
 
     ficha: {
@@ -1075,12 +1086,14 @@ window.ROTEIRO = {
     resumo:
       'Este dia perdeu a festa de Natal do Magic Kingdom, e a geografia foi reorganizada ' +
       'para tudo rodar no eixo da International Drive. Ele é leve de propósito: vocês vêm ' +
-      'do Magic Kingdom até 21h30 e entram numa sequência pesada a partir de amanhã. O ' +
+      'do Magic Kingdom até as 22h e entram numa sequência pesada a partir de amanhã. O ' +
       'bloco vazio da tarde não é folga, é manutenção.',
 
     avisos: [
-      'Não coloquem alarme. É o único dia da primeira semana em que nada depende de vocês ' +
-      'acordarem cedo.',
+      'ANTES DE DORMIR, CONFIRAM UMA COISA: se o ingresso da Disney NÃO for date-based, ' +
+      'tem uma compra às 7h ET hoje — o Single Pass do Rise of the Resistance, para o ' +
+      'dia 15. Está nas pendências. Se for date-based, não tem nada: durmam.',
+      'Fora isso, nada hoje depende de acordar cedo. É o único dia assim da primeira semana.',
     ],
 
     notas: [
@@ -1134,7 +1147,7 @@ window.ROTEIRO = {
       {
         letra: 'C',
         titulo: 'Vocês acordaram destruídos',
-        gatilho: 'O dia 11 terminou 21h30 e o corpo não colaborou.',
+        gatilho: 'O dia 11 terminou perto das 22h e o corpo não colaborou.',
         passos: [
           'Cortem o ICON Park inteiro sem culpa. Outlet de manhã, hotel à tarde e à noite, ' +
           'jantar em qualquer coisa na 192.',
@@ -1235,7 +1248,7 @@ window.ROTEIRO = {
           'É o único dia da primeira semana em que dá tempo de tomar o café do hotel com ' +
           'calma — nos dias de parque vocês saem antes de ele abrir. Aproveitem, e sem ' +
           'despertador: nada hoje depende de acordar cedo.',
-        localId: 'hotel-travelodge', acesso: [] },
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 60 },
 
       { id: 'b-1211-1000', hora: '10:00', ancora: 'fixo', tipo: 'compras',
         titulo: 'Orlando International Premium Outlets',
@@ -1245,7 +1258,7 @@ window.ROTEIRO = {
           'SOBRE O CUPOM: o livro do balcão custa US$ 10. O gratuito é o Savings Passport ' +
           'do Simon VIP Club, que vocês cadastram antes de viajar e fica no celular.',
         endereco: '4951 International Dr', localId: 'premium-outlets', acesso: [],
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10', duracaoMin: 5 },
 
       { id: 'b-1211-1005', hora: '10:05', ancora: 'fixo', tipo: 'compras',
         titulo: 'Disney’s Character Warehouse',
@@ -1259,7 +1272,7 @@ window.ROTEIRO = {
           'visitas nunca acham a mesma coisa. Não dá para contar com item específico.\n\n' +
           '12/11 é quinta, então abre 10h — a mesma hora em que vocês chegam ao outlet.',
         endereco: '4951 International Dr', localId: 'premium-outlets', acesso: [],
-        pesquisa: '2026-09-09' },
+        pesquisa: '2026-09-09', duracaoMin: 170 },
 
       { id: 'b-1211-1300', hora: '13:00', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Almoço no outlet',
@@ -1267,17 +1280,18 @@ window.ROTEIRO = {
         contexto:
           'Comam no próprio outlet. Sair da I-Drive para almoçar custa dois Ubers e uma ' +
           'hora, num dia cujo objetivo é descansar.',
-        localId: 'premium-outlets', acesso: [], pesquisa: '2026-09-10' },
+        localId: 'premium-outlets', acesso: [], pesquisa: '2026-09-10', duracaoMin: 90 },
 
       { id: 'b-1211-1430', hora: '14:30', ancora: 'fixo', tipo: 'vazio',
         titulo: 'VAZIO PROPOSITAL',
         descricao: 'Voltar ao hotel, piscina, dormir',
         contexto:
-          'Não preencham. Vocês vêm de um Magic Kingdom que terminou 21h30 e amanhã começa ' +
+          'Não preencham. Vocês vêm de um Magic Kingdom que terminou perto das 22h e amanhã ' +
+          'começa ' +
           'a sequência mais pesada da viagem: Animal Kingdom, Islands of Adventure, ' +
           'SeaWorld, Epic Universe e Busch Gardens com três horas de carro.\n\n' +
           'Este bloco não é folga. É o que faz o resto funcionar.',
-        localId: 'hotel-travelodge', acesso: [] },
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 180 },
 
       { id: 'b-1211-1730', hora: '17:30', ancora: 'fixo', tipo: 'livre',
         titulo: 'ICON Park — promenade ao pôr do sol',
@@ -1287,7 +1301,7 @@ window.ROTEIRO = {
           'Vocês chegam exatamente na hora do pôr do sol, que é o melhor momento do lugar.\n\n' +
           'Se estiverem cansados, este bloco sozinho já justifica a saída — dá para andar, ' +
           'jantar e voltar sem pagar atração nenhuma.',
-        endereco: '8375 International Dr', localId: 'icon-park', acesso: [] },
+        endereco: '8375 International Dr', localId: 'icon-park', acesso: [], duracaoMin: 30 },
 
       { id: 'b-1211-1800', hora: '18:00', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Museum of Illusions',
@@ -1310,7 +1324,7 @@ window.ROTEIRO = {
         localId: 'icon-park', acesso: [], opcional: true, duracaoMin: 60,
         pesquisa: '2026-09-10' },
 
-      { id: 'b-1211-2000', hora: '20:00', ancora: 'fixo', tipo: 'refeicao',
+      { id: 'b-1211-2000', hora: '20:30', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Yard House ou Tin Roof',
         descricao: 'Os dois ficam DENTRO do ICON Park',
         contexto:
@@ -1318,8 +1332,10 @@ window.ROTEIRO = {
           'vivo todas as noites.\n\n' +
           'A vantagem dos dois é a mesma: ficam dentro do próprio ICON Park, então vocês ' +
           'saem da atração e sentam. O Cooper’s Hawk fica em outro ponto da I-Drive e ' +
-          'obrigaria mais um Uber no fim da noite.',
-        localId: 'icon-park', acesso: [], pesquisa: '2026-09-10' },
+          'obrigaria mais um Uber no fim da noite.\n\n' +
+          'São 20h30 porque o Madame Tussauds leva uma hora e termina 20h15. Se pularem ' +
+          'o Tussauds, jantem 19h30 — nenhum dos dois pede reserva.',
+        localId: 'icon-park', acesso: [], pesquisa: '2026-09-10', duracaoMin: 60 },
 
       { id: 'b-1211-2130', hora: '21:30', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel',
@@ -1327,7 +1343,7 @@ window.ROTEIRO = {
         contexto:
           'Não estiquem. O dia 13 é Animal Kingdom com saída às 7h30 e abre a sequência ' +
           'pesada da viagem.',
-        localId: 'hotel-travelodge', acesso: [] },
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 30 },
     ],
     renuncias: null,
     ficha: null,
@@ -1489,6 +1505,25 @@ window.ROTEIRO = {
           'Experience, janela abre 14/09. HORÁRIO FIXO de reserva.',
         restauranteId: 'r-sanaa', localId: 'ak-lodge', acesso: ['reserva'] },
     ],
+
+    naoPerca: [
+      { nome: 'Starlight Safari', quando: 'decidir', custo: 'US$ 75 a 89 por pessoa',
+        condicao: 'reserva abre 60 dias antes, 6h ET — ou seja 14/09',
+        motivo:
+          'Safári noturno na savana do Animal Kingdom Lodge, em veículo aberto e com ' +
+          'óculos de visão noturna. Cerca de 1h30, sai às 20h30 e às 22h, e NÃO exige ' +
+          'estar hospedado no Lodge — é aberto a qualquer visitante.\n\n' +
+          'O encaixe é bom demais para não registrar: vocês já vão estar no Lodge para o ' +
+          'Sanaa às 19h45. O jantar termina por volta das 21h15 e a saída das 22h começa ' +
+          'no mesmo lugar — zero deslocamento a mais. E é a única noite da viagem em que ' +
+          'dormir tarde não custa nada: o dia 14 abre com bloco vazio às 9h.\n\n' +
+          'O que pesa contra é o preço. US$ 150 a 178 no casal, e vocês descartaram o ' +
+          'Amphicar a US$ 62 por cabeça. Se a régua for a mesma, este também cai — mas ' +
+          'aqui são 90 minutos, não 20, e é a savana à noite, que não tem substituto no ' +
+          'resto do roteiro. Decidam até 14/09, que é quando a reserva abre.',
+        pesquisa: '2026-09-09' },
+    ],
+
     ficha: {
       multiPass: {
         usar: false, opcional: false, listaAlta: [], listaBaixa: [], planoB: null,
@@ -3821,7 +3856,8 @@ window.ROTEIRO = {
       lat: 28.4750673, lng: -81.4514825, verificado: true, fonteCoord: 'osm', endereco: '4951 International Dr',
       doHotel: { tempoMin: 25, tempoFonte: 'documento',
                  uberUSD: { min: 20, max: 30 }, uberFonte: 'estimado' },
-      nota: 'Peçam o cupom book grátis no balcão de informações.' },
+      nota: 'O cupom do balcão custa US$ 10. O grátis é o Savings Passport do Simon ' +
+            'VIP Club, cadastrado antes de viajar.' },
 
     { id: 'icon-park', nome: 'ICON Park', tipo: 'compras',
       lat: 28.4432, lng: -81.4693, verificado: true, fonteCoord: 'wikipedia', endereco: '8375 International Dr',
@@ -3884,6 +3920,50 @@ window.ROTEIRO = {
   /* ---------------------------------------------------------------------------
      DICAS E RECOMENDAÇÕES — conteúdo de leitura, sem interação
      ------------------------------------------------------------------------ */
+  /* ---------------------------------------------------------------------------
+     TELEFONES
+     So entra numero conferido na fonte oficial. O da companhia aerea nao esta
+     aqui de proposito: o certo para o bilhete de voces esta no proprio bilhete,
+     e numero de companhia aerea achado em busca costuma ser de revenda.
+     ------------------------------------------------------------------------ */
+  contatos: [
+    { id: 'tel-emergencia', nome: 'Emergência — polícia, bombeiro, ambulância',
+      numero: '911', critico: true,
+      quando:
+        'De qualquer celular nos EUA, inclusive sem chip americano, sem crédito e ' +
+        'com a tela bloqueada. É o número único para tudo.' },
+
+    { id: 'tel-hotel', nome: 'Travelodge by Wyndham Orlando Lake Buena Vista South',
+      numero: '+1 407-449-2357', critico: true,
+      quando:
+        'Recepção. Guardar mala antes do check-in, avisar que vocês chegam tarde, e o ' +
+        'endereço para onde a companhia aérea entrega a mala extraviada.',
+      verificado: '2026-09-09', fonte: 'wyndhamhotels.com' },
+
+    { id: 'tel-disney-dining', nome: 'Disney — reservas de restaurante',
+      numero: '+1 407-939-3463', critico: true,
+      quando:
+        'Cancelar ou remarcar o The Boathouse (10/11) e o Sanaa (13/11). CANCELEM COM ' +
+        'PELO MENOS 2 HORAS de antecedência: abaixo disso a Disney cobra a taxa de não ' +
+        'comparecimento no cartão. Dá para cancelar pelo My Disney Experience também.',
+      verificado: '2026-09-09', fonte: 'disneyworld.disney.go.com' },
+
+    { id: 'tel-boathouse', nome: 'The Boathouse — direto',
+      numero: '+1 407-939-2628',
+      quando:
+        'O restaurante em si, para atraso de meia hora ou mudança de tamanho da mesa. ' +
+        'Para cancelar de vez, a linha da Disney acima resolve igual.',
+      verificado: '2026-09-09', fonte: 'theboathouseorlando.com' },
+
+    { id: 'tel-aereo', nome: 'Companhia aérea', numero: null, precisaColar: true,
+      quando:
+        'NÃO ESTÁ AQUI DE PROPÓSITO. O número certo para o bilhete de vocês está no ' +
+        'próprio bilhete eletrônico, e o que aparece em busca costuma ser de revendedor. ' +
+        'Antes de embarcar, salvem o PDF do bilhete offline no celular: ele traz o ' +
+        'telefone, o localizador e os números dos voos, que é tudo o que se pede quando ' +
+        'a mala não chega ou o voo é remarcado.' },
+  ],
+
   dicas: [
     {
       id: 'dica-lockers',
@@ -3942,6 +4022,8 @@ window.ROTEIRO = {
         'Chegar "na abertura" não é chegar às 9h. É estar dentro do portão às 9h — o que ' +
         'significa chegar 45 minutos antes, passar segurança, passar catraca, e estar de pé no ' +
         'ponto certo do parque quando soltarem.\n\n' +
+        'São 45 minutos em todo parque com estacionamento na porta. No MAGIC KINGDOM são 75, ' +
+        'e cada dia diz o número dele — sigam o do dia, não este.\n\n' +
         'No Magic Kingdom há um agravante: o Uber deixa vocês no TTC, e ainda falta monotrilho ' +
         'ou barco. Por isso a saída do hotel é às 6h45 para uma abertura às 9h.\n\n' +
         'Onde ficar de pé enquanto espera define o que vocês fazem primeiro. Cada dia diz o ' +

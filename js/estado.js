@@ -21,7 +21,6 @@ window.Estado = (function () {
     feitos:      {},  // blocoId-> { feito, em }
     reservas:    {},  // restId -> { status, confirmacao, em }
     checklist:   {},  // ckId   -> { feito, em }
-    notas:       {},  // diaId  -> { texto, em }
     datasCheck:  {},  // ckId   -> { data, em }
     coordsLocal: {},  // localId-> { lat, lng, em }
   });
@@ -66,7 +65,6 @@ window.Estado = (function () {
   const feito       = (id) => !!(dados.feitos[id] && dados.feitos[id].feito);
   const referencia  = (id) => (dados.referencias[id] ? dados.referencias[id].hora : null);
   const ancora      = (id) => (dados.ancoras[id] ? dados.ancoras[id].ancora : null);
-  const nota        = (id) => (dados.notas[id] ? dados.notas[id].texto : '');
   const reserva     = (id) => dados.reservas[id] || null;
   // Um item pode já vir concluído do arquivo de dados (decisão registrada fora do
   // app). O toque do usuário sempre vence esse padrão.
@@ -97,11 +95,6 @@ window.Estado = (function () {
     else delete dados.ancoras[blocoId];
     salvar();
   }
-  function definirNota(diaId, texto) {
-    if (texto && texto.trim()) dados.notas[diaId] = { texto: texto, em: agora() };
-    else delete dados.notas[diaId];
-    salvar();
-  }
   function definirReserva(restId, campos) {
     dados.reservas[restId] = Object.assign({}, dados.reservas[restId], campos, { em: agora() });
     salvar();
@@ -130,16 +123,21 @@ window.Estado = (function () {
 
   // Merge por campo, vencendo o timestamp mais recente. É isto que evita que o
   // import de um celular apague o trabalho feito no outro.
+  const GRUPOS = ['referencias', 'ancoras', 'feitos', 'reservas', 'checklist',
+                  'datasCheck', 'coordsLocal'];
+
   function importar(texto, modo) {
     const entrando = JSON.parse(texto);
     if (modo === 'substituir') {
-      dados = Object.assign(vazio(), entrando);
+      // So os grupos conhecidos. Export antigo trazia "notas", que nao existe mais.
+      const limpo = vazio();
+      GRUPOS.forEach(function (g) { if (entrando[g]) limpo[g] = entrando[g]; });
+      dados = limpo;
       salvar();
       return { modo: 'substituir', aplicados: -1 };
     }
     let aplicados = 0, ignorados = 0;
-    ['referencias', 'ancoras', 'feitos', 'reservas', 'checklist', 'notas',
-     'datasCheck', 'coordsLocal'].forEach(function (grupo) {
+    GRUPOS.forEach(function (grupo) {
       const origem = entrando[grupo] || {};
       Object.keys(origem).forEach(function (id) {
         const novo = origem[id], atual = dados[grupo][id];
@@ -160,7 +158,6 @@ window.Estado = (function () {
     feito: feito, marcarFeito: marcarFeito,
     referencia: referencia, definirReferencia: definirReferencia,
     ancora: ancora, definirAncora: definirAncora,
-    nota: nota, definirNota: definirNota,
     reserva: reserva, definirReserva: definirReserva,
     checkFeito: checkFeito, marcarChecklist: marcarChecklist,
     dataChecklist: dataChecklist, definirDataChecklist: definirDataChecklist,

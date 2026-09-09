@@ -27,6 +27,7 @@ window.Fase4 = (function () {
 
   const P = {
     pin:    'M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11zM12 8a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z',
+    fone:   'M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z',
     parque: 'M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.2l5.9-.9z',
     hotel:  'M3 21h18M5 21V8l7-5 7 5v13M10 21v-6h4v6',
     compras:'M6 8h12l-1 12H7zM9 8V6a3 3 0 0 1 6 0v2',
@@ -82,11 +83,42 @@ window.Fase4 = (function () {
       c.appendChild(el('div', 'dica-corpo', d.corpo));
       if (d.pesquisa) {
         c.appendChild(el('div', 'dica-fonte',
-          'Verificado na web em ' + d.pesquisa.split('-').reverse().join('/') +
-          '. Não estava no documento original.'));
+          'Verificado na web em ' + d.pesquisa.split('-').reverse().join('/') + '.'));
       }
       det.appendChild(c);
       alvo.appendChild(det);
+    });
+  }
+
+  /* ===========================================================================
+     TELEFONES
+     Link tel: abre o discador do proprio aparelho. Nao e requisicao de rede:
+     funciona offline, que e exatamente quando esta tela importa.
+     ======================================================================== */
+  function pintarContatos() {
+    const alvo = $('#lista-contatos');
+    alvo.innerHTML = '';
+    (R.contatos || []).forEach(function (c) {
+      const cartao = el('div', 'contato' + (c.critico ? ' contato-critico' : ''));
+      const topo = el('div', 'contato-topo');
+      topo.appendChild(el('div', 'contato-nome', c.nome));
+      if (c.numero) {
+        const a = el('a', 'contato-num');
+        a.href = 'tel:' + c.numero.replace(/[^+0-9]/g, '');
+        a.appendChild(svg(P.fone));
+        a.appendChild(document.createTextNode(c.numero));
+        topo.appendChild(a);
+      } else {
+        topo.appendChild(el('span', 'contato-sem', 'no seu bilhete'));
+      }
+      cartao.appendChild(topo);
+      cartao.appendChild(el('div', 'contato-quando', c.quando));
+      if (c.verificado) {
+        cartao.appendChild(el('div', 'contato-fonte',
+          'Conferido em ' + c.verificado.split('-').reverse().join('/') +
+          (c.fonte ? ' · ' + c.fonte : '')));
+      }
+      alvo.appendChild(cartao);
     });
   }
 
@@ -243,7 +275,7 @@ window.Fase4 = (function () {
     return cx;
   }
 
-  function pintarGuia() { pintarDicas(); pintarLocais(); }
+  function pintarGuia() { pintarContatos(); pintarDicas(); pintarLocais(); }
 
   return { pintarGuia: pintarGuia };
 })();
