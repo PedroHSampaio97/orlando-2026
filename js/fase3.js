@@ -248,7 +248,8 @@ window.Fase3 = (function () {
     if (dia.prepararAmanha) alvo.appendChild(blocoPrepararAmanha(dia));
   }
 
-  const LETRA_COR = { A: 'pl-a', B: 'pl-b', C: 'pl-c' };
+  // B2 é variante do B: mesma cor, mesmo estágio de gravidade.
+  const LETRA_COR = { A: 'pl-a', B: 'pl-b', B2: 'pl-b', C: 'pl-c' };
 
   function blocoPlanos(planos) {
     const d = el('details', 'acordeao');

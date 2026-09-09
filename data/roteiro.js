@@ -19,6 +19,12 @@
    3. `verificado:false` = estimativa minha, não do documento. Confira.
 
    4. `pesquisa:'2026-09-08'` = veio de pesquisa web, não do documento.
+
+   5. O sufixo numérico do `id` de um bloco é só IDENTIFICADOR, não horário.
+      Ele guarda a hora de quando o bloco nasceu e NÃO é atualizado quando a
+      hora muda — de propósito: o id é a chave do estado no localStorage, e
+      renomear apagaria o que já foi marcado. Se `b-1011-1745` tem
+      `hora: '17:15'`, está certo. A hora que vale é sempre o campo `hora`.
    ========================================================================== */
 
 window.ROTEIRO = {
@@ -192,7 +198,7 @@ window.ROTEIRO = {
     parqueId: null,
     custoZero: false,
     fechado: true,
-    revisadoEm: '2026-09-08',
+    revisadoEm: '2026-09-09',
 
     // A âncora do dia é o pouso. Atrasou o voo, a tarde inteira desloca junto —
     // menos o jantar, que tem hora marcada.
@@ -243,8 +249,9 @@ window.ROTEIRO = {
         gatilho: 'Vocês saem do Terminal C até as 14h00.',
         passos: [
           'Uber para o hotel, deixar malas, check-in se já liberou.',
-          'Walmart com calma — a lista completa, 45 a 60 min.',
-          'Disney Springs às 17h30, com 1h30 antes do jantar.',
+          'Walmart com calma — a lista completa, 45 min. Fica a 4 min do hotel.',
+          'Comer alguma coisa ao voltar — vocês não comem desde o avião.',
+          'Disney Springs às 17h15, com 1h45 antes do jantar.',
           'The Boathouse 19h. Voltar 21h.',
         ],
       },
@@ -259,9 +266,24 @@ window.ROTEIRO = {
           '8 minutos de carro no total, então cabe mesmo com o dia atrasado.',
           'O resto da lista vai para o dia 12, que é dia de outlet na I-Drive e comporta ' +
           'uma parada de mercado sem custo nenhum de roteiro.',
-          'Disney Springs direto, mesmo que chegue só 18h15. Uma hora lá dentro já dá o ' +
+          'Disney Springs direto, mesmo que chegue só 18h. Uma hora lá dentro já dá o ' +
           'World of Disney e a beira da água.',
           'O jantar das 19h não se mexe. É a única hora marcada do dia.',
+        ],
+      },
+      {
+        letra: 'B2',
+        titulo: 'A bagagem não chegou',
+        gatilho: 'A mala não sai na esteira do Terminal C.',
+        passos: [
+          'Abram o processo ali mesmo, no balcão da companhia dentro da área de ' +
+          'bagagem. Saindo sem protocolo, resolver depois vira telefonema internacional.',
+          'Guardem o número do protocolo e o endereço do hotel por escrito. Eles ' +
+          'entregam no hotel quando a mala aparece, normalmente no voo seguinte.',
+          'O Walmart deixa de ser conveniência e vira necessidade: somem escova de ' +
+          'dentes, desodorante, uma muda de roupa e o que for de uso diário. Fica a ' +
+          '4 minutos do hotel, então dá para voltar amanhã se faltar alguma coisa.',
+          'O resto do dia segue igual. Isso atrasa vocês, não cancela nada.',
         ],
       },
       {
@@ -294,6 +316,15 @@ window.ROTEIRO = {
           'US$ 4; aqui sai a US$ 0,25. Capa de chuva custa US$ 10 lá dentro e US$ 1 aqui. ' +
           'Marcados como essenciais são os que, se faltarem, vocês vão comprar caro depois.',
         itens: [
+          { texto: 'Adaptador de tomada — 2 unidades', essencial: true,
+            motivo: 'ACRÉSCIMO. O plugue brasileiro não entra na tomada americana. A ' +
+                    'voltagem não é problema (carregador moderno é bivolt), o formato ' +
+                    'é. Sem isso o item \u201ccarregar celular e power bank a noite ' +
+                    'inteira\u201d da lista de amanhã não acontece, e o dia 11 começa ' +
+                    'com bateria pela metade. Se trouxeram do Brasil, ignorem.' },
+          { texto: 'Algo para comer agora', essencial: true,
+            motivo: 'ACRÉSCIMO. São seis horas entre o pouso e o jantar. Peguem algo ' +
+                    'para comer na volta ao hotel, não só para os dias de parque.' },
           { texto: 'Água — caixa de 24 garrafas', essencial: true,
             motivo: 'No documento. Levem 2 garrafas por pessoa em todo dia de parque.' },
           { texto: 'Protetor solar FPS 50 + bastão para o rosto', essencial: true,
@@ -513,6 +544,17 @@ window.ROTEIRO = {
           'Com o Walmart certo, essa ida e volta custa ~US$ 16 no total e come 8 minutos ' +
           'de carro. Sobra meia hora a mais no Disney Springs.',
         localId: 'hotel-travelodge', acesso: [] },
+
+      { id: 'b-1011-1625', hora: '16:25', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Comer alguma coisa',
+        descricao: 'Do que acabou de ser comprado. 6h desde o pouso',
+        contexto:
+          'Vocês pousam 12h35 e só sentam para jantar às 19h. Descontando a refeição do ' +
+          'avião, são seis a oito horas sem comer, num dia em que já estão sem dormir.\n\n' +
+          'Não é refeição — é não chegar no Disney Springs irritado às 17h15 com o jantar ' +
+          'ainda a duas horas de distância. Barrinha, fruta, o que for, do que acabou de ' +
+          'sair da sacola. Comam enquanto guardam as compras.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 20 },
 
       { id: 'b-1011-1710', hora: '16:50', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Sair para o Disney Springs',
