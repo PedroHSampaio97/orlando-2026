@@ -39,6 +39,7 @@ Este dia perdeu a festa de Natal do Magic Kingdom. Reorganizei a geografia para 
 |---|---|---|
 | **8h30** | **Café da manhã no hotel** | Incluso. Aproveitem — nos dias de parque vocês não conseguem |
 | **10h00** | **Orlando International Premium Outlets** — 4951 International Dr | ~25 min. Peguem o cupom book grátis no balcão de informações |
+| | ↳ **Disney’s Character Warehouse**, dentro do mesmo outlet | Outlet oficial da Disney. Sobra de estoque e item descontinuado das lojas dos parques. Abre 10h de seg a sáb |
 | **13h00** | **Almoço no outlet ou no Sweet Tomatoes da I-Drive** | |
 | **14h30** | **VAZIO PROPOSITAL** — voltar ao hotel, piscina, dormir | Vocês vêm de Magic Kingdom até 21h no dia anterior |
 | **17h30** | **ICON Park** — 8375 International Dr | Entrada da área é livre; cada atração é paga |

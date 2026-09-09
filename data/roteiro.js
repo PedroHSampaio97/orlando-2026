@@ -779,6 +779,20 @@ window.ROTEIRO = {
           'com o passaporte.',
         endereco: '4951 International Dr', localId: 'premium-outlets', acesso: [] },
 
+      { id: 'b-1211-1005', hora: '10:05', ancora: 'fixo', tipo: 'compras',
+        titulo: 'Disney\u2019s Character Warehouse',
+        descricao: 'Dentro do mesmo outlet. Abre 10h de segunda a sábado',
+        contexto:
+          'O outlet oficial da Disney. Vende sobra de estoque e item descontinuado das ' +
+          'lojas dos parques — o que não vendeu na temporada passada chega aqui por uma ' +
+          'fração do preço de dentro do parque.\n\n' +
+          'Está no mesmo endereço onde vocês já vão estar, então custa só a caminhada. ' +
+          'O estoque é imprevisível por definição: gira conforme o que sobrou, e duas ' +
+          'visitas nunca acham a mesma coisa. Não dá para contar com item específico.\n\n' +
+          '12/11 é quinta, então abre 10h — a mesma hora em que vocês chegam ao outlet.',
+        endereco: '4951 International Dr', localId: 'premium-outlets', acesso: [],
+        pesquisa: '2026-09-09' },
+
       { id: 'b-1211-1300', hora: '13:00', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Almoço no outlet ou no Sweet Tomatoes da I-Drive',
         descricao: '', acesso: [] },
