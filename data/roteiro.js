@@ -1057,49 +1057,209 @@ window.ROTEIRO = {
   },
 
   /* ===== 12/11 · QUINTA · OUTLET E ICON PARK ============================== */
+  /* DIA FECHADO — revisado em 10/09/2026. Cinco correções ao documento;
+     duas derrubaram blocos inteiros (Sweet Tomatoes e a roda-gigante).       */
   {
     id: 'd-2026-11-12',
     data: '2026-11-12',
     diaSemana: 'quinta',
     emoji: '🛍️',
     titulo: 'Outlet e ICON Park',
-    subtitulo: 'Dia leve no eixo da International Drive',
+    subtitulo: 'O dia mais leve da primeira semana',
     tipo: 'compras',
     operadora: null,
     parqueId: null,
     custoZero: false,
+    fechado: true,
+    revisadoEm: '2026-09-10',
     referencia: null,
+
     resumo:
-      'Este dia perdeu a festa de Natal do Magic Kingdom. A geografia foi reorganizada para o ' +
-      'dia inteiro rodar no eixo da International Drive, economizando Uber. Vocês vêm de ' +
-      'Magic Kingdom até 21h no dia anterior — o bloco vazio da tarde é obrigatório.',
-    avisos: [],
-    alternativa: {
-      titulo: 'Mais barato e mais Disney: resort hopping',
-      texto:
-        'Em vez do ICON Park, os hotéis Disney são abertos ao público e gratuitos. Grand ' +
-        'Floridian (piano ao vivo no saguão), Polynesian (tiki bar) e Wilderness Lodge ' +
-        '(lareira gigante) valem a noite. Uber entre eles, jantar em um deles. É mais ' +
-        'tranquilo e combina mais com o espírito da viagem de vocês.',
+      'Este dia perdeu a festa de Natal do Magic Kingdom, e a geografia foi reorganizada ' +
+      'para tudo rodar no eixo da International Drive. Ele é leve de propósito: vocês vêm ' +
+      'do Magic Kingdom até 21h30 e entram numa sequência pesada a partir de amanhã. O ' +
+      'bloco vazio da tarde não é folga, é manutenção.',
+
+    avisos: [
+      'Não coloquem alarme. É o único dia da primeira semana em que nada depende de vocês ' +
+      'acordarem cedo.',
+    ],
+
+    notas: [
+      { tipo: 'atencao', texto:
+        'A RODA-GIGANTE PODE NÃO ESTAR FUNCIONANDO. O site oficial dizia, em 09/09, que ' +
+        'The Orlando Eye está fechada para manutenção anual, sem data de reabertura, e ela ' +
+        'já aparecia fechada desde o fim de junho. A noite foi montada sobre o que está ' +
+        'comprovadamente aberto — se ela voltar, entra como bônus. É o plano B.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'atencao', texto:
+        'O SWEET TOMATOES NÃO EXISTE. O documento oferece almoço lá; a rede inteira fechou ' +
+        'em maio de 2020 e entrou em liquidação. A marca voltou em 2026, mas em Tucson e ' +
+        'Fort Myers, não na International Drive. O almoço fica no próprio outlet.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'atencao', texto:
+        'O CUPOM BOOK NÃO É GRÁTIS NO BALCÃO. O documento manda pegar de graça na ' +
+        'informação; o livro físico custa US$ 10. O grátis existe por outro caminho: ' +
+        'cadastro no Simon VIP Club em premiumoutlets.com/vip ANTES de viajar, e o Savings ' +
+        'Passport fica no celular. Já está no checklist.', pesquisa: '2026-09-10' },
+
+      { tipo: 'atencao', texto:
+        'NÃO DÁ PARA VER FOGOS ÀS 18H. O documento justifica a roda dizendo que dá para ver ' +
+        'os fogos dos parques ao longe. Em novembro os fogos do Magic Kingdom são às 20h — ' +
+        'e 12/11 é justamente noite de Christmas Party, quando os da festa são ainda mais ' +
+        'tarde. Às 18h não há fogo nenhum em lugar nenhum.', pesquisa: '2026-09-10' },
+    ],
+
+    /* --------------------------------------------------------------------- */
+    planos: [
+      {
+        letra: 'A',
+        titulo: 'Dia normal',
+        gatilho: 'Vocês acordaram bem e a roda continua fechada.',
+        passos: [
+          'Outlet de manhã com calma, começando pelo Character Warehouse, que abre 10h.',
+          'Almoço no próprio outlet, sem sair do lugar.',
+          'Tarde inteira no hotel. Não preencham esse bloco.',
+          'ICON Park a partir das 17h30, pegando o pôr do sol na promenade.',
+          'Museum of Illusions, e o Madame Tussauds só se estiverem com pique — é ele que ' +
+          'fecha o combo de duas atrações.',
+          'Jantar no Yard House ou no Tin Roof, os dois dentro do próprio ICON Park.',
+        ],
+      },
+      {
+        letra: 'B',
+        titulo: 'A roda reabriu',
+        gatilho: 'Vocês conferem em outubro e ela voltou a operar.',
+        passos: [
+          'A roda passa a ser a atração das 18h e vale mais que qualquer outra do ICON Park.',
+          'O Museum of Illusions desloca para as 19h e o Madame Tussauds cai.',
+          'Subam no fim de tarde, mas sem esperar fogos: em novembro eles só começam às 20h.',
+          'Confiram o preço na hora — a roda estava fora do ar quando este roteiro foi feito ' +
+          'e o valor de US$ 30 vem do documento, não de fonte confirmada.',
+        ],
+      },
+      {
+        letra: 'C',
+        titulo: 'Vocês acordaram destruídos',
+        gatilho: 'O dia 11 terminou 21h30 e o corpo não colaborou.',
+        passos: [
+          'Cortem o ICON Park inteiro sem culpa. Outlet de manhã, hotel à tarde e à noite, ' +
+          'jantar em qualquer coisa na 192.',
+          'Este é o ÚNICO dia da viagem em que nada é insubstituível. Não há ingresso, não ' +
+          'há reserva, não há hora marcada.',
+          'O que vocês estão protegendo é o dia 13, que sai às 7h30 e abre a sequência mais ' +
+          'pesada da viagem: Animal Kingdom, Islands, SeaWorld, Epic e Busch Gardens.',
+        ],
+      },
+    ],
+
+    /* --------------------------------------------------------------------- */
+    naoPerca: [
+      { nome: 'Disney’s Character Warehouse', quando: 'hoje', custo: 'entrada grátis',
+        motivo: 'O outlet oficial da Disney: sobra de estoque e item descontinuado das lojas ' +
+                'dos parques por uma fração do preço de dentro. Está no mesmo endereço onde ' +
+                'vocês já vão estar, então custa só a caminhada. Abre 10h de segunda a ' +
+                'sábado — a mesma hora em que vocês chegam.' },
+
+      { nome: 'Pôr do sol na promenade do ICON Park', quando: 'hoje', custo: 'grátis',
+        motivo: 'O sol se põe às 17h31 e vocês chegam 17h30. A área do ICON Park é aberta, ' +
+                'sem ingresso e sem catraca — só as atrações são pagas. É o melhor momento ' +
+                'do lugar e não custa nada.' },
+
+      { nome: 'Museum of Illusions', quando: 'hoje', custo: 'US$ 26,99 por pessoa',
+        motivo: 'Salas de ilusão de óptica, quarto invertido, sala de Ames. É participativo ' +
+                'e rende foto, que é exatamente o que serve num dia de descanso. Cerca de ' +
+                'uma hora.', pesquisa: '2026-09-10' },
+
+      { nome: 'Madame Tussauds', quando: 'decidir', custo: 'US$ 33,99 por pessoa',
+        motivo: 'Museu de cera com mais de 90 figuras. É o que fecha o COMBO DE DUAS ' +
+                'ATRAÇÕES, a partir de US$ 39 por pessoa — contra US$ 61 comprando as duas ' +
+                'separadas, ou seja ~US$ 44 de economia no casal. Se vocês já sabem que vão ' +
+                'fazer duas, comprem o combo de saída.', pesquisa: '2026-09-10' },
+
+      { nome: 'SEA LIFE Orlando Aquarium', quando: 'decidir', custo: 'US$ 33,99 por pessoa',
+        motivo: 'Terceira opção, se quiserem o combo de três atrações a partir de US$ 49 por ' +
+                'pessoa. Túnel de acrílico de 360°. Vocês já veem tanque de tubarão no ' +
+                'SeaWorld no dia 22 — decidam se vale repetir o tema.', pesquisa: '2026-09-10' },
+
+      { nome: 'The Wheel / Orlando Eye', quando: 'fechada', custo: 'a confirmar',
+        motivo: 'Fechada para manutenção anual desde o fim de junho, sem data de reabertura ' +
+                'anunciada até 09/09. Era a âncora da noite no documento. Se voltar, é o ' +
+                'plano B e desloca tudo. Conferir em outubro.', pesquisa: '2026-09-10' },
+
+      { nome: 'Resort hopping nos hotéis Disney', quando: 'descartado', custo: '—',
+        motivo: 'DESCARTADO em 10/09. O documento oferece como alternativa gratuita e aberta ' +
+                'ao público. Não é mais: desde junho de 2026 os resorts exigem reserva de ' +
+                'hotel ou de restaurante para o carro do rideshare passar pela guarita, e o ' +
+                'transporte saindo do Disney Springs também passou a checar. Seria possível ' +
+                'com um jantar reservado num resort do monotrilho, mas isso exigiria reserva ' +
+                'com 60 dias, ou seja em 13/09.', pesquisa: '2026-09-10' },
+    ],
+
+    /* --------------------------------------------------------------------- */
+    prepararAmanha: {
+      paraODia: '2026-11-13',
+      titulo: 'Animal Kingdom · alarme 6h30, saída 7h30',
+      aviso:
+        'Acabou a parte leve. O dia 13 abre a sequência mais pesada da viagem e é o ' +
+        'primeiro dia com Single Pass comprado longe de casa — vale conferir tudo hoje.',
+      itens: [
+        { texto: 'Conferir se o Single Pass do Flight of Passage está no app', critico: true,
+          motivo: 'Foi comprado em 10/11 às 7h ET, durante a conexão em Bogotá, no meio de ' +
+                  'uma viagem de 24 horas. É a compra mais frágil da viagem inteira. Se ' +
+                  'falhou, hoje ainda dá para replanejar o dia 13; amanhã às 11h20, na ' +
+                  'frente da atração, não dá.' },
+
+        { texto: 'Conferir o horário de abertura do Animal Kingdom e ajustar a referência',
+          critico: true,
+          motivo: 'O dia 13 assume abertura às 9h. Se for outro, mudem a referência na tela ' +
+                  'do dia e tudo o que é ancorado desloca junto, inclusive a saída às 7h30. ' +
+                  'O Lion King, o Zootopia e o anoitecer em Pandora não deslocam.' },
+
+        { texto: 'Reserva do Sanaa: número de confirmação à mão', critico: false,
+          motivo: 'Jantar às 19h45, e o Animal Kingdom Lodge é OUTRO endereço, não é dentro ' +
+                  'do parque. Deixem o número acessível no celular hoje, não procurando ' +
+                  'e-mail amanhã com o Uber esperando.' },
+
+        { texto: 'Alarme para 6h30 nos dois celulares', critico: true,
+          motivo: 'Saída às 7h30. Depois de um dia sem alarme, o corpo não ajuda.' },
+
+        { texto: 'Mochila remontada e celular carregando', critico: true,
+          motivo: 'Duas garrafas de água, barrinhas, protetor solar, power bank e cabo. ' +
+                  'Mesma rotina de toda véspera de parque a partir de agora.' },
+
+        { texto: 'Guardar as compras do outlet',
+          motivo: 'Vocês voltam com sacola hoje. Amanhã a mochila precisa estar vazia para ' +
+                  'o que interessa.' },
+      ],
     },
+
+    /* --------------------------------------------------------------------- */
     blocos: [
       { id: 'b-1211-0830', hora: '08:30', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Café da manhã no hotel',
-        descricao: 'Incluso. Aproveitem — nos dias de parque vocês não conseguem',
-        acesso: [] },
+        descricao: 'Incluso. Sem alarme',
+        contexto:
+          'É o único dia da primeira semana em que dá tempo de tomar o café do hotel com ' +
+          'calma — nos dias de parque vocês saem antes de ele abrir. Aproveitem, e sem ' +
+          'despertador: nada hoje depende de acordar cedo.',
+        localId: 'hotel-travelodge', acesso: [] },
 
       { id: 'b-1211-1000', hora: '10:00', ancora: 'fixo', tipo: 'compras',
         titulo: 'Orlando International Premium Outlets',
-        descricao: '~25 min. Peguem o cupom book grátis no balcão de informações',
+        descricao: '~25 min do hotel. Quinta, 10h às 21h',
         contexto:
-          'Outlet a céu aberto com cerca de 180 lojas. O cupom book é gratuito mas não é ' +
-          'oferecido — tem que pedir no balcão de informações, e costuma ter descontos ' +
-          'adicionais de 10 a 25% em marcas grandes. Turistas estrangeiros conseguem pedindo ' +
-          'com o passaporte.',
-        endereco: '4951 International Dr', localId: 'premium-outlets', acesso: [] },
+          'Outlet a céu aberto com cerca de 180 lojas.\n\n' +
+          'SOBRE O CUPOM: o documento manda pegar o livro grátis no balcão, mas ele custa ' +
+          'US$ 10. O caminho gratuito é o cadastro no Simon VIP Club, feito antes de viajar ' +
+          '— aí o Savings Passport fica no celular de vocês. Está no checklist.',
+        endereco: '4951 International Dr', localId: 'premium-outlets', acesso: [],
+        pesquisa: '2026-09-10' },
 
       { id: 'b-1211-1005', hora: '10:05', ancora: 'fixo', tipo: 'compras',
-        titulo: 'Disney\u2019s Character Warehouse',
+        titulo: 'Disney’s Character Warehouse',
         descricao: 'Dentro do mesmo outlet. Abre 10h de segunda a sábado',
         contexto:
           'O outlet oficial da Disney. Vende sobra de estoque e item descontinuado das ' +
@@ -1113,45 +1273,75 @@ window.ROTEIRO = {
         pesquisa: '2026-09-09' },
 
       { id: 'b-1211-1300', hora: '13:00', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Almoço no outlet ou no Sweet Tomatoes da I-Drive',
-        descricao: '', acesso: [] },
+        titulo: 'Almoço no outlet',
+        descricao: 'Sem sair do lugar',
+        contexto:
+          'O documento oferecia como alternativa o Sweet Tomatoes da I-Drive. Ele não ' +
+          'existe: a rede inteira fechou em maio de 2020 e entrou em liquidação. Voltou em ' +
+          '2026, mas em Tucson e Fort Myers.\n\n' +
+          'Comam no próprio outlet mesmo. Sair para comer custa dois Ubers e uma hora, num ' +
+          'dia cujo objetivo é descansar.',
+        localId: 'premium-outlets', acesso: [], pesquisa: '2026-09-10' },
 
       { id: 'b-1211-1430', hora: '14:30', ancora: 'fixo', tipo: 'vazio',
         titulo: 'VAZIO PROPOSITAL',
         descricao: 'Voltar ao hotel, piscina, dormir',
         contexto:
-          'Não preencham. Vocês vêm de um Magic Kingdom que terminou às 21h e ainda têm 14 ' +
-          'dias pela frente, incluindo Busch Gardens com 3 horas de carro.',
-        acesso: [] },
+          'Não preencham. Vocês vêm de um Magic Kingdom que terminou 21h30 e amanhã começa ' +
+          'a sequência mais pesada da viagem: Animal Kingdom, Islands of Adventure, ' +
+          'SeaWorld, Epic Universe e Busch Gardens com três horas de carro.\n\n' +
+          'Este bloco não é folga. É o que faz o resto funcionar.',
+        localId: 'hotel-travelodge', acesso: [] },
 
       { id: 'b-1211-1730', hora: '17:30', ancora: 'fixo', tipo: 'livre',
-        titulo: 'ICON Park',
-        descricao: 'Entrada da área é livre; cada atração é paga',
+        titulo: 'ICON Park — promenade ao pôr do sol',
+        descricao: 'Área aberta, sem ingresso. Pôr do sol às 17h31',
         contexto:
-          'Complexo aberto na I-Drive, sem ingresso de entrada. Vocês só pagam o que usarem. ' +
-          'Tem restaurantes, bares e algumas atrações avulsas.',
+          'Complexo aberto na I-Drive: entrar não custa nada, só as atrações são pagas. ' +
+          'Vocês chegam exatamente na hora do pôr do sol, que é o melhor momento do lugar.\n\n' +
+          'Se estiverem cansados, este bloco sozinho já justifica a saída — dá para andar, ' +
+          'jantar e voltar sem pagar atração nenhuma.',
         endereco: '8375 International Dr', localId: 'icon-park', acesso: [] },
 
       { id: 'b-1211-1800', hora: '18:00', ancora: 'fixo', tipo: 'atracao',
-        titulo: 'The Wheel',
-        descricao:
-          'Roda-gigante de 122 m. Subam no fim de tarde: dá para ver os fogos dos parques ao ' +
-          'longe. ~US$ 30',
+        titulo: 'Museum of Illusions',
+        descricao: 'US$ 26,99 por pessoa. Cerca de 1h',
         contexto:
-          'Cabines fechadas e climatizadas, uma volta de ~18 minutos. O horário do documento é ' +
-          'bem escolhido: pega o pôr do sol e, se der sorte com o timing, os fogos do Epcot e ' +
-          'do Magic Kingdom ao longe.',
-        acesso: [], duracaoMin: 18 },
+          'Salas de ilusão de óptica, quarto invertido, sala de Ames. É participativo e ' +
+          'rende foto — exatamente o que serve num dia de descanso, sem fila e sem correr.\n\n' +
+          'Se forem fazer também o Madame Tussauds, comprem o COMBO DE DUAS ATRAÇÕES na ' +
+          'entrada: a partir de US$ 39 por pessoa, contra US$ 61 separadas.',
+        localId: 'icon-park', acesso: [], duracaoMin: 60, pesquisa: '2026-09-10' },
 
-      { id: 'b-1211-1900', hora: '19:00', ancora: 'fixo', tipo: 'atracao',
-        titulo: 'Museum of Illusions ou Madame Tussauds',
-        descricao: 'Opcionais. Só se estiverem com pique',
-        acesso: [], opcional: true },
+      { id: 'b-1211-1915', hora: '19:15', ancora: 'fixo', tipo: 'atracao',
+        titulo: 'Madame Tussauds',
+        descricao: 'US$ 33,99 avulso. Opcional — é o que fecha o combo',
+        contexto:
+          'Museu de cera com mais de 90 figuras. Só façam se estiverem com pique: o valor ' +
+          'do dia está no descanso, não em encaixar mais uma atração.\n\n' +
+          'Mas se fizerem as duas, o combo derruba o preço de US$ 61 para ~US$ 39 por ' +
+          'pessoa — cerca de US$ 44 de economia no casal.',
+        localId: 'icon-park', acesso: [], opcional: true, duracaoMin: 60,
+        pesquisa: '2026-09-10' },
 
       { id: 'b-1211-2000', hora: '20:00', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar na I-Drive',
-        descricao: 'Yard House, Tin Roof (música ao vivo), Cooper’s Hawk',
-        acesso: [] },
+        titulo: 'Jantar — Yard House ou Tin Roof',
+        descricao: 'Os dois ficam DENTRO do ICON Park',
+        contexto:
+          'Yard House tem 140 torneiras de chope e cardápio grande. Tin Roof tem música ao ' +
+          'vivo todas as noites.\n\n' +
+          'A vantagem dos dois é a mesma: ficam dentro do próprio ICON Park, então vocês ' +
+          'saem da atração e sentam. O Cooper’s Hawk, que o documento cita junto, é em ' +
+          'outro ponto da I-Drive e obrigaria mais um Uber no fim da noite.',
+        localId: 'icon-park', acesso: [], pesquisa: '2026-09-10' },
+
+      { id: 'b-1211-2130', hora: '21:30', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voltar ao hotel',
+        descricao: 'Amanhã sai às 7h30',
+        contexto:
+          'Não estiquem. O dia 13 é Animal Kingdom com saída às 7h30 e abre a sequência ' +
+          'pesada da viagem.',
+        localId: 'hotel-travelodge', acesso: [] },
     ],
     renuncias: null,
     ficha: null,
@@ -3465,6 +3655,19 @@ window.ROTEIRO = {
         'NOS DOIS CASOS: ligar o roaming de dados nos ajustes do aparelho, além de ativar ' +
         'no app da operadora. E confirmar que a Colômbia está coberta — se estiver, a ' +
         'compra do Single Pass às 7h ET do dia 10 deixa de depender do wifi de Bogotá.',
+      restauranteIds: [] },
+
+    { id: 'ck-vip-outlet', dataAlvo: '2026-11-05', dataEstimada: true,
+      motivoData: 'Cadastro leva minutos; basta estar feito antes de embarcar',
+      hora: null, fuso: null, janelaReserva: false, critico: false,
+      texto: 'Cadastrar no Simon VIP Club para o cupom do outlet sair de graça',
+      nota:
+        'O documento manda pegar o cupom book grátis no balcão de informações do ' +
+        'outlet. Ele custa US$ 10 — grátis só para residentes da Flórida.\n\n' +
+        'O caminho gratuito é outro: cadastro no Simon VIP Club em ' +
+        'premiumoutlets.com/vip, e o Savings Passport fica no celular. Precisa ser ' +
+        'feito ANTES de viajar, porque no balcão só oferecem o pago.\n\n' +
+        'Vale para o dia 12, no Orlando International Premium Outlets.',
       restauranteIds: [] },
 
     { id: 'ck-natal-datas', dataAlvo: '2026-10-15', dataEstimada: true, motivoData: 'As datas dos eventos saem com antecedência', hora: null, fuso: null,
