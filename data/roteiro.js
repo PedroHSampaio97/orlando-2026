@@ -1292,12 +1292,22 @@ window.ROTEIRO = {
 
       { id: 'b-1311-1945', hora: '19:45', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Sanaa',
-        descricao: 'Animal Kingdom Lodge. Peçam mesa na janela: girafas e zebras',
+        descricao: 'Animal Kingdom Lodge. Vão pela comida, não pela janela',
         contexto:
-          'Fica no Animal Kingdom Lodge, que é outro endereço — não é dentro do parque. Cozinha ' +
-          'indiana com influência africana, e o prato mais pedido é o Bread Service. As janelas ' +
-          'dão para a savana do hotel, com animais soltos. Reserva pelo My Disney Experience, ' +
-          'janela abre 14/09. HORÁRIO FIXO de reserva.',
+          'Fica no Animal Kingdom Lodge, que é outro endereço — não é dentro do parque. ' +
+          'Cozinha indiana com influência africana; o nome quer dizer \u201cobra de arte\u201d ' +
+          'em suaíli.\n\n' +
+          'NÃO PEÇAM MESA NA JANELA. O pôr do sol em 13/11 é por volta das 17h30 e vocês ' +
+          'chegam às 19h45 — está escuro há mais de duas horas. A savana tem iluminação ' +
+          'fraca e, de dentro, o vidro vira espelho. A promessa de girafas e zebras na ' +
+          'janela é real, mas só de dia.\n\n' +
+          'O que sustenta a escolha é a comida. Peçam o BREAD SERVICE: cinco pães ' +
+          'indianos com nove acompanhamentos, ~US$ 23, enorme e feito para dividir. É o ' +
+          'prato mais elogiado do Walt Disney World inteiro e não existe igual em ' +
+          'nenhum outro restaurante daqui.\n\n' +
+          'Nos pratos principais: curry de frutos do mar goês, butter chicken, carne ' +
+          'braseada ou vindaloo de porco, entre US$ 15 e 35. Reserva pelo My Disney ' +
+          'Experience, janela abre 14/09. HORÁRIO FIXO de reserva.',
         restauranteId: 'r-sanaa', localId: 'ak-lodge', acesso: ['reserva'] },
     ],
     ficha: {
@@ -3179,7 +3189,10 @@ window.ROTEIRO = {
       refeicao: 'jantar', local: 'Animal Kingdom Lodge', alternativas: [],
       precisaReserva: true, janelaAbre: '2026-09-14', janelaHora: '06:00 ET',
       canal: 'My Disney Experience', blocoId: 'b-1311-1945',
-      nota: 'Peçam mesa na janela: girafas e zebras. Não é dentro do parque.' },
+      nota: 'Vão pela comida, não pela janela: às 19h45 de novembro está escuro há mais ' +
+            'de duas horas e não se vê a savana. Peçam o Bread Service, cinco pães com ' +
+            'nove acompanhamentos (~US$ 23), que é o motivo real de vir aqui. Fica no ' +
+            'Animal Kingdom Lodge, não dentro do parque.' },
 
     { id: 'r-columbia', nome: 'Columbia Restaurant', data: '2026-11-14', hora: '12:30',
       refeicao: 'almoco', local: 'Celebration · Market Street', alternativas: [],
@@ -3300,6 +3313,13 @@ window.ROTEIRO = {
     { id: 'ck-1409', grupo: 'prazo-curto', dataAlvo: '2026-09-14', hora: '06:00', fuso: 'ET',
       janelaReserva: true, critico: false,
       texto: 'Reservar Sanaa para o jantar de 13/11 (janela de 60 dias)',
+      nota:
+        'O sistema abre entre 5h45 e 6h ET — entrem 5h45, não 6h em ponto. O Sanaa é ' +
+        'considerado fácil a moderado de conseguir, então não é caso de pânico. Se o ' +
+        'app da Disney não mostrar mesa, tentem o OpenTable, que às vezes tem o que o ' +
+        'app não mostra.\n\n' +
+        'Reservem 19h45 e NÃO peçam mesa na janela: a essa hora está escuro e não se vê ' +
+        'a savana. A escolha é pela comida.',
       restauranteIds: ['r-sanaa'] },
 
     { id: 'ck-1609', grupo: 'prazo-curto', dataAlvo: '2026-09-16', hora: '06:00', fuso: 'ET',
