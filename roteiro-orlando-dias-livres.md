@@ -17,15 +17,17 @@ Os blocos marcados como **VAZIO PROPOSITAL** não são falha de planejamento. Re
 
 | Hora | O quê | Notas |
 |---|---|---|
-| **~12h** | Pouso no MCO | Imigração leva de 40 min a 2h |
-| **14h30** | Uber para o hotel · check-in | ~30 min, US$ 35–45 |
-| **15h30** | **Walmart Supercenter** — 1471 E Osceola Pkwy | Água (caixa de 24), café, protetor solar, ibuprofeno, barrinhas e frutas para os dias de rope drop |
-| **17h30** | **Disney Springs** | Uber, ~20 min |
+| **12h35** | Pouso no MCO — Terminal C | Imigração leva de 40 min a 2h |
+| **14h15** | Confirmar a internet e chamar o Uber | Rideshare Pickup no nível 6. Só chamem com as malas na mão |
+| **14h45** | Uber para o hotel · check-in | ~30 min, US$ 35–45 |
+| **15h30** | **Walmart Supercenter** — 3250 Vineland Rd | 4 min do hotel. Água (caixa de 24), café, protetor solar, ibuprofeno, barrinhas e frutas para os dias de rope drop |
+| **16h20** | Voltar ao hotel e guardar as compras | Caixa de 24 garrafas não atravessa o Disney Springs |
+| **16h50** | **Disney Springs** | Uber, ~20 min |
 | | The Landing → Marketplace → Town Center | World of Disney é a maior loja Disney do mundo |
 | **19h00** | **Jantar — The Boathouse** (reserva) | |
 | **21h00** | Voltar | |
 
-**Chip/eSIM:** ativem ainda no aeroporto, com o wifi do MCO, antes de precisar do Uber.
+**Internet:** as duas linhas têm roaming incluso — Passaporte Américas na Claro, Travel na Vivo. O celular conecta sozinho ao pousar; confiram antes de descer para o nível 6 e, se não conectar, o wifi do MCO resolve enquanto vocês ligam o roaming nos ajustes.
 
 **Ainda sem decoração de Natal** — ela começa em 13/11. Vocês voltam ao Disney Springs no dia 21 justamente para ver isso.
 
@@ -38,16 +40,16 @@ Este dia perdeu a festa de Natal do Magic Kingdom. Reorganizei a geografia para 
 | Hora | O quê | Notas |
 |---|---|---|
 | **8h30** | **Café da manhã no hotel** | Incluso. Aproveitem — nos dias de parque vocês não conseguem |
-| **10h00** | **Orlando International Premium Outlets** — 4951 International Dr | ~25 min. Peguem o cupom book grátis no balcão de informações |
+| **10h00** | **Orlando International Premium Outlets** — 4951 International Dr | ~25 min. O cupom do balcão custa US$ 10; o gratuito é o Savings Passport do Simon VIP Club, cadastrado antes de viajar |
 | | ↳ **Disney’s Character Warehouse**, dentro do mesmo outlet | Outlet oficial da Disney. Sobra de estoque e item descontinuado das lojas dos parques. Abre 10h de seg a sáb |
-| **13h00** | **Almoço no outlet ou no Sweet Tomatoes da I-Drive** | |
+| **13h00** | **Almoço no próprio outlet** | Sair da I-Drive para comer custa dois Ubers e uma hora |
 | **14h30** | **VAZIO PROPOSITAL** — voltar ao hotel, piscina, dormir | Vocês vêm de Magic Kingdom até 21h no dia anterior |
 | **17h30** | **ICON Park** — 8375 International Dr | Entrada da área é livre; cada atração é paga |
-| **18h00** | **The Wheel** — roda-gigante de 122 m | Subam no fim de tarde: dá para ver os fogos dos parques ao longe. ~US$ 30 |
+| **18h00** | **Museum of Illusions** — US$ 26,99 | A roda-gigante entrou em manutenção e não tem data de volta. Combo de duas atrações a partir de US$ 39/pessoa |
 | **19h00** | **Museum of Illusions** ou **Madame Tussauds** | Opcionais. Só se estiverem com pique |
 | **20h00** | **Jantar na I-Drive** | *Yard House*, *Tin Roof* (música ao vivo), *Cooper's Hawk* |
 
-**Alternativa mais barata e mais Disney, se preferirem:** em vez do ICON Park, façam **resort hopping**. Os hotéis Disney são abertos ao público e gratuitos. Grand Floridian (piano ao vivo no saguão), Polynesian (tiki bar) e Wilderness Lodge (lareira gigante) valem a noite. Uber entre eles, jantar em um deles. É mais tranquilo e combina mais com o espírito da viagem de vocês.
+**Sobre resort hopping:** desde junho de 2026 os hotéis Disney deixaram de ser livremente visitáveis. A guarita exige reserva de hotel ou de restaurante para o carro do rideshare entrar, e o transporte que sai do Disney Springs também checa. Ainda é possível com um jantar reservado num resort do monotrilho — Grand Floridian, Polynesian ou Contemporary, que se ligam entre si —, mas a reserva sai com 60 dias de antecedência.
 
 ---
 
@@ -179,10 +181,10 @@ Thanksgiving. Um dos dias mais tranquilos do ano para voar — o caos é na ter�
 
 | Dia | Estava | Ficou |
 |---|---|---|
-| 12/11 | outlet, noite vazia após o cancelamento da festa | outlet na I-Drive + ICON Park à noite (ou resort hopping) |
+| 12/11 | outlet, noite vazia após o cancelamento da festa | outlet na I-Drive + ICON Park à noite |
 | 14/11 | Celebration + CityWalk | manhã livre proposital + Celebration + CityWalk + Islands |
 | 18/11 | compras + NBA | compras + Lake Eola no pôr do sol + jantar no centro + NBA |
 | 20/11 | Old Town à tarde | aerobarco pela manhã + lago + carro + Old Town |
 | 21/11 | Winter Garden, tarde vazia | Winter Garden + Disney Springs decorado à noite |
 
-**Custos novos a somar no orçamento:** aerobarco (~US$ 32/pessoa), The Wheel do ICON Park (~US$ 30/pessoa), aluguel de bicicleta em Winter Garden (opcional). Lake Eola, Kissimmee Lakefront, Old Town, Christmas Tree Stroll e resort hopping são todos gratuitos.
+**Custos novos a somar no orçamento:** aerobarco (~US$ 32/pessoa), atrações do ICON Park (combo de duas a partir de US$ 39/pessoa), aluguel de bicicleta em Winter Garden (opcional). Lake Eola, Kissimmee Lakefront, Old Town e Christmas Tree Stroll são gratuitos.

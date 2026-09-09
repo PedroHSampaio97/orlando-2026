@@ -5,7 +5,7 @@
 **Perfil:** casal, sem crianças. Prioridade: clássicos + montanhas-russas fortes.
 **Decisões fechadas:** troca dos dias 21/22/23 confirmada · sem Mickey's Very Merry Christmas Party · sem Express Pass na Universal · carro alugado de 20 a 25/11
 
-> **Aviso sobre horários:** os horários oficiais dos parques só saem perto da data. Todos os relógios abaixo assumem abertura às 9h. Confiram no app em novembro e desloquem o bloco inteiro se mudar.
+> **Aviso sobre horários:** os horários oficiais dos parques só saem perto da data. Os relógios abaixo assumem abertura às 9h nos parques da Disney e da Universal, e **às 10h no SeaWorld (22/11) e no Busch Gardens (24/11)**, que é o horário típico desses dois. Confiram no app em novembro e desloquem o bloco inteiro se mudar.
 
 ---
 
@@ -15,7 +15,7 @@
 
 | Dia | Multi Pass | Single Pass | Gasto estimado (casal) |
 |---|---|---|---|
-| 11/11 Magic Kingdom | **Sim** | **Seven Dwarfs Mine Train** (TRON opcional) | US$ 95–140 |
+| 11/11 Magic Kingdom | **Sim** | **Seven Dwarfs Mine Train** (o TRON é rope drop, não Single Pass) | US$ 54–120 |
 | 13/11 Animal Kingdom | Não | **Avatar Flight of Passage** | US$ 36–40 |
 | 15/11 Hollywood Studios | **Sim** | **Rise of the Resistance** | US$ 115–130 |
 | 16/11 Epcot | Opcional | **Cosmic Rewind** | US$ 36–95 |
@@ -39,34 +39,35 @@ No Islands, o Hagrid's saiu do Express em julho de 2026 — vocês pagariam e ai
 
 # 🏰 11/11 (quarta) — MAGIC KINGDOM
 
-**Multi Pass:** lista alta → **Peter Pan's Flight** · lista baixa → **Big Thunder Mountain** e **Mansão Mal-Assombrada**
-*Se o Big Thunder estiver na lista alta, troque o Peter Pan por ele e coloque Piratas do Caribe na baixa.*
-**Single Pass:** Seven Dwarfs Mine Train
+**Multi Pass:** lista alta → **Peter Pan's Flight** · lista baixa → **Mansão Mal-Assombrada** e **Buzz Lightyear**
+*Peter Pan e Big Thunder são os dois lista alta, e só cabe um na reserva inicial. Não troque um pelo outro: use o Peter Pan cedo e reserve o Big Thunder rolando, porque a restrição de lista cai depois da primeira reserva usada.*
+**Single Pass:** Seven Dwarfs Mine Train. **O TRON é rope drop, não Single Pass** — chegando às 9h ele custa ~20 min de fila em vez de US$ 20–23 por pessoa.
 
-> **Atenção:** com Peter Pan, Big Thunder e Mansão no Multi Pass, o rope drop muda. Não vá para onde você já tem hora marcada.
+> **Atenção:** a **Tiana's Bayou Adventure estará fechada** para reforma — entrou em 02/11, com volta prevista só para dezembro. O rope drop do dia é o TRON.
 
 | Hora | O quê | Como |
 |---|---|---|
 | **6h45** | Sair do hotel | Uber deixa no TTC, não na entrada |
 | **7h45** | Portão | Monotrilho ou barco a partir do TTC |
-| **9h00** | **Tiana's Bayou Adventure** | Standby. Rope drop, Frontierland |
-| **9h35** | **Space Mountain** | Standby. Atravesse para Tomorrowland |
-| **10h05** | **Piratas do Caribe** | Standby, ainda curto |
-| **10h40** | **Big Thunder Mountain** | Multi Pass |
-| **11h10** | **it's a small world** | Standby. Capacidade alta, fila anda |
-| **11h35** | **Peter Pan's Flight** | Multi Pass |
-| **12h00** | **Seven Dwarfs Mine Train** | Single Pass |
-| **12h30** | **Almoço** | Liberty Tree Tavern ou Columbia Harbour House |
-| **13h45** | **Mansão Mal-Assombrada** | Multi Pass |
-| **14h15** | **Jungle Cruise** | Multi Pass rolando (reserve às 10h40) |
+| **9h00** | **TRON Lightcycle / Run** | Rope drop, sem desviar. Tomorrowland |
+| **9h40** | **Space Mountain** | Standby. Mesma área |
+| **10h15** | **Peter Pan's Flight** | Multi Pass. Ao sair, reserve o Big Thunder |
+| **10h45** | **Seven Dwarfs Mine Train** | Single Pass |
+| **11h15** | **it's a small world** | Standby. Capacidade alta, fila anda |
+| **11h50** | **Mansão Mal-Assombrada** | Multi Pass |
+| **12h30** | **Almoço — Columbia Harbour House** | Balcão, mobile order, segundo andar |
+| **13h30** | **Big Thunder Mountain** | Multi Pass rolando |
+| **14h10** | **Piratas do Caribe** | Standby. Capacidade alta |
 | **15h00** | **Festival of Fantasy Parade** | Fique em Frontierland, não na Main Street |
-| **15h45** | **Buzz Lightyear** | Standby. Repaginado em 2026 |
-| **16h15** | **Mickey's PhilharMagic** | Standby. 12 min, ar-condicionado, ótimo |
-| **17h00** | **TRON Lightcycle Run** | Single Pass, se compraram |
-| **17h45** | **Jantar** | Casey's Corner ou Skipper Canteen |
+| **15h45** | **Jungle Cruise** | Multi Pass rolando |
+| **16h30** | **Mickey's PhilharMagic** | Standby. 12 min, ar-condicionado, ótimo |
+| **17h00** | **Buzz Lightyear** | Multi Pass. Repaginado em 2026 |
+| **17h45** | **Jantar — Casey's Corner** | Mesas de fora, de frente para o pianista |
 | **19h00** | Main Street | Compras, fotos com o castelo iluminado |
-| **20h20** | **Posição para os fogos** | Main Street, lado direito olhando o castelo |
-| **21h00** | **Happily Ever After** | |
+| **19h20** | **Posição para os fogos** | Main Street, lado direito olhando o castelo |
+| **20h00** | **Happily Ever After** | Em novembro é às 20h — o horário de verão acaba em 01/11 |
+| **20h30** | Mais uma, com a fila já curta | A multidão vai embora depois dos fogos |
+| **21h00** | Sair | O pior do fluxo de saída já passou |
 
 ### Renúncias — não vão render para vocês
 Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's Undersea Adventure, Enchanted Tales with Belle, Tapete Mágico, Tom Sawyer Island, Liberty Belle.
@@ -100,7 +101,7 @@ Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's
 | **16h30** | **Nomad Lounge** | Drink na varanda. O lugar mais gostoso do parque |
 | **17h30** | **Pandora ao anoitecer** | Fiquem. As plantas acendem quando escurece |
 | **18h30** | Sair | |
-| **19h45** | **Jantar — Sanaa** | Animal Kingdom Lodge. Peçam mesa na janela: girafas e zebras |
+| **19h45** | **Jantar — Sanaa** | Animal Kingdom Lodge. Às 19h45 já escureceu e não se vê a savana — vão pela comida. Peçam o Bread Service |
 
 ### Renúncias
 Feathered Friends in Flight, Bluey's Wild World, Wildlife Express Train, Rafiki's Planet Watch, Discovery Island Trails, The Animation Experience.
@@ -380,7 +381,7 @@ De manhã, compras. À tarde, o parque de novo — de graça, com o ingresso que
 - [ ] Reservar **Sharks Underwater Grill** (SeaWorld, direto no site do parque)
 - [ ] Decidir sobre a Power-Up Band do Epic Universe
 
-**Já em Orlando:**
-- [ ] **08/11, 7h ET** — Lightning Lane Multi Pass e Single Pass, com a lista deste documento aberta
+**Na semana da viagem (a primeira delas ainda no Brasil):**
+- [ ] **Lightning Lane, 7h ET — quatro manhãs, não uma.** Quem está fora dos hotéis Disney compra com 3 dias de antecedência, não 7: **08/11** (Magic Kingdom, dia 11 — Multi Pass e o Single Pass do Seven Dwarfs), **10/11** (Single Pass do Flight of Passage, para o dia 13), **12/11** (Single Pass do Rise of the Resistance, para o dia 15) e **13/11** (Single Pass do Cosmic Rewind, para o dia 16). Alarme para cada uma delas
 - [ ] Conferir horários oficiais dos parques e deslocar os blocos se a abertura não for às 9h
 - [ ] Conferir horário do Grinchmas (14/11), do desfile da Macy's (17/11) e do Fantasmic! (15/11)

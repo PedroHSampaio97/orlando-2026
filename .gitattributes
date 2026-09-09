@@ -1,0 +1,6 @@
+# Quebras de linha sempre LF, no repositorio e no disco.
+# Sem isto o git converte para CRLF no checkout e os arquivos ficam mistos:
+# trechos reescritos por script ficam LF, o resto CRLF, e qualquer busca
+# multilinha passa a falhar em silencio.
+* text=auto eol=lf
+*.png binary
