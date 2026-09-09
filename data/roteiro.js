@@ -254,8 +254,9 @@ window.ROTEIRO = {
         gatilho: 'Vocês saem do Terminal C entre 14h00 e 16h00.',
         passos: [
           'Corta o Walmart para o essencial: água, protetor solar, ibuprofeno e barrinhas. ' +
-          '20 minutos, sem passear pelos corredores — e a volta ao hotel para largar as ' +
-          'compras continua obrigatória, senão vocês carregam o fardo a noite inteira.',
+          '20 minutos, sem passear pelos corredores. A volta ao hotel continua ' +
+          'obrigatória, senão vocês carregam o fardo a noite inteira — mas agora são só ' +
+          '8 minutos de carro no total, então cabe mesmo com o dia atrasado.',
           'O resto da lista vai para o dia 12, que é dia de outlet na I-Drive e comporta ' +
           'uma parada de mercado sem custo nenhum de roteiro.',
           'Disney Springs direto, mesmo que chegue só 18h15. Uma hora lá dentro já dá o ' +
@@ -432,24 +433,26 @@ window.ROTEIRO = {
         localId: 'hotel-travelodge', acesso: [] },
 
       { id: 'b-1011-1530', hora: '15:30', ancora: 'referencia', tipo: 'compras',
-        titulo: 'Walmart Supercenter',
-        descricao: 'Lista completa na ficha do dia. 45 min, ~15 min de Uber',
+        titulo: 'Walmart Supercenter — Vineland Rd',
+        descricao: '4 min do hotel. 45 min de compras. Lista completa na ficha do dia',
         contexto:
-          'A compra que abastece os 16 dias. Se o dia estiver atrasado, façam só os oito ' +
-          'itens essenciais e joguem o resto para o dia 12.',
-        endereco: '1471 E Osceola Pkwy', localId: 'walmart-osceola', acesso: [] },
+          'A compra que abastece os 16 dias. Fica a 1,5 km do hotel — a corrida sai por ' +
+          'US$ 7 a 10 e leva 4 minutos. Se o dia estiver atrasado, façam só os oito itens ' +
+          'essenciais e joguem o resto para o dia 12.',
+        endereco: '3250 Vineland Rd', localId: 'walmart-vineland', acesso: [] },
 
-      { id: 'b-1011-1645', hora: '16:45', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-1011-1645', hora: '16:20', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel e guardar as compras',
-        descricao: 'Fardo de água não vai para o Disney Springs',
+        descricao: '4 min. Fardo de água não vai para o Disney Springs',
         contexto:
           'Esta volta existe por um motivo só: ninguém anda pelo Disney Springs com uma ' +
           'caixa de 24 garrafas. Guardem tudo, separem só o que vai para o dia 11 — duas ' +
           'garrafas, protetor solar e barrinhas na mochila — e saiam de novo.\n\n' +
-          'Custa uma corrida de Uber a mais (~US$ 12), e é dinheiro bem gasto.',
+          'Com o Walmart certo, essa ida e volta custa ~US$ 16 no total e come 8 minutos ' +
+          'de carro. Sobra meia hora a mais no Disney Springs.',
         localId: 'hotel-travelodge', acesso: [] },
 
-      { id: 'b-1011-1710', hora: '17:10', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-1011-1710', hora: '16:50', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Sair para o Disney Springs',
         descricao: 'Uber, ~20 min. Pôr do sol às 17h35',
         contexto:
@@ -457,12 +460,14 @@ window.ROTEIRO = {
           'que é a melhor hora do lugar.',
         localId: 'disney-springs', acesso: [] },
 
-      { id: 'b-1011-1745', hora: '17:35', ancora: 'referencia', tipo: 'compras',
+      { id: 'b-1011-1745', hora: '17:15', ancora: 'referencia', tipo: 'compras',
         titulo: 'The Landing → Marketplace → Town Center',
         descricao: 'World of Disney — a compra de roupa da viagem inteira acontece aqui',
         contexto:
-          'São 1h25 até o jantar, de mãos livres. Dá para o World of Disney com calma e a ' +
-          'beira da água no fim de tarde, que é a melhor hora do lugar.\n\n' +
+          'São 1h45 até o jantar, de mãos livres — meia hora a mais do que no plano ' +
+          'antigo, porque o Walmart certo fica a 4 minutos do hotel. Dá para o World ' +
+          'of Disney sem correr, provar as peças com calma, e ainda pegar o pôr do ' +
+          'sol às 17h35 na beira da água.\n\n' +
           'É a única loja da viagem com merch dos quatro parques da Disney sob o mesmo ' +
           'teto. Dentro de cada parque só existe o do parque em que você está — por isso a ' +
           'compra é aqui, e não lá.\n\n' +
@@ -3046,6 +3051,18 @@ window.ROTEIRO = {
         'Isso muda as quatro tarefas de Lightning Lane deste checklist.',
       restauranteIds: [] },
 
+    { id: 'ck-shuttle', grupo: 'prazo-curto', dataAlvo: '2026-10-06', dataEstimada: true,
+      motivoData: 'Junto com a reserva do carro, para decidir transporte de uma vez',
+      hora: null, fuso: null, janelaReserva: false, critico: false,
+      texto: 'Confirmar o transfer gratuito do hotel para Magic Kingdom e Hollywood Studios',
+      nota:
+        'O Travelodge anuncia shuttle cortesia para os dois parques. Se o horário servir, ' +
+        'economiza Uber nos dias 11 e 15. ATENÇÃO: shuttle de hotel quase sempre chega ' +
+        'depois da abertura e tem volta em horário fixo — provavelmente NÃO serve para o ' +
+        'rope drop das 9h, que é a estratégia dos dois dias. Vale confirmar o horário real ' +
+        'antes de contar com ele. Se a primeira saída for depois das 7h30, ignorem.',
+      restauranteIds: [] },
+
     { id: 'ck-carro', grupo: 'prazo-curto', dataAlvo: '2026-10-06', dataEstimada: true, motivoData: 'Preço de locadora sobe perto da data', hora: null, fuso: null,
       janelaReserva: false, critico: true,
       texto: 'Reservar o carro para 20 a 25/11, em filial de bairro na 192',
@@ -3137,19 +3154,25 @@ window.ROTEIRO = {
      ------------------------------------------------------------------------ */
   locais: [
     { id: 'hotel-travelodge', nome: 'Travelodge by Wyndham Orlando Lake Buena Vista South',
-      tipo: 'hotel', lat: 28.3390, lng: -81.5010, verificado: false, fonteCoord: null, precisaColar: 'Endereço exato da reserva não informado. Cole a coordenada do Google Maps.',
-      endereco: 'US-192, Kissimmee', doHotel: null,
-      nota: 'A base. Todos os tempos de deslocamento partem daqui.' },
+      tipo: 'hotel', lat: 28.3337183, lng: -81.4986073, verificado: true, fonteCoord: 'osm',
+      endereco: '5367 W Irlo Bronson Memorial Hwy, Kissimmee FL 34746',
+      doHotel: null,
+      nota: 'A base. Todos os tempos de deslocamento partem daqui. Coordenada e endereço ' +
+            'confirmados em 09/09 — a estimativa anterior estava 630 m fora.' },
 
     { id: 'mco', nome: 'Orlando International Airport (MCO)', tipo: 'transporte',
       lat: 28.42944444, lng: -81.30888889, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 30, tempoFonte: 'documento',
                  uberUSD: { min: 35, max: 45 }, uberFonte: 'documento' } },
 
-    { id: 'walmart-osceola', nome: 'Walmart Supercenter', tipo: 'compras',
-      lat: 28.3437905, lng: -81.3860363, verificado: true, fonteCoord: 'osm', endereco: '1471 E Osceola Pkwy',
-      doHotel: { tempoMin: 15, tempoFonte: 'estimado',
-                 uberUSD: { min: 10, max: 16 }, uberFonte: 'estimado' } },
+    { id: 'walmart-vineland', nome: 'Walmart Supercenter — Vineland Rd', tipo: 'compras',
+      lat: 28.3413787, lng: -81.4863111, verificado: true, fonteCoord: 'osm',
+      endereco: '3250 Vineland Rd, Kissimmee FL 34746',
+      doHotel: { tempoMin: 4, tempoFonte: 'confirmado',
+                 uberUSD: { min: 7, max: 10 }, uberFonte: 'estimado' },
+      nota: 'CORRIGIDO em 09/09. O documento indicava a loja da 1471 E Osceola Pkwy, que ' +
+            'fica a 11,1 km do hotel. Esta fica a 1,5 km — 4 minutos de carro. Mesma ' +
+            'bandeira, mesmo sortimento, sete vezes mais perto.' },
 
     { id: 'magic-kingdom', nome: 'Magic Kingdom', tipo: 'parque',
       lat: 28.41861111, lng: -81.58111111, verificado: true, fonteCoord: 'wikipedia', endereco: null,
