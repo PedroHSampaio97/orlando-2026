@@ -596,7 +596,7 @@ window.ROTEIRO = {
 
       { id: 'b-1011-1900', hora: '19:00', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — The Boathouse',
-        descricao: 'Reserva confirmada · 2111918775',
+        descricao: 'Frutos do mar e carnes na beira da água, no The Landing',
         contexto:
           'Frutos do mar e carnes na beira da água, no The Landing. Cheguem 15 minutos ' +
           'antes. HORÁRIO FIXO: não desloca nem se o voo atrasar — se o dia virar plano C, ' +

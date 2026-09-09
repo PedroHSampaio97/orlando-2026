@@ -750,6 +750,35 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   font-variant-numeric: tabular-nums;
 }
 
+/* estado da reserva dentro do bloco */
+.ct-reserva { display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  width: 100%; margin-top: 9px; padding: 9px 12px; min-height: 40px;
+  border: 1px solid var(--borda); border-radius: var(--r-botao);
+  background: var(--fundo); font: inherit; text-align: left; cursor: pointer; }
+.ct-reserva-rot { font-size: 11px; font-weight: 800; letter-spacing: .06em;
+  text-transform: uppercase; white-space: nowrap; }
+.ct-reserva-num { font-size: 14px; font-weight: 750; margin-left: auto;
+  font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ct-reserva-confirmado .ct-reserva-rot { color: var(--ok); }
+.ct-reserva-cancelado { border-color: var(--perigo); }
+.ct-reserva-cancelado .ct-reserva-rot { color: var(--perigo); }
+.ct-reserva-a-reservar { border-color: var(--acento); }
+.ct-reserva-a-reservar .ct-reserva-rot { color: var(--acento); }
+.ct-reserva-sem .ct-reserva-rot { color: var(--texto-fraco); }
+
+/* janela de retorno do Lightning Lane */
+.ct-janela { display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  margin-top: 9px; padding: 7px 10px; border-radius: var(--r-botao);
+  background: var(--marca-fundo); }
+.ct-janela-rot { font-size: 10px; font-weight: 800; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--marca); white-space: nowrap; }
+.ct-janela-hora { font-size: 13.5px; font-weight: 750; color: var(--marca);
+  font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ct-janela-conta { font-size: 12px; font-weight: 750; color: var(--texto-fraco);
+  white-space: nowrap; margin-left: auto; }
+.ct-janela-fim { color: #fff; background: var(--perigo); padding: 3px 8px;
+  border-radius: 999px; }
+
 /* editor de hora de um bloco */
 .editor-hora { position: fixed; left: 12px; right: 12px; bottom: 84px; z-index: 60;
   border: 1px solid var(--borda); border-radius: var(--r-card);

@@ -692,5 +692,7 @@ window.Fase3 = (function () {
     pintarFicha: pintarFicha, pintarFechamento: pintarFechamento,
     pintarRestaurantes: pintarRestaurantes,
     pintarPendencias: pintarPendencias,
+    statusDe: statusDe, confirmacaoDe: confirmacaoDe,
+    acharRestaurante: (id) => R.restaurantes.find((r) => r.id === id) || null,
   };
 })();

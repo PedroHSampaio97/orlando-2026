@@ -802,6 +802,52 @@
     if (b.critico) selos.appendChild(el('span', 'selo selo-critico', 'crítico'));
     if (selos.children.length) card.appendChild(selos);
 
+    // JANELA DE RETORNO. O Lightning Lane vale por uma hora a partir do horario
+    // reservado, e o app nao tinha esse conceito: o bloco das 10h15 aparecia
+    // igualzinho ao das 15h. Perder a janela custa a atracao e o dinheiro.
+    const ehLL = (b.acesso || []).some(function (a) {
+      return a === 'multi-pass' || a === 'single-pass';
+    });
+    if (ehLL) {
+      const fim = item.min + 60;
+      const j = el('div', 'ct-janela');
+      j.appendChild(el('span', 'ct-janela-rot', 'Janela'));
+      j.appendChild(el('span', 'ct-janela-hora', item.hora + ' às ' + paraHora(fim)));
+      if (dia.data === hojeISO() && !E.feito(b.id)) {
+        const agora = agoraMin();
+        if (agora >= item.min && agora < fim) {
+          const resta = fim - agora;
+          j.appendChild(el('span',
+            'ct-janela-conta' + (resta <= 15 ? ' ct-janela-fim' : ''),
+            resta <= 15 ? 'fecha em ' + resta + ' min!' : 'restam ' + resta + ' min'));
+        } else if (agora >= fim) {
+          j.appendChild(el('span', 'ct-janela-conta ct-janela-fim', 'janela fechada'));
+        }
+      }
+      card.appendChild(j);
+    }
+
+    // Estado da reserva vindo do estado, nao do texto: se cancelarem na aba
+    // Comer, a linha do tempo para de dizer que esta confirmada.
+    if (b.restauranteId && window.Fase3 && Fase3.acharRestaurante) {
+      const r = Fase3.acharRestaurante(b.restauranteId);
+      if (r) {
+        const st = Fase3.statusDe(r);
+        const conf = Fase3.confirmacaoDe(r);
+        const bt = el('button', 'ct-reserva ct-reserva-' + (st || 'sem'));
+        const rot = st === 'confirmado' ? 'Reserva confirmada'
+                  : st === 'cancelado' ? 'RESERVA CANCELADA'
+                  : st === 'a-reservar' ? 'Ainda sem reserva'
+                  : 'Reserva';
+        bt.appendChild(el('span', 'ct-reserva-rot', rot));
+        if (conf && st === 'confirmado') {
+          bt.appendChild(el('span', 'ct-reserva-num', conf));
+        }
+        bt.addEventListener('click', function () { mostrarTela('comer'); });
+        card.appendChild(bt);
+      }
+    }
+
     if (b.condicao) card.appendChild(el('div', 'ct-nota', '→ ' + b.condicao));
     if (b.nota) card.appendChild(el('div', 'ct-nota', b.nota));
     if (item.colisao) card.appendChild(el('div', 'ct-colisao', '⚠ ' + item.colisao));
