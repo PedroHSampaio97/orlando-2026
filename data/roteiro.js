@@ -213,8 +213,9 @@ window.ROTEIRO = {
     avisos: [
       'O dia começa na véspera: com decolagem 01h40, vocês precisam estar no GIG por volta ' +
       'das 22h30 de 09/11.',
-      'Chip/eSIM: ativem no wifi do aeroporto ANTES de precisar do Uber. Sem internet não ' +
-      'tem corrida.',
+      'Roaming: com o Passaporte Américas o celular deve conectar sozinho ao pousar. Se ' +
+      'não conectar em 10 minutos, liguem e desliguem o modo avião e confiram se o ' +
+      'roaming de dados está ligado nos ajustes. Sem internet não tem Uber.',
     ],
 
     notas: [
@@ -501,10 +502,12 @@ window.ROTEIRO = {
         localId: 'mco', acesso: [], critico: true },
 
       { id: 'b-1011-1415', hora: '14:15', ancora: 'referencia', tipo: 'tarefa',
-        titulo: 'Ativar o eSIM e chamar o Uber',
+        titulo: 'Confirmar a internet e chamar o Uber',
         descricao: 'Rideshare Pickup no NÍVEL 6 do Terminal C',
         contexto:
-          'Ativem o chip no wifi do aeroporto antes de tudo — sem internet não existe Uber. ' +
+          'Com o Passaporte Américas o celular conecta sozinho ao pousar. Confiram que ' +
+          'está com internet ANTES de descer para o nível 6 — se não conectar, o wifi ' +
+          'do MCO resolve enquanto vocês ligam o roaming nos ajustes.\n\n' +
           'E só chamem a corrida depois de estarem com as malas na mão: o motorista tem ' +
           'poucos minutos de tolerância e cancela.',
         localId: 'mco', acesso: [], critico: true, pesquisa: '2026-09-08' },
@@ -3369,6 +3372,41 @@ window.ROTEIRO = {
       restauranteIds: [] },
 
     /* --- prazo médio (outubro) --- */
+    { id: 'ck-ing-disney', dataAlvo: '2026-10-01', dataEstimada: true,
+      motivoData: 'Muito antes de 08/11, porque ingresso não vinculado bloqueia o Lightning Lane',
+      hora: null, fuso: null, janelaReserva: false, critico: true,
+      texto: 'Ingressos Disney aparecendo no My Disney Experience — nos DOIS perfis',
+      nota:
+        'A compra já está feita; isto é conferência de que apareceu. Riscar só quando ' +
+        'os 4 dias estiverem visíveis no app da Bianca também, não só no seu.\n\n' +
+        'É o item que mais bloqueia coisa: sem ingresso vinculado não há Lightning ' +
+        'Lane em 08/11, e sem Lightning Lane o dia 11 inteiro muda. Se algo estiver ' +
+        'errado, resolver com a agência leva dias — por isso a data é 01/10 e não ' +
+        'véspera.',
+      restauranteIds: [] },
+
+    { id: 'ck-ing-universal', dataAlvo: '2026-10-25', dataEstimada: true,
+      motivoData: 'Duas semanas antes da viagem, com folga para acionar a agência',
+      hora: null, fuso: null, janelaReserva: false, critico: false,
+      texto: 'Ingressos Universal aparecendo no app — nos DOIS perfis',
+      nota:
+        'Cobre os dias 14, 17, 19, 23 e 25. Confiram especificamente que é PARK-TO-PARK ' +
+        'e que o Epic Universe está incluído: o Hogwarts Express do dia 19 só funciona ' +
+        'com park-to-park, e o Epic é ingresso à parte em muitas combinações.\n\n' +
+        'Riscar só quando aparecer no app da Bianca também.',
+      restauranteIds: [] },
+
+    { id: 'ck-ing-united', dataAlvo: '2026-10-25', dataEstimada: true,
+      motivoData: 'Junto com os da Universal, para resolver tudo numa conferência só',
+      hora: null, fuso: null, janelaReserva: false, critico: false,
+      texto: 'Ingressos SeaWorld e Busch Gardens (Promo Park) — com o plano de refeição',
+      nota:
+        'Os dois parques são da mesma empresa e vieram na mesma compra. Confiram que o ' +
+        'PLANO DE REFEIÇÃO está incluído nos dois: o roteiro do dia 22 e do dia 24 ' +
+        'conta com ele para o almoço, e sem plano o custo desses dias muda.\n\n' +
+        'Riscar só quando aparecer no app da Bianca também.',
+      restauranteIds: [] },
+
     { id: 'ck-sharks', dataAlvo: '2026-10-01', dataEstimada: true, motivoData: 'O documento situa em outubro', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Reservar Sharks Underwater Grill (SeaWorld, direto no site do parque)',
@@ -3403,17 +3441,25 @@ window.ROTEIRO = {
       restauranteIds: [] },
 
     { id: 'ck-esim', dataAlvo: '2026-10-25', dataEstimada: true,
-      motivoData: 'Duas semanas antes, para dar tempo de chip físico chegar pelo correio',
+      motivoData: 'Duas semanas antes, para dar tempo de resolver a linha da Bianca se ela não estiver coberta',
       hora: null, fuso: null, janelaReserva: false, critico: true,
-      texto: 'Comprar o eSIM ou chip internacional para os dois celulares',
+      texto: 'Ativar o roaming internacional nas DUAS linhas e conferir a franquia',
       nota:
-        'O dia 10 manda ATIVAR o chip no wifi do MCO, mas nada mandava comprar. Sem ' +
-        'internet no aeroporto não tem Uber, e sem Uber não tem hotel.\n\n' +
-        'eSIM resolve na hora por QR code e é o caminho mais simples — confiram antes ' +
-        'se os dois aparelhos aceitam. Chip físico precisa chegar pelo correio, por ' +
-        'isso a data é duas semanas antes.\n\n' +
-        'Comprem para os DOIS celulares. Um só vira ponto único de falha justamente no ' +
-        'dia em que vocês estão mais cansados.',
+        'O Passaporte Américas da Claro vem sem custo extra em todo plano PÓS-PAGO e ' +
+        'cobre 46 países das Américas, usando a mesma franquia de internet do plano ' +
+        'brasileiro. Ativação pelo *468, ligação gratuita, ou pelo Minha Claro.\n\n' +
+        'TRÊS COISAS PARA CONFERIR:\n\n' +
+        '1. A LINHA DA BIANCA. O benefício é do plano, não da viagem. Se ela não for ' +
+        'Claro pós-paga, não está coberta — e aí precisa de eSIM próprio. Um celular ' +
+        'com internet para os dois é ponto único de falha justamente nos dias em que ' +
+        'vocês mais dependem do telefone.\n\n' +
+        '2. O TAMANHO DA FRANQUIA. São 17 dias usando mapa, app da Disney, app da ' +
+        'Universal, este app e foto o dia inteiro. Se a franquia do plano acabar, a ' +
+        'Claro passa a cobrar R$ 39,90 POR DIA nas Américas — o que pode virar centenas ' +
+        'de reais por linha até o fim da viagem.\n\n' +
+        '3. A COLÔMBIA. Se estiver entre os 46 países, o roaming já funciona na conexão ' +
+        'de Bogotá — e aí a compra do Single Pass do Flight of Passage às 7h ET do dia ' +
+        '10 deixa de depender do wifi do aeroporto.',
       restauranteIds: [] },
 
     { id: 'ck-natal-datas', dataAlvo: '2026-10-15', dataEstimada: true, motivoData: 'As datas dos eventos saem com antecedência', hora: null, fuso: null,
