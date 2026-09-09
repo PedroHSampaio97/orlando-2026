@@ -10,7 +10,7 @@
    Depois de editar qualquer arquivo do app:  node tools/checar.js --selar
    ========================================================================== */
 
-const VERSAO = 'orlando2026-a8e833b3';
+const VERSAO = 'orlando2026-f2e16fde';
 const CACHE = VERSAO;
 
 const ARQUIVOS = [

@@ -750,6 +750,9 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   font-variant-numeric: tabular-nums;
 }
 
+.selo-opcional { background: var(--fundo); color: var(--texto-fraco);
+  border: 1px dashed var(--borda); }
+
 /* estado da reserva dentro do bloco */
 .ct-reserva { display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
   width: 100%; margin-top: 9px; padding: 9px 12px; min-height: 40px;

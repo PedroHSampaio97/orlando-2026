@@ -463,8 +463,10 @@
     const selos = $('#dia-selos');
     selos.innerHTML = '';
     if (dia.operadora) selos.appendChild(el('span', 'selo-dia op', dia.operadora));
-    else selos.appendChild(el('span', 'selo-dia op',
-      dia.tipo === 'logistica' ? 'logística' : 'dia livre'));
+    else {
+      const ROT = { logistica: 'logística', compras: 'compras', livre: 'dia livre' };
+      selos.appendChild(el('span', 'selo-dia op', ROT[dia.tipo] || 'dia livre'));
+    }
     if (dia.custoZero) selos.appendChild(el('span', 'selo-dia custo-zero',
       'entrada extra · custo zero'));
     if (dia.fechado) selos.appendChild(el('span', 'selo-dia fechado',
@@ -800,6 +802,7 @@
     if (b.locker) selos.appendChild(el('span', 'selo selo-locker',
       b.locker === 'detector' ? '🔒 locker + detector' : '🔒 locker'));
     if (b.critico) selos.appendChild(el('span', 'selo selo-critico', 'crítico'));
+    if (b.opcional) selos.appendChild(el('span', 'selo selo-opcional', 'opcional'));
     if (selos.children.length) card.appendChild(selos);
 
     // JANELA DE RETORNO. O Lightning Lane vale por uma hora a partir do horario

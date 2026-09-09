@@ -849,7 +849,7 @@ window.ROTEIRO = {
           'chegam cedo, ou pagam US$ 20 a 23 cada no Single Pass. Chegando às 9h, custa ' +
           '20 minutos de fila e nada.\n\n' +
           'Guardem tudo no locker antes — o TRON não permite nada solto.',
-        areaParque: 'Tomorrowland', acesso: ['rope-drop', 'standby'],
+        areaParque: 'Tomorrowland', acesso: ['rope-drop', 'standby'], locker: true,
         critico: true, pesquisa: '2026-09-09', duracaoMin: 40 },
 
       { id: 'b-1111-0940', hora: '09:40', ancora: 'referencia', tipo: 'atracao',
