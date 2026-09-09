@@ -359,6 +359,68 @@ window.ROTEIRO = {
                 'É exatamente por isso que vocês voltam no dia 21.' },
     ],
 
+    /* ---------------------------------------------------------------------
+       O QUE DEIXAR PRONTO HOJE PARA AMANHÃ
+       O dia 11 sai às 6h45 e é o mais denso da viagem. Tudo o que dá para
+       resolver hoje à noite, resolvam hoje — às 5h45 ninguém procura nada.
+       ------------------------------------------------------------------ */
+    prepararAmanha: {
+      paraODia: '2026-11-11',
+      titulo: 'Magic Kingdom · alarme 5h45, saída 6h45',
+      aviso:
+        'Vocês vão dormir depois de quase 24 horas acordados e acordar em menos de ' +
+        'sete. Cada item resolvido hoje é um problema que não existe às 5h45.',
+      itens: [
+        { texto: 'Alarme para 5h45 nos DOIS celulares', critico: true,
+          motivo: 'Saída às 6h45. Um alarme só falha — modo silencioso, bateria, ' +
+                  'cochilo. Dois alarmes em aparelhos diferentes, não dois no mesmo.' },
+
+        { texto: 'Celular e power bank carregando a noite inteira', critico: true,
+          motivo: 'O dia 11 vai das 6h45 às 21h30. Celular morto às 16h é o roteiro, ' +
+                  'o Lightning Lane e o mobile order perdidos de uma vez.' },
+
+        { texto: 'My Disney Experience: login feito, ingressos vinculados e os dois no mesmo grupo',
+          critico: true,
+          motivo: 'Sem isso vocês não entram no parque nem usam Lightning Lane. ' +
+                  'Resolver na fila da catraca às 7h45 é o pior lugar possível — e se o ' +
+                  'ingresso não vincular, é caso de ligar para a agência, o que não dá ' +
+                  'para fazer amanhã de manhã.' },
+
+        { texto: 'Conferir se as reservas de Lightning Lane do dia 11 aparecem no app',
+          critico: true,
+          motivo: 'Compradas em 08/11: Peter Pan, Big Thunder e Mansão no Multi Pass, ' +
+                  'mais o Seven Dwarfs no Single Pass. Se alguma não estiver lá, hoje ' +
+                  'ainda dá tempo de rever o plano do dia. Amanhã às 9h, não.' },
+
+        { texto: 'Conferir o horário real de abertura do Magic Kingdom e ajustar aqui no app',
+          critico: true,
+          motivo: 'Os horários do dia 11 assumem abertura às 9h. Se for outro, mudem a ' +
+                  'referência na tela do dia 11 e os blocos ancorados deslocam sozinhos, ' +
+                  'inclusive a hora de sair do hotel. O desfile e os fogos ficam parados.' },
+
+        { texto: 'Cartão cadastrado no My Disney Experience para mobile order',
+          motivo: 'Almoço no Columbia Harbour House e jantar no Casey\u2019s são os dois de ' +
+                  'balcão. Com mobile order vocês pulam a fila; sem cartão salvo, não pulam.' },
+
+        { texto: 'Mochila montada e deixada na porta', critico: true,
+          motivo: 'Duas garrafas de água, barrinhas, protetor solar, power bank e cabo — ' +
+                  'tudo comprado hoje no Walmart. Montar hoje evita abrir mala às 6h.' },
+
+        { texto: 'Roupa e tênis separados fora da mala',
+          motivo: 'Puramente para não procurar nada no escuro às 5h45.' },
+
+        { texto: 'Uber de amanhã: o destino é o TTC, não \u201cMagic Kingdom\u201d',
+          motivo: 'O Magic Kingdom é o único parque sem acesso direto de carro. O Uber ' +
+                  'para no Ticket & Transportation Center e de lá ainda são 15 a 20 min de ' +
+                  'monotrilho ou barco. Quem digita \u201cMagic Kingdom\u201d no app é levado ' +
+                  'para o lugar errado e perde o rope drop.' },
+
+        { texto: 'Dormir', critico: true,
+          motivo: 'É o item mais importante da lista. A mala desfeita pode esperar; o ' +
+                  'rope drop do dia 11, não.' },
+      ],
+    },
+
     blocos: [
       { id: 'b-1011-0140', hora: '01:40', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voo GIG → Bogotá',
@@ -3451,6 +3513,15 @@ window.ROTEIRO = {
         erros.push(`dia ${d.data}: plano ${p.letra || "?"} incompleto`);
       }
     });
+    if (d.prepararAmanha) {
+      const p = d.prepararAmanha;
+      if (!R.dias.some((x) => x.data === p.paraODia)) {
+        erros.push(`dia ${d.data}: prepararAmanha aponta para ${p.paraODia}, que não existe`);
+      }
+      if (!(p.itens || []).length) {
+        erros.push(`dia ${d.data}: prepararAmanha sem itens`);
+      }
+    }
     (d.listas || []).forEach((l) => {
       if (!(l.itens || []).length) erros.push(`dia ${d.data}: lista ${l.id} vazia`);
     });

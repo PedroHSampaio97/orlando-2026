@@ -245,6 +245,7 @@ window.Fase3 = (function () {
     if ((dia.planos || []).length) alvo.appendChild(blocoPlanos(dia.planos));
     (dia.listas || []).forEach((l) => alvo.appendChild(blocoLista(l)));
     if ((dia.naoPerca || []).length) alvo.appendChild(blocoNaoPerca(dia.naoPerca));
+    if (dia.prepararAmanha) alvo.appendChild(blocoPrepararAmanha(dia));
   }
 
   const LETRA_COR = { A: 'pl-a', B: 'pl-b', C: 'pl-c' };
@@ -336,6 +337,60 @@ window.Fase3 = (function () {
     return d;
   }
 
+  /* Fecha o dia olhando para o seguinte. O que dá para resolver na véspera
+     resolve-se na véspera — às 5h45 ninguém procura nada. */
+  function blocoPrepararAmanha(dia) {
+    const p = dia.prepararAmanha;
+    const chave = (i) => 'prep:' + dia.id + ':' + i.texto;
+    const feitos = p.itens.filter((i) => E.feito(chave(i))).length;
+
+    const d = el('details', 'acordeao');
+    d.appendChild(el('summary', null,
+      '🌙  Deixar pronto para amanhã  ·  ' + feitos + '/' + p.itens.length));
+    const c = el('div', 'acordeao-corpo');
+
+    const cab = el('div', 'prep-alvo');
+    cab.appendChild(el('span', 'prep-seta', '→'));
+    const t = el('div');
+    t.appendChild(el('div', 'prep-titulo', p.titulo));
+    const alvo = R.dias.find((x) => x.data === p.paraODia);
+    if (alvo) {
+      t.appendChild(el('div', 'prep-dia',
+        alvo.emoji + '  ' + alvo.diaSemana + ', ' + ddmmP(alvo.data)));
+    }
+    cab.appendChild(t);
+    c.appendChild(cab);
+
+    if (p.aviso) c.appendChild(el('p', 'lista-intro', p.aviso));
+
+    p.itens.forEach(function (item) {
+      const k = chave(item);
+      const marcado = E.feito(k);
+      const li = el('div', 'item-lista' + (marcado ? ' marcado' : ''));
+
+      const chk = el('button', 'bl-check');
+      chk.setAttribute('aria-pressed', marcado ? 'true' : 'false');
+      chk.setAttribute('aria-label', 'Marcar: ' + item.texto);
+      chk.appendChild(svgP('M4 12l6 6L20 6'));
+      chk.addEventListener('click', function () {
+        E.marcarFeito(k, !E.feito(k));
+        pintarFechamento(diaEmFoco);
+      });
+      li.appendChild(chk);
+
+      const corpo = el('div', 'item-corpo');
+      const linha = el('div', 'item-texto');
+      linha.appendChild(document.createTextNode(item.texto));
+      if (item.critico) linha.appendChild(el('span', 'selo selo-critico', 'crítico'));
+      corpo.appendChild(linha);
+      if (item.motivo) corpo.appendChild(el('div', 'item-motivo', item.motivo));
+      li.appendChild(corpo);
+      c.appendChild(li);
+    });
+
+    d.appendChild(c);
+    return d;
+  }
   /* ===========================================================================
      RESTAURANTES
      ======================================================================== */
