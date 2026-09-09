@@ -801,7 +801,12 @@ window.ROTEIRO = {
           'O barco costuma ser mais gostoso e menos concorrido que o monotrilho de manhã, e ' +
           'os dois levam o mesmo tempo. Vocês não têm Early Entry, então a posição na fila ' +
           'do portão é literalmente tudo que têm.\n\n' +
-          'Ao passar a catraca, o destino é a Tomorrowland, à direita depois do castelo.',
+          'Ao passar a catraca, o destino é a Tomorrowland, à direita depois do castelo.\n\n' +
+          'ESTES 75 MINUTOS SÃO O CAFÉ DA MANHÃ DE VOCÊS. Saindo às 6h45 vocês não comem ' +
+          'nada até o almoço das 12h30 — quase seis horas. Comam as barrinhas da mochila ' +
+          'aqui, parados na fila, que é o único momento do dia em que sobra tempo.\n\n' +
+          'Água: qualquer balcão de comida do parque dá copo de água gelada de graça, é ' +
+          'só pedir. Não comprem garrafa a US$ 4 lá dentro — recarreguem as de vocês.',
         localId: 'magic-kingdom', acesso: [] },
 
       { id: 'b-1111-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
