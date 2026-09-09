@@ -77,6 +77,9 @@
               E.referencia(dia.id) !== dia.referencia.padrao);
   }
   const ancoraDe = (b) => E.ancora(b.id) || b.ancora;
+  // Hora oficial confirmada perto da data. O desfile e os fogos carregam o selo
+  // "confirmar horario" e ate agora nao havia onde escrever a resposta.
+  const horaDe = (b) => E.horaBloco(b.id) || b.hora;
 
   function blocosDoDia(dia) {
     const padrao = dia.referencia ? paraMin(dia.referencia.padrao) : null;
@@ -85,7 +88,7 @@
 
     const lista = dia.blocos.map(function (b) {
       const anc = ancoraDe(b);
-      const base = paraMin(b.hora);
+      const base = paraMin(horaDe(b));
       const efet = (anc === 'referencia' && padrao !== null) ? base + delta : base;
       return { dados: b, ancora: anc, minOriginal: base, min: efet,
                hora: paraHora(efet), deslocado: efet !== base, colisao: null };
@@ -150,7 +153,11 @@
      ------------------------------------------------------------------------ */
   const diaDeHoje = () => R.dias.find((d) => d.data === hojeISO()) || null;
   let diaAtual = diaDeHoje() || R.dias[0];
+  // O iOS mata a pagina em segundo plano num dia de 14 horas. Sem persistir,
+  // o filtro voltava desmarcado toda vez que eles reabriam o app.
+  const CHAVE_FILTRO = 'orlando2026:so-falta';
   let soFalta = false;
+  try { soFalta = localStorage.getItem(CHAVE_FILTRO) === '1'; } catch (e) { soFalta = false; }
 
   const TELAS = ['home', 'dia', 'comer', 'guia', 'pendencias', 'ajustes'];
 
@@ -171,7 +178,13 @@
     });
     window.scrollTo(0, 0);
 
-    if (nome === 'dia') { aplicarCorTopo(diaAtual); pintarDia(); }
+    if (nome === 'dia') {
+      aplicarCorTopo(diaAtual);
+      pintarDia();
+      // Toda abertura caia no topo da tela, e num dia de parque sao 21 cartoes
+      // ate o agora. Se o dia e hoje, a tela abre onde eles estao.
+      if (diaAtual.data === hojeISO()) rolarAteAgora();
+    }
     else {
       aplicarCorTopo(null);
       if (nome === 'home') pintarHome();
@@ -220,6 +233,7 @@
     f.appendChild(el('span', null, '10 a 26 nov 2026'));
 
     pintarCartaoAcao(dHoje);
+    pintarSaude();
     pintarHomePendencias();
     pintarListaDias();
     pintarResumo();
@@ -291,6 +305,40 @@
       }
     }
     alvo.appendChild(card);
+  }
+
+  /* As duas promessas do app — funcionar sem sinal e sincronizar entre os dois
+     celulares — dependiam de alguem lembrar de abrir a engrenagem. Quem nunca
+     abriu embarcava achando que estava tudo certo. Agora a Home cobra. */
+  function pintarSaude() {
+    const alvo = $('#home-saude');
+    alvo.innerHTML = '';
+    const avisos = [];
+
+    const ultimo = E.ultimoExport ? E.ultimoExport() : null;
+    if (!ultimo) {
+      avisos.push('Vocês nunca exportaram. Tudo o que foi marcado existe só neste ' +
+                  'aparelho: se ele sumir, some junto.');
+    } else {
+      const dias = diasEntre(ultimo.slice(0, 10), hojeISO());
+      if (dias >= 3) {
+        avisos.push('Última exportação há ' + dias + ' dias. Exportem e mandem para o ' +
+                    'outro celular — é assim que os dois roteiros voltam a bater.');
+      }
+    }
+
+    if (window.Fase5 && Fase5.cacheIncompleto && Fase5.cacheIncompleto()) {
+      avisos.push('O app ainda não está guardado por inteiro no aparelho. Enquanto ' +
+                  'isso, ele não funciona sem internet.');
+    }
+    if (!avisos.length) return;
+
+    const cx = el('div', 'saude');
+    avisos.forEach(function (a) { cx.appendChild(el('div', 'saude-item', a)); });
+    const b = el('button', 'saude-btn', 'Abrir ajustes');
+    b.addEventListener('click', function () { mostrarTela('ajustes'); });
+    cx.appendChild(b);
+    alvo.appendChild(cx);
   }
 
   function pintarHomePendencias() {
@@ -424,6 +472,7 @@
 
     pintarRotaDia(dia);
     pintarReferencia(dia);
+    pintarVenceHoje(dia);
     pintarAvisos(dia);
     pintarLinhaTempo(dia);
     pintarProgresso(dia);
@@ -437,7 +486,11 @@
   function pintarRotaDia(dia) {
     const alvo = $('#dia-rota');
     alvo.innerHTML = '';
-    const base = R.locais.find((l) => l.id === R.viagem.baseLocalId);
+    // No dia da chegada eles nao acordam no hotel: a rota partindo dele desenhava
+    // hotel -> MCO -> Walmart, que e o caminho ao contrario. `rotaOrigemLocalId`
+    // deixa o dia dizer de onde parte, e o padrao continua sendo a base.
+    const origemId = dia.rotaOrigemLocalId || R.viagem.baseLocalId;
+    const base = R.locais.find((l) => l.id === origemId);
     if (!base || base.lat == null) return;
 
     // locais distintos do dia, na ordem em que aparecem
@@ -445,7 +498,7 @@
     const paradas = [];
     blocosDoDia(dia).forEach(function (b) {
       const id = b.dados.localId;
-      if (!id || id === R.viagem.baseLocalId || vistos.has(id)) return;
+      if (!id || id === origemId || vistos.has(id)) return;
       const l = R.locais.find((x) => x.id === id);
       if (!l || l.lat == null) return;
       vistos.add(id); paradas.push(l);
@@ -503,6 +556,34 @@
         'os blocos ancorados deslocam junto, os de horário fixo não.';
       ajuda.classList.remove('ativa');
     }
+  }
+
+  /* As pendencias com hora marcada viviam so na aba Pendencias, e o badge de
+     la so contava atraso. Resultado: a compra do Lightning Lane das 7h ET
+     vencia sem ninguem ver, e so ficava vermelha no dia seguinte. Agora ela
+     aparece na tela do proprio dia em que vence. */
+  function pintarVenceHoje(dia) {
+    const alvo = $('#vence-hoje');
+    alvo.innerHTML = '';
+    if (dia.data !== hojeISO()) return;
+    const hoje = (R.checklist || []).filter(function (c) {
+      const data = E.dataChecklist(c.id) || c.dataAlvo;
+      return data === dia.data && !E.checkFeito(c.id);
+    });
+    if (!hoje.length) return;
+    const cx = el('div', 'vence');
+    cx.appendChild(el('div', 'vence-rot',
+      hoje.length === 1 ? 'Vence hoje' : 'Vencem hoje · ' + hoje.length));
+    hoje.forEach(function (c) {
+      const li = el('div', 'vence-item' + (c.critico ? ' vence-critico' : ''));
+      if (c.hora) li.appendChild(el('span', 'vence-hora', c.hora + ' ' + (c.fuso || '')));
+      li.appendChild(el('span', 'vence-texto', c.texto));
+      cx.appendChild(li);
+    });
+    const b = el('button', 'vence-btn', 'Abrir pendências');
+    b.addEventListener('click', function () { mostrarTela('pendencias'); });
+    cx.appendChild(b);
+    alvo.appendChild(cx);
   }
 
   function pintarAvisos(dia) {
@@ -611,6 +692,45 @@
     if (ehHoje && !agoraPosto) ol.appendChild(linhaAgora(agora));
   }
 
+  /* Editor de hora de um bloco. Vale para os blocos com hora oficial que so sai
+     perto da data — desfile, fogos, shows. Nao mexe na referencia do dia. */
+  function abrirEditorHora(b, dia) {
+    const antigo = document.querySelector('.editor-hora');
+    if (antigo) antigo.remove();
+    const cx = el('div', 'editor-hora');
+    cx.appendChild(el('div', 'editor-rot',
+      'Qual é o horário oficial de "' + b.titulo + '"?'));
+    const inp = document.createElement('input');
+    inp.type = 'time';
+    inp.className = 'editor-campo';
+    inp.value = E.horaBloco(b.id) || b.hora;
+    cx.appendChild(inp);
+    const linha = el('div', 'editor-botoes');
+    const salvar = el('button', 'editor-ok', 'Salvar');
+    salvar.addEventListener('click', function () {
+      if (inp.value) E.definirHoraBloco(b.id, inp.value);
+      cx.remove(); pintarLinhaTempo(dia);
+    });
+    const limpar = el('button', 'editor-limpar', 'Voltar ao previsto');
+    limpar.addEventListener('click', function () {
+      E.definirHoraBloco(b.id, null);
+      cx.remove(); pintarLinhaTempo(dia);
+    });
+    linha.appendChild(salvar); linha.appendChild(limpar);
+    cx.appendChild(linha);
+    document.body.appendChild(cx);
+    inp.focus();
+  }
+
+  function rolarAteAgora() {
+    // Depois do paint, senao o elemento ainda nao tem posicao na pagina.
+    requestAnimationFrame(function () {
+      const marca = document.querySelector('#linha-tempo .agora');
+      if (!marca) return;
+      marca.scrollIntoView({ block: 'center' });
+    });
+  }
+
   function linhaAgora(min) {
     const li = el('li', 'agora');
     li.appendChild(el('span', 'agora-rot', paraHora(min)));
@@ -632,7 +752,7 @@
     cab.appendChild(el('span', 'ct-hora', item.hora));
     if (item.deslocado) {
       cab.appendChild(el('span', 'ct-pin'));
-      cab.appendChild(el('span', 'ct-hora-antiga', b.hora));
+      cab.appendChild(el('span', 'ct-hora-antiga', horaDe(b)));
     }
     if (b.fuso) cab.appendChild(el('span', 'ct-fuso', b.fuso));
     if (b.duracaoMin) {
@@ -669,8 +789,13 @@
     });
     if (b.acessoAlt) selos.appendChild(el('span', 'selo selo-' + b.acessoAlt,
       'ou ' + (ROTULO_ACESSO[b.acessoAlt] || b.acessoAlt)));
-    if (b.confirmarHorario) selos.appendChild(el('span', 'selo selo-confirmar',
-      '⚠ confirmar horário'));
+    if (b.confirmarHorario) {
+      const conf = E.horaBloco(b.id);
+      const bt = el('button', 'selo selo-confirmar',
+        conf ? '✓ horário confirmado ' + conf : '⚠ confirmar horário');
+      bt.addEventListener('click', function () { abrirEditorHora(b, dia); });
+      selos.appendChild(bt);
+    }
     if (b.molha) selos.appendChild(el('span', 'selo selo-molha', '💧 molha'));
     if (b.locker) selos.appendChild(el('span', 'selo selo-locker',
       b.locker === 'detector' ? '🔒 locker + detector' : '🔒 locker'));
@@ -725,6 +850,7 @@
   });
   $('#chk-falta').addEventListener('change', function (e) {
     soFalta = e.target.checked;
+    try { localStorage.setItem(CHAVE_FILTRO, soFalta ? '1' : '0'); } catch (err) {}
     pintarLinhaTempo(diaAtual);
   });
 

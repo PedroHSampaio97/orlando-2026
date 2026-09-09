@@ -68,9 +68,23 @@ window.Fase5 = (function () {
     } else {
       // Primeira visita: o SW ainda não controla esta página. Ele assume no
       // próximo carregamento.
+      // `ready` nunca resolve se o install falhou — e o precache e atomico,
+      // entao wifi ruim de aeroporto derruba tudo. Sem prazo, a tela ficava
+      // em "Guardando arquivos..." para sempre, igualzinho a estar carregando.
+      let respondeu = false;
       navigator.serviceWorker.ready.then(function (reg) {
+        respondeu = true;
         if (reg.active) reg.active.postMessage({ tipo: 'status-cache' });
       });
+      setTimeout(function () {
+        if (respondeu || estadoSW.completo) return;
+        estadoSW.motivo =
+          'O app não terminou de se guardar no aparelho. Isso costuma ser rede ruim: ' +
+          'a gravação é tudo-ou-nada, então uma conexão instável derruba a cópia ' +
+          'inteira. Abra o app numa rede boa e recarregue a página. Não embarquem ' +
+          'sem ver a mensagem verde aqui.';
+        pintarStatus();
+      }, 8000);
     }
   }
 
@@ -231,5 +245,9 @@ window.Fase5 = (function () {
       'Onde o texto veio de pesquisa e não do roteiro, o app diz.';
   }
 
-  return { ligar: ligar, pintarStatus: pintarStatus, pintarAjustes: pintarAjustes };
+  // A Home pergunta isto para poder avisar que o app ainda nao funciona offline.
+  function cacheIncompleto() { return !estadoSW.completo; }
+
+  return { ligar: ligar, pintarStatus: pintarStatus, pintarAjustes: pintarAjustes,
+           cacheIncompleto: cacheIncompleto };
 })();

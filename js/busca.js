@@ -35,10 +35,16 @@ window.Busca = (function () {
     local: 'M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z|M12 8a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z',
     dica: 'M12 3a6 6 0 0 1 4 10.5V17H8v-3.5A6 6 0 0 1 12 3z|M9.5 20h5',
     pendencia: 'M9 11l2.5 2.5L16 9|M5 4h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z',
+    lista: 'M8 6h13M8 12h13M8 18h13|M3 6h.01M3 12h.01M3 18h.01',
+    naoperca: 'M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.2l5.9-.9z',
+    preparar: 'M12 3a9 9 0 1 0 9 9|M12 7v5l3 2',
+    plano: 'M9 3v15l-6 3V6zM9 18l6 3M15 21V6l6-3v15z',
   };
   const GRUPO = {
     bloco: 'No roteiro', restaurante: 'Restaurantes',
     local: 'Locais', dica: 'Dicas', pendencia: 'Pendências',
+    lista: 'Listas de compras', naoperca: 'O que não perder',
+    preparar: 'Deixar pronto na véspera', plano: 'Planos B e C',
   };
 
   /* ---- índice ---------------------------------------------------------- */
@@ -61,6 +67,48 @@ window.Busca = (function () {
         });
       });
     });
+    // Dentro do Walmart, com o carrinho na mao, a busca e o gesto natural — e
+    // "adaptador" nao devolvia nada, porque so blocos eram indexados.
+    R.dias.forEach(function (dia) {
+      (dia.listas || []).forEach(function (l) {
+        (l.itens || []).forEach(function (it) {
+          indice.push({
+            tipo: 'lista', nome: it.texto,
+            onde: ddmm(dia.data) + ' · ' + l.titulo.split('—')[0].trim(),
+            busca: normal([it.texto, it.motivo, l.titulo].join(' ')),
+            diaId: dia.id,
+          });
+        });
+      });
+      (dia.naoPerca || []).forEach(function (p) {
+        indice.push({
+          tipo: 'naoperca', nome: p.nome,
+          onde: ddmm(dia.data) + ' · ' + dia.titulo + ' · o que não perder',
+          busca: normal([p.nome, p.motivo, p.custo, p.condicao].join(' ')),
+          diaId: dia.id,
+        });
+      });
+      const pa = dia.prepararAmanha;
+      if (pa) {
+        (pa.itens || []).forEach(function (it) {
+          indice.push({
+            tipo: 'preparar', nome: it.texto,
+            onde: ddmm(dia.data) + ' · deixar pronto para amanhã',
+            busca: normal([it.texto, it.motivo, pa.titulo].join(' ')),
+            diaId: dia.id,
+          });
+        });
+      }
+      (dia.planos || []).forEach(function (p) {
+        indice.push({
+          tipo: 'plano', nome: 'Plano ' + p.letra + ' — ' + p.titulo,
+          onde: ddmm(dia.data) + ' · ' + dia.titulo,
+          busca: normal([p.titulo, p.gatilho, (p.passos || []).join(' ')].join(' ')),
+          diaId: dia.id,
+        });
+      });
+    });
+
     R.restaurantes.forEach(function (r) {
       indice.push({
         tipo: 'restaurante', nome: r.nome,
@@ -143,8 +191,8 @@ window.Busca = (function () {
       const v = el('div', 'vazio-lista');
       v.appendChild(svg(ICO.local));
       v.appendChild(el('p', null,
-        'Busca em ' + indice.length + ' itens: atrações, restaurantes, locais, ' +
-        'dicas e pendências.'));
+        'Busca em ' + indice.length + ' itens: atrações, listas de compras, o que ' +
+        'deixar pronto, restaurantes, locais, dicas e pendências.'));
       alvo.appendChild(v);
       return;
     }
@@ -161,7 +209,8 @@ window.Busca = (function () {
     const porTipo = {};
     achados.forEach(function (a) { (porTipo[a.tipo] = porTipo[a.tipo] || []).push(a); });
 
-    ['bloco', 'restaurante', 'local', 'dica', 'pendencia'].forEach(function (tipo) {
+    ['bloco', 'lista', 'preparar', 'naoperca', 'plano',
+     'restaurante', 'local', 'dica', 'pendencia'].forEach(function (tipo) {
       const lista = porTipo[tipo];
       if (!lista) return;
       alvo.appendChild(el('div', 'busca-grupo', GRUPO[tipo] + ' · ' + lista.length));

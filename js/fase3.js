@@ -549,15 +549,22 @@ window.Fase3 = (function () {
     const hoje = hojeISO();
     const total = R.checklist.length;
     const feitos = R.checklist.filter((c) => E.checkFeito(c.id)).length;
+    // `< hoje` deixava invisivel exatamente o que mais importa: a tarefa que
+    // vence HOJE, com hora marcada. Ela so acendia amanha, quando ja nao serve.
     const atrasadas = R.checklist.filter(
-      (c) => !E.checkFeito(c.id) && dataDe(c) < hoje).length;
+      (c) => !E.checkFeito(c.id) && dataDe(c) <= hoje).length;
+    const vencemHoje = R.checklist.filter(
+      (c) => !E.checkFeito(c.id) && dataDe(c) === hoje).length;
 
     $('#pend-fill').style.width = (total ? (feitos / total) * 100 : 0) + '%';
     $('#pend-texto').textContent = feitos + ' de ' + total + ' feitas';
-    $('#pend-sub').textContent = atrasadas
-      ? atrasadas + (atrasadas === 1 ? ' em atraso · ' : ' em atraso · ') +
-        (total - feitos) + ' abertas no total'
-      : (total - feitos) + ' abertas, nenhuma em atraso';
+    const vencidas = atrasadas - vencemHoje;
+    const partes = [];
+    if (vencemHoje) partes.push(vencemHoje + ' para hoje');
+    if (vencidas) partes.push(vencidas + ' em atraso');
+    $('#pend-sub').textContent = partes.length
+      ? partes.join(' · ') + ' · ' + (total - feitos) + ' abertas no total'
+      : (total - feitos) + ' abertas, nenhuma vencida';
 
     const badge = $('#badge-pend');
     if (atrasadas > 0) { badge.textContent = atrasadas; badge.classList.remove('oculto'); }

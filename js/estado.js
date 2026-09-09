@@ -18,6 +18,7 @@ window.Estado = (function () {
     atualizadoEm: null,
     referencias: {},  // diaId  -> { hora, em }
     ancoras:     {},  // blocoId-> { ancora, em }
+    horas:       {},  // blocoId-> { hora, em }   hora oficial confirmada na hora
     feitos:      {},  // blocoId-> { feito, em }
     reservas:    {},  // restId -> { status, confirmacao, em }
     checklist:   {},  // ckId   -> { feito, em }
@@ -78,7 +79,10 @@ window.Estado = (function () {
     ? !!dados.checklist[id].feito
     : padraoChecklist(id);
   const dataChecklist = (id) => (dados.datasCheck[id] ? dados.datasCheck[id].data : null);
-  const coordLocal  = (id) => dados.coordsLocal[id] || null;
+  const coordLocal  = (id) => {
+    const c = dados.coordsLocal[id];
+    return (c && c.lat != null) ? c : null;   // lápide devolve ausência
+  };
 
   /* ---- escrita ---- */
   function marcarFeito(id, valor) {
@@ -87,12 +91,18 @@ window.Estado = (function () {
   }
   function definirReferencia(diaId, hora) {
     if (hora) dados.referencias[diaId] = { hora: hora, em: agora() };
-    else delete dados.referencias[diaId];
+    else dados.referencias[diaId] = { hora: null, em: agora() };
+    salvar();
+  }
+  const horaBloco = (id) => (dados.horas[id] ? dados.horas[id].hora : null);
+  function definirHoraBloco(blocoId, hora) {
+    if (hora) dados.horas[blocoId] = { hora: hora, em: agora() };
+    else dados.horas[blocoId] = { hora: null, em: agora() };
     salvar();
   }
   function definirAncora(blocoId, valor) {
     if (valor) dados.ancoras[blocoId] = { ancora: valor, em: agora() };
-    else delete dados.ancoras[blocoId];
+    else dados.ancoras[blocoId] = { ancora: null, em: agora() };
     salvar();
   }
   function definirReserva(restId, campos) {
@@ -106,25 +116,32 @@ window.Estado = (function () {
 
   function definirDataChecklist(id, data) {
     if (data) dados.datasCheck[id] = { data: data, em: agora() };
-    else delete dados.datasCheck[id];
+    else dados.datasCheck[id] = { data: null, em: agora() };
     salvar();
   }
   function definirCoordLocal(id, lat, lng) {
     if (lat != null && lng != null) {
       dados.coordsLocal[id] = { lat: lat, lng: lng, em: agora() };
-    } else { delete dados.coordsLocal[id]; }
+    } else { dados.coordsLocal[id] = { lat: null, lng: null, em: agora() }; }
     salvar();
   }
 
   /* ---- exportar / importar (a base do sync manual e do automático depois) ---- */
+  const CHAVE_EXPORT = 'orlando2026:ultimo-export';
   function exportar() {
+    // Marca a hora para a Home poder cobrar. E preferencia local do aparelho,
+    // nao estado sincronizado: nao entra no JSON.
+    try { localStorage.setItem(CHAVE_EXPORT, agora()); } catch (e) {}
     return JSON.stringify(dados, null, 2);
+  }
+  function ultimoExport() {
+    try { return localStorage.getItem(CHAVE_EXPORT); } catch (e) { return null; }
   }
 
   // Merge por campo, vencendo o timestamp mais recente. É isto que evita que o
   // import de um celular apague o trabalho feito no outro.
-  const GRUPOS = ['referencias', 'ancoras', 'feitos', 'reservas', 'checklist',
-                  'datasCheck', 'coordsLocal'];
+  const GRUPOS = ['referencias', 'ancoras', 'horas', 'feitos', 'reservas',
+                  'checklist', 'datasCheck', 'coordsLocal'];
 
   function importar(texto, modo) {
     const entrando = JSON.parse(texto);
@@ -158,11 +175,13 @@ window.Estado = (function () {
     feito: feito, marcarFeito: marcarFeito,
     referencia: referencia, definirReferencia: definirReferencia,
     ancora: ancora, definirAncora: definirAncora,
+    horaBloco: horaBloco, definirHoraBloco: definirHoraBloco,
     reserva: reserva, definirReserva: definirReserva,
     checkFeito: checkFeito, marcarChecklist: marcarChecklist,
     dataChecklist: dataChecklist, definirDataChecklist: definirDataChecklist,
     coordLocal: coordLocal, definirCoordLocal: definirCoordLocal,
-    exportar: exportar, importar: importar, limpar: limpar,
+    exportar: exportar, ultimoExport: ultimoExport,
+    importar: importar, limpar: limpar,
     bruto: function () { return dados; },
   };
 })();

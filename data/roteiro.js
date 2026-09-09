@@ -199,9 +199,12 @@ window.ROTEIRO = {
     fechado: true,
     revisadoEm: '2026-09-09',
 
-    // A âncora do dia é o pouso. Atrasou o voo, a tarde inteira desloca junto —
-    // menos o jantar, que tem hora marcada.
-    referencia: { rotulo: 'Pouso no MCO', padrao: '12:35', confirmado: true },
+    // A âncora é a SAÍDA DO TERMINAL C, não o pouso. O que decide o dia não é a
+    // hora em que o avião toca o chão: é a hora em que eles saem com as malas na
+    // mão, depois de uma fila de imigração que vai de 40 min a 2h. Ancorar no
+    // pouso obrigava a digitar uma hora de pouso falsa para empurrar a tarde.
+    referencia: { rotulo: 'Saída do Terminal C', padrao: '14:15', confirmado: false },
+    rotaOrigemLocalId: 'mco',
 
     resumo:
       'O dia mais fácil de salvar da viagem inteira: não tem ingresso, não tem hora de ' +
@@ -214,7 +217,12 @@ window.ROTEIRO = {
       'das 22h30 de 09/11.',
       'Roaming: com o Passaporte Américas o celular deve conectar sozinho ao pousar. Se ' +
       'não conectar em 10 minutos, liguem e desliguem o modo avião e confiram se o ' +
-      'roaming de dados está ligado nos ajustes. Sem internet não tem Uber.',
+      'roaming de dados está ligado nos ajustes.',
+      'SE NÃO HOUVER INTERNET DE JEITO NENHUM: o wifi do aeroporto (MCO Public WiFi, ' +
+      'aberto) resolve para chamar o Uber ainda dentro do terminal. E se nem isso, o ' +
+      'balcão de Ground Transportation fica no mesmo nível da bagagem e põe vocês num ' +
+      'táxi oficial — mais caro (uns US$ 65 a 75 até a 192), mas não depende de rede. ' +
+      'Levem o endereço do hotel escrito: 5367 W Irlo Bronson Memorial Hwy, Kissimmee.',
     ],
 
     notas: [
@@ -488,23 +496,27 @@ window.ROTEIRO = {
           'a imigração dos EUA é toda em Orlando.',
         acesso: [], duracaoMin: 255 },
 
-      { id: 'b-1011-1235', hora: '12:35', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-1011-1235', hora: '12:35', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Pouso no MCO — Terminal C',
         descricao: 'Internacionais chegam no Terminal C',
         fuso: 'Orlando',
         contexto:
-          'Este é o horário que ancora o resto do dia. Se o voo atrasar, mude a referência ' +
-          'aqui em cima e a tarde inteira desloca junto — menos o jantar, que tem hora marcada.',
+          'A hora do pouso não move o dia sozinha — o que move é a hora de SAIR do ' +
+          'terminal, que é a referência lá em cima. Se o voo atrasar, somem o atraso à ' +
+          'saída prevista e ajustem a referência: a tarde inteira desloca junto, menos o ' +
+          'jantar, que tem hora marcada.',
         localId: 'mco', acesso: [], pesquisa: '2026-09-08', duracaoMin: 15 },
 
-      { id: 'b-1011-1250', hora: '12:50', ancora: 'referencia', tipo: 'espera',
+      { id: 'b-1011-1250', hora: '12:50', ancora: 'fixo', tipo: 'espera',
         titulo: 'Imigração, bagagem e alfândega',
         descricao: 'De 40 min a 2h. É esta fila que decide se o dia é plano A, B ou C',
         contexto:
           'A caminhada do portão até a esteira já leva de 15 a 25 minutos no Terminal C. ' +
           'Enquanto esperam, olhem o relógio: saindo até 14h15 é plano A; até 16h é plano ' +
-          'B; depois das 16h, plano C. É a hora de SAIR do terminal que decide, não a do ' +
-          'pouso.',
+          'B; depois das 16h, plano C.\n\n' +
+          'QUANDO SOUBEREM A HORA REAL DE SAIR, ponham ela na referência lá em cima. A ' +
+          'tarde inteira desloca junto e o app avisa em vermelho o que deixou de caber ' +
+          'antes do jantar.',
         localId: 'mco', acesso: [], critico: true, duracaoMin: 85 },
 
       { id: 'b-1011-1415', hora: '14:15', ancora: 'referencia', tipo: 'tarefa',
@@ -686,9 +698,13 @@ window.ROTEIRO = {
       },
       {
         letra: 'B',
-        titulo: 'O TRON está quebrado no rope drop',
-        gatilho: 'O TRON aparece como indisponível no app ou a fila não abre às 9h.',
+        titulo: 'O TRON quebrou, ou a fila já está muito maior que 20 min',
+        gatilho: 'O TRON aparece indisponível, a fila não abre às 9h, OU vocês chegam nele ' +
+                 'e o painel marca 45 minutos ou mais.',
         passos: [
+          'FILA GRANDE (45 min ou mais) é o caso mais provável dos dois, e a resposta é a ' +
+          'mesma: não fiquem. Aos 45 minutos o TRON custa mais do que entrega logo cedo, ' +
+          'porque essa é a única hora em que TODO o resto do parque também está vazio.',
           'Não esperem em frente a ele. Quebra de manhã costuma levar horas e vocês perdem ' +
           'a única hora boa do dia parados.',
           'Pivô imediato para a Fantasyland: Seven Dwarfs no standby, que às 9h ainda está ' +
@@ -1250,6 +1266,14 @@ window.ROTEIRO = {
           'despertador: nada hoje depende de acordar cedo.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 60 },
 
+      { id: 'b-1211-0930', hora: '09:30', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Sair para o outlet',
+        descricao: 'Uber, ~25 min, US$ 20–30',
+        contexto:
+          'O Character Warehouse abre às 10h e o estoque bom sai cedo. Saindo 9h30 vocês ' +
+          'chegam na abertura, que é o único momento em que a loja está inteira.',
+        localId: 'premium-outlets', acesso: [], duracaoMin: 30 },
+
       { id: 'b-1211-1000', hora: '10:00', ancora: 'fixo', tipo: 'compras',
         titulo: 'Orlando International Premium Outlets',
         descricao: '~25 min do hotel. Quinta, 10h às 21h',
@@ -1291,7 +1315,15 @@ window.ROTEIRO = {
           'a sequência mais pesada da viagem: Animal Kingdom, Islands of Adventure, ' +
           'SeaWorld, Epic Universe e Busch Gardens com três horas de carro.\n\n' +
           'Este bloco não é folga. É o que faz o resto funcionar.',
-        localId: 'hotel-travelodge', acesso: [], duracaoMin: 180 },
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 155 },
+
+      { id: 'b-1211-1705', hora: '17:05', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Sair para o ICON Park',
+        descricao: 'Uber, ~25 min, US$ 20–30',
+        contexto:
+          'O pôr do sol é às 17h31 e é o melhor momento do lugar. Para chegar nele, a ' +
+          'saída é 17h05 — não 17h30.',
+        localId: 'icon-park', acesso: [], duracaoMin: 25 },
 
       { id: 'b-1211-1730', hora: '17:30', ancora: 'fixo', tipo: 'livre',
         titulo: 'ICON Park — promenade ao pôr do sol',
