@@ -342,28 +342,65 @@ Journey Into Imagination, Awesome Planet, Turtle Talk with Crush, Disney & Pixar
 
 # 🎥 17/11 (terça) — UNIVERSAL STUDIOS FLORIDA
 
-Sem Express Pass. Sem Early Park Admission. **Chegar cedo é a estratégia inteira.**
+O parque de rua, não de castelo: quarteirões de Nova York e São Francisco montados como cenário de cinema, com o Beco Diagonal escondido no fundo.
+
+**Este é o único dia da viagem em que o rope drop já estava certo.** Nos cinco parques da Disney ele caía dentro da multidão do Early Entry. Aqui não cai: o Early Park Admission da Universal é só para hóspede de hotel e alterna entre o Beco Diagonal e Hogsmeade — e a maioria usa em Hogsmeade, no Islands, o que deixa a primeira hora daqui mole.
 
 | Hora | O quê | Como |
 |---|---|---|
-| **7h45** | Sair do hotel | 30–35 min de Kissimmee |
-| **8h30** | Portão | |
-| **9h00** | **Escape from Gringotts** | Rope drop. Vá direto ao Beco Diagonal |
-| **9h50** | **Beco Diagonal** | Ollivanders (cerimônia da varinha), Gringotts, decoração de Natal |
-| **10h45** | **Revenge of the Mummy** | Coaster no escuro com lançamento |
-| **11h20** | **Hollywood Rip Ride Rockit** | Você escolhe a trilha sonora na hora |
-| **12h00** | **Transformers: The Ride 3D** | |
-| **12h45** | **Almoço — Leaky Cauldron** | Bangers and mash, fish and chips |
-| **14h00** | **Men in Black: Alien Attack** | Clássico, você atira |
-| **14h45** | **Villain-Con Minion Blast** | Minion Land |
-| **15h30** | **The Simpsons Ride** | Simulador, humor que sobrevive à tradução |
-| **16h15** | **The Bourne Stuntacular** | O melhor show de Orlando. Puramente visual |
-| **17h15** | **E.T. Adventure** | Clássico de 1990. Só existe aqui no mundo |
-| **18h00** | **Jantar** | Finnegan's dentro do parque, ou CityWalk |
-| **19h30** | **Universal's Holiday Parade featuring Macy's** | Balões da parada de Nova York. Confiram o horário |
+| **7h45** | Sair do hotel | 30–35 min de Kissimmee. Uber US$ 25–35 |
+| **8h30** | Portão | Meia hora antes. **Não parem na Production Central** — ela entope no rope drop |
+| **9h00** | **Escape from Gringotts** | Rope drop. Locker obrigatório |
+| **9h50** | **Transformers: The Ride 3D** | Walk-on na 1ª hora, 30 min na 2ª. A janela fecha às 11h |
+| **10h30** | **Revenge of the Mummy** | Detector de metal, nada nos bolsos |
+| **11h10** | **Despicable Me Minion Mayhem** | A 3ª maior fila do parque — estava faltando no roteiro |
+| **11h45** | **Villain-Con Minion Blast** | Mesma land, sem caminhada |
+| **12h25** | **Beco Diagonal** | Ollivanders, o dragão do Gringotts, Knockturn Alley |
+| **13h15** | **Almoço — Leaky Cauldron** | Balcão. Mobile order pelo app da Universal |
+| **14h15** | **Men in Black: Alien Attack** | Vocês disputam pontuação |
+| **15h00** | **The Simpsons Ride** | A Springfield inteira está reconstruída em volta |
+| **15h50** | **E.T. Adventure** | Meio-período desde maio de 2026 — confiram se está operando |
+| **16h30** | **The Bourne Stuntacular** | O melhor show de Orlando. Sessão marcada |
+| **17h30** | **Holiday Parade featuring Macy's** | ⚠️ **HORA A CONFIRMAR** — pode ser 17h30 ou 19h30 |
+| **18h45** | **Jantar — Finnegan's** | Pub irlandês na New York. Sem reserva |
+| **20h00** | **Beco Diagonal à noite** | A land no escuro. O dragão cospe fogo |
+| **21h00** | Voltar | Andem até o CityWalk antes de chamar o Uber |
+
+### Filas
+
+| Atração | Média | Pico | Quando fazer |
+|---|---|---|---|
+| Escape from Gringotts | 57 min | **190** | 1ª hora (**15 min**) · 83 min às 15h |
+| Revenge of the Mummy | 44 min | 120 | distribui igual o dia todo |
+| Despicable Me Minion Mayhem | 35 min | 75 | antes do almoço |
+| Transformers 3D | 33 min | 120 | 1ª hora walk-on, 2ª hora 30 min |
+| E.T. Adventure | 28 min | 70 | fim da tarde |
+| The Simpsons Ride | 22 min | 55 | tarde |
+| Men in Black | 22 min | 60 | tarde |
+
+### O desfile é o maior risco do dia
+
+O roteiro assume **17h30**, mas em anos anteriores ele rodou tanto às 17h30 quanto às 19h30. São duas horas no bloco que ancora a noite inteira. O desfile, o jantar e o Beco à noite estão como **âncora fixa** — não deslocam com a abertura do parque, e se a hora mudar é preciso mexer nos três. Está no checklist de 01/11.
+
+A temporada de Natal da Universal vai de **14/11 a 03/01**. Vocês pegaram a primeira noite dela no Islands, no dia 14.
+
+### Três atrações que não existem mais
+
+Nenhuma delas é escolha de vocês:
+
+- **Hollywood Rip Ride Rockit** — fechou em 2025 para dar lugar ao *Fast & Furious: Hollywood Drift*. **Cuidado com a notícia:** o Hollywood Drift abriu em 16/09/2026 na **Califórnia**; a versão da Flórida só chega em **2027**. Nada ocupa o lugar dele.
+- **Fast & Furious: Supercharged** — fechou em **17/08/2026**. Com ele foi a única atração da San Francisco, que virou área de passagem.
+- **Woody Woodpecker's Nuthouse Coaster** — fechou em 16/01/2023 com o resto da KidZone, que virou DreamWorks Land.
 
 ### Renúncias
-Fast & Furious: Supercharged (consenso de que é a pior atração do complexo), Kang & Kodos, Woody Woodpecker, Animal Actors, Hogwarts Express (deixem para o dia 23, quando dá para fazer ida e volta).
+
+Race Through New York (Jimmy Fallon), Kang & Kodos, DreamWorks Land (infantil), Animal Actors e DreamWorks Imagination Celebration (shows falados em inglês). Hogwarts Express fica para o **dia 23**, quando dá para fazer ida e volta.
+
+*O Bourne Stuntacular passou no teste do idioma porque é ação de ponta a ponta e a trama cabe numa frase.*
+
+### Lockers
+
+Três atrações de hoje exigem guardar tudo: **Gringotts, Mummy e Men in Black**. O Mummy tem **detector de metal** — nem chave nem celular no bolso. O locker padrão é grátis pelo tempo da fila mais a atração; cada uso come 10 a 15 minutos que a duração dos blocos não conta.
 
 ---
 

@@ -3160,9 +3160,10 @@ window.ROTEIRO = {
       itens: [
         { texto: 'Ingressos Universal aparecendo no app da Universal, nos DOIS perfis',
           critico: true,
-          motivo: 'É outro aplicativo, outra conta. Confiram HOJE que os dois estão lá e que ' +
-                  'é PARK-TO-PARK — sem isso o Hogwarts Express entre os dois parques não ' +
-                  'funciona, e ele é parte do roteiro de amanhã.' },
+          motivo: 'É outro aplicativo, outra conta. Confiram HOJE que os dois estão lá. O ' +
+                  'PARK-TO-PARK não é para amanhã — o Hogwarts Express ficou para o dia 23 — ' +
+                  'mas é o mesmo ingresso, e se estiver errado é melhor descobrir agora do ' +
+                  'que na catraca.' },
         { texto: 'Conferir o horário de abertura do Universal Studios', critico: true,
           motivo: 'Amanhã assume 9h. Se for outro, mudem a referência e a manhã desloca junto.' },
         { texto: 'Alarme nos dois celulares', critico: true,
@@ -3489,165 +3490,426 @@ window.ROTEIRO = {
     diaSemana: 'terça',
     emoji: '🎥',
     titulo: 'Universal Studios Florida',
-    subtitulo: 'Sem Express · chegar cedo é a estratégia inteira',
+    subtitulo: 'O primeiro dia fora da Disney · e o rope drop que estava certo',
     tipo: 'parque',
     operadora: 'universal',
     parqueId: 'universal-studios',
     custoZero: false,
+    fechado: true,
+    revisadoEm: '2026-09-10',
     referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: false },
     resumo:
-      'Sem Express Pass. Sem Early Park Admission. Chegar cedo é a estratégia inteira — ' +
-      'o rope drop no Gringotts resolve a maior fila do dia antes das 10h.',
-    avisos: [],
+      'O parque de rua, não de castelo: quarteirões de Nova York e São Francisco montados ' +
+      'como cenário de cinema, com o Beco Diagonal escondido no fundo. Este é o único dia ' +
+      'da viagem em que o rope drop do roteiro já estava certo — e ele resolve a maior fila ' +
+      'do parque antes das 10h.',
+    avisos: [
+      'A HORA DO DESFILE É PROPOSTA, NÃO CONFIRMAÇÃO. O roteiro assume 17h30, mas em anos ' +
+      'anteriores ele rodou tanto às 17h30 quanto às 19h30. São duas horas de diferença no ' +
+      'bloco que ancora a noite inteira — confiram no app da Universal e mexam nos blocos a ' +
+      'partir do Bourne.',
+      'Não existe Multi Pass nem Single Pass aqui. É outra operadora, outro app e outra ' +
+      'conta — e a decisão de não comprar Express Pass já está fechada para todos os dias ' +
+      'da Universal.',
+    ],
     notas: [
       { tipo: 'info', texto:
-        'O rope drop no Gringotts é o que decide o dia: é a maior fila daqui e a única que ' +
-        'não tem conserto depois das 10h. A fila dele passa pelo saguão do banco e por dois ' +
-        'pré-shows — vale a pena entrar cedo justamente para percorrer isso sem aperto.',
-        pesquisa: '2026-09-08' },
+        'O ROPE DROP NO GRINGOTTS ESTÁ CERTO, e é a primeira vez na viagem que eu confiro ' +
+        'isso e não acho erro.\n\n' +
+        'Nos cinco parques da Disney o rope drop caía sempre dentro da multidão do Early ' +
+        'Entry. Aqui não cai: o Early Park Admission da Universal é só para hóspede de hotel ' +
+        'e alterna entre o Beco Diagonal e Hogsmeade — e a maioria usa em Hogsmeade, no ' +
+        'Islands, o que deixa a primeira hora daqui mole.\n\n' +
+        'Os números: o Gringotts faz ~15 minutos na primeira hora depois da abertura, 29 às ' +
+        '10h e 83 às 15h, com pico de 190 e média de 57. É a maior vantagem de horário do ' +
+        'dia inteiro, e ela é de graça.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'alerta', texto:
+        'TRÊS ATRAÇÕES QUE O ROTEIRO CITAVA NÃO EXISTEM MAIS. Nenhuma delas é escolha de ' +
+        'vocês — todas fecharam, e ficam registradas em "fechado" com data:\n\n' +
+        'HOLLYWOOD RIP RIDE ROCKIT — fechou em 2025 para dar lugar ao Fast & Furious: ' +
+        'Hollywood Drift. CUIDADO COM A NOTÍCIA: o Hollywood Drift abriu em 16/09/2026, mas ' +
+        'em Universal Studios Hollywood, na Califórnia. A versão da Flórida só chega em ' +
+        '2027. Nada ocupa o lugar dele na viagem de vocês.\n\n' +
+        'FAST & FURIOUS: SUPERCHARGED — fechou em 17/08/2026, último dia de operação em 16/08.\n\n' +
+        'WOODY WOODPECKER — fechou em 16/01/2023 junto com o resto da KidZone, que virou a ' +
+        'DreamWorks Land.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'info', texto:
+        'O E.T. VIROU MEIO-PERÍODO em maio de 2026. Ele pode simplesmente não estar operando ' +
+        'no dia — é a única atração do roteiro nessa condição. O plano C trata disso, e é ' +
+        'barato: os 35 minutos voltam para o Beco Diagonal.\n\n' +
+        'Ele é o último passeio de 1990 ainda de pé no mundo, e é o motivo de estar aqui.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'info', texto:
+        'A SAN FRANCISCO FICOU VAZIA. Com o Fast & Furious fechado, ela não tem mais nenhuma ' +
+        'atração — virou área de passagem e de restaurante. Vocês atravessam por ela indo do ' +
+        'New York para o Beco Diagonal, e é só isso que ela é hoje.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'info', texto:
+        'A TEMPORADA DE NATAL DA UNIVERSAL COMEÇOU EM 14/11 e vai até 03/01. Vocês pegaram a ' +
+        'primeira noite dela no Islands, no dia 14, e hoje pegam o desfile — o mesmo dos ' +
+        'balões da Macy’s de Nova York, que a Universal traz para cá todo ano.',
+        pesquisa: '2026-09-10' },
+    ],
+    planos: [
+      { letra: 'A', titulo: 'O dia como está escrito',
+        gatilho: 'Vocês estão no portão às 8h30 e o parque abre às 9h.',
+        passos: [
+          'Direto ao Beco Diagonal, sem parar na Production Central — ela é a zona de ' +
+          'esmagamento do rope drop justamente por ser a primeira que aparece.',
+          'Gringotts primeiro, enquanto ele custa 15 minutos em vez de 83.',
+          'Transformers na segunda hora, que é a última janela barata dele antes da noite.',
+          'Mummy, Minion Land e o Beco com calma até o almoço.',
+          'A tarde é a metade de baixo do anel: Men in Black, Simpsons, E.T. e o Bourne.',
+          'Desfile, jantar, e o Beco à noite para fechar.',
+        ] },
+      { letra: 'B', titulo: 'O desfile é às 17h30 — e provavelmente é',
+        gatilho: 'Vocês conferem no app e a sessão é 17h30, não 19h30.',
+        passos: [
+          'É o cenário que o roteiro já assume. Não muda nada.',
+          'O Bourne termina 17h20 e vocês pegam lugar direto, sem intervalo.',
+          'Se a sessão for 19h30, o jantar sobe para 17h45 e o Beco à noite vem antes do ' +
+          'desfile, não depois — e o dia termina no desfile.',
+        ] },
+      { letra: 'B2', titulo: 'O parque fecha às 19h',
+        gatilho: 'O horário oficial sai e o fechamento é 19h, não 21h ou 22h.',
+        passos: [
+          'Cai o Beco à noite, que é o último bloco.',
+          'O jantar vira CityWalk, que fica fora da catraca e não fecha com o parque.',
+          'Nada mais muda: a manhã e a tarde não dependem do fechamento.',
+        ] },
+      { letra: 'C', titulo: 'O E.T. está fechado',
+        gatilho: 'Vocês chegam às 15h50 e ele não está operando — meio-período desde maio.',
+        passos: [
+          'Não insistam nem esperem: ele não reabre no meio do dia.',
+          'Os 35 minutos vão para o Beco Diagonal, que é onde vocês vão querer estar.',
+          'O Bourne não desloca: ele tem sessão marcada.',
+        ] },
     ],
     blocos: [
       { id: 'b-1711-0745', hora: '07:45', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Sair do hotel', descricao: '30–35 min de Kissimmee',
-        localId: 'universal-studios', acesso: [] },
+        titulo: 'Sair do hotel',
+        descricao: '30–35 min de Kissimmee. Uber US$ 25–35',
+        contexto:
+          'O estacionamento da Universal é pago e fica longe da catraca — são uns dez minutos ' +
+          'de esteira rolante do prédio até o CityWalk, e mais cinco do CityWalk até o portão. ' +
+          'De Uber vocês descem bem mais perto.',
+        localId: 'universal-studios', acesso: [], duracaoMin: 45 },
 
       { id: 'b-1711-0830', hora: '08:30', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Portão', descricao: '',
+        titulo: 'Portão',
+        descricao: 'Meia hora antes da abertura. Mochila leve — hoje tem locker',
         contexto:
-          'O estacionamento da Universal é um garagem gigante e a caminhada até a catraca, ' +
-          'passando pelo CityWalk, leva de 15 a 20 minutos. Contem esse tempo.',
-        localId: 'universal-studios', acesso: [] },
+          'PONTO DE ENCONTRO DE HOJE: a fonte do globo giratório da Universal, logo depois da ' +
+          'catraca. É o ponto mais óbvio do parque e todo mundo sabe onde fica. Se vocês se ' +
+          'perderem, vão para lá e ESPEREM.\n\n' +
+          'A PRIMEIRA COISA AO PASSAR: não parem na Production Central. Ela é a primeira área ' +
+          'que aparece e é exatamente por isso que ela entope no rope drop. Sigam reto.',
+        localId: 'universal-studios', acesso: [], duracaoMin: 30 },
 
       { id: 'b-1711-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Escape from Gringotts',
-        descricao: 'Rope drop. Vá direto ao Beco Diagonal',
+        titulo: 'Harry Potter and the Escape from Gringotts',
+        descricao: 'Rope drop. É o bloco que decide o dia',
         contexto:
-          'Híbrido de montanha-russa e dark ride 3D dentro do banco dos duendes. Emoção moderada ' +
-          '— tem quedas curtas, sem inversão. A fila passa pelo saguão do banco com duendes ' +
-          'animatrônicos e dois pré-shows; é das melhores filas já construídas.',
-        areaParque: 'Diagon Alley', acesso: ['rope-drop', 'standby'],
-        singleRider: true, singleRiderNota: 'Pula os dois pré-shows. Não use na primeira vez.',
-        locker: 'obrigatorio', pesquisa: '2026-09-08' },
+          'Montanha-russa suave combinada com dark ride: vocês descem ao subterrâneo do banco ' +
+          'dos duendes num carrinho que gira, com projeção, queda curta e Voldemort no meio. ' +
+          'Não é radical — é cenário.\n\n' +
+          'A FILA É METADE DA ATRAÇÃO. Ela passa pelo saguão do banco, com os duendes ' +
+          'animatrônicos atrás das mesas, e por dois pré-shows. Entrar cedo é justamente o que ' +
+          'deixa vocês percorrerem isso sem aperto.\n\n' +
+          'POR QUE AGORA E NÃO DEPOIS: 15 minutos na primeira hora contra 83 às 15h, com pico ' +
+          'de 190. Não existe segunda chance barata neste dia — a outra janela é depois das ' +
+          '21h, e vocês vão estar jantando.\n\n' +
+          'LOCKER OBRIGATÓRIO. Deixem os bolsos vazios antes de entrar na fila.',
+        areaParque: 'Diagon Alley', acesso: [], critico: true, duracaoMin: 40,
+        fila: { min: 15, quando: 'na primeira hora', pico: 190, estimado: 57, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
 
-      { id: 'b-1711-0950', hora: '09:50', ancora: 'referencia', tipo: 'livre',
-        titulo: 'Beco Diagonal',
-        descricao: 'Ollivanders (cerimônia da varinha), Gringotts, decoração de Natal',
-        contexto:
-          'A área inteira é fechada por muros, com o dragão em cima do banco que solta fogo de ' +
-          'verdade a cada 10 minutos. Ollivanders é uma cerimônia curta em grupo pequeno onde ' +
-          'a varinha "escolhe" alguém — é preciso entrar na fila, dura ~10 min.',
-        areaParque: 'Diagon Alley', acesso: [] },
-
-      { id: 'b-1711-1045', hora: '10:45', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Revenge of the Mummy',
-        descricao: 'Coaster no escuro com lançamento',
-        contexto:
-          'Montanha-russa fechada com lançamento, fogo de verdade no teto e um trecho de ré. ' +
-          'Curta e muito divertida. Exige locker com detector de metal — nada nos bolsos, nem ' +
-          'celular.',
-        areaParque: 'New York', acesso: ['standby'],
-        singleRider: true, locker: 'detector', pesquisa: '2026-09-08' },
-
-      { id: 'b-1711-1120', hora: '11:20', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Hollywood Rip Ride Rockit',
-        descricao: 'Você escolhe a trilha sonora na hora',
-        contexto:
-          'Montanha-russa alta com subida vertical de 90° e uma volta não invertida. Sacode ' +
-          'bastante. Vocês escolhem a música num painel no assento antes de sair. Guardem tudo ' +
-          'no locker — não permite nada solto.',
-        areaParque: 'Production Central', acesso: ['standby'],
-        locker: 'obrigatorio', verificado: false },
-
-      { id: 'b-1711-1200', hora: '12:00', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1711-0950', hora: '09:50', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Transformers: The Ride 3D',
-        descricao: '',
+        descricao: 'A segunda janela barata do dia, e ela fecha às 11h',
         contexto:
-          'Veículo em movimento com telas 3D gigantes e muito movimento. É intenso visualmente ' +
-          'mas não tem queda nem inversão. Barulhento e sem pausa do começo ao fim.',
-        areaParque: 'Production Central', acesso: ['standby'],
-        singleRider: true, pesquisa: '2026-09-08' },
+          'Simulador em veículo sem trilhos com telas 3D gigantes: vocês são jogados no meio ' +
+          'de uma briga entre Autobots e Decepticons, com o veículo se movendo de verdade ' +
+          'entre as telas. É barulhento e desorienta — e é bem melhor do que parece na foto.\n\n' +
+          'ELE É WALK-ON POR EXATAMENTE UMA HORA DEPOIS DA ABERTURA, 30 minutos na segunda ' +
+          'hora, e chega a 120 no pico. Fazer ele agora custa meia hora; fazer ao meio-dia ' +
+          'custa o dobro.',
+        areaParque: 'Production Central', acesso: [], duracaoMin: 35,
+        fila: { min: 30, quando: 'na segunda hora', pico: 120, estimado: 33, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
 
-      { id: 'b-1711-1245', hora: '12:45', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Almoço — Leaky Cauldron',
-        descricao: 'Bangers and mash, fish and chips',
+      { id: 'b-1711-1030', hora: '10:30', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Revenge of the Mummy',
+        descricao: 'Coaster no escuro com lançamento. Detector de metal na entrada',
         contexto:
-          'Balcão temático de pub inglês dentro do Beco Diagonal, com teto baixo e luz de vela. ' +
-          'Comida britânica de verdade. É o melhor quick service da Universal.',
-        restauranteId: 'r-leaky', areaParque: 'Diagon Alley', acesso: [] },
+          'Montanha-russa fechada com lançamento, fogo de verdade e uma parada no escuro total ' +
+          'no meio. Curta e muito bem feita — é consenso como a melhor montanha-russa deste ' +
+          'parque.\n\n' +
+          'A FILA DELE DISTRIBUI IGUAL O DIA INTEIRO, com média de 44 minutos: não existe hora ' +
+          'boa nem hora ruim, e por isso ele fica aqui, entre duas atrações que têm hora certa.\n\n' +
+          'DETECTOR DE METAL: nada nos bolsos, nem chave nem celular. Locker obrigatório.',
+        areaParque: 'New York', acesso: [], duracaoMin: 35,
+        fila: { min: 30, quando: 'de manhã', pico: 120, estimado: 44, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
 
-      { id: 'b-1711-1400', hora: '14:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Men in Black: Alien Attack',
-        descricao: 'Clássico, você atira',
+      { id: 'b-1711-1110', hora: '11:10', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Despicable Me Minion Mayhem',
+        descricao: 'A terceira maior fila do parque, e ela estava fora do roteiro',
         contexto:
-          'Dark ride de tiro em cabines que giram, com pontuação no fim. Truque: mirem nos ' +
-          'olhos laranja dos aliens e continuem atirando mesmo depois de acertar.',
-        areaParque: 'World Expo', acesso: ['standby'],
-        singleRider: true, locker: 'obrigatorio', pesquisa: '2026-09-08' },
+          'Simulador com telas, em que vocês viram Minions. É bobo de propósito e funciona ' +
+          'muito bem — não depende de inglês e é dos poucos que arranca risada de todo mundo.\n\n' +
+          'Ele faz 35 minutos de média, atrás só do Gringotts e do Mummy, e estava faltando no ' +
+          'roteiro. Está aqui porque a Minion Land já era parada do dia por causa do ' +
+          'Villain-Con, no bloco seguinte: são duas atrações na mesma área, sem caminhada ' +
+          'entre elas.',
+        areaParque: 'Minion Land', acesso: [], duracaoMin: 35,
+        fila: { min: 25, quando: 'antes do almoço', pico: 75, estimado: 35, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
 
-      { id: 'b-1711-1445', hora: '14:45', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1711-1145', hora: '11:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Villain-Con Minion Blast',
-        descricao: 'Minion Land',
-        contexto: 'Atração de tiro em que vocês andam numa esteira. Leve, curta, sem emoção.',
-        areaParque: 'Minion Land', acesso: ['standby'] },
-
-      { id: 'b-1711-1530', hora: '15:30', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'The Simpsons Ride',
-        descricao: 'Simulador, humor que sobrevive à tradução',
+        descricao: 'Você atira, andando numa esteira. Sem fila de verdade',
         contexto:
-          'Simulador de cabine em cúpula, tipo montanha-russa virtual. Causa enjoo em algumas ' +
-          'pessoas. A área externa reproduz Springfield inteira, com Moe’s e Krusty Burger.',
-        areaParque: 'Springfield', acesso: ['standby'] },
+          'Metade jogo de tiro, metade passeio: vocês ficam numa esteira rolante com uma arma ' +
+          'de raio e vão pontuando pelos cenários. É o mais novo do parque nesta área e engole ' +
+          'gente rápido, então a fila quase nunca acumula.',
+        areaParque: 'Minion Land', acesso: [], duracaoMin: 30,
+        pesquisa: '2026-09-10' },
 
-      { id: 'b-1711-1615', hora: '16:15', ancora: 'fixo', tipo: 'show',
+      { id: 'b-1711-1225', hora: '12:25', ancora: 'referencia', tipo: 'livre',
+        titulo: 'Beco Diagonal',
+        descricao: 'Ollivanders, o dragão do Gringotts, decoração de Natal',
+        contexto:
+          'A land mais bem construída dos dois parques da Universal, e ela não parece com ' +
+          'Hogsmeade: aqui é a Londres bruxa, entrando por uma parede de tijolos atrás da ' +
+          'fachada da estação. O dragão em cima do Gringotts cospe fogo de tempos em tempos — ' +
+          'dá para ouvir ele carregando antes.\n\n' +
+          'OLLIVANDERS: a cerimônia da varinha, em que a varinha escolhe o bruxo. A daqui é a ' +
+          'versão maior, com mais salas que a de Hogsmeade que vocês fazem no dia 23. É de ' +
+          'graça assistir; a varinha custa à parte.\n\n' +
+          'É AGORA E NÃO À NOITE que dá para ver as vitrines com calma — o Beco à noite, no ' +
+          'fim do dia, é para a luz, não para as lojas.',
+        areaParque: 'Diagon Alley', acesso: [], duracaoMin: 45,
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1711-1315', hora: '13:15', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Almoço — Leaky Cauldron',
+        descricao: 'Balcão. Mobile order pelo app da Universal',
+        contexto:
+          'Comida de pub inglês dentro do Beco: bangers and mash, fish and chips, shepherd’s ' +
+          'pie. É consenso como o melhor quick service da Universal, e o salão é escuro e ' +
+          'temático, com vigas e lareira.\n\n' +
+          'MOBILE ORDER pelo app da Universal — a fila do balcão aqui é longa e a da retirada ' +
+          'não existe. Peçam ainda andando pelo Beco, no bloco anterior.\n\n' +
+          'É balcão: não leva gorjeta.',
+        restauranteId: 'r-leaky', areaParque: 'Diagon Alley', acesso: [], duracaoMin: 55 },
+
+      { id: 'b-1711-1415', hora: '14:15', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Men in Black: Alien Attack',
+        descricao: 'Vocês atiram e disputam pontuação um com o outro',
+        contexto:
+          'Carrinho giratório por cenários de Nova York cheios de alienígenas, com uma arma ' +
+          'por pessoa e placar no fim. Vale competir: o placar é individual e é metade da ' +
+          'graça.\n\n' +
+          'A tarde é a hora dele — 22 minutos de média — e ele fica no World Expo, que é o ' +
+          'canto do parque que vocês só passam uma vez.\n\n' +
+          'LOCKER OBRIGATÓRIO, mas com mais tolerância que o Mummy.',
+        areaParque: 'World Expo', acesso: [], duracaoMin: 40,
+        fila: { min: 20, quando: 'à tarde', pico: 60, estimado: 22, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1711-1500', hora: '15:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'The Simpsons Ride',
+        descricao: 'Simulador. O humor sobrevive à tradução',
+        contexto:
+          'Simulador em tela gigante côncava, com a família Simpson num parque de diversões ' +
+          'que dá errado. É rápido, sacode e o humor é visual o bastante para funcionar sem ' +
+          'pegar todas as piadas.\n\n' +
+          'A área em volta é a Springfield inteira reconstruída — a estátua do Jebediah, o ' +
+          'Kwik-E-Mart, a Duff. Vale andar cinco minutos por ela mesmo sem entrar em nada, e ' +
+          'esses minutos estão dentro deste bloco.',
+        areaParque: 'Springfield', acesso: [], duracaoMin: 40,
+        fila: { min: 20, quando: 'à tarde', pico: 55, estimado: 22, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1711-1550', hora: '15:50', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'E.T. Adventure',
+        descricao: 'Só existe aqui no mundo. Confiram se está operando',
+        contexto:
+          'Vocês voam de bicicleta sobre a cidade e depois pelo planeta do E.T., em cenários ' +
+          'físicos construídos em 1990 — sem tela nenhuma. É o último passeio daquela geração ' +
+          'ainda de pé em qualquer parque Universal do mundo, e no fim o E.T. fala o nome de ' +
+          'cada um.\n\n' +
+          'ELE VIROU MEIO-PERÍODO EM MAIO DE 2026 e pode não estar operando. Se estiver ' +
+          'fechado, não esperem: os 35 minutos vão para o Beco Diagonal.\n\n' +
+          'ELE FICA NA HOLLYWOOD, não na DreamWorks Land. Quando a KidZone virou DreamWorks em ' +
+          '2024 puseram um arco separando os dois, e a entrada do E.T. ficou do lado de fora.',
+        areaParque: 'Hollywood', acesso: [], duracaoMin: 35, opcional: true,
+        fila: { min: 25, quando: 'no fim da tarde', pico: 70, estimado: 28, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1711-1630', hora: '16:30', ancora: 'referencia', tipo: 'show',
         titulo: 'The Bourne Stuntacular',
         descricao: 'O melhor show de Orlando. Puramente visual',
         contexto:
-          'Show de dublês ao vivo integrado com tela LED gigante — os atores entram e saem da ' +
-          'projeção sem emenda. Cerca de 25 minutos, praticamente sem diálogo relevante. ' +
-          'HORÁRIO FIXO de sessão.',
-        areaParque: 'Hollywood', acesso: [], duracaoMin: 25 },
+          'Espetáculo de dublês ao vivo misturado com projeção numa tela de 40 metros, em que ' +
+          'o ator sai de dentro da tela e continua a cena no palco sem corte visível. É ' +
+          'perseguição, luta e queda de prédio, e é consenso como o melhor show de qualquer ' +
+          'parque de Orlando.\n\n' +
+          'É FALADO EM INGLÊS MAS NÃO DEPENDE DISSO: é ação de ponta a ponta e a trama cabe ' +
+          'numa frase. Foi por isso que ele ficou e os outros shows do parque não.\n\n' +
+          'Cheguem 15 minutos antes. Ele tem sessão marcada e não desloca com o resto do dia.',
+        areaParque: 'Hollywood', acesso: [], duracaoMin: 50, confirmarHorario: true,
+        pesquisa: '2026-09-10' },
 
-      { id: 'b-1711-1715', hora: '17:15', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'E.T. Adventure',
-        descricao: 'Clássico de 1990. Só existe aqui no mundo',
-        contexto:
-          'Passeio de bicicleta suspensa sobre cenários, o último remanescente da Universal dos ' +
-          'anos 90. No fim, o E.T. fala o nome de cada visitante — vocês dão o nome na entrada.',
-        areaParque: 'Woody Woodpecker’s KidZone', acesso: ['standby'] },
-
-      { id: 'b-1711-1800', hora: '18:00', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Jantar',
-        descricao: 'Finnegan’s dentro do parque, ou CityWalk',
-        restauranteId: 'r-finnegans', acesso: [] },
-
-      { id: 'b-1711-1930', hora: '19:30', ancora: 'fixo', tipo: 'show',
+      { id: 'b-1711-1730', hora: '17:30', ancora: 'fixo', tipo: 'show',
         titulo: 'Universal’s Holiday Parade featuring Macy’s',
-        descricao: 'Balões da parada de Nova York. Confiram o horário',
+        descricao: 'HORA A CONFIRMAR — pode ser 17h30 ou 19h30',
         contexto:
-          'Desfile com balões gigantes originais da parada de Ação de Graças da Macy’s em Nova ' +
-          'York, mais carros do Despicable Me, Shrek e Madagascar. Termina com o Papai Noel ' +
-          'acendendo a árvore do parque. HORÁRIO FIXO — confirmem no app.',
-        acesso: [], confirmarHorario: true, pesquisa: '2026-09-08' },
+          'Os balões gigantes do desfile de Ação de Graças da Macy’s de Nova York, os mesmos ' +
+          'da TV, descendo a rua do parque — mais Minions, Madagascar e o Papai Noel no ' +
+          'carro final. A temporada começou em 14/11 e vai até 03/01.\n\n' +
+          'ESTE É O BLOCO MAIS INCERTO DO DIA. A hora aqui é proposta: em anos anteriores o ' +
+          'desfile rodou tanto às 17h30 quanto às 19h30, e são duas horas de diferença. ' +
+          'CONFIRAM NO APP DA UNIVERSAL e mexam daqui para a frente — este bloco, o jantar e o ' +
+          'Beco à noite andam juntos.\n\n' +
+          'Peguem lugar 20 minutos antes, na Hollywood, perto do Mel’s. É onde o desfile ' +
+          'passa mais devagar e onde dá para sair rápido no fim.',
+        areaParque: 'Hollywood', acesso: [], duracaoMin: 60, confirmarHorario: true, critico: true,
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1711-1845', hora: '18:45', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Jantar — Finnegan’s Bar & Grill',
+        descricao: 'Pub irlandês na New York. Sem reserva',
+        contexto:
+          'Pub irlandês dentro do cenário de Nova York, com música ao vivo à noite e cerveja ' +
+          'tirada na hora. É comida de pub — fish and chips, shepherd’s pie, hambúrguer — e ' +
+          'o valor está em sentar num salão que parece de rua de verdade.\n\n' +
+          'É mesa com garçom: 18 a 20% de gorjeta, e o preço da etiqueta não inclui o imposto.\n\n' +
+          'ALTERNATIVA: o CityWalk fica fora da catraca e não fecha com o parque. Se o parque ' +
+          'fechar às 19h, o jantar vai para lá — e aí o dia acaba no desfile.',
+        restauranteId: 'r-finnegans', areaParque: 'New York', acesso: [], duracaoMin: 70 },
+
+      { id: 'b-1711-2000', hora: '20:00', ancora: 'fixo', tipo: 'livre',
+        titulo: 'Beco Diagonal à noite',
+        descricao: 'A land decorada no escuro. O dragão cospe fogo',
+        contexto:
+          'O fecho do dia, e ele é de graça. À noite o Beco muda completamente: as vitrines ' +
+          'acendem, a Londres do lado de fora fica azul, e o dragão em cima do Gringotts cospe ' +
+          'fogo de tempos em tempos — de perto o calor chega até a calçada.\n\n' +
+          'Não é repetir atração: de manhã vocês vêm pelas lojas e pela varinha, e agora é só ' +
+          'pela luz. Andem devagar, é a última coisa do dia.\n\n' +
+          'Se o parque fechar às 19h, este bloco não existe — é o primeiro a cair.',
+        areaParque: 'Diagon Alley', acesso: [], duracaoMin: 55,
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1711-2100', hora: '21:00', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voltar ao hotel',
+        descricao: 'Uber. Andem até o CityWalk antes de chamar',
+        contexto:
+          'Mesma regra do Kia Center: a tarifa dinâmica na porta do parque logo depois do ' +
+          'fechamento é brutal. O CityWalk fica no caminho e tem ponto próprio.\n\n' +
+          'Amanhã não tem parque e não tem alarme: o dia 18 começa às 9h.',
+        acesso: [], duracaoMin: 45 },
     ],
+    naoPerca: [
+      { nome: 'A cerimônia da varinha no Ollivanders', quando: 'hoje', custo: 'grátis assistir',
+        motivo: 'A varinha escolhe uma pessoa da plateia. A daqui é a versão maior, com mais ' +
+                'salas que a de Hogsmeade do dia 23 — se for para ver uma, é esta.' },
+      { nome: 'O dragão do Gringotts cuspindo fogo', quando: 'hoje', custo: 'grátis',
+        motivo: 'A cada dez ou quinze minutos, e dá para ouvir ele carregando antes. De noite ' +
+                'é bem melhor: o calor chega na calçada.' },
+      { nome: 'Cerveja amanteigada no Beco', quando: 'hoje', custo: '~US$ 8',
+        motivo: 'A mesma de Hogsmeade, mas aqui tem também a versão em sorvete no Florean ' +
+                'Fortescue, que não existe do outro lado.' },
+      { nome: 'Knockturn Alley', quando: 'hoje', custo: 'grátis',
+        motivo: 'A viela escura que sai do Beco, sempre em penumbra e com trovão. Muita gente ' +
+                'passa direto sem ver que ela existe — a entrada é discreta, à esquerda.' },
+      { nome: 'Hogwarts Express', quando: 'dia 23', custo: 'incluso, precisa park-to-park',
+        motivo: 'Ele liga este parque ao Islands e a viagem é diferente na ida e na volta. ' +
+                'Fica para o dia 23, quando dá para fazer os dois sentidos no mesmo dia.' },
+    ],
+    prepararAmanha: {
+      paraODia: '2026-11-18',
+      titulo: 'Compras, Lake Eola e NBA · dia sem parque',
+      aviso: 'Amanhã é o dia mais leve da segunda semana: começa às 9h, sem alarme de parque, ' +
+             'e o único compromisso de relógio é o jogo às 19h.',
+      itens: [
+        { texto: 'Ingresso do jogo do Orlando Magic à mão nos dois celulares', critico: true,
+          motivo: 'Jogo às 19h no Kia Center. Confiram o horário: a NBA remarca por TV, e ' +
+                  'isso muda perto da data.' },
+        { texto: 'Mochila PEQUENA para amanhã — o Kia Center não aceita mochila', critico: true,
+          motivo: 'Só bolsa do tamanho de uma carteira de mão. Se saírem de casa com a mochila ' +
+                  'do parque, vão ter que voltar ou pagar guarda-volumes.' },
+        { texto: 'Guardar as compras de hoje e esvaziar a mochila', critico: false,
+          motivo: 'Sair com a mochila cheia do dia anterior é começar errado.' },
+        { texto: 'Conferir o horário do desfile e do fechamento do dia 19 no app da Universal',
+          critico: true,
+          motivo: 'O dia 19 é o Epic Universe e sai às 6h45 — o mais cedo da viagem. Amanhã à ' +
+                  'noite vocês voltam do jogo às 22h15, e não é hora de descobrir horário de ' +
+                  'parque. Confiram HOJE.' },
+      ],
+    },
     ficha: {
       multiPass: null, singlePass: null,
       expressPass: {
         usar: false,
-        motivo: 'Decisão fechada: sem Express Pass em nenhum dia da Universal.',
+        motivo: 'Decisão fechada: sem Express Pass em nenhum dia da Universal. Aqui ele seria ' +
+                'ainda menos justificável — o rope drop resolve a única fila que importa.',
         alternativa: 'Express Pass Now dentro do parque (US$ 20–30, uma atração) se um dia virar.',
       },
       custoEstimadoCasal: { min: 0, max: 0, moeda: 'USD' },
-      extras: [],
+      extras: [
+        { nome: 'Lockers obrigatórios',
+          custo: { min: 0, max: 6, moeda: 'USD' },
+          texto:
+            'Três atrações de hoje exigem guardar tudo antes de embarcar: Gringotts, Revenge ' +
+            'of the Mummy e Men in Black. O Mummy tem DETECTOR DE METAL — nada nos bolsos, ' +
+            'nem chave nem celular.\n\n' +
+            'O locker padrão é gratuito pelo tempo da fila mais a duração da atração; o grande ' +
+            'custa US$ 2 a 3. Cada uso come 10 a 15 minutos que a duração dos blocos não ' +
+            'conta — e são três hoje. Levem o mínimo possível nos bolsos.' },
+        { nome: 'Varinha do Ollivanders',
+          custo: { min: 60, max: 75, moeda: 'USD' },
+          texto:
+            'Só se quiserem. A interativa aciona vitrines pelo Beco e por Hogsmeade; a comum ' +
+            'é mais barata e não faz nada. Decisão de vocês na hora — não está no orçamento.' },
+      ],
     },
     renuncias: {
       gerais: [
-        { nome: 'Fast & Furious: Supercharged',
-          motivo: 'Consenso de que é a pior atração do complexo' },
-        { nome: 'Kang & Kodos' }, { nome: 'Woody Woodpecker' }, { nome: 'Animal Actors' },
-        { nome: 'Hogwarts Express',
-          motivo: 'Deixem para o dia 23, quando dá para fazer ida e volta' },
+        { nome: 'Race Through New York Starring Jimmy Fallon',
+          motivo: 'Simulador em tela, 18 minutos de fila média. É o mais dispensável do que ' +
+                  'sobrou no parque, e a piada depende de conhecer o programa.' },
+        { nome: 'Kang & Kodos’ Twirl ’n’ Hurl',
+          motivo: 'Carrossel de braços na Springfield. É brinquedo de parquinho.' },
+        { nome: 'DreamWorks Land',
+          motivo: 'Trolls Trollercoaster, Caterbus e as áreas de brincar são infantis. Vocês ' +
+                  'passam por ela indo da Springfield para a Hollywood e é só isso.' },
       ],
-      idioma: null, fechado: [],
+      idioma: {
+        itens: ['Animal Actors on Location', 'DreamWorks Imagination Celebration'],
+        motivo:
+          'Shows de palco falados em inglês, 20 a 25 minutos cada. Mesmo teste que reprovou o ' +
+          'American Adventure no Epcot e os dois shows do Epic. O Bourne Stuntacular passou no ' +
+          'teste porque é ação de ponta a ponta e não depende de texto.',
+      },
+      fechado: [
+        'Hollywood Rip Ride Rockit — fechou em 2025 para dar lugar ao Fast & Furious: ' +
+        'Hollywood Drift. ATENÇÃO: o Hollywood Drift abriu em 16/09/2026 na CALIFÓRNIA; a ' +
+        'versão da Flórida só chega em 2027. Nada ocupa o lugar dele durante a viagem.',
+        'Fast & Furious: Supercharged — fechou em 17/08/2026, último dia de operação em 16/08. ' +
+        'Com ele foi embora a única atração da San Francisco, que virou área de passagem.',
+        'Woody Woodpecker’s Nuthouse Coaster — fechou em 16/01/2023 junto com a Curious ' +
+        'George e a Fievel’s Playland, quando a KidZone virou DreamWorks Land.',
+        'Shrek 4-D — fechou em 2022. O prédio hoje é o Villain-Con Minion Blast.',
+      ],
     },
   },
 
@@ -4949,17 +5211,17 @@ window.ROTEIRO = {
       canal: 'My Disney Experience', blocoId: null,
       nota: 'Só se quiserem mesa em vez das barracas do Food & Wine. O plano do dia é barraca.' },
 
-    { id: 'r-leaky', nome: 'Leaky Cauldron', data: '2026-11-17', hora: '12:45',
+    { id: 'r-leaky', nome: 'Leaky Cauldron', data: '2026-11-17', hora: '13:15',
       refeicao: 'almoco', local: 'Universal Studios · Diagon Alley', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Mobile order pelo app da Universal', blocoId: 'b-1711-1245',
+      canal: 'Mobile order pelo app da Universal', blocoId: 'b-1711-1315',
       nota: 'Bangers and mash, fish and chips. O melhor quick service da Universal.' },
 
-    { id: 'r-finnegans', nome: 'Finnegan’s Bar & Grill', data: '2026-11-17', hora: '18:00',
+    { id: 'r-finnegans', nome: 'Finnegan’s Bar & Grill', data: '2026-11-17', hora: '18:45',
       refeicao: 'jantar', local: 'Universal Studios · New York',
       alternativas: ['CityWalk'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: null, blocoId: 'b-1711-1800', nota: null },
+      canal: null, blocoId: 'b-1711-1845', nota: null },
 
     { id: 'r-broomsticks', nome: 'Three Broomsticks', data: '2026-11-23', hora: '12:40',
       refeicao: 'almoco', local: 'Islands of Adventure · Hogsmeade', alternativas: [],
@@ -5410,8 +5672,16 @@ window.ROTEIRO = {
     { id: 'ck-shows', dataAlvo: '2026-11-01', dataEstimada: true, motivoData: 'Horários de show só saem perto da data', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Confirmar horário do Grinchmas (14/11), do desfile da Macy’s (17/11) e do ' +
-             'Fantasmic! (15/11)',
-      nota: 'O Grinchmas é a referência do dia 14 — ajustando ele, a noite inteira desloca.',
+             'Fantasmic! (15/11) — e o fechamento do parque em 17/11',
+      nota:
+        'O Grinchmas é a referência do dia 14 — ajustando ele, a noite inteira desloca.\n\n' +
+        'O DESFILE DA MACY’S É O MAIS INCERTO DOS TRÊS. O dia 17 assume 17h30, mas em anos ' +
+        'anteriores ele rodou tanto às 17h30 quanto às 19h30 — duas horas de diferença. ' +
+        'Três blocos andam com ele: o desfile, o jantar no Finnegan’s e o Beco Diagonal à ' +
+        'noite.\n\n' +
+        'CONFIRAM TAMBÉM O FECHAMENTO DE 17/11. O parque fecha entre 19h e 22h conforme a ' +
+        'época, e a temporada de Natal estica. Se fechar às 19h, o Beco à noite não existe ' +
+        'e o jantar vira CityWalk, que fica fora da catraca.',
       restauranteIds: [] },
   ],
 
@@ -5618,6 +5888,28 @@ window.ROTEIRO = {
         ['World Discovery', 'World Showcase', 6],
         ['World Nature', 'World Showcase', 6],
         ['World Discovery', 'World Nature', 7],
+      ],
+    },
+
+    'universal-studios': {
+      forma: 'Um anel em volta da lagoa, com o Beco Diagonal pendurado como beco sem ' +
+             'saída: entra e sai pela mesma boca, na London. A Production Central e a ' +
+             'Minion Land são as primeiras depois da catraca — e é por isso que elas ' +
+             'entopem no rope drop.',
+      margem: 'Somem 50% em dia cheio. Os números batem com os dois publicados: da catraca ' +
+              'até o Beco Diagonal dá 10 minutos, e a volta completa do anel dá 23. O World ' +
+              'Expo e a Springfield ficam levemente fora do caminho da lagoa — quem passa ' +
+              'por lá tem de resolver os dois de uma vez ou volta atrás.',
+      arestas: [
+        ['Production Central', 'Hollywood', 3],
+        ['Production Central', 'Minion Land', 2],
+        ['Minion Land', 'New York', 3],
+        ['New York', 'San Francisco', 3],
+        ['San Francisco', 'Diagon Alley', 2],
+        ['Diagon Alley', 'World Expo', 3],
+        ['World Expo', 'Springfield', 2],
+        ['Springfield', 'DreamWorks Land', 3],
+        ['DreamWorks Land', 'Hollywood', 2],
       ],
     },
 
