@@ -549,9 +549,10 @@ window.ROTEIRO = {
         titulo: 'Confirmar a internet e chamar o Uber',
         descricao: 'Rideshare Pickup no NÍVEL 6 do Terminal C',
         contexto:
-          'Com o Passaporte Américas o celular conecta sozinho ao pousar. Confiram que ' +
-          'está com internet ANTES de descer para o nível 6 — se não conectar, o wifi ' +
-          'do MCO resolve enquanto vocês ligam o roaming nos ajustes.\n\n' +
+          'Os dois planos têm o uso internacional incluído e os celulares devem conectar ' +
+          'sozinhos ao pousar. Confiram os DOIS aparelhos ANTES de descer para o nível 6 — ' +
+          'se algum não conectar, o wifi do MCO resolve enquanto vocês ligam o roaming de ' +
+          'dados nos ajustes.\n\n' +
           'E só chamem a corrida depois de estarem com as malas na mão: o motorista tem ' +
           'poucos minutos de tolerância e cancela.',
         localId: 'mco', acesso: [], critico: true, pesquisa: '2026-09-08', duracaoMin: 30 },
@@ -4501,15 +4502,9 @@ window.ROTEIRO = {
         'plano brasileiro. Só passa a cobrar R$ 39,90 por dia SE a franquia acabar. ' +
         'Ativação pelo *468, gratuito, ou pelo Minha Claro.\n\n' +
         'BIANCA · VIVO TRAVEL\n' +
-        'Aqui está a pergunta que vale dinheiro. O Vivo Travel padrão custa R$ 39,99 POR ' +
-        'DIA nas Américas, cobrado sempre que o serviço é usado pela primeira vez no dia ' +
-        '— a menos que o plano dela já inclua. Em 17 dias, cobrado, dá cerca de R$ 680.\n\n' +
-        'CONFIRMAR: o plano dela INCLUI o roaming ou ATIVA o pacote pago? \u201cTer o ' +
-        'serviço\u201d pode significar as duas coisas.\n\n' +
-        'SE FOR COBRADO POR DIA, existe saída: ela usa o roteador do celular do Pedro na ' +
-        'maior parte do tempo e só liga o dela nos dias em que vocês se separam, ou se a ' +
-        'franquia dele estourar. A cobrança é por dia de uso, então dia sem usar não ' +
-        'custa nada.\n\n' +
+        'O plano dela também inclui o uso internacional, com os EUA cobertos. A conferir é ' +
+        'só a ativação: alguns planos pedem que o serviço seja ligado no app da operadora ' +
+        'antes da viagem, e ninguém quer descobrir isso no desembarque.\n\n' +
         'NOS DOIS CASOS: ligar o roaming de dados nos ajustes do aparelho, além de ativar ' +
         'no app da operadora. E confirmar que a Colômbia está coberta — se estiver, a ' +
         'compra do Single Pass às 7h ET do dia 10 deixa de depender do wifi de Bogotá.',
@@ -5059,9 +5054,9 @@ window.ROTEIRO = {
         'de parque tem o ponto de encontro escrito no bloco de entrada. A regra é ir para ' +
         'lá e esperar, não procurar — duas pessoas procurando uma à outra num parque de ' +
         'vinte mil pessoas não se acham.\n\n' +
-        'Isso importa mais do que parece porque a Bianca usa o roteador do celular do ' +
-        'Pedro na maior parte dos dias. Se separaram e ela está sem rede, o combinado é a ' +
-        'única coisa que funciona.\n\n' +
+        'Combinar antes vale mesmo com os dois celulares funcionando: duas pessoas ' +
+        'procurando uma à outra num parque de vinte mil não se acham, e ligação dentro ' +
+        'de parque cheio cai ou não se ouve.\n\n' +
         'SE ALGUÉM PASSAR MAL. Todo parque da Disney e da Universal tem posto de primeiros ' +
         'socorros, com enfermeiro, ar-condicionado e remédio básico de graça. Peçam ' +
         '\u201cFirst Aid\u201d a qualquer funcionário — eles levam vocês. Para emergência ' +
