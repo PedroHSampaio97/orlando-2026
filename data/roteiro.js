@@ -35,9 +35,10 @@ window.ROTEIRO = {
     geradoEm: '2026-09-08',
     avisoHorarios:
       'Os horários oficiais dos parques só saem perto da data. Os relógios deste ' +
-      'roteiro assumem abertura às 9h, com duas exceções anotadas (SeaWorld e Busch ' +
-      'Gardens). Confiram em novembro e ajustem a referência do dia — os blocos ' +
-      'ancorados deslocam junto.',
+      'roteiro assumem abertura às 9h, com três exceções anotadas: o ANIMAL KINGDOM ' +
+      'às 8h (13/11), e o SeaWorld e o Busch Gardens às 10h. Confiram em novembro e ' +
+      'ajustem a referência do dia — os blocos ancorados deslocam junto, mas as retas ' +
+      'finais dos dias 11 e 13 são fixas de propósito e não se mexem.',
 
     // Vocabulários fechados. A interface valida contra isto no load.
     tiposBloco: ['atracao', 'refeicao', 'deslocamento', 'show', 'compras',
@@ -1322,7 +1323,7 @@ window.ROTEIRO = {
           'jantar em qualquer coisa na 192.',
           'Este é o ÚNICO dia da viagem em que nada é insubstituível. Não há ingresso, não ' +
           'há reserva, não há hora marcada.',
-          'O que vocês estão protegendo é o dia 13, que sai às 7h30 e abre a sequência mais ' +
+          'O que vocês estão protegendo é o dia 13, que sai às 6h30 e abre a sequência mais ' +
           'pesada da viagem: Animal Kingdom, Islands, SeaWorld, Epic e Busch Gardens.',
         ],
       },
@@ -1373,30 +1374,45 @@ window.ROTEIRO = {
     /* --------------------------------------------------------------------- */
     prepararAmanha: {
       paraODia: '2026-11-13',
-      titulo: 'Animal Kingdom · alarme 6h30, saída 7h30',
+      titulo: 'Animal Kingdom · alarme 5h30, saída 6h30',
       aviso:
-        'Acabou a parte leve. O dia 13 abre a sequência mais pesada da viagem e é o ' +
-        'primeiro dia com Single Pass comprado longe de casa — vale conferir tudo hoje.',
+        'Acabou a parte leve. O dia 13 abre a sequência mais pesada da viagem, e é o dia ' +
+        'mais dependente de um horário que só sai perto da data — confiram tudo hoje.',
       itens: [
-        { texto: 'Conferir se o Single Pass do Flight of Passage está no app', critico: true,
-          motivo: 'Foi comprado em 10/11 às 7h ET, durante a conexão em Bogotá, no meio de ' +
-                  'uma viagem de 24 horas. É a compra mais frágil da viagem inteira. Se ' +
-                  'falhou, hoje ainda dá para replanejar o dia 13; amanhã às 11h20, na ' +
-                  'frente da atração, não dá.' },
-
-        { texto: 'Conferir o horário de abertura do Animal Kingdom e ajustar a referência',
+        { texto: 'Conferir ABERTURA E FECHAMENTO do Animal Kingdom e ajustar a referência',
           critico: true,
-          motivo: 'O dia 13 assume abertura às 9h. Se for outro, mudem a referência na tela ' +
-                  'do dia e tudo o que é ancorado desloca junto, inclusive a saída às 7h30. ' +
-                  'O Lion King, o Zootopia e o anoitecer em Pandora não deslocam.' },
+          motivo: 'OS DOIS IMPORTAM, e é o item mais importante da lista.\n\n' +
+                  'A ABERTURA: o dia assume 8h, que é o típico de novembro. Se for outra, ' +
+                  'mudem a referência na tela do dia e a manhã inteira desloca junto, ' +
+                  'inclusive a saída das 6h30.\n\n' +
+                  'O FECHAMENTO: é ele que sustenta a reta final. Com 18h, o plano está no ' +
+                  'limite e o safári do entardecer, o Na’vi e a fila do Flight of Passage ' +
+                  'estão coreografados minuto a minuto. Com 19h ou 20h o dia respira. A ' +
+                  'reta final é fixa e NÃO desloca com a abertura — ela segue o sol.' },
+
+        { texto: 'Decidir sobre o Single Pass do Flight of Passage', critico: false,
+          motivo: 'NÃO é compra pendente, é decisão. O dia foi montado para pegar a fila ' +
+                  'de 40 a 65 minutos do fim da tarde em vez dos 100 a 180 do pico. Só ' +
+                  'vale comprar se o fechamento não deixar o plano caber, ou se vocês ' +
+                  'decidirem que não querem 50 minutos de fila no fim de dez horas de ' +
+                  'parque. Se decidirem comprar, a janela já passou em 10/11 — dá para ' +
+                  'comprar na hora pelo app, dentro do parque.' },
 
         { texto: 'Reserva do Sanaa: número de confirmação à mão', critico: false,
           motivo: 'Jantar às 19h45, e o Animal Kingdom Lodge é OUTRO endereço, não é dentro ' +
                   'do parque. Deixem o número acessível no celular hoje, não procurando ' +
-                  'e-mail amanhã com o Uber esperando.' },
+                  'e-mail amanhã com o Uber esperando. O telefone da Disney está no Guia, ' +
+                  'se precisarem remarcar: +1 407-939-3463, com 2h de antecedência.' },
 
-        { texto: 'Alarme para 6h30 nos dois celulares', critico: true,
-          motivo: 'Saída às 7h30. Depois de um dia sem alarme, o corpo não ajuda.' },
+        { texto: 'Alarme para 5h30 nos dois celulares', critico: true,
+          motivo: 'Saída às 6h30 — uma hora mais cedo do que nos outros dias de parque, ' +
+                  'porque o Animal Kingdom abre às 8h e não às 9h. Depois de um dia sem ' +
+                  'alarme, o corpo não ajuda.' },
+
+        { texto: 'Decidir sobre o Kali River Rapids olhando a previsão', critico: false,
+          motivo: 'Ele está às 9h15 e molha de verdade. Em novembro Orlando amanhece por ' +
+                  'volta dos 15°C. Se a mínima de amanhã estiver baixa, decidam HOJE que ' +
+                  'vão pular — ganham 35 minutos e não passam o dia com roupa molhada.' },
 
         { texto: 'Mochila remontada e celular carregando', critico: true,
           motivo: 'Duas garrafas de água, barrinhas, protetor solar, power bank e cabo. ' +
@@ -1524,9 +1540,10 @@ window.ROTEIRO = {
 
       { id: 'b-1211-2130', hora: '21:30', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel',
-        descricao: 'Amanhã sai às 7h30',
+        descricao: 'Amanhã sai às 6h30',
         contexto:
-          'Não estiquem. O dia 13 é Animal Kingdom com saída às 7h30 e abre a sequência ' +
+          'Não estiquem. O dia 13 é Animal Kingdom com saída às 6h30 — uma hora mais cedo ' +
+          'do que estava, porque o parque deve abrir às 8h — e abre a sequência ' +
           'pesada da viagem.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 30 },
     ],
@@ -1844,30 +1861,35 @@ window.ROTEIRO = {
           'Diferente do safári, aqui vocês param quanto quiserem.',
         areaParque: 'Africa', acesso: [], duracaoMin: 45 },
 
-      { id: 'b-1311-1215', hora: '11:30', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Almoço — Satu’li Canteen',
-        descricao: 'Balcão, em Pandora. Um dos melhores da Disney',
-        contexto:
-          'Serviço de balcão com tigelas montáveis — escolhem proteína e base. É ' +
-          'consistentemente eleito o melhor quick service do Walt Disney World.\n\n' +
-          'Usem mobile order pelo app: a fila do balcão aqui é longa e a do mobile order não ' +
-          'existe. Peçam com meia hora de antecedência, ainda na Gorilla Falls.\n\n' +
-          'É a primeira vez que vocês pisam em Pandora hoje, e é de dia. Olhem as montanhas ' +
-          'flutuantes agora, porque à noite o lugar é outro — e vocês voltam.',
-        restauranteId: 'r-satuli', areaParque: 'Pandora', acesso: [], duracaoMin: 60 },
-
-      { id: 'b-1311-1315', hora: '12:30', ancora: 'fixo', tipo: 'show',
+      { id: 'b-1311-1315', hora: '11:30', ancora: 'fixo', tipo: 'show',
         titulo: 'Festival of the Lion King',
         descricao: '30 min. Show visual, sem barreira de idioma',
         contexto:
           'Espetáculo em teatro circular com acrobatas, cantores e carros alegóricos. É quase ' +
           'todo música e acrobacia, então o inglês não atrapalha. Cheguem 20 minutos antes ' +
           'para não sentar na primeira fila, que é ruim.\n\n' +
+          'Vem logo depois do Gorilla Falls de propósito: os dois ficam na África, e assim ' +
+          'vocês atravessam para Pandora uma vez só, já indo almoçar.\n\n' +
           'HORÁRIO FIXO de sessão — confiram a grade no app da Disney no dia e ajustem aqui ' +
-          'se a sessão for outra.',
+          'se a sessão for outra. Se a mais próxima for muito diferente das 11h30, o almoço ' +
+          'e o Zootopia acompanham.',
         areaParque: 'Africa', acesso: [], duracaoMin: 45, confirmarHorario: true },
 
-      { id: 'b-1311-1500', hora: '13:15', ancora: 'fixo', tipo: 'show',
+      { id: 'b-1311-1215', hora: '12:15', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Almoço — Satu’li Canteen',
+        descricao: 'Balcão, em Pandora. Um dos melhores da Disney',
+        contexto:
+          'Serviço de balcão com tigelas montáveis — escolhem proteína e base. É ' +
+          'consistentemente eleito o melhor quick service do Walt Disney World.\n\n' +
+          'Usem mobile order pelo app: a fila do balcão aqui é longa e a do mobile order não ' +
+          'existe. Peçam durante o Festival of the Lion King, sentados.\n\n' +
+          'São dez minutos de caminhada da África até Pandora, e eles estão dentro da hora ' +
+          'e quinze deste bloco — não é tempo de mesa, é tempo de chegar.\n\n' +
+          'É a primeira vez que vocês pisam em Pandora hoje, e é de dia. Olhem as montanhas ' +
+          'flutuantes agora, porque à noite o lugar é outro — e vocês voltam.',
+        restauranteId: 'r-satuli', areaParque: 'Pandora', acesso: [], duracaoMin: 75 },
+
+      { id: 'b-1311-1500', hora: '13:30', ancora: 'fixo', tipo: 'show',
         titulo: 'Zootopia: Better Zoogether!',
         descricao: 'Teatro da Árvore da Vida. 10 min',
         contexto:
@@ -1877,7 +1899,7 @@ window.ROTEIRO = {
         areaParque: 'Discovery Island', acesso: [], duracaoMin: 30, opcional: true,
         confirmarHorario: true, pesquisa: '2026-09-08' },
 
-      { id: 'b-1311-1345', hora: '13:45', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1311-1345', hora: '14:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Discovery Island Trails e a Árvore da Vida',
         descricao: 'Trilhas curtas em volta da árvore. Quase ninguém faz',
         contexto:
@@ -1888,7 +1910,7 @@ window.ROTEIRO = {
           'e vocês vão ver isso na saída.',
         areaParque: 'Discovery Island', acesso: [], duracaoMin: 45 },
 
-      { id: 'b-1311-1630', hora: '14:30', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-1311-1630', hora: '14:45', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Nomad Lounge — a varanda',
         descricao: 'O lugar mais gostoso do parque. Drink e petisco',
         contexto:
@@ -1896,9 +1918,9 @@ window.ROTEIRO = {
           'petiscos.\n\n' +
           'Costuma ter espera de 15 a 30 minutos e não aceita reserva — coloquem o nome na ' +
           'lista e passeiem enquanto esperam.\n\n' +
-          'Esta hora e meia é o VAZIO PROPOSITAL do dia, só que com ar-condicionado e bebida. ' +
-          'Vocês vão precisar dela: a partir das 16h30 o dia não para mais até o jantar.',
-        restauranteId: 'r-nomad', areaParque: 'Discovery Island', acesso: [], duracaoMin: 75 },
+          'Esta hora é o VAZIO PROPOSITAL do dia, só que com sombra e bebida. Vocês vão ' +
+          'precisar dela: a partir das 16h30 o dia não para mais até o jantar.',
+        restauranteId: 'r-nomad', areaParque: 'Discovery Island', acesso: [], duracaoMin: 60 },
 
       { id: 'b-1311-1545p', hora: '15:45', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — antes da reta final',
@@ -2044,7 +2066,7 @@ window.ROTEIRO = {
       gerais: [
         { nome: 'Feathered Friends in Flight' }, { nome: 'Bluey’s Wild World' },
         { nome: 'Wildlife Express Train' }, { nome: 'Rafiki’s Planet Watch' },
-        { nome: 'Discovery Island Trails' }, { nome: 'The Animation Experience' },
+        { nome: 'The Animation Experience' },
       ],
       idioma: null,
       fechado: ['DINOSAUR e toda a DinoLand (demolidos para a futura Tropical Americas)'],
@@ -3895,11 +3917,11 @@ window.ROTEIRO = {
       canal: 'Mobile order pelo My Disney Experience', blocoId: 'b-1311-1215',
       nota: 'Balcão. Eleito o melhor quick service do Walt Disney World.' },
 
-    { id: 'r-nomad', nome: 'Nomad Lounge', data: '2026-11-13', hora: '16:30',
+    { id: 'r-nomad', nome: 'Nomad Lounge', data: '2026-11-13', hora: '14:45',
       refeicao: 'drink', local: 'Animal Kingdom · Discovery Island', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Lista de espera no local', blocoId: 'b-1311-1630',
-      nota: 'Não aceita reserva. Espera de 15 a 30 min no fim da tarde.' },
+      nota: 'Não aceita reserva. Coloquem o nome na lista e passeiem enquanto esperam.' },
 
     { id: 'r-sanaa', nome: 'Sanaa', data: '2026-11-13', hora: '19:45',
       refeicao: 'jantar', local: 'Animal Kingdom Lodge', alternativas: [],
@@ -4610,10 +4632,17 @@ window.ROTEIRO = {
         'No Magic Kingdom há um agravante: o Uber deixa vocês no TTC, e ainda falta monotrilho ' +
         'ou barco. Por isso a saída do hotel é às 6h45 para uma abertura às 9h.\n\n' +
         'Onde ficar de pé enquanto espera define o que vocês fazem primeiro. Cada dia diz o ' +
-        'ponto: Tomorrowland no MK, à esquerda sentido Hogsmeade no Islands, ' +
-        'Galaxy\u2019s Edge no Hollywood Studios, Beco Diagonal no Universal Studios.\n\n' +
-        'Vocês não têm Early Entry em lugar nenhum: não estão em hotel Disney nem Universal. ' +
-        'Então o lugar na fila é literalmente tudo que vocês têm.',
+        'ponto: FRONTIERLAND no Magic Kingdom, checkpoint da ÁFRICA no Animal Kingdom, ' +
+        'à esquerda sentido Hogsmeade no Islands, Galaxy\u2019s Edge no Hollywood Studios, ' +
+        'Beco Diagonal no Universal Studios.\n\n' +
+        'NOS DOIS PARQUES DA DISNEY O PONTO É CONTRAINTUITIVO, e é de propósito. Vocês não ' +
+        'têm Early Entry em lugar nenhum — não estão em hotel Disney nem Universal. Isso ' +
+        'significa que os hóspedes já estão DENTRO do parque meia hora antes de vocês, e ' +
+        'já estão de pé onde o Early Entry deixa entrar. Correr para lá é chegar atrás ' +
+        'deles.\n\n' +
+        'A saída é ir onde o Early Entry NÃO vai: Frontierland no Magic Kingdom, África e ' +
+        'Ásia no Animal Kingdom. São as áreas que ficam vazias exatamente na hora em que ' +
+        'todo mundo está aglomerado do outro lado.',
     },
     {
       id: 'dica-natal',

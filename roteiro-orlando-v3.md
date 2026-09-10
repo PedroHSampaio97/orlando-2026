@@ -5,7 +5,7 @@
 **Perfil:** casal, sem crianças. Prioridade: clássicos + montanhas-russas fortes.
 **Decisões fechadas:** troca dos dias 21/22/23 confirmada · sem Mickey's Very Merry Christmas Party · sem Express Pass na Universal · carro alugado de 20 a 25/11
 
-> **Aviso sobre horários:** os horários oficiais dos parques só saem perto da data. Os relógios abaixo assumem abertura às 9h nos parques da Disney e da Universal, e **às 10h no SeaWorld (22/11) e no Busch Gardens (24/11)**, que é o horário típico desses dois. Confiram no app em novembro e desloquem o bloco inteiro se mudar.
+> **Aviso sobre horários:** os horários oficiais dos parques só saem perto da data. Os relógios abaixo assumem abertura às 9h nos parques da Disney e da Universal, com três exceções: **o Animal Kingdom abre às 8h (13/11)**, e o **SeaWorld (22/11) e o Busch Gardens (24/11) abrem às 10h**. Confiram no app em novembro e desloquem o bloco inteiro se mudar — mas atenção: as retas finais dos dias 11 e 13 são fixas de propósito, porque seguem o desfile e o pôr do sol, não a abertura.
 
 ---
 
@@ -139,11 +139,11 @@ Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's
 | **9h50** | **Maharajah Jungle Trek** | Trilha. Tigres. Sem fila, e serve para secar |
 | **10h30** | **Parada** | |
 | **10h45** | **Gorilla Falls** | Trilha. Ritmo lento de propósito |
-| **11h30** | **Almoço — Satu'li Canteen** | Mobile order. Primeira vez em Pandora, e é de dia |
-| **12h30** | **Festival of the Lion King** | Sessão. 30 min, sem barreira de idioma |
-| **13h15** | **Zootopia: Better Zoogether!** | Sessão. Curto e descartável se o dia atrasar |
-| **13h45** | **Discovery Island Trails** | Trilhas em volta da Árvore da Vida. Quase ninguém faz |
-| **14h30** | **Nomad Lounge** | O descanso do dia. Varanda, drink, ventilador |
+| **11h30** | **Festival of the Lion King** | Sessão. 30 min, sem barreira de idioma. Mesma área do bloco anterior |
+| **12h15** | **Almoço — Satu'li Canteen** | Mobile order, pedido durante o show. Inclui os 10 min de caminhada até Pandora |
+| **13h30** | **Zootopia: Better Zoogether!** | Sessão. Curto e descartável se o dia atrasar |
+| **14h00** | **Discovery Island Trails** | Trilhas em volta da Árvore da Vida. Quase ninguém faz |
+| **14h45** | **Nomad Lounge** | O descanso do dia. Varanda, drink, ventilador |
 | **15h45** | **Parada** | **Confiram a que horas o safári fecha.** O bloco seguinte depende disso |
 | **16h30** | **Kilimanjaro Safaris DE NOVO** | Ao entardecer. **Os leões acordam** |
 | **17h15** | **Na'vi River Journey** | A fila cede junto com o resto do parque |
@@ -165,6 +165,12 @@ Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's
 
 *Médias publicadas, consultadas em 10/09/2026.*
 
+> **Por que o Lion King vem antes do almoço.** Ele e o Gorilla Falls ficam os dois na
+> África, e o Satu’li fica em Pandora. Fazendo o show primeiro, vocês atravessam para
+> Pandora uma vez só, já indo comer, e seguem para a Discovery Island — em vez de ir e
+> voltar. São **dez minutos de caminhada economizados** e um almoço que não começa com
+> pressa.
+
 ### Os três hacks do dia
 
 > **1. O safári duas vezes.** É a única atração do parque em que repetir dá conteúdo diferente. De manhã não há fila e os animais estão ativos com o frio. No fim da tarde os **leões acordam** — são noturnos e dormem o dia inteiro — e a Disney instalou iluminação no percurso para o safári rodar depois do pôr do sol. **Atenção: o safári fecha 30 a 60 minutos antes do parque.** Confiram o horário dele na parada das 15h45.
@@ -177,7 +183,7 @@ Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's
 
 
 ### Renúncias
-Feathered Friends in Flight, Bluey's Wild World, Wildlife Express Train, Rafiki's Planet Watch, Discovery Island Trails, The Animation Experience.
+Feathered Friends in Flight, Bluey's Wild World, Wildlife Express Train, Rafiki's Planet Watch, The Animation Experience.
 
 **Fechado:** DINOSAUR e toda a DinoLand (demolidos para a futura Tropical Americas).
 

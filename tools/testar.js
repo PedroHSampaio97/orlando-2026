@@ -62,6 +62,20 @@ console.log('\n--- o atraso que antes passava em silencio ---');
   ok(a.length > 0, '+' + d + 'min agora acende: ' + a.map(x => x.d.titulo).join(', '));
 });
 
+console.log('\n--- ordem dos blocos no arquivo ---');
+// A tela ordena por horario, entao um bloco fora de ordem no arquivo nao quebra
+// nada — mas esconde erro de quem edita a mao e torna o diff ilegivel.
+R.dias.filter(d => d.fechado).forEach(function (dia) {
+  const fora = [];
+  for (let i = 1; i < dia.blocos.length; i++) {
+    if (min(dia.blocos[i].hora) < min(dia.blocos[i - 1].hora)) {
+      fora.push(dia.blocos[i - 1].id + ' (' + dia.blocos[i - 1].hora + ') vem antes de ' +
+               dia.blocos[i].id + ' (' + dia.blocos[i].hora + ')');
+    }
+  }
+  ok(fora.length === 0, dia.id + ': blocos em ordem de relogio no arquivo', fora.join('; '));
+});
+
 console.log('\n--- integridade ---');
 const ids = R.dias.flatMap(d => d.blocos.map(b => b.id));
 ok(new Set(ids).size === ids.length, 'nenhum id de bloco duplicado (' + ids.length + ')');
