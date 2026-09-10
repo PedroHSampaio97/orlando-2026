@@ -122,28 +122,59 @@ Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's
 
 # 🦁 13/11 (sexta) — ANIMAL KINGDOM
 
-**Sem Multi Pass.** O parque encolheu com o fim da DinoLand e chegando na abertura vocês resolvem tudo no standby.
-**Single Pass:** Avatar Flight of Passage
+**Sem Multi Pass.** Chegando na abertura pelo lado certo, a manhã inteira sai no standby.
+**Single Pass:** **nenhum.** O Flight of Passage virou plano B pago — ver a nota no fim.
 
-**Mudança em relação à v2:** fiquem até o anoitecer. Pandora com as plantas bioluminescentes acesas é o melhor visual do parque e vocês estavam saindo às 15h.
+> **O parque estimado abre às 8h e fecha às 18h.** Em novembro o Animal Kingdom costuma operar nesse horário, e só a semana do Thanksgiving estica. Por isso a saída do hotel é **6h30**. O horário oficial sai por volta de 14/09 — confiram e ajustem a referência no app.
+
+> **NÃO VÃO PARA PANDORA DE MANHÃ.** Mais de 90% dos visitantes correm para lá no rope drop — e o **Early Entry do Animal Kingdom inclui Pandora**: são só quatro atrações no Early Entry e duas delas são o Flight of Passage e o Na'vi. Os hóspedes Disney já andaram nas duas antes de vocês entrarem. Enquanto isso, Kilimanjaro Safaris, Expedition Everest e Kali River Rapids ficam **walk-on nos primeiros 60 a 90 minutos**.
 
 | Hora | O quê | Como |
 |---|---|---|
-| **7h30** | Sair do hotel | |
-| **8h15** | Portão | |
-| **9h00** | **Na'vi River Journey** | Standby, rope drop. A fila explode depois das 10h |
-| **9h35** | **Kilimanjaro Safaris** | Standby. Animais mais ativos de manhã |
-| **10h40** | **Expedition Everest** | Standby. Se a fila estiver curta, façam duas vezes |
-| **11h20** | **Flight of Passage** | Single Pass. A melhor atração do Walt Disney World |
-| **12h15** | **Almoço — Satu'li Canteen** | Balcão, em Pandora. Um dos melhores da Disney |
-| **13h15** | **Festival of the Lion King** | 30 min. Show visual, sem barreira de idioma |
-| **14h15** | **Maharajah Jungle Trek** | Trilha a pé. Tigres |
-| **15h00** | **Zootopia: Better Zoogether!** | Teatro da Árvore da Vida |
-| **15h45** | **Gorilla Falls** | Trilha. Ritmo lento de propósito |
-| **16h30** | **Nomad Lounge** | Drink na varanda. O lugar mais gostoso do parque |
-| **17h30** | **Pandora ao anoitecer** | Fiquem. As plantas acendem quando escurece |
-| **18h30** | Sair | |
-| **19h45** | **Jantar — Sanaa** | Animal Kingdom Lodge. Às 19h45 já escureceu e não se vê a savana — vão pela comida. Peçam o Bread Service |
+| **6h30** | Sair do hotel | Uber, ~35 min. O AK tem entrada direta, sem monotrilho |
+| **7h15** | Portão · pré-fila no checkpoint da **África** | Não na ponte de Pandora |
+| **8h00** | **Kilimanjaro Safaris** | Rope drop. Walk-on, e os animais estão ativos com o frio |
+| **8h40** | **Expedition Everest** | Walk-on pelo mesmo motivo |
+| **9h15** | **Kali River Rapids** | **Opcional — molha de verdade.** A decisão é a temperatura |
+| **9h50** | **Maharajah Jungle Trek** | Trilha. Tigres. Sem fila, e serve para secar |
+| **10h30** | **Parada** | |
+| **10h45** | **Gorilla Falls** | Trilha. Ritmo lento de propósito |
+| **11h30** | **Almoço — Satu'li Canteen** | Mobile order. Primeira vez em Pandora, e é de dia |
+| **12h30** | **Festival of the Lion King** | Sessão. 30 min, sem barreira de idioma |
+| **13h15** | **Zootopia: Better Zoogether!** | Sessão. Curto e descartável se o dia atrasar |
+| **13h45** | **Discovery Island Trails** | Trilhas em volta da Árvore da Vida. Quase ninguém faz |
+| **14h30** | **Nomad Lounge** | O descanso do dia. Varanda, drink, ventilador |
+| **15h45** | **Parada** | **Confiram a que horas o safári fecha.** O bloco seguinte depende disso |
+| **16h30** | **Kilimanjaro Safaris DE NOVO** | Ao entardecer. **Os leões acordam** |
+| **17h15** | **Na'vi River Journey** | A fila cede junto com o resto do parque |
+| **17h45** | **ENTRAR NA FILA do Flight of Passage** | Até o último minuto vale. Vocês andam por volta das 18h30 |
+| **18h40** | **Sair caminhando pela Pandora escura** | Acesa, vazia, com o Awakenings na Árvore da Vida |
+| **19h05** | Uber para o Animal Kingdom Lodge | ~10 min. É outro endereço, não é o parque |
+| **19h45** | **Jantar — Sanaa** | Vão pela comida. Peçam o Bread Service |
+
+### Por que o dia está nesta ordem — a fila típica
+
+| Atração | Quando vocês fazem | Fila aí | No pico |
+|---|---|---|---|
+| Kilimanjaro Safaris | 8h00, na abertura | ~10 min | ~55 |
+| Expedition Everest | 8h40, na abertura | ~15 min | ~40 |
+| Kali River Rapids | 9h15, na abertura | ~15 min | ~45 |
+| Kilimanjaro Safaris (2ª vez) | 16h30, na última hora | ~15 min | ~55 |
+| Na'vi River Journey | 17h15, no fim do dia | ~30 min | ~65 |
+| **Avatar Flight of Passage** | 17h45, na última hora | **~50 min** | **~180** |
+
+*Médias publicadas, consultadas em 10/09/2026.*
+
+### Os três hacks do dia
+
+> **1. O safári duas vezes.** É a única atração do parque em que repetir dá conteúdo diferente. De manhã não há fila e os animais estão ativos com o frio. No fim da tarde os **leões acordam** — são noturnos e dormem o dia inteiro — e a Disney instalou iluminação no percurso para o safári rodar depois do pôr do sol. **Atenção: o safári fecha 30 a 60 minutos antes do parque.** Confiram o horário dele na parada das 15h45.
+
+> **2. A fila do Flight of Passage no último minuto.** É política da Disney: quem está na fila no horário de fechamento anda, mesmo embarcando depois. A fila cai de 100–180 minutos no pico para 40–65 depois das 17h. Entrando às 17h45, vocês pagam a menor fila do dia pela melhor atração do complexo — e saem andando por uma Pandora **escura, acesa e vazia**, porque o parque já fechou e todo mundo foi embora. É isso que o plano antigo entregava em quinze minutos de meia-luz.
+
+> **3. O Tree of Life Awakenings entra de graça.** Projeção de animais no tronco da Árvore da Vida, a cada dez minutos depois que escurece, até o fechamento — e costuma continuar um pouco depois. Só acontece em noites de outono e inverno, e novembro está dentro. Vocês passam por baixo dela na saída, exatamente nessa janela.
+
+> **Single Pass como plano B, não como compra.** O Flight of Passage saiu da lista de 10/11. Só vale comprar se o parque fechar cedo demais para o plano caber, ou se vocês decidirem que não querem 50 minutos de fila no fim de um dia de dez horas — e a compra seria às 7h ET durante a conexão em Bogotá, o pior momento da viagem para depender de internet. O dia custa **US$ 0–40** no casal em vez dos US$ 36–40 fixos de antes.
+
 
 ### Renúncias
 Feathered Friends in Flight, Bluey's Wild World, Wildlife Express Train, Rafiki's Planet Watch, Discovery Island Trails, The Animation Experience.

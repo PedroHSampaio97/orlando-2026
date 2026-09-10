@@ -1541,157 +1541,168 @@ window.ROTEIRO = {
     diaSemana: 'sexta',
     emoji: '🦁',
     titulo: 'Animal Kingdom',
-    subtitulo: 'Sem Multi Pass · fiquem até escurecer',
+    subtitulo: 'Rope drop na África · Pandora no fim',
     tipo: 'parque',
     operadora: 'disney',
     parqueId: 'animal-kingdom',
     custoZero: false,
-    referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: false },
+    fechado: true,
+    revisadoEm: '2026-09-10',
+    referencia: { rotulo: 'Abertura do parque', padrao: '08:00', confirmado: false },
+
     resumo:
-      'O parque encolheu com o fim da DinoLand e, chegando na abertura, vocês resolvem tudo no ' +
-      'standby. Fiquem até o anoitecer: Pandora com as plantas bioluminescentes acesas é o ' +
-      'melhor visual do parque, e sair antes disso é perder o motivo de estar aqui.',
-    avisos: [],
+      'O dia inteiro é uma inversão: todo mundo corre para Pandora na abertura, e vocês vão ' +
+      'para o lado oposto. A recompensa vem no fim — o safári ao entardecer, quando os leões ' +
+      'acordam, e a fila do Flight of Passage no último minuto, que devolve Pandora escura, ' +
+      'acesa e vazia na saída.',
+
+    avisos: [
+      'A ESTIMATIVA É QUE O PARQUE ABRA ÀS 8H, não às 9h. Em novembro o Animal Kingdom ' +
+      'costuma operar das 8h às 18h. Por isso a saída do hotel é 6h30. Confiram o horário ' +
+      'oficial e ajustem a referência assim que ele sair.',
+      'NÃO VÃO PARA PANDORA DE MANHÃ. O Early Entry do Animal Kingdom inclui Pandora, e mais ' +
+      'de 90% dos visitantes correm para lá. O parque inteiro fica vazio do outro lado.',
+    ],
+
     notas: [
+      { tipo: 'atencao', texto:
+        'ESTE É O DIA MAIS DEPENDENTE DE UM HORÁRIO QUE AINDA NÃO SAIU. O fechamento do ' +
+        'parque decide a reta final inteira: safári ao entardecer, Na’vi e a fila do Flight ' +
+        'of Passage estão coreografados para um fechamento às 18h. Se for 19h ou 20h, o dia ' +
+        'respira e cabe repetir o Everest. Se for antes das 18h, o plano B assume.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'bom', texto:
+        'MAIS DE 90% DOS VISITANTES CORREM PARA PANDORA NO ROPE DROP. Nos primeiros 60 a 90 ' +
+        'minutos o resto do parque fica praticamente vazio: Kilimanjaro Safaris, Expedition ' +
+        'Everest e Kali River Rapids costumam ser walk-on ou menos de 15 minutos. É essa ' +
+        'janela que o dia usa.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'bom', texto:
+        'O SAFÁRI VALE DUAS VEZES E É A ÚNICA ATRAÇÃO DO PARQUE ASSIM. De manhã os animais ' +
+        'estão ativos com o frio e não há fila. No fim da tarde os LEÕES ACORDAM — são ' +
+        'noturnos e dormem o dia todo — e a Disney instalou iluminação no percurso para o ' +
+        'safári rodar mesmo depois do pôr do sol. ATENÇÃO: ele fecha 30 a 60 minutos ANTES ' +
+        'do parque, então confirmem o horário dele no dia.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'bom', texto:
+        'DÁ PARA ENTRAR NA FILA ATÉ O MINUTO DO FECHAMENTO e completar a atração depois. É ' +
+        'política da Disney e é o que sustenta o bloco das 17h45: a fila do Flight of Passage ' +
+        'cai de 100–180 minutos no pico para 40–65 depois das 17h, e vocês saem andando por ' +
+        'uma Pandora escura e vazia.',
+        pesquisa: '2026-09-10' },
+
       { tipo: 'info', texto:
-        'O pôr do sol em Orlando em meados de novembro é por volta das 17h30. Por isso o bloco ' +
-        'de Pandora está às 17h30 com âncora fixa: ele não segue a abertura do parque, segue o ' +
-        'sol.', pesquisa: '2026-09-08' },
-    ],
-    blocos: [
-      { id: 'b-1311-0730', hora: '07:30', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Sair do hotel', descricao: '', localId: 'animal-kingdom', acesso: [] },
-
-      { id: 'b-1311-0815', hora: '08:15', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Portão', descricao: '',
-        contexto:
-          'O Animal Kingdom tem estacionamento e entrada diretos, sem monotrilho — por isso a ' +
-          'saída é 45 minutos mais tarde que no Magic Kingdom.',
-        localId: 'animal-kingdom', acesso: [] },
-
-      { id: 'b-1311-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Na’vi River Journey',
-        descricao: 'Standby, rope drop. A fila explode depois das 10h',
-        contexto:
-          'Passeio de barco de 5 minutos por uma floresta bioluminescente de Pandora. Não tem ' +
-          'emoção nenhuma — é puramente visual, e o animatrônico da Xamã no fim é considerado ' +
-          'o melhor que a Disney já construiu. Capacidade baixa, fila cruel depois das 10h.',
-        areaParque: 'Pandora', acesso: ['rope-drop', 'standby'] },
-
-      { id: 'b-1311-0935', hora: '09:35', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Kilimanjaro Safaris',
-        descricao: 'Standby. Animais mais ativos de manhã',
-        contexto:
-          'Safári de caminhão por 45 hectares com animais soltos de verdade — girafas, leões, ' +
-          'elefantes, rinocerontes. Dura cerca de 22 minutos e cada passeio é diferente. ' +
-          'De manhã cedo é quando eles estão ativos: no calor da tarde se escondem na sombra.',
-        areaParque: 'Africa', acesso: ['standby'], duracaoMin: 22 },
-
-      { id: 'b-1311-1040', hora: '10:40', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Expedition Everest',
-        descricao: 'Standby. Se a fila estiver curta, façam duas vezes',
-        contexto:
-          'Montanha-russa dentro de uma montanha cenográfica de 60 metros, com um trecho longo ' +
-          'andando para trás no escuro. É a mais intensa do parque, mas ainda assim familiar — ' +
-          'sem inversões. A fila tem um museu de ioga e ietis que vale olhar.',
-        areaParque: 'Asia', acesso: ['standby'] },
-
-      { id: 'b-1311-1120', hora: '11:20', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Flight of Passage',
-        descricao: 'Single Pass. A melhor atração do Walt Disney World',
-        contexto:
-          'Simulador em que vocês montam num banco de moto e "voam" num banshee sobre Pandora, ' +
-          'com tela 3D gigante, vento, cheiro e o banco respirando embaixo de vocês. É consenso ' +
-          'como a melhor atração da Disney no mundo. Não está no Multi Pass: compra separada.',
-        areaParque: 'Pandora', acesso: ['single-pass'] },
-
-      { id: 'b-1311-1215', hora: '12:15', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Almoço — Satu’li Canteen',
-        descricao: 'Balcão, em Pandora. Um dos melhores da Disney',
-        contexto:
-          'Serviço de balcão com tigelas montáveis — escolhem proteína e base. É consistentemente ' +
-          'eleito o melhor quick service do Walt Disney World. Usem mobile order pelo app: a ' +
-          'fila do balcão aqui é longa e a do mobile order não existe.',
-        restauranteId: 'r-satuli', areaParque: 'Pandora', acesso: [] },
-
-      { id: 'b-1311-1315', hora: '13:15', ancora: 'fixo', tipo: 'show',
-        titulo: 'Festival of the Lion King',
-        descricao: '30 min. Show visual, sem barreira de idioma',
-        contexto:
-          'Espetáculo em teatro circular com acrobatas, cantores e carros alegóricos. É quase ' +
-          'todo música e acrobacia, então o inglês não atrapalha. Cheguem 20 minutos antes para ' +
-          'não sentar na primeira fila, que é ruim. HORÁRIO FIXO de sessão.',
-        areaParque: 'Africa', acesso: [], duracaoMin: 30 },
-
-      { id: 'b-1311-1415', hora: '14:15', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Maharajah Jungle Trek',
-        descricao: 'Trilha a pé. Tigres',
-        contexto:
-          'Trilha a pé por ruínas cenográficas com tigres, dragões-de-komodo e morcegos ' +
-          'gigantes. Sem fila, no seu ritmo, com muita sombra. Bom bloco para a hora quente.',
-        areaParque: 'Asia', acesso: [] },
-
-      { id: 'b-1311-1500', hora: '15:00', ancora: 'fixo', tipo: 'show',
-        titulo: 'Zootopia: Better Zoogether!',
-        descricao: 'Teatro da Árvore da Vida',
-        contexto:
-          'Show em 3D com efeitos no teatro e um animatrônico novo, cerca de 10 minutos. ' +
-          'Substituiu o It’s Tough to be a Bug. A recepção da crítica especializada foi ruim — ' +
-          'acham frenético e esquecível. É ar-condicionado e é curto; se o dia atrasar, é ' +
-          'descartável sem culpa. HORÁRIO FIXO de sessão.',
-        areaParque: 'Discovery Island', acesso: [], duracaoMin: 10, pesquisa: '2026-09-08' },
-
-      { id: 'b-1311-1545', hora: '15:45', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Gorilla Falls',
-        descricao: 'Trilha. Ritmo lento de propósito',
-        contexto:
-          'Trilha a pé com gorilas, hipopótamos vistos por baixo d’água e um aviário. ' +
-          'Diferente do safári, aqui vocês param quanto quiserem.',
-        areaParque: 'Africa', acesso: [] },
-
-      { id: 'b-1311-1630', hora: '16:30', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Nomad Lounge',
-        descricao: 'Drink na varanda. O lugar mais gostoso do parque',
-        contexto:
-          'Bar ao lado do Tiffins, com varanda sobre a água e ventiladores. Drinks autorais e ' +
-          'petiscos. Costuma ter espera de 15 a 30 minutos no fim da tarde e não aceita reserva ' +
-          '— coloquem o nome na lista e passeiem enquanto esperam.',
-        restauranteId: 'r-nomad', areaParque: 'Discovery Island', acesso: [] },
-
-      { id: 'b-1311-1730', hora: '17:30', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Pandora ao anoitecer',
-        descricao: 'Fiquem. As plantas acendem quando escurece',
-        contexto:
-          'Toda a vegetação de Pandora é pintada com tinta reativa e acende em azul e roxo ' +
-          'quando escurece. É o melhor visual do parque e a razão de vocês ficarem até tarde ' +
-          'aqui. HORÁRIO FIXO — depende do pôr do sol (~17h30 em novembro), não da abertura.',
-        areaParque: 'Pandora', acesso: [] },
-
-      { id: 'b-1311-1830', hora: '18:30', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Sair', descricao: '', acesso: [] },
-
-      { id: 'b-1311-1945', hora: '19:45', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — Sanaa',
-        descricao: 'Animal Kingdom Lodge. Vão pela comida, não pela janela',
-        contexto:
-          'Fica no Animal Kingdom Lodge, que é outro endereço — não é dentro do parque. ' +
-          'Cozinha indiana com influência africana; o nome quer dizer \u201cobra de arte\u201d ' +
-          'em suaíli.\n\n' +
-          'NÃO PEÇAM MESA NA JANELA. O pôr do sol em 13/11 é por volta das 17h30 e vocês ' +
-          'chegam às 19h45 — está escuro há mais de duas horas. A savana tem iluminação ' +
-          'fraca e, de dentro, o vidro vira espelho. A promessa de girafas e zebras na ' +
-          'janela é real, mas só de dia.\n\n' +
-          'O que sustenta a escolha é a comida. Peçam o BREAD SERVICE: cinco pães ' +
-          'indianos com nove acompanhamentos, ~US$ 23, enorme e feito para dividir. É o ' +
-          'prato mais elogiado do Walt Disney World inteiro e não existe igual em ' +
-          'nenhum outro restaurante daqui.\n\n' +
-          'Nos pratos principais: curry de frutos do mar goês, butter chicken, carne ' +
-          'braseada ou vindaloo de porco, entre US$ 15 e 35. Reserva pelo My Disney ' +
-          'Experience, janela abre 14/09. HORÁRIO FIXO de reserva.',
-        restauranteId: 'r-sanaa', localId: 'ak-lodge', acesso: ['reserva'] },
+        'O pôr do sol em Orlando em meados de novembro é por volta das 17h30. Toda a reta ' +
+        'final do dia segue o sol, não a abertura do parque — por isso aqueles blocos são ' +
+        'fixos e não deslocam com a referência.',
+        pesquisa: '2026-09-08' },
     ],
 
+    /* --------------------------------------------------------------------- */
+    planos: [
+      {
+        letra: 'A',
+        titulo: 'O dia como está escrito',
+        gatilho: 'Parque das 8h às 18h e o safári rodando até pelo menos 17h.',
+        passos: [
+          'Pré-fila no checkpoint da ÁFRICA, não na ponte de Pandora.',
+          'Safári, Everest e as trilhas de manhã, com o parque vazio do lado de cá.',
+          'Meio do dia nos shows e no Nomad Lounge, que é o descanso do dia.',
+          'Safári de novo às 16h30, agora atrás dos leões.',
+          'Na’vi às 17h15 e a fila do Flight of Passage às 17h45 — até o último minuto vale.',
+          'Sair devagar pela Pandora escura, com o Awakenings na Árvore da Vida.',
+        ],
+      },
+      {
+        letra: 'B',
+        titulo: 'O safári fecha cedo demais',
+        gatilho: 'Na parada das 15h45 vocês descobrem que o último caminhão sai antes das 16h30.',
+        passos: [
+          'VÃO AGORA. Larguem o resto e peguem o safári enquanto ele ainda roda — é o bloco ' +
+          'mais insubstituível da tarde.',
+          'Isso adianta a reta final. O Na’vi sobe para o horário que sobrar e vocês chegam ' +
+          'na fila do Flight of Passage mais cedo, o que é bom: mais margem antes do ' +
+          'fechamento.',
+          'Se sobrar tempo depois do Na’vi, o Everest de novo é o melhor uso — a fila dele ' +
+          'também cede no fim do dia.',
+        ],
+      },
+      {
+        letra: 'B2',
+        titulo: 'O parque não abre às 8h, ou fecha mais tarde',
+        gatilho: 'O horário oficial sai por volta de 14/09 e pode não ser 8h–18h.',
+        passos: [
+          'ABRIU MAIS TARDE: mudem a referência aqui no app. A manhã inteira desloca junto, ' +
+          'inclusive a saída do hotel. Os shows têm sessão própria — confiram a grade e ' +
+          'ajustem no selo de horário de cada um.',
+          'FECHOU MAIS TARDE (19h ou 20h): o dia respira. Empurrem o safári do entardecer ' +
+          'para uma hora antes do fechamento dele, encaixem o Expedition Everest de novo, e ' +
+          'entrem na fila do Flight of Passage a 15 minutos do fechamento em vez de 17h45.',
+          'A RETA FINAL NÃO DESLOCA COM A ABERTURA. Ela segue o sol e o fechamento, por isso ' +
+          'aqueles blocos são fixos. Se o app avisar colisão em vermelho no meio do dia, é o ' +
+          'almoço ou os shows batendo — ajustem esses, não o fim.',
+        ],
+      },
+      {
+        letra: 'C',
+        titulo: 'Chuva forte ou o dia desandou',
+        gatilho: 'Chuva que não passa, cansaço, ou o dia atrasou demais.',
+        passos: [
+          'O Animal Kingdom é o parque com menos cobertura da Disney. Com chuva forte, o ' +
+          'Festival of the Lion King e o Zootopia são teatro fechado, e o Nomad Lounge tem ' +
+          'varanda coberta com ventilador.',
+          'O safári RODA na chuva e os animais costumam ficar mais ativos. O caminhão tem ' +
+          'teto. Não é motivo para desistir dele.',
+          'O QUE NÃO SE SACRIFICA: a fila do Flight of Passage no fim. Se for para cortar ' +
+          'alguma coisa, cortem o Zootopia, o Kali e as trilhas — nessa ordem.',
+          'Se vocês estiverem destruídos, o Sanaa às 19h45 tem tolerância curta e taxa por ' +
+          'não comparecimento: cancelem com 2 horas de antecedência pelo My Disney Experience ' +
+          'ou pelo +1 407-939-3463.',
+        ],
+      },
+    ],
+
+    /* --------------------------------------------------------------------- */
     naoPerca: [
+      { nome: 'Pandora escura, na saída', quando: 'hoje', custo: 'grátis',
+        motivo: 'A vegetação inteira é pintada com tinta reativa e acende em azul e roxo. ' +
+                'Saindo do Flight of Passage por volta das 18h30, vocês atravessam a land ' +
+                'no escuro e praticamente sem ninguém, porque o parque já fechou. É a ' +
+                'recompensa do dia e é de graça.',
+        pesquisa: '2026-09-10' },
+
+      { nome: 'Tree of Life Awakenings', quando: 'hoje', custo: 'grátis',
+        condicao: 'só em noites de outono e inverno',
+        motivo: 'Projeção de animais no tronco da Árvore da Vida, a cada dez minutos depois ' +
+                'que escurece, até o fechamento — e costuma continuar um pouco depois. ' +
+                'Novembro está na temporada. Vocês passam por baixo dela na saída, exatamente ' +
+                'nessa janela.',
+        pesquisa: '2026-09-10' },
+
+      { nome: 'O safári ao entardecer', quando: 'hoje', custo: 'grátis',
+        motivo: 'Leões são noturnos. A chance real de ver um acordado é no fim da tarde, e a ' +
+                'Disney iluminou o percurso para o safári rodar depois do pôr do sol. É a ' +
+                'única atração do parque em que repetir dá conteúdo diferente.',
+        pesquisa: '2026-09-10' },
+
+      { nome: 'Kali River Rapids', quando: 'decidir', custo: 'grátis',
+        condicao: 'molha de verdade, e às 9h15 ainda está fresco',
+        motivo: 'Em novembro Orlando amanhece por volta dos 15°C. Se o dia estiver frio, ' +
+                'pular ganha 35 minutos e evita passar o resto do dia com roupa molhada. Se ' +
+                'estiver quente, é diversão barata e sem fila naquela hora.' },
+
+      { nome: 'Single Pass do Flight of Passage', quando: 'decidir',
+        custo: 'US$ 18–20 por pessoa',
+        motivo: 'PLANO B PAGO, não compra antecipada. O dia foi montado para pegar a fila de ' +
+                '40–65 minutos do fim da tarde em vez dos 100–180 do pico. Só vale comprar ' +
+                'se o parque fechar cedo demais para o plano caber, ou se vocês decidirem ' +
+                'que não querem encarar 50 minutos de fila no fim de um dia de dez horas. ' +
+                'A compra seria às 7h ET de 10/11, durante a conexão em Bogotá.',
+        pesquisa: '2026-09-10' },
+
       { nome: 'Starlight Safari', quando: 'decidir', custo: 'US$ 75 a 89 por pessoa',
         condicao: 'reserva abre 60 dias antes, 6h ET — ou seja 14/09',
         motivo:
@@ -1705,21 +1716,329 @@ window.ROTEIRO = {
           'O que pesa contra é o preço. US$ 150 a 178 no casal, e vocês descartaram o ' +
           'Amphicar a US$ 62 por cabeça. Se a régua for a mesma, este também cai — mas ' +
           'aqui são 90 minutos, não 20, e é a savana à noite, que não tem substituto no ' +
-          'resto do roteiro. Decidam até 14/09, que é quando a reserva abre.',
+          'resto do roteiro. E hoje vocês já terão feito o safári diurno duas vezes: ' +
+          'pesem se um terceiro, no escuro, ainda acrescenta.\n\n' +
+          'Decidam até 14/09, que é quando a reserva abre.',
         pesquisa: '2026-09-09' },
+    ],
+
+    /* --------------------------------------------------------------------- */
+    prepararAmanha: {
+      paraODia: '2026-11-14',
+      titulo: 'Celebration e Islands à noite · sem alarme',
+      aviso:
+        'Depois de um dia que termina 21h15 no Sanaa, o dia 14 começa com bloco vazio às ' +
+        '9h de propósito. Não coloquem despertador.',
+      itens: [
+        { texto: 'Dormir sem alarme', critico: true,
+          motivo: 'O dia 14 só sai do hotel às 10h30 e o bloco das 9h é vazio de propósito. ' +
+                  'Hoje foram dez horas de parque; amanhã é a primeira noite da temporada de ' +
+                  'Natal da Universal e vocês vão querer estar inteiros.' },
+        { texto: 'Conferir o horário do Grinchmas no app da Universal', critico: true,
+          motivo: 'É o Grinchmas que ancora a noite de amanhã no Islands. Quando souberem a ' +
+                  'hora, editem a referência do dia 14 e a noite inteira desloca junto.' },
+        { texto: 'Guardar as compras e esvaziar a mochila',
+          motivo: 'Amanhã tem Celebration de dia e parque à noite — a mochila precisa sair ' +
+                  'leve.' },
+        { texto: 'Celular e power bank na tomada',
+          motivo: 'Rotina de toda véspera.' },
+        { texto: 'Se fizeram o Kali, pendurar a roupa molhada para secar',
+          motivo: 'Não deixem no chão da mala. Amanhã à noite chove com frequência em ' +
+                  'novembro e vocês vão querer a capa seca.' },
+      ],
+    },
+
+    /* --------------------------------------------------------------------- */
+    blocos: [
+      { id: 'b-1311-0730', hora: '06:30', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Sair do hotel',
+        descricao: 'Uber, ~35 min. O Animal Kingdom tem entrada direta',
+        contexto:
+          'Diferente do Magic Kingdom, aqui o Uber deixa vocês na entrada — não há ' +
+          'monotrilho nem barco no meio. Ainda assim a saída é cedo, porque a estimativa é ' +
+          'que o parque abra às 8h e não às 9h: em novembro o Animal Kingdom costuma operar ' +
+          'das 8h às 18h.',
+        localId: 'animal-kingdom', acesso: [], critico: true, duracaoMin: 45 },
+
+      { id: 'b-1311-0815', hora: '07:15', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Portão · pré-fila no checkpoint da ÁFRICA',
+        descricao: 'Não na ponte de Pandora',
+        contexto:
+          'A MESMA DECISÃO CONTRAINTUITIVA DO DIA 11, e aqui ela é ainda mais forte.\n\n' +
+          'Mais de 90% dos visitantes correm para Pandora no rope drop — e o Early Entry do ' +
+          'Animal Kingdom INCLUI Pandora. São só quatro atrações no Early Entry e duas delas ' +
+          'são o Flight of Passage e o Na’vi. Ou seja: os hóspedes Disney já andaram nas duas ' +
+          'antes de vocês entrarem, e ainda estão na fila quando o portão abre para vocês.\n\n' +
+          'O resto do parque fica praticamente vazio nos primeiros 60 a 90 minutos. Kilimanjaro ' +
+          'Safaris, Expedition Everest e Kali River Rapids costumam ser walk-on nessa janela. ' +
+          'É para lá que vocês vão.\n\n' +
+          'Desde meados de 2026 quem não é hóspede pode fazer pré-fila direto no checkpoint da ' +
+          'land, e não mais só na entrada — peçam o da África.\n\n' +
+          'Café da manhã aqui, das barrinhas da mochila. O almoço é só às 11h30.',
+        localId: 'animal-kingdom', acesso: [], duracaoMin: 45, pesquisa: '2026-09-10' },
+
+      { id: 'b-1311-0935', hora: '08:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Kilimanjaro Safaris — rope drop',
+        descricao: 'Walk-on, e os animais estão ativos com o frio da manhã',
+        contexto:
+          'Safári de caminhão por 45 hectares com animais soltos de verdade — girafas, leões, ' +
+          'elefantes, rinocerontes. Dura cerca de 22 minutos e cada passeio é diferente.\n\n' +
+          'DE MANHÃ É QUANDO ELES ESTÃO ATIVOS: no calor da tarde se escondem na sombra. E ' +
+          'às 8h a fila não existe, porque o parque inteiro está em Pandora.\n\n' +
+          'Vocês voltam aqui às 16h30. É a única atração do parque em que repetir dá conteúdo ' +
+          'diferente, e o motivo está naquele bloco.',
+        areaParque: 'Africa', acesso: ['rope-drop', 'standby'], critico: true, duracaoMin: 40,
+        fila: { min: 10, quando: 'na abertura', pico: 55, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1311-1040', hora: '08:40', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Expedition Everest',
+        descricao: 'Walk-on pelo mesmo motivo',
+        contexto:
+          'Montanha-russa dentro de uma montanha cenográfica de 60 metros, com um trecho longo ' +
+          'andando para trás no escuro. É a mais intensa do parque, mas ainda assim familiar — ' +
+          'sem inversões. A fila tem um museu de ioga e ietis que vale olhar.\n\n' +
+          'Ela está no Early Entry, mas continua vazia na abertura oficial porque todo mundo ' +
+          'que entrou cedo foi para Pandora.',
+        areaParque: 'Asia', acesso: ['standby'], duracaoMin: 35,
+        fila: { min: 15, quando: 'na abertura', pico: 40, fonte: '2026-09-10' } },
+
+      { id: 'b-1311-0915', hora: '09:15', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Kali River Rapids',
+        descricao: 'MOLHA DE VERDADE. Opcional, e a decisão é o clima',
+        contexto:
+          'Bote circular por corredeiras. Não é radical — o valor está no cenário e em se ' +
+          'molhar junto. E vocês vão se molhar: não é respingo, é balde.\n\n' +
+          'A DECISÃO É A TEMPERATURA. Em novembro Orlando amanhece por volta dos 15°C e às ' +
+          '9h15 ainda não esquentou. Se o dia estiver fresco, pulem sem culpa e ganhem 35 ' +
+          'minutos — vocês têm capa de chuva na mochila, mas roupa molhada às 9h estraga o ' +
+          'resto do dia.\n\n' +
+          'Se fizerem: capa de chuva vestida, celular no Ziploc, e há lockers na entrada.',
+        areaParque: 'Asia', acesso: ['standby'], molha: true, opcional: true, duracaoMin: 35,
+        fila: { min: 15, quando: 'na abertura', pico: 45, estimado: true, fonte: '2026-09-10' } },
+
+      { id: 'b-1311-1415', hora: '09:50', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Maharajah Jungle Trek',
+        descricao: 'Trilha a pé. Tigres. Sem fila, no ritmo de vocês',
+        contexto:
+          'Trilha a pé por ruínas cenográficas com tigres, dragões-de-komodo e morcegos ' +
+          'gigantes. Sem fila, no seu ritmo, com muita sombra.\n\n' +
+          'Vem aqui de propósito: se vocês fizeram o Kali, é a hora de secar andando.',
+        areaParque: 'Asia', acesso: [], duracaoMin: 40 },
+
+      { id: 'b-1311-1030p', hora: '10:30', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Parada — água, banheiro e sentar',
+        descricao: 'Quinze minutos. Vocês estão de pé desde as 5h30',
+        contexto:
+          'Banheiro, encher as garrafas num balcão de comida (água gelada de graça, é só ' +
+          'pedir) e sentar.\n\n' +
+          'Toda land tem banheiro, normalmente ao lado do maior balcão de comida. Não vale ' +
+          'procurar no mapa; vale parar quando o corpo pedir.',
+        areaParque: 'Asia', acesso: [], duracaoMin: 15 },
+
+      { id: 'b-1311-1545', hora: '10:45', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Gorilla Falls Exploration Trail',
+        descricao: 'Trilha. Ritmo lento de propósito',
+        contexto:
+          'Trilha a pé com gorilas, hipopótamos vistos por baixo d’água e um aviário. ' +
+          'Diferente do safári, aqui vocês param quanto quiserem.',
+        areaParque: 'Africa', acesso: [], duracaoMin: 45 },
+
+      { id: 'b-1311-1215', hora: '11:30', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Almoço — Satu’li Canteen',
+        descricao: 'Balcão, em Pandora. Um dos melhores da Disney',
+        contexto:
+          'Serviço de balcão com tigelas montáveis — escolhem proteína e base. É ' +
+          'consistentemente eleito o melhor quick service do Walt Disney World.\n\n' +
+          'Usem mobile order pelo app: a fila do balcão aqui é longa e a do mobile order não ' +
+          'existe. Peçam com meia hora de antecedência, ainda na Gorilla Falls.\n\n' +
+          'É a primeira vez que vocês pisam em Pandora hoje, e é de dia. Olhem as montanhas ' +
+          'flutuantes agora, porque à noite o lugar é outro — e vocês voltam.',
+        restauranteId: 'r-satuli', areaParque: 'Pandora', acesso: [], duracaoMin: 60 },
+
+      { id: 'b-1311-1315', hora: '12:30', ancora: 'fixo', tipo: 'show',
+        titulo: 'Festival of the Lion King',
+        descricao: '30 min. Show visual, sem barreira de idioma',
+        contexto:
+          'Espetáculo em teatro circular com acrobatas, cantores e carros alegóricos. É quase ' +
+          'todo música e acrobacia, então o inglês não atrapalha. Cheguem 20 minutos antes ' +
+          'para não sentar na primeira fila, que é ruim.\n\n' +
+          'HORÁRIO FIXO de sessão — confiram a grade no app da Disney no dia e ajustem aqui ' +
+          'se a sessão for outra.',
+        areaParque: 'Africa', acesso: [], duracaoMin: 45, confirmarHorario: true },
+
+      { id: 'b-1311-1500', hora: '13:15', ancora: 'fixo', tipo: 'show',
+        titulo: 'Zootopia: Better Zoogether!',
+        descricao: 'Teatro da Árvore da Vida. 10 min',
+        contexto:
+          'Show em 3D com efeitos no teatro e um animatrônico novo. Substituiu o It’s Tough ' +
+          'to be a Bug. A recepção da crítica foi ruim — acham frenético e esquecível.\n\n' +
+          'É ar-condicionado e é curto. Se o dia atrasar, é o primeiro bloco a cair sem culpa.',
+        areaParque: 'Discovery Island', acesso: [], duracaoMin: 30, opcional: true,
+        confirmarHorario: true, pesquisa: '2026-09-08' },
+
+      { id: 'b-1311-1345', hora: '13:45', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Discovery Island Trails e a Árvore da Vida',
+        descricao: 'Trilhas curtas em volta da árvore. Quase ninguém faz',
+        contexto:
+          'Trilhas laterais que contornam a base da Árvore da Vida, com lêmures, lontras e ' +
+          'cangurus. Quase ninguém entra — a maioria fotografa a árvore de longe e segue.\n\n' +
+          'Olhem a árvore de perto: são mais de 300 animais esculpidos no tronco, e a ' +
+          'estrutura é uma plataforma de petróleo reaproveitada. À noite ela vira outra coisa, ' +
+          'e vocês vão ver isso na saída.',
+        areaParque: 'Discovery Island', acesso: [], duracaoMin: 45 },
+
+      { id: 'b-1311-1630', hora: '14:30', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Nomad Lounge — a varanda',
+        descricao: 'O lugar mais gostoso do parque. Drink e petisco',
+        contexto:
+          'Bar ao lado do Tiffins, com varanda sobre a água e ventiladores. Drinks autorais e ' +
+          'petiscos.\n\n' +
+          'Costuma ter espera de 15 a 30 minutos e não aceita reserva — coloquem o nome na ' +
+          'lista e passeiem enquanto esperam.\n\n' +
+          'Esta hora e meia é o VAZIO PROPOSITAL do dia, só que com ar-condicionado e bebida. ' +
+          'Vocês vão precisar dela: a partir das 16h30 o dia não para mais até o jantar.',
+        restauranteId: 'r-nomad', areaParque: 'Discovery Island', acesso: [], duracaoMin: 75 },
+
+      { id: 'b-1311-1545p', hora: '15:45', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Parada — antes da reta final',
+        descricao: 'Garrafas cheias, power bank, e conferir o horário do safári',
+        contexto:
+          'A reta final começa agora e é coreografada minuto a minuto. Duas coisas antes:\n\n' +
+          'CONFIRAM NO APP DA DISNEY A QUE HORAS O KILIMANJARO SAFARIS FECHA. Ele fecha 30 a ' +
+          '60 minutos ANTES do parque, e o bloco das 16h30 depende disso. Se o último caminhão ' +
+          'sair às 17h, está tudo bem. Se sair às 16h30, vão agora.\n\n' +
+          'E confiram a hora do fechamento do parque, que é o que sustenta o bloco do Flight ' +
+          'of Passage às 17h45.',
+        areaParque: 'Discovery Island', acesso: [], duracaoMin: 45, critico: true },
+
+      { id: 'b-1311-1631', hora: '16:30', ancora: 'fixo', tipo: 'atracao',
+        titulo: 'Kilimanjaro Safaris DE NOVO — agora ao entardecer',
+        descricao: 'Os leões acordam. É outro safári',
+        contexto:
+          'É A ÚNICA ATRAÇÃO DO PARQUE EM QUE REPETIR DÁ CONTEÚDO DIFERENTE, e é o melhor ' +
+          'truque do dia.\n\n' +
+          'Leões são noturnos e dormem o dia inteiro. A chance real de ver leão acordado é no ' +
+          'fim da tarde, perto do fechamento — e a Disney instalou iluminação em todo o ' +
+          'percurso justamente para o safári continuar rodando depois que o sol se põe.\n\n' +
+          'De quebra, a última hora do safári é quando praticamente não há fila: quem queria ' +
+          'já foi de manhã.\n\n' +
+          'HORÁRIO FIXO, colado no fim do dia e não na abertura. E confirmem o horário de ' +
+          'fechamento do safári na parada anterior — ele fecha antes do parque.',
+        areaParque: 'Africa', acesso: ['standby'], critico: true, duracaoMin: 45,
+        fila: { min: 15, quando: 'na última hora', pico: 55, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1311-0900', hora: '17:15', ancora: 'fixo', tipo: 'atracao',
+        titulo: 'Na’vi River Journey',
+        descricao: 'A fila também cede no fim do dia',
+        contexto:
+          'Passeio de barco de 5 minutos por uma floresta bioluminescente de Pandora. Não tem ' +
+          'emoção nenhuma — é puramente visual, e o animatrônico da Xamã no fim é considerado ' +
+          'o melhor que a Disney já construiu.\n\n' +
+          'Capacidade baixa e fila cruel o dia inteiro; no fim do fim ela cede junto com o ' +
+          'resto do parque. E é a entrada certa para o que vem depois: vocês já ficam em ' +
+          'Pandora, com o sol se pondo.',
+        areaParque: 'Pandora', acesso: ['standby'], duracaoMin: 30,
+        fila: { min: 30, quando: 'no fim do dia', pico: 65, fonte: '2026-09-10' } },
+
+      { id: 'b-1311-1120', hora: '17:45', ancora: 'fixo', tipo: 'atracao',
+        titulo: 'ENTRAR NA FILA do Flight of Passage',
+        descricao: 'A melhor atração do Walt Disney World, pelo menor preço do dia',
+        contexto:
+          'Simulador em que vocês montam num banco de moto e “voam” num banshee sobre ' +
+          'Pandora, com tela 3D gigante, vento, cheiro e o banco respirando embaixo de vocês. ' +
+          'É consenso como a melhor atração da Disney no mundo.\n\n' +
+          'ESTE BLOCO É O MOTIVO DE O DIA INTEIRO ESTAR NESTA ORDEM. A fila dele fica entre ' +
+          '100 e 180 minutos das 11h às 15h, e cai para 40 a 65 depois das 17h. Entrando ' +
+          'agora, vocês pagam a menor fila do dia pela maior atração do complexo — e não ' +
+          'gastam o Single Pass.\n\n' +
+          'A REGRA QUE FAZ ISSO FUNCIONAR: quem está na fila no horário de fechamento anda. ' +
+          'Dá para entrar até o último minuto e completar a atração depois do parque fechado. ' +
+          'Se a fila estiver em 50 minutos e faltarem 15 para fechar, entrem mesmo assim.\n\n' +
+          'Há locker na entrada e nada solto é permitido.',
+        areaParque: 'Pandora', acesso: ['standby'], locker: true, critico: true, duracaoMin: 55,
+        fila: { min: 50, quando: 'na última hora', pico: 180, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1311-1730', hora: '18:40', ancora: 'fixo', tipo: 'livre',
+        titulo: 'Sair caminhando pela Pandora escura',
+        descricao: 'Acesa, vazia, e com a Árvore da Vida acordando no caminho',
+        contexto:
+          'ESTA É A RECOMPENSA DO DIA E ELA É DE GRAÇA.\n\n' +
+          'Toda a vegetação de Pandora é pintada com tinta reativa e acende em azul e roxo ' +
+          'quando escurece. Saindo do Flight of Passage por volta das 18h30, vocês atravessam ' +
+          'a land inteira no escuro, iluminada, e praticamente sem ninguém — porque o parque ' +
+          'já fechou e todo mundo foi embora.\n\n' +
+          'No caminho para a saída, parem embaixo da ÁRVORE DA VIDA: o Tree of Life Awakenings ' +
+          'roda a cada dez minutos depois que escurece, projetando animais no tronco. Ele só ' +
+          'acontece em noites de outono e inverno — novembro está dentro — e costuma continuar ' +
+          'um pouco depois do fechamento.\n\n' +
+          'Não corram. Este bloco não tem fila, não tem ingresso e é o que vocês vão lembrar.',
+        areaParque: 'Pandora', acesso: [], duracaoMin: 25, pesquisa: '2026-09-10' },
+
+      { id: 'b-1311-1830', hora: '19:05', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Uber para o Animal Kingdom Lodge',
+        descricao: '~10 min. O Sanaa é em outro endereço',
+        contexto:
+          'O Animal Kingdom Lodge NÃO é dentro do parque — é um hotel a poucos minutos de ' +
+          'carro. Deixem isso claro para o motorista: o destino é o hotel, não o parque.\n\n' +
+          'Levem o número da reserva à mão. Chegando 19h30, vocês têm quinze minutos de ' +
+          'folga antes da mesa.',
+        localId: 'ak-lodge', acesso: [], duracaoMin: 25 },
+
+      { id: 'b-1311-1945', hora: '19:45', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Jantar — Sanaa',
+        descricao: 'Vão pela comida, não pela janela',
+        contexto:
+          'Cozinha indiana com influência africana; o nome quer dizer “obra de arte” em ' +
+          'suaíli.\n\n' +
+          'NÃO PEÇAM MESA NA JANELA. O pôr do sol em 13/11 é por volta das 17h30 e vocês ' +
+          'chegam às 19h45 — está escuro há mais de duas horas. A savana tem iluminação ' +
+          'fraca e, de dentro, o vidro vira espelho. A promessa de girafas e zebras na ' +
+          'janela é real, mas só de dia. E hoje vocês já viram os bichos duas vezes, no ' +
+          'safári.\n\n' +
+          'O que sustenta a escolha é a comida. Peçam o BREAD SERVICE: cinco pães ' +
+          'indianos com nove acompanhamentos, ~US$ 23, enorme e feito para dividir. É o ' +
+          'prato mais elogiado do Walt Disney World inteiro e não existe igual em ' +
+          'nenhum outro restaurante daqui.\n\n' +
+          'Nos pratos principais: curry de frutos do mar goês, butter chicken, carne ' +
+          'braseada ou vindaloo de porco, entre US$ 15 e 35. Reserva pelo My Disney ' +
+          'Experience, janela abre 14/09. HORÁRIO FIXO de reserva.',
+        restauranteId: 'r-sanaa', localId: 'ak-lodge', acesso: ['reserva'], duracaoMin: 90 },
     ],
 
     ficha: {
       multiPass: {
         usar: false, opcional: false, listaAlta: [], listaBaixa: [], planoB: null,
         nota:
-          'Sem Multi Pass. O parque encolheu com o fim da DinoLand e chegando na abertura ' +
-          'vocês resolvem tudo no standby.',
+          'Sem Multi Pass, e agora com mais razão que antes. O parque encolheu com o fim ' +
+          'da DinoLand, e chegando na abertura pelo lado certo — África e Ásia, onde o ' +
+          'Early Entry não vai — vocês resolvem a manhã inteira no standby, quase sem fila.',
       },
-      singlePass: { itens: ['Avatar Flight of Passage'], opcionais: [], nota: null },
+      singlePass: {
+        itens: [],
+        opcionais: ['Avatar Flight of Passage'],
+        nota:
+          'NÃO COMPREM EM 10/11. O Flight of Passage virou plano B pago: o dia foi montado ' +
+          'para pegar a fila de 40 a 65 minutos do fim da tarde em vez dos 100 a 180 do ' +
+          'pico, e para sair de Pandora no escuro em vez de na fila.\n\n' +
+          'A compra só se justifica se o parque fechar cedo demais para o plano caber, ou ' +
+          'se vocês decidirem que não querem 50 minutos de fila no fim de um dia de dez ' +
+          'horas. E ela seria às 7h ET de 10/11, durante a conexão em Bogotá — o pior ' +
+          'momento da viagem para depender de internet.',
+      },
       expressPass: null,
-      custoEstimadoCasal: { min: 36, max: 40, moeda: 'USD' },
-      extras: [],
+      custoEstimadoCasal: { min: 0, max: 40, moeda: 'USD' },
+      extras: [
+        { nome: 'Locker no Flight of Passage',
+          texto: 'Nada solto é permitido. O locker é gratuito pelo tempo da atração, mas ' +
+                 'some 5 a 10 minutos — contem isso no bloco das 17h45, que é justamente ' +
+                 'o mais apertado do dia.' },
+        { nome: 'O safári fecha antes do parque',
+          texto: 'De 30 a 60 minutos antes. É a única informação do dia que vocês PRECISAM ' +
+                 'conferir no app da Disney na hora — o bloco das 16h30 depende dela.' },
+      ],
     },
     renuncias: {
       gerais: [
@@ -4148,6 +4467,20 @@ window.ROTEIRO = {
      Por isso: area a area, com a margem dita na cara.
      ------------------------------------------------------------------------ */
   topografia: {
+    'animal-kingdom': {
+      forma: 'Roda em torno da Discovery Island, onde fica a Árvore da Vida. Tudo passa ' +
+             'por ela — Pandora de um lado, África e Ásia do outro.',
+      margem: 'O Animal Kingdom tem as caminhadas mais longas da Disney. Somem 50% em dia ' +
+              'cheio, e mais se pararem para olhar bicho, que é o que vocês vão fazer.',
+      arestas: [
+        ['Oasis', 'Discovery Island', 5],
+        ['Discovery Island', 'Pandora', 5],
+        ['Discovery Island', 'Africa', 5],
+        ['Discovery Island', 'Asia', 5],
+        ['Africa', 'Asia', 6],
+      ],
+    },
+
     'magic-kingdom': {
       forma: 'Cubo e seis raios. Do hub, em frente ao castelo, sai tudo.',
       margem: 'Somem 50% em dia cheio, e mais ainda com desfile na rua.',
