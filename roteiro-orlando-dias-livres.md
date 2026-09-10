@@ -20,9 +20,11 @@ Os blocos marcados como **VAZIO PROPOSITAL** não são falha de planejamento. Re
 | **12h35** | Pouso no MCO — Terminal C | Imigração leva de 40 min a 2h |
 | **14h15** | Confirmar a internet e chamar o Uber | Rideshare Pickup no nível 6. Só chamem com as malas na mão |
 | **14h45** | Uber para o hotel · check-in | ~30 min, US$ 35–45 |
-| **15h30** | **Walmart Supercenter** — 3250 Vineland Rd | 4 min do hotel. Água (caixa de 24), café, protetor solar, ibuprofeno, barrinhas e frutas para os dias de rope drop |
-| **16h20** | Voltar ao hotel e guardar as compras | Caixa de 24 garrafas não atravessa o Disney Springs |
-| **16h50** | **Disney Springs** | Uber, ~20 min |
+| **15h15** | Check-in e largar as malas | O check-in abre às 15h; vocês chegam 15h15 |
+| **15h35** | **Walmart Supercenter** — 3250 Vineland Rd | 4 min do hotel, US$ 7–10. Água (caixa de 24), café, protetor solar, ibuprofeno, barrinhas e frutas |
+| **16h25** | Voltar ao hotel e guardar as compras | Caixa de 24 garrafas não atravessa o Disney Springs |
+| **16h30** | Comer alguma coisa | Seis horas desde o pouso |
+| **16h55** | **Disney Springs** | Uber, ~20 min, US$ 15–25 |
 | | The Landing → Marketplace → Town Center | World of Disney é a maior loja Disney do mundo |
 | **19h00** | **Jantar — The Boathouse** (reserva) | |
 | **21h00** | Voltar | |
@@ -40,14 +42,21 @@ Este dia perdeu a festa de Natal do Magic Kingdom. Reorganizei a geografia para 
 | Hora | O quê | Notas |
 |---|---|---|
 | **8h30** | **Café da manhã no hotel** | Incluso. Aproveitem — nos dias de parque vocês não conseguem |
+| **9h30** | Sair para o outlet | Uber, ~25 min, US$ 20–30. O Character Warehouse abre 10h |
 | **10h00** | **Orlando International Premium Outlets** — 4951 International Dr | ~25 min. O cupom do balcão custa US$ 10; o gratuito é o Savings Passport do Simon VIP Club, cadastrado antes de viajar |
 | | ↳ **Disney’s Character Warehouse**, dentro do mesmo outlet | Outlet oficial da Disney. Sobra de estoque e item descontinuado das lojas dos parques. Abre 10h de seg a sáb |
 | **13h00** | **Almoço no próprio outlet** | Sair da I-Drive para comer custa dois Ubers e uma hora |
 | **14h30** | **VAZIO PROPOSITAL** — voltar ao hotel, piscina, dormir | Vocês vêm de Magic Kingdom até 21h no dia anterior |
+| **17h05** | Sair para o ICON Park | Uber, ~25 min, US$ 20–30. O pôr do sol é 17h31 |
 | **17h30** | **ICON Park** — 8375 International Dr | Entrada da área é livre; cada atração é paga |
 | **18h00** | **Museum of Illusions** — US$ 26,99 | A roda-gigante entrou em manutenção e não tem data de volta. Combo de duas atrações a partir de US$ 39/pessoa |
-| **19h00** | **Museum of Illusions** ou **Madame Tussauds** | Opcionais. Só se estiverem com pique |
-| **20h00** | **Jantar na I-Drive** | *Yard House*, *Tin Roof* (música ao vivo), *Cooper's Hawk* |
+| **19h15** | **Madame Tussauds** | Opcional — é ele que fecha o combo de duas atrações |
+| **20h30** | **Jantar — Yard House ou Tin Roof** | Os dois ficam **dentro** do ICON Park. São 20h30 porque o Tussauds termina 20h15 |
+| **21h30** | Voltar ao hotel | Uber, ~25 min, US$ 20–30. Amanhã sai às 6h30 |
+
+> **O Cooper's Hawk fica em outro ponto da I-Drive** e obrigaria mais um Uber no fim da
+> noite. O Yard House e o Tin Roof ficam dentro do próprio ICON Park: vocês saem da
+> atração e sentam.
 
 **Sobre resort hopping:** desde junho de 2026 os hotéis Disney deixaram de ser livremente visitáveis. A guarita exige reserva de hotel ou de restaurante para o carro do rideshare entrar, e o transporte que sai do Disney Springs também checa. Ainda é possível com um jantar reservado num resort do monotrilho — Grand Floridian, Polynesian ou Contemporary, que se ligam entre si —, mas a reserva sai com 60 dias de antecedência.
 
@@ -66,22 +75,39 @@ Sábado. O objetivo do dia é ficar longe de parque cheio e chegar inteiro na se
 
 | Hora | O quê | Notas |
 |---|---|---|
-| **9h00** | **VAZIO PROPOSITAL** — dormir até tarde, café no hotel, piscina | |
-| **11h00** | **Celebration** | 10 min de Uber, US$ 10–15 |
-| | Market Street, o lago, o coreto, a Water Tower Place | Cidade planejada pela Disney nos anos 90 |
+| **9h00** | **VAZIO PROPOSITAL** — dormir sem alarme, café no hotel, piscina | |
+| **11h00** | Uber para **Celebration** | 10 min, US$ 10–15 |
+| **11h15** | Market Street, o lago, o coreto, a Water Tower Place | Cidade planejada pela Disney nos anos 90 |
 | **12h30** | **Almoço — Columbia Restaurant** (reserva) | Peçam o "1905 Salad", preparado na mesa, e o sanduíche cubano |
 | **14h00** | **Kilwins** — sorvete | Na Market Street |
-| **14h45** | Voltar ao hotel, descansar | |
-| **18h00** | **Universal CityWalk** | ~30 min |
-| **18h30** | **Islands of Adventure** — entrada extra, custo zero | Primeira noite da temporada de Natal da Universal |
-| **18h45** | **Grinchmas Who-liday Spectacular** — Seuss Landing | Confiram o horário no app |
-| **19h30** | Hogsmeade decorada · cerveja amanteigada *frozen* | Carrinho externo, fila menor |
-| **20h15** | **The Magic of Christmas at Hogwarts Castle** | Projeção no castelo. Cheguem 20 min antes |
-| **21h00** | **Jantar no CityWalk** — *Toothsome Chocolate Emporium* | |
+| **14h30** | Voltar ao hotel e descansar | Hora e meia. A noite vai até as 21h30 |
+| **16h00** | Sair para a Universal | Uber, ~30 min, US$ 28–40. Passem pelo CityWalk |
+| **16h45** | **Entrada no Islands** — entrada extra, o ingresso já cobre | Direto para o Seuss Landing |
+| **17h00** | **Fila do Grinchmas** — trinta minutos antes | Plateia por ordem de chegada. Não admite atraso |
+| **17h30** | **GRINCHMAS WHO-LIDAY SPECTACULAR** | O motivo de vocês virem hoje |
+| **18h10** | Hogsmeade decorada · cerveja amanteigada *frozen* | Carrinho externo. E é o melhor momento de compra da semana |
+| **18h40** | **The Magic of Christmas at Hogwarts Castle** | Repete a cada 20 min até fechar |
+| **19h15** | **Flight of the Hippogriff**, ou mais Hogsmeade | Opcional. Vocês repetem no dia 19 |
+| **20h00** | **Jantar — Three Broomsticks** | Dentro da Hogsmeade decorada |
+| **21h30** | Voltar ao hotel | Uber, ~30 min, US$ 28–40. Amanhã sai às 7h |
 
-**Não tentem atração grande hoje.** Hagrid's, VelociCoaster e Forbidden Journey são do dia 19.
+> **O Grinchmas é o único compromisso de relógio da noite.** Plateia por ordem de chegada,
+> sem Express Pass, e a grade típica termina às **18h30**. Entrar no parque às 18h30 seria
+> cruzar o portão com o último show começando do outro lado. O roteiro mira a sessão das
+> **17h30** para ter a das 18h30 como plano B.
 
-**Nota:** a feira de Celebration é aos domingos. Vocês vão no sábado e não pegam — não é perda relevante, mas não fiquem procurando.
+> **A ENTRADA é de graça; o dia não é.** Almoço de mesa com gorjeta, sorvete, quatro
+> corridas de Uber, duas cervejas amanteigadas e o jantar: contem **US$ 200 a 260 no
+> casal**. O que é de graça é a noite de Natal, não o sábado.
+
+> **Por que o Three Broomsticks e não o Toothsome.** O Toothsome não aceita reserva e a
+> espera passa de uma hora em fim de semana — num sábado de abertura de temporada, depois
+> de um dia inteiro, é esperar em pé no CityWalk. O Three Broomsticks é balcão dentro da
+> decoração que vocês vieram ver, e não leva gorjeta.
+
+**Não tentem atração grande hoje.** Hagrid's, VelociCoaster e Forbidden Journey são do dia 19,
+numa quinta-feira. Hoje é sábado e primeira noite da temporada: o pior momento possível
+para encarar fila.
 
 ---
 

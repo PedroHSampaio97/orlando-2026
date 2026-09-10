@@ -199,33 +199,14 @@ Feathered Friends in Flight, Bluey's Wild World, Wildlife Express Train, Rafiki'
 
 ---
 
-# 🎄 14/11 (sábado, noite) — ISLANDS OF ADVENTURE (entrada extra)
+# 🎄 14/11 (sábado) — CELEBRATION E ISLANDS À NOITE
 
-> **A ENTRADA é de graça; o dia não é.** O ingresso Universal já cobre esta noite, mas o
-> sábado tem almoço de mesa com gorjeta, sorvete, quatro corridas de Uber, duas cervejas
-> amanteigadas e o jantar: contem **US$ 200 a 260 no casal**. O que é de graça é a noite
-> de Natal, não o dia.
+O dia 14 é majoritariamente dia livre — Celebration de manhã, e a noite no Islands é
+entrada extra. Ele está descrito por inteiro em **`roteiro-orlando-dias-livres.md`**,
+com a manhã e a noite juntas.
 
-**O dia tem um alvo só: o Grinchmas.** Tudo o mais é bônus — a Hogsmeade decorada e a projeção no castelo vocês reveem no dia 19, numa quinta, com menos gente.
-
-> **O Grinchmas é o único compromisso de relógio da noite.** Plateia por ordem de chegada, sem Express Pass, e a grade típica termina às **18h30** (10h15, 11h15, 12h15, 13h15, 15h30, 16h30, 17h30, 18h30). Entrar no parque às 18h30 seria cruzar o portão com o último show começando do outro lado. O roteiro mira a sessão das **17h30** para ter a das 18h30 como plano B.
-
-> **A primeira noite da temporada cai num sábado**, que é o pior dos dois mundos em lotação. É por isso que hoje não tem lista de atrações.
-
-| Hora | O quê |
-|---|---|
-| **16h00** | Sair do hotel para a Universal · ~30 min |
-| **16h45** | Entrada no Islands · direto para o Seuss Landing |
-| **17h00** | **Fila do Grinchmas** — trinta minutos antes. Não admite atraso |
-| **17h30** | **GRINCHMAS WHO-LIDAY SPECTACULAR** |
-| **18h05** | Hogsmeade decorada · cerveja amanteigada *frozen* no carrinho externo |
-| **18h40** | **The Magic of Christmas at Hogwarts Castle** — repete a cada 20 min até fechar |
-| **19h15** | **Flight of the Hippogriff**, ou mais Hogsmeade | Opcional. Vocês repetem esta atração no dia 19, às 17h50 |
-| **20h00** | **Jantar — Three Broomsticks**, dentro da Hogsmeade decorada |
-
-> **Por que o Three Broomsticks e não o Toothsome.** O Toothsome não aceita reserva e a espera passa de uma hora em fim de semana — num sábado de abertura de temporada, depois de um dia inteiro, é esperar em pé no CityWalk. O Three Broomsticks é balcão dentro da decoração que vocês vieram ver, e não leva gorjeta. *(Vocês voltam a comer lá no almoço do dia 19; se quiserem variar, é o dia 19 que muda.)*
-
-> **A projeção no castelo repete a cada vinte minutos** até o parque fechar, e as sessões mais tarde têm visão melhor porque o pátio vai esvaziando. Não é coisa de pegar na hora exata — se perderem uma, a próxima vem.
+*(Estava duplicado nos dois arquivos e eles divergiram: este aqui descrevia a noite
+antiga, com jantar no Toothsome e Grinchmas às 18h45. Um dia, um lugar.)*
 
 ---
 

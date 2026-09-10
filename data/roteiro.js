@@ -471,7 +471,11 @@ window.ROTEIRO = {
 
         { texto: 'Mochila montada e deixada na porta', critico: true,
           motivo: 'Duas garrafas de água, barrinhas, protetor solar, power bank e cabo — ' +
-                  'tudo comprado hoje no Walmart. Montar hoje evita abrir mala às 6h.' },
+                  'tudo comprado hoje no Walmart. Montar hoje evita abrir mala às 6h.\n\n' +
+                  'E UMA CAMADA LEVE PARA CADA UM. Amanhã vocês saem às 6h45 com uns 15°C, ' +
+                  'ao meio-dia faz 27 e às 20h, parados na Main Street esperando os fogos, ' +
+                  'volta para 16. A camada sai vestida, passa a tarde na mochila e volta ' +
+                  'antes dos fogos.' },
 
         { texto: 'Roupa e tênis separados fora da mala',
           motivo: 'Puramente para não procurar nada no escuro às 5h45.' },
@@ -585,7 +589,7 @@ window.ROTEIRO = {
 
       { id: 'b-1011-1645', hora: '16:25', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel e guardar as compras',
-        descricao: '4 min. Fardo de água não vai para o Disney Springs',
+        descricao: '4 min, US$ 7–10. Fardo de água não vai para o Disney Springs',
         contexto:
           'Esta volta existe por um motivo só: ninguém anda pelo Disney Springs com uma ' +
           'caixa de 24 garrafas. Guardem tudo, separem só o que vai para o dia 11 — duas ' +
@@ -607,7 +611,7 @@ window.ROTEIRO = {
 
       { id: 'b-1011-1710', hora: '16:55', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Sair para o Disney Springs',
-        descricao: 'Uber, ~20 min. Pôr do sol às 17h35',
+        descricao: 'Uber, ~20 min, US$ 15–25. Pôr do sol às 17h35',
         contexto:
           'Entrada livre, sem ingresso e sem catraca. Vocês chegam junto com o pôr do sol, ' +
           'que é a melhor hora do lugar.',
@@ -634,7 +638,7 @@ window.ROTEIRO = {
 
       { id: 'b-1011-2100', hora: '21:00', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel',
-        descricao: 'Amanhã é Magic Kingdom com saída às 6h45',
+        descricao: 'Uber, ~20 min, US$ 15–25. Amanhã sai às 6h45',
         contexto:
           'Não estiquem. O dia 11 começa às 6h45 e é o dia mais denso da primeira semana. ' +
           'Nada aqui justifica atrasar a volta — vocês revisitam o Disney Springs no dia ' +
@@ -871,7 +875,7 @@ window.ROTEIRO = {
     blocos: [
       { id: 'b-1111-0645', hora: '06:45', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Sair do hotel',
-        descricao: 'Uber para o TTC, não para a entrada do parque',
+        descricao: 'Uber para o TTC, ~30 min, US$ 22–32. Não para a entrada',
         contexto:
           'O Magic Kingdom é o único parque da Disney sem acesso direto de carro. O Uber ' +
           'para no Ticket & Transportation Center e de lá ainda são 15 a 20 minutos de ' +
@@ -897,7 +901,10 @@ window.ROTEIRO = {
           'nada até o almoço — comam as barrinhas da mochila aqui, parados na fila, que é o ' +
           'único momento do dia em que sobra tempo.\n\n' +
           'Água: qualquer balcão de comida do parque dá copo de água gelada de graça, é ' +
-          'só pedir. Não comprem garrafa a US$ 4 lá dentro — recarreguem as de vocês.',
+          'só pedir. Não comprem garrafa a US$ 4 lá dentro — recarreguem as de vocês.\n\n' +
+          'PONTO DE ENCONTRO DE HOJE: o coreto da Town Square, logo depois da catraca. Se ' +
+          'vocês se perderem, vão para lá e ESPEREM — não saiam procurando. Combinem isso ' +
+          'agora, na fila, e não depois.',
         localId: 'magic-kingdom', acesso: [], duracaoMin: 75, pesquisa: '2026-09-10' },
 
       { id: 'b-1111-1330', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
@@ -1018,6 +1025,9 @@ window.ROTEIRO = {
           'Os próximos noventa minutos são o miolo tático do dia: desfile, travessia do ' +
           'parque e a fila do TRON. Vão para eles com a garrafa cheia e sem fila de ' +
           'banheiro pendurada.\n\n' +
+          'COMAM ALGUMA COISA DA MOCHILA AGORA. O almoço foi 12h45 e o jantar é 17h55 — ' +
+          'são cinco horas, com o desfile e a fila do TRON no meio. Barrinha, fruta, o ' +
+          'que tiver.\n\n' +
           'É também a hora de ligar o power bank, se o celular estiver abaixo de 40%.',
         areaParque: 'Fantasyland', acesso: [], duracaoMin: 12 },
 
@@ -1183,7 +1193,8 @@ window.ROTEIRO = {
           'O ferry parece pior e não é: no fechamento a Disney opera os três barcos, cada um ' +
           'leva centenas de pessoas de uma vez, e a fila some em bloco. É a recomendação ' +
           'padrão de quem conhece — monotrilho na ida, barco na volta.\n\n' +
-          'Do TTC até o hotel, contem 45 a 60 minutos de Uber.',
+          'Do TTC até o hotel, contem 45 a 60 minutos e US$ 22–32 de Uber. Com o ferry, ' +
+          'vocês chegam perto das 23h.',
         localId: 'mk-ttc', acesso: [], duracaoMin: 60, pesquisa: '2026-09-10' },
     ],
 
@@ -1570,7 +1581,7 @@ window.ROTEIRO = {
 
       { id: 'b-1211-2130', hora: '21:30', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel',
-        descricao: 'Amanhã sai às 6h30',
+        descricao: 'Uber, ~25 min, US$ 20–30. Amanhã sai às 6h30',
         contexto:
           'Não estiquem. O dia 13 é Animal Kingdom com saída às 6h30 — uma hora mais cedo ' +
           'do que estava, porque o parque deve abrir às 8h — e abre a sequência ' +
@@ -1808,7 +1819,7 @@ window.ROTEIRO = {
     blocos: [
       { id: 'b-1311-0730', hora: '06:30', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Sair do hotel',
-        descricao: 'Uber, ~35 min. O Animal Kingdom tem entrada direta',
+        descricao: 'Uber, ~35 min, US$ 20–30. O AK tem entrada direta',
         contexto:
           'Diferente do Magic Kingdom, aqui o Uber deixa vocês na entrada — não há ' +
           'monotrilho nem barco no meio. Ainda assim a saída é cedo, porque a estimativa é ' +
@@ -1830,7 +1841,10 @@ window.ROTEIRO = {
           'É para lá que vocês vão.\n\n' +
           'Desde meados de 2026 quem não é hóspede pode fazer pré-fila direto no checkpoint da ' +
           'land, e não mais só na entrada — peçam o da África.\n\n' +
-          'Café da manhã aqui, das barrinhas da mochila. O almoço é só às 12h30.',
+          'Café da manhã aqui, das barrinhas da mochila. O almoço é só às 12h30.\n\n' +
+          'PONTO DE ENCONTRO DE HOJE: a base da Árvore da Vida, na Discovery Island. É ' +
+          'visível de quase todo o parque e todo caminho passa por ela. Se vocês se ' +
+          'perderem, vão para lá e ESPEREM.',
         localId: 'animal-kingdom', acesso: [], duracaoMin: 45, pesquisa: '2026-09-10' },
 
       { id: 'b-1311-0935', hora: '08:00', ancora: 'referencia', tipo: 'atracao',
@@ -1957,7 +1971,12 @@ window.ROTEIRO = {
         titulo: 'Parada — antes da reta final',
         descricao: 'Garrafas cheias, power bank, e conferir o horário do safári',
         contexto:
-          'A reta final começa agora e é coreografada minuto a minuto. Duas coisas antes:\n\n' +
+          'A reta final começa agora e é coreografada minuto a minuto.\n\n' +
+          'COMAM ALGUMA COISA DA MOCHILA. Os petiscos do Nomad foram às 14h25 e o Sanaa é ' +
+          'às 19h45 — cinco horas, com o safári, o Na\u2019vi e 55 minutos de fila do ' +
+          'Flight of Passage no meio. Entrar naquela fila com fome é o erro mais fácil de ' +
+          'evitar do dia.\n\n' +
+          'E duas conferências antes de tudo:\n\n' +
           'CONFIRAM NO APP DA DISNEY A QUE HORAS O KILIMANJARO SAFARIS FECHA. Ele fecha 30 a ' +
           '60 minutos ANTES do parque, e o bloco das 16h30 depende disso. Se o último caminhão ' +
           'sair às 17h, está tudo bem. Se sair às 16h30, vão agora.\n\n' +
@@ -2040,12 +2059,16 @@ window.ROTEIRO = {
           'roda a cada dez minutos depois que escurece, projetando animais no tronco. Ele só ' +
           'acontece em noites de outono e inverno — novembro está dentro — e costuma continuar ' +
           'um pouco depois do fechamento.\n\n' +
-          'Não corram. Este bloco não tem fila, não tem ingresso e é o que vocês vão lembrar.',
+          'Não corram. Este bloco não tem fila, não tem ingresso e é o que vocês vão lembrar.\n\n' +
+          'A WINDTRADERS FICA NA SAÍDA DO FLIGHT OF PASSAGE, e é a única loja de Pandora. ' +
+          'Se vocês querem trazer alguma coisa deste dia, é aqui e é agora — amanhã não ' +
+          'passa por aqui, e a loja fecha junto com o parque. Vale entrar mesmo que seja ' +
+          'só para olhar.',
         areaParque: 'Pandora', acesso: [], duracaoMin: 25, pesquisa: '2026-09-10' },
 
       { id: 'b-1311-1830', hora: '19:05', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Uber para o Animal Kingdom Lodge',
-        descricao: '~10 min. O Sanaa é em outro endereço',
+        descricao: 'Uber, ~10 min, US$ 10–15. O Sanaa é em outro endereço',
         contexto:
           'O Animal Kingdom Lodge NÃO é dentro do parque — é um hotel a poucos minutos de ' +
           'carro. Deixem isso claro para o motorista: o destino é o hotel, não o parque.\n\n' +
@@ -2072,6 +2095,15 @@ window.ROTEIRO = {
           'braseada ou vindaloo de porco, entre US$ 15 e 35. Reserva pelo My Disney ' +
           'Experience, janela abre 14/09. HORÁRIO FIXO de reserva.',
         restauranteId: 'r-sanaa', localId: 'ak-lodge', acesso: ['reserva'], duracaoMin: 90 },
+
+      { id: 'b-1311-2115', hora: '21:15', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voltar ao hotel',
+        descricao: 'Uber, ~25 min, US$ 20–30',
+        contexto:
+          'Chamem do saguão do Animal Kingdom Lodge, não da porta do restaurante — a ' +
+          'entrada de carro do hotel é onde o motorista consegue parar.\n\n' +
+          'São dezesseis horas de pé desde as 5h30. Amanhã não tem alarme.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 25 },
     ],
 
     ficha: {
@@ -2295,8 +2327,9 @@ window.ROTEIRO = {
         { texto: 'Alarme para 6h nos dois celulares', critico: true,
           motivo: 'Saída às 7h. Depois de uma noite que termina às 22h, um alarme só falha.' },
         { texto: 'Mochila montada ANTES de sair para a Universal', critico: true,
-          motivo: 'Voltando 22h, ninguém monta mochila. Deixem pronta agora, na hora do ' +
-                  'descanso da tarde: garrafas, barrinhas, protetor solar, power bank e cabo.' },
+          motivo: 'Voltando perto das 22h, ninguém monta mochila. Deixem pronta agora, na ' +
+                  'hora do descanso da tarde: garrafas, barrinhas, protetor solar, power ' +
+                  'bank, cabo e uma camada leve para cada um.' },
         { texto: 'Reservas do Oga’s Cantina e do Sci-Fi Dine-In à mão',
           motivo: 'Os dois são de horário fixo amanhã. Deixem os números acessíveis no ' +
                   'celular hoje.' },
@@ -2361,7 +2394,7 @@ window.ROTEIRO = {
 
       { id: 'b-1411-1800', hora: '16:00', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Sair para a Universal',
-        descricao: 'Uber, ~30 min. Passem pelo CityWalk',
+        descricao: 'Uber, ~30 min, US$ 28–40. Passem pelo CityWalk',
         contexto:
           'O CityWalk é a área de restaurantes e lojas entre os dois parques da Universal. ' +
           'Entrada livre, sem ingresso — é por onde vocês passam para chegar ao Islands.\n\n' +
@@ -2374,7 +2407,9 @@ window.ROTEIRO = {
         contexto:
           'O ingresso Universal de vocês já cobre hoje — esta noite não custa nada a mais.\n\n' +
           'Do portão, o Seuss Landing fica logo à direita, a uns quatro minutos. Vão direto: ' +
-          'a fila do Grinchmas é o único compromisso de relógio da noite.',
+          'a fila do Grinchmas é o único compromisso de relógio da noite.\n\n' +
+          'PONTO DE ENCONTRO DE HOJE: a fonte do Port of Entry, logo depois da catraca. O ' +
+          'parque é um anel e ela é o único ponto por onde todo mundo passa.',
         localId: 'islands-of-adventure', acesso: [], duracaoMin: 15 },
 
       { id: 'b-1411-1700', hora: '17:00', ancora: 'referencia', tipo: 'espera',
@@ -2414,7 +2449,12 @@ window.ROTEIRO = {
           'a mesma bebida.\n\n' +
           'Hogsmeade no Natal ganha guirlandas, luz quente e coral. É a primeira noite da ' +
           'temporada e vocês voltam aqui no dia 19 — hoje é para andar devagar e olhar, não ' +
-          'para pegar atração.',
+          'para pegar atração.\n\n' +
+          'É TAMBÉM O MELHOR MOMENTO DE COMPRA DA SEMANA, e é de propósito: no dia 19 ' +
+          'vocês vão estar atrás do Hagrid\u2019s e do VelociCoaster, e ninguém para numa ' +
+          'loja nesse dia. A Honeydukes e a Dervish and Banges ficam na rua principal, e a ' +
+          'Ollivanders de Hogsmeade tem a varinha escolhendo o bruxo — a do Beco Diagonal, ' +
+          'que vocês fazem no dia 17, é a versão maior.',
         areaParque: 'Hogsmeade', acesso: [], duracaoMin: 30 },
 
       { id: 'b-1411-2015', hora: '18:40', ancora: 'fixo', tipo: 'show',
@@ -2461,6 +2501,16 @@ window.ROTEIRO = {
           'quiserem variar, é o dia 19 que muda, não hoje.',
         restauranteId: 'r-broomsticks-14', areaParque: 'Hogsmeade', acesso: [],
         duracaoMin: 90 },
+
+      { id: 'b-1411-2130', hora: '21:30', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voltar ao hotel',
+        descricao: 'Uber, ~30 min, US$ 28–40. Amanhã sai às 7h',
+        contexto:
+          'A saída do Islands passa pelo CityWalk inteiro antes de chegar ao ponto de ' +
+          'rideshare — contem uns dez minutos a pé só para sair.\n\n' +
+          'Amanhã é Hollywood Studios com saída às 7h e é o dia mais caro em passes da ' +
+          'viagem. Não estiquem.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 30 },
     ],
 
     ficha: {
@@ -4144,7 +4194,7 @@ window.ROTEIRO = {
      ------------------------------------------------------------------------ */
   restaurantes: [
     { id: 'r-boathouse', nome: 'The Boathouse', data: '2026-11-10', hora: '19:00',
-      refeicao: 'jantar', local: 'Disney Springs · The Landing', alternativas: [],
+      refeicao: 'jantar', local: 'Disney Springs · The Landing', alternativas: ['Black Angus ou Miller\u2019s Ale House, na 192, se o dia virar plano C'],
       precisaReserva: true, janelaAbre: '2026-09-11', janelaHora: '06:00 ET',
       canal: 'Disney Springs / OpenTable', blocoId: 'b-1011-1900',
       statusPadrao: 'confirmado', confirmacaoPadrao: '2111918775',
@@ -4154,7 +4204,7 @@ window.ROTEIRO = {
 
     { id: 'r-columbia-harbour', nome: 'Columbia Harbour House', data: '2026-11-11',
       hora: '11:50', refeicao: 'almoco', local: 'Magic Kingdom · Liberty Square',
-      alternativas: [],
+      alternativas: ['Liberty Tree Tavern, na mesma Liberty Square', 'Skipper Canteen, na Adventureland'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Mobile order pelo My Disney Experience', blocoId: 'b-1111-1230',
       nota: 'DECIDIDO em 08/09: parque corrido, almoço de balcão sem reserva. Peixe e ' +
@@ -4163,7 +4213,7 @@ window.ROTEIRO = {
             'ficaram de fora.' },
 
     { id: 'r-caseys', nome: 'Casey’s Corner', data: '2026-11-11', hora: '17:55',
-      refeicao: 'jantar', local: 'Magic Kingdom · Main Street', alternativas: [],
+      refeicao: 'jantar', local: 'Magic Kingdom · Main Street', alternativas: ['Pecos Bill, na Frontierland', 'Cosmic Ray\u2019s, na Tomorrowland'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Mobile order pelo My Disney Experience', blocoId: 'b-1111-1745',
       nota: 'DECIDIDO em 08/09: escolhido pela experiência do pianista, que toca na porta ' +
@@ -4171,19 +4221,19 @@ window.ROTEIRO = {
             'piano — comer dentro perde o motivo da escolha.' },
 
     { id: 'r-satuli', nome: 'Satu’li Canteen', data: '2026-11-13', hora: '12:30',
-      refeicao: 'almoco', local: 'Animal Kingdom · Pandora', alternativas: [],
+      refeicao: 'almoco', local: 'Animal Kingdom · Pandora', alternativas: ['Flame Tree Barbecue, na Discovery Island', 'Harambe Market, na \u00c1frica'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Mobile order pelo My Disney Experience', blocoId: 'b-1311-1215',
       nota: 'Balcão. Eleito o melhor quick service do Walt Disney World.' },
 
     { id: 'r-nomad', nome: 'Nomad Lounge', data: '2026-11-13', hora: '14:25',
-      refeicao: 'drink', local: 'Animal Kingdom · Discovery Island', alternativas: [],
+      refeicao: 'drink', local: 'Animal Kingdom · Discovery Island', alternativas: ['Tiffins, ao lado \u2014 mesma cozinha, mesa e reserva'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Lista de espera no local', blocoId: 'b-1311-1630',
       nota: 'Não aceita reserva. Coloquem o nome na lista e passeiem enquanto esperam.' },
 
     { id: 'r-sanaa', nome: 'Sanaa', data: '2026-11-13', hora: '19:45',
-      refeicao: 'jantar', local: 'Animal Kingdom Lodge', alternativas: [],
+      refeicao: 'jantar', local: 'Animal Kingdom Lodge', alternativas: ['The Mara, balc\u00e3o no mesmo hotel', 'Boma, bufe no mesmo hotel'],
       precisaReserva: true, janelaAbre: '2026-09-14', janelaHora: '06:00 ET',
       canal: 'My Disney Experience', blocoId: 'b-1311-1945',
       nota: 'Vão pela comida, não pela janela: às 19h45 de novembro está escuro há mais ' +
@@ -4192,14 +4242,16 @@ window.ROTEIRO = {
             'Animal Kingdom Lodge, não dentro do parque.' },
 
     { id: 'r-columbia', nome: 'Columbia Restaurant', data: '2026-11-14', hora: '12:30',
-      refeicao: 'almoco', local: 'Celebration · Market Street', alternativas: [],
+      refeicao: 'almoco', local: 'Celebration · Market Street', alternativas: ['Qualquer coisa da Market Street, a p\u00e9', 'Ou voltar ao hotel e almo\u00e7ar na 192'],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
       canal: 'Site do restaurante / OpenTable', blocoId: 'b-1411-1230',
       nota: 'Peçam o 1905 Salad, preparado na mesa, e o sanduíche cubano.' },
 
     { id: 'r-broomsticks-14', nome: 'Three Broomsticks', data: '2026-11-14', hora: '20:00',
       refeicao: 'jantar', local: 'Islands of Adventure · Hogsmeade',
-      alternativas: ['Toothsome Chocolate Emporium (CityWalk, sem reserva, espera de 1h+)'],
+      alternativas: ['O Three Broomsticks fecha com o parque. Se pegarem fechado, o ' +
+                     'CityWalk fica no caminho da saída — mas a espera lá em sábado ' +
+                     'passa de uma hora'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Balcão, sem reserva', blocoId: 'b-1411-2100',
       nota: 'Balcão dentro da Hogsmeade decorada — não leva gorjeta. Vocês voltam a comer ' +
@@ -4483,6 +4535,53 @@ window.ROTEIRO = {
       restauranteIds: [] },
 
     /* --- já em Orlando --- */
+    { id: 'ck-seguro', dataAlvo: '2026-11-05', hora: null, fuso: null,
+      janelaReserva: false, critico: true,
+      texto: 'Apólice do seguro salva OFFLINE nos dois celulares, e banco avisado',
+      nota:
+        'DUAS COISAS, e as duas são de antes de embarcar.\n\n' +
+        'A APÓLICE: salvem o PDF offline no celular dos DOIS, não só no e-mail. O que um ' +
+        'hospital americano pede é o número da apólice e o telefone da central, e os dois ' +
+        'estão nela. E-mail sem internet não abre.\n\n' +
+        'O BANCO: avisem da viagem. Compra internacional inesperada é motivo comum de ' +
+        'bloqueio, e desbloquear de fora dá trabalho. Levem um cartão de reserva guardado ' +
+        'em outro lugar que não a mesma carteira, e uns US$ 100 em espécie.\n\n' +
+        'Detalhes na dica \u201cQuando dá errado\u201d, no Guia.',
+      restauranteIds: [] },
+
+    { id: 'ck-starlight', dataAlvo: '2026-09-14', hora: '06:00', fuso: 'ET',
+      janelaReserva: true, critico: false,
+      texto: 'DECIDIR: Starlight Safari no Animal Kingdom Lodge (13/11)',
+      nota:
+        'US$ 75 a 89 por pessoa — US$ 150 a 178 no casal. A reserva abre HOJE, 60 dias ' +
+        'antes, às 6h ET, pelo My Disney Experience.\n\n' +
+        'O ENCAIXE É BOM: safári noturno na savana, 1h30, com óculos de visão noturna, e ' +
+        'vocês já estarão no Lodge para o Sanaa às 19h45. O jantar termina 21h15 e a saída ' +
+        'das 22h parte do mesmo lugar. Não exige estar hospedado lá.\n\n' +
+        'O QUE PESA CONTRA: o preço, e o fato de que no dia 13 vocês já terão feito o ' +
+        'safári diurno DUAS vezes. Vocês descartaram o Amphicar a US$ 62 por cabeça — se a ' +
+        'régua for a mesma, este cai também.\n\n' +
+        'Se disserem sim, o dia 13 sai de US$ 0–40 para US$ 150–218 no casal.',
+      pesquisa: '2026-09-09',
+      restauranteIds: [] },
+
+    { id: 'ck-horarios-ak', dataAlvo: '2026-09-14', hora: null, fuso: null,
+      janelaReserva: false, critico: true,
+      texto: 'Conferir ABERTURA E FECHAMENTO do Animal Kingdom em 13/11',
+      nota:
+        'Os horários saem por volta de hoje, 60 dias antes. É a pendência que sustenta o ' +
+        'dia 13 inteiro, e OS DOIS NÚMEROS IMPORTAM.\n\n' +
+        'A ABERTURA: o dia assume 8h, que é o típico de novembro. Se for outra, mudem a ' +
+        'referência na tela do dia 13 e a manhã inteira desloca junto, inclusive a saída ' +
+        'das 6h30.\n\n' +
+        'O FECHAMENTO: é ele que decide a reta final. Com 18h o plano está no limite. Com ' +
+        '19h ou 20h o dia respira, MAS colide com a mesa do Sanaa às 19h45 — o plano B2 do ' +
+        'dia 13 explica o que fazer em cada caso.\n\n' +
+        'Confiram também o horário de fechamento do KILIMANJARO SAFARIS, que fecha 30 a 60 ' +
+        'minutos antes do parque e sustenta o bloco das 16h30.',
+      pesquisa: '2026-09-10',
+      restauranteIds: [] },
+
     { id: 'ck-mco-reserve', dataAlvo: '2026-11-19', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Reservar o MCO Reserve para a volta de 26/11',
@@ -4837,6 +4936,15 @@ window.ROTEIRO = {
         'Para cancelar de vez, a linha da Disney acima resolve igual.',
       verificado: '2026-09-09', fonte: 'theboathouseorlando.com' },
 
+    { id: 'tel-seguro', nome: 'Seguro viagem — central de atendimento',
+      numero: null, critico: true,
+      quando:
+        'ESTÁ NA APÓLICE DE VOCÊS, e é por isso que não está aqui: o número muda por ' +
+        'seguradora e por plano, e um telefone errado numa emergência é pior que nenhum.\n\n' +
+        'Antes de embarcar, salvem o PDF da apólice OFFLINE no celular dos dois. O que o ' +
+        'hospital pede é o número da apólice e o telefone da central — os dois estão lá.\n\n' +
+        'Para emergência com risco de vida, 911 primeiro; o seguro depois.' },
+
     { id: 'tel-aereo', nome: 'Companhia aérea', numero: null, precisaColar: true,
       quando:
         'NÃO ESTÁ AQUI DE PROPÓSITO. O número certo para o bilhete de vocês está no ' +
@@ -4939,6 +5047,37 @@ window.ROTEIRO = {
         'SEAWORLD e BUSCH: Christmas Celebration e Christmas Town rodam em datas selecionadas ' +
         'a partir de 06/11 e 13/11. Confirmem que 22/11 e 24/11 estão na lista.',
       pesquisa: '2026-09-08',
+    },
+    {
+      id: 'dica-emergencia',
+      categoria: 'geral',
+      titulo: 'Quando dá errado: seguro, saúde, dinheiro e se vocês se perderem',
+      corpo:
+        'Esta dica existe para ser lida uma vez agora e nunca mais — até o dia em que ' +
+        'precisar.\n\n' +
+        'SE VOCÊS SE PERDEREM DENTRO DE UM PARQUE. Combinem AGORA, não na hora: cada dia ' +
+        'de parque tem o ponto de encontro escrito no bloco de entrada. A regra é ir para ' +
+        'lá e esperar, não procurar — duas pessoas procurando uma à outra num parque de ' +
+        'vinte mil pessoas não se acham.\n\n' +
+        'Isso importa mais do que parece porque a Bianca usa o roteador do celular do ' +
+        'Pedro na maior parte dos dias. Se separaram e ela está sem rede, o combinado é a ' +
+        'única coisa que funciona.\n\n' +
+        'SE ALGUÉM PASSAR MAL. Todo parque da Disney e da Universal tem posto de primeiros ' +
+        'socorros, com enfermeiro, ar-condicionado e remédio básico de graça. Peçam ' +
+        '\u201cFirst Aid\u201d a qualquer funcionário — eles levam vocês. Para emergência ' +
+        'de verdade, 911 de qualquer celular, inclusive sem chip americano.\n\n' +
+        'O SEGURO VIAGEM. Deixem a apólice salva OFFLINE no celular dos dois, não só no ' +
+        'e-mail. O que o hospital pede é o número da apólice e o telefone da central — ' +
+        'os dois estão nela. Nos EUA, atendimento sem seguro é caro de um jeito que não ' +
+        'tem paralelo no Brasil.\n\n' +
+        'DINHEIRO. Cartão resolve quase tudo, mas avisem o banco antes de viajar — compra ' +
+        'internacional inesperada é motivo comum de bloqueio, e desbloquear de fora dá ' +
+        'trabalho. Levem um cartão de reserva guardado em outro lugar, não na mesma ' +
+        'carteira. E uns US$ 100 em espécie: gorjeta de arrumadeira, motorista sem app e ' +
+        'a máquina que não lê o chip.\n\n' +
+        'SE UM CELULAR SUMIR. Os telefones do hotel, da Disney e do restaurante estão na ' +
+        'aba Telefones deste Guia, e este app funciona nos dois aparelhos — mas só se ' +
+        'vocês tiverem exportado o estado. A Home avisa quando faz tempo demais.',
     },
     {
       id: 'dica-vazio-proposital',
