@@ -15,7 +15,7 @@
 
 | Dia | Multi Pass | Single Pass | Gasto estimado (casal) |
 |---|---|---|---|
-| 11/11 Magic Kingdom | **Sim** | **Seven Dwarfs Mine Train** (o TRON é rope drop, não Single Pass) | US$ 54–120 |
+| 11/11 Magic Kingdom | **Sim** | **Nenhum** — os dois viraram plano B pago | US$ 40–70 |
 | 13/11 Animal Kingdom | Não | **Avatar Flight of Passage** | US$ 36–40 |
 | 15/11 Hollywood Studios | **Sim** | **Rise of the Resistance** | US$ 115–130 |
 | 16/11 Epcot | Opcional | **Cosmic Rewind** | US$ 36–95 |
@@ -40,47 +40,54 @@ No Islands, o Hagrid's saiu do Express em julho de 2026 — vocês pagariam e ai
 # 🏰 11/11 (quarta) — MAGIC KINGDOM
 
 **Multi Pass:** lista alta → **Peter Pan's Flight** · lista baixa → **Mansão Mal-Assombrada** e **Buzz Lightyear**
-*Peter Pan e Big Thunder são os dois lista alta, e só cabe um na reserva inicial. Não troque um pelo outro: use o Peter Pan cedo e reserve o Big Thunder rolando, porque a restrição de lista cai depois da primeira reserva usada.*
-**Single Pass:** Seven Dwarfs Mine Train. **O TRON é rope drop, não Single Pass** — chegando às 9h ele custa ~20 min de fila em vez de US$ 20–23 por pessoa.
+*Rolando: Space Mountain, reservado às 11h de pé na saída da Mansão.*
+**Single Pass:** **nenhum.** Os dois viraram plano B pago — ver a nota no fim desta seção.
 
-> **Atenção:** a **Tiana's Bayou Adventure estará fechada** para reforma — entrou em 02/11, com volta prevista só para dezembro. O rope drop do dia é o TRON.
+> **Atenção:** a **Tiana's Bayou Adventure estará fechada** para reforma — entrou em 02/11, com volta prevista só para dezembro. Com ela fora, o alvo da Frontierland na abertura é o **Big Thunder Mountain**.
+
+> **NÃO CORRAM PARA O TRON NA ABERTURA.** Ele não entra no Early Entry, mas os hóspedes dos hotéis Disney já estão dentro do parque há meia hora quando ele abre, e disparam para lá. Quem vem de fora chega atrás e pega **90 minutos ou mais**. A recomendação para quem está fora é começar pela **Frontierland ou Adventureland**, que ficam vazias justamente porque o Early Entry não as inclui.
 
 | Hora | O quê | Como |
 |---|---|---|
-| **6h45** | Sair do hotel | Uber deixa no TTC, não na entrada |
-| **7h45** | Portão | Monotrilho ou barco a partir do TTC |
-| **9h00** | **TRON Lightcycle / Run** | Rope drop, sem desviar. Tomorrowland |
-| **9h40** | **Space Mountain** | Standby. Mesma área |
-| **10h15** | **Peter Pan's Flight** | Multi Pass. Ao sair, reserve o Big Thunder |
-| **10h45** | **Seven Dwarfs Mine Train** | Single Pass |
-| **11h15** | **Parada — água, banheiro e sentar** | 15 min. Não é folga, é o que faz o resto funcionar |
-| **11h30** | **it's a small world** | Standby. Capacidade alta, fila anda |
-| **12h05** | **Mansão Mal-Assombrada** | Multi Pass |
-| **12h45** | **Almoço — Columbia Harbour House** | Balcão, mobile order, segundo andar |
-| **13h45** | **Big Thunder Mountain** | Multi Pass rolando |
-| **14h25** | **Piratas do Caribe** | Standby. Capacidade alta |
-| **15h00** | **Festival of Fantasy Parade** | Fique em Frontierland, não na Main Street |
-| **15h15** | **Parada** | O desfile corta o parque em dois e a multidão leva 15 min para se desfazer |
-| **15h45** | **Jungle Cruise** | Multi Pass rolando. Mesmo lado do parque, de propósito |
-| **16h30** | **Mickey's PhilharMagic** | Standby. 12 min, ar-condicionado, ótimo |
-| **16h45** | **Parada** | Última antes da reta final. Power bank, se o celular estiver abaixo de 40% |
-| **17h00** | **Buzz Lightyear** | Multi Pass. Repaginado em 2026 |
-| **17h45** | **Jantar — Casey's Corner** | Mesas de fora, de frente para o pianista |
+| **6h45** | Sair do hotel | Uber para o TTC. **Monotrilho na ida** |
+| **7h45** | Portão · posicionar para a **Frontierland** | À esquerda depois da Main Street, não à direita |
+| **9h00** | **Big Thunder Mountain** | Rope drop, standby. É lista alta e sai de graça |
+| **9h40** | **Piratas do Caribe** | Standby. Adventureland fica ao lado |
+| **10h15** | **Jungle Cruise** | Standby. Também lista alta, também de graça antes das 11h |
+| **11h00** | **Mansão Mal-Assombrada** | Multi Pass. **Ao sair, reservem o Space Mountain** |
+| **11h35** | **Parada — água, banheiro e sentar** | 15 min |
+| **11h50** | **Almoço — Columbia Harbour House** | Balcão, mobile order, segundo andar. 11h50 evita o pico |
+| **12h45** | **it's a small world** | Standby. Capacidade alta, a fila anda |
+| **13h20** | **Peter Pan's Flight** | Multi Pass. A única lista alta que vale gastar passe |
+| **13h50** | **Mickey's PhilharMagic** | Standby. 12 min, ar-condicionado |
+| **14h10** | **Parada** | Antes do miolo tático do dia |
+| **14h25** | **Posicionar na LIBERTY SQUARE** | Não na Main Street. O motivo está na linha seguinte |
+| **15h00** | **Festival of Fantasy Parade** | Da Liberty Square, que é o começo da rota |
+| **15h12** | **Atravessar para a Tomorrowland** | Por Fantasyland, por trás da rota. Não pelo hub |
+| **15h30** | **TRON Lightcycle / Run** | A janela do desfile. Se marcar +60 min, saiam e voltem às 21h25 |
+| **16h25** | **Parada** | |
+| **16h40** | **Space Mountain** | Multi Pass rolando |
+| **17h15** | **Buzz Lightyear** | Multi Pass |
+| **17h55** | **Jantar — Casey's Corner** | Mesas de fora, de frente para o pianista |
 | **19h00** | Main Street | Compras, fotos com o castelo iluminado |
 | **19h20** | **Posição para os fogos** | Main Street, lado direito olhando o castelo |
 | **20h00** | **Happily Ever After** | Em novembro é às 20h — o horário de verão acaba em 01/11 |
-| **20h30** | Mais uma, com a fila já curta | A multidão vai embora depois dos fogos |
-| **21h00** | Sair | O pior do fluxo de saída já passou |
+| **20h30** | **Seven Dwarfs Mine Train** | A última hora é quando ele fica barato |
+| **21h25** | TRON de novo, se tiverem pique | Opcional. É também o plano B da fila das 15h30 |
+| **22h00** | Sair — **pelo ferry**, não pelo monotrilho | |
 
-> **Sobre as três paradas:** elas não são enfeite. Sem elas o dia ia das 9h às 12h30
-> sem um minuto de folga — três horas e meia sem banheiro, sem sentar e sem encher a
-> garrafa. Um dia sem folga nenhuma não é um dia otimizado, é uma conta que não fecha.
-> Toda land tem banheiro, normalmente ao lado do maior balcão de comida, e qualquer
-> balcão dá copo de água gelada de graça. Não procurem no mapa: parem quando o corpo pedir.
+> **As duas escolhas contraintuitivas do dia.** A primeira é começar pela Frontierland em vez de correr para o TRON — sem Early Entry, correr é chegar atrás. A segunda é assistir ao desfile na **Liberty Square**: ele começa na Frontierland, desce a Liberty Square, contorna o hub e só então vai para a Main Street. Quem vê no começo da rota assiste ao mesmo desfile e fica livre quinze minutos antes — que é exatamente o tempo de atravessar por Fantasyland e chegar ao TRON enquanto vinte mil pessoas continuam paradas na Main Street esperando ele chegar.
 
-> **O desfile corta o parque ao meio.** A rota sai da Frontierland, desce a Liberty
-> Square, contorna o hub e vai pela Main Street — e ninguém atravessa essa linha até
-> acabar. É por isso que a Jungle Cruise vem logo depois: é do mesmo lado.
+> **Por que o dia vai até as 22h.** Os fogos são às 20h e o parque fecha às 22h. A multidão vai embora às 20h25 e sobram **duas horas de fila curta** — é nelas que cabem o Seven Dwarfs (média de 80 minutos o dia inteiro) e a segunda chance do TRON. Dá para esticar porque o dia 12 é o único da primeira semana sem alarme.
+
+> **Monotrilho na ida, ferry na volta.** Depois dos fogos e no fechamento, a fila do monotrilho passa de 20 a 30 minutos porque todo mundo vai por padrão para ela. No fechamento a Disney opera os três barcos, cada um leva centenas de pessoas de uma vez, e a fila some em bloco.
+
+> **Sobre as três paradas:** elas não são enfeite. Sem elas o dia emenda atração atrás de atração desde as 9h, sem banheiro, sem sentar e sem encher a garrafa. Um dia sem folga nenhuma não é um dia otimizado, é uma conta que não fecha. Toda land tem banheiro, normalmente ao lado do maior balcão de comida, e qualquer balcão dá copo de água gelada de graça.
+
+> **O desfile corta o parque ao meio** enquanto passa — e é por isso que a travessia das 15h12 vai por Fantasyland, por trás da rota, e nunca pelo hub.
+
+> **Single Pass como plano B, não como compra.** Os dois do Magic Kingdom saíram da lista de 08/11. O TRON tem duas janelas de graça (15h30 e 21h25) e o Seven Dwarfs tem uma (20h30). Se alguma falhar, o passe se compra **na hora, pelo app, de pé na frente da atração** — que é mais barato que comprar antes e não precisar. No pior caso, com os dois comprados, o dia sobe para uns US$ 145 no casal em vez dos US$ 40–70 do plano.
+
 
 ### Renúncias — não vão render para vocês
 Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's Undersea Adventure, Enchanted Tales with Belle, Tapete Mágico, Tom Sawyer Island, Liberty Belle.
@@ -394,7 +401,15 @@ De manhã, compras. À tarde, o parque de novo — de graça, com o ingresso que
 - [ ] Reservar **Sharks Underwater Grill** (SeaWorld, direto no site do parque)
 - [ ] Decidir sobre a Power-Up Band do Epic Universe
 
+- [ ] **Até 19/11 — reservar o MCO Reserve para a volta de 26/11.** É grátis, reserva-se até 7 dias antes, e garante uma faixa de horário no raio-x da TSA sem fila. Terminal C opera das 5h às 19h para voos entre 6h30 e 22h30, e a decolagem de vocês é ~12h. Uma reserva cobre os dois.
+- [ ] Conferir **antes de embarcar** que o app do roteiro diz "Pronto para usar sem internet" em Ajustes
+
 **Na semana da viagem (a primeira delas ainda no Brasil):**
-- [ ] **Lightning Lane, 7h ET — quatro manhãs, não uma.** Quem está fora dos hotéis Disney compra com 3 dias de antecedência, não 7: **08/11** (Magic Kingdom, dia 11 — Multi Pass e o Single Pass do Seven Dwarfs), **10/11** (Single Pass do Flight of Passage, para o dia 13), **12/11** (Single Pass do Rise of the Resistance, para o dia 15) e **13/11** (Single Pass do Cosmic Rewind, para o dia 16). Alarme para cada uma delas
+- [ ] **Lightning Lane, 7h ET.** Quem está fora dos hotéis Disney compra com 3 dias de antecedência, não 7. Depois de refazer os dias 11 e 13, a lista encolheu:
+  - **08/11** — Magic Kingdom (dia 11): **só o Multi Pass**. Single Pass nenhum
+  - **10/11** — Flight of Passage (dia 13): decisão, não alarme. Só se o fim de dia não resolver
+  - **12/11** — Single Pass do Rise of the Resistance, para o dia 15
+  - **13/11** — Single Pass do Cosmic Rewind, para o dia 16
+  - *Os dias 15 e 16 ainda não foram refeitos com a mesma lente; a lista pode encolher de novo*
 - [ ] Conferir horários oficiais dos parques e deslocar os blocos se a abertura não for às 9h
 - [ ] Conferir horário do Grinchmas (14/11), do desfile da Macy's (17/11) e do Fantasmic! (15/11)

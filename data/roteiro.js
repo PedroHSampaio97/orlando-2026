@@ -91,9 +91,9 @@ window.ROTEIRO = {
     disney: {
       resumo: [
         { data: '2026-11-11', parque: 'Magic Kingdom',     multiPass: 'Sim',
-          singlePass: 'Seven Dwarfs Mine Train — o TRON virou rope drop', custo: { min: 58, max: 118 } },
+          singlePass: 'Nenhum — os dois viraram plano B pago', custo: { min: 40, max: 70 } },
         { data: '2026-11-13', parque: 'Animal Kingdom',    multiPass: 'Não',
-          singlePass: 'Avatar Flight of Passage',                custo: { min: 36,  max: 40  } },
+          singlePass: 'Flight of Passage — só se o fim de dia não resolver', custo: { min: 0, max: 40 } },
         { data: '2026-11-15', parque: 'Hollywood Studios', multiPass: 'Sim',
           singlePass: 'Rise of the Resistance',                  custo: { min: 115, max: 130 } },
         { data: '2026-11-16', parque: 'Epcot',             multiPass: 'Opcional',
@@ -121,12 +121,16 @@ window.ROTEIRO = {
             'MULTI PASS: se o ingresso de 4 dias for date-based (datas fixas), dá para comprar ' +
             '3 dias antes do primeiro dia do ingresso e cobrir os 4 dias de uma vez — aí 08/11 ' +
             'compra de 08/11 resolve os quatro dias de uma vez.\n\n' +
-            'SINGLE PASS: a regra é 3 dias antes de CADA visita. Ou seja, quatro momentos ' +
-            'separados:\n' +
-            '  · Seven Dwarfs (11/11) → comprar 08/11\n' +
-            '  · Flight of Passage (13/11) → comprar 10/11\n' +
+            'SINGLE PASS: a regra é 3 dias antes de CADA visita — mas a lista encolheu. ' +
+            'Depois de refazer os dias 11 e 13, sobraram DOIS momentos, não quatro:\n' +
+            '  · Seven Dwarfs e TRON (11/11) → NÃO COMPRAR. Viraram plano B pago, ' +
+            'resolvidos por janela de horário dentro do parque.\n' +
+            '  · Flight of Passage (13/11) → só se o fim de dia não resolver. Decisão, ' +
+            'não alarme.\n' +
             '  · Rise of the Resistance (15/11) → comprar 12/11\n' +
             '  · Cosmic Rewind (16/11) → comprar 13/11\n\n' +
+            'Os dias 15 e 16 ainda não foram refeitos com essa mesma lente. Quando forem, ' +
+            'a lista pode encolher de novo.\n\n' +
             'É por isso que "confirmar com a agência a regra de validade do ingresso" deixou ' +
             'de ser burocracia e virou a pendência mais importante da lista. O checklist já ' +
             'está montado com as quatro datas separadas.',
@@ -346,6 +350,15 @@ window.ROTEIRO = {
           { texto: 'Barrinhas de cereal e frutas', essencial: true,
             motivo: 'É o café da manhã dos dias de rope drop, quando vocês saem do hotel ' +
                     'antes de 7h e o do hotel ainda não abriu.' },
+          { texto: 'Barrinha de proteína Barebells', essencial: true,
+            motivo: 'Segura mais que barrinha de cereal e não derrete na mochila. Nos EUA ' +
+                    'custa uma fração do preço do Brasil.' },
+          { texto: 'Gatorade', essencial: true,
+            motivo: 'Doze horas em pé desidratam mais do que parece, e dentro do parque ' +
+                    'custa quatro vezes mais. Levem um por pessoa nos dias longos.' },
+          { texto: 'Beef jerky', essencial: false,
+            motivo: 'Proteína que não estraga na mochila no calor e segura a fome entre ' +
+                    'refeições espaçadas. É bem melhor e mais barato nos EUA.' },
           { texto: 'Café', essencial: false,
             motivo: 'Confiram se o quarto tem cafeteira antes de comprar cápsula.' },
           { texto: 'Capas de chuva descartáveis — 4 unidades', essencial: true,
@@ -431,11 +444,12 @@ window.ROTEIRO = {
 
         { texto: 'Conferir se as reservas de Lightning Lane do dia 11 aparecem no app',
           critico: true,
-          motivo: 'Compradas em 08/11: Peter Pan, Mansão e Buzz Lightyear no Multi Pass, ' +
-                  'mais o Seven Dwarfs no Single Pass. O BIG THUNDER NÃO ESTÁ AÍ — ele se ' +
-                  'reserva amanhã às 10h15, de pé na saída do Peter Pan. Se alguma das ' +
-                  'quatro não estiver lá, hoje ainda dá tempo de rever o plano. Amanhã ' +
-                  'às 9h, não.' },
+          motivo: 'Compradas em 08/11, e são só três: Peter Pan na lista alta, Mansão e ' +
+                  'Buzz na baixa. Single Pass NENHUM — os dois viraram plano B pago. ' +
+                  'Big Thunder, Jungle Cruise e Space Mountain não estão aí de propósito: ' +
+                  'os dois primeiros vocês fazem no standby antes das 11h, e o Space entra ' +
+                  'rolando depois que usarem a Mansão. Se alguma das três não aparecer, ' +
+                  'hoje ainda dá tempo de rever o plano. Amanhã às 9h, não.' },
 
         { texto: 'Conferir o horário real de abertura do Magic Kingdom e ajustar aqui no app',
           critico: true,
@@ -626,54 +640,65 @@ window.ROTEIRO = {
     diaSemana: 'quarta',
     emoji: '🏰',
     titulo: 'Magic Kingdom',
-    subtitulo: 'O dia clássico · rope drop no TRON',
+    subtitulo: 'O dia clássico · rope drop na Frontierland',
     tipo: 'parque',
     operadora: 'disney',
     parqueId: 'magic-kingdom',
     custoZero: false,
     fechado: true,
-    revisadoEm: '2026-09-09',
+    revisadoEm: '2026-09-10',
     referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: false },
 
     resumo:
       'O parque mais visitado do mundo, e o dia com mais decisão por minuto da viagem. ' +
-      'A regra que rege tudo: usar a primeira reserva do Multi Pass cedo. É ela que ' +
-      'destrava reservar o Big Thunder, que sozinho não caberia.',
+      'O dia inteiro se apoia em duas escolhas contraintuitivas: começar pela Frontierland ' +
+      'em vez de correr para o TRON, e assistir ao desfile na Liberty Square para pegar o ' +
+      'TRON enquanto a Main Street está travada. As duas existem porque vocês não têm ' +
+      'Early Entry — e é isso que muda tudo.',
 
     avisos: [
       'O Uber deixa no TTC, não na entrada. Quem digita "Magic Kingdom" no app é levado ' +
       'para o lugar errado e perde o rope drop.',
-      'Não reservem Multi Pass para o que já vão fazer no rope drop. O TRON nem entra no ' +
-      'Multi Pass — é rope drop ou Single Pass, não existe terceira via.',
+      'NÃO CORRAM PARA O TRON NA ABERTURA. Sem Early Entry vocês chegam atrás da multidão ' +
+      'que já está dentro do parque, e a fila passa de 90 minutos. O TRON é às 15h30, na ' +
+      'janela do desfile, com a última hora como segunda chance.',
+      'Não reservem Multi Pass para o que vocês vão fazer de graça na abertura. Big Thunder ' +
+      'e Jungle Cruise são lista alta e saem no standby antes das 11h.',
     ],
 
     notas: [
       { tipo: 'atencao', texto:
         'A TIANA’S BAYOU ADVENTURE ESTARÁ FECHADA. Entrou em reforma em 02/11 e a Disney ' +
         'não anunciou data de volta — o site indica dezembro. Critter Co-Op e Tiana’s ' +
-        'Bayou General fecham junto. O rope drop do dia é o TRON.',
+        'Bayou General fecham junto. Com ela fora, o alvo da Frontierland na abertura é o ' +
+        'Big Thunder Mountain.',
         pesquisa: '2026-09-09' },
 
-      { tipo: 'atencao', texto:
-        'PETER PAN E BIG THUNDER SÃO OS DOIS LISTA ALTA, e só se escolhe UM da alta na ' +
-        'reserva inicial. Mas dá para ter os dois: a restrição de lista CAI depois que ' +
-        'vocês usam a primeira reserva. Peter Pan entra na compra de 08/11; Big Thunder ' +
-        'vocês reservam às 10h15, de pé na saída do Peter Pan.',
-        pesquisa: '2026-09-09' },
+      { tipo: 'bom', texto:
+        'VOCÊS FAZEM TRÊS LISTA ALTA GASTANDO UMA. Big Thunder e Jungle Cruise saem no ' +
+        'standby antes das 11h, porque a Frontierland e a Adventureland ficam vazias na ' +
+        'abertura. O Peter Pan é o único que não tem essa saída — ele é ruim de fila o dia ' +
+        'inteiro — e é nele que vocês gastam a reserva de lista alta. O Space Mountain, que ' +
+        'também é alta, entra na reserva rolante depois que vocês usam a Mansão às 11h.',
+        pesquisa: '2026-09-10' },
 
       { tipo: 'atencao', texto:
         'OS FOGOS SÃO ÀS 20H, NÃO ÀS 21H. O horário de verão acaba em 01/11 e o Happily ' +
         'Ever After passa para 20h — mas o parque segue aberto até as 22h. Isso resolve de ' +
-        'graça o problema da saída em massa: vocês veem os fogos, pegam mais uma atração com ' +
-        'a fila já curta e saem às 21h, quando o pior do fluxo já passou.',
+        'graça o problema da saída em massa: as vinte mil pessoas vão embora às 20h25 e ' +
+        'sobram DUAS HORAS de parque com fila curta. É nelas que entram o Seven Dwarfs e a ' +
+        'segunda chance do TRON. Hoje vocês ficam até as 22h — dá, porque amanhã é o único ' +
+        'dia da primeira semana sem alarme.',
         pesquisa: '2026-09-09' },
 
-      { tipo: 'bom', texto:
-        'O TRON PERDEU A FILA VIRTUAL. Hoje é standby puro: começa o dia em ~20 minutos e ' +
-        'passa de uma hora até as 11h, sem cair mais. É a única atração do parque onde ' +
-        'chegar cedo substitui dinheiro — ela não entra no Multi Pass, só no Single Pass a ' +
-        'US$ 20–23 por pessoa. Rope drop nela economiza ~US$ 44 no casal.',
-        pesquisa: '2026-09-09' },
+      { tipo: 'atencao', texto:
+        'O TRON TEM DUAS JANELAS BOAS, E NENHUMA DELAS É A ABERTURA. Ele perdeu a fila ' +
+        'virtual e hoje é standby puro, mas não entra no Early Entry — o que significa que ' +
+        'os hóspedes Disney já estão dentro do parque e disparam para cá às 9h. Quem vem de ' +
+        'fora chega atrás e pega 90 minutos ou mais.\n\n' +
+        'As duas janelas são: 15h30, durante o desfile, e a última hora antes de fechar. O ' +
+        'roteiro usa a primeira e guarda a segunda como plano B.',
+        pesquisa: '2026-09-10' },
 
       { tipo: 'bom', texto:
         'VERIFICADO: 11/11 não é noite de Mickey’s Very Merry Christmas Party. As noites de ' +
@@ -686,33 +711,34 @@ window.ROTEIRO = {
     planos: [
       {
         letra: 'A',
-        titulo: 'O TRON abriu no horário',
-        gatilho: 'Vocês estão no portão às 7h45 e o TRON está operando.',
+        titulo: 'O dia como está escrito',
+        gatilho: 'Vocês estão no portão às 7h45 e o parque abre às 9h.',
         passos: [
-          'TRON primeiro, sem desviar. É a única janela do dia em que ele custa 20 minutos.',
-          'Space Mountain logo em seguida, que fica na mesma área e ainda está curto.',
-          'Peter Pan às 10h15 com o Multi Pass. No minuto em que passarem a catraca, ' +
-          'reservem o Big Thunder — é isso que destrava a lista alta.',
-          'O resto do dia como está na timeline.',
+          'FRONTIERLAND na abertura, não Tomorrowland. Big Thunder no standby, sem gastar passe.',
+          'Piratas e Jungle Cruise em seguida, enquanto a Adventureland ainda está vazia.',
+          'Mansão às 11h com o Multi Pass. Ao passar a catraca, reservem o Space Mountain — ' +
+          'é o uso dessa primeira reserva que destrava a próxima e derruba a restrição de lista.',
+          'Peter Pan às 13h20, que é a única lista alta que vale gastar passe.',
+          'Desfile na LIBERTY SQUARE às 15h, e atravessar para a Tomorrowland assim que ele ' +
+          'passar. O TRON às 15h30 é o ponto alto tático do dia.',
+          'Seven Dwarfs às 20h30, depois dos fogos, quando a fila despenca.',
+          'Sair pelo ferry às 22h.',
         ],
       },
       {
         letra: 'B',
-        titulo: 'O TRON quebrou, ou a fila já está muito maior que 20 min',
-        gatilho: 'O TRON aparece indisponível, a fila não abre às 9h, OU vocês chegam nele ' +
-                 'e o painel marca 45 minutos ou mais.',
+        titulo: 'A fila do TRON estourou às 15h30',
+        gatilho: 'Vocês chegam na Tomorrowland e o painel marca mais de 60 minutos.',
         passos: [
-          'FILA GRANDE (45 min ou mais) é o caso mais provável dos dois, e a resposta é a ' +
-          'mesma: não fiquem. Aos 45 minutos o TRON custa mais do que entrega logo cedo, ' +
-          'porque essa é a única hora em que TODO o resto do parque também está vazio.',
-          'Não esperem em frente a ele. Quebra de manhã costuma levar horas e vocês perdem ' +
-          'a única hora boa do dia parados.',
-          'Pivô imediato para a Fantasyland: Seven Dwarfs no standby, que às 9h ainda está ' +
-          'em 20 a 30 minutos, e Peter Pan em seguida.',
-          'Isso libera o Single Pass do Seven Dwarfs. Guardem para o TRON, se ele voltar — ' +
-          'dá para comprar pelo app na hora.',
-          'Se o TRON não voltar, fica um Single Pass sem uso e vocês economizaram. Não é ' +
-          'perda: é o cenário mais barato do dia.',
+          'NÃO ENTREM. A janela do desfile é boa, mas não é mágica: se ela falhou, insistir ' +
+          'custa a tarde inteira e vocês ainda têm a última hora.',
+          'Puxem o Space Mountain e o Buzz para agora — os dois são ali do lado e vocês já ' +
+          'têm reserva neles.',
+          'O TRON passa para as 21h25, na última hora, que é a outra janela boa do dia. ' +
+          'Depois dos fogos ele costuma cair bastante.',
+          'SÓ SE AS DUAS FALHAREM: aí sim vale o Single Pass, US$ 20 a 23 por pessoa, ' +
+          'comprado na hora pelo app. É esse o plano B pago — não é para ser comprado de ' +
+          'antemão.',
         ],
       },
       {
@@ -720,11 +746,15 @@ window.ROTEIRO = {
         titulo: 'O parque não abre às 9h',
         gatilho: 'Os horários oficiais saem por volta de 12/09 e podem não ser 9h.',
         passos: [
-          'Mudem a referência do dia aqui no app. Todos os blocos ancorados deslocam ' +
-          'junto, inclusive a hora de sair do hotel.',
-          'O desfile e os fogos NÃO deslocam — têm hora própria. Se o app avisar colisão em ' +
-          'vermelho, é isso.',
+          'Mudem a referência do dia aqui no app. A MANHÃ INTEIRA desloca junto, inclusive a ' +
+          'hora de sair do hotel.',
+          'A TARDE NÃO DESLOCA. Do desfile em diante tudo é fixo, porque o que ancora a tarde ' +
+          'é a hora do desfile, não a da abertura. É de propósito: se o TRON deslocasse junto, ' +
+          'ele cairia antes do desfile e o truque do dia se desfaz.',
           'Regra que não muda: estar no portão 75 minutos antes do que a referência disser.',
+          'Se abrir MAIS CEDO, a manhã acaba antes e sobra uma folga antes do desfile. Não ' +
+          'fiquem parados esperando: repitam o Big Thunder ou o Piratas, que a essa altura ' +
+          'ainda estão baratos, e voltem para a Liberty Square às 14h25.',
         ],
       },
       {
@@ -737,8 +767,9 @@ window.ROTEIRO = {
           'Chuva forte costuma esvaziar as filas das montanhas-russas. Se pararem por ' +
           'raio, voltam rápido — vale esperar sob cobertura em vez de ir embora.',
           'Se os fogos forem cancelados, não fiquem esperando: saiam mais cedo e durmam. ' +
-          'O dia 13 é Animal Kingdom com saída às 7h30.',
-          'O que não se sacrifica: o rope drop. Tudo o mais tem substituto.',
+          'O dia 13 é Animal Kingdom e pode abrir às 8h.',
+          'O que não se sacrifica: a manhã na Frontierland. Ela é o que faz o dia caber sem ' +
+          'comprar passe nenhum.',
         ],
       },
     ],
@@ -750,16 +781,19 @@ window.ROTEIRO = {
                 'espetáculo noturno da Disney. Às 20h em novembro — confiram no app, porque ' +
                 'em noite de evento especial ele não acontece.' },
 
-      { nome: 'A janela depois dos fogos', quando: 'hoje', custo: 'grátis',
+      { nome: 'As duas horas depois dos fogos', quando: 'hoje', custo: 'grátis',
         motivo: 'A maior parte das 20 mil pessoas vai embora às 20h25 e as filas despencam. ' +
-                'É a melhor hora do dia para repetir uma montanha-russa, e vocês saem às 21h ' +
-                'com o fluxo de saída já passado. Vale mais que qualquer atração isolada.' },
+                'O parque fica aberto até as 22h e é nessas duas horas que cabem o Seven ' +
+                'Dwarfs e a segunda chance do TRON — as duas coisas que de dia custariam ' +
+                'oitenta minutos de fila ou dinheiro. Vale mais que qualquer atração isolada.',
+        pesquisa: '2026-09-10' },
 
-      { nome: 'Festival of Fantasy Parade', quando: 'hoje', condicao: 'confirmar a hora',
-        custo: 'grátis',
-        motivo: 'Doze minutos de carros alegóricos. Fiquem na Frontierland, não na Main ' +
-                'Street: lá enche uma hora antes, aqui dá para chegar 15 minutos antes e ver ' +
-                'igual. 15h é o padrão, mas varia com o horário do parque.' },
+      { nome: 'O desfile visto da Liberty Square', quando: 'hoje', custo: 'grátis',
+        motivo: 'O Festival of Fantasy começa na Frontierland, desce a Liberty Square e só ' +
+                'depois vai para a Main Street. Assistir no começo da rota é o mesmo desfile ' +
+                'e liberta vocês quinze minutos antes — que é exatamente o tempo de atravessar ' +
+                'para o TRON enquanto a Main Street continua travada.',
+        pesquisa: '2026-09-10' },
 
       { nome: 'O pianista do Casey’s Corner', quando: 'hoje', custo: 'incluso no jantar',
         motivo: 'Toca ao ar livre, na porta. Foi por isso que vocês escolheram o Casey’s — ' +
@@ -770,10 +804,20 @@ window.ROTEIRO = {
                 'barreira de idioma. É o melhor bloco de descanso do parque na pior hora de ' +
                 'calor, e ainda é bom de verdade.' },
 
-      { nome: 'TRON Single Pass', quando: 'descartado', custo: 'US$ 20–23 por pessoa',
-        motivo: 'DESCARTADO em 09/09. No rope drop o TRON custa ~20 minutos de fila e zero ' +
-                'dólar. Pagar por ele só faz sentido no plano B, se a atração quebrar de ' +
-                'manhã e voltar à tarde.' },
+      { nome: 'Single Pass do TRON', quando: 'decidir', custo: 'US$ 20–23 por pessoa',
+        motivo: 'PLANO B PAGO, não compra antecipada. O roteiro tem duas janelas de graça — ' +
+                '15h30 no desfile e 21h25 na última hora. Só se as duas falharem é que vale ' +
+                'sacar o cartão, e aí dá para comprar na hora pelo app, de pé na frente da ' +
+                'atração. Não comprem em 08/11.',
+        pesquisa: '2026-09-10' },
+
+      { nome: 'Single Pass do Seven Dwarfs', quando: 'decidir', custo: 'US$ 15–20 por pessoa',
+        motivo: 'PLANO B PAGO, mesma lógica. A fila dele é a mais persistente do parque, ' +
+                'média de 80 minutos, e cede em duas horas do dia: o rope drop e a última ' +
+                'hora. Vocês gastaram o rope drop na Frontierland de propósito, então a ' +
+                'aposta é a última hora, às 20h30. Se por algum motivo vocês não puderem ' +
+                'ficar até tarde, aí o passe se justifica.',
+        pesquisa: '2026-09-10' },
 
       { nome: 'Tiana’s Bayou Adventure', quando: 'fechada', custo: '—',
         motivo: 'Em reforma desde 02/11, sem data de volta. Não é escolha de vocês — está ' +
@@ -785,7 +829,7 @@ window.ROTEIRO = {
       paraODia: '2026-11-12',
       titulo: 'Outlet e ICON Park · café no hotel às 8h30',
       aviso:
-        'Depois de um dia de 6h45 às 22h, o dia 12 é de propósito o mais leve da ' +
+        'Depois de um dia de 6h45 às 22h30, o dia 12 é de propósito o mais leve da ' +
         'primeira semana. A lista é curta porque tem que ser.',
       itens: [
         { texto: 'Conferir se o Single Pass do dia 15 precisa ser comprado às 7h de amanhã',
@@ -805,11 +849,6 @@ window.ROTEIRO = {
                   'que começa no dia 13.' },
         { texto: 'Celular e power bank na tomada',
           motivo: 'Vira rotina de toda noite a partir de agora.' },
-        { texto: 'Conferir se o Single Pass do Flight of Passage foi comprado',
-          critico: true,
-          motivo: 'A compra era em 10/11 às 7h ET, durante a conexão em Bogotá. Se falhou, ' +
-                  'hoje ainda dá tempo de replanejar o dia 13 — o Animal Kingdom inteiro ' +
-                  'foi montado assumindo que vocês têm essa reserva.' },
       ],
     },
 
@@ -821,69 +860,80 @@ window.ROTEIRO = {
         contexto:
           'O Magic Kingdom é o único parque da Disney sem acesso direto de carro. O Uber ' +
           'para no Ticket & Transportation Center e de lá ainda são 15 a 20 minutos de ' +
-          'monotrilho ou barco. É por isso que a saída é tão cedo.',
+          'monotrilho ou barco. É por isso que a saída é tão cedo.\n\n' +
+          'NA IDA, MONOTRILHO. É mais rápido de manhã, quando a fila ainda não existe. ' +
+          'Na volta vocês fazem o contrário, e o motivo está no bloco da saída.',
         localId: 'mk-ttc', acesso: [], critico: true, duracaoMin: 60 },
 
       { id: 'b-1111-0745', hora: '07:45', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Portão',
-        descricao: 'Monotrilho ou barco a partir do TTC. Posicionar para a Tomorrowland',
+        titulo: 'Portão · posicionar para a FRONTIERLAND',
+        descricao: 'À esquerda depois da Main Street, não à direita',
         contexto:
-          'O barco costuma ser mais gostoso e menos concorrido que o monotrilho de manhã, e ' +
-          'os dois levam o mesmo tempo. Vocês não têm Early Entry, então a posição na fila ' +
-          'do portão é literalmente tudo que têm.\n\n' +
-          'Ao passar a catraca, o destino é a Tomorrowland, à direita depois do castelo.\n\n' +
+          'ESTA É A DECISÃO MAIS IMPORTANTE DA MANHÃ, e ela é contraintuitiva.\n\n' +
+          'Vocês não têm Early Entry, porque não estão em hotel Disney. Isso significa que, ' +
+          'quando o portão abre às 9h, os hóspedes Disney já estão dentro há meia hora — e ' +
+          'já estão em pé na Tomorrowland e na Fantasyland, que são as áreas do Early Entry. ' +
+          'Correr para o TRON às 9h é entrar na fila atrás dessa gente toda: dá 90 minutos ou ' +
+          'mais.\n\n' +
+          'A recomendação para quem vem de fora é ir para a FRONTIERLAND ou a ADVENTURELAND, ' +
+          'que ficam quase vazias na abertura justamente porque o Early Entry não as inclui. ' +
+          'É lá que vocês começam.\n\n' +
           'ESTES 75 MINUTOS SÃO O CAFÉ DA MANHÃ DE VOCÊS. Saindo às 6h45 vocês não comem ' +
-          'nada até o almoço das 12h30 — quase seis horas. Comam as barrinhas da mochila ' +
-          'aqui, parados na fila, que é o único momento do dia em que sobra tempo.\n\n' +
+          'nada até o almoço — comam as barrinhas da mochila aqui, parados na fila, que é o ' +
+          'único momento do dia em que sobra tempo.\n\n' +
           'Água: qualquer balcão de comida do parque dá copo de água gelada de graça, é ' +
           'só pedir. Não comprem garrafa a US$ 4 lá dentro — recarreguem as de vocês.',
-        localId: 'magic-kingdom', acesso: [], duracaoMin: 75 },
+        localId: 'magic-kingdom', acesso: [], duracaoMin: 75, pesquisa: '2026-09-10' },
 
-      { id: 'b-1111-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'TRON Lightcycle / Run',
-        descricao: 'Rope drop, sem desviar. ~20 min agora, mais de 1h às 11h',
+      { id: 'b-1111-1330', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Big Thunder Mountain',
+        descricao: 'Rope drop, standby. Sem gastar passe',
         contexto:
-          'A montanha-russa mais rápida do Magic Kingdom, ~100 km/h. Vocês montam em motos, ' +
-          'inclinados para frente, e o lançamento é forte. É curta — cerca de 1 minuto.\n\n' +
-          'Esta é a decisão financeira do dia: o TRON não entra no Multi Pass. Ou vocês ' +
-          'chegam cedo, ou pagam US$ 20 a 23 cada no Single Pass. Chegando às 9h, custa ' +
-          '20 minutos de fila e nada.\n\n' +
-          'Guardem tudo no locker antes — o TRON não permite nada solto.',
-        areaParque: 'Tomorrowland', acesso: ['rope-drop', 'standby'], locker: true,
-        critico: true, pesquisa: '2026-09-09', duracaoMin: 40 },
+          'Montanha-russa temática de trem de mineração. Sem inversões e sem quedas grandes ' +
+          '— é velocidade e curva, não terror. Uma das mais divertidas para quem não quer ' +
+          'intensidade.\n\n' +
+          'ELA É LISTA ALTA E VOCÊS VÃO FAZER DE GRAÇA. É esse o ganho de começar pela ' +
+          'Frontierland: o Big Thunder custaria a reserva mais cara do Multi Pass e, na ' +
+          'abertura, custa uns 20 minutos de fila. O passe fica livre para o Peter Pan.\n\n' +
+          'A Tiana’s Bayou Adventure, que seria a outra da área, está fechada.',
+        areaParque: 'Frontierland', acesso: ['rope-drop', 'standby'],
+        critico: true, duracaoMin: 40, pesquisa: '2026-09-10' },
 
-      { id: 'b-1111-0940', hora: '09:40', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Space Mountain',
-        descricao: 'Standby. Mesma área, ainda curto',
+      { id: 'b-1111-1410', hora: '09:40', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Piratas do Caribe',
+        descricao: 'Standby. Adventureland fica ao lado',
         contexto:
-          'Montanha-russa de 1975 no escuro total, sem inversões. Não é rápida pelos padrões ' +
-          'de hoje (~45 km/h), mas o escuro completo faz parecer muito mais. Sacode bastante ' +
-          '— é uma das mais desconfortáveis para coluna do complexo.',
-        areaParque: 'Tomorrowland', acesso: ['standby'], duracaoMin: 35 },
+          'Passeio de barco de 1967, o clássico que originou os filmes. Cenários com ' +
+          'animatrônicos, uma queda pequena no escuro, quase não molha. A capacidade é ' +
+          'altíssima, então a fila anda mesmo quando parece grande — não vale gastar passe.',
+        areaParque: 'Adventureland', acesso: ['standby'], duracaoMin: 35 },
 
-      { id: 'b-1111-1015', hora: '10:15', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Peter Pan’s Flight',
-        descricao: 'Multi Pass · lista alta. Reservem o Big Thunder ao passar a catraca',
+      { id: 'b-1111-1545', hora: '10:15', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Jungle Cruise',
+        descricao: 'Standby, enquanto ainda está cedo',
         contexto:
-          'Barquinhos suspensos sobrevoando cenários em miniatura. Dura 3 minutos e tem ' +
-          'capacidade baixíssima — por isso a fila é sempre absurda para o que entrega, e ' +
-          'por isso ele é lista alta.\n\n' +
-          'ESTE É O BLOCO MAIS IMPORTANTE DO DIA E NÃO É PELA ATRAÇÃO. No segundo em que ' +
-          'vocês passarem a catraca, a restrição de lista cai e vocês podem reservar o Big ' +
-          'Thunder, que é lista alta e de outra forma não caberia. Reservem ali mesmo, de ' +
-          'pé na saída, antes de andar.',
-        areaParque: 'Fantasyland', acesso: ['multi-pass'], critico: true, duracaoMin: 30 },
+          'Passeio de barco com um piloto que narra piadas ruins de propósito — é o charme ' +
+          'da atração.\n\n' +
+          'É lista alta e vocês também fazem sem passe, porque a Adventureland ainda está ' +
+          'vazia a esta hora. Depois das 11h ela passa de uma hora.\n\n' +
+          'ATENÇÃO: é a única do dia que depende inteiramente de inglês falado. Se o humor ' +
+          'não pegar, é o primeiro bloco a sacrificar quando o dia atrasar.',
+        areaParque: 'Adventureland', acesso: ['standby'], duracaoMin: 45 },
 
-      { id: 'b-1111-1045', hora: '10:45', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Seven Dwarfs Mine Train',
-        descricao: 'Single Pass',
+      { id: 'b-1111-1150', hora: '11:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Mansão Mal-Assombrada',
+        descricao: 'Multi Pass · lista baixa. Ao sair, reservem o Space Mountain',
         contexto:
-          'Montanha-russa familiar cujos carrinhos balançam lateralmente nas curvas. Suave, ' +
-          'curta, com uma cena final de animatrônicos muito boa. Não está no Multi Pass: é ' +
-          'compra separada, e é a fila mais persistente do parque o dia inteiro.',
-        areaParque: 'Fantasyland', acesso: ['single-pass'], duracaoMin: 30 },
+          'A Haunted Mansion, de 1969. Passeio em cápsulas por cenários com 999 fantasmas, ' +
+          'feito com truques de ilusão óptica do século XIX que continuam funcionando. É ' +
+          'assombrado de brincadeira, não de susto. Um dos melhores da Disney e não depende ' +
+          'de idioma.\n\n' +
+          'ESTA É A PRIMEIRA RESERVA DO DIA E É POR ISSO QUE ELA VEM CEDO. No segundo em ' +
+          'que vocês passarem a catraca, abre espaço para reservar a próxima — e a restrição ' +
+          'de lista cai junto. Reservem o SPACE MOUNTAIN ali mesmo, de pé na saída.',
+        areaParque: 'Liberty Square', acesso: ['multi-pass'], critico: true, duracaoMin: 35 },
 
-      { id: 'b-1111-1115p', hora: '11:15', ancora: 'referencia', tipo: 'pausa',
+      { id: 'b-1111-1115p', hora: '11:35', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
         descricao: 'Quinze minutos. Não é folga, é o que faz o resto funcionar',
         contexto:
@@ -893,131 +943,160 @@ window.ROTEIRO = {
           'Toda land tem banheiro, normalmente ao lado do maior balcão de comida — ' +
           'vocês nunca estão a mais de dois minutos de um. Não vale a pena procurar ' +
           'no mapa; vale parar quando o corpo pedir.',
-        areaParque: 'Fantasyland', acesso: [], duracaoMin: 15 },
+        areaParque: 'Liberty Square', acesso: [], duracaoMin: 15 },
 
-      { id: 'b-1111-1115', hora: '11:30', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'it’s a small world',
-        descricao: 'Standby. Capacidade alta, a fila anda',
-        contexto:
-          'Passeio de barco de 1964 com centenas de bonecos animatrônicos e a música que ' +
-          'gruda na cabeça por três dias. Lento e climatizado — serve de descanso no meio ' +
-          'da manhã, e a fila engana: some rápido.',
-        areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 35 },
-
-      { id: 'b-1111-1150', hora: '12:05', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Mansão Mal-Assombrada',
-        descricao: 'Multi Pass · lista baixa',
-        contexto:
-          'A Haunted Mansion, de 1969. Passeio em cápsulas por cenários com 999 fantasmas, ' +
-          'feito com truques de ilusão óptica do século XIX que continuam funcionando. É ' +
-          'assombrado de brincadeira, não de susto. Um dos melhores da Disney e não depende ' +
-          'de idioma.',
-        areaParque: 'Liberty Square', acesso: ['multi-pass'], duracaoMin: 40 },
-
-      { id: 'b-1111-1230', hora: '12:45', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-1111-1230', hora: '11:50', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Columbia Harbour House',
         descricao: 'Balcão, sem reserva. Mobile order. Segundo andar',
         contexto:
           'Fica na Liberty Square, a poucos passos da Mansão — por isso o almoço vem logo ' +
           'depois dela. Peixe e sanduíches.\n\n' +
+          'Almoçar às 11h50 é de propósito: meio-dia é o pico, e as filas das atrações caem ' +
+          'exatamente quando todo mundo está comendo.\n\n' +
           'Duas coisas: peçam pelo mobile order, que economiza 20 a 30 minutos de fila; e ' +
           'subam para o segundo andar, que quase ninguém acha e é o lugar mais silencioso ' +
           'do Magic Kingdom.',
-        restauranteId: 'r-columbia-harbour', areaParque: 'Liberty Square', acesso: [], duracaoMin: 60 },
+        restauranteId: 'r-columbia-harbour', areaParque: 'Liberty Square', acesso: [],
+        duracaoMin: 55 },
 
-      { id: 'b-1111-1330', hora: '13:45', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Big Thunder Mountain',
-        descricao: 'Multi Pass rolando — o que vocês reservaram às 10h15',
+      { id: 'b-1111-1115', hora: '12:45', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'it’s a small world',
+        descricao: 'Standby. Capacidade alta, a fila anda',
         contexto:
-          'Montanha-russa temática de trem de mineração. Sem inversões e sem quedas grandes ' +
-          '— é velocidade e curva, não terror. Uma das mais divertidas para quem não quer ' +
-          'intensidade.\n\n' +
-          'Ao usar esta, reservem a Jungle Cruise. O ciclo continua.',
-        areaParque: 'Frontierland', acesso: ['multi-pass'], duracaoMin: 40 },
+          'Passeio de barco de 1964 com centenas de bonecos animatrônicos e a música que ' +
+          'gruda na cabeça por três dias. Lento e climatizado — serve de descanso depois do ' +
+          'almoço, e a fila engana: some rápido.',
+        areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 35 },
 
-      { id: 'b-1111-1410', hora: '14:25', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Piratas do Caribe',
-        descricao: 'Standby. Capacidade alta',
+      { id: 'b-1111-1015', hora: '13:20', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Peter Pan’s Flight',
+        descricao: 'Multi Pass · lista alta. A única que vale o passe caro',
         contexto:
-          'Passeio de barco de 1967, o clássico que originou os filmes. Cenários com ' +
-          'animatrônicos, uma queda pequena no escuro, quase não molha. A capacidade é ' +
-          'altíssima, então a fila anda mesmo quando parece grande — não vale gastar passe.',
-        areaParque: 'Adventureland', acesso: ['standby'], duracaoMin: 35 },
+          'Barquinhos suspensos sobrevoando cenários em miniatura. Dura 3 minutos e tem ' +
+          'capacidade baixíssima — por isso a fila é sempre absurda para o que entrega, e ' +
+          'por isso ele é lista alta.\n\n' +
+          'É a ÚNICA reserva de lista alta que vocês gastam no dia. O Big Thunder e o Jungle ' +
+          'Cruise, que também são lista alta, vocês fizeram de graça na abertura. O Peter Pan ' +
+          'não tem essa saída: ele é ruim de fila o dia inteiro, de manhã à noite.',
+        areaParque: 'Fantasyland', acesso: ['multi-pass'], critico: true, duracaoMin: 30 },
 
-      { id: 'b-1111-1500', hora: '15:00', ancora: 'fixo', tipo: 'show',
-        titulo: 'Festival of Fantasy Parade',
-        descricao: 'Fiquem na Frontierland, não na Main Street',
-        contexto:
-          'Desfile de carros alegóricos, 12 minutos. A Main Street lota uma hora antes; na ' +
-          'Frontierland dá para chegar 15 minutos antes e ver exatamente igual.\n\n' +
-          'HORÁRIO FIXO — não desloca se o parque abrir mais cedo. E confiram no app: a hora ' +
-          'varia conforme o horário do parque.',
-        areaParque: 'Frontierland', acesso: [], duracaoMin: 12, confirmarHorario: true },
-
-      { id: 'b-1111-1515p', hora: '15:15', ancora: 'referencia', tipo: 'pausa',
-        titulo: 'Parada — água, banheiro e sentar',
-        descricao: 'O desfile acabou e a multidão ainda está se desfazendo',
-        contexto:
-          'Melhor momento do dia para parar: todo mundo está saindo do desfile ao mesmo ' +
-          'tempo e as filas ficam piores por uns quinze minutos. Deixem passar sentados, ' +
-          'com água.\n\n' +
-          'Vocês estão do lado oeste do parque e a próxima é a Jungle Cruise, que é do ' +
-          'mesmo lado. Não atravessem.',
-        areaParque: 'Frontierland', acesso: [], duracaoMin: 15 },
-
-      { id: 'b-1111-1545', hora: '15:45', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Jungle Cruise',
-        descricao: 'Multi Pass rolando',
-        contexto:
-          'Passeio de barco com um piloto que narra piadas ruins de propósito — é o charme ' +
-          'da atração.\n\n' +
-          'ATENÇÃO: é a única do dia que depende inteiramente de inglês falado. Se o humor ' +
-          'não pegar, é o primeiro bloco a sacrificar quando o dia atrasar.',
-        areaParque: 'Adventureland', acesso: ['multi-pass'], duracaoMin: 45 },
-
-      { id: 'b-1111-1630', hora: '16:30', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1111-1630', hora: '13:50', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mickey’s PhilharMagic',
         descricao: 'Standby. 12 min, ar-condicionado',
         contexto:
           'Filme 3D com efeitos no teatro — cheiro, água, ar. Praticamente sem diálogo ' +
           'relevante, então não sofre com a barreira de idioma. É o melhor bloco de descanso ' +
           'do parque, e cai na pior hora de calor de propósito.',
-        areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 12 },
+        areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 20 },
 
-      { id: 'b-1111-1645p', hora: '16:45', ancora: 'referencia', tipo: 'pausa',
+      { id: 'b-1111-1645p', hora: '14:10', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
-        descricao: 'Última parada antes da reta final até os fogos',
+        descricao: 'Antes do desfile e da corrida que vem depois dele',
         contexto:
-          'Daqui até a saída, às 21h, são mais quatro horas. Banheiro, garrafas cheias e ' +
-          'protetor solar antes de encarar a Main Street lotada.\n\n' +
-          'É também a hora de ligar o power bank, se o celular estiver abaixo de 40%: ' +
-          'o resto do dia é foto, mobile order e a espera dos fogos.',
+          'Os próximos noventa minutos são o miolo tático do dia: desfile, travessia do ' +
+          'parque e a fila do TRON. Vão para eles com a garrafa cheia e sem fila de ' +
+          'banheiro pendurada.\n\n' +
+          'É também a hora de ligar o power bank, se o celular estiver abaixo de 40%.',
         areaParque: 'Fantasyland', acesso: [], duracaoMin: 15 },
 
-      { id: 'b-1111-1700', hora: '17:00', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1111-1425', hora: '14:25', ancora: 'fixo', tipo: 'espera',
+        titulo: 'Posicionar na LIBERTY SQUARE para o desfile',
+        descricao: 'Não na Main Street. O motivo é o próximo bloco',
+        contexto:
+          'O desfile começa na Frontierland, desce a Liberty Square, contorna o hub e SÓ ' +
+          'ENTÃO vai para a Main Street. Quem assiste no começo da rota vê exatamente o ' +
+          'mesmo desfile e fica livre uns quinze minutos antes de a Main Street ver o ' +
+          'primeiro carro alegórico.\n\n' +
+          'Na Main Street enche uma hora antes. Aqui dá para chegar trinta minutos antes e ' +
+          'ficar na primeira fila.\n\n' +
+          'HORÁRIO FIXO, colado no desfile. Se o parque abrir mais cedo, a manhã inteira ' +
+          'termina antes e sobra tempo livre aqui — não venham para cá antes da hora, ' +
+          'aproveitem para repetir o que mais gostaram.',
+        areaParque: 'Liberty Square', acesso: [], duracaoMin: 35 },
+
+      { id: 'b-1111-1500', hora: '15:00', ancora: 'fixo', tipo: 'show',
+        titulo: 'Festival of Fantasy Parade',
+        descricao: 'Da Liberty Square. Doze minutos',
+        contexto:
+          'Desfile de carros alegóricos, 12 minutos.\n\n' +
+          'HORÁRIO FIXO — não desloca se o parque abrir mais cedo, e é ele que ancora toda a ' +
+          'tarde a partir daqui. Confiram a hora no app da Disney: ela varia conforme o ' +
+          'horário do parque.',
+        areaParque: 'Liberty Square', acesso: [], duracaoMin: 12, confirmarHorario: true },
+
+      { id: 'b-1111-1512', hora: '15:12', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Atravessar para a Tomorrowland — AGORA',
+        descricao: 'Liberty Square → Fantasyland → Tomorrowland. Não pelo hub',
+        contexto:
+          'ESTE É O TRUQUE DO DIA. O desfile acabou de passar por vocês e agora está indo ' +
+          'para a Main Street, onde vinte mil pessoas ainda estão paradas esperando ele ' +
+          'chegar — e vão ficar lá mais uns vinte minutos.\n\n' +
+          'Vocês saem por trás da rota, pela Fantasyland, sem cruzar o desfile em nenhum ' +
+          'momento. Não tentem pelo hub: é por onde o desfile passa e está bloqueado.\n\n' +
+          'Enquanto isso, a fila do TRON está no menor patamar da tarde inteira, porque metade ' +
+          'do parque está assistindo ao desfile.',
+        areaParque: 'Fantasyland', acesso: [], duracaoMin: 18, critico: true,
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1111-0900', hora: '15:30', ancora: 'fixo', tipo: 'atracao',
+        titulo: 'TRON Lightcycle / Run',
+        descricao: 'A janela do desfile. Standby',
+        contexto:
+          'A montanha-russa mais rápida do Magic Kingdom, ~100 km/h. Vocês montam em motos, ' +
+          'inclinados para frente, e o lançamento é forte. É curta — cerca de 1 minuto.\n\n' +
+          'POR QUE AQUI E NÃO NA ABERTURA: o TRON não entra no Early Entry, mas os hóspedes ' +
+          'Disney já estão dentro do parque quando ele abre e disparam para cá. Quem vem de ' +
+          'fora chega atrás dessa fila e pega 90 minutos ou mais. Às 15h30, com o desfile ' +
+          'segurando o parque, ele fica no melhor patamar da tarde.\n\n' +
+          'Se mesmo assim estiver acima de 60 minutos, saiam da fila: vocês voltam aqui às ' +
+          '21h25, na última hora, que é a outra janela boa do dia.\n\n' +
+          'Guardem tudo no locker antes — o TRON não permite nada solto.',
+        areaParque: 'Tomorrowland', acesso: ['standby'], locker: true,
+        critico: true, duracaoMin: 55, pesquisa: '2026-09-10' },
+
+      { id: 'b-1111-1515p', hora: '16:25', ancora: 'fixo', tipo: 'pausa',
+        titulo: 'Parada — água, banheiro e sentar',
+        descricao: 'Saindo do TRON, antes da reta final',
+        contexto:
+          'Daqui até a saída, às 22h, são mais cinco horas e meia. Banheiro, garrafas ' +
+          'cheias e protetor solar antes de encarar a Main Street lotada.',
+        areaParque: 'Tomorrowland', acesso: [], duracaoMin: 15 },
+
+      { id: 'b-1111-0940', hora: '16:40', ancora: 'fixo', tipo: 'atracao',
+        titulo: 'Space Mountain',
+        descricao: 'Multi Pass rolando — o que vocês reservaram às 11h',
+        contexto:
+          'Montanha-russa de 1975 no escuro total, sem inversões. Não é rápida pelos padrões ' +
+          'de hoje (~45 km/h), mas o escuro completo faz parecer muito mais. Sacode bastante ' +
+          '— é uma das mais desconfortáveis para coluna do complexo.\n\n' +
+          'É lista alta e vocês pegam com a reserva rolante, sem ter gasto nada da compra ' +
+          'inicial nela.',
+        areaParque: 'Tomorrowland', acesso: ['multi-pass'], duracaoMin: 35 },
+
+      { id: 'b-1111-1700', hora: '17:15', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Buzz Lightyear',
         descricao: 'Multi Pass · lista baixa. Repaginado em 2026',
         contexto:
           'Dark ride onde vocês atiram em alvos e disputam pontuação. Girem a cabine com o ' +
           'joystick central para mirar melhor, e os alvos com Z valem mais.',
-        areaParque: 'Tomorrowland', acesso: ['multi-pass'], duracaoMin: 45 },
+        areaParque: 'Tomorrowland', acesso: ['multi-pass'], duracaoMin: 40 },
 
-      { id: 'b-1111-1745', hora: '17:45', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-1111-1745', hora: '17:55', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Casey’s Corner',
         descricao: 'Balcão na Main Street. Sentem fora, de frente para o pianista',
         contexto:
           'Cachorro-quente de balcão, com pianista tocando ao vivo na porta. Foi por isso ' +
           'que vocês escolheram — comer dentro perde o motivo da escolha.\n\n' +
           'Mobile order aqui também.',
-        restauranteId: 'r-caseys', areaParque: 'Main Street', acesso: [], duracaoMin: 75 },
+        restauranteId: 'r-caseys', areaParque: 'Main Street', acesso: [], duracaoMin: 65 },
 
-      { id: 'b-1111-1900', hora: '19:00', ancora: 'referencia', tipo: 'compras',
+      { id: 'b-1111-1900', hora: '19:00', ancora: 'fixo', tipo: 'compras',
         titulo: 'Main Street',
         descricao: 'Compras e o castelo iluminado',
         contexto:
           'As lojas da Main Street ficam abertas até depois dos fogos e esvaziam justamente ' +
-          'quando todo mundo está se posicionando. Se sobrar compra, façam depois — mas ' +
-          'hoje vocês saem às 21h, então não deixem para o fim.',
+          'quando todo mundo está se posicionando. Como hoje vocês ficam até as 22h, dá para ' +
+          'deixar a compra para o fim se preferirem.',
         areaParque: 'Main Street', acesso: [], duracaoMin: 20 },
 
       { id: 'b-1111-1920', hora: '19:20', ancora: 'fixo', tipo: 'espera',
@@ -1041,24 +1120,44 @@ window.ROTEIRO = {
         areaParque: 'Main Street', acesso: [], duracaoMin: 18,
         confirmarHorario: true, pesquisa: '2026-09-09' },
 
-      { id: 'b-1111-2030', hora: '20:30', ancora: 'fixo', tipo: 'atracao',
-        titulo: 'Mais uma, com a fila já curta',
-        descricao: 'A multidão vai embora às 20h25. As filas despencam',
+      { id: 'b-1111-1045', hora: '20:30', ancora: 'fixo', tipo: 'atracao',
+        titulo: 'Seven Dwarfs Mine Train',
+        descricao: 'A última hora. É quando ele fica barato',
         contexto:
-          'A maior parte das 20 mil pessoas sai logo depois dos fogos, e o parque fica ' +
-          'aberto até as 22h. Esta meia hora é a melhor janela de fila do dia inteiro.\n\n' +
-          'Escolham o que mais gostaram: TRON e Space Mountain ficam na Tomorrowland, perto ' +
-          'da saída; o Seven Dwarfs fica na Fantasyland. Uma só, sem esticar — vocês ainda ' +
-          'estão no segundo dia de viagem.',
-        areaParque: 'Tomorrowland', acesso: ['standby'], duracaoMin: 30 },
+          'Montanha-russa familiar cujos carrinhos balançam lateralmente nas curvas. Suave, ' +
+          'curta, com uma cena final de animatrônicos muito boa.\n\n' +
+          'É a fila mais persistente do parque: média de 80 minutos o dia inteiro. As duas ' +
+          'únicas horas em que ela cede são o rope drop e a ÚLTIMA HORA antes de fechar — e ' +
+          'vocês gastaram o rope drop na Frontierland, de propósito. É agora.\n\n' +
+          'A maior parte das vinte mil pessoas vai embora logo depois dos fogos, às 20h25, e ' +
+          'as filas despencam. É por isso que hoje vocês ficam até o fim.',
+        areaParque: 'Fantasyland', acesso: ['standby'], critico: true, duracaoMin: 55,
+        pesquisa: '2026-09-10' },
 
-      { id: 'b-1111-2100', hora: '21:00', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Sair',
-        descricao: 'O pior do fluxo de saída já passou',
+      { id: 'b-1111-2125', hora: '21:25', ancora: 'fixo', tipo: 'atracao',
+        titulo: 'TRON de novo, se ainda tiverem pique',
+        descricao: 'Opcional. A outra janela boa do dia',
         contexto:
-          'Saindo às 21h vocês pegam o monotrilho depois da onda das 20h25 e antes da do ' +
-          'fechamento. Com o TTC e o Uber, contem 45 a 60 minutos até o hotel.',
-        localId: 'mk-ttc', acesso: [], duracaoMin: 60 },
+          'A última hora é a segunda janela do TRON, e é o plano B declarado caso a fila das ' +
+          '15h30 tenha estourado. Se vocês já andaram nele à tarde, esta é a repetição — e ' +
+          'de noite, iluminado, ele é outro passeio.\n\n' +
+          'Se o corpo não pedir, cortem sem culpa. Vocês estão no segundo dia de viagem e ' +
+          'amanhã é o único dia sem alarme da primeira semana.',
+        areaParque: 'Tomorrowland', acesso: ['standby'], locker: true, opcional: true,
+        duracaoMin: 35 },
+
+      { id: 'b-1111-2100', hora: '22:00', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Sair — pelo FERRY, não pelo monotrilho',
+        descricao: 'A fila do monotrilho no fechamento é a pior do dia',
+        contexto:
+          'AQUI VOCÊS FAZEM O CONTRÁRIO DA IDA. Depois dos fogos e no fechamento, a fila do ' +
+          'monotrilho passa de vinte a trinta minutos e pode chegar a muito mais, porque ' +
+          'todo mundo vai por padrão para ela.\n\n' +
+          'O ferry parece pior e não é: no fechamento a Disney opera os três barcos, cada um ' +
+          'leva centenas de pessoas de uma vez, e a fila some em bloco. É a recomendação ' +
+          'padrão de quem conhece — monotrilho na ida, barco na volta.\n\n' +
+          'Do TTC até o hotel, contem 45 a 60 minutos de Uber.',
+        localId: 'mk-ttc', acesso: [], duracaoMin: 60, pesquisa: '2026-09-10' },
     ],
 
     ficha: {
@@ -1067,28 +1166,37 @@ window.ROTEIRO = {
         listaAlta: ['Peter Pan’s Flight'],
         listaBaixa: ['Mansão Mal-Assombrada', 'Buzz Lightyear'],
         planoB:
-          'Big Thunder é lista alta e não cabe junto com o Peter Pan na reserva inicial. ' +
-          'Não troquem um pelo outro: usem o Peter Pan cedo e reservem o Big Thunder ' +
-          'rolando, porque a restrição de lista cai depois da primeira reserva usada.',
+          'Nenhum. Esta é a compra e ela é simples: uma da alta, duas da baixa. Se o Peter ' +
+          'Pan não estiver disponível na hora, troquem pelo Space Mountain e reservem o ' +
+          'Peter Pan rolando.',
         nota:
-          'Rolando, na ordem: Big Thunder (reservar às 10h15) e depois Jungle Cruise ' +
-          '(reservar às 13h45). Lista alta hoje: Jungle Cruise, Peter Pan, Space Mountain e ' +
-          'Big Thunder — a Tiana’s saiu porque está fechada.',
+          'ROLANDO: Space Mountain, reservado às 11h de pé na saída da Mansão. É o uso da ' +
+          'primeira reserva que abre a próxima e derruba a restrição de lista.\n\n' +
+          'Lista alta hoje: Jungle Cruise, Peter Pan, Space Mountain e Big Thunder. Vocês ' +
+          'fazem TRÊS delas gastando UMA — Big Thunder e Jungle saem no standby antes das ' +
+          '11h, porque a Frontierland e a Adventureland ficam vazias na abertura. A Tiana’s ' +
+          'saiu da lista porque está fechada.',
       },
       singlePass: {
-        itens: ['Seven Dwarfs Mine Train'],
-        opcionais: [],
+        itens: [],
+        opcionais: ['TRON Lightcycle / Run', 'Seven Dwarfs Mine Train'],
         nota:
-          'Só ele. O TRON saiu do Single Pass e virou rope drop — economiza ~US$ 44 no ' +
-          'casal. Guardem o segundo Single Pass do dia como reserva: se o TRON quebrar de ' +
-          'manhã e voltar à tarde, dá para comprar na hora pelo app.',
+          'NÃO COMPREM NADA EM 08/11. Os dois Single Pass do Magic Kingdom viraram plano B ' +
+          'pago, e o roteiro foi desenhado para não precisar deles.\n\n' +
+          'O TRON tem duas janelas de graça: 15h30, na hora do desfile, e 21h25, na última ' +
+          'hora. O Seven Dwarfs tem uma: 20h30, depois dos fogos. Se alguma falhar, o passe ' +
+          'se compra na hora pelo app, de pé na frente da atração — que é mais barato que ' +
+          'comprar antes e não precisar.',
       },
       expressPass: null,
-      custoEstimadoCasal: { min: 54, max: 120, moeda: 'USD' },
+      custoEstimadoCasal: { min: 40, max: 70, moeda: 'USD' },
       extras: [
         { nome: 'Locker no TRON',
           texto: 'O TRON não permite nada solto. Locker gratuito pelo tempo da atração, ' +
-                 'mas some 5 a 10 minutos ao bloco das 9h — contem isso no rope drop.' },
+                 'mas some 5 a 10 minutos ao bloco — contem isso nas duas janelas.' },
+        { nome: 'Se os dois Single Pass virarem necessários',
+          texto: 'O teto do dia sobe para uns US$ 145 no casal. É o pior caso, não o plano: ' +
+                 'só acontece se as três janelas de graça falharem no mesmo dia.' },
       ],
     },
 
@@ -3761,22 +3869,46 @@ window.ROTEIRO = {
       restauranteIds: [] },
 
     /* --- já em Orlando --- */
+    { id: 'ck-mco-reserve', dataAlvo: '2026-11-19', hora: null, fuso: null,
+      janelaReserva: false, critico: false,
+      texto: 'Reservar o MCO Reserve para a volta de 26/11',
+      nota:
+        'É GRÁTIS e reserva-se até 7 dias antes, em flymco.com. Garante uma faixa de ' +
+        'horário numa fila dedicada do raio-x da TSA, sem precisar de TSA PreCheck nem ' +
+        'CLEAR. Uma reserva cobre até 10 pessoas, então é uma só para os dois.\n\n' +
+        'O Terminal C opera das 5h às 19h, para voos que decolam entre 6h30 e 22h30 — a ' +
+        'decolagem de vocês é ~12h, então cabe. Reservem a faixa de 9h30 às 10h.\n\n' +
+        'ATENÇÃO AO QUE ISSO NÃO É: o MCO Reserve é para a SAÍDA, no raio-x da TSA. Não ' +
+        'tem nada a ver com a fila da imigração na chegada, em 10/11 — para aquela não ' +
+        'existe atalho disponível a vocês. O Mobile Passport Control, que seria o ' +
+        'equivalente, só aceita americanos, residentes permanentes, canadenses com B1/B2 ' +
+        'e quem entra pelo Visa Waiver. O Brasil não está no Visa Waiver.',
+      pesquisa: '2026-09-10',
+      restauranteIds: [] },
+
     { id: 'ck-ll-0811', dataAlvo: '2026-11-08', hora: '07:00', fuso: 'ET',
       janelaReserva: false, critico: true,
-      texto: 'Lightning Lane — Magic Kingdom (11/11): Multi Pass + Single Pass do Seven Dwarfs',
+      texto: 'Lightning Lane — Magic Kingdom (11/11): SÓ o Multi Pass',
       nota:
         'Cinco minutos antes de o sistema soltar as seleções. Cheguem decididos:\n\n' +
         'MULTI PASS — lista alta: Peter Pan. Lista baixa: Mansão e Buzz.\n' +
-        'SINGLE PASS — Seven Dwarfs, só ele. O TRON virou rope drop.\n\n' +
-        'NÃO peçam o Big Thunder agora: ele é lista alta e não cabe junto com o Peter ' +
-        'Pan. Ele entra rolando, dentro do parque, assim que vocês usarem a primeira ' +
-        'reserva — por isso o Peter Pan está marcado para as 10h15.',
+        'SINGLE PASS — NENHUM. Não comprem nada aqui.\n\n' +
+        'NÃO peçam o Big Thunder nem o Jungle Cruise: os dois são lista alta e vocês vão ' +
+        'fazer os dois de graça, no standby, antes das 11h. O Space Mountain entra rolando ' +
+        'dentro do parque, assim que vocês usarem a Mansão às 11h.',
       restauranteIds: [] },
 
     { id: 'ck-ll-1011', dataAlvo: '2026-11-10', hora: '07:00', fuso: 'ET',
-      janelaReserva: false, critico: true,
-      texto: 'Lightning Lane — Single Pass do Flight of Passage (para 13/11)',
-      nota: 'Só necessário se o ingresso NÃO for date-based. Confirmem com a agência antes.',
+      janelaReserva: false, critico: false,
+      texto: 'DECIDIR: comprar ou não o Single Pass do Flight of Passage (13/11)',
+      nota:
+        'VIROU DECISÃO, NÃO ALARME. O plano do dia 13 é fazer o Flight of Passage no fim ' +
+        'do dia, quando a fila cai para 40 a 55 minutos contra 90 a 120 o resto do tempo. ' +
+        'Se esse plano estiver de pé, não compra.\n\n' +
+        'Comprem só se: o Animal Kingdom fechar cedo demais para o plano caber, ou vocês ' +
+        'decidirem que 40 minutos de fila no fim de um dia de parque é demais. Nesse caso ' +
+        'a compra é às 7h ET de hoje, durante a conexão em Bogotá — que é o pior momento ' +
+        'da viagem para depender de internet. Mais um motivo para não precisar dela.',
       restauranteIds: [] },
 
     { id: 'ck-ll-1211', dataAlvo: '2026-11-12', hora: '07:00', fuso: 'ET',
