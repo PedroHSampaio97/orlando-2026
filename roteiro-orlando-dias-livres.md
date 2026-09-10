@@ -113,19 +113,50 @@ para encarar fila.
 
 # 🏀 18/11 (quarta) — Compras, Lake Eola e NBA
 
+Dia de cidade, não de parque. É também **a véspera do dia mais cedo da viagem** — o Epic sai às 6h45 e vocês chegam do jogo por volta das 22h15. Por isso a manhã é lenta de propósito.
+
 | Hora | O quê | Notas |
 |---|---|---|
-| **9h00** | Café no hotel | |
-| **10h30** | **The Mall at Millenia** — 4200 Conroy Rd | ~30 min. Apple, Macy's, Bloomingdale's, marcas de luxo |
-| **13h00** | **Almoço no mall** | *The Cheesecake Factory* fica na entrada principal |
-| **14h30** | Voltar ao hotel, descansar | Ou continuar nas compras, se render |
-| **16h30** | **Lake Eola Park**, centro de Orlando | 10 min do Kia Center. Parque urbano com o lago, os cisnes e a fonte. Grátis. O melhor lugar da cidade para o pôr do sol |
-| **17h45** | **Jantar no centro** | *Kres Chophouse*, *The Boheme*, *Ace Cafe Orlando* |
-| **18h30** | **Kia Center** — portões abrem | |
-| **19h00** | **Orlando Magic x Philadelphia 76ers** | |
-| **~21h30** | Saída | **Andem dois quarteirões antes de chamar o Uber.** A tarifa dinâmica em volta da arena logo após o apito é brutal |
+| **9h00** | Café no hotel | Sem alarme |
+| **10h30** | Sair para o Millenia | ~25 min. Uber US$ 28–40 |
+| **11h00** | **The Mall at Millenia** — 4200 Conroy Rd | **Abre 11h.** Primeira parada: balcão da Macy's, **com passaporte** |
+| **13h00** | **Almoço no mall** | *The Cheesecake Factory* na entrada principal |
+| **14h15** | **Voltar ao hotel — deixar as compras** | **Não é descanso.** É a única janela de largar sacola antes da arena |
+| **16h00** | Sair para o centro | ~30 min |
+| **16h30** | **Lake Eola — barco-cisne** | US$ 15 / 30 min, para dois. Ter–dom, 10h–19h. Sem reserva |
+| **17h15** | **Pôr do sol na margem** | A volta do lago tem 1,4 km. Sol cai ~17h30 |
+| **17h45** | **Jantar — Kres Chophouse** | 17 W Church St. **5 min a pé da arena.** Avisem que têm hora |
+| **18h50** | **Kia Center** — portões | Clutch de 11 cm, ou nada |
+| **19h00** | **Orlando Magic × Philadelphia 76ers** | ⟵ **referência do dia** |
+| **21h30** | Saída | Andem dois quarteirões antes de chamar o Uber |
 
-**Bagagem:** o Kia Center não permite mochila. Bolsa pequena, tamanho carteira de mão.
+### ⚠️ A regra de bagagem do Kia Center
+
+**Nenhuma bolsa entra.** A única exceção é uma clutch de **4,5" × 6,5" × 1"** — onze por dezesseis centímetros, menor que a maioria das carteiras. Não é "bolsa pequena": é quase nada.
+
+Se chegarem com sacola, existem os armários **Binbox**, do lado de fora, perto do *Tavern on Church*, na esquina da **Church St. com a Division Ave.**, por uma taxa.
+
+*Vale para o dia 21 também — Solar Bears é na mesma arena. Detalhe: cowbell só é liberada nos jogos do Solar Bears.*
+
+### Por que a volta ao hotel existe
+
+Millenia → Lake Eola são **8 minutos**. O hotel é a 25–30 min dos dois. A ida ao hotel custa quase uma hora de carro e duas corridas — para terminar a oito minutos de onde vocês já estavam.
+
+Ela fica **pelo motivo da bolsa, não por geografia**. Se as compras couberem numa sacola só, pulem: Millenia → centro direto, e a sacola vai para um Binbox. Aí o jantar deixa de ser apertado e dá para sentar às 17h30.
+
+### Dinheiro de graça
+
+A **Macy's dá 11% para visitante estrangeiro** — passaporte no balcão de atendimento ao cliente, **antes de comprar**. Não se aplica depois da compra feita. Não confundir com o cupom do outlet do dia 12, que é o Simon VIP Club.
+
+### O jantar tem 65 minutos e é uma churrascaria
+
+É apertado. O Kres fica no mesmo quarteirão da arena e lida com noite de jogo toda semana — avisem na chegada que vocês têm hora. Se atrasar, comam leve e completem lá dentro. **Reservem**: é noite de NBA no centro. Está no checklist para 19/10.
+
+*O **Ace Cafe Orlando**, que estava no roteiro antigo, fechou em 2023 e o terreno virou obra. A alternativa é o **The Boheme**, no Grand Bohemian.*
+
+### O que não dá para fazer hoje
+
+O **show de luz e música da fonte** do Lake Eola é às 20h e às 21h30 — vocês estarão no jogo nas duas. Não é esquecimento: é incompatível, e o jogo já está pago.
 
 ---
 
@@ -221,7 +252,7 @@ Thanksgiving. Um dos dias mais tranquilos do ano para voar — o caos é na ter�
 |---|---|---|
 | 12/11 | outlet, noite vazia após o cancelamento da festa | outlet na I-Drive + ICON Park à noite |
 | 14/11 | Celebration + CityWalk | manhã livre proposital + Celebration + CityWalk + Islands |
-| 18/11 | compras + NBA | compras + Lake Eola no pôr do sol + jantar no centro + NBA |
+| 18/11 | compras + NBA | compras + barco-cisne no Lake Eola ao pôr do sol + jantar no Kres + NBA |
 | 20/11 | Old Town à tarde | aerobarco pela manhã + lago + carro + Old Town |
 | 21/11 | Winter Garden, tarde vazia | Winter Garden + Solar Bears no Kia Center à noite |
 

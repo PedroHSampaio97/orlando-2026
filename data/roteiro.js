@@ -3845,8 +3845,9 @@ window.ROTEIRO = {
           motivo: 'Jogo às 19h no Kia Center. Confiram o horário: a NBA remarca por TV, e ' +
                   'isso muda perto da data.' },
         { texto: 'Mochila PEQUENA para amanhã — o Kia Center não aceita mochila', critico: true,
-          motivo: 'Só bolsa do tamanho de uma carteira de mão. Se saírem de casa com a mochila ' +
-                  'do parque, vão ter que voltar ou pagar guarda-volumes.' },
+          motivo: 'A arena NÃO aceita bolsa: só uma clutch de 11 × 16 × 2,5 cm, menor que a ' +
+                  'maioria das carteiras. Se saírem de casa com a mochila do parque, vão ter ' +
+                  'que pagar armário Binbox na Church St.' },
         { texto: 'Guardar as compras de hoje e esvaziar a mochila', critico: false,
           motivo: 'Sair com a mochila cheia do dia anterior é começar errado.' },
         { texto: 'Conferir o horário do desfile e do fechamento do dia 19 no app da Universal',
@@ -3920,81 +3921,324 @@ window.ROTEIRO = {
     diaSemana: 'quarta',
     emoji: '🏀',
     titulo: 'Compras, Lake Eola e NBA',
-    subtitulo: 'Orlando Magic x Philadelphia 76ers',
+    subtitulo: 'Orlando Magic × Philadelphia 76ers · e a véspera do dia mais cedo',
     tipo: 'livre',
     operadora: null,
     parqueId: null,
     custoZero: false,
-    referencia: null,
-    resumo: 'Dia de cidade, não de parque. Termina no Kia Center, no centro de Orlando.',
+    fechado: true,
+    revisadoEm: '2026-09-10',
+    referencia: { rotulo: 'Início do jogo', padrao: '19:00', confirmado: false },
+    resumo:
+      'Dia de cidade, não de parque: shopping de manhã, o cartão-postal de Orlando no fim ' +
+      'da tarde e basquete à noite. É também a véspera do dia mais cedo da viagem — por ' +
+      'isso a manhã é lenta de propósito.',
     avisos: [
-      'O Kia Center não permite mochila. Bolsa pequena, tamanho carteira de mão.',
+      'O KIA CENTER NÃO ACEITA BOLSA. A única exceção é uma clutch de 4,5" × 6,5" × 1" — ' +
+      'onze por dezesseis centímetros, menor que a maioria das carteiras. Não é "bolsa ' +
+      'pequena": é quase nada. Quem chegar com sacola usa os armários Binbox, na Church St. ' +
+      'com a Division Ave., por uma taxa.',
+      'Amanhã é o Epic Universe e a saída é 6h45 — a mais cedo da viagem. Vocês voltam do ' +
+      'jogo por volta das 22h15. Deixem a mochila de amanhã pronta ANTES de sair hoje.',
+    ],
+    notas: [
+      { tipo: 'info', texto:
+        'JOGO CONFIRMADO: quarta-feira, 18/11/2026, 19h, Kia Center. Orlando Magic contra o ' +
+        'Philadelphia 76ers, temporada regular, cerca de 2h30 com os intervalos.\n\n' +
+        'A NBA remarca jogo por causa de transmissão, então isto continua na conferência da ' +
+        'véspera — mas hoje está de pé, e é por isso que o início do jogo é a referência do ' +
+        'dia: se ele mudar, a noite inteira desloca junto e o app avisa.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'alerta', texto:
+        'A REGRA DA BOLSA É O DETALHE QUE ESTRAGA A NOITE SE FOR IGNORADO. Bolsa nenhuma ' +
+        'passa. A exceção é uma clutch de 11 × 16 × 2,5 cm, e bolsas médicas ou de bebê até ' +
+        '35 × 35 × 15 cm, essas passando por raio-X.\n\n' +
+        'É por isso que a volta ao hotel às 14h15 existe. Ela não é descanso: é a única ' +
+        'janela do dia para largar as compras do Millenia. Sem ela vocês chegam na catraca ' +
+        'com sacola e têm de pagar armário.\n\n' +
+        'PLANO B: os armários Binbox ficam do lado de fora, perto do Tavern on Church, na ' +
+        'esquina da Church St. com a Division Ave. Reserva-se um por uma taxa pequena. Se ' +
+        'vocês comprarem pouco, o Binbox sai mais barato que a corrida de ida e volta ao ' +
+        'hotel.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'info', texto:
+        'A MACY’S DÁ 11% PARA VISITANTE ESTRANGEIRO. Apresentem o passaporte no balcão de ' +
+        'atendimento ao cliente e peçam o Visitor Savings Pass — é a primeira parada do ' +
+        'shopping, antes de comprar qualquer coisa, porque o desconto não se aplica depois ' +
+        'da compra feita.\n\n' +
+        'Não confundam com o cupom do outlet do dia 12: aquele é o Simon VIP Club, outro ' +
+        'programa e outro lugar.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'info', texto:
+        'O MILLENIA É A 8 MINUTOS DO LAKE EOLA — 6,3 milhas. O hotel é a 25 ou 30 minutos ' +
+        'dos dois. Ou seja: a ida ao hotel no meio da tarde custa quase uma hora de carro e ' +
+        'duas corridas, para terminar a oito minutos de onde vocês já estavam.\n\n' +
+        'Ela continua no roteiro pelo motivo da bolsa, não por geografia. Se as compras ' +
+        'couberem numa sacola, o plano B é melhor.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'info', texto:
+        'O JANTAR TEM 65 MINUTOS E É UMA CHURRASCARIA. É apertado e não adianta fingir que ' +
+        'não é. O Kres fica na 17 W Church St, cinco minutos a pé da arena, e restaurante ' +
+        'colado em ginásio sabe o que é noite de jogo: avisem na chegada que vocês têm hora.\n\n' +
+        'Se atrasar, comam leve e completem lá dentro — a arena vende comida, cara, e o ' +
+        'show de intervalo faz parte da noite de qualquer jeito.',
+        pesquisa: '2026-09-10' },
+    ],
+    planos: [
+      { letra: 'A', titulo: 'O dia como está escrito',
+        gatilho: 'Vocês compraram o suficiente para valer a volta ao hotel.',
+        passos: [
+          'Macy’s primeiro, com passaporte, antes de qualquer compra.',
+          'Millenia até as 13h, almoço lá mesmo.',
+          'Volta ao hotel só para largar sacola — e sair de novo às 16h.',
+          'Barco-cisne às 16h30, enquanto ainda há sol.',
+          'Pôr do sol na margem, jantar no Kres e cinco minutos a pé até a arena.',
+        ] },
+      { letra: 'B', titulo: 'Vocês compraram pouco',
+        gatilho: 'Cabe tudo numa sacola só, ou vocês não compraram nada.',
+        passos: [
+          'PULEM A VOLTA AO HOTEL. Millenia → centro são 8 minutos.',
+          'Ganham duas horas no Lake Eola: dá para andar a volta inteira de 1,4 km em torno ' +
+          'do lago, e ainda tomar alguma coisa no Relax Grill.',
+          'A sacola vai para um armário Binbox na Church St. antes de entrar na arena.',
+          'O jantar deixa de ser apertado: dá para sentar às 17h30.',
+        ] },
+      { letra: 'B2', titulo: 'A NBA mudou o horário do jogo',
+        gatilho: 'Vocês conferem e o jogo não é mais 19h.',
+        passos: [
+          'Mudem a referência do dia lá em cima. A noite inteira desloca junto.',
+          'A manhã NÃO desloca: o shopping abre 11h e isso não muda.',
+          'O pôr do sol também não desloca — ele é por volta das 17h30 e segue o sol.',
+        ] },
+      { letra: 'C', titulo: 'Chuva',
+        gatilho: 'Chove à tarde, ou está ventando forte.',
+        passos: [
+          'Os barcos-cisne não saem com tempo ruim. Não insistam.',
+          'O Orange County Regional History Center fica a dois quarteirões do Kres e cobra ' +
+          'pouco. É a troca natural.',
+          'O jantar sobe para as 17h e a noite fica mais folgada, não mais apertada.',
+        ] },
     ],
     blocos: [
       { id: 'b-1811-0900', hora: '09:00', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Café no hotel', descricao: '', acesso: [] },
-
-      { id: 'b-1811-1030', hora: '10:30', ancora: 'fixo', tipo: 'compras',
-        titulo: 'The Mall at Millenia',
-        descricao: '~30 min. Apple, Macy’s, Bloomingdale’s, marcas de luxo',
+        titulo: 'Café no hotel',
+        descricao: 'Sem alarme. Hoje é o dia mais leve da segunda semana',
         contexto:
-          'É o shopping de luxo de Orlando, coberto e climatizado — diferente do outlet do dia ' +
-          '12, que é a céu aberto e de preço baixo. Aqui é preço cheio com marcas que não têm ' +
-          'no Brasil ou custam muito mais.',
-        endereco: '4200 Conroy Rd', localId: 'millenia', acesso: [] },
+          'A manhã é lenta de propósito. Ontem foi Universal Studios das 7h45 às 21h, e ' +
+          'amanhã é o Epic Universe com saída às 6h45. Este é o único respiro entre os dois.',
+        acesso: [], duracaoMin: 90 },
+
+      { id: 'b-1811-1030', hora: '10:30', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Sair para o Mall at Millenia',
+        descricao: '~25 min. Uber US$ 28–40',
+        localId: 'millenia', acesso: [], duracaoMin: 30 },
+
+      { id: 'b-1811-1100', hora: '11:00', ancora: 'fixo', tipo: 'compras',
+        titulo: 'The Mall at Millenia',
+        descricao: 'Abre agora, às 11h. PRIMEIRA PARADA: balcão da Macy’s, com passaporte',
+        contexto:
+          'É o shopping de luxo de Orlando, coberto e climatizado — o oposto do outlet do dia ' +
+          '12, que é a céu aberto e de preço baixo. Aqui é preço cheio, com marcas que não ' +
+          'existem no Brasil ou custam muito mais: Apple, Macy’s, Bloomingdale’s, Zara, ' +
+          'Michael Kors.\n\n' +
+          'ANTES DE COMPRAR QUALQUER COISA: vão ao balcão de atendimento ao cliente da ' +
+          'Macy’s com o passaporte e peçam o desconto de visitante estrangeiro. São 11%, e ' +
+          'não dá para aplicar depois da compra feita.\n\n' +
+          'HORÁRIO: segunda a sexta das 11h às 21h. Lojas de departamento e restaurantes ' +
+          'podem abrir e fechar em horário próprio.\n\n' +
+          'É a semana anterior à Black Friday, que este ano cai em 27/11 — várias lojas já ' +
+          'começam as promoções agora.',
+        endereco: '4200 Conroy Rd', localId: 'millenia', acesso: [], duracaoMin: 120,
+        pesquisa: '2026-09-10' },
 
       { id: 'b-1811-1300', hora: '13:00', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Almoço no mall',
-        descricao: 'The Cheesecake Factory fica na entrada principal',
+        descricao: 'The Cheesecake Factory fica na entrada principal. Sem reserva',
         contexto:
-          'Porções muito grandes — uma entrada dividida entre dois costuma bastar. Guardem ' +
-          'espaço ou peçam a fatia de cheesecake para viagem.',
-        localId: 'millenia', acesso: [] },
+          'Porções absurdamente grandes — uma entrada dividida entre dois costuma bastar, e ' +
+          'quase todo mundo sai com caixinha. Se quiserem o cheesecake, peçam para viagem: ' +
+          'a fatia é enorme e não desce depois do prato.\n\n' +
+          'É mesa com garçom: 18 a 20% de gorjeta, e o preço da etiqueta não inclui o imposto.',
+        localId: 'millenia', acesso: [], duracaoMin: 75 },
 
-      { id: 'b-1811-1430', hora: '14:30', ancora: 'fixo', tipo: 'vazio',
-        titulo: 'Voltar ao hotel, descansar',
-        descricao: 'Ou continuar nas compras, se render', acesso: [] },
-
-      { id: 'b-1811-1630', hora: '16:30', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Lake Eola Park',
-        descricao:
-          '10 min do Kia Center. Parque urbano com o lago, os cisnes e a fonte. Grátis. ' +
-          'O melhor lugar da cidade para o pôr do sol',
+      { id: 'b-1811-1415', hora: '14:15', ancora: 'fixo', tipo: 'tarefa',
+        titulo: 'Voltar ao hotel — deixar as compras',
+        descricao: 'NÃO é descanso. É a única janela de largar sacola antes da arena',
         contexto:
-          'É o cartão-postal do centro de Orlando: lago com a fonte iluminada, cisnes e a ' +
-          'silhueta dos prédios atrás. O pôr do sol em novembro é por volta das 17h30, ' +
-          'então vocês chegam na hora exata.',
-        localId: 'lake-eola', acesso: [] },
+          'Este bloco existe por causa da regra de bolsa do Kia Center, não por cansaço. A ' +
+          'arena aceita uma clutch de 11 × 16 cm e mais nada — sacola de shopping não entra ' +
+          'de jeito nenhum.\n\n' +
+          'Aproveitem para trocar de roupa e carregar o celular: a noite vai até 22h15 e a ' +
+          'saída de amanhã é 6h45.\n\n' +
+          'DEIXEM A MOCHILA DO EPIC PRONTA AGORA. Amanhã de manhã vocês não vão ter tempo, e ' +
+          'hoje à noite vocês vão chegar mortos.\n\n' +
+          'SE VOCÊS COMPRARAM POUCO, este bloco não precisa existir: vejam o plano B.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 105 },
 
-      { id: 'b-1811-1745', hora: '17:45', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar no centro',
-        descricao: 'Kres Chophouse, The Boheme, Ace Cafe Orlando',
-        localId: 'lake-eola', acesso: [] },
+      { id: 'b-1811-1600', hora: '16:00', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Sair para o centro',
+        descricao: '~30 min do hotel. Uber US$ 32–45',
+        localId: 'lake-eola', acesso: [], duracaoMin: 30 },
 
-      { id: 'b-1811-1830', hora: '18:30', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Kia Center — portões abrem', descricao: '',
-        localId: 'kia-center', acesso: [] },
-
-      { id: 'b-1811-1900', hora: '19:00', ancora: 'fixo', tipo: 'show',
-        titulo: 'Orlando Magic x Philadelphia 76ers',
-        descricao: '',
+      { id: 'b-1811-1630', hora: '16:30', ancora: 'fixo', tipo: 'atracao',
+        titulo: 'Lake Eola — barco-cisne',
+        descricao: 'US$ 15 por 30 min, para dois. Sem reserva, primeiro a chegar',
         contexto:
-          'Jogo da temporada regular da NBA, cerca de 2h30 com intervalos. A arena vende comida ' +
-          'e bebida caras — e o show de intervalo faz parte da experiência americana. Confiram ' +
-          'o horário do jogo perto da data: a NBA remarca por TV.',
-        localId: 'kia-center', acesso: [], confirmarHorario: true },
+          'Pedalinho em forma de cisne no lago do centro de Orlando, com a fonte no meio e a ' +
+          'silhueta dos prédios atrás. O cais fica no lado NORTE do lago, ao lado do Relax ' +
+          'Grill.\n\n' +
+          'Funcionam de terça a domingo, das 10h às 19h — hoje é quarta. Não aceitam reserva: ' +
+          'é chegar e pegar. Com vento forte ou chuva eles não saem.\n\n' +
+          'A HORA É ESTA E NÃO OUTRA. O pôr do sol é por volta das 17h30, então às 16h30 ' +
+          'vocês pegam a luz baixa e ainda voltam a pé pela margem enquanto o sol cai.\n\n' +
+          'Os cisnes de verdade também estão lá, e são de onde vem o nome do lago. Eles ' +
+          'não são simpáticos — não cheguem perto.',
+        localId: 'lake-eola', acesso: [], duracaoMin: 45,
+        pesquisa: '2026-09-10' },
 
-      { id: 'b-1811-2130', hora: '21:30', ancora: 'fixo', tipo: 'deslocamento',
+      { id: 'b-1811-1715', hora: '17:15', ancora: 'fixo', tipo: 'livre',
+        titulo: 'Pôr do sol na margem',
+        descricao: 'A volta do lago tem 1,4 km. O sol cai por volta das 17h30',
+        contexto:
+          'A calçada dá a volta completa no lago e leva uns vinte minutos andando devagar. É ' +
+          'o cartão-postal do centro de Orlando e é de graça.\n\n' +
+          'ESTE BLOCO NÃO DESLOCA COM O JOGO. Ele segue o sol: se a NBA mudar o horário, o ' +
+          'pôr do sol continua às 17h30.\n\n' +
+          'O show de luz e música da fonte é às 20h e às 21h30 — vocês vão estar no jogo nas ' +
+          'duas. Fica registrado como coisa que não dá para fazer hoje, não como esquecimento.',
+        localId: 'lake-eola', acesso: [], duracaoMin: 30,
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1811-1745', hora: '17:45', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Jantar — Kres Chophouse',
+        descricao: '17 W Church St. Cinco minutos a pé da arena. Avisem que têm hora',
+        contexto:
+          'Churrascaria americana no centro histórico, na Church Street: carnes, frutos do ' +
+          'mar e opções vegetarianas com toque mediterrâneo. Segunda a sexta serve das 11h30 ' +
+          'às 23h30.\n\n' +
+          'A LOCALIZAÇÃO É O QUE FAZ ELE GANHAR: fica no mesmo quarteirão do Kia Center e dos ' +
+          'armários Binbox. Do prato à catraca são cinco minutos a pé.\n\n' +
+          'SÃO 65 MINUTOS E É POUCO PARA UMA CHURRASCARIA. Avisem na chegada que vocês têm ' +
+          'jogo às 19h — restaurante colado em arena lida com isso toda semana. Se atrasar, ' +
+          'comam leve e completem lá dentro.\n\n' +
+          'RESERVA RECOMENDADA: é noite de jogo da NBA no centro, e o restaurante enche por ' +
+          'causa disso. Está no checklist.\n\n' +
+          'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
+        restauranteId: 'r-kres', endereco: '17 W Church St', localId: 'kia-center',
+        acesso: ['reserva'], duracaoMin: 65, pesquisa: '2026-09-10' },
+
+      { id: 'b-1811-1850', hora: '18:50', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Kia Center — portões',
+        descricao: 'Cinco minutos a pé do Kres. Clutch de 11 cm, ou nada',
+        contexto:
+          'Os portões abrem às 18h, uma hora antes do jogo, mas não há motivo para entrar ' +
+          'cedo: o que existe lá dentro é loja e balcão de comida.\n\n' +
+          'ÚLTIMA CONFERÊNCIA ANTES DA CATRACA: nada de bolsa. Celular, cartão e documento no ' +
+          'bolso, ou numa clutch de 11 × 16 × 2,5 cm. Ingresso no celular dos dois, cada um ' +
+          'com o seu.',
+        localId: 'kia-center', acesso: [], duracaoMin: 10 },
+
+      { id: 'b-1811-1900', hora: '19:00', ancora: 'referencia', tipo: 'show',
+        titulo: 'Orlando Magic × Philadelphia 76ers',
+        descricao: 'Temporada regular da NBA. ~2h30 com os intervalos',
+        contexto:
+          'Jogo de temporada regular no ginásio do Magic. Cerca de duas horas e meia com os ' +
+          'dois intervalos, e o show de intervalo é parte da experiência — sorteio, câmera na ' +
+          'plateia, arremesso do meio da quadra.\n\n' +
+          'A comida e a bebida lá dentro são caras, e é normal que sejam. Se vocês jantaram ' +
+          'leve no Kres, é aqui que completa.\n\n' +
+          'CONFIRMEM O HORÁRIO PERTO DA DATA: a NBA remarca jogo por transmissão de TV, e é ' +
+          'isso que faz este bloco ser a referência do dia.',
+        localId: 'kia-center', acesso: [], confirmarHorario: true, critico: true,
+        duracaoMin: 150, pesquisa: '2026-09-10' },
+
+      { id: 'b-1811-2130', hora: '21:30', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Saída',
-        descricao:
-          'Andem dois quarteirões antes de chamar o Uber. A tarifa dinâmica em volta da arena ' +
-          'logo após o apito é brutal',
+        descricao: 'Andem dois quarteirões antes de chamar o Uber',
         contexto:
-          'Vale mais que parece: a tarifa pode triplicar nos 20 minutos após o jogo, dentro do ' +
-          'raio da arena. Dois quarteirões a pé costumam resolver.',
-        acesso: [], horaAprox: true },
+          'A tarifa dinâmica em volta da arena logo depois do apito final pode triplicar. ' +
+          'Dois quarteirões a pé costumam resolver, e a Church Street tem calçada larga e ' +
+          'movimento — não é caminhada desconfortável.\n\n' +
+          'AMANHÃ É O DIA MAIS CEDO DA VIAGEM: saída às 6h45 para o Epic Universe. Vocês ' +
+          'chegam por volta das 22h15, e o alarme é 5h45. Durmam assim que chegarem.',
+        acesso: [], duracaoMin: 45 },
     ],
-    renuncias: null, ficha: null,
+    naoPerca: [
+      { nome: 'Barco-cisne ao pôr do sol', quando: 'hoje', custo: 'US$ 15 por 30 min, para dois',
+        motivo: 'Pedalinho de cisne no lago do centro, com a fonte no meio e os prédios ' +
+                'atrás. Cais no lado norte, ao lado do Relax Grill. Terça a domingo, 10h às ' +
+                '19h, sem reserva.',
+        pesquisa: '2026-09-10' },
+      { nome: 'Desconto de visitante estrangeiro da Macy’s', quando: 'hoje', custo: 'grátis',
+        motivo: '11% mediante passaporte, no balcão de atendimento ao cliente. Tem de ser ' +
+                'ANTES de comprar — não se aplica depois.',
+        pesquisa: '2026-09-10' },
+      { nome: 'Os cisnes de verdade', quando: 'hoje', custo: 'grátis',
+        motivo: 'O lago tem cisnes vivos e é de onde vem o nome dos pedalinhos. São grandes ' +
+                'e territoriais: olhem de longe.' },
+      { nome: 'Show de luz e música da fonte', quando: 'descartado', custo: 'grátis',
+        motivo: 'É às 20h e às 21h30, e vocês estarão dentro do Kia Center nas duas. Não é ' +
+                'esquecimento: é incompatível com o jogo, e o jogo já está pago.' },
+    ],
+    prepararAmanha: {
+      paraODia: '2026-11-19',
+      titulo: 'Epic Universe · o dia mais cedo da viagem',
+      aviso: 'Saída às 6h45 e vocês chegam do jogo por volta das 22h15. É a virada mais ' +
+             'apertada do roteiro — resolvam tudo ANTES de sair para o jogo, não depois.',
+      itens: [
+        { texto: 'Mochila do Epic montada ANTES de sair para o jogo', critico: true,
+          motivo: 'Hoje vocês saem com uma clutch de 11 cm e voltam depois das 22h. A mochila ' +
+                  'de amanhã tem de estar pronta em cima da cama quando vocês chegarem: duas ' +
+                  'garrafas, barrinhas, protetor solar, power bank, cabo e capa de chuva.' },
+        { texto: 'Alarme para 5h45 nos dois celulares', critico: true,
+          motivo: 'Saída 6h45. Depois de uma noite que termina 22h15, um alarme só falha.' },
+        { texto: 'Conferir o horário de abertura do Epic Universe e ajustar a referência',
+          critico: true,
+          motivo: 'Amanhã assume abertura às 9h e portão às 7h30. Se for outro horário, mudem ' +
+                  'a referência e a manhã inteira desloca junto.' },
+        { texto: 'Conferir se hóspede de fora entra junto com o Early Park Admission',
+          critico: true,
+          motivo: 'É a pendência ck-epa-epic e ela muda a primeira hora inteira de amanhã. As ' +
+                  'duas fontes que eu achei se contradizem, mas concordam numa coisa: NÃO ' +
+                  'fazer rope drop na Super Nintendo World.' },
+        { texto: 'Guardar as compras do Millenia', critico: false,
+          motivo: 'Amanhã a mochila precisa sair leve — o Epic tem locker obrigatório em ' +
+                  'várias atrações.' },
+      ],
+    },
+    ficha: {
+      multiPass: null, singlePass: null, expressPass: null,
+      custoEstimadoCasal: { min: 15, max: 15, moeda: 'USD' },
+      extras: [
+        { nome: 'Barco-cisne no Lake Eola',
+          custo: { min: 15, max: 15, moeda: 'USD' },
+          texto: 'US$ 15 por 30 minutos, e o barco leva os dois. Terça a domingo, 10h às 19h. ' +
+                 'Sem reserva: é chegar no cais do lado norte e pegar.' },
+        { nome: 'Armário Binbox, se precisarem',
+          custo: { min: 5, max: 15, moeda: 'USD' },
+          texto: 'Do lado de fora da arena, perto do Tavern on Church, na esquina da Church ' +
+                 'St. com a Division Ave. Só faz sentido no plano B, quando vocês pulam a ' +
+                 'volta ao hotel e chegam com sacola.' },
+      ],
+    },
+    renuncias: {
+      gerais: [
+        { nome: 'Show de luz e música da fonte do Lake Eola',
+          motivo: 'É às 20h e 21h30, e vocês estarão no jogo. Incompatível, não esquecido.' },
+        { nome: 'Orange County Regional History Center',
+          motivo: 'Fica a dois quarteirões do Kres e é o plano C de chuva. Em dia de sol o ' +
+                  'lago ganha.' },
+      ],
+      idioma: null,
+      fechado: [
+        'Ace Cafe Orlando — fechou em maio de 2023, depois de seis anos, e o terreno foi ' +
+        'vendido para virar um prédio alto. Estava no roteiro como opção de jantar.',
+      ],
+    },
   },
 
   /* ===== 19/11 · QUINTA · EPIC UNIVERSE ================================= */
@@ -4423,7 +4667,7 @@ window.ROTEIRO = {
 
       { id: 'b-2111-1815', hora: '18:15', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Kia Center — portões abrem',
-        descricao: 'Sem mochila. Só bolsa pequena, do tamanho de uma carteira de mão',
+        descricao: 'A arena não aceita bolsa. Só clutch de 11 × 16 cm — ou nada nas mãos',
         localId: 'kia-center', acesso: [] },
 
       { id: 'b-2111-1900', hora: '19:00', ancora: 'fixo', tipo: 'show',
@@ -5229,6 +5473,15 @@ window.ROTEIRO = {
       canal: 'Mobile order pelo app da Universal', blocoId: 'b-2311-1240',
       nota: 'Costelinha e frango assado. Combo serve dois com folga.' },
 
+    { id: 'r-kres', nome: 'Kres Chophouse', data: '2026-11-18', hora: '17:45',
+      refeicao: 'jantar', local: 'Centro de Orlando · 17 W Church St',
+      alternativas: ['The Boheme (Grand Bohemian)'],
+      precisaReserva: true, janelaAbre: null, janelaHora: null,
+      canal: 'OpenTable / site do restaurante', blocoId: 'b-1811-1745',
+      nota: 'Churrascaria no mesmo quarteirão do Kia Center — do prato à catraca são cinco ' +
+            'minutos a pé. Noite de jogo da NBA enche o centro: reservem. Avisem na chegada ' +
+            'que vocês têm hora.' },
+
     { id: 'r-mythos', nome: 'Mythos', data: '2026-11-23', hora: '18:30',
       refeicao: 'jantar', local: 'Islands of Adventure · The Lost Continent',
       alternativas: [],
@@ -5431,6 +5684,18 @@ window.ROTEIRO = {
       janelaReserva: false, critico: false,
       texto: 'Reservar Sharks Underwater Grill (SeaWorld, direto no site do parque)',
       restauranteIds: ['r-sharks'] },
+
+    { id: 'ck-kres', dataAlvo: '2026-10-19', dataEstimada: true,
+      motivoData: '30 dias antes do jantar de 18/11',
+      hora: null, fuso: null, janelaReserva: false, critico: false,
+      texto: 'Reservar o Kres Chophouse para o jantar de 18/11 (centro de Orlando)',
+      nota:
+        'É noite de jogo da NBA no centro e o restaurante fica a cinco minutos da arena — ' +
+        'ele enche por causa disso. E o jantar de vocês tem só 65 minutos: chegar sem ' +
+        'reserva e pegar espera acaba com o bloco.\n\n' +
+        'Alternativa no mesmo bairro: The Boheme, no Grand Bohemian. O Ace Cafe, que estava ' +
+        'no roteiro antigo, fechou em 2023.',
+      restauranteIds: ['r-kres'] },
 
     { id: 'ck-mythos', dataAlvo: '2026-10-24', dataEstimada: true, motivoData: '30 dias antes do jantar de 23/11', hora: null, fuso: null,
       janelaReserva: false, critico: false,
@@ -5816,8 +6081,9 @@ window.ROTEIRO = {
       lat: 28.53916667, lng: -81.38361111, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 35, tempoFonte: 'estimado',
                  uberUSD: { min: 32, max: 45 }, uberFonte: 'estimado' },
-      nota: 'Não permite mochila. Bolsa pequena. Andem 2 quarteirões antes de chamar o Uber ' +
-            'na saída — a tarifa dinâmica é brutal.' },
+      nota: 'NÃO ACEITA BOLSA. Só uma clutch de 4,5" × 6,5" × 1" (11 × 16 × 2,5 cm). ' +
+            'Armários Binbox do lado de fora, na Church St. com Division Ave. Andem 2 ' +
+            'quarteirões antes de chamar o Uber na saída — a tarifa dinâmica é brutal.' },
 
     { id: 'celebration', nome: 'Celebration', tipo: 'livre',
       lat: 28.31027778, lng: -81.55083333, verificado: true, fonteCoord: 'wikipedia', endereco: null,
