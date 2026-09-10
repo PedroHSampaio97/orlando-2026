@@ -406,38 +406,70 @@ Três atrações de hoje exigem guardar tudo: **Gringotts, Mummy e Men in Black*
 
 # 🌌 19/11 (quinta) — EPIC UNIVERSE
 
-O parque mais concorrido de Orlando, **no dia mais vazio da segunda metade da viagem**. Estava marcado para 23/11 — segunda-feira da semana de Thanksgiving, dentro do bloqueio de 23 a 27/11 — e trocou de lugar com o Islands, que aguenta melhor uma multidão.
+O parque mais concorrido de Orlando, **no dia mais vazio da segunda metade da viagem**, e o único dia de Epic. As onze atrações de brinquedo cabem — mas só em uma ordem: começar pelo portal que o Early Park Admission deixa vazio e guardar as duas maiores filas para as horas em que elas despencam.
 
-**O dia cabe.** Verificado em 10/09: o Epic tem 11 atrações de brinquedo, 2 shows e 2 áreas de brincar — e as 11 de brinquedo estão todas aqui. O que decide o dia é a ordem, não o número de horas.
-
-> **O Mine-Cart Madness está na hora errada.** É a maior fila do parque — 114 min de média, pico de 205 — e o bloco das 11h45 dá 35 minutos para ele. As janelas baratas são o rope drop (que vocês não têm: Super Nintendo World é área de Early Park Admission e às 8h ele já marca 97 min) e a **última hora antes de fechar**, quando cai para 20–30 min. Ele precisa ir para o fim do dia.
-
-> **Custo da troca:** hoje vocês acordam no dia seguinte ao jogo da NBA, que termina 21h30 no Kia Center.
-
-**Este é o único dia de Epic da viagem.** O segundo turno de 25/11 saiu do roteiro e virou a noite de Natal no Disney Springs — o que não couber hoje não acontece. Este dia foi montado contando com a volta e precisa ser refeito com essa lente antes da viagem.
-
-O ingresso continua cobrindo dois dias e continua válido: se o dia 19 der errado, reclamar o dia 25 custa a noite do Disney Springs e nada mais.
+**Hoje não tem carro** — ele só chega amanhã. É Uber, e o ponto de embarque do Epic é próprio (1222 Epic Blvd), a cinco minutos a pé da entrada.
 
 | Hora | O quê | Como |
 |---|---|---|
-| **6h45** | Sair de carro | ~30 min |
-| **7h30** | Portão | A caminhada do estacionamento até a entrada é longa |
-| **9h00** | **Harry Potter and the Battle at the Ministry** | Rope drop. Maior fila do parque, disparado |
-| **10h05** | **Stardust Racers** | Celestial Park. Coaster duplo, dois trens correndo |
-| **10h50** | **Mario Kart: Bowser's Challenge** | Super Nintendo World. Realidade aumentada |
-| **11h45** | **Mine-Cart Madness** | Donkey Kong. Trilhos que parecem quebrados |
-| **12h20** | **Entrar na lista do Toadstool Cafe** | Pelo app. A lista fecha cedo — façam isso às 10h se lembrarem |
-| **12h45** | **Almoço — Toadstool Cafe** | |
-| **14h00** | **Yoshi's Adventure** | Leve, mas a vista de cima da área é a melhor foto |
-| **14h40** | **Monsters Unchained** | Dark Universe. Animatrônicos, a mais elaborada do parque |
-| **15h35** | **Curse of the Werewolf** | Coaster familiar giratório |
-| **16h15** | **Hiccup's Wing Gliders** | Isle of Berk. Lançamento suave, temática linda |
-| **17h00** | **Dragon Racer's Rally** | |
-| **17h40** | **Fyre Drill** | Interativo, molha |
-| **18h20** | **Jantar — Atlantic** ou **Mead Hall** | |
-| **19h45** | **Constellation Carousel** e Celestial Park iluminado | O parque à noite é outro lugar |
+| **7h15** | Sair do hotel — Uber | ~30 min, US$ 25–38 |
+| **7h50** | **Entrar e ir para a porta da Dark Universe** | O Celestial Park abre para todos no Early Park Admission |
+| **9h00** | **Monsters Unchained** | **Rope drop.** Locker obrigatório |
+| **9h40** | **Curse of the Werewolf** | Montanha-russa giratória, com trechos de ré |
+| **10h20** | **Stardust Racers** | Detector de metal. A mais forte do parque |
+| **11h05** | **Mario Kart: Bowser's Challenge** | A janela dele é 11h–12h. Conferir a lista do Toadstool no app |
+| **12h15** | **Yoshi's Adventure** | A única vista da Nintendo de cima — e ela está decorada |
+| **13h00** | **Almoço — Toadstool Cafe** | Sem reserva |
+| **14h10** | **Hiccup's Wing Gliders** | Lançamento de alta velocidade. Locker obrigatório |
+| **15h00** | **Dragon Racer's Rally** | Você controla a inclinação e as inversões |
+| **15h45** | **Fyre Drill** — opcional | O guia oficial diz "possivelmente encharca". Frio, pulem |
+| **16h15** | **Pausa · Carrossel · Celestial Park de Natal** | Água, banheiro, mochila |
+| **17h00** | **Jantar — Atlantic** | **Reserva obrigatória.** Cedo de propósito |
+| **18h20** | **Harry Potter and the Battle at the Ministry** | Nas últimas horas cai para 45–75 min |
+| **20h00** | **Mine-Cart Madness** | Na última hora cai para 20–30 min. Quem está na fila no fechamento anda |
+| **21h00** | Sair — Uber | Pelo Celestial Park iluminado |
 
-**Power-Up Band:** comprem se quiserem jogar os desafios interativos da Super Nintendo World. Sem ela, metade da área vira só cenário. Custa ~US$ 40.
+### O rope drop mudou de lugar
+
+Durante o **Early Park Admission** o Celestial Park fica aberto para todo mundo, e a checagem de hóspede de hotel é feita **na porta de cada land**. Desde fevereiro de 2026 (conferido de novo em 16/06/2026) participam **Ministry of Magic, Super Nintendo World e Isle of Berk** — a Dark Universe saiu.
+
+Ou seja: às 9h os hóspedes de hotel já estão há uma hora no Battle at the Ministry. **O portal que abre vazio para vocês é o da Dark Universe.** A lista já mudou três vezes em dezoito meses: se em novembro a Dark Universe voltar e o Ministry sair, **troquem os dois blocos**.
+
+### As duas maiores filas querem a mesma hora
+
+| Atração | Média | Janela barata |
+|---|---|---|
+| **Mine-Cart Madness** | **113–114 min** | só EPA, ou **última hora: 20–30 min** |
+| **Battle at the Ministry** | **76–109 min** | só EPA, ou **últimas 2–3 h: 45–75 min** |
+| Mario Kart | 67–78 min | 11h–12h |
+| Curse of the Werewolf | 44–49 min | pico às 13h, despenca no fim |
+| Hiccup's Wing Gliders | 35–41 min | cedo; pior por volta das 17h |
+| Dragon Racer's Rally · Yoshi · Stardust | 18–37 min | meio do dia |
+| Monsters Unchained | 13–15 min | enche logo depois da abertura |
+| Fyre Drill · Carrossel | 13–21 min | qualquer hora |
+
+É isso que obriga o **jantar às 17h**: as três últimas horas são das duas maiores filas. A reserva do Atlantic é obrigatória e a janela da Universal já está aberta — **está no checklist para agora**. Sem mesa, o **Mead Hall** (Isle of Berk) não aceita reserva e entra no lugar.
+
+### O que o guia oficial da Universal corrige
+
+Locker obrigatório só em **três**: Stardust Racers, Monsters Unchained e Hiccup's. Detector de metal só no **Stardust**. Curse, Hiccup's e Mine-Cart são montanhas-russas de alta velocidade, não "familiares". O Stardust tem uns **40 m** (133 pés) — o roteiro antigo dizia 133 metros. E o Monsters Unchained é uma das **menores** filas do parque, não uma das maiores.
+
+### Natal no Epic
+
+A Super Nintendo World ganha decoração **pela primeira vez**, Berk faz o **Snoggletog**, a Place Cachée entra no Natal do mundo bruxo e o Celestial Park vira paisagem de inverno com **show natalino nas fontes**. Horários dos shows só saem perto da temporada.
+
+### Planos
+
+- **B — a Dark Universe voltou para o EPA.** Battle at the Ministry às 9h; Monsters e Curse às 18h20.
+- **B2 — o parque não fecha às 21h.** Ministry, Mine-Cart e saída acompanham o fechamento. O jantar fica.
+- **C — Mine-Cart parado às 20h.** Ele quebra com frequência. Se voltar antes das 21h, entrem na fila antes de fechar.
+- **C2 — chuva ou frio.** Fyre Drill cai. Monsters, Ministry, Toadstool e Atlantic são cobertos.
+
+### Renúncias
+
+**Le Cirque Arcanus** e **The Untrainable Dragon** (shows falados em inglês), **Astronomica** e **Viking Training Camp** (áreas de brincar), **Bowser Jr. Shadow Showdown** (desafio da Power-Up Band, voltado a criança). É a diferença inteira entre um dia e dois no Epic — as 11 atrações de brinquedo estão todas aqui.
+
+**Power-Up Band:** comprem se quiserem jogar os desafios interativos da Super Nintendo World. ~US$ 40. Decisão no checklist de outubro.
 
 ---
 

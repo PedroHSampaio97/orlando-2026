@@ -113,7 +113,7 @@ para encarar fila.
 
 # 🏀 18/11 (quarta) — Compras, Lake Eola e NBA
 
-Dia de cidade, não de parque. É também **a véspera do dia mais cedo da viagem** — o Epic sai às 6h45 e vocês chegam do jogo por volta das 22h15. Por isso a manhã é lenta de propósito.
+Dia de cidade, não de parque. É também **a véspera do Epic Universe** — a saída é às 7h15 e vocês chegam do jogo por volta das 22h15. Por isso a manhã é lenta de propósito.
 
 | Hora | O quê | Notas |
 |---|---|---|

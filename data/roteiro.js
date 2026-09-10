@@ -56,7 +56,7 @@ window.ROTEIRO = {
     perfil: 'Casal, sem crianças. Prioridade: clássicos + montanhas-russas fortes.',
     baseLocalId: 'hotel-travelodge',
     decisoesFechadas: [
-      'Troca dos dias 21/22/23 confirmada — 21 Winter Garden, 22 SeaWorld, 23 Epic Universe',
+      'Troca dos dias confirmada — 19 Epic Universe, 21 Winter Garden, 22 SeaWorld, 23 Islands of Adventure',
       'Sem Mickey’s Very Merry Christmas Party',
       'Sem Express Pass na Universal',
       'Carro alugado de 20 a 25/11 — devolvido no dia 25, para o dia 26 ser só ' +
@@ -3850,11 +3850,12 @@ window.ROTEIRO = {
                   'que pagar armário Binbox na Church St.' },
         { texto: 'Guardar as compras de hoje e esvaziar a mochila', critico: false,
           motivo: 'Sair com a mochila cheia do dia anterior é começar errado.' },
-        { texto: 'Conferir o horário do desfile e do fechamento do dia 19 no app da Universal',
+        { texto: 'Conferir a abertura e o fechamento do Epic no dia 19, no app da Universal',
           critico: true,
-          motivo: 'O dia 19 é o Epic Universe e sai às 6h45 — o mais cedo da viagem. Amanhã à ' +
-                  'noite vocês voltam do jogo às 22h15, e não é hora de descobrir horário de ' +
-                  'parque. Confiram HOJE.' },
+          motivo: 'O dia 19 é o Epic Universe, com saída às 7h15. Amanhã à noite vocês voltam ' +
+                  'do jogo às 22h15, e não é hora de descobrir horário de parque. O ' +
+                  'fechamento importa tanto quanto a abertura: as duas maiores filas estão ' +
+                  'coladas nele. Confiram HOJE.' },
       ],
     },
     ficha: {
@@ -3921,7 +3922,7 @@ window.ROTEIRO = {
     diaSemana: 'quarta',
     emoji: '🏀',
     titulo: 'Compras, Lake Eola e NBA',
-    subtitulo: 'Orlando Magic × Philadelphia 76ers · e a véspera do dia mais cedo',
+    subtitulo: 'Orlando Magic × Philadelphia 76ers · e a véspera do Epic',
     tipo: 'livre',
     operadora: null,
     parqueId: null,
@@ -3931,15 +3932,15 @@ window.ROTEIRO = {
     referencia: { rotulo: 'Início do jogo', padrao: '19:00', confirmado: false },
     resumo:
       'Dia de cidade, não de parque: shopping de manhã, o cartão-postal de Orlando no fim ' +
-      'da tarde e basquete à noite. É também a véspera do dia mais cedo da viagem — por ' +
-      'isso a manhã é lenta de propósito.',
+      'da tarde e basquete à noite. É também a véspera do Epic Universe — por isso a ' +
+      'manhã é lenta de propósito.',
     avisos: [
       'O KIA CENTER NÃO ACEITA BOLSA. A única exceção é uma clutch de 4,5" × 6,5" × 1" — ' +
       'onze por dezesseis centímetros, menor que a maioria das carteiras. Não é "bolsa ' +
       'pequena": é quase nada. Quem chegar com sacola usa os armários Binbox, na Church St. ' +
       'com a Division Ave., por uma taxa.',
-      'Amanhã é o Epic Universe e a saída é 6h45 — a mais cedo da viagem. Vocês voltam do ' +
-      'jogo por volta das 22h15. Deixem a mochila de amanhã pronta ANTES de sair hoje.',
+      'Amanhã é o Epic Universe e a saída é 7h15. Vocês voltam do jogo por volta das ' +
+      '22h15. Deixem a mochila de amanhã pronta ANTES de sair hoje.',
     ],
     notas: [
       { tipo: 'info', texto:
@@ -4029,7 +4030,7 @@ window.ROTEIRO = {
         descricao: 'Sem alarme. Hoje é o dia mais leve da segunda semana',
         contexto:
           'A manhã é lenta de propósito. Ontem foi Universal Studios das 7h45 às 21h, e ' +
-          'amanhã é o Epic Universe com saída às 6h45. Este é o único respiro entre os dois.',
+          'amanhã é o Epic Universe com saída às 7h15. Este é o único respiro entre os dois.',
         acesso: [], duracaoMin: 90 },
 
       { id: 'b-1811-1030', hora: '10:30', ancora: 'fixo', tipo: 'deslocamento',
@@ -4073,7 +4074,7 @@ window.ROTEIRO = {
           'arena aceita uma clutch de 11 × 16 cm e mais nada — sacola de shopping não entra ' +
           'de jeito nenhum.\n\n' +
           'Aproveitem para trocar de roupa e carregar o celular: a noite vai até 22h15 e a ' +
-          'saída de amanhã é 6h45.\n\n' +
+          'saída de amanhã é 7h15.\n\n' +
           'DEIXEM A MOCHILA DO EPIC PRONTA AGORA. Amanhã de manhã vocês não vão ter tempo, e ' +
           'hoje à noite vocês vão chegar mortos.\n\n' +
           'SE VOCÊS COMPRARAM POUCO, este bloco não precisa existir: vejam o plano B.',
@@ -4163,8 +4164,8 @@ window.ROTEIRO = {
           'A tarifa dinâmica em volta da arena logo depois do apito final pode triplicar. ' +
           'Dois quarteirões a pé costumam resolver, e a Church Street tem calçada larga e ' +
           'movimento — não é caminhada desconfortável.\n\n' +
-          'AMANHÃ É O DIA MAIS CEDO DA VIAGEM: saída às 6h45 para o Epic Universe. Vocês ' +
-          'chegam por volta das 22h15, e o alarme é 5h45. Durmam assim que chegarem.',
+          'AMANHÃ É EPIC UNIVERSE: saída às 7h15. Vocês chegam por volta das 22h15, e o ' +
+          'alarme é 6h15. Durmam assim que chegarem.',
         acesso: [], duracaoMin: 45 },
     ],
     naoPerca: [
@@ -4186,28 +4187,29 @@ window.ROTEIRO = {
     ],
     prepararAmanha: {
       paraODia: '2026-11-19',
-      titulo: 'Epic Universe · o dia mais cedo da viagem',
-      aviso: 'Saída às 6h45 e vocês chegam do jogo por volta das 22h15. É a virada mais ' +
-             'apertada do roteiro — resolvam tudo ANTES de sair para o jogo, não depois.',
+      titulo: 'Epic Universe · saída 7h15, rope drop na Dark Universe',
+      aviso: 'Saída às 7h15 e vocês chegam do jogo por volta das 22h15. São nove horas entre ' +
+             'a volta e a saída — resolvam tudo ANTES de sair para o jogo, não depois.',
       itens: [
         { texto: 'Mochila do Epic montada ANTES de sair para o jogo', critico: true,
           motivo: 'Hoje vocês saem com uma clutch de 11 cm e voltam depois das 22h. A mochila ' +
                   'de amanhã tem de estar pronta em cima da cama quando vocês chegarem: duas ' +
                   'garrafas, barrinhas, protetor solar, power bank, cabo e capa de chuva.' },
-        { texto: 'Alarme para 5h45 nos dois celulares', critico: true,
-          motivo: 'Saída 6h45. Depois de uma noite que termina 22h15, um alarme só falha.' },
+        { texto: 'Alarme para 6h15 nos dois celulares', critico: true,
+          motivo: 'Saída 7h15. Depois de uma noite que termina 22h15, um alarme só falha.' },
         { texto: 'Conferir o horário de abertura do Epic Universe e ajustar a referência',
           critico: true,
-          motivo: 'Amanhã assume abertura às 9h e portão às 7h30. Se for outro horário, mudem ' +
+          motivo: 'Amanhã assume abertura às 9h e entrada às 7h50, quando o Celestial Park ' +
+                  'abre para todos. Se for outro horário, mudem ' +
                   'a referência e a manhã inteira desloca junto.' },
-        { texto: 'Conferir se hóspede de fora entra junto com o Early Park Admission',
+        { texto: 'Conferir a lista do Early Park Admission de amanhã no app da Universal',
           critico: true,
-          motivo: 'É a pendência ck-epa-epic e ela muda a primeira hora inteira de amanhã. As ' +
-                  'duas fontes que eu achei se contradizem, mas concordam numa coisa: NÃO ' +
-                  'fazer rope drop na Super Nintendo World.' },
+          motivo: 'O dia assume que a Dark Universe NÃO está no EPA, e por isso começa nela. ' +
+                  'Se ela estiver na lista e o Ministry não, vale o plano B: os dois blocos ' +
+                  'trocam de lugar. É a pendência ck-epa-epic.' },
         { texto: 'Guardar as compras do Millenia', critico: false,
           motivo: 'Amanhã a mochila precisa sair leve — o Epic tem locker obrigatório em ' +
-                  'várias atrações.' },
+                  'três atrações, e detector de metal no Stardust Racers.' },
       ],
     },
     ficha: {
@@ -4248,243 +4250,470 @@ window.ROTEIRO = {
     diaSemana: 'quinta',
     emoji: '🌌',
     titulo: 'Epic Universe',
-    subtitulo: 'Dia único — o parque inteiro cabe, mas só na ordem certa',
+    subtitulo: 'Dia único · rope drop na Dark Universe e as duas maiores filas no fim',
     tipo: 'parque',
     operadora: 'universal',
     parqueId: 'epic-universe',
     custoZero: false,
+    fechado: true,
+    revisadoEm: '2026-09-10',
     referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: false },
     resumo:
-      'O parque mais concorrido de Orlando, no dia mais vazio da segunda metade da viagem. ' +
-      'Este é o único dia de Epic — e ele cabe: as onze atrações de brinquedo do parque ' +
-      'estão todas aqui. O que decide o dia é a ordem, não o número de horas.',
+      'O parque mais concorrido de Orlando, no dia mais vazio da segunda metade da viagem, ' +
+      'e o único dia de Epic. As onze atrações de brinquedo cabem — mas só em uma ordem: ' +
+      'começar pelo portal que o Early Park Admission deixa vazio e guardar as duas maiores ' +
+      'filas do parque para as horas em que elas despencam.',
     avisos: [
-      'Standby em tudo, os dois juntos. O segundo turno de 25/11 saiu do roteiro e virou a ' +
-      'noite de Natal no Disney Springs — este dia precisa ser refeito com essa lente antes ' +
-      'da viagem, porque ele foi montado contando com a volta.',
+      'O ROPE DROP É NA DARK UNIVERSE, NÃO NO MINISTRY. Às 9h os hóspedes de hotel já estão ' +
+      'há uma hora no Battle at the Ministry, na Super Nintendo World e em Berk. O portal ' +
+      'que abre vazio para vocês é o da Dark Universe. Confiram a lista do Early Park ' +
+      'Admission na véspera: ela já mudou três vezes em dezoito meses.',
+      'Hoje não tem carro — ele só é retirado amanhã. É Uber na ida e na volta, e o ponto ' +
+      'de embarque do Epic é próprio, a cinco minutos a pé da entrada.',
+      'É o único dia de Epic da viagem. O segundo dia do ingresso continua pago e válido: ' +
+      'se hoje der muito errado, reclamar o dia 25 custa a noite do Disney Springs.',
     ],
     notas: [
       { tipo: 'alerta', texto:
-        'O MINE-CART MADNESS ESTÁ NA HORA ERRADA, e é o defeito mais caro do dia.\n\n' +
-        'Ele é a maior fila do parque: 114 minutos de média e pico de 205, com a pior razão ' +
-        'entre tempo de fila e duração do brinquedo — e quebra com frequência. O bloco das ' +
-        '11h45 dá 35 minutos para ele.\n\n' +
-        'As duas janelas baratas dele são o rope drop, que vocês não têm porque a Super ' +
-        'Nintendo World é área de Early Park Admission e às 8h ele já marca 97 minutos, e a ' +
-        'ÚLTIMA HORA ANTES DE FECHAR, quando cai para 20 a 30 minutos.\n\n' +
-        'Ele precisa ir para o fim do dia — mesmo movimento do Flight of Passage no dia 13. ' +
-        'Isso se resolve quando este dia for montado em detalhe.',
-        pesquisa: '2026-09-10' },
-
-      { tipo: 'alerta', texto:
-        'NÃO ESTÁ RESOLVIDO se hóspede de fora entra junto com o Early Park Admission.\n\n' +
-        'Duas fontes se contradizem em 10/09: uma diz que entram no mesmo horário, sem poder ' +
-        'acessar a Super Nintendo World e a Dark Universe; a outra diz que não entram antes ' +
-        'da abertura oficial. A diferença muda a primeira hora inteira do dia.\n\n' +
-        'As duas concordam no que importa: NÃO FAZER ROPE DROP NA SUPER NINTENDO WORLD. ' +
-        'Confirmar no app da Universal — está no checklist.',
+        'O ROPE DROP MUDOU DE LUGAR, e é a quinta vez na viagem que ele estava dentro da ' +
+        'multidão do Early Entry.\n\n' +
+        'O MECANISMO, confirmado em fevereiro de 2026: durante o Early Park Admission o ' +
+        'Celestial Park fica aberto para TODO MUNDO, e a checagem de hóspede de hotel é feita ' +
+        'na porta de cada land. Vocês entram no parque cedo, mas não passam dos portais que ' +
+        'participam do EPA.\n\n' +
+        'QUEM PARTICIPA: desde fevereiro de 2026, conferido de novo em 16/06/2026, são a ' +
+        'Ministry of Magic, a Super Nintendo World e a Isle of Berk. O Stardust Racers e o ' +
+        'Carrossel saíram, e a Dark Universe também.\n\n' +
+        'Por isso o dia começa no Monsters Unchained. O bloco das 9h antigo, no Battle at the ' +
+        'Ministry, era exatamente a fila de quem entrou uma hora antes.\n\n' +
+        'A LISTA JÁ MUDOU PELO MENOS TRÊS VEZES EM DEZOITO MESES. Se em novembro a Dark ' +
+        'Universe voltar para o EPA, vale o plano B: os dois blocos trocam de lugar.',
         pesquisa: '2026-09-10' },
 
       { tipo: 'info', texto:
-        'POR QUE ESTE DIA É 19/11 E NÃO 23/11. O parque estava marcado para a segunda-feira ' +
-        'da semana de Thanksgiving, dentro do bloqueio de 23 a 27/11 e listada entre os ' +
-        'períodos mais cheios do ano. A quinta 19/11 é apontada como um dos dois dias mais ' +
-        'vazios de toda a segunda metade de novembro. O Islands foi para 23/11 no lugar: ele ' +
-        'aguenta melhor uma multidão do que o Epic.\n\n' +
-        'O CUSTO DA TROCA: hoje vocês acordam no dia seguinte ao jogo da NBA, que termina ' +
-        '21h30 no Kia Center.',
+        'AS DUAS MAIORES FILAS DO PARQUE QUEREM A MESMA HORA, e o dia é desenhado em volta ' +
+        'disso.\n\n' +
+        'MINE-CART MADNESS: 113 a 114 minutos de média, pico de 205. Fora do EPA, a única ' +
+        'janela barata é a última hora antes de fechar, quando cai para 20 a 30.\n\n' +
+        'BATTLE AT THE MINISTRY: 76 a 109 minutos de média. Nas últimas duas ou três horas ' +
+        'cai para 45 a 75, e na última hora a mediana cai 74%.\n\n' +
+        'As duas cabem no fim, uma depois da outra — e é isso que obriga o jantar às 17h.\n\n' +
+        'E UMA CORREÇÃO: o roteiro antigo dizia que as três de maior demanda eram Ministry, ' +
+        'Monsters Unchained e Stardust. O Monsters é uma das MENORES filas do parque, 13 a 15 ' +
+        'minutos. As três maiores são Mine-Cart, Ministry e Mario Kart.',
         pesquisa: '2026-09-10' },
 
       { tipo: 'info', texto:
-        'As três de maior demanda são Battle at the Ministry, Monsters Unchained e Stardust ' +
-        'Racers — e são exatamente as três primeiras do dia. A ordem está certa.',
-        pesquisa: '2026-09-08' },
+        'O GUIA OFICIAL DE SEGURANÇA DA UNIVERSAL, vigente desde 04/10/2025, corrige o que o ' +
+        'roteiro dizia das atrações.\n\n' +
+        'LOCKER OBRIGATÓRIO em só três: Stardust Racers, Monsters Unchained e Hiccup’s Wing ' +
+        'Gliders. DETECTOR DE METAL só no Stardust.\n\n' +
+        'Mine-Cart e Curse of the Werewolf pedem para prender tudo que estiver solto. No ' +
+        'Dragon Racer’s Rally há compartimento no próprio brinquedo.\n\n' +
+        'E três descrições estavam amenas demais: Curse, Hiccup’s e Mine-Cart são montanhas-' +
+        'russas de alta velocidade, não "familiares"; e no Dragon Racer’s Rally é você quem ' +
+        'controla a inclinação e as inversões.',
+        pesquisa: '2026-09-10' },
+
       { tipo: 'info', texto:
-        'Early Park Admission no Epic existe, mas só para hóspedes de hotel Universal. Vocês ' +
-        'estão no Travelodge, então não têm. Isso significa que o parque já terá gente ' +
-        'dentro quando vocês entrarem às 9h.', pesquisa: '2026-09-08' },
+        'SEM CARRO HOJE. O carro alugado só é retirado amanhã, dia 20, às 15h30.\n\n' +
+        'O Epic não usa o estacionamento da Universal: o ponto de Uber é próprio, na 1222 Epic ' +
+        'Blvd, a uns cinco minutos a pé da entrada. É por isso que dá para sair às 7h15 e não ' +
+        'às 6h45 — a caminhada longa do estacionamento, que o roteiro antigo contava, não ' +
+        'existe para quem chega de Uber.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'info', texto:
+        'NATAL NO EPIC, de 14/11 a 03/01. A Super Nintendo World ganha decoração pela primeira ' +
+        'vez, a Isle of Berk faz o Snoggletog, a Place Cachée do Ministry entra no Natal do ' +
+        'mundo bruxo, e o Celestial Park vira paisagem de inverno com show natalino nas ' +
+        'fontes.\n\n' +
+        'Os horários dos shows ainda não saíram — a Universal anuncia perto da temporada. Está ' +
+        'no checklist.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'info', texto:
+        'POR QUE ESTE DIA É 19/11 E NÃO 23/11. O parque estava marcado para a segunda-feira da ' +
+        'semana de Thanksgiving, dentro do bloqueio de 23 a 27/11. A quinta 19/11 é apontada ' +
+        'como um dos dois dias mais vazios de toda a segunda metade de novembro, e o Islands ' +
+        'foi para 23/11 no lugar.\n\n' +
+        'O CUSTO DA TROCA: hoje vocês acordam no dia seguinte ao jogo da NBA.',
+        pesquisa: '2026-09-10' },
+    ],
+    planos: [
+      { letra: 'A', titulo: 'O dia como está escrito',
+        gatilho: 'Vocês conferem na véspera e a Dark Universe não está no Early Park Admission.',
+        passos: [
+          'Entrar às 7h50 e ir direto para a porta da Dark Universe — o Celestial Park já está ' +
+          'aberto.',
+          'Monsters Unchained às 9h e Curse of the Werewolf em seguida.',
+          'Stardust Racers no meio da manhã, e Super Nintendo World às 11h, quando a turma do ' +
+          'EPA sai de lá.',
+          'Tarde em Berk, com o Fyre Drill só se estiver quente.',
+          'Jantar às 17h, Battle at the Ministry às 18h20, Mine-Cart Madness às 20h.',
+        ] },
+      { letra: 'B', titulo: 'A Dark Universe voltou para o Early Park Admission',
+        gatilho: 'A lista de novembro inclui a Dark Universe, e o Ministry saiu dela.',
+        passos: [
+          'Era assim até janeiro de 2026. Aí o portal vazio às 9h é o do Ministry.',
+          'TROQUEM OS DOIS BLOCOS: Battle at the Ministry às 9h, e Monsters mais Curse às 18h20.',
+          'O Curse é justamente o que despenca no fim do dia, então a troca não custa nada.',
+          'O Mine-Cart continua na última hora — ele não tem outra janela.',
+        ] },
+      { letra: 'B2', titulo: 'O parque fecha às 20h ou às 22h',
+        gatilho: 'O horário oficial sai e o fechamento não é 21h.',
+        passos: [
+          'O Ministry, o Mine-Cart e a saída acompanham o fechamento: o Mine-Cart é sempre a ' +
+          'última hora e o Ministry começa 1h40 antes dela.',
+          'O jantar NÃO muda: a reserva tem hora.',
+          'Com fechamento às 20h, o Ministry sobe para 16h20 e o jantar vai para depois dele — ' +
+          'remarquem a reserva para as 18h.',
+        ] },
+      { letra: 'C', titulo: 'O Mine-Cart parou às 20h',
+        gatilho: 'Vocês chegam na Super Nintendo World e ele está fora do ar.',
+        passos: [
+          'Ele quebra com frequência. Fiquem por perto e acompanhem pelo app.',
+          'Se voltar antes das 21h, entrem na fila antes de fechar — quem está na fila anda.',
+          'Se não voltar, é a única atração do parque em risco hoje. Não há outra janela ' +
+          'barata para ele fora do Early Park Admission.',
+        ] },
+      { letra: 'C2', titulo: 'Chuva ou frio',
+        gatilho: 'Chove, ou a tarde está fria.',
+        passos: [
+          'O Fyre Drill cai sem discussão: ele encharca.',
+          'Monsters Unchained, Battle at the Ministry, Toadstool e Atlantic são cobertos.',
+          'As montanhas-russas param com raio. Se pararem, adiantem o que é coberto e voltem.',
+        ] },
     ],
     blocos: [
-      { id: 'b-1911-0645', hora: '06:45', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Sair de carro', descricao: '~30 min',
-        localId: 'epic-universe', acesso: [] },
-
-      { id: 'b-1911-0730', hora: '07:30', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Portão',
-        descricao: 'A caminhada do estacionamento até a entrada é longa',
+      { id: 'b-1911-0715', hora: '07:15', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Sair do hotel — Uber',
+        descricao: '~30 min, US$ 25–38. O carro só chega amanhã',
         contexto:
-          'O Epic tem estacionamento próprio, mas a caminhada até a catraca passa por uma ' +
-          'esplanada grande e leva de 15 a 20 minutos. Chegar 90 minutos antes não é exagero ' +
-          'aqui.',
-        localId: 'epic-universe', acesso: [] },
+          'Hoje é Uber: o carro alugado só é retirado amanhã às 15h30.\n\n' +
+          'O DESTINO NO APP É O PONTO DE EMBARQUE DO EPIC, 1222 Epic Blvd — não é o ' +
+          'estacionamento da Universal, que fica em outro lugar. De lá são uns cinco minutos a ' +
+          'pé até a entrada.',
+        localId: 'epic-universe', acesso: [], duracaoMin: 35, pesquisa: '2026-09-10' },
+
+      { id: 'b-1911-0750', hora: '07:50', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Entrar no parque — portal da Dark Universe',
+        descricao: 'O Celestial Park abre para todos no Early Park Admission. Esperem na porta',
+        contexto:
+          'Durante a hora do Early Park Admission, o Celestial Park fica aberto para todo mundo. ' +
+          'A checagem de hóspede de hotel é na porta de cada land — e a Dark Universe não ' +
+          'participa. Às 9h ela abre para todos ao mesmo tempo, e quem está na porta entra ' +
+          'primeiro.\n\n' +
+          'NÃO VÃO PARA A NINTENDO, O MINISTRY OU BERK: os três estão no EPA, e às 9h já têm ' +
+          'uma hora de fila acumulada.\n\n' +
+          'PONTO DE ENCONTRO DE HOJE: a base do Chronos, a torre da entrada. Todo caminho do ' +
+          'parque passa pelo Celestial Park, e ela aparece de qualquer ponto dele. Se vocês se ' +
+          'perderem, vão para lá e ESPEREM.\n\n' +
+          'É também o café da manhã: comam as barrinhas aqui, parados na porta.',
+        localId: 'epic-universe', acesso: [], duracaoMin: 70, pesquisa: '2026-09-10' },
 
       { id: 'b-1911-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Monsters Unchained: The Frankenstein Experiment',
+        descricao: 'Rope drop. O portal que abre vazio para quem é de fora',
+        contexto:
+          'Dark ride em braço robótico: a neta do Dr. Frankenstein faz experimentos com monstros ' +
+          'capturados e eles escapam. O veículo acelera, para, gira, sobe e cai, com ' +
+          'animatrônicos no nível dos melhores de Orlando. Tem susto, mas nenhuma queda grande.\n\n' +
+          'POR QUE AGORA: é a primeira fila que abre vazia para quem não está em hotel da ' +
+          'Universal. Ela enche logo depois da abertura, e ao longo do dia é uma das menores do ' +
+          'parque — então pegar vazia agora é o jeito de o resto do dia render.\n\n' +
+          'LOCKER OBRIGATÓRIO. Bolsos vazios antes de entrar na fila.',
+        areaParque: 'Dark Universe', acesso: ['rope-drop', 'standby'], singleRider: true,
+        locker: 'obrigatorio', critico: true, duracaoMin: 35,
+        fila: { min: 10, quando: 'na abertura', pico: 45, estimado: 14, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1911-0940', hora: '09:40', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Curse of the Werewolf',
+        descricao: 'Montanha-russa giratória, com trechos de ré. Não é "familiar"',
+        contexto:
+          'Montanha-russa de alta velocidade em carrinhos que giram livremente conforme o peso, ' +
+          'com aceleração forte, trechos de ré e muita rotação — cada volta é diferente. Quem ' +
+          'enjoa com giro sente.\n\n' +
+          'A fila dela tem pico por volta das 13h e despenca no fim do dia. De manhã, logo ' +
+          'depois da abertura, ela ainda não montou.\n\n' +
+          'Sem locker obrigatório, mas prendam tudo que estiver solto.',
+        areaParque: 'Dark Universe', acesso: ['standby'], singleRider: true, duracaoMin: 35,
+        fila: { min: 20, quando: 'logo depois da abertura', pico: 75, estimado: 46, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1911-1020', hora: '10:20', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Stardust Racers',
+        descricao: 'Celestial Park. Dois trens correndo lado a lado. Detector de metal',
+        contexto:
+          'Montanha-russa dupla de lançamento: dois trens correm lado a lado em trilhos ' +
+          'separados, se cruzam no ar e passam por uma inversão. Sobe uns 40 metros (133 pés) ' +
+          'e chega perto de 100 km/h. É a montanha-russa mais forte do parque.\n\n' +
+          'DETECTOR DE METAL NA ENTRADA DA FILA: nada nos bolsos — nem celular, nem chave, nem ' +
+          'óculos solto. Tudo no locker gratuito.\n\n' +
+          'Ela saiu do Early Park Admission em fevereiro de 2026, então a fila dela começa do ' +
+          'zero às 9h, e no meio da manhã costuma estar baixa.',
+        areaParque: 'Celestial Park', acesso: ['standby'], singleRider: true, locker: 'detector',
+        duracaoMin: 40,
+        fila: { min: 20, quando: 'no meio da manhã', pico: 105, estimado: 25, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1911-1105', hora: '11:05', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Mario Kart: Bowser’s Challenge',
+        descricao: 'A janela dele é 11h–12h, quando a turma do EPA sai da Nintendo',
+        contexto:
+          'Corrida de kart em realidade aumentada: vocês usam um visor acoplado ao boné e ' +
+          'coletam moedas e atiram cascos girando o volante. É um jogo, não emoção física — e ' +
+          'o placar é por pessoa.\n\n' +
+          'POR QUE AGORA: ele é a terceira maior fila do parque, 67 a 78 minutos de média, e a ' +
+          'janela menos ruim dele é entre 11h e 12h, quando quem entrou no Early Park Admission ' +
+          'já andou nele e seguiu adiante.\n\n' +
+          'AO ENTRAR NA SUPER NINTENDO WORLD, ABRAM O APP DA UNIVERSAL e vejam se o Toadstool ' +
+          'Cafe está com lista de espera. Se estiver, entrem nela agora, para o almoço das 13h.\n\n' +
+          'E reparem na decoração: é o primeiro Natal da Super Nintendo World.',
+        areaParque: 'Super Nintendo World', acesso: ['standby'], singleRider: true,
+        critico: true, duracaoMin: 70,
+        fila: { min: 60, quando: 'entre 11h e 12h', pico: 170, estimado: 72, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1911-1215', hora: '12:15', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Yoshi’s Adventure',
+        descricao: 'Lento e elevado. É a única vista da Nintendo de cima',
+        contexto:
+          'Passeio lento em cima de um Yoshi, pelos trilhos elevados da área. É brinquedo de ' +
+          'criança, mas é a única forma de ver a Super Nintendo World inteira de cima — e ela ' +
+          'está decorada.\n\n' +
+          'O meio do dia é a hora mais baixa das filas médias: quando as grandes estão no pico, ' +
+          'as pequenas esvaziam.',
+        areaParque: 'Super Nintendo World', acesso: ['standby'], duracaoMin: 40,
+        fila: { min: 20, quando: 'no meio do dia', pico: 95, estimado: 34, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1911-1300', hora: '13:00', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Almoço — Toadstool Cafe',
+        descricao: 'Não aceita reserva. Confiram a lista no app às 11h',
+        contexto:
+          'O restaurante do Mario, dentro da Super Nintendo World, com pratos que imitam os ' +
+          'itens do jogo. A comida é secundária: vocês vão pelo cenário. Pratos principais de ' +
+          'US$ 18 a 26.\n\n' +
+          'NÃO ACEITA RESERVA, e as fontes não concordam sobre como se entra: a maioria dos ' +
+          'guias fala de lista de espera pelo app da Universal, e um diz que é por ordem de ' +
+          'chegada. Por isso o bloco das 11h manda conferir no app — se houver lista, entrem ' +
+          'nela ali.\n\n' +
+          'O pico do almoço no parque é das 11h30 às 13h30. Às 13h vocês pegam o fim dele.\n\n' +
+          'É serviço rápido, com pedido pela mesa: não leva gorjeta de garçom.',
+        restauranteId: 'r-toadstool', areaParque: 'Super Nintendo World', acesso: [],
+        duracaoMin: 60, pesquisa: '2026-09-10' },
+
+      { id: 'b-1911-1410', hora: '14:10', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Hiccup’s Wing Gliders',
+        descricao: 'Isle of Berk. Lançamento de alta velocidade, com trecho de ré. Locker',
+        contexto:
+          'Montanha-russa de lançamento no mundo de Como Treinar o Seu Dragão, com aceleração ' +
+          'forte, subidas, quedas e um trecho de ré. Não é suave — o roteiro antigo dizia que ' +
+          'era. A vila viking em volta é das mais bonitas do parque, e hoje está no Snoggletog, ' +
+          'o Natal de Berk.\n\n' +
+          'A fila dela piora no fim da tarde, por volta das 17h. No começo da tarde ainda está ' +
+          'no meio do caminho.\n\n' +
+          'LOCKER OBRIGATÓRIO.',
+        areaParque: 'Isle of Berk', acesso: ['standby'], singleRider: true, locker: 'obrigatorio',
+        duracaoMin: 45,
+        fila: { min: 30, quando: 'no começo da tarde', pico: 120, estimado: 38, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1911-1500', hora: '15:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Dragon Racer’s Rally',
+        descricao: 'Você controla a inclinação — e as inversões',
+        contexto:
+          'Braços que erguem o carrinho no alto e giram, e é você quem controla quanto ele ' +
+          'inclina — dá para virar de cabeça para baixo ou não. Não é "leve", como o roteiro ' +
+          'antigo dizia: a intensidade é escolha de quem está sentado.\n\n' +
+          'Há compartimento no próprio brinquedo para guardar o que estiver solto.',
+        areaParque: 'Isle of Berk', acesso: ['standby'], duracaoMin: 40,
+        fila: { min: 25, quando: 'à tarde', pico: 100, estimado: 37, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1911-1545', hora: '15:45', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Fyre Drill',
+        descricao: 'Opcional. O guia oficial diz: "possivelmente encharca"',
+        contexto:
+          'Barcos giratórios em que vocês operam canhões de água contra os outros barcos — e ' +
+          'levam água de volta, inclusive de jatos que disparam sem aviso. O guia oficial da ' +
+          'Universal é direto: os passageiros vão se molhar, possivelmente encharcar.\n\n' +
+          'MESMO CRITÉRIO DO KALI RIVER RAPIDS NO DIA 13: se a tarde estiver fria, pulem sem ' +
+          'culpa. Ele saiu das 17h40, já escurecendo e antes do jantar, para cá, com o sol ' +
+          'ainda alto.\n\n' +
+          'Se fizerem: capa de chuva vestida e celular no Ziploc.',
+        areaParque: 'Isle of Berk', acesso: ['standby'], molha: true, opcional: true,
+        duracaoMin: 25,
+        fila: { min: 10, quando: 'qualquer hora', pico: 65, estimado: 13, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1911-1615', hora: '16:15', ancora: 'referencia', tipo: 'livre',
+        titulo: 'Pausa · Constellation Carousel · Celestial Park de Natal',
+        descricao: 'Água, banheiro, alguma coisa da mochila. O carrossel é se der vontade',
+        contexto:
+          'A parada antes da reta final, e a reta final é longa: jantar, Ministry e Mine-Cart ' +
+          'emendados até as 21h. Encham as garrafas num balcão de comida — a água gelada é de ' +
+          'graça — e sentem.\n\n' +
+          'O Celestial Park no Natal vira paisagem de inverno, com show natalino nas fontes. O ' +
+          'horário do show ainda não saiu.\n\n' +
+          'O Constellation Carousel fica aqui, com criaturas que giram sozinhas além do giro ' +
+          'do carrossel. Fila média de 21 minutos. Não é bloco próprio: se estiver curta, vão.',
+        areaParque: 'Celestial Park', acesso: [], duracaoMin: 40, pesquisa: '2026-09-10' },
+
+      { id: 'b-1911-1700', hora: '17:00', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Jantar — Atlantic',
+        descricao: 'Reserva obrigatória. É cedo de propósito: libera as três últimas horas',
+        contexto:
+          'Restaurante de frutos do mar e carnes no Celestial Park, o mais formal do parque. ' +
+          'Pratos principais de US$ 35 a 48.\n\n' +
+          'POR QUE ÀS 17H: é o jantar cedo que paga o dia. As duas maiores filas do parque só ' +
+          'ficam razoáveis no fim — o Ministry nas últimas duas ou três horas, o Mine-Cart na ' +
+          'última — e as duas precisam de todo o tempo depois daqui.\n\n' +
+          'RESERVA OBRIGATÓRIA, e a janela da Universal abre cerca de seis meses antes — ou ' +
+          'seja, já está aberta. Está no checklist para agora.\n\n' +
+          'ALTERNATIVA SEM RESERVA: o Mead Hall, salão viking da Isle of Berk, mais barato e ' +
+          'mais temático. Se forem para lá, saiam cinco minutos antes: Berk fica do outro lado ' +
+          'do Ministry.\n\n' +
+          'É mesa com garçom: 18 a 20% de gorjeta, e o preço da etiqueta não inclui o imposto.',
+        restauranteId: 'r-atlantic', areaParque: 'Celestial Park', acesso: ['reserva'],
+        duracaoMin: 75, pesquisa: '2026-09-10' },
+
+      { id: 'b-1911-1820', hora: '18:20', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Harry Potter and the Battle at the Ministry',
-        descricao: 'Rope drop. Maior fila do parque, disparado',
+        descricao: 'Nas últimas horas a fila cai para 45–75 min. De manhã, era a fila do EPA',
         contexto:
           'Dark ride pelo Ministério da Magia, misturando cenário físico, animatrônicos e telas ' +
-          'de forma quase invisível. É consenso como a melhor atração do parque e a de maior ' +
-          'demanda. Emoção baixa — é história, não adrenalina.',
-        areaParque: 'Ministry of Magic', acesso: ['rope-drop', 'standby'],
-        singleRider: true, pesquisa: '2026-09-08' },
+          'de forma quase invisível. O veículo acelera, para, gira, sobe e cai com força. É ' +
+          'consenso como a melhor atração do parque.\n\n' +
+          'POR QUE AGORA E NÃO ÀS 9H: o Ministry está no Early Park Admission. Às 9h, quem é de ' +
+          'hotel já está nele há uma hora. Ele faz 76 a 109 minutos de média, e só nas últimas ' +
+          'duas ou três horas cai para 45 a 75 — na última, a mediana cai 74%.\n\n' +
+          'Na saída vocês estão na Place Cachée à noite, decorada para o Natal do mundo bruxo. ' +
+          'Vale andar cinco minutos por ela antes de seguir para a Nintendo.\n\n' +
+          'HORA A CONFIRMAR: este bloco segue o fechamento do parque. O roteiro assume 21h.',
+        areaParque: 'Ministry of Magic', acesso: ['standby'], singleRider: true, critico: true,
+        confirmarHorario: true, duracaoMin: 90,
+        fila: { min: 45, quando: 'nas últimas 2–3 horas', pico: 185, estimado: 76, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
 
-      { id: 'b-1911-1005', hora: '10:05', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Stardust Racers',
-        descricao: 'Celestial Park. Coaster duplo, dois trens correndo',
-        contexto:
-          'Dois trens que correm lado a lado em trilhos separados, com 1500 m de percurso, ' +
-          '133 metros e 100 km/h. Tem a "Celestial Spin", em que os dois carros se cruzam ' +
-          'invertidos. Detector de metal — nada nos bolsos, nem celular.',
-        areaParque: 'Celestial Park', acesso: ['standby'],
-        singleRider: true, locker: 'detector', pesquisa: '2026-09-08' },
-
-      { id: 'b-1911-1050', hora: '10:50', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Mario Kart: Bowser’s Challenge',
-        descricao: 'Super Nintendo World. Realidade aumentada',
-        contexto:
-          'Vocês usam um visor de realidade aumentada acoplado ao boné e coletam moedas ' +
-          'girando o volante e apertando gatilhos. É a atração mais tecnicamente ambiciosa da ' +
-          'área. Sem emoção física — é um jogo.',
-        areaParque: 'Super Nintendo World', acesso: ['standby'],
-        singleRider: true, pesquisa: '2026-09-08' },
-
-      { id: 'b-1911-1145', hora: '11:45', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1911-2000', hora: '20:00', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Mine-Cart Madness',
-        descricao: 'Donkey Kong. Trilhos que parecem quebrados',
+        descricao: 'A maior fila do parque. Na última hora ela cai para 20–30 min',
         contexto:
-          'Montanha-russa em carrinhos de mina com uma ilusão muito boa: o carrinho parece ' +
-          'saltar trechos de trilho faltando. Familiar, sem inversão.',
-        areaParque: 'Super Nintendo World', acesso: ['standby'],
-        singleRider: true, pesquisa: '2026-09-08' },
+          'Montanha-russa em carrinho de mina do Donkey Kong, com uma ilusão muito boa: o ' +
+          'carrinho parece saltar trechos de trilho que faltam. Alta velocidade, sem inversão.\n\n' +
+          'POR QUE NO FIM: é a maior fila do parque, 113 a 114 minutos de média e pico de 205. ' +
+          'Fora do Early Park Admission, a única janela barata é a última hora antes de fechar, ' +
+          'quando cai para 20 a 30 minutos. É a mesma manobra do Flight of Passage no dia 13.\n\n' +
+          'QUEM ESTÁ NA FILA NO FECHAMENTO ANDA. Entrem antes das 21h e não saiam dela.\n\n' +
+          'ELE QUEBRA COM FREQUÊNCIA. Se estiver parado, acompanhem pelo app e fiquem por ' +
+          'perto — o plano C trata disso.\n\n' +
+          'Sem locker obrigatório, mas prendam tudo que estiver solto.',
+        areaParque: 'Super Nintendo World', acesso: ['standby'], singleRider: true,
+        critico: true, confirmarHorario: true, duracaoMin: 50,
+        fila: { min: 20, quando: 'na última hora', pico: 205, estimado: 113, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
 
-      { id: 'b-1911-1220', hora: '12:20', ancora: 'referencia', tipo: 'tarefa',
-        titulo: 'Entrar na lista do Toadstool Cafe',
-        descricao: 'Pelo app. A lista fecha cedo — façam isso às 10h se lembrarem',
+      { id: 'b-1911-2100', hora: '21:00', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Sair — Uber',
+        descricao: 'Pelo Celestial Park iluminado. Embarque na 1222 Epic Blvd',
         contexto:
-          'O Toadstool não aceita reserva: funciona por lista virtual pelo app da Universal, e ' +
-          'a lista do almoço costuma fechar antes do meio-dia. Se vocês lembrarem de entrar às ' +
-          '10h, entram; se deixarem para 12h20, pode não ter mais.',
-        acesso: [], critico: true },
-
-      { id: 'b-1911-1245', hora: '12:45', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Almoço — Toadstool Cafe',
-        descricao: '',
-        contexto:
-          'Restaurante temático do Mario, com pratos que imitam os itens do jogo. A comida é ' +
-          'secundária: vocês vão pelo cenário e pela apresentação.',
-        restauranteId: 'r-toadstool', areaParque: 'Super Nintendo World', acesso: [] },
-
-      { id: 'b-1911-1400', hora: '14:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Yoshi’s Adventure',
-        descricao: 'Leve, mas a vista de cima da área é a melhor foto',
-        contexto:
-          'Passeio lento em cima de um Yoshi, elevado sobre a área. É para criança, mas é a ' +
-          'única forma de ver a Super Nintendo World de cima.',
-        areaParque: 'Super Nintendo World', acesso: ['standby'] },
-
-      { id: 'b-1911-1440', hora: '14:40', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Monsters Unchained',
-        descricao: 'Dark Universe. Animatrônicos, a mais elaborada do parque',
-        contexto:
-          'A neta do Dr. Frankenstein faz experimentos com um Drácula capturado, e ele escapa. ' +
-          'É o dark ride mais imersivo do parque, com animatrônicos excepcionais. Tem sustos e ' +
-          'movimento, mas nada de queda grande. Locker obrigatório.',
-        areaParque: 'Dark Universe', acesso: ['standby'],
-        singleRider: true, locker: 'obrigatorio', pesquisa: '2026-09-08' },
-
-      { id: 'b-1911-1535', hora: '15:35', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Curse of the Werewolf',
-        descricao: 'Coaster familiar giratório',
-        contexto:
-          'Montanha-russa de carrinhos que giram livremente conforme o peso — cada volta é ' +
-          'diferente. Leve, mas embrulha o estômago de quem é sensível a rotação.',
-        areaParque: 'Dark Universe', acesso: ['standby'],
-        singleRider: true, pesquisa: '2026-09-08' },
-
-      { id: 'b-1911-1615', hora: '16:15', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Hiccup’s Wing Gliders',
-        descricao: 'Isle of Berk. Lançamento suave, temática linda',
-        contexto:
-          'Coaster familiar de lançamento no mundo de Como Treinar o Seu Dragão. Suave, e a ' +
-          'ambientação da vila viking é das mais bonitas do parque. Locker obrigatório.',
-        areaParque: 'Isle of Berk', acesso: ['standby'],
-        singleRider: true, locker: 'obrigatorio', pesquisa: '2026-09-08' },
-
-      { id: 'b-1911-1700', hora: '17:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Dragon Racer’s Rally',
-        descricao: '',
-        contexto: 'Braços giratórios que vocês controlam para inclinar. Leve e rápido de fazer.',
-        areaParque: 'Isle of Berk', acesso: ['standby'] },
-
-      { id: 'b-1911-1740', hora: '17:40', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Fyre Drill',
-        descricao: 'Interativo, molha',
-        contexto:
-          'Barcos giratórios em que vocês operam canhões de água — e levam água de volta dos ' +
-          'outros barcos e da plateia. Molha de verdade. Deixem para o fim do dia por isso.',
-        areaParque: 'Isle of Berk', acesso: ['standby'], molha: true },
-
-      { id: 'b-1911-1820', hora: '18:20', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — Atlantic ou Mead Hall',
-        descricao: '',
-        contexto:
-          'Atlantic fica no Celestial Park, com peixes e frutos do mar em ambiente mais ' +
-          'formal. Mead Hall é o salão viking do Isle of Berk, mais casual e mais temático.',
-        restauranteId: 'r-atlantic', acesso: [] },
-
-      { id: 'b-1911-1945', hora: '19:45', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Constellation Carousel e Celestial Park iluminado',
-        descricao: 'O parque à noite é outro lugar',
-        contexto:
-          'O Celestial Park é a área central, com fontes coreografadas e iluminação que muda ' +
-          'completamente depois do anoitecer. O carrossel é temático de constelações e as ' +
-          'criaturas se movem de formas diferentes das de um carrossel comum.',
-        areaParque: 'Celestial Park', acesso: [] },
+          'A saída atravessa o Celestial Park de noite, com a decoração de Natal acesa — é o ' +
+          'parque no seu melhor, e vocês passam por ele de qualquer jeito.\n\n' +
+          'A tarifa dinâmica sobe no fechamento. Se estiver absurda, esperem dez minutos no ' +
+          'Celestial Park antes de chamar.\n\n' +
+          'Amanhã o dia 20 começa às 8h30, dentro de Kissimmee.',
+        localId: 'epic-universe', acesso: [], duracaoMin: 45 },
     ],
+    naoPerca: [
+      { nome: 'Place Cachée à noite, no Natal do mundo bruxo', quando: 'hoje', custo: 'grátis',
+        motivo: 'Vocês saem do Battle at the Ministry direto nela, já escuro e decorada. ' +
+                'Cinco minutos andando antes de seguir para a Nintendo.',
+        pesquisa: '2026-09-10' },
+      { nome: 'O primeiro Natal da Super Nintendo World', quando: 'hoje', custo: 'grátis',
+        motivo: 'É a primeira temporada em que a área ganha decoração. A vista de cima, no ' +
+                'Yoshi’s Adventure, é a melhor forma de ver.',
+        pesquisa: '2026-09-10' },
+      { nome: 'Show natalino das fontes do Celestial Park', quando: 'hoje',
+        condicao: 'horário ainda não anunciado', custo: 'grátis',
+        motivo: 'As fontes do Celestial Park ganham show de Natal na temporada. A Universal ' +
+                'anuncia os horários perto do início dela.',
+        pesquisa: '2026-09-10' },
+      { nome: 'Snoggletog na Isle of Berk', quando: 'hoje', custo: 'grátis',
+        motivo: 'O Natal de Como Treinar o Seu Dragão, na vila viking. Vocês passam a tarde ' +
+                'inteira em Berk.',
+        pesquisa: '2026-09-10' },
+      { nome: 'Power-Up Band', quando: 'decidir', custo: '~US$ 40',
+        motivo: 'Pulseira que ativa os jogos espalhados pela Super Nintendo World. Sem ela, ' +
+                'metade da área vira só cenário. A decisão está no checklist de outubro.' },
+    ],
+    prepararAmanha: {
+      paraODia: '2026-11-20',
+      titulo: 'Airboat, carro e Old Town · dia inteiro dentro de Kissimmee',
+      aviso: 'Amanhã não tem parque, e o dia começa às 8h30. É também o dia em que o carro ' +
+             'chega — e a retirada é a tarefa mais crítica dele.',
+      itens: [
+        { texto: 'Separar os quatro documentos da retirada do carro', critico: true,
+          motivo: 'Carteira de motorista, PID, passaporte e cartão de CRÉDITO internacional, ' +
+                  'todos em nome do condutor. A retirada é às 15h30, e sem um deles não sai ' +
+                  'carro.' },
+        { texto: 'Conferir a reserva do Boggy Creek Airboat', critico: true,
+          motivo: 'É a primeira coisa do dia. Número da reserva à mão, não no e-mail.' },
+        { texto: 'Guardar as compras e esvaziar a mochila do parque', critico: false,
+          motivo: 'Amanhã é dia de cidade pequena e de rua. A mochila de parque fica.' },
+        { texto: 'Celular e power bank carregando', critico: false,
+          motivo: 'Hoje foram catorze horas de parque com o app aberto o tempo todo.' },
+      ],
+    },
     ficha: {
       multiPass: null, singlePass: null,
       expressPass: {
         usar: false,
-        motivo:
-          'US$ 600 no casal por um dia. A decisão continua sendo não — mas ela ficou menos ' +
-          'confortável: o argumento antigo era que dois dias de ingresso valiam mais que um ' +
-          'dia de Express, e agora só um dia está agendado.',
-        alternativa:
-          'Duas saídas, nesta ordem. Express Pass Now dentro do parque, US$ 20 a 30 por ' +
-          'atração, para resolver uma fila específica. E o segundo dia do ingresso, que ' +
-          'continua pago e válido: se este dia der errado, reclamar o dia 25 custa a noite ' +
-          'do Disney Springs e nada mais.',
+        motivo: 'US$ 600 no casal por um dia. Continua sendo não — e com o rope drop na Dark ' +
+                'Universe e as duas maiores filas no fim, o dia não precisa dele para caber.',
+        alternativa: 'Duas saídas, nesta ordem. Express Pass Now dentro do parque, US$ 20 a 30 ' +
+                     'por atração, para resolver uma fila específica. E o segundo dia do ' +
+                     'ingresso, que continua pago e válido: reclamar o dia 25 custa a noite do ' +
+                     'Disney Springs e nada mais.',
       },
       custoEstimadoCasal: { min: 0, max: 0, moeda: 'USD' },
       extras: [
+        { nome: 'Lockers — só três atrações hoje',
+          custo: { min: 0, max: 3, moeda: 'USD' },
+          texto: 'Locker obrigatório só no Stardust Racers, no Monsters Unchained e no ' +
+                 'Hiccup’s Wing Gliders, e detector de metal só no Stardust — pelo guia ' +
+                 'oficial da Universal. O locker comum é grátis pelo tempo da fila mais a ' +
+                 'atração; o grande custa US$ 3, e passar do tempo custa US$ 3 a cada meia hora.' },
         { nome: 'Power-Up Band',
           custo: { min: 40, max: 40, moeda: 'USD' },
-          texto:
-            'Comprem se quiserem jogar os desafios interativos da Super Nintendo World. Sem ' +
-            'ela, metade da área vira só cenário. Custa ~US$ 40. Decisão pendente — está no ' +
-            'checklist de outubro.' },
+          texto: 'Comprem se quiserem jogar os desafios interativos da Super Nintendo World. ' +
+                 'Sem ela, metade da área vira só cenário. Decisão pendente — está no checklist ' +
+                 'de outubro.' },
       ],
     },
     renuncias: {
       gerais: [
         { nome: 'Astronomica',
-          motivo: 'Área interativa de brincar no Celestial Park. Vocês passam por ela ' +
-                  'quatro vezes no dia, indo de uma land para outra — se der vontade, é ' +
-                  'parar cinco minutos, não é bloco.' },
+          motivo: 'Área de brincar com água no Celestial Park. Vocês passam por ela várias ' +
+                  'vezes no dia — se der vontade, é parar cinco minutos, não é bloco.' },
+        { nome: 'Viking Training Camp',
+          motivo: 'Área de brincar infantil da Isle of Berk, com torres e escorregadores.' },
         { nome: 'Bowser Jr. Shadow Showdown',
-          motivo: 'A menor fila do parque, 9 minutos de média, e é o único brinquedo ' +
-                  'classificado como infantil. Casal sem crianças não perde nada.' },
+          motivo: 'Desafio interativo da Super Nintendo World que depende da Power-Up Band. ' +
+                  'Menor fila do parque, e é voltado a criança.' },
       ],
       idioma: {
         itens: ['Le Cirque Arcanus', 'The Untrainable Dragon'],
         motivo:
           'Os dois shows de teatro do parque, falados em inglês. Mesmo teste que reprovou o ' +
-          'American Adventure no Epcot e o Indiana Jones no Hollywood Studios: são 25 a 30 ' +
-          'minutos sentados que rendem muito mais andando.\n\n' +
-          'ESTES DOIS, mais as duas áreas de brincar acima, SÃO A DIFERENÇA INTEIRA entre um ' +
-          'dia e dois no Epic Universe. Verificado em 10/09: o parque tem 11 atrações de ' +
-          'brinquedo, 2 shows e 2 áreas de brincar — e as 11 de brinquedo estão todas neste ' +
-          'dia. Foi por isso que o segundo turno pôde virar a despedida no Disney Springs.',
+          'American Adventure no Epcot: são 25 a 30 minutos sentados que rendem muito mais ' +
+          'andando.\n\n' +
+          'ESTES DOIS, mais as áreas de brincar acima, SÃO A DIFERENÇA INTEIRA entre um dia e ' +
+          'dois no Epic Universe. O parque tem 11 atrações de brinquedo, 2 shows e 2 áreas de ' +
+          'brincar — e as 11 de brinquedo estão todas neste dia. Foi por isso que o segundo ' +
+          'turno pôde virar a despedida no Disney Springs.',
       },
       fechado: [],
     },
@@ -5505,20 +5734,21 @@ window.ROTEIRO = {
       nota: 'Mesas coladas no tanque de tubarões. Prazo médio (outubro). ' +
             'Provavelmente NÃO está coberto pelo plano de refeição — confirmem.' },
 
-    { id: 'r-toadstool', nome: 'Toadstool Cafe', data: '2026-11-19', hora: '12:45',
+    { id: 'r-toadstool', nome: 'Toadstool Cafe', data: '2026-11-19', hora: '13:00',
       refeicao: 'almoco', local: 'Epic Universe · Super Nintendo World', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Lista virtual pelo app da Universal', blocoId: 'b-1911-1245',
-      nota: 'Não aceita reserva: lista virtual pelo app, e ela fecha antes do meio-dia. ' +
-            'Entrem na lista às 10h.' },
+      canal: 'Sem reserva — conferir lista de espera no app da Universal', blocoId: 'b-1911-1300',
+      nota: 'Não aceita reserva. As fontes divergem entre lista de espera pelo app e ordem de ' +
+            'chegada: confiram no app ao entrar na Super Nintendo World, às 11h. Pico do ' +
+            'almoço das 11h30 às 13h30.' },
 
-    { id: 'r-atlantic', nome: 'Atlantic', data: '2026-11-19', hora: '18:20',
+    { id: 'r-atlantic', nome: 'Atlantic', data: '2026-11-19', hora: '17:00',
       refeicao: 'jantar', local: 'Epic Universe · Celestial Park',
-      alternativas: ['Mead Hall (Isle of Berk)'],
+      alternativas: ['Mead Hall (Isle of Berk, sem reserva)'],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
-      canal: 'App / site da Universal Orlando', blocoId: 'b-1911-1820',
-      nota: 'Reserva marcada como necessária por decisão de vocês — obriga a revisitar e ' +
-            'confirmar, mesmo que na prática aceite walk-in.' },
+      canal: 'App / site da Universal Orlando', blocoId: 'b-1911-1700',
+      nota: 'Reserva obrigatória, confirmada em 10/09. Às 17h de propósito: o jantar cedo ' +
+            'libera as três últimas horas para o Ministry e o Mine-Cart. Pratos de US$ 35 a 48.' },
 
     { id: 'r-zambia', nome: 'Zambia Smokehouse', data: '2026-11-24', hora: '12:45',
       refeicao: 'almoco', local: 'Busch Gardens Tampa', alternativas: [],
@@ -5641,18 +5871,34 @@ window.ROTEIRO = {
         'depois de doze horas de viagem — que é exatamente quando ninguém faz.',
       restauranteIds: [] },
 
-    { id: 'ck-epa-epic', dataAlvo: '2026-10-25', dataEstimada: true,
-      motivoData: 'Junto com a conferência dos ingressos, na mesma sessão no app da Universal',
-      hora: null, fuso: null, janelaReserva: false, critico: false,
-      texto: 'Confirmar se hóspede de fora entra junto com o Early Park Admission no Epic',
+    { id: 'ck-horarios-epic', dataAlvo: '2026-11-01', dataEstimada: true,
+      motivoData: 'Horários de show de Natal só saem perto da temporada, que começa em 14/11',
+      hora: null, fuso: null, janelaReserva: false, critico: true,
+      texto: 'Horário do Epic Universe em 19/11 — abertura, FECHAMENTO e shows de Natal',
       nota:
-        'Duas fontes se contradizem em 10/09. Uma diz que hóspede de fora entra no mesmo ' +
-        'horário do Early Park Admission, só sem poder acessar a Super Nintendo World e a ' +
-        'Dark Universe. A outra diz que não entra antes da abertura oficial.\n\n' +
-        'A diferença muda a primeira hora inteira do dia 19: se entram junto, a Ministry of ' +
-        'Magic e a Isle of Berk ficam abertas antes do horário oficial e o Battle at the ' +
-        'Ministry sai quase de graça. Se não entram, a hora antes do portão é fila parada.\n\n' +
-        'As duas fontes concordam numa coisa: NÃO fazer rope drop na Super Nintendo World.',
+        'A ABERTURA move a manhã inteira: é a referência do dia. O roteiro assume 9h.\n\n' +
+        'O FECHAMENTO é o que importa mais. O Battle at the Ministry e o Mine-Cart Madness ' +
+        'estão colados nele, porque as duas maiores filas do parque só ficam razoáveis nas ' +
+        'últimas horas. O roteiro assume 21h, o típico de quinta em meados de novembro. Se ' +
+        'for outro, vale o plano B2 do dia 19.\n\n' +
+        'OS SHOWS DE NATAL: fontes do Celestial Park e as celebrações de Berk e da Place ' +
+        'Cachée. A Universal anuncia os horários perto do início da temporada.',
+      restauranteIds: [] },
+
+    { id: 'ck-epa-epic', dataAlvo: '2026-11-12', dataEstimada: true,
+      motivoData: 'A lista muda por temporada: uma semana antes, e de novo na véspera',
+      hora: null, fuso: null, janelaReserva: false, critico: true,
+      texto: 'Conferir quais lands do Epic estão no Early Park Admission em 19/11',
+      nota:
+        'O MECANISMO JÁ ESTÁ RESOLVIDO: durante o Early Park Admission o Celestial Park fica ' +
+        'aberto para todo mundo, e a checagem de hóspede de hotel é feita na porta de cada ' +
+        'land. Vocês entram cedo, mas não passam dos portais que participam.\n\n' +
+        'O QUE FALTA CONFERIR é quais lands participam em novembro. Desde fevereiro de 2026, ' +
+        'conferido de novo em 16/06/2026, são Ministry of Magic, Super Nintendo World e Isle ' +
+        'of Berk — e o dia 19 começa na Dark Universe justamente por ela estar fora.\n\n' +
+        'A LISTA MUDOU PELO MENOS TRÊS VEZES EM DEZOITO MESES. Se a Dark Universe voltar e o ' +
+        'Ministry sair, vale o plano B do dia 19: os dois blocos trocam de lugar.',
+      pesquisa: '2026-09-10',
       restauranteIds: [] },
 
     { id: 'ck-ing-universal', dataAlvo: '2026-10-25', dataEstimada: true,
@@ -5714,11 +5960,18 @@ window.ROTEIRO = {
         'mesmo lugar.',
       restauranteIds: ['r-homecomin'] },
 
-    { id: 'ck-atlantic', dataAlvo: '2026-10-20', dataEstimada: true, motivoData: '30 dias antes do jantar de 19/11', hora: null, fuso: null,
-      janelaReserva: false, critico: false,
-      texto: 'Reservar o Atlantic para o jantar de 19/11 (Epic Universe)',
-      nota: 'Marcado como reserva necessária por decisão de vocês, para forçar a revisitar ' +
-            'e confirmar — mesmo que na prática aceite walk-in.',
+    { id: 'ck-atlantic', dataAlvo: '2026-09-12', dataEstimada: false,
+      motivoData: 'A janela de reserva da Universal abre ~6 meses antes — já está aberta',
+      hora: null, fuso: null, janelaReserva: false, critico: true,
+      texto: 'Reservar o Atlantic para as 17h de 19/11 (Epic Universe)',
+      nota:
+        'RESERVA OBRIGATÓRIA, confirmado em 10/09. E a hora é o que sustenta o dia: o jantar ' +
+        'às 17h libera as três últimas horas do parque para o Battle at the Ministry e o ' +
+        'Mine-Cart Madness, as duas maiores filas, nas únicas janelas baratas delas.\n\n' +
+        'A pendência antiga dizia "30 dias antes" — era atraso à toa, com a janela aberta ' +
+        'desde maio. Se não houver 17h, peguem o mais perto disso ANTES, nunca depois.\n\n' +
+        'Sem mesa: o Mead Hall, na Isle of Berk, não aceita reserva e entra no lugar.',
+      pesquisa: '2026-09-10',
       restauranteIds: ['r-atlantic'] },
 
     { id: 'ck-powerband', dataAlvo: '2026-10-15', dataEstimada: true, motivoData: 'Prazo de outubro, com folga para o site do parque', hora: null, fuso: null,
@@ -6036,7 +6289,8 @@ window.ROTEIRO = {
       lat: 28.4422, lng: -81.449, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 30, tempoFonte: 'documento',
                  uberUSD: { min: 25, max: 38 }, uberFonte: 'estimado' },
-      nota: 'Dia 23 e 25 vocês vão de carro. A caminhada do estacionamento é longa.' },
+      nota: 'Dia 19, de Uber: o ponto de embarque do Epic é próprio, na 1222 Epic Blvd, a ' +
+            'cinco minutos a pé da entrada. Não é o estacionamento da Universal.' },
 
     { id: 'seaworld', nome: 'SeaWorld Orlando', tipo: 'parque',
       lat: 28.41083333, lng: -81.4625, verificado: true, fonteCoord: 'wikipedia', endereco: null,
@@ -6154,6 +6408,24 @@ window.ROTEIRO = {
         ['World Discovery', 'World Showcase', 6],
         ['World Nature', 'World Showcase', 6],
         ['World Discovery', 'World Nature', 7],
+      ],
+    },
+
+    'epic-universe': {
+      forma: 'Um hub e quatro raios: a entrada abre no Celestial Park, e os quatro mundos ' +
+             'saem dele por portais, em sentido horário a partir da entrada — Super Nintendo ' +
+             'World, Dark Universe, Ministry of Magic e Isle of Berk. Os mundos são isolados ' +
+             'entre si: todo deslocamento passa pelo Celestial Park.',
+      margem: 'Somem 50% em dia cheio. Os números batem com os publicados: de um mundo a ' +
+              'outro são 3 a 7 minutos pelo hub, e aqui dão 6. E ATENÇÃO A UMA LIMITAÇÃO: o ' +
+              'Celestial Park é um nó só, e a caminhada da entrada até o mundo mais distante, ' +
+              '10 a 15 minutos, não entra no grafo — ela está dentro do bloco de entrada, que ' +
+              'não tem área.',
+      arestas: [
+        ['Celestial Park', 'Super Nintendo World', 3],
+        ['Celestial Park', 'Dark Universe', 3],
+        ['Celestial Park', 'Ministry of Magic', 3],
+        ['Celestial Park', 'Isle of Berk', 3],
       ],
     },
 
@@ -6331,7 +6603,7 @@ window.ROTEIRO = {
         'horas de parque pela frente\n' +
         'Jurassic Park River Adventure (23/11) — molha bastante, levem capa\n' +
         'Journey to Atlantis (22/11) — molha bastante\n' +
-        'Fyre Drill (19/11) — interativo, molha\n' +
+        'Fyre Drill (19/11) — o guia oficial diz "possivelmente encharca". Opcional, às 15h45\n' +
         '\n' +
         'Já foram cortadas do roteiro por molharem demais: Infinity Falls (SeaWorld), ' +
         'Popeye e Dudley Do-Right (Islands), Congo River Rapids e Stanley Falls (Busch).\n\n' +
