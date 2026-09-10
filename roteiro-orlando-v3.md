@@ -126,7 +126,7 @@ Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's
 
 **Renúncias por barreira de idioma:** Hall of Presidents, Country Bear Jamboree, Monsters Inc. Laugh Floor e Enchanted Tiki Room são atrações longas, faladas e com humor que depende de referência americana. São 20 a 25 minutos cada que rendem muito mais em outro lugar.
 
-**Fechado:** Carousel of Progress.
+**Fechado:** Carousel of Progress — fechou em 06/07/2026 para uma reforma que troca as quatro cenas e põe um animatrônico do Walt abrindo o show. Volta só no fim da primavera de 2027, sem data anunciada.
 
 ---
 
@@ -199,7 +199,12 @@ Feathered Friends in Flight, Bluey's Wild World, Wildlife Express Train, Rafiki'
 
 ---
 
-# 🎄 14/11 (sábado, noite) — ISLANDS OF ADVENTURE (entrada extra, custo zero)
+# 🎄 14/11 (sábado, noite) — ISLANDS OF ADVENTURE (entrada extra)
+
+> **A ENTRADA é de graça; o dia não é.** O ingresso Universal já cobre esta noite, mas o
+> sábado tem almoço de mesa com gorjeta, sorvete, quatro corridas de Uber, duas cervejas
+> amanteigadas e o jantar: contem **US$ 200 a 260 no casal**. O que é de graça é a noite
+> de Natal, não o dia.
 
 **O dia tem um alvo só: o Grinchmas.** Tudo o mais é bônus — a Hogsmeade decorada e a projeção no castelo vocês reveem no dia 19, numa quinta, com menos gente.
 
@@ -215,7 +220,7 @@ Feathered Friends in Flight, Bluey's Wild World, Wildlife Express Train, Rafiki'
 | **17h30** | **GRINCHMAS WHO-LIDAY SPECTACULAR** |
 | **18h05** | Hogsmeade decorada · cerveja amanteigada *frozen* no carrinho externo |
 | **18h40** | **The Magic of Christmas at Hogwarts Castle** — repete a cada 20 min até fechar |
-| **19h15** | **Flight of the Hippogriff** se a fila estiver abaixo de 20 min |
+| **19h15** | **Flight of the Hippogriff**, ou mais Hogsmeade | Opcional. Vocês repetem esta atração no dia 19, às 17h50 |
 | **20h00** | **Jantar — Three Broomsticks**, dentro da Hogsmeade decorada |
 
 > **Por que o Three Broomsticks e não o Toothsome.** O Toothsome não aceita reserva e a espera passa de uma hora em fim de semana — num sábado de abertura de temporada, depois de um dia inteiro, é esperar em pé no CityWalk. O Three Broomsticks é balcão dentro da decoração que vocês vieram ver, e não leva gorjeta. *(Vocês voltam a comer lá no almoço do dia 19; se quiserem variar, é o dia 19 que muda.)*

@@ -366,9 +366,12 @@ window.ROTEIRO = {
                     'refeições espaçadas. É bem melhor e mais barato nos EUA.' },
           { texto: 'Café', essencial: false,
             motivo: 'Confiram se o quarto tem cafeteira antes de comprar cápsula.' },
-          { texto: 'Capas de chuva descartáveis — 4 unidades', essencial: true,
-            motivo: 'ACRÉSCIMO. Jurassic Park River Adventure no dia 19, Journey to Atlantis ' +
-                    'no 22 e Fyre Drill no 23 molham de verdade. US$ 1 aqui, US$ 10 no parque.' },
+          { texto: 'Capas de chuva descartáveis — 8 unidades', essencial: true,
+            motivo: 'São QUATRO atrações que molham de verdade, e vocês são dois: Kali River ' +
+                    'Rapids no dia 13, Jurassic Park River Adventure no 19, Journey to ' +
+                    'Atlantis no 22 e Fyre Drill no 23. Oito usos. Custam US$ 1 aqui e ' +
+                    'US$ 10 dentro do parque — comprar oito sai mais barato que uma ' +
+                    'garrafa de água lá dentro.' },
           { texto: 'Curativos e protetor de bolha (Band-Aid Blister / Moleskin)', essencial: true,
             motivo: 'ACRÉSCIMO. São 16 dias andando 15 a 25 mil passos. Bolha no dia 3 ' +
                     'estraga o resto da viagem, e é a lesão mais evitável que existe.' },
@@ -571,8 +574,13 @@ window.ROTEIRO = {
         descricao: '4 min do hotel. 45 min de compras. Lista completa na ficha do dia',
         contexto:
           'A compra que abastece os 16 dias. Fica a 1,5 km do hotel — a corrida sai por ' +
-          'US$ 7 a 10 e leva 4 minutos. Se o dia estiver atrasado, façam só os oito itens ' +
-          'essenciais e joguem o resto para o dia 12.',
+          'US$ 7 a 10 e leva 4 minutos.\n\n' +
+          'SE O DIA ESTIVER ATRASADO, comprem NESTA ordem e parem quando quiserem: água, ' +
+          'protetor solar, capa de chuva, curativo de bolha, power bank, ibuprofeno e ' +
+          'barrinhas. Esses sete resolvem os quatro dias seguintes.\n\n' +
+          'NÃO se guiem pela ordem da lista: os essenciais estão espalhados por ela, e a ' +
+          'capa de chuva, o curativo e o power bank ficam lá embaixo justamente por serem ' +
+          'os que ninguém lembra.',
         endereco: '3250 Vineland Rd', localId: 'walmart-vineland', acesso: [], duracaoMin: 45 },
 
       { id: 'b-1011-1645', hora: '16:25', ancora: 'referencia', tipo: 'deslocamento',
@@ -609,9 +617,10 @@ window.ROTEIRO = {
         titulo: 'The Landing → Marketplace → Town Center',
         descricao: 'World of Disney é a maior loja Disney do mundo',
         contexto:
-          'São 1h40 até o jantar, de mãos livres. Dá para o World of Disney sem correr e ' +
-          'ainda pegar o pôr do sol às 17h35 na beira da água.',
-        localId: 'disney-springs', acesso: [], duracaoMin: 100 },
+          'São 1h25 de loja e 15 minutos de folga antes da mesa — o Boathouse pede que ' +
+          'vocês cheguem 15 minutos antes, e esse tempo está aqui dentro. Dá para o World ' +
+          'of Disney sem correr e ainda pegar o pôr do sol às 17h35 na beira da água.',
+        localId: 'disney-springs', acesso: [], duracaoMin: 85 },
 
       { id: 'b-1011-1900', hora: '19:00', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — The Boathouse',
@@ -834,8 +843,9 @@ window.ROTEIRO = {
       paraODia: '2026-11-12',
       titulo: 'Outlet e ICON Park · café no hotel às 8h30',
       aviso:
-        'Depois de um dia de 6h45 às 22h30, o dia 12 é de propósito o mais leve da ' +
-        'primeira semana. A lista é curta porque tem que ser.',
+        'O dia 11 sai às 6h45, o parque fecha às 22h e, com o ferry e o Uber, vocês ' +
+        'chegam ao hotel perto das 23h. São dezessete horas de pé. O dia 12 é de ' +
+        'propósito o mais leve da primeira semana, e a lista é curta porque tem que ser.',
       itens: [
         { texto: 'Conferir se o Single Pass do dia 15 precisa ser comprado às 7h de amanhã',
           critico: true,
@@ -1223,6 +1233,14 @@ window.ROTEIRO = {
         { nome: 'Astro Orbiter' }, { nome: 'Mad Tea Party' },
         { nome: 'Ariel’s Undersea Adventure' }, { nome: 'Enchanted Tales with Belle' },
         { nome: 'Tapete Mágico' }, { nome: 'Tom Sawyer Island' }, { nome: 'Liberty Belle' },
+        { nome: 'PeopleMover — 10 min sentado e quase sempre walk-on, mas o dia já tem ' +
+                 'três paradas e a Tomorrowland está cheia de bloco entre 15h30 e 17h55' },
+        { nome: 'Walt Disney World Railroad — dá a volta no parque em ~20 min, e o dia não ' +
+                 'tem 20 minutos livres em lugar nenhum' },
+        { nome: 'Many Adventures of Winnie the Pooh' },
+        { nome: 'Swiss Family Treehouse — escadaria longa, e o dia já tem 25 mil passos' },
+        { nome: 'Prince Charming Regal Carrousel — mesma família do Dumbo e do Mad Tea ' +
+                 'Party, que também ficaram de fora' },
       ],
       idioma: {
         itens: ['Hall of Presidents', 'Country Bear Jamboree',
@@ -1232,7 +1250,9 @@ window.ROTEIRO = {
           '20 a 25 minutos cada que rendem muito mais em outro lugar.',
       },
       fechado: [
-        'Carousel of Progress',
+        'Carousel of Progress — fechou em 06/07/2026 para uma reforma que troca as quatro ' +
+        'cenas e põe um animatrônico do Walt abrindo o show. Volta só no fim da primavera ' +
+        'de 2027, sem data anunciada',
         'Tiana’s Bayou Adventure — em reforma desde 02/11, volta prevista para dezembro',
         'Critter Co-Op e Tiana’s Bayou General — fecham junto com a atração',
       ],
@@ -1419,8 +1439,14 @@ window.ROTEIRO = {
                   'vão pular — ganham 35 minutos e não passam o dia com roupa molhada.' },
 
         { texto: 'Mochila remontada e celular carregando', critico: true,
-          motivo: 'Duas garrafas de água, barrinhas, protetor solar, power bank e cabo. ' +
-                  'Mesma rotina de toda véspera de parque a partir de agora.' },
+          motivo: 'O de sempre: duas garrafas de água, barrinhas, protetor solar, power ' +
+                  'bank e cabo.\n\n' +
+                  'E TRÊS COISAS SÓ DE AMANHÃ, se vocês forem fazer o Kali River Rapids às ' +
+                  '9h15: duas capas de chuva, um saco Ziploc para o celular e um par de ' +
+                  'meias secas. O Kali não é respingo, é balde — e depois dele ainda são ' +
+                  'nove horas de parque.\n\n' +
+                  'Uma camada leve também: amanhã amanhece por volta dos 15°C e vocês saem ' +
+                  'às 6h30. Ao meio-dia ela vai para a mochila.' },
 
         { texto: 'Guardar as compras do outlet',
           motivo: 'Vocês voltam com sacola hoje. Amanhã a mochila precisa estar vazia para ' +
@@ -1659,9 +1685,16 @@ window.ROTEIRO = {
           'ABRIU MAIS TARDE: mudem a referência aqui no app. A manhã inteira desloca junto, ' +
           'inclusive a saída do hotel. Os shows têm sessão própria — confiram a grade e ' +
           'ajustem no selo de horário de cada um.',
-          'FECHOU MAIS TARDE (19h ou 20h): o dia respira. Empurrem o safári do entardecer ' +
-          'para uma hora antes do fechamento dele, encaixem o Expedition Everest de novo, e ' +
-          'entrem na fila do Flight of Passage a 15 minutos do fechamento em vez de 17h45.',
+          'FECHOU MAIS TARDE (19h ou 20h): o dia respira, MAS CUIDADO COM O SANAA. A mesa é ' +
+          'às 19h45 e a Disney cobra taxa de não comparecimento, com cancelamento exigido ' +
+          'com 2 horas de antecedência (+1 407-939-3463).\n\n' +
+          'Com fechamento às 19h: empurrem o safári para as 17h30 e entrem na fila do ' +
+          'Flight of Passage às 18h45. Vocês saem por volta das 19h30 e o jantar continua ' +
+          'de pé, apertado.\n\n' +
+          'Com fechamento às 20h: NÃO dá para fazer as duas coisas. Ou vocês remarcam o ' +
+          'Sanaa para as 21h logo de manhã, pelo My Disney Experience, ou mantêm a fila do ' +
+          'Flight of Passage às 17h45 como está no plano A e usam a folga que sobrou para ' +
+          'o Everest. A segunda opção é a segura.',
           'A RETA FINAL NÃO DESLOCA COM A ABERTURA. Ela segue o sol e o fechamento, por isso ' +
           'aqueles blocos são fixos. Se o app avisar colisão em vermelho no meio do dia, é o ' +
           'almoço ou os shows batendo — ajustem esses, não o fim.',
@@ -1797,7 +1830,7 @@ window.ROTEIRO = {
           'É para lá que vocês vão.\n\n' +
           'Desde meados de 2026 quem não é hóspede pode fazer pré-fila direto no checkpoint da ' +
           'land, e não mais só na entrada — peçam o da África.\n\n' +
-          'Café da manhã aqui, das barrinhas da mochila. O almoço é só às 11h30.',
+          'Café da manhã aqui, das barrinhas da mochila. O almoço é só às 12h30.',
         localId: 'animal-kingdom', acesso: [], duracaoMin: 45, pesquisa: '2026-09-10' },
 
       { id: 'b-1311-0935', hora: '08:00', ancora: 'referencia', tipo: 'atracao',
@@ -2058,8 +2091,11 @@ window.ROTEIRO = {
           'pico, e para sair de Pandora no escuro em vez de na fila.\n\n' +
           'A compra só se justifica se o parque fechar cedo demais para o plano caber, ou ' +
           'se vocês decidirem que não querem 50 minutos de fila no fim de um dia de dez ' +
-          'horas. E ela seria às 7h ET de 10/11, durante a conexão em Bogotá — o pior ' +
-          'momento da viagem para depender de internet.',
+          'horas.\n\n' +
+          'E NÃO PRECISA DECIDIR EM BOGOTÁ. Como o TRON no dia 11, o Single Pass do Flight ' +
+          'of Passage se compra NA HORA, pelo app, de pé dentro do parque. É por isso que ' +
+          'ele é plano B e não compra antecipada: vocês decidem às 17h30, olhando a fila, ' +
+          'e não às 7h da manhã de 10/11 no meio de uma conexão.',
       },
       expressPass: null,
       custoEstimadoCasal: { min: 0, max: 40, moeda: 'USD' },
@@ -2098,12 +2134,14 @@ window.ROTEIRO = {
     tipo: 'livre',
     operadora: 'universal',
     parqueId: 'islands-of-adventure',
-    custoZero: true,
+    custoZero: false,
     fechado: true,
     revisadoEm: '2026-09-10',
     notaCusto:
-      'A entrada no Islands hoje é extra e não custa nada: o ingresso Universal de vocês já ' +
-      'cobre. É uma noite só para o Natal — as atrações grandes são do dia 19.',
+      'A ENTRADA no Islands hoje é extra e não custa nada — o ingresso Universal de vocês ' +
+      'já cobre. Mas o DIA custa: almoço de mesa no Columbia com gorjeta, sorvete, quatro ' +
+      'corridas de Uber, duas cervejas amanteigadas e o jantar. Contem US$ 200 a 260 no ' +
+      'casal. O que é de graça é a noite de Natal, não o sábado.',
 
     // A âncora do dia NÃO é abertura de parque. É a sessão do Grinchmas, que é o
     // único compromisso de relógio da noite e a única coisa que o dia 19 não cobre.
@@ -2394,13 +2432,16 @@ window.ROTEIRO = {
         confirmarHorario: true, pesquisa: '2026-09-10' },
 
       { id: 'b-1411-1950', hora: '19:15', ancora: 'fixo', tipo: 'atracao',
-        titulo: 'Flight of the Hippogriff',
-        descricao: 'Só se a fila estiver abaixo de 20 min',
+        titulo: 'Flight of the Hippogriff — ou mais Hogsmeade',
+        descricao: 'Opcional. Vocês repetem esta atração no dia 19',
         contexto:
           'Montanha-russa infantil de 1 minuto. Vale pela vista do castelo de Hogwarts e da ' +
           'cabana do Hagrid, iluminados.\n\n' +
-          'Não vale fila, e hoje não é dia de atração: as grandes são do dia 19. Se estiver ' +
-          'cheio, fiquem no pátio vendo a projeção de novo.',
+          'VOCÊS ANDAM NELA DE NOVO NO DIA 19, às 17h50. Hoje é bônus, não meta.\n\n' +
+          'O texto da noite diz para andar devagar e olhar, e este bloco existe para ser ' +
+          'gasto do jeito que vocês quiserem: se a fila estiver abaixo de 20 minutos, ' +
+          'andem; se não, fiquem no pátio vendo a projeção outra vez — ela repete a cada ' +
+          'vinte minutos e as sessões mais tarde são melhores.',
         areaParque: 'Hogsmeade', acesso: ['standby'], opcional: true, duracaoMin: 45,
         condicao: 'Só se a fila estiver abaixo de 20 min',
         fila: { min: 15, quando: 'à noite', pico: 45, estimado: true, fonte: '2026-09-10' } },
@@ -4829,6 +4870,8 @@ window.ROTEIRO = {
       corpo:
         'Novembro em Orlando é ameno, e roupa molhada às 17h fica desconfortável rápido quando ' +
         'escurece. As atrações marcadas com o selo "molha" neste app são:\n\n' +
+        'Kali River Rapids (13/11) — não é respingo, é balde. E é às 9h15, com nove ' +
+        'horas de parque pela frente\n' +
         'Jurassic Park River Adventure (19/11) — molha bastante, levem capa\n' +
         'Journey to Atlantis (22/11) — molha bastante\n' +
         'Fyre Drill (23/11) — interativo, molha\n' +
