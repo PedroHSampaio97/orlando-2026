@@ -76,6 +76,16 @@ No Islands, o Hagrid's saiu do Express em julho de 2026 — vocês pagariam e ai
 | **21h25** | TRON de novo, se tiverem pique | Opcional. É também o plano B da fila das 15h30 |
 | **22h00** | Sair — **pelo ferry**, não pelo monotrilho | |
 
+> **O Zootopia saiu.** Trinta minutos num show que a própria crítica chama de frenético e
+> esquecível, num dia em que a única montanha-russa do parque estava sendo feita uma vez
+> só. Os minutos foram para a caminhada — que agora está contada bloco a bloco — e para
+> devolver o **Expedition Everest** ao plano principal.
+
+> **O bloco das 15h45 tem dois propósitos.** Se o dia estiver no horário, é a segunda
+> volta no Everest, com a fila curta do fim de tarde. Se estiver atrasado, é a margem que
+> protege o safári do entardecer e a fila do Flight of Passage — os dois blocos
+> insubstituíveis do dia. É por isso que ele é opcional.
+
 ### Por que o dia está nesta ordem — a fila típica de cada uma
 
 | Atração | Quando vocês fazem | Fila aí | No pico |
@@ -137,14 +147,14 @@ Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's
 | **8h40** | **Expedition Everest** | Walk-on pelo mesmo motivo |
 | **9h15** | **Kali River Rapids** | **Opcional — molha de verdade.** A decisão é a temperatura |
 | **9h50** | **Maharajah Jungle Trek** | Trilha. Tigres. Sem fila, e serve para secar |
-| **10h30** | **Parada** | |
-| **10h45** | **Gorilla Falls** | Trilha. Ritmo lento de propósito |
-| **11h30** | **Festival of the Lion King** | Sessão. 30 min, sem barreira de idioma. Mesma área do bloco anterior |
-| **12h15** | **Almoço — Satu'li Canteen** | Mobile order, pedido durante o show. Inclui os 10 min de caminhada até Pandora |
-| **13h30** | **Zootopia: Better Zoogether!** | Sessão. Curto e descartável se o dia atrasar |
-| **14h00** | **Discovery Island Trails** | Trilhas em volta da Árvore da Vida. Quase ninguém faz |
-| **14h45** | **Nomad Lounge** | O descanso do dia. Varanda, drink, ventilador |
-| **15h45** | **Parada** | **Confiram a que horas o safári fecha.** O bloco seguinte depende disso |
+| **10h35** | **Parada** | Já na África, depois da caminhada |
+| **10h50** | **Gorilla Falls** | Trilha. Ritmo lento de propósito |
+| **11h30** | **Festival of the Lion King** | **Chegar 11h30 para o show de 11h50.** Os 20 min estão dentro do bloco |
+| **12h30** | **Almoço — Satu'li Canteen** | Mobile order, pedido durante o show |
+| **13h40** | **Discovery Island Trails** | Trilhas em volta da Árvore da Vida. Quase ninguém faz |
+| **14h25** | **Nomad Lounge** | O descanso do dia. Varanda, drink, ventilador |
+| **15h25** | **Parada** | **Confiram a que horas o safári fecha.** A reta final depende disso |
+| **15h45** | **Expedition Everest de novo** | **Opcional — e é a margem da reta final.** Atrasou? Pulem sem pensar |
 | **16h30** | **Kilimanjaro Safaris DE NOVO** | Ao entardecer. **Os leões acordam** |
 | **17h15** | **Na'vi River Journey** | A fila cede junto com o resto do parque |
 | **17h45** | **ENTRAR NA FILA do Flight of Passage** | Até o último minuto vale. Vocês andam por volta das 18h30 |
@@ -183,7 +193,7 @@ Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's
 
 
 ### Renúncias
-Feathered Friends in Flight, Bluey's Wild World, Wildlife Express Train, Rafiki's Planet Watch, The Animation Experience.
+Feathered Friends in Flight, Bluey's Wild World, Wildlife Express Train, Rafiki's Planet Watch, The Animation Experience, **Zootopia: Better Zoogether!** (30 min num show que a propria critica chama de frenético e esquecível).
 
 **Fechado:** DINOSAUR e toda a DinoLand (demolidos para a futura Tropical Americas).
 

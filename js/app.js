@@ -106,6 +106,13 @@
       const a = lista[i - 1], b = lista[i];
       const dur = a.dados.duracaoMin;
       if (!dur) continue;
+      // `duracaoMin` e so o tempo DENTRO do bloco. A travessia entre areas do
+      // parque entra aqui, por fora — e um bloco de deslocamento JA E a
+      // travessia, entao nao se soma outra por cima dele.
+      const anda = (a.dados.tipo === 'deslocamento' || b.dados.tipo === 'deslocamento')
+        ? 0
+        : (travessia(dia, a.dados.areaParque, b.dados.areaParque) || {}).min || 0;
+      const precisa = dur + anda;
       // Sem isenção por localId: o Boathouse fica DENTRO do Disney Springs e
       // mesmo assim é hora marcada. Quem separa etapa de compromisso é a
       // duração declarada, não o endereço.
@@ -114,10 +121,12 @@
       // os dois na mao daria alerta falso todo dia. Sem conversao, nao opinamos.
       if (a.dados.fuso && b.dados.fuso && a.dados.fuso !== b.dados.fuso) continue;
       const sobra = b.min - a.min;
-      if (sobra >= dur) continue;
+      if (sobra >= precisa) continue;
       a.colisao = a.colisao ||
-        'NÃO CABE: sobram ' + intervaloTexto(Math.max(sobra, 0)) + ' e o plano ' +
-        'previa ' + intervaloTexto(dur) + '. Faltam ' + intervaloTexto(dur - sobra) +
+        'NÃO CABE: sobram ' + intervaloTexto(Math.max(sobra, 0)) + ', o bloco leva ' +
+        intervaloTexto(dur) +
+        (anda ? ' e são ' + intervaloTexto(anda) + ' de caminhada' : '') +
+        '. Faltam ' + intervaloTexto(precisa - sobra) +
         ' para "' + b.dados.titulo + '"' +
         (b.ancora === 'fixo' ? ', que tem hora marcada e não desloca.' : '.');
     }

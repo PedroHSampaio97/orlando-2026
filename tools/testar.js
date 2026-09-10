@@ -21,6 +21,33 @@ const min = h => +h.slice(0, 2) * 60 + +h.slice(3, 5);
 const hhmm = m => String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0');
 const iv = m => m < 60 ? m + ' min' : Math.floor(m / 60) + 'h' + (m % 60 ? String(m % 60).padStart(2, '0') : '');
 
+/* Caminho mais curto entre duas areas de um parque, pela topografia declarada.
+   Mesma conta que js/app.js faz — se as duas divergirem, a ferramenta mente. */
+function travessia(parqueId, de, para) {
+  if (!de || !para || de === para) return 0;
+  const topo = (R.topografia || {})[parqueId];
+  if (!topo) return 0;
+  const viz = {};
+  topo.arestas.forEach(function (a) {
+    (viz[a[0]] = viz[a[0]] || []).push([a[1], a[2]]);
+    (viz[a[1]] = viz[a[1]] || []).push([a[0], a[2]]);
+  });
+  if (!viz[de] || !viz[para]) return 0;
+  const dist = { [de]: 0 }, fila = [de];
+  while (fila.length) {
+    fila.sort((x, y) => dist[x] - dist[y]);
+    const atual = fila.shift();
+    (viz[atual] || []).forEach(function (p) {
+      const novo = dist[atual] + p[1];
+      if (dist[p[0]] == null || novo < dist[p[0]]) {
+        dist[p[0]] = novo;
+        if (fila.indexOf(p[0]) < 0) fila.push(p[0]);
+      }
+    });
+  }
+  return dist[para] || 0;
+}
+
 function alertas(diaId, desloc) {
   const dia = R.dias.find(d => d.id === diaId);
   let l = dia.blocos.map(b => {
@@ -33,9 +60,14 @@ function alertas(diaId, desloc) {
     const a = l[i - 1], b = l[i];
     if (!a.d.duracaoMin) continue;
     if (a.d.fuso && b.d.fuso && a.d.fuso !== b.d.fuso) continue;
+    // bloco de deslocamento JA E a travessia; nao somar outra por cima
+    const anda = (a.d.tipo === 'deslocamento' || b.d.tipo === 'deslocamento')
+      ? 0 : travessia(dia.parqueId, a.d.areaParque, b.d.areaParque);
+    const precisa = a.d.duracaoMin + anda;
     const s = b.min - a.min;
-    if (s >= a.d.duracaoMin) continue;
-    a.c = a.c || ('nao cabe: sobram ' + iv(Math.max(s, 0)) + ' de ' + iv(a.d.duracaoMin));
+    if (s >= precisa) continue;
+    a.c = a.c || ('nao cabe: sobram ' + iv(Math.max(s, 0)) + ', o bloco leva ' +
+      iv(a.d.duracaoMin) + (anda ? ' e sao ' + iv(anda) + ' de caminhada' : ''));
   }
   for (let i = 0; i < l.length; i++) for (let j = i + 1; j < l.length; j++) {
     const a = l[i], b = l[j];

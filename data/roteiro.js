@@ -183,6 +183,10 @@ window.ROTEIRO = {
 
   /* ---------------------------------------------------------------------------
      OS DIAS
+     `duracaoMin` = tempo DENTRO do bloco: fila mais experiência. NÃO inclui a
+                    caminhada até o próximo — essa o app calcula pela topografia
+                    do parque e soma por fora. Bloco de `deslocamento` é a
+                    exceção: ele já É a travessia.
      `descricao` = o que fazer, em uma linha. É o que o app mostra em destaque.
      `contexto`  = pesquisa minha, para quem nunca foi. Pode apagar à vontade.
      ------------------------------------------------------------------------ */
@@ -898,7 +902,7 @@ window.ROTEIRO = {
           'abertura, custa uns 20 minutos de fila. O passe fica livre para o Peter Pan.\n\n' +
           'A Tiana’s Bayou Adventure, que seria a outra da área, está fechada.',
         areaParque: 'Frontierland', acesso: ['rope-drop', 'standby'],
-        critico: true, duracaoMin: 40, pesquisa: '2026-09-10',
+        critico: true, duracaoMin: 37, pesquisa: '2026-09-10',
         fila: { min: 20, quando: 'na abertura', pico: 60, estimado: true, fonte: '2026-09-10' } },
 
       { id: 'b-1111-1410', hora: '09:40', ancora: 'referencia', tipo: 'atracao',
@@ -921,7 +925,7 @@ window.ROTEIRO = {
           'vazia a esta hora. Depois das 11h ela passa de uma hora.\n\n' +
           'ATENÇÃO: é a única do dia que depende inteiramente de inglês falado. Se o humor ' +
           'não pegar, é o primeiro bloco a sacrificar quando o dia atrasar.',
-        areaParque: 'Adventureland', acesso: ['standby'], duracaoMin: 45,
+        areaParque: 'Adventureland', acesso: ['standby'], duracaoMin: 39,
         fila: { min: 25, quando: 'antes das 11h', pico: 60, fonte: '2026-09-10' } },
 
       { id: 'b-1111-1150', hora: '11:00', ancora: 'referencia', tipo: 'atracao',
@@ -962,7 +966,7 @@ window.ROTEIRO = {
           'subam para o segundo andar, que quase ninguém acha e é o lugar mais silencioso ' +
           'do Magic Kingdom.',
         restauranteId: 'r-columbia-harbour', areaParque: 'Liberty Square', acesso: [],
-        duracaoMin: 55 },
+        duracaoMin: 52 },
 
       { id: 'b-1111-1115', hora: '12:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'it’s a small world',
@@ -1005,7 +1009,7 @@ window.ROTEIRO = {
           'parque e a fila do TRON. Vão para eles com a garrafa cheia e sem fila de ' +
           'banheiro pendurada.\n\n' +
           'É também a hora de ligar o power bank, se o celular estiver abaixo de 40%.',
-        areaParque: 'Fantasyland', acesso: [], duracaoMin: 15 },
+        areaParque: 'Fantasyland', acesso: [], duracaoMin: 12 },
 
       { id: 'b-1111-1425', hora: '14:25', ancora: 'fixo', tipo: 'espera',
         titulo: 'Posicionar na LIBERTY SQUARE para o desfile',
@@ -1089,7 +1093,7 @@ window.ROTEIRO = {
         contexto:
           'Dark ride onde vocês atiram em alvos e disputam pontuação. Girem a cabine com o ' +
           'joystick central para mirar melhor, e os alvos com Z valem mais.',
-        areaParque: 'Tomorrowland', acesso: ['multi-pass'], duracaoMin: 40,
+        areaParque: 'Tomorrowland', acesso: ['multi-pass'], duracaoMin: 33,
         fila: { min: 10, quando: 'com o Multi Pass', pico: 35, fonte: '2026-09-10' } },
 
       { id: 'b-1111-1745', hora: '17:55', ancora: 'fixo', tipo: 'refeicao',
@@ -1142,7 +1146,7 @@ window.ROTEIRO = {
           'vocês gastaram o rope drop na Frontierland, de propósito. É agora.\n\n' +
           'A maior parte das vinte mil pessoas vai embora logo depois dos fogos, às 20h25, e ' +
           'as filas despencam. É por isso que hoje vocês ficam até o fim.',
-        areaParque: 'Fantasyland', acesso: ['standby'], critico: true, duracaoMin: 55,
+        areaParque: 'Fantasyland', acesso: ['standby'], critico: true, duracaoMin: 51,
         pesquisa: '2026-09-10',
         fila: { min: 40, quando: 'na última hora', pico: 90, estimado: true, fonte: '2026-09-10' } },
 
@@ -1669,12 +1673,14 @@ window.ROTEIRO = {
         gatilho: 'Chuva que não passa, cansaço, ou o dia atrasou demais.',
         passos: [
           'O Animal Kingdom é o parque com menos cobertura da Disney. Com chuva forte, o ' +
-          'Festival of the Lion King e o Zootopia são teatro fechado, e o Nomad Lounge tem ' +
-          'varanda coberta com ventilador.',
+          'Festival of the Lion King é teatro fechado, e o Nomad Lounge tem varanda ' +
+          'coberta com ventilador.',
           'O safári RODA na chuva e os animais costumam ficar mais ativos. O caminhão tem ' +
           'teto. Não é motivo para desistir dele.',
-          'O QUE NÃO SE SACRIFICA: a fila do Flight of Passage no fim. Se for para cortar ' +
-          'alguma coisa, cortem o Zootopia, o Kali e as trilhas — nessa ordem.',
+          'O QUE NÃO SE SACRIFICA: a fila do Flight of Passage no fim, e o safári do ' +
+          'entardecer. Se for para cortar, cortem nesta ordem: o Everest de novo (15h45), ' +
+          'o Kali (9h15) e as trilhas. Os três são opcionais de propósito e existem ' +
+          'justamente para serem a margem.',
           'Se vocês estiverem destruídos, o Sanaa às 19h45 tem tolerância curta e taxa por ' +
           'não comparecimento: cancelem com 2 horas de antecedência pelo My Disney Experience ' +
           'ou pelo +1 407-939-3463.',
@@ -1804,7 +1810,7 @@ window.ROTEIRO = {
           'às 8h a fila não existe, porque o parque inteiro está em Pandora.\n\n' +
           'Vocês voltam aqui às 16h30. É a única atração do parque em que repetir dá conteúdo ' +
           'diferente, e o motivo está naquele bloco.',
-        areaParque: 'Africa', acesso: ['rope-drop', 'standby'], critico: true, duracaoMin: 40,
+        areaParque: 'Africa', acesso: ['rope-drop', 'standby'], critico: true, duracaoMin: 34,
         fila: { min: 10, quando: 'na abertura', pico: 55, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
@@ -1841,9 +1847,9 @@ window.ROTEIRO = {
           'Trilha a pé por ruínas cenográficas com tigres, dragões-de-komodo e morcegos ' +
           'gigantes. Sem fila, no seu ritmo, com muita sombra.\n\n' +
           'Vem aqui de propósito: se vocês fizeram o Kali, é a hora de secar andando.',
-        areaParque: 'Asia', acesso: [], duracaoMin: 40 },
+        areaParque: 'Asia', acesso: [], duracaoMin: 39 },
 
-      { id: 'b-1311-1030p', hora: '10:30', ancora: 'referencia', tipo: 'pausa',
+      { id: 'b-1311-1030p', hora: '10:35', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
         descricao: 'Quinze minutos. Vocês estão de pé desde as 5h30',
         contexto:
@@ -1851,31 +1857,33 @@ window.ROTEIRO = {
           'pedir) e sentar.\n\n' +
           'Toda land tem banheiro, normalmente ao lado do maior balcão de comida. Não vale ' +
           'procurar no mapa; vale parar quando o corpo pedir.',
-        areaParque: 'Asia', acesso: [], duracaoMin: 15 },
+        areaParque: 'Africa', acesso: [], duracaoMin: 15 },
 
-      { id: 'b-1311-1545', hora: '10:45', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1311-1545', hora: '10:50', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Gorilla Falls Exploration Trail',
         descricao: 'Trilha. Ritmo lento de propósito',
         contexto:
           'Trilha a pé com gorilas, hipopótamos vistos por baixo d’água e um aviário. ' +
           'Diferente do safári, aqui vocês param quanto quiserem.',
-        areaParque: 'Africa', acesso: [], duracaoMin: 45 },
+        areaParque: 'Africa', acesso: [], duracaoMin: 40 },
 
       { id: 'b-1311-1315', hora: '11:30', ancora: 'fixo', tipo: 'show',
-        titulo: 'Festival of the Lion King',
-        descricao: '30 min. Show visual, sem barreira de idioma',
+        titulo: 'Festival of the Lion King — chegar 11h30, show 11h50',
+        descricao: 'Os 20 min de chegar antes estão dentro deste bloco',
         contexto:
           'Espetáculo em teatro circular com acrobatas, cantores e carros alegóricos. É quase ' +
-          'todo música e acrobacia, então o inglês não atrapalha. Cheguem 20 minutos antes ' +
-          'para não sentar na primeira fila, que é ruim.\n\n' +
+          'todo música e acrobacia, então o inglês não atrapalha.\n\n' +
+          'CHEGUEM 11H30 PARA O SHOW DE 11H50. Os vinte minutos de antecedência não são ' +
+          'exagero: a plateia é por ordem de chegada e a primeira fila é ruim. Este bloco ' +
+          'já tem esse tempo dentro dele — não é folga.\n\n' +
           'Vem logo depois do Gorilla Falls de propósito: os dois ficam na África, e assim ' +
           'vocês atravessam para Pandora uma vez só, já indo almoçar.\n\n' +
           'HORÁRIO FIXO de sessão — confiram a grade no app da Disney no dia e ajustem aqui ' +
           'se a sessão for outra. Se a mais próxima for muito diferente das 11h30, o almoço ' +
-          'e o Zootopia acompanham.',
-        areaParque: 'Africa', acesso: [], duracaoMin: 45, confirmarHorario: true },
+          'acompanha.',
+        areaParque: 'Africa', acesso: [], duracaoMin: 50, confirmarHorario: true },
 
-      { id: 'b-1311-1215', hora: '12:15', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-1311-1215', hora: '12:30', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Satu’li Canteen',
         descricao: 'Balcão, em Pandora. Um dos melhores da Disney',
         contexto:
@@ -1887,19 +1895,9 @@ window.ROTEIRO = {
           'e quinze deste bloco — não é tempo de mesa, é tempo de chegar.\n\n' +
           'É a primeira vez que vocês pisam em Pandora hoje, e é de dia. Olhem as montanhas ' +
           'flutuantes agora, porque à noite o lugar é outro — e vocês voltam.',
-        restauranteId: 'r-satuli', areaParque: 'Pandora', acesso: [], duracaoMin: 75 },
+        restauranteId: 'r-satuli', areaParque: 'Pandora', acesso: [], duracaoMin: 65 },
 
-      { id: 'b-1311-1500', hora: '13:30', ancora: 'fixo', tipo: 'show',
-        titulo: 'Zootopia: Better Zoogether!',
-        descricao: 'Teatro da Árvore da Vida. 10 min',
-        contexto:
-          'Show em 3D com efeitos no teatro e um animatrônico novo. Substituiu o It’s Tough ' +
-          'to be a Bug. A recepção da crítica foi ruim — acham frenético e esquecível.\n\n' +
-          'É ar-condicionado e é curto. Se o dia atrasar, é o primeiro bloco a cair sem culpa.',
-        areaParque: 'Discovery Island', acesso: [], duracaoMin: 30, opcional: true,
-        confirmarHorario: true, pesquisa: '2026-09-08' },
-
-      { id: 'b-1311-1345', hora: '14:00', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1311-1345', hora: '13:40', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Discovery Island Trails e a Árvore da Vida',
         descricao: 'Trilhas curtas em volta da árvore. Quase ninguém faz',
         contexto:
@@ -1910,7 +1908,7 @@ window.ROTEIRO = {
           'e vocês vão ver isso na saída.',
         areaParque: 'Discovery Island', acesso: [], duracaoMin: 45 },
 
-      { id: 'b-1311-1630', hora: '14:45', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-1311-1630', hora: '14:25', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Nomad Lounge — a varanda',
         descricao: 'O lugar mais gostoso do parque. Drink e petisco',
         contexto:
@@ -1922,7 +1920,7 @@ window.ROTEIRO = {
           'precisar dela: a partir das 16h30 o dia não para mais até o jantar.',
         restauranteId: 'r-nomad', areaParque: 'Discovery Island', acesso: [], duracaoMin: 60 },
 
-      { id: 'b-1311-1545p', hora: '15:45', ancora: 'referencia', tipo: 'pausa',
+      { id: 'b-1311-1545p', hora: '15:25', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — antes da reta final',
         descricao: 'Garrafas cheias, power bank, e conferir o horário do safári',
         contexto:
@@ -1932,7 +1930,20 @@ window.ROTEIRO = {
           'sair às 17h, está tudo bem. Se sair às 16h30, vão agora.\n\n' +
           'E confiram a hora do fechamento do parque, que é o que sustenta o bloco do Flight ' +
           'of Passage às 17h45.',
-        areaParque: 'Discovery Island', acesso: [], duracaoMin: 45, critico: true },
+        areaParque: 'Discovery Island', acesso: [], duracaoMin: 15, critico: true },
+
+      { id: 'b-1311-1041', hora: '15:45', ancora: 'fixo', tipo: 'atracao',
+        titulo: 'Expedition Everest de novo',
+        descricao: 'Opcional — e é também a margem da reta final',
+        contexto:
+          'O Animal Kingdom tem UMA montanha-russa e vocês a fizeram às 8h40. Este bloco ' +
+          'existe para ela não ser feita uma vez só num dia de dez horas.\n\n' +
+          'É DUPLO PROPÓSITO, e é por isso que ele é opcional: se o dia estiver no horário, ' +
+          'andem de novo — a fila do fim de tarde é curta. Se estiver atrasado, PULEM SEM ' +
+          'PENSAR. Estes 45 minutos são a margem que protege o safári do entardecer e a ' +
+          'fila do Flight of Passage, que são os dois blocos insubstituíveis do dia.',
+        areaParque: 'Asia', acesso: ['standby'], opcional: true, duracaoMin: 39,
+        fila: { min: 20, quando: 'no fim da tarde', pico: 40, estimado: true, fonte: '2026-09-10' } },
 
       { id: 'b-1311-1631', hora: '16:30', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Kilimanjaro Safaris DE NOVO — agora ao entardecer',
@@ -1947,7 +1958,7 @@ window.ROTEIRO = {
           'já foi de manhã.\n\n' +
           'HORÁRIO FIXO, colado no fim do dia e não na abertura. E confirmem o horário de ' +
           'fechamento do safári na parada anterior — ele fecha antes do parque.',
-        areaParque: 'Africa', acesso: ['standby'], critico: true, duracaoMin: 45,
+        areaParque: 'Africa', acesso: ['standby'], critico: true, duracaoMin: 35,
         fila: { min: 15, quando: 'na última hora', pico: 55, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
@@ -2067,6 +2078,9 @@ window.ROTEIRO = {
         { nome: 'Feathered Friends in Flight' }, { nome: 'Bluey’s Wild World' },
         { nome: 'Wildlife Express Train' }, { nome: 'Rafiki’s Planet Watch' },
         { nome: 'The Animation Experience' },
+        { nome: 'Zootopia: Better Zoogether! — 30 minutos num show que a própria ' +
+                 'crítica chama de frenético e esquecível, num dia em que a única ' +
+                 'montanha-russa do parque estava sendo feita uma vez só' },
       ],
       idioma: null,
       fechado: ['DINOSAUR e toda a DinoLand (demolidos para a futura Tropical Americas)'],
@@ -2350,12 +2364,12 @@ window.ROTEIRO = {
           'E saem do teatro já no escuro, que é quando Hogsmeade fica boa.\n\n' +
           'HORÁRIO A CONFIRMAR no app da Universal. É ele que ancora a noite: mudou a sessão, ' +
           'mudem a referência e tudo até a cerveja amanteigada desloca junto.',
-        areaParque: 'Seuss Landing', acesso: [], duracaoMin: 35,
+        areaParque: 'Seuss Landing', acesso: [], duracaoMin: 30,
         confirmarHorario: true, critico: true, pesquisa: '2026-09-10' },
 
-      { id: 'b-1411-1930', hora: '18:05', ancora: 'referencia', tipo: 'livre',
+      { id: 'b-1411-1930', hora: '18:10', ancora: 'referencia', tipo: 'livre',
         titulo: 'Hogsmeade decorada · cerveja amanteigada frozen',
-        descricao: 'Carrinho externo, fila menor. Oito minutos a pé do Seuss Landing',
+        descricao: 'Carrinho externo, fila menor. São oito minutos a pé do Seuss Landing',
         contexto:
           'A cerveja amanteigada não tem álcool e é doce — a frozen é a mais pedida. PEÇAM NO ' +
           'CARRINHO EXTERNO: dentro do Three Broomsticks a fila é sempre maior e é exatamente ' +
@@ -2363,7 +2377,7 @@ window.ROTEIRO = {
           'Hogsmeade no Natal ganha guirlandas, luz quente e coral. É a primeira noite da ' +
           'temporada e vocês voltam aqui no dia 19 — hoje é para andar devagar e olhar, não ' +
           'para pegar atração.',
-        areaParque: 'Hogsmeade', acesso: [], duracaoMin: 35 },
+        areaParque: 'Hogsmeade', acesso: [], duracaoMin: 30 },
 
       { id: 'b-1411-2015', hora: '18:40', ancora: 'fixo', tipo: 'show',
         titulo: 'The Magic of Christmas at Hogwarts Castle',
@@ -4115,13 +4129,13 @@ window.ROTEIRO = {
             'ao ar livre. Usem mobile order e comam nas mesas de fora, de frente para o ' +
             'piano — comer dentro perde o motivo da escolha.' },
 
-    { id: 'r-satuli', nome: 'Satu’li Canteen', data: '2026-11-13', hora: '12:15',
+    { id: 'r-satuli', nome: 'Satu’li Canteen', data: '2026-11-13', hora: '12:30',
       refeicao: 'almoco', local: 'Animal Kingdom · Pandora', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Mobile order pelo My Disney Experience', blocoId: 'b-1311-1215',
       nota: 'Balcão. Eleito o melhor quick service do Walt Disney World.' },
 
-    { id: 'r-nomad', nome: 'Nomad Lounge', data: '2026-11-13', hora: '14:45',
+    { id: 'r-nomad', nome: 'Nomad Lounge', data: '2026-11-13', hora: '14:25',
       refeicao: 'drink', local: 'Animal Kingdom · Discovery Island', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Lista de espera no local', blocoId: 'b-1311-1630',
