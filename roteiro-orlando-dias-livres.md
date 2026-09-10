@@ -55,6 +55,13 @@ Este dia perdeu a festa de Natal do Magic Kingdom. Reorganizei a geografia para 
 
 # 🏘️ 14/11 (sábado) — Celebration, CityWalk e Islands à noite
 
+> **A neve de Celebration não acontece nas datas de vocês.** O *Now Snowing* — neve de
+> sabão na Market Street às 18h, 19h, 20h e 21h — roda de **28/11 a 31/12**, e vocês
+> voltam ao Brasil em 26/11. Não adianta voltar de carro depois. Fica registrado para
+> não ser reproposto.
+>
+> A feira de produtores é aos **domingos** e vocês vão no sábado.
+
 Sábado. O objetivo do dia é ficar longe de parque cheio e chegar inteiro na segunda metade da viagem.
 
 | Hora | O quê | Notas |

@@ -50,7 +50,7 @@ let falhas = 0;
 function ok(cond, msg) { console.log((cond ? '  OK   ' : '  FALHA ') + msg); if (!cond) falhas++; }
 
 console.log('--- dias fechados sem alerta no plano padrao ---');
-['d-2026-11-10', 'd-2026-11-11', 'd-2026-11-12', 'd-2026-11-13'].forEach(function (id) {
+['d-2026-11-10', 'd-2026-11-11', 'd-2026-11-12', 'd-2026-11-13', 'd-2026-11-14'].forEach(function (id) {
   const a = alertas(id, 0);
   ok(a.length === 0, id + ' sem atraso: ' + a.length + ' alerta(s)' +
      (a.length ? ' -> ' + a.map(x => x.d.titulo + ' (' + x.c + ')').join('; ') : ''));

@@ -1748,7 +1748,7 @@ window.ROTEIRO = {
         '9h de propósito. Não coloquem despertador.',
       itens: [
         { texto: 'Dormir sem alarme', critico: true,
-          motivo: 'O dia 14 só sai do hotel às 10h30 e o bloco das 9h é vazio de propósito. ' +
+          motivo: 'O dia 14 só sai do hotel às 11h e o bloco das 9h é vazio de propósito. ' +
                   'Hoje foram dez horas de parque; amanhã é a primeira noite da temporada de ' +
                   'Natal da Universal e vocês vão querer estar inteiros.' },
         { texto: 'Conferir o horário do Grinchmas no app da Universal', critico: true,
@@ -2085,124 +2085,329 @@ window.ROTEIRO = {
     operadora: 'universal',
     parqueId: 'islands-of-adventure',
     custoZero: true,
-    entradaExtra: true,
+    fechado: true,
+    revisadoEm: '2026-09-10',
     notaCusto:
       'A entrada no Islands hoje é extra e não custa nada: o ingresso Universal de vocês já ' +
-      'cobre. São duas horas só para o Natal — as atrações grandes são do dia 19.',
-    // A âncora do dia NÃO é abertura de parque. É o show do Grinchmas.
-    referencia: { rotulo: 'Grinchmas', padrao: '18:45', confirmado: false },
+      'cobre. É uma noite só para o Natal — as atrações grandes são do dia 19.',
+
+    // A âncora do dia NÃO é abertura de parque. É a sessão do Grinchmas, que é o
+    // único compromisso de relógio da noite e a única coisa que o dia 19 não cobre.
+    referencia: { rotulo: 'Sessão do Grinchmas', padrao: '17:30', confirmado: false },
+
     resumo:
-      'Sábado. O objetivo do dia é ficar longe de parque cheio e chegar inteiro na segunda ' +
-      'metade da viagem. A noite no Islands é só decoração de Natal.',
+      'Sábado, e sábado é o pior dia para parque. A manhã é Celebration a pé e a tarde é ' +
+      'hotel. À noite vocês entram no Islands pela primeira noite da temporada de Natal — ' +
+      'mas com um alvo só: o Grinchmas. O resto da Hogsmeade decorada vocês reveem no dia 19, ' +
+      'numa quinta-feira, com menos gente.',
+
     avisos: [
-      'Não tentem atração grande hoje. Hagrid’s, VelociCoaster e Forbidden Journey são do dia 19.',
-      'A feira de Celebration é aos domingos. Vocês vão no sábado e não pegam — não é perda ' +
-      'relevante, mas não fiquem procurando.',
+      'O GRINCHMAS É O ÚNICO COMPROMISSO DE RELÓGIO DA NOITE. Plateia por ordem de chegada, ' +
+      'sem Express Pass, e a grade típica termina às 18h30. O roteiro mira a sessão das ' +
+      '17h30 para ter a das 18h30 como plano B.',
+      'Não tentem atração grande hoje. Hagrid’s, VelociCoaster e Forbidden Journey são do ' +
+      'dia 19, e hoje o parque está no pico do ano.',
     ],
+
     notas: [
       { tipo: 'bom', texto:
-        'VERIFICADO EM 08/09: a temporada de Natal da Universal em 2026 vai de 14/11 a 03/01. ' +
-        'Vocês pegam literalmente a PRIMEIRA noite da temporada, com Grinchmas e a ' +
-        'projeção no castelo já rodando.', pesquisa: '2026-09-08' },
+        'VERIFICADO: a temporada de Natal da Universal em 2026 vai de 14/11 a 03/01. Vocês ' +
+        'pegam literalmente a PRIMEIRA noite, com o Grinchmas e a projeção no castelo já ' +
+        'rodando.', pesquisa: '2026-09-10' },
+
       { tipo: 'atencao', texto:
-        'O horário do Grinchmas é a âncora deste dia. Quando confirmarem no app da Universal, ' +
-        'editem a referência e a noite inteira desloca junto. A projeção no castelo às 20h15 ' +
-        'tem horário próprio e fica parada.' },
+        'A PRIMEIRA NOITE DA TEMPORADA CAI NUM SÁBADO, e isso é o pior dos dois mundos em ' +
+        'lotação. É por isso que o dia tem UM alvo e não uma lista: o Grinchmas, que é ' +
+        'plateia sentada e não fila de atração. Tudo o mais hoje é bônus.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'atencao', texto:
+        'O GRINCHMAS TERMINA CEDO. A grade típica é 10h15, 11h15, 12h15, 13h15, 15h30, ' +
+        '16h30, 17h30 e 18h30 — seis a oito sessões, e a última por volta das 18h30. Entrar ' +
+        'no parque às 18h30 seria cruzar o portão com o último show começando do outro lado.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'bom', texto:
+        'A PROJEÇÃO NO CASTELO REPETE A CADA VINTE MINUTOS até o parque fechar, e as sessões ' +
+        'mais tarde têm visão melhor porque a plateia vai rareando. Não é coisa de pegar na ' +
+        'hora exata — por isso ela é o bloco mais relaxado da noite.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'atencao', texto:
+        'A NEVE DE CELEBRATION NÃO ACONTECE NAS DATAS DE VOCÊS. O Now Snowing, com neve de ' +
+        'sabão na Market Street às 18h, 19h, 20h e 21h, roda de 28/11 a 31/12. Vocês voltam ' +
+        'ao Brasil em 26/11. Não adianta voltar de carro depois — fica registrado para não ' +
+        'ser reproposto.', pesquisa: '2026-09-10' },
     ],
+
+    /* --------------------------------------------------------------------- */
+    planos: [
+      {
+        letra: 'A',
+        titulo: 'A sessão das 17h30 existe',
+        gatilho: 'Vocês conferem a grade no app da Universal e há sessão às 17h30.',
+        passos: [
+          'Saem do hotel 16h, entram no parque 16h45 e vão direto para o Seuss Landing.',
+          'Fila do Grinchmas às 17h, trinta minutos antes. É o único bloco que não admite atraso.',
+          'Depois do show, Hogsmeade a pé — são oito minutos pelo Lost Continent.',
+          'Projeção no castelo quando escurecer, e ela repete a cada vinte minutos.',
+          'Jantar no Three Broomsticks, dentro da decoração.',
+        ],
+      },
+      {
+        letra: 'B',
+        titulo: 'A grade é outra',
+        gatilho: 'Não há sessão às 17h30, ou a última é mais cedo do que o esperado.',
+        passos: [
+          'MUDEM A REFERÊNCIA DO DIA para a sessão que vocês vão pegar. Tudo até a cerveja ' +
+          'amanteigada desloca junto, inclusive a hora de sair do hotel.',
+          'A PROJEÇÃO NO CASTELO NÃO DESLOCA: ela segue o pôr do sol, não o Grinchmas. Se o ' +
+          'app avisar colisão em vermelho ali, é isso — e a solução é só esperar a próxima ' +
+          'sessão, que vem em vinte minutos.',
+          'Se a única sessão possível for a das 18h30, saiam do hotel às 17h e aceitem que a ' +
+          'Hogsmeade fica para depois do show. Não é perda: vocês voltam no dia 19.',
+        ],
+      },
+      {
+        letra: 'C',
+        titulo: 'Chuva, cansaço, ou a fila do Grinchmas já fechou',
+        gatilho: 'Chegaram e o teatro está cheio, ou o corpo não colaborou.',
+        passos: [
+          'NÃO INSISTAM. Este dia inteiro é de graça e nada aqui é insubstituível — a ' +
+          'Hogsmeade decorada e a projeção no castelo vocês veem no dia 19 de qualquer jeito.',
+          'Se o teatro fechou, peguem a sessão seguinte se houver, ou vão direto para ' +
+          'Hogsmeade e transformem a noite em jantar com decoração.',
+          'Se estiverem destruídos, cortem a Universal inteira e jantem na 192. Amanhã é ' +
+          'Hollywood Studios com saída às 7h e é ele que vocês estão protegendo.',
+          'O único custo de cancelar hoje é o Uber que não foi gasto.',
+        ],
+      },
+    ],
+
+    /* --------------------------------------------------------------------- */
+    naoPerca: [
+      { nome: 'Grinchmas Who-liday Spectacular', quando: 'hoje', custo: 'incluso no ingresso',
+        motivo: 'É o motivo de vocês virem hoje. Musical de 30 minutos com o Grinch ' +
+                'improvisando com a plateia. No dia 19 ele custaria 45 minutos que vocês vão ' +
+                'querer no Hagrid’s — hoje custa uma noite que já é de graça.',
+        pesquisa: '2026-09-10' },
+
+      { nome: 'The Magic of Christmas at Hogwarts Castle', quando: 'hoje',
+        custo: 'incluso no ingresso',
+        motivo: 'Projeção mapeada no castelo, 7 minutos, repetindo a cada vinte até o ' +
+                'fechamento. As sessões mais tarde são melhores porque o pátio vai esvaziando. ' +
+                'Vocês veem hoje e podem rever no dia 19.',
+        pesquisa: '2026-09-10' },
+
+      { nome: 'A cerveja amanteigada no carrinho externo', quando: 'hoje', custo: '~US$ 8',
+        motivo: 'É exatamente a mesma bebida que a de dentro do Three Broomsticks, e a fila ' +
+                'do carrinho é sempre menor. A versão frozen é a mais pedida.' },
+
+      { nome: 'Now Snowing em Celebration', quando: 'fechada', custo: 'grátis',
+        motivo: 'Neve de sabão na Market Street toda noite às 18h, 19h, 20h e 21h — mas de ' +
+                '28/11 a 31/12. Vocês voltam em 26/11 e não pegam de jeito nenhum. Registrado ' +
+                'para ninguém propor voltar de carro por causa disso.',
+        pesquisa: '2026-09-10' },
+
+      { nome: 'Toothsome Chocolate Emporium', quando: 'descartado', custo: '~US$ 60 no casal',
+        motivo: 'DESCARTADO em 10/09 pela espera. Restaurante steampunk no CityWalk, famoso ' +
+                'pelos milkshakes exagerados. Não aceita reserva e a espera passa de uma hora ' +
+                'em fim de semana — num sábado de abertura de temporada, depois de um dia ' +
+                'inteiro, é esperar em pé. O Three Broomsticks entrega jantar dentro da ' +
+                'decoração que vocês vieram ver.',
+        pesquisa: '2026-09-10' },
+
+      { nome: 'As atrações grandes do Islands', quando: 'dia 19', custo: 'incluso',
+        motivo: 'Hagrid’s, VelociCoaster e Forbidden Journey são o dia 19, numa quinta-feira. ' +
+                'Hoje é sábado e primeira noite da temporada: o pior momento possível para ' +
+                'encarar fila.' },
+    ],
+
+    /* --------------------------------------------------------------------- */
+    prepararAmanha: {
+      paraODia: '2026-11-15',
+      titulo: 'Hollywood Studios · alarme 6h, saída 7h',
+      aviso:
+        'Amanhã é o dia mais caro em passes da viagem e o que menos perdoa atraso. Hoje ' +
+        'vocês voltam por volta das 22h — deixem tudo pronto antes de sair para a Universal, ' +
+        'não depois.',
+      itens: [
+        { texto: 'Conferir se as reservas de Lightning Lane do dia 15 aparecem no app',
+          critico: true,
+          motivo: 'Multi Pass: Slinky Dog Dash na lista alta, Torre do Terror e Toy Story ' +
+                  'Mania na baixa. Single Pass do Rise of the Resistance, se vocês ' +
+                  'compraram em 12/11. Se faltar alguma, hoje ainda dá para replanejar.' },
+        { texto: 'Conferir o horário de abertura do Hollywood Studios', critico: true,
+          motivo: 'O dia 15 assume 9h. Se for outro, mudem a referência e a manhã inteira ' +
+                  'desloca junto, inclusive a saída das 7h.' },
+        { texto: 'Alarme para 6h nos dois celulares', critico: true,
+          motivo: 'Saída às 7h. Depois de uma noite que termina às 22h, um alarme só falha.' },
+        { texto: 'Mochila montada ANTES de sair para a Universal', critico: true,
+          motivo: 'Voltando 22h, ninguém monta mochila. Deixem pronta agora, na hora do ' +
+                  'descanso da tarde: garrafas, barrinhas, protetor solar, power bank e cabo.' },
+        { texto: 'Reservas do Oga’s Cantina e do Sci-Fi Dine-In à mão',
+          motivo: 'Os dois são de horário fixo amanhã. Deixem os números acessíveis no ' +
+                  'celular hoje.' },
+      ],
+    },
+
+    /* --------------------------------------------------------------------- */
     blocos: [
       { id: 'b-1411-0900', hora: '09:00', ancora: 'fixo', tipo: 'vazio',
         titulo: 'VAZIO PROPOSITAL',
-        descricao: 'Dormir até tarde, café no hotel, piscina',
-        contexto: 'Não preencham. Sábado é o pior dia para parque e o melhor para recuperar.',
-        acesso: [] },
+        descricao: 'Dormir até acordar, café no hotel, piscina',
+        contexto:
+          'Não preencham. Sábado é o pior dia para parque e o melhor para recuperar — e ' +
+          'vocês vêm de três dias seguidos que terminaram tarde.\n\n' +
+          'Hoje não tem alarme e não tem hora até as 11h.',
+        acesso: [], duracaoMin: 120 },
 
-      { id: 'b-1411-1100', hora: '11:00', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Celebration',
-        descricao: '10 min de Uber, US$ 10–15',
+      { id: 'b-1411-1100', hora: '11:00', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Uber para Celebration',
+        descricao: '10 min, US$ 10–15',
         contexto:
           'Cidade planejada e construída pela Disney nos anos 90 como projeto de urbanismo — ' +
           'não é atração, é uma cidade de verdade onde mora gente. Arquitetura de vila ' +
           'americana idealizada, tudo a pé.',
-        localId: 'celebration', acesso: [] },
+        localId: 'celebration', acesso: [], duracaoMin: 15 },
 
       { id: 'b-1411-1115', hora: '11:15', ancora: 'fixo', tipo: 'livre',
         titulo: 'Market Street, o lago, o coreto, a Water Tower Place',
-        descricao: 'Cidade planejada pela Disney nos anos 90',
-        localId: 'celebration', acesso: [] },
+        descricao: 'A pé, sem pressa. É o oposto de um dia de parque',
+        contexto:
+          'O centrinho cabe numa caminhada de uma hora. O lago com o coreto é o cartão ' +
+          'postal, e as varandas de madeira das casas são a coisa mais fotografada da ' +
+          'cidade.\n\n' +
+          'NÃO PROCUREM A NEVE. A Market Street tem neve de sabão todas as noites no Natal — ' +
+          'mas o Now Snowing roda de 28/11 a 31/12, e vocês voltam ao Brasil em 26/11. Não ' +
+          'dá para pegar nem voltando de carro depois.\n\n' +
+          'A feira de produtores é aos domingos e hoje é sábado. Também não é perda grande.',
+        localId: 'celebration', acesso: [], duracaoMin: 75, pesquisa: '2026-09-10' },
 
       { id: 'b-1411-1230', hora: '12:30', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Almoço — Columbia Restaurant',
         descricao: 'Reserva. Peçam o "1905 Salad", preparado na mesa, e o sanduíche cubano',
         contexto:
           'Filial do restaurante espanhol-cubano mais antigo da Flórida, fundado em Tampa em ' +
-          '1905. O 1905 Salad é montado e temperado na frente de vocês. HORÁRIO FIXO de reserva.',
-        restauranteId: 'r-columbia', localId: 'celebration', acesso: ['reserva'] },
+          '1905. O 1905 Salad é montado e temperado na frente de vocês.\n\n' +
+          'HORÁRIO FIXO de reserva.',
+        restauranteId: 'r-columbia', localId: 'celebration', acesso: ['reserva'],
+        duracaoMin: 90 },
 
       { id: 'b-1411-1400', hora: '14:00', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Kilwins — sorvete',
-        descricao: 'Na Market Street', localId: 'celebration', acesso: [] },
+        descricao: 'Na Market Street. Fudge feito na loja',
+        localId: 'celebration', acesso: [], duracaoMin: 30 },
 
-      { id: 'b-1411-1445', hora: '14:45', ancora: 'fixo', tipo: 'vazio',
-        titulo: 'Voltar ao hotel, descansar', descricao: '', acesso: [] },
-
-      { id: 'b-1411-1800', hora: '18:00', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Universal CityWalk',
-        descricao: '~30 min',
+      { id: 'b-1411-1445', hora: '14:30', ancora: 'fixo', tipo: 'vazio',
+        titulo: 'Voltar ao hotel e descansar',
+        descricao: 'Hora e meia. A noite vai até as 21h30',
         contexto:
-          'CityWalk é a área de restaurantes e lojas entre os dois parques da Universal. ' +
-          'Entrada livre, sem ingresso. É por onde vocês passam para chegar ao Islands.',
-        localId: 'citywalk', acesso: [] },
+          'Não é folga sobrando: a noite de hoje termina tarde e amanhã é Hollywood Studios ' +
+          'com saída às 7h. Deitem.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 90 },
 
-      { id: 'b-1411-1830', hora: '18:30', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-1411-1800', hora: '16:00', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Sair para a Universal',
+        descricao: 'Uber, ~30 min. Passem pelo CityWalk',
+        contexto:
+          'O CityWalk é a área de restaurantes e lojas entre os dois parques da Universal. ' +
+          'Entrada livre, sem ingresso — é por onde vocês passam para chegar ao Islands.\n\n' +
+          'Não parem para comer agora. O jantar é dentro do parque, na Hogsmeade decorada.',
+        localId: 'citywalk', acesso: [], duracaoMin: 45 },
+
+      { id: 'b-1411-1830', hora: '16:45', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Entrada no Islands of Adventure',
-        descricao: 'Entrada extra, custo zero. Primeira noite da temporada de Natal',
-        localId: 'islands-of-adventure', acesso: [] },
+        descricao: 'Entrada extra, custo zero. Sigam direto para o Seuss Landing',
+        contexto:
+          'O ingresso Universal de vocês já cobre hoje — esta noite não custa nada a mais.\n\n' +
+          'Do portão, o Seuss Landing fica logo à direita, a uns quatro minutos. Vão direto: ' +
+          'a fila do Grinchmas é o único compromisso de relógio da noite.',
+        localId: 'islands-of-adventure', acesso: [], duracaoMin: 15 },
 
-      { id: 'b-1411-1845', hora: '18:45', ancora: 'referencia', tipo: 'show',
+      { id: 'b-1411-1700', hora: '17:00', ancora: 'referencia', tipo: 'espera',
+        titulo: 'Fila do Grinchmas — trinta minutos antes',
+        descricao: 'Plateia por ordem de chegada. Não existe Express Pass aqui',
+        contexto:
+          'ESTE É O ÚNICO BLOCO DA NOITE QUE NÃO ADMITE ATRASO.\n\n' +
+          'O Grinchmas não tem lugar marcado nem fila expressa: é ordem de chegada e o teatro ' +
+          'enche. A recomendação é entrar na fila de 15 a 40 minutos antes, e hoje é o teto ' +
+          'dessa faixa — sábado E primeira noite da temporada.\n\n' +
+          'Trinta minutos parados aqui é o preço de ver o show sentado e de frente. Comam ' +
+          'alguma coisa da mochila enquanto esperam: o jantar é só às 20h.',
+        areaParque: 'Seuss Landing', acesso: [], critico: true, duracaoMin: 30,
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1411-1845', hora: '17:30', ancora: 'referencia', tipo: 'show',
         titulo: 'Grinchmas Who-liday Spectacular',
-        descricao: 'Seuss Landing. Confiram o horário no app',
+        descricao: 'O motivo de vocês estarem aqui hoje',
         contexto:
-          'Musical ao vivo de cerca de 30 minutos com o Grinch e os Whos, em teatro coberto no ' +
-          'Seuss Landing. O ator do Grinch improvisa com a plateia e é o ponto alto. É falado ' +
-          'em inglês, mas a história é conhecida e a produção é muito visual.',
-        areaParque: 'Seuss Landing', acesso: [], duracaoMin: 30, confirmarHorario: true },
+          'Musical ao vivo de cerca de 30 minutos com o Grinch e os Whos, em teatro coberto. ' +
+          'O ator do Grinch improvisa com a plateia e é o ponto alto. É falado em inglês, mas ' +
+          'a história é conhecida e a produção é muito visual.\n\n' +
+          'POR QUE A SESSÃO DAS 17H30 E NÃO A DAS 18H30: a grade típica termina às 18h30. ' +
+          'Mirando a penúltima, vocês ganham a última como plano B em vez de não ter nenhuma. ' +
+          'E saem do teatro já no escuro, que é quando Hogsmeade fica boa.\n\n' +
+          'HORÁRIO A CONFIRMAR no app da Universal. É ele que ancora a noite: mudou a sessão, ' +
+          'mudem a referência e tudo até a cerveja amanteigada desloca junto.',
+        areaParque: 'Seuss Landing', acesso: [], duracaoMin: 35,
+        confirmarHorario: true, critico: true, pesquisa: '2026-09-10' },
 
-      { id: 'b-1411-1930', hora: '19:30', ancora: 'referencia', tipo: 'livre',
+      { id: 'b-1411-1930', hora: '18:05', ancora: 'referencia', tipo: 'livre',
         titulo: 'Hogsmeade decorada · cerveja amanteigada frozen',
-        descricao: 'Carrinho externo, fila menor',
+        descricao: 'Carrinho externo, fila menor. Oito minutos a pé do Seuss Landing',
         contexto:
-          'A cerveja amanteigada não tem álcool e é doce — a versão frozen é a mais pedida no ' +
-          'calor. A dica do carrinho externo é boa: dentro do Three Broomsticks a fila é sempre ' +
-          'maior, e é exatamente a mesma bebida.',
-        areaParque: 'Hogsmeade', acesso: [] },
+          'A cerveja amanteigada não tem álcool e é doce — a frozen é a mais pedida. PEÇAM NO ' +
+          'CARRINHO EXTERNO: dentro do Three Broomsticks a fila é sempre maior e é exatamente ' +
+          'a mesma bebida.\n\n' +
+          'Hogsmeade no Natal ganha guirlandas, luz quente e coral. É a primeira noite da ' +
+          'temporada e vocês voltam aqui no dia 19 — hoje é para andar devagar e olhar, não ' +
+          'para pegar atração.',
+        areaParque: 'Hogsmeade', acesso: [], duracaoMin: 35 },
 
-      { id: 'b-1411-1950', hora: '19:50', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1411-2015', hora: '18:40', ancora: 'fixo', tipo: 'show',
+        titulo: 'The Magic of Christmas at Hogwarts Castle',
+        descricao: 'Projeção no castelo, 7 min. Repete a cada 20 minutos',
+        contexto:
+          'Projeção mapeada na fachada do castelo com música e efeitos. O melhor lugar é o ' +
+          'pátio em frente, e ele lota.\n\n' +
+          'REPETE A CADA VINTE MINUTOS até o parque fechar, e as sessões mais tarde têm ' +
+          'melhor visão porque a plateia vai rareando. Ou seja: não é para correr. Se ' +
+          'perderem uma, a próxima vem.\n\n' +
+          'HORÁRIO FIXO — as sessões começam quando escurece, não quando o Grinchmas acaba. ' +
+          'Com o pôr do sol às 17h28, a primeira deve cair entre 18h e 19h15. Confiram no app.',
+        areaParque: 'Hogsmeade', acesso: [], duracaoMin: 35,
+        confirmarHorario: true, pesquisa: '2026-09-10' },
+
+      { id: 'b-1411-1950', hora: '19:15', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Flight of the Hippogriff',
-        descricao: 'Se a fila estiver abaixo de 20 min',
+        descricao: 'Só se a fila estiver abaixo de 20 min',
         contexto:
           'Montanha-russa infantil de 1 minuto. Vale pela vista do castelo de Hogwarts e da ' +
-          'cabana do Hagrid. Não vale fila.',
-        areaParque: 'Hogsmeade', acesso: ['standby'], duracaoMin: 1,
-        condicao: 'Só se a fila estiver abaixo de 20 min' },
+          'cabana do Hagrid, iluminados.\n\n' +
+          'Não vale fila, e hoje não é dia de atração: as grandes são do dia 19. Se estiver ' +
+          'cheio, fiquem no pátio vendo a projeção de novo.',
+        areaParque: 'Hogsmeade', acesso: ['standby'], opcional: true, duracaoMin: 45,
+        condicao: 'Só se a fila estiver abaixo de 20 min',
+        fila: { min: 15, quando: 'à noite', pico: 45, estimado: true, fonte: '2026-09-10' } },
 
-      { id: 'b-1411-2015', hora: '20:15', ancora: 'fixo', tipo: 'show',
-        titulo: 'The Magic of Christmas at Hogwarts Castle',
-        descricao: 'Projeção no castelo. Cheguem 20 min antes',
+      { id: 'b-1411-2100', hora: '20:00', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Jantar — Three Broomsticks',
+        descricao: 'Dentro da Hogsmeade decorada. Sem sair do cenário',
         contexto:
-          'Projeção mapeada na fachada do castelo de Hogwarts com música e efeitos, cerca de ' +
-          '7 minutos. Repete várias vezes por noite. O melhor lugar é o pátio em frente, e ele ' +
-          'lota. HORÁRIO FIXO — tem sessões próprias, não segue o Grinchmas.',
-        areaParque: 'Hogsmeade', acesso: [], duracaoMin: 7, confirmarHorario: true },
-
-      { id: 'b-1411-2100', hora: '21:00', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar no CityWalk — Toothsome Chocolate Emporium',
-        descricao: 'Sair do parque',
-        contexto:
-          'Restaurante temático steampunk, famoso pelos milkshakes exagerados. Não aceita ' +
-          'reserva e a espera costuma passar de uma hora nos fins de semana — coloquem o nome ' +
-          'na lista assim que saírem do parque.',
-        restauranteId: 'r-toothsome', localId: 'citywalk', acesso: [] },
+          'Balcão temático dentro de Hogsmeade, com vigas de madeira e sombras de professores ' +
+          'projetadas no teto. Frango assado, costela, fish and chips e o Great Feast para ' +
+          'dividir.\n\n' +
+          'A ESCOLHA FOI DELIBERADA. O Toothsome, no CityWalk, não aceita reserva e a espera ' +
+          'passa de uma hora em fim de semana — num sábado de abertura de temporada, depois ' +
+          'de um dia inteiro, é esperar em pé no estacionamento social. Aqui vocês comem ' +
+          'dentro da decoração que vieram ver.\n\n' +
+          'É balcão: não leva gorjeta. E vocês voltam a comer aqui no almoço do dia 19 — se ' +
+          'quiserem variar, é o dia 19 que muda, não hoje.',
+        restauranteId: 'r-broomsticks-14', areaParque: 'Hogsmeade', acesso: [],
+        duracaoMin: 90 },
     ],
+
     ficha: {
       multiPass: null, singlePass: null,
       expressPass: { usar: false, motivo: 'Noite curta e só decoração — não faz sentido nenhum hoje.' },
@@ -3738,7 +3943,6 @@ window.ROTEIRO = {
     operadora: 'universal',
     parqueId: 'epic-universe',
     custoZero: true,
-    entradaExtra: true,
     notaCusto:
       'A segunda entrada no Epic Universe não custa nada: o ingresso de vocês já cobre. É por ' +
       'isso que o dia 23 pôde deixar coisas de fora de propósito.',
@@ -3938,11 +4142,13 @@ window.ROTEIRO = {
       canal: 'Site do restaurante / OpenTable', blocoId: 'b-1411-1230',
       nota: 'Peçam o 1905 Salad, preparado na mesa, e o sanduíche cubano.' },
 
-    { id: 'r-toothsome', nome: 'Toothsome Chocolate Emporium', data: '2026-11-14', hora: '21:00',
-      refeicao: 'jantar', local: 'Universal CityWalk', alternativas: [],
+    { id: 'r-broomsticks-14', nome: 'Three Broomsticks', data: '2026-11-14', hora: '20:00',
+      refeicao: 'jantar', local: 'Islands of Adventure · Hogsmeade',
+      alternativas: ['Toothsome Chocolate Emporium (CityWalk, sem reserva, espera de 1h+)'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Lista de espera no local', blocoId: 'b-1411-2100',
-      nota: 'Não aceita reserva. Espera passa de 1h no fim de semana — entrem na lista cedo.' },
+      canal: 'Balcão, sem reserva', blocoId: 'b-1411-2100',
+      nota: 'Balcão dentro da Hogsmeade decorada — não leva gorjeta. Vocês voltam a comer ' +
+            'aqui no almoço do dia 19; se quiserem variar, é o dia 19 que muda.' },
 
     { id: 'r-docking-bay', nome: 'Docking Bay 7', data: '2026-11-15', hora: '12:15',
       refeicao: 'almoco', local: 'Hollywood Studios · Galaxy’s Edge', alternativas: [],
@@ -4489,6 +4695,22 @@ window.ROTEIRO = {
      Por isso: area a area, com a margem dita na cara.
      ------------------------------------------------------------------------ */
   topografia: {
+    'islands-of-adventure': {
+      forma: 'Um anel em volta da lagoa. Do portão dá para ir pelos dois lados, e o ' +
+             'caminho mais curto entre duas áreas quase nunca passa pelo meio.',
+      margem: 'Somem 50% em dia cheio. Hogsmeade trava o fluxo quando tem projeção no ' +
+              'castelo — a multidão para no pátio e o resto do anel não anda.',
+      arestas: [
+        ['Port of Entry', 'Marvel Super Hero Island', 4],
+        ['Marvel Super Hero Island', 'Toon Lagoon', 4],
+        ['Toon Lagoon', 'Jurassic Park', 4],
+        ['Jurassic Park', 'Hogsmeade', 5],
+        ['Hogsmeade', 'Lost Continent', 4],
+        ['Lost Continent', 'Seuss Landing', 4],
+        ['Seuss Landing', 'Port of Entry', 4],
+      ],
+    },
+
     'animal-kingdom': {
       forma: 'Roda em torno da Discovery Island, onde fica a Árvore da Vida. Tudo passa ' +
              'por ela — Pandora de um lado, África e Ásia do outro.',
