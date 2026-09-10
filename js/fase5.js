@@ -89,6 +89,11 @@ window.Fase5 = (function () {
   }
 
   function pintarStatus() {
+    // A Home tambem depende deste estado: o cartao de saude dela e pintado
+    // ANTES de o service worker responder, e sem este aviso ela ficava
+    // acusando "o app ainda nao esta guardado" em toda abertura fria.
+    if (window.AppNav && AppNav.repintarHome) AppNav.repintarHome();
+
     const alvo = $('#status-offline');
     if (!alvo) return;
     alvo.innerHTML = '';

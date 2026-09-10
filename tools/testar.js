@@ -47,7 +47,11 @@ function alertas(diaId, desloc) {
 }
 
 let falhas = 0;
-function ok(cond, msg) { console.log((cond ? '  OK   ' : '  FALHA ') + msg); if (!cond) falhas++; }
+function ok(cond, msg, extra) {
+  console.log((cond ? '  OK   ' : '  FALHA ') + msg);
+  if (!cond && extra) console.log('         ' + extra);
+  if (!cond) falhas++;
+}
 
 console.log('--- dias fechados sem alerta no plano padrao ---');
 ['d-2026-11-10', 'd-2026-11-11', 'd-2026-11-12', 'd-2026-11-13', 'd-2026-11-14'].forEach(function (id) {
@@ -75,6 +79,24 @@ R.dias.filter(d => d.fechado).forEach(function (dia) {
   }
   ok(fora.length === 0, dia.id + ': blocos em ordem de relogio no arquivo', fora.join('; '));
 });
+
+console.log('\n--- ficha do restaurante x bloco ---');
+const divergentes = [];
+R.dias.forEach(function (dia) {
+  dia.blocos.forEach(function (b) {
+    if (!b.restauranteId) return;
+    const r = R.restaurantes.find((x) => x.id === b.restauranteId);
+    if (!r) return;
+    if (r.hora !== b.hora) {
+      divergentes.push(dia.data.slice(5) + ' ' + r.nome + ': ficha ' + r.hora + ', bloco ' + b.hora);
+    }
+    if (r.data !== dia.data) {
+      divergentes.push(r.nome + ': ficha diz ' + r.data + ', bloco esta em ' + dia.data);
+    }
+  });
+});
+ok(divergentes.length === 0, 'a aba Comer mostra a mesma hora que a linha do tempo',
+   divergentes.join(' | '));
 
 console.log('\n--- integridade ---');
 const ids = R.dias.flatMap(d => d.blocos.map(b => b.id));

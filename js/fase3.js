@@ -333,6 +333,10 @@ window.Fase3 = (function () {
       b.appendChild(topo);
       if (x.custo) b.appendChild(el('div', 'np-custo', x.custo));
       if (x.motivo) b.appendChild(el('div', 'np-motivo', x.motivo));
+      if (x.pesquisa) {
+        b.appendChild(el('div', 'np-pesquisa',
+          'verificado na web em ' + x.pesquisa.split('-').reverse().join('/')));
+      }
       c.appendChild(b);
     });
     d.appendChild(c);

@@ -113,10 +113,20 @@ const usadosNosDados = new Set();
 R.dias.forEach((d) => d.blocos.forEach(function (b) {
   Object.keys(b).forEach((k) => { if (b[k] != null) usadosNosDados.add(k); });
 }));
+/* Como um bloco e acessado no codigo. `paradaEl` faz `const b = item.dados`,
+   e o resto do app usa os mesmos nomes. Precisa ser especifico: a versao
+   anterior procurava a substring '.campo' em qualquer lugar do JS e casava
+   `bloco.pesquisa` com `n.pesquisa` das notas do dia -- dando OK num campo
+   que 46 blocos carregavam e nenhuma tela mostrava. */
+const ACESSOS_BLOCO = ['b', 'bloco', 'dados', 'x', 'item.dados', 'prox.dados', 'a.dados'];
+const lidoComoBloco = (campo) => ACESSOS_BLOCO.some(function (v) {
+  const esc = v.replace(/\./g, '\\.');
+  return new RegExp('(^|[^\\w.])' + esc + '\\.' + campo + '\\b').test(jsTelas);
+});
 const naoLidos = [...usadosNosDados].filter(function (campo) {
   if (campo === 'id') return false;
   if (MORTOS_DE_PROPOSITO[campo]) return false;
-  return jsTelas.indexOf('.' + campo) < 0 && jsTelas.indexOf("'" + campo + "'") < 0;
+  return !lidoComoBloco(campo);
 });
 ok(naoLidos.length === 0, 'todo campo dos blocos e lido por alguma tela',
    naoLidos.length ? naoLidos.join(', ') + ' — ou renderize, ou registre em MORTOS_DE_PROPOSITO' : '');

@@ -4098,7 +4098,7 @@ window.ROTEIRO = {
             'anda devagar quando o Springs está cheio.' },
 
     { id: 'r-columbia-harbour', nome: 'Columbia Harbour House', data: '2026-11-11',
-      hora: '12:30', refeicao: 'almoco', local: 'Magic Kingdom · Liberty Square',
+      hora: '11:50', refeicao: 'almoco', local: 'Magic Kingdom · Liberty Square',
       alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Mobile order pelo My Disney Experience', blocoId: 'b-1111-1230',
@@ -4107,7 +4107,7 @@ window.ROTEIRO = {
             'mais silencioso do Magic Kingdom. Liberty Tree Tavern e Skipper Canteen ' +
             'ficaram de fora.' },
 
-    { id: 'r-caseys', nome: 'Casey’s Corner', data: '2026-11-11', hora: '17:45',
+    { id: 'r-caseys', nome: 'Casey’s Corner', data: '2026-11-11', hora: '17:55',
       refeicao: 'jantar', local: 'Magic Kingdom · Main Street', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Mobile order pelo My Disney Experience', blocoId: 'b-1111-1745',

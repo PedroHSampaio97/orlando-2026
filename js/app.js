@@ -196,6 +196,11 @@
   }
   function irParaDia(dia) { diaAtual = dia; mostrarTela('dia'); }
   window.AppNav = { irParaDia: irParaDia, mostrarTela: mostrarTela,
+                    repintarHome: function () {
+                      // Chamado quando o service worker responde: o cartao de
+                      // saude da Home foi pintado antes da resposta chegar.
+                      if (!$('#tela-home').classList.contains('oculto')) pintarHome();
+                    },
                     acharDia: (id) => R.dias.find((d) => d.id === id) };
 
   /* =========================================================================
@@ -941,6 +946,20 @@
       card.appendChild(a);
     }
     if (b.contexto) card.appendChild(el('div', 'ct-contexto', b.contexto));
+
+    // Procedencia: de onde veio o que esta escrito aqui. O app promete isso na
+    // tela de Ajustes e ate agora so cumpria nas notas do dia e nas dicas.
+    if (b.pesquisa || b.verificado === false) {
+      const p = el('div', 'ct-pesquisa');
+      if (b.pesquisa) {
+        p.appendChild(el('span', null,
+          'verificado na web em ' + b.pesquisa.split('-').reverse().join('/')));
+      }
+      if (b.verificado === false) {
+        p.appendChild(el('span', 'ct-pesquisa-est', 'estimativa, confiram'));
+      }
+      card.appendChild(p);
+    }
 
     li.appendChild(card);
     return li;

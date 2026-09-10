@@ -20,7 +20,7 @@ window.Estado = (function () {
     ancoras:     {},  // blocoId-> { ancora, em }
     horas:       {},  // blocoId-> { hora, em }   hora oficial confirmada na hora
     feitos:      {},  // blocoId-> { feito, em }
-    reservas:    {},  // restId -> { status, confirmacao, em }
+    reservas:    {},  // restId -> { status, confirmacao, em, ems: {campo: em} }
     checklist:   {},  // ckId   -> { feito, em }
     datasCheck:  {},  // ckId   -> { data, em }
     coordsLocal: {},  // localId-> { lat, lng, em }
@@ -60,7 +60,17 @@ window.Estado = (function () {
     }, 0);
   }
 
-  const agora = () => new Date().toISOString();
+  // Monotonico: duas escritas no mesmo milissegundo ficavam sem ordem, e o
+  // merge entre os dois celulares nao sabia qual veio depois.
+  let ultimoCarimbo = null;
+  function agora() {
+    let t = new Date().toISOString();
+    if (ultimoCarimbo && t <= ultimoCarimbo) {
+      t = new Date(new Date(ultimoCarimbo).getTime() + 1).toISOString();
+    }
+    ultimoCarimbo = t;
+    return t;
+  }
 
   /* ---- leitura ---- */
   const feito       = (id) => !!(dados.feitos[id] && dados.feitos[id].feito);
@@ -106,7 +116,15 @@ window.Estado = (function () {
     salvar();
   }
   function definirReserva(restId, campos) {
-    dados.reservas[restId] = Object.assign({}, dados.reservas[restId], campos, { em: agora() });
+    const antes = dados.reservas[restId] || {};
+    const quando = agora();
+    // Carimbo POR CAMPO, e nao so no registro. Sem isto o merge entre os dois
+    // celulares apaga o campo que o outro escreveu — o numero da confirmacao
+    // sumia quando o outro aparelho marcava so o status.
+    const ems = Object.assign({}, antes.ems);
+    Object.keys(campos).forEach(function (c) { ems[c] = quando; });
+    dados.reservas[restId] = Object.assign({}, antes, campos,
+                                           { em: quando, ems: ems });
     salvar();
   }
   function marcarChecklist(id, valor) {
@@ -143,6 +161,28 @@ window.Estado = (function () {
   const GRUPOS = ['referencias', 'ancoras', 'horas', 'feitos', 'reservas',
                   'checklist', 'datasCheck', 'coordsLocal'];
 
+  // Grupos cujo registro tem mais de um campo editavel de forma independente.
+  // Nestes o merge desce ao campo; nos outros o registro inteiro e a unidade.
+  const CAMPOS_INDEPENDENTES = { reservas: ['status', 'confirmacao'] };
+
+  // Carimbo de um campo: o proprio, se houver; senao o do registro, MAS so se o
+  // campo existir nele. Campo ausente tem carimbo nulo — senao ele fingiria ter
+  // sido escrito na hora do registro e bloquearia o valor do outro aparelho.
+  // Empate de carimbo: vence o valor lexicograficamente maior. Arbitrario, mas
+  // igual nos dois aparelhos — que e o que faz eles convergirem.
+  const vence = (cNovo, cAtual, vNovo, vAtual) => {
+    if (!cNovo) return false;
+    if (!cAtual) return true;
+    if (cNovo !== cAtual) return cNovo > cAtual;
+    return JSON.stringify(vNovo) > JSON.stringify(vAtual);
+  };
+
+  function carimbo(reg, campo) {
+    if (!reg) return null;
+    if (reg.ems && reg.ems[campo]) return reg.ems[campo];
+    return (campo in reg) ? (reg.em || null) : null;
+  }
+
   function importar(texto, modo) {
     const entrando = JSON.parse(texto);
     if (modo === 'substituir') {
@@ -158,8 +198,31 @@ window.Estado = (function () {
       const origem = entrando[grupo] || {};
       Object.keys(origem).forEach(function (id) {
         const novo = origem[id], atual = dados[grupo][id];
-        if (!atual || !atual.em || (novo.em && novo.em > atual.em)) {
-          dados[grupo][id] = novo; aplicados++;
+        const campos = CAMPOS_INDEPENDENTES[grupo];
+
+        if (!campos) {
+          // registro inteiro como unidade
+          if (!atual || !atual.em || vence(novo.em, atual.em, novo, atual)) {
+            dados[grupo][id] = novo; aplicados++;
+          } else { ignorados++; }
+          return;
+        }
+
+        // campo a campo, cada um com o seu carimbo
+        if (!atual) { dados[grupo][id] = novo; aplicados++; return; }
+        const fundido = Object.assign({}, atual);
+        fundido.ems = Object.assign({}, atual.ems);
+        let mudou = false;
+        campos.forEach(function (c) {
+          if (!(c in novo)) return;
+          const cNovo = carimbo(novo, c), cAtual = carimbo(atual, c);
+          if (vence(cNovo, cAtual, novo[c], atual[c])) {
+            fundido[c] = novo[c]; fundido.ems[c] = cNovo; mudou = true;
+          }
+        });
+        if (mudou) {
+          fundido.em = (novo.em > atual.em ? novo.em : atual.em);
+          dados[grupo][id] = fundido; aplicados++;
         } else { ignorados++; }
       });
     });
