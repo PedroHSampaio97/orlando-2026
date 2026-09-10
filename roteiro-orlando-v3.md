@@ -279,38 +279,66 @@ Disney Junior, Frozen Sing-Along, Vacation Fun, Lightning McQueen's Racing Acade
 
 # 🌍 16/11 (segunda) — EPCOT
 
-Dia de **Food & Wine** (o festival vai até 21/11). A tarde é comida, não fila. Estruturem assim.
+Meio dia de parque e meio de festival. A manhã resolve as filas; a partir das 13h o dia vira comida e caminhada em volta de um lago.
 
-**Single Pass:** Guardians of the Galaxy: Cosmic Rewind
-**Multi Pass:** opcional. Se comprarem, usem em **Frozen Ever After** (lista alta), **Remy** e **Test Track** (lista baixa).
+**Single Pass:** **Guardians of the Galaxy: Cosmic Rewind** — peçam janela entre 9h30 e 10h
+**Multi Pass:** **comprar.** Lista alta → **Frozen Ever After** · lista baixa → **Remy** e **Test Track**
+
+> **NÃO CORRAM PARA O COSMIC REWIND NA ABERTURA.** Pela quarta vez o ponto certo é o contraintuitivo, e aqui o erro seria duplo: é para o Cosmic Rewind que vai o Early Entry de quem entra pela frente, e correr para lá gastaria o Single Pass no único horário em que ele não precisaria ser gasto. Vocês vão para o **Test Track**, na mesma área.
 
 | Hora | O quê | Como |
 |---|---|---|
-| **8h00** | Sair do hotel | |
-| **9h00** | **Cosmic Rewind** | Single Pass. Coaster com cabines giratórias e trilha sonora |
-| **9h50** | **Test Track** | Standby cedo, ou Multi Pass |
-| **10h35** | **Mission: SPACE — Orange** | Standby. A versão laranja é a intensa, com centrífuga |
-| **11h15** | **Soarin' Across America** | Standby. Filme novo desde maio de 2026 |
-| **12h00** | **The Seas / Living with the Land** | Fila curta, ar-condicionado, ritmo lento |
-| **12h45** | **World Showcase — México** | Comecem aqui, sentido horário |
-| **13h00** | **Gran Fiesta Tour** | Barquinho dentro da pirâmide. Clássico, fila mínima |
-| **13h30** | **Frozen Ever After** | Noruega. Multi Pass ou standby |
-| **14h15** | **Food & Wine — volta 1** | China, Alemanha, Itália |
-| **15h30** | **The American Adventure** | Ou pulem — 30 min, todo falado em inglês |
-| **16h00** | **Food & Wine — volta 2** | Japão, Marrocos |
-| **17h00** | **Remy's Ratatouille Adventure** | França. Multi Pass |
-| **17h45** | **Food & Wine — volta 3** | França, Reino Unido, Canadá |
-| **19h00** | **Spaceship Earth** | A fila some à noite. A esfera por dentro |
-| **20h00** | Jantar leve ou mais barracas | |
-| **21h00** | **Luminous: The Symphony of Us** | Fiquem na margem entre México e Noruega |
+| **7h45** | Sair do hotel | Uber, ~25 min, US$ 20–30 |
+| **8h45** | Portão · posicionar para o **World Discovery** | Test Track, não Cosmic Rewind |
+| **9h00** | **Test Track** | Rope drop. 53 min agora contra 99 de média |
+| **9h45** | **Guardians: Cosmic Rewind** | Single Pass |
+| **10h35** | **Mission: SPACE** | A **verde** se houver qualquer tendência a enjoo |
+| **11h15** | **Soarin' Across America** | Filme novo desde maio de 2026 |
+| **12h00** | **The Seas e Living with the Land** | Fila curta, ar-condicionado |
+| **12h40** | **Parada** | A partir daqui o dia muda de natureza |
+| **13h00** | **World Showcase — México** | Sentido horário |
+| **13h20** | **Gran Fiesta Tour** | Barquinho dentro da pirâmide. Fila mínima |
+| **13h40** | **Frozen Ever After** | Multi Pass · lista alta |
+| **14h20** | **Food & Wine — volta 1** | China, Alemanha, Itália. **E é isto o almoço** |
+| **15h30** | **Food & Wine — volta 2** | Japão, Marrocos |
+| **16h45** | **Remy's Ratatouille Adventure** | Multi Pass |
+| **17h30** | **Food & Wine — volta 3** | França, Reino Unido, Canadá. **E é isto o jantar** |
+| **19h00** | **Spaceship Earth** | A fila some à noite |
+| **20h00** | **Food & Wine — última volta** | O que faltou. Comprem a bebida e levem para o lago |
+| **20h30** | Posição para o Luminous | Margem entre México e Noruega |
+| **21h00** | **Luminous: The Symphony of Us** | ~17 min. Segue o fechamento, não a abertura |
+| **21h20** | Voltar ao hotel | Uber, ~25 min, US$ 20–30 |
+
+### Por que o dia está nesta ordem — a fila típica
+
+| Atração | Quando vocês fazem | Fila aí | No pico |
+|---|---|---|---|
+| **Test Track** | 9h00, rope drop | **~53 min** | **~99** |
+| **Cosmic Rewind** | 9h45, Single Pass | ~10 min | **~101** |
+| Mission: SPACE | 10h35, de manhã | ~20 min | ~40 |
+| Soarin' | 11h15, antes do meio-dia | ~25 min | ~74 |
+| The Seas / Living with the Land | 12h00 | ~10 min | ~25 |
+| Gran Fiesta Tour | 13h20 | ~5 min | ~15 |
+| **Frozen Ever After** | 13h40, Multi Pass | ~10 min | **~75** |
+| **Remy** | 16h45, Multi Pass | ~10 min | **~60** |
+| Spaceship Earth | 19h00, à noite | ~10 min | ~40 |
+
+*Médias publicadas, consultadas em 10/09/2026.*
+
+> **Por que comprar o Multi Pass aqui.** O Epcot é o único parque em que a fila compete com o que vocês vieram fazer. Frozen e Remy são as duas únicas filas do World Showcase — 45–75 e 40–60 minutos parados no meio das barracas do Food & Wine. Nos outros dias a fila compete com outra fila; aqui compete com o dia.
+
+> **O Test Track quebra muito.** Em 2026, um ano depois de reabrir: parada de quase 24 horas em 1º de agosto, outra de cinco horas no dia 23 que comeu a tarde inteira, e falhas mecânicas em fevereiro — sem comunicado da Disney em nenhuma delas. É por isso que ele é o rope drop: **se vai cair, cai no meio do dia.** Se estiver fechado às 9h, pivô para o Soarin' e o pavilhão do The Land.
 
 ### Estratégia do Food & Wine
-Peguem o passaporte na entrada. **Dividam cada prato entre os dois** e provem 8 a 10 barracas, em vez de fazer três refeições. Destaques recorrentes: Canadá (sopa de cheddar com bacon), Alemanha, Grécia, Bélgica (waffle).
+Peguem o passaporte na entrada. **Dividam cada prato entre os dois** e provem 8 a 10 barracas ao longo da tarde, em vez de fazer três refeições. É assim que o festival funciona, e é por isso que hoje **não existe bloco de almoço nem de jantar** — o Food & Wine é as duas refeições, servidas em quatro voltas. Destaques que se repetem todo ano: Canadá (sopa de cheddar com bacon), Alemanha, Grécia, Bélgica (waffle).
 
 ### Renúncias
+**The American Adventure** — 30 min de show todo falado em inglês, e ocuparia a janela do Remy, que é uma das duas filas que o Multi Pass existe para resolver.
+
 Journey Into Imagination, Awesome Planet, Turtle Talk with Crush, Disney & Pixar Short Film Festival, os filmes 360° da China e do Canadá.
 
 ---
+
 
 # 🎥 17/11 (terça) — UNIVERSAL STUDIOS FLORIDA
 

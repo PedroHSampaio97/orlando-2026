@@ -2999,157 +2999,446 @@ window.ROTEIRO = {
     operadora: 'disney',
     parqueId: 'epcot',
     custoZero: false,
+    fechado: true,
+    revisadoEm: '2026-09-10',
     referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: false },
+
     resumo:
-      'Dia de Food & Wine. A tarde é comida, não fila. A manhã resolve as atrações e o ' +
-      'World Showcase começa ao meio-dia, no sentido horário a partir do México.',
-    avisos: [],
+      'Meio dia de parque e meio de festival. A manhã resolve as três filas grandes no ' +
+      'World Discovery e no World Nature; a partir das 13h o dia vira comida e caminhada ' +
+      'em volta de um lago, sem nenhum compromisso de relógio até o Luminous.',
+
+    avisos: [
+      'NÃO CORRAM PARA O COSMIC REWIND NA ABERTURA. É para lá que vai o Early Entry, e ' +
+      'gastar o Single Pass às 9h é gastá-lo no único horário em que ele não precisaria ser ' +
+      'gasto. Vocês vão para o Test Track, na mesma área.',
+      'O FOOD & WINE É O ALMOÇO E O JANTAR de hoje. Não há bloco de refeição além das ' +
+      'barracas — de propósito. Peguem o passaporte na entrada.',
+    ],
+
     notas: [
       { tipo: 'bom', texto:
-        'VERIFICADO EM 08/09: o Food & Wine de 2026 vai até 21/11, então 16/11 está dentro. O ' +
-        'Festival of the Holidays só começa em 27/11, depois que vocês vão embora — vocês pegam ' +
-        'o festival certo.', pesquisa: '2026-09-08' },
+        'VERIFICADO: o Food & Wine de 2026 vai de 27/08 a 21/11, então 16/11 está dentro com ' +
+        'folga. O Festival of the Holidays só começa em 27/11, depois que vocês vão embora — ' +
+        'vocês pegam o festival certo.', pesquisa: '2026-09-10' },
+
+      { tipo: 'atencao', texto:
+        'O TEST TRACK QUEBRA MUITO. Em 2026, um ano depois de reabrir: parada de quase 24 ' +
+        'horas em 1º de agosto, outra de cinco horas no dia 23 que comeu a tarde inteira, e ' +
+        'falhas mecânicas em fevereiro — sem comunicado da Disney em nenhuma delas. É por isso ' +
+        'que ele é o rope drop: se vai cair, cai no meio do dia.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'bom', texto:
+        'O COSMIC REWIND NÃO TEM MAIS FILA VIRTUAL desde fevereiro de 2025. Acabou o sorteio ' +
+        'às 7h da manhã: hoje é standby puro ou Single Pass. Mas ele faz 101 minutos de média ' +
+        'e passa de uma hora até às 8h — não existe janela barata, e é por isso que o passe ' +
+        'fica, como no dia 15.', pesquisa: '2026-09-10' },
+
+      { tipo: 'bom', texto:
+        'O WORLD SHOWCASE ABRE ÀS 9H AGORA. A abertura das 11h foi aposentada quando o Frozen ' +
+        'e o Remy viraram atrações grandes. As lojas e barracas dos pavilhões é que só ativam ' +
+        'por volta das 11h — o que não muda nada no roteiro de vocês, que só chega lá às 13h.',
+        pesquisa: '2026-09-10' },
     ],
+
+    /* --------------------------------------------------------------------- */
+    planos: [
+      {
+        letra: 'A',
+        titulo: 'O dia como está escrito',
+        gatilho: 'Vocês estão no portão às 8h45 e o Test Track está operando.',
+        passos: [
+          'Test Track no rope drop, sem desviar para o Cosmic Rewind.',
+          'Cosmic Rewind às 9h45 com o Single Pass, e o resto do World Discovery no standby.',
+          'Soarin’ e o pavilhão do The Land antes do meio-dia, enquanto ainda estão baratos.',
+          'A partir das 13h, World Showcase no sentido horário e três voltas de barracas.',
+          'Frozen e Remy com o Multi Pass — são as duas únicas filas da tarde.',
+          'Última volta às 20h e posição para o Luminous às 20h30.',
+        ],
+      },
+      {
+        letra: 'B',
+        titulo: 'O Test Track está fora do ar',
+        gatilho: 'Vocês chegam nele às 9h e está fechado, ou fecha durante a fila.',
+        passos: [
+          'ISSO ACONTECE COM FREQUÊNCIA REAL AQUI. Não esperem em frente: as paradas dele em ' +
+          '2026 duraram horas, não minutos.',
+          'Pivô imediato para o Soarin’ e o pavilhão do The Land, que ficam do outro lado e ' +
+          'estão praticamente vazios na abertura.',
+          'O Cosmic Rewind não muda — vocês têm hora marcada com o Single Pass.',
+          'Se o Test Track voltar durante o dia, ele entra no Multi Pass rolando, depois de ' +
+          'vocês usarem o Frozen. Se não voltar, não voltou: é o único bloco do dia que não ' +
+          'tem substituto, e não vale reorganizar a tarde por causa dele.',
+        ],
+      },
+      {
+        letra: 'B2',
+        titulo: 'O parque não abre às 9h',
+        gatilho: 'Os horários oficiais saem por volta de 17/09.',
+        passos: [
+          'Mudem a referência do dia. A manhã inteira desloca junto, inclusive a saída das ' +
+          '7h45.',
+          'O LUMINOUS E A POSIÇÃO NÃO DESLOCAM: eles seguem o fechamento do parque, não a ' +
+          'abertura. Se o app avisar colisão em vermelho no fim da tarde, é a última volta de ' +
+          'barracas batendo na posição — e a solução é encurtar a volta, não atrasar o lugar.',
+          'As três voltas do Food & Wine são elásticas de propósito. Elas são a folga do dia.',
+        ],
+      },
+      {
+        letra: 'C',
+        titulo: 'Chuva, cansaço ou o dia desandou',
+        gatilho: 'Chuva que não passa, ou vocês acordaram destruídos.',
+        passos: [
+          'O World Showcase é todo ao ar livre e é o coração do dia — chuva forte aqui dói ' +
+          'mais que nos outros parques.',
+          'O que funciona coberto: Spaceship Earth, The Seas, Living with the Land, Frozen, ' +
+          'Remy e o Gran Fiesta. Todos de fila curta, e os pavilhões do Japão, Marrocos e ' +
+          'Reino Unido têm área interna generosa.',
+          'O QUE NÃO SE SACRIFICA: o Luminous, e as três voltas de barracas — que são o dia.',
+          'Se o Luminous for cancelado por vento, saiam mais cedo. Amanhã é Universal Studios.',
+        ],
+      },
+    ],
+
+    /* --------------------------------------------------------------------- */
+    naoPerca: [
+      { nome: 'O passaporte do Food & Wine', quando: 'hoje', custo: 'grátis',
+        motivo: 'Peguem na entrada do parque. É onde vocês marcam as barracas que já fizeram ' +
+                'e é o que transforma três voltas soltas numa coisa só. Sem ele, às 20h ' +
+                'ninguém lembra o que faltou.' },
+
+      { nome: 'Dividir cada prato entre os dois', quando: 'hoje', custo: 'economiza',
+        motivo: 'É assim que o festival funciona. Dividindo, dá para provar oito a dez ' +
+                'barracas ao longo da tarde; sem dividir, dá para quatro e vocês saem cheios ' +
+                'na terceira. Os pratos são pequenos de propósito.' },
+
+      { nome: 'A sopa de cheddar com bacon do Canadá', quando: 'hoje', custo: '~US$ 9',
+        motivo: 'Aparece em toda lista de melhores do festival, todo ano, há mais de uma ' +
+                'década. Fica no fim do anel, na volta 3 — que é justamente a hora em que ' +
+                'esfria o suficiente para uma sopa fazer sentido.' },
+
+      { nome: 'Mission: SPACE — a versão VERDE', quando: 'decidir', custo: 'incluso',
+        motivo: 'A laranja gira numa centrífuga de verdade e causa enjoo em muita gente — tem ' +
+                'saco no assento por um motivo. A verde é a mesma cabine sem girar, mesma ' +
+                'fila, mesma história. Se qualquer um dos dois tem tendência a enjoo, a verde ' +
+                'salva as duas horas seguintes, e a decisão é tomada na hora de entrar.' },
+
+      { nome: 'The American Adventure', quando: 'descartado', custo: 'incluso',
+        motivo: 'DESCARTADO em 10/09. Show de animatrônicos sobre a história dos Estados ' +
+                'Unidos, tecnicamente impressionante e completamente dependente de inglês — ' +
+                'trinta minutos sentados ouvindo texto. Ocuparia a janela do Remy, que é uma ' +
+                'das duas filas que o Multi Pass existe para resolver.' },
+    ],
+
+    /* --------------------------------------------------------------------- */
+    prepararAmanha: {
+      paraODia: '2026-11-17',
+      titulo: 'Universal Studios · primeiro dia de Universal',
+      aviso:
+        'Amanhã muda de operadora. O ingresso é outro, o app é outro, e as regras de fila ' +
+        'são outras — não existe Multi Pass nem Single Pass lá.',
+      itens: [
+        { texto: 'Ingressos Universal aparecendo no app da Universal, nos DOIS perfis',
+          critico: true,
+          motivo: 'É outro aplicativo, outra conta. Confiram HOJE que os dois estão lá e que ' +
+                  'é PARK-TO-PARK — sem isso o Hogwarts Express entre os dois parques não ' +
+                  'funciona, e ele é parte do roteiro de amanhã.' },
+        { texto: 'Conferir o horário de abertura do Universal Studios', critico: true,
+          motivo: 'Amanhã assume 9h. Se for outro, mudem a referência e a manhã desloca junto.' },
+        { texto: 'Alarme nos dois celulares', critico: true,
+          motivo: 'Hoje termina perto das 22h30. Um alarme só falha.' },
+        { texto: 'Mochila remontada e celular carregando', critico: true,
+          motivo: 'Duas garrafas, barrinhas, protetor solar, power bank, cabo e uma camada ' +
+                  'leve para cada um.\n\n' +
+                  'E ATENÇÃO ÀS ATRAÇÕES COM LOCKER OBRIGATÓRIO: a Universal tem dez delas, ' +
+                  'com detector de metal em quatro. Levem o mínimo possível nos bolsos ' +
+                  'amanhã — cada locker custa 10 a 15 minutos que o roteiro não conta.' },
+        { texto: 'Guardar as compras do World Showcase',
+          motivo: 'A Mitsukoshi do Japão e as lojas do Reino Unido são as melhores do parque. ' +
+                  'Amanhã a mochila precisa sair leve.' },
+      ],
+    },
+
     blocos: [
-      { id: 'b-1611-0800', hora: '08:00', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Sair do hotel', descricao: '', localId: 'epcot', acesso: [] },
-
-      { id: 'b-1611-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Cosmic Rewind',
-        descricao: 'Single Pass. Coaster com cabines giratórias e trilha sonora',
+      { id: 'b-1611-0800', hora: '07:45', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Sair do hotel',
+        descricao: 'Uber, ~25 min, US$ 20–30',
         contexto:
-          'Montanha-russa fechada e no escuro, com lançamento e cabines que giram 360° para ' +
-          'onde a cena está acontecendo. Sem inversões, mas rápida. Cada volta sorteia uma ' +
-          'música diferente dos anos 70/80. É a melhor atração do Epcot.',
-        areaParque: 'World Discovery', acesso: ['single-pass'] },
+          'O Epcot tem entrada direta e a segurança aqui é mais rápida que no Hollywood ' +
+          'Studios. Saindo 7h45 vocês chegam com uma folga confortável para a abertura.',
+        localId: 'epcot', acesso: [], duracaoMin: 60 },
 
-      { id: 'b-1611-0950', hora: '09:50', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Test Track',
-        descricao: 'Standby cedo, ou Multi Pass',
+      { id: 'b-1611-0845', hora: '08:45', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Portão · posicionar para o WORLD DISCOVERY',
+        descricao: 'Test Track, não Cosmic Rewind',
+        contexto:
+          'PELA QUARTA VEZ O PONTO CERTO É O CONTRAINTUITIVO, e aqui o erro seria duplo.\n\n' +
+          'Quem entra pela frente com Early Entry vai para o COSMIC REWIND — é a recomendação ' +
+          'padrão para hóspedes. Correr para lá às 9h é entrar atrás de meia hora de fila já ' +
+          'formada, e gastar o Single Pass no único horário em que ele não precisaria ser ' +
+          'gasto.\n\n' +
+          'Vocês vão para o Test Track, que fica na mesma área. Ele é a segunda pior fila do ' +
+          'parque e o rope drop é a ÚNICA janela barata dele: 53 minutos agora contra 99 de ' +
+          'média no resto do dia.\n\n' +
+          'PONTO DE ENCONTRO DE HOJE: a Spaceship Earth — a esfera. É o símbolo do parque, ' +
+          'fica na entrada e é visível de quase todo lugar. Se vocês se perderem, vão para a ' +
+          'base dela e ESPEREM.\n\n' +
+          'Café da manhã aqui na fila, das barrinhas da mochila.',
+        localId: 'epcot', acesso: [], duracaoMin: 15, pesquisa: '2026-09-10' },
+
+      { id: 'b-1611-0950', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Test Track — rope drop',
+        descricao: 'A única janela barata dele. E ele quebra muito',
         contexto:
           'Vocês desenham um carro num painel e depois andam num veículo que faz testes de ' +
           'curva, freio e um trecho externo a 105 km/h. É a parte mais rápida da Disney em ' +
-          'linha reta.',
-        areaParque: 'World Discovery', acesso: ['standby'], acessoAlt: 'multi-pass' },
+          'linha reta.\n\n' +
+          'POR QUE AGORA E NÃO DEPOIS: 53 minutos no rope drop contra 99 de média no dia. É a ' +
+          'segunda pior fila do Epcot e não existe outra janela.\n\n' +
+          'E TEM UM SEGUNDO MOTIVO: em 2026, um ano depois de reabrir, o Test Track quebrou ' +
+          'muito — parada de quase 24 horas em 1º de agosto, outra de cinco horas no dia 23 ' +
+          'que comeu a tarde inteira, e falhas mecânicas em fevereiro. Se ele vai cair, cai no ' +
+          'meio do dia. Andar agora é a única forma de não depender disso.',
+        areaParque: 'World Discovery', acesso: ['rope-drop', 'standby'], critico: true,
+        duracaoMin: 45,
+        fila: { min: 53, quando: 'no rope drop', pico: 99, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1611-0900', hora: '09:45', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Guardians of the Galaxy: Cosmic Rewind',
+        descricao: 'Single Pass. Aqui ele se justifica, como no dia 15',
+        contexto:
+          'Montanha-russa fechada e no escuro, com lançamento e cabines que giram 360° para ' +
+          'onde a cena está acontecendo. Sem inversões, mas rápida. Cada volta sorteia uma ' +
+          'música diferente dos anos 70 e 80. É a melhor atração do Epcot.\n\n' +
+          'POR QUE O PASSE FICA: ele faz 101 minutos de média e as fontes são diretas — mesmo ' +
+          'às 8h da manhã ele passa de uma hora. Não existe janela barata em nenhum momento ' +
+          'do dia, e é a mesma situação do Rise of the Resistance no dia 15.\n\n' +
+          'A fila virtual acabou em fevereiro de 2025: hoje é standby ou Single Pass, sem ' +
+          'sorteio às 7h da manhã.',
+        areaParque: 'World Discovery', acesso: ['single-pass'], critico: true, duracaoMin: 50,
+        fila: { min: 10, quando: 'com o Single Pass', pico: 101, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
 
       { id: 'b-1611-1035', hora: '10:35', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mission: SPACE — Orange',
-        descricao: 'Standby. A versão laranja é a intensa, com centrífuga',
+        descricao: 'A laranja é a intensa, com centrífuga de verdade',
         contexto:
           'Simulador de lançamento espacial dentro de uma centrífuga que gera força G real. A ' +
-          'versão laranja causa enjoo em muita gente — tem saco no assento por um motivo. A ' +
-          'verde é a mesma cabine sem girar. Se tiverem qualquer tendência a enjoo, peguem a verde.',
-        areaParque: 'World Discovery', acesso: ['standby'] },
+          'versão LARANJA causa enjoo em muita gente — tem saco no assento por um motivo.\n\n' +
+          'A VERDE é a mesma cabine sem girar, e a fila é a mesma até o ponto em que vocês ' +
+          'escolhem. Se qualquer um dos dois tem tendência a enjoo, peguem a verde: não é ' +
+          'vergonha nenhuma e salva as duas horas seguintes.',
+        areaParque: 'World Discovery', acesso: ['standby'], duracaoMin: 33,
+        fila: { min: 20, quando: 'de manhã', pico: 40, estimado: true, fonte: '2026-09-10' } },
 
       { id: 'b-1611-1115', hora: '11:15', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Soarin’ Across America',
-        descricao: 'Standby. Filme novo desde maio de 2026',
+        descricao: 'Filme novo desde maio de 2026',
         contexto:
           'Vocês sentam num banco que sobe e balança na frente de uma tela IMAX côncava, com ' +
           'sensação de estar voando de pernas soltas. Tem cheiro sincronizado com as cenas. ' +
-          'Suave, sem emoção forte — agrada praticamente todo mundo.',
-        areaParque: 'World Nature', acesso: ['standby'] },
+          'Suave, sem emoção forte — agrada praticamente todo mundo.\n\n' +
+          'O filme trocou em 26/05/2026: saiu o Around the World e entrou o Across America, ' +
+          'com trilha nova e uma fila temática da National Geographic.\n\n' +
+          'A fila dele sai de praticamente zero na abertura para 74 minutos às 16h. Às 11h15 ' +
+          'ainda está barato, e é por isso que ele vem antes do World Showcase.',
+        areaParque: 'World Nature', acesso: ['standby'], duracaoMin: 45,
+        fila: { min: 25, quando: 'antes do meio-dia', pico: 74, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
 
       { id: 'b-1611-1200', hora: '12:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'The Seas / Living with the Land',
-        descricao: 'Fila curta, ar-condicionado, ritmo lento',
+        titulo: 'The Seas e Living with the Land',
+        descricao: 'Os dois no mesmo pavilhão. Fila curta, ar-condicionado',
         contexto:
-          'The Seas é um aquário enorme com golfinhos e peixes-boi. Living with the Land é um ' +
-          'passeio de barco por estufas hidropônicas reais, onde a Disney cultiva parte do que ' +
-          'serve nos restaurantes. Os dois são calmos e quase sem fila.',
-        areaParque: 'World Nature', acesso: ['standby'] },
+          'The Seas é um aquário enorme com golfinhos e peixes-boi, e dá para ficar o tempo ' +
+          'que quiserem. Living with the Land é um passeio de barco por estufas hidropônicas ' +
+          'REAIS, onde a Disney cultiva parte do que serve nos restaurantes do parque — ' +
+          'inclusive o que vocês podem comer hoje.\n\n' +
+          'Os dois são calmos, quase sem fila, e caem na pior hora de calor de propósito.',
+        areaParque: 'World Nature', acesso: ['standby'], duracaoMin: 40,
+        fila: { min: 10, quando: 'quase sempre', pico: 25, estimado: true, fonte: '2026-09-10' } },
 
-      { id: 'b-1611-1245', hora: '12:45', ancora: 'referencia', tipo: 'livre',
+      { id: 'b-1611-1240p', hora: '12:40', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Parada — antes de virar o dia',
+        descricao: 'A partir daqui o Epcot é outro parque',
+        contexto:
+          'Banheiro, garrafas cheias e sentar.\n\n' +
+          'DAQUI PARA A FRENTE O DIA MUDA DE NATUREZA: acabaram as filas e começa o World ' +
+          'Showcase, que é comida e caminhada. Não há mais nenhum compromisso de relógio até ' +
+          'o Luminous, às 21h.\n\n' +
+          'Não comam agora: em vinte minutos vocês estarão na primeira barraca.',
+        areaParque: 'World Nature', acesso: [], duracaoMin: 14 },
+
+      { id: 'b-1611-1245', hora: '13:00', ancora: 'referencia', tipo: 'livre',
         titulo: 'World Showcase — México',
         descricao: 'Comecem aqui, sentido horário',
         contexto:
-          'O World Showcase são 11 pavilhões de países ao redor de um lago, cada um com ' +
-          'arquitetura, lojas e comida do país, com funcionários nativos. A volta completa a pé ' +
-          'é de cerca de 2 km.',
-        areaParque: 'World Showcase', acesso: [] },
+          'O World Showcase são onze pavilhões de países ao redor de um lago, cada um com ' +
+          'arquitetura, lojas e comida do país, e funcionários nativos daquele país — ' +
+          'estudantes num programa de intercâmbio da Disney. Dá para conversar em espanhol no ' +
+          'México e em português no… não, não tem Brasil. Mas o México resolve.\n\n' +
+          'A volta completa a pé é de cerca de 2 km. Sentido horário a partir do México deixa ' +
+          'França, Reino Unido e Canadá para o fim da tarde, que é quando eles ficam bonitos.',
+        areaParque: 'World Showcase', acesso: [], duracaoMin: 20 },
 
-      { id: 'b-1611-1300', hora: '13:00', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1611-1300', hora: '13:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Gran Fiesta Tour',
-        descricao: 'Barquinho dentro da pirâmide. Clássico, fila mínima',
+        descricao: 'Barquinho dentro da pirâmide. Fila mínima',
         contexto:
           'Passeio de barco lento dentro do pavilhão do México, que por dentro é um mercado ' +
-          'noturno cenográfico permanente. Fresco, escuro e quase sempre sem fila.',
-        areaParque: 'World Showcase', acesso: ['standby'] },
+          'noturno cenográfico permanente, com vulcão ao fundo. Fresco, escuro e quase sempre ' +
+          'sem fila. É o clássico mais subestimado do parque.',
+        areaParque: 'World Showcase', acesso: ['standby'], duracaoMin: 20,
+        fila: { min: 5, quando: 'quase sempre', pico: 15, estimado: true, fonte: '2026-09-10' } },
 
-      { id: 'b-1611-1330', hora: '13:30', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1611-1330', hora: '13:40', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Frozen Ever After',
-        descricao: 'Noruega. Multi Pass ou standby',
+        descricao: 'Noruega. Multi Pass',
         contexto:
           'Passeio de barco pelo mundo de Frozen, com animatrônicos muito bons e um trecho ' +
-          'curto de ré. A fila é sempre desproporcional ao tamanho da atração — por isso está ' +
-          'na lista alta se vocês comprarem o Multi Pass.',
-        areaParque: 'World Showcase', acesso: ['multi-pass'], acessoAlt: 'standby' },
+          'curto de ré. A fila é sempre desproporcional ao tamanho da atração — 45 a 75 ' +
+          'minutos —, e é por isso que ela leva a lista alta do Multi Pass.\n\n' +
+          'É AQUI QUE O MULTI PASS SE PAGA. Esta e o Remy são as duas únicas filas do World ' +
+          'Showcase, e elas competem diretamente com as barracas do Food & Wine, que é o que ' +
+          'vocês vieram fazer. Nos outros dias a fila compete com outra fila; aqui compete com ' +
+          'o dia.',
+        areaParque: 'World Showcase', acesso: ['multi-pass'], duracaoMin: 40,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 75, fonte: '2026-09-10' } },
 
-      { id: 'b-1611-1415', hora: '14:15', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-1611-1415', hora: '14:20', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Food & Wine — volta 1',
-        descricao: 'China, Alemanha, Itália',
+        descricao: 'China, Alemanha, Itália. E é isto o almoço',
         contexto:
-          'Barracas espalhadas pelo World Showcase, cada uma com 2 a 4 pratos pequenos e ' +
-          'bebidas. Peguem o passaporte na entrada do parque.',
-        areaParque: 'World Showcase', acesso: [] },
+          'Barracas espalhadas pelo World Showcase, cada uma com dois a quatro pratos pequenos ' +
+          'e bebidas. PEGUEM O PASSAPORTE na entrada do parque.\n\n' +
+          'A ESTRATÉGIA: dividam cada prato entre os dois e provem oito a dez barracas ao ' +
+          'longo da tarde, em vez de fazer três refeições. É assim que o festival funciona, e ' +
+          'é por isso que hoje não existe bloco de almoço nem de jantar — o Food & Wine É as ' +
+          'duas refeições, servidas em três voltas.\n\n' +
+          'Destaques que se repetem todo ano: Canadá (sopa de cheddar com bacon), Alemanha, ' +
+          'Grécia e o waffle da Bélgica. O cardápio de 2026 sai no app da Disney.\n\n' +
+          'A caminhada entre os pavilhões está dentro da duração deste bloco — ele não é uma ' +
+          'parada, é a volta.',
+        areaParque: 'World Showcase', acesso: [], duracaoMin: 70 },
 
-      { id: 'b-1611-1530', hora: '15:30', ancora: 'referencia', tipo: 'show',
-        titulo: 'The American Adventure',
-        descricao: 'Ou pulem — 30 min, todo falado em inglês',
-        contexto:
-          'Show de animatrônicos sobre a história dos Estados Unidos. Tecnicamente impressionante ' +
-          'e completamente dependente de inglês. É descartável sem culpa.',
-        areaParque: 'World Showcase', acesso: ['standby'], duracaoMin: 30, opcional: true },
-
-      { id: 'b-1611-1600', hora: '16:00', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-1611-1600', hora: '15:30', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Food & Wine — volta 2',
-        descricao: 'Japão, Marrocos',
-        areaParque: 'World Showcase', acesso: [] },
+        descricao: 'Japão, Marrocos. O trecho mais bonito do anel',
+        contexto:
+          'O pavilhão do Japão tem uma loja de departamentos de verdade, a Mitsukoshi, que é ' +
+          'a melhor loja do World Showcase. O do Marrocos é o mais elaborado ' +
+          'arquitetonicamente e quase sempre o mais vazio.\n\n' +
+          'Caminhada inclusa na duração.',
+        areaParque: 'World Showcase', acesso: [], duracaoMin: 75 },
 
-      { id: 'b-1611-1700', hora: '17:00', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1611-1700', hora: '16:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Remy’s Ratatouille Adventure',
         descricao: 'França. Multi Pass',
         contexto:
           'Vocês encolhem ao tamanho de um rato e andam por uma cozinha em escala gigante, em ' +
-          'veículos sem trilhos com telas 3D. Cheiro sincronizado. Sem emoção forte.',
-        areaParque: 'World Showcase', acesso: ['multi-pass'] },
+          'veículos sem trilhos com telas 3D e cheiro sincronizado. Sem emoção forte, e a ' +
+          'escala do cenário é o ponto alto.\n\n' +
+          'Segunda das duas filas do World Showcase, e a segunda razão do Multi Pass: 40 a 60 ' +
+          'minutos no standby, dez com o passe.',
+        areaParque: 'World Showcase', acesso: ['multi-pass'], duracaoMin: 45,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 60, fonte: '2026-09-10' } },
 
-      { id: 'b-1611-1745', hora: '17:45', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-1611-1745', hora: '17:30', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Food & Wine — volta 3',
-        descricao: 'França, Reino Unido, Canadá',
-        areaParque: 'World Showcase', acesso: [] },
+        descricao: 'França, Reino Unido, Canadá. O jantar de vocês',
+        contexto:
+          'A volta mais longa e a melhor: os três pavilhões finais são os mais gostosos ao ' +
+          'entardecer, e o Canadá tem a sopa de cheddar com bacon que aparece em toda lista ' +
+          'de melhores do festival.\n\n' +
+          'O pub do Reino Unido serve cerveja de verdade e costuma ter música ao vivo no ' +
+          'pátio. É o melhor lugar do parque para sentar sem pressa.\n\n' +
+          'ESTE É O JANTAR. Não há outro bloco de refeição hoje — de propósito.',
+        areaParque: 'World Showcase', acesso: [], duracaoMin: 85 },
 
       { id: 'b-1611-1900', hora: '19:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Spaceship Earth',
         descricao: 'A fila some à noite. A esfera por dentro',
         contexto:
           'O passeio dentro da esfera geodésica que é o símbolo do Epcot. Conta a história da ' +
-          'comunicação humana em cenários com animatrônicos, subindo em espiral. Lento, ' +
-          'climatizado e com narração em inglês, mas totalmente compreensível pelo visual.',
-        areaParque: 'World Celebration', acesso: ['standby'] },
+          'comunicação humana em cenários com animatrônicos, subindo em espiral até o topo. ' +
+          'Lento, climatizado, com narração em inglês mas totalmente compreensível pelo ' +
+          'visual.\n\n' +
+          'À noite a fila praticamente some, e vocês passam por ela de qualquer jeito na ' +
+          'volta para o lago.',
+        areaParque: 'World Celebration', acesso: ['standby'], duracaoMin: 50,
+        fila: { min: 10, quando: 'à noite', pico: 40, estimado: true, fonte: '2026-09-10' } },
 
       { id: 'b-1611-2000', hora: '20:00', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Jantar leve ou mais barracas', descricao: '', acesso: [] },
+        titulo: 'Food & Wine — última volta',
+        descricao: 'O que ficou faltando, a caminho do lago',
+        contexto:
+          'Última passada nas barracas que vocês marcaram no passaporte e não fizeram. As ' +
+          'filas das barracas caem depois das 20h, quando a maioria já está pegando lugar ' +
+          'para o show.\n\n' +
+          'Comprem a bebida AGORA e levem para o lugar do Luminous — de lá não dá para sair ' +
+          'sem perder a vaga.',
+        areaParque: 'World Showcase', acesso: [], duracaoMin: 30 },
+
+      { id: 'b-1611-2030p', hora: '20:30', ancora: 'fixo', tipo: 'espera',
+        titulo: 'Posição para o Luminous',
+        descricao: 'Margem entre México e Noruega. Trinta minutos antes',
+        contexto:
+          'A margem entre o México e a Noruega tem visão frontal do lago e esvazia mais rápido ' +
+          'na saída — as duas coisas importam.\n\n' +
+          'Trinta minutos antes não é exagero em noite de festival. Levem a bebida da barraca ' +
+          'anterior: de lá não dá para sair e voltar.\n\n' +
+          'HORÁRIO FIXO, colado no show.',
+        areaParque: 'World Showcase', acesso: [], duracaoMin: 30 },
 
       { id: 'b-1611-2100', hora: '21:00', ancora: 'fixo', tipo: 'show',
         titulo: 'Luminous: The Symphony of Us',
-        descricao: 'Fiquem na margem entre México e Noruega',
+        descricao: '~17 min. Fogos, fontes e projeção nas telas dos barcos',
         contexto:
-          'Espetáculo noturno sobre o lago do World Showcase, com fogos, fontes e projeção nas ' +
-          'telas dos barcos. Cerca de 17 minutos. Aquela margem tem visão frontal e esvazia ' +
-          'mais rápido na saída. HORÁRIO FIXO.',
-        areaParque: 'World Showcase', acesso: [], duracaoMin: 17 },
+          'Espetáculo noturno sobre o lago do World Showcase, com fogos, fontes dançantes e ' +
+          'projeção em telas montadas em barcos. Cerca de 17 minutos.\n\n' +
+          'HORÁRIO FIXO, e ele SEGUE O FECHAMENTO DO PARQUE, não a abertura. Com fechamento às ' +
+          '21h ele é às 21h. Confiram no app da Disney e ajustem aqui se mudar — este bloco e ' +
+          'a posição andam juntos.',
+        areaParque: 'World Showcase', acesso: [], duracaoMin: 20,
+        confirmarHorario: true, pesquisa: '2026-09-10' },
+
+      { id: 'b-1611-2120', hora: '21:20', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voltar ao hotel',
+        descricao: 'Uber, ~25 min, US$ 20–30. Amanhã é Universal',
+        contexto:
+          'Saindo pela entrada principal, a caminhada do World Showcase até o ponto de ' +
+          'rideshare é longa — uns quinze minutos, contra o fluxo de todo mundo saindo ao ' +
+          'mesmo tempo.\n\n' +
+          'ATALHO: se a fila do Uber estiver impossível, o International Gateway fica do ' +
+          'outro lado do lago, perto do Reino Unido, e costuma escoar mais rápido. Confiram no ' +
+          'app qual dos dois pontos está mais perto de vocês quando o show acabar.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 60 },
     ],
+
     ficha: {
       multiPass: {
-        usar: null, opcional: true,
+        usar: true, opcional: false,
         listaAlta: ['Frozen Ever After'],
         listaBaixa: ['Remy’s Ratatouille Adventure', 'Test Track'],
-        planoB: null,
-        nota: 'Opcional. Se comprarem, é nessas três.',
+        planoB:
+          'O Test Track está na lista baixa como rede de segurança: se ele quebrar de ' +
+          'manhã e voltar à tarde, vocês o pegam rolando, depois de usar o Frozen.',
+        nota:
+          'DECIDIDO: comprar. O Epcot é o único parque em que a fila compete com o que ' +
+          'vocês vieram fazer — o Frozen e o Remy são as duas únicas filas do World ' +
+          'Showcase, e são 45–75 e 40–60 minutos parados no meio das barracas do Food & ' +
+          'Wine. Nos outros dias a fila compete com outra fila; aqui compete com o dia.',
       },
       singlePass: {
-        itens: ['Guardians of the Galaxy: Cosmic Rewind'], opcionais: [], nota: null,
+        itens: ['Guardians of the Galaxy: Cosmic Rewind'], opcionais: [],
+        nota:
+          'Segundo dia seguido em que o passe se justifica. O Cosmic Rewind faz 101 minutos ' +
+          'de média e passa de uma hora mesmo às 8h — não existe janela barata em nenhum ' +
+          'momento do dia, diferente do TRON e do Flight of Passage.\n\n' +
+          'Peçam janela entre 9h30 e 10h: é logo depois do Test Track e antes de a manhã ' +
+          'esquentar.',
       },
       expressPass: null,
       custoEstimadoCasal: { min: 36, max: 95, moeda: 'USD' },
@@ -3163,6 +3452,8 @@ window.ROTEIRO = {
     },
     renuncias: {
       gerais: [
+        { nome: 'The American Adventure — 30 min de show todo falado em inglês, e ocuparia ' +
+                 'a janela do Remy' },
         { nome: 'Journey Into Imagination' }, { nome: 'Awesome Planet' },
         { nome: 'Turtle Talk with Crush' }, { nome: 'Disney & Pixar Short Film Festival' },
         { nome: 'Os filmes 360° da China e do Canadá' },
@@ -4906,6 +5197,19 @@ window.ROTEIRO = {
         'da reforma antes do previsto.',
       restauranteIds: [] },
 
+    { id: 'ck-horarios-dhs-epcot', dataAlvo: '2026-09-17', hora: null, fuso: null,
+      janelaReserva: false, critico: true,
+      texto: 'Horários oficiais de 15/11 e 16/11 — e a hora do Fantasmic e do Luminous',
+      nota:
+        'Os dois shows SEGUEM O FECHAMENTO DO PARQUE, não a abertura, e cada um fecha o ' +
+        'seu dia.\n\n' +
+        'FANTASMIC (15/11): com fechamento às 21h ele costuma ser às 20h; com 22h, às ' +
+        '21h. O roteiro assume 20h15.\n\n' +
+        'LUMINOUS (16/11): roda junto do fechamento. O roteiro assume 21h.\n\n' +
+        'Se algum mudar, ajustem o selo de horário no bloco do show — os blocos de ' +
+        'posição andam junto. E confiram a abertura dos dois dias, que move a manhã.',
+      restauranteIds: [] },
+
     { id: 'ck-horarios', dataAlvo: '2026-10-10', dataEstimada: true, motivoData: 'A Disney publica os horários ~60 dias antes', hora: null, fuso: null,
       janelaReserva: false, critico: true,
       texto: 'Conferir horários oficiais dos demais parques e ajustar a referência de cada dia',
@@ -5106,6 +5410,26 @@ window.ROTEIRO = {
      Por isso: area a area, com a margem dita na cara.
      ------------------------------------------------------------------------ */
   topografia: {
+    epcot: {
+      forma: 'Um bulbo e um anel: a entrada abre no World Celebration, com o World ' +
+             'Discovery de um lado e o World Nature do outro, e o World Showcase é o anel ' +
+             'de onze pavilhões em volta do lago, ao sul.',
+      margem:
+        'Somem 50% em dia cheio. E ATENÇÃO A UMA LIMITAÇÃO DESTE MAPA: o World Showcase é ' +
+        'um anel de 2 km modelado como uma área só, então para o app andar do México até o ' +
+        'Canadá custa zero — e na vida real são uns vinte minutos. Isso é deliberado: as ' +
+        'travessias de lá não são deslocamentos entre blocos, são o próprio passeio, e por ' +
+        'isso a caminhada está dentro da duração dos blocos de Food & Wine.',
+      arestas: [
+        ['World Celebration', 'World Discovery', 4],
+        ['World Celebration', 'World Nature', 4],
+        ['World Celebration', 'World Showcase', 5],
+        ['World Discovery', 'World Showcase', 6],
+        ['World Nature', 'World Showcase', 6],
+        ['World Discovery', 'World Nature', 7],
+      ],
+    },
+
     'hollywood-studios': {
       forma: 'Uma espinha: a Hollywood Blvd entra até o Chinese Theater e de lá tudo se ' +
              'abre. O Galaxy’s Edge fica no fundo, atrás do Echo Lake, e é o ponto mais ' +
