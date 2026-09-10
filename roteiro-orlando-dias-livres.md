@@ -7,7 +7,7 @@
 
 ## Antes de tudo: um aviso sobre densidade
 
-Estes são os únicos dias em que vocês podem não fazer nada. Eu deixei blocos vazios **de propósito** em três deles. Se vocês preencherem esses buracos, chegam no dia 21 destruídos e o Epic Universe do dia 23 vira arrastar-se.
+Estes são os únicos dias em que vocês podem não fazer nada. Eu deixei blocos vazios **de propósito** em três deles. Se vocês preencherem esses buracos, chegam no dia 21 destruídos e o Islands of Adventure do dia 23 vira arrastar-se.
 
 Os blocos marcados como **VAZIO PROPOSITAL** não são falha de planejamento. Resistam à tentação de encaixar coisa ali.
 
@@ -87,7 +87,7 @@ Sábado. O objetivo do dia é ficar longe de parque cheio e chegar inteiro na se
 | **17h30** | **GRINCHMAS WHO-LIDAY SPECTACULAR** | O motivo de vocês virem hoje |
 | **18h10** | Hogsmeade decorada · cerveja amanteigada *frozen* | Carrinho externo. E é o melhor momento de compra da semana |
 | **18h40** | **The Magic of Christmas at Hogwarts Castle** | Repete a cada 20 min até fechar |
-| **19h15** | **Flight of the Hippogriff**, ou mais Hogsmeade | Opcional. Vocês repetem no dia 19 |
+| **19h15** | **Flight of the Hippogriff**, ou mais Hogsmeade | Opcional. Vocês repetem no dia 23 |
 | **20h00** | **Jantar — Three Broomsticks** | Dentro da Hogsmeade decorada |
 | **21h30** | Voltar ao hotel | Uber, ~30 min, US$ 28–40. Amanhã sai às 7h |
 
@@ -105,7 +105,7 @@ Sábado. O objetivo do dia é ficar longe de parque cheio e chegar inteiro na se
 > de um dia inteiro, é esperar em pé no CityWalk. O Three Broomsticks é balcão dentro da
 > decoração que vocês vieram ver, e não leva gorjeta.
 
-**Não tentem atração grande hoje.** Hagrid's, VelociCoaster e Forbidden Journey são do dia 19,
+**Não tentem atração grande hoje.** Hagrid's, VelociCoaster e Forbidden Journey são do dia 23,
 numa quinta-feira. Hoje é sábado e primeira noite da temporada: o pior momento possível
 para encarar fila.
 
@@ -192,7 +192,7 @@ A última noite. De manhã, compras de Black Friday; à noite, a volta ao Disney
 | **21h30** | **World of Disney com calma** — a última compra da viagem. Fecha às 23h |
 | **22h30** | Voltar |
 
-**O que isso custou:** o segundo turno no Epic Universe. O ingresso continua cobrindo dois dias — o que a viagem não tem mais é a segunda visita agendada. Se o dia 23 der errado, reclamar este dia custa esta noite e nada mais.
+**O que isso custou:** o segundo turno no Epic Universe. O ingresso continua cobrindo dois dias — o que a viagem não tem mais é a segunda visita agendada. Se o dia 19 der errado, reclamar este dia custa esta noite e nada mais.
 
 **Duas corridas de Uber:** o estacionamento do Disney Springs é gratuito e vocês não vão usá-lo, porque o carro volta para a locadora às 15h.
 

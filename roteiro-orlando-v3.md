@@ -363,36 +363,44 @@ Sem Express Pass. Sem Early Park Admission. **Chegar cedo é a estratégia intei
 | **19h30** | **Universal's Holiday Parade featuring Macy's** | Balões da parada de Nova York. Confiram o horário |
 
 ### Renúncias
-Fast & Furious: Supercharged (consenso de que é a pior atração do complexo), Kang & Kodos, Woody Woodpecker, Animal Actors, Hogwarts Express (deixem para o dia 19, quando dá para fazer ida e volta).
+Fast & Furious: Supercharged (consenso de que é a pior atração do complexo), Kang & Kodos, Woody Woodpecker, Animal Actors, Hogwarts Express (deixem para o dia 23, quando dá para fazer ida e volta).
 
 ---
 
-# ⚡ 19/11 (quinta) — ISLANDS OF ADVENTURE
+# 🌌 19/11 (quinta) — EPIC UNIVERSE
 
-O dia mais forte em montanha-russa da viagem. **Hagrid's não aceita Express desde julho de 2026** — a única arma é chegar primeiro.
+O parque mais concorrido de Orlando, **no dia mais vazio da segunda metade da viagem**. Estava marcado para 23/11 — segunda-feira da semana de Thanksgiving, dentro do bloqueio de 23 a 27/11 — e trocou de lugar com o Islands, que aguenta melhor uma multidão.
+
+**O dia cabe.** Verificado em 10/09: o Epic tem 11 atrações de brinquedo, 2 shows e 2 áreas de brincar — e as 11 de brinquedo estão todas aqui. O que decide o dia é a ordem, não o número de horas.
+
+> **O Mine-Cart Madness está na hora errada.** É a maior fila do parque — 114 min de média, pico de 205 — e o bloco das 11h45 dá 35 minutos para ele. As janelas baratas são o rope drop (que vocês não têm: Super Nintendo World é área de Early Park Admission e às 8h ele já marca 97 min) e a **última hora antes de fechar**, quando cai para 20–30 min. Ele precisa ir para o fim do dia.
+
+> **Custo da troca:** hoje vocês acordam no dia seguinte ao jogo da NBA, que termina 21h30 no Kia Center.
+
+**Este é o único dia de Epic da viagem.** O segundo turno de 25/11 saiu do roteiro e virou a noite de Natal no Disney Springs — o que não couber hoje não acontece. Este dia foi montado contando com a volta e precisa ser refeito com essa lente antes da viagem.
+
+O ingresso continua cobrindo dois dias e continua válido: se o dia 19 der errado, reclamar o dia 25 custa a noite do Disney Springs e nada mais.
 
 | Hora | O quê | Como |
 |---|---|---|
-| **7h45** | Sair do hotel | |
-| **8h30** | Portão | Fiquem à esquerda, sentido Hogsmeade |
-| **9h00** | **Hagrid's Magical Creatures Motorbike Adventure** | Rope drop, sem exceção. A melhor de Orlando |
-| **9h55** | **VelociCoaster** | A mais intensa do parque. Inversões sobre o lago |
-| **10h40** | **Forbidden Journey** | Dentro do castelo de Hogwarts |
-| **11h25** | **The Incredible Hulk Coaster** | Lançamento de 0 a 64 km/h em 2 segundos |
-| **12h00** | **Jurassic Park River Adventure** | Molha. Novembro é ameno, mas leve capa |
-| **12h40** | **Almoço — Three Broomsticks** | Costelinha e frango assado |
-| **13h50** | **The Amazing Adventures of Spider-Man** | Clássico. Ainda é referência técnica |
-| **14h35** | **Skull Island: Reign of Kong** | |
-| **15h20** | **Hogwarts Express — ida** | Para o Beco Diagonal. Precisa do Park-to-Park, que vocês têm |
-| **15h50** | Beco Diagonal | Cerveja amanteigada, o que ficou faltando no dia 17 |
-| **16h40** | **Hogwarts Express — volta** | **O trajeto é diferente na volta.** Façam os dois |
-| **17h20** | **Doctor Doom's Fearfall** | Torre de lançamento, rápido |
-| **17h50** | **Flight of the Hippogriff** | Coaster leve, 1 min, boa vista do castelo |
-| **18h30** | **Jantar — Mythos** | Já eleito o melhor restaurante de parque temático do mundo |
-| **20h00** | Hogsmeade à noite | Projeção no castelo, se quiserem rever |
+| **6h45** | Sair de carro | ~30 min |
+| **7h30** | Portão | A caminhada do estacionamento até a entrada é longa |
+| **9h00** | **Harry Potter and the Battle at the Ministry** | Rope drop. Maior fila do parque, disparado |
+| **10h05** | **Stardust Racers** | Celestial Park. Coaster duplo, dois trens correndo |
+| **10h50** | **Mario Kart: Bowser's Challenge** | Super Nintendo World. Realidade aumentada |
+| **11h45** | **Mine-Cart Madness** | Donkey Kong. Trilhos que parecem quebrados |
+| **12h20** | **Entrar na lista do Toadstool Cafe** | Pelo app. A lista fecha cedo — façam isso às 10h se lembrarem |
+| **12h45** | **Almoço — Toadstool Cafe** | |
+| **14h00** | **Yoshi's Adventure** | Leve, mas a vista de cima da área é a melhor foto |
+| **14h40** | **Monsters Unchained** | Dark Universe. Animatrônicos, a mais elaborada do parque |
+| **15h35** | **Curse of the Werewolf** | Coaster familiar giratório |
+| **16h15** | **Hiccup's Wing Gliders** | Isle of Berk. Lançamento suave, temática linda |
+| **17h00** | **Dragon Racer's Rally** | |
+| **17h40** | **Fyre Drill** | Interativo, molha |
+| **18h20** | **Jantar — Atlantic** ou **Mead Hall** | |
+| **19h45** | **Constellation Carousel** e Celestial Park iluminado | O parque à noite é outro lugar |
 
-### Renúncias
-Pteranodon Flyers (só com criança), Storm Force Accelatron, Caro-Seuss-el, One Fish Two Fish, Cat in the Hat, Popeye e Dudley Do-Right (molham muito e vocês já vão molhar no Jurassic Park).
+**Power-Up Band:** comprem se quiserem jogar os desafios interativos da Super Nintendo World. Sem ela, metade da área vira só cenário. Custa ~US$ 40.
 
 ---
 
@@ -422,34 +430,32 @@ Infinity Falls (molha muito e anoitece frio), Sesame Street Land, Wild Arctic, S
 
 ---
 
-# 🌌 23/11 (segunda) — EPIC UNIVERSE (dia 1)
+# ⚡ 23/11 (segunda) — ISLANDS OF ADVENTURE
 
-O melhor dia da semana para o parque mais concorrido de Orlando. Sem Early Park Admission, o portão é a estratégia.
-
-**Este é o único dia de Epic da viagem.** O segundo turno de 25/11 saiu do roteiro e virou a noite de Natal no Disney Springs — o que não couber hoje não acontece. Este dia foi montado contando com a volta e precisa ser refeito com essa lente antes da viagem.
-
-O ingresso continua cobrindo dois dias e continua válido: se o dia 23 der errado, reclamar o dia 25 custa a noite do Disney Springs e nada mais.
+O dia mais forte em montanha-russa da viagem. **Hagrid's não aceita Express desde julho de 2026** — a única arma é chegar primeiro.
 
 | Hora | O quê | Como |
 |---|---|---|
-| **6h45** | Sair de carro | ~30 min |
-| **7h30** | Portão | A caminhada do estacionamento até a entrada é longa |
-| **9h00** | **Harry Potter and the Battle at the Ministry** | Rope drop. Maior fila do parque, disparado |
-| **10h05** | **Stardust Racers** | Celestial Park. Coaster duplo, dois trens correndo |
-| **10h50** | **Mario Kart: Bowser's Challenge** | Super Nintendo World. Realidade aumentada |
-| **11h45** | **Mine-Cart Madness** | Donkey Kong. Trilhos que parecem quebrados |
-| **12h20** | **Entrar na lista do Toadstool Cafe** | Pelo app. A lista fecha cedo — façam isso às 10h se lembrarem |
-| **12h45** | **Almoço — Toadstool Cafe** | |
-| **14h00** | **Yoshi's Adventure** | Leve, mas a vista de cima da área é a melhor foto |
-| **14h40** | **Monsters Unchained** | Dark Universe. Animatrônicos, a mais elaborada do parque |
-| **15h35** | **Curse of the Werewolf** | Coaster familiar giratório |
-| **16h15** | **Hiccup's Wing Gliders** | Isle of Berk. Lançamento suave, temática linda |
-| **17h00** | **Dragon Racer's Rally** | |
-| **17h40** | **Fyre Drill** | Interativo, molha |
-| **18h20** | **Jantar — Atlantic** ou **Mead Hall** | |
-| **19h45** | **Constellation Carousel** e Celestial Park iluminado | O parque à noite é outro lugar |
+| **7h45** | Sair do hotel | |
+| **8h30** | Portão | Fiquem à esquerda, sentido Hogsmeade |
+| **9h00** | **Hagrid's Magical Creatures Motorbike Adventure** | Rope drop, sem exceção. A melhor de Orlando |
+| **9h55** | **VelociCoaster** | A mais intensa do parque. Inversões sobre o lago |
+| **10h40** | **Forbidden Journey** | Dentro do castelo de Hogwarts |
+| **11h25** | **The Incredible Hulk Coaster** | Lançamento de 0 a 64 km/h em 2 segundos |
+| **12h00** | **Jurassic Park River Adventure** | Molha. Novembro é ameno, mas leve capa |
+| **12h40** | **Almoço — Three Broomsticks** | Costelinha e frango assado |
+| **13h50** | **The Amazing Adventures of Spider-Man** | Clássico. Ainda é referência técnica |
+| **14h35** | **Skull Island: Reign of Kong** | |
+| **15h20** | **Hogwarts Express — ida** | Para o Beco Diagonal. Precisa do Park-to-Park, que vocês têm |
+| **15h50** | Beco Diagonal | Cerveja amanteigada, o que ficou faltando no dia 17 |
+| **16h40** | **Hogwarts Express — volta** | **O trajeto é diferente na volta.** Façam os dois |
+| **17h20** | **Doctor Doom's Fearfall** | Torre de lançamento, rápido |
+| **17h50** | **Flight of the Hippogriff** | Coaster leve, 1 min, boa vista do castelo |
+| **18h30** | **Jantar — Mythos** | Já eleito o melhor restaurante de parque temático do mundo |
+| **20h00** | Hogsmeade à noite | Projeção no castelo, se quiserem rever |
 
-**Power-Up Band:** comprem se quiserem jogar os desafios interativos da Super Nintendo World. Sem ela, metade da área vira só cenário. Custa ~US$ 40.
+### Renúncias
+Pteranodon Flyers (só com criança), Storm Force Accelatron, Caro-Seuss-el, One Fish Two Fish, Cat in the Hat, Popeye e Dudley Do-Right (molham muito e vocês já vão molhar no Jurassic Park).
 
 ---
 

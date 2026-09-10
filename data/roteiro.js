@@ -2191,13 +2191,13 @@ window.ROTEIRO = {
       'casal. O que é de graça é a noite de Natal, não o sábado.',
 
     // A âncora do dia NÃO é abertura de parque. É a sessão do Grinchmas, que é o
-    // único compromisso de relógio da noite e a única coisa que o dia 19 não cobre.
+    // único compromisso de relógio da noite e a única coisa que o dia 23 não cobre.
     referencia: { rotulo: 'Sessão do Grinchmas', padrao: '17:30', confirmado: false },
 
     resumo:
       'Sábado, e sábado é o pior dia para parque. A manhã é Celebration a pé e a tarde é ' +
       'hotel. À noite vocês entram no Islands pela primeira noite da temporada de Natal — ' +
-      'mas com um alvo só: o Grinchmas. O resto da Hogsmeade decorada vocês reveem no dia 19, ' +
+      'mas com um alvo só: o Grinchmas. O resto da Hogsmeade decorada vocês reveem no dia 23, ' +
       'numa quinta-feira, com menos gente.',
 
     avisos: [
@@ -2205,7 +2205,7 @@ window.ROTEIRO = {
       'sem Express Pass, e a grade típica termina às 18h30. O roteiro mira a sessão das ' +
       '17h30 para ter a das 18h30 como plano B.',
       'Não tentem atração grande hoje. Hagrid’s, VelociCoaster e Forbidden Journey são do ' +
-      'dia 19, e hoje o parque está no pico do ano.',
+      'dia 23, e hoje o parque está no pico do ano.',
     ],
 
     notas: [
@@ -2264,7 +2264,7 @@ window.ROTEIRO = {
           'app avisar colisão em vermelho ali, é isso — e a solução é só esperar a próxima ' +
           'sessão, que vem em vinte minutos.',
           'Se a única sessão possível for a das 18h30, saiam do hotel às 17h e aceitem que a ' +
-          'Hogsmeade fica para depois do show. Não é perda: vocês voltam no dia 19.',
+          'Hogsmeade fica para depois do show. Não é perda: vocês voltam no dia 23.',
         ],
       },
       {
@@ -2273,7 +2273,7 @@ window.ROTEIRO = {
         gatilho: 'Chegaram e o teatro está cheio, ou o corpo não colaborou.',
         passos: [
           'NÃO INSISTAM. Este dia inteiro é de graça e nada aqui é insubstituível — a ' +
-          'Hogsmeade decorada e a projeção no castelo vocês veem no dia 19 de qualquer jeito.',
+          'Hogsmeade decorada e a projeção no castelo vocês veem no dia 23 de qualquer jeito.',
           'Se o teatro fechou, peguem a sessão seguinte se houver, ou vão direto para ' +
           'Hogsmeade e transformem a noite em jantar com decoração.',
           'Se estiverem destruídos, cortem a Universal inteira e jantem na 192. Amanhã é ' +
@@ -2287,7 +2287,7 @@ window.ROTEIRO = {
     naoPerca: [
       { nome: 'Grinchmas Who-liday Spectacular', quando: 'hoje', custo: 'incluso no ingresso',
         motivo: 'É o motivo de vocês virem hoje. Musical de 30 minutos com o Grinch ' +
-                'improvisando com a plateia. No dia 19 ele custaria 45 minutos que vocês vão ' +
+                'improvisando com a plateia. No dia 23 ele custaria 45 minutos que vocês vão ' +
                 'querer no Hagrid’s — hoje custa uma noite que já é de graça.',
         pesquisa: '2026-09-10' },
 
@@ -2295,7 +2295,7 @@ window.ROTEIRO = {
         custo: 'incluso no ingresso',
         motivo: 'Projeção mapeada no castelo, 7 minutos, repetindo a cada vinte até o ' +
                 'fechamento. As sessões mais tarde são melhores porque o pátio vai esvaziando. ' +
-                'Vocês veem hoje e podem rever no dia 19.',
+                'Vocês veem hoje e podem rever no dia 23.',
         pesquisa: '2026-09-10' },
 
       { nome: 'A cerveja amanteigada no carrinho externo', quando: 'hoje', custo: '~US$ 8',
@@ -2316,8 +2316,9 @@ window.ROTEIRO = {
                 'decoração que vocês vieram ver.',
         pesquisa: '2026-09-10' },
 
-      { nome: 'As atrações grandes do Islands', quando: 'dia 19', custo: 'incluso',
-        motivo: 'Hagrid’s, VelociCoaster e Forbidden Journey são o dia 19, numa quinta-feira. ' +
+      { nome: 'As atrações grandes do Islands', quando: 'dia 23', custo: 'incluso',
+        motivo: 'Hagrid’s, VelociCoaster e Forbidden Journey são o dia 23, numa segunda-feira ' +
+                'de semana de Thanksgiving. ' +
                 'Hoje é sábado e primeira noite da temporada: o pior momento possível para ' +
                 'encarar fila.' },
     ],
@@ -2463,9 +2464,9 @@ window.ROTEIRO = {
           'CARRINHO EXTERNO: dentro do Three Broomsticks a fila é sempre maior e é exatamente ' +
           'a mesma bebida.\n\n' +
           'Hogsmeade no Natal ganha guirlandas, luz quente e coral. É a primeira noite da ' +
-          'temporada e vocês voltam aqui no dia 19 — hoje é para andar devagar e olhar, não ' +
+          'temporada e vocês voltam aqui no dia 23 — hoje é para andar devagar e olhar, não ' +
           'para pegar atração.\n\n' +
-          'É TAMBÉM O MELHOR MOMENTO DE COMPRA DA SEMANA, e é de propósito: no dia 19 ' +
+          'É TAMBÉM O MELHOR MOMENTO DE COMPRA DA SEMANA, e é de propósito: no dia 23 ' +
           'vocês vão estar atrás do Hagrid\u2019s e do VelociCoaster, e ninguém para numa ' +
           'loja nesse dia. A Honeydukes e a Dervish and Banges ficam na rua principal, e a ' +
           'Ollivanders de Hogsmeade tem a varinha escolhendo o bruxo — a do Beco Diagonal, ' +
@@ -2488,7 +2489,7 @@ window.ROTEIRO = {
 
       { id: 'b-1411-1950', hora: '19:15', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Flight of the Hippogriff — ou mais Hogsmeade',
-        descricao: 'Opcional. Vocês repetem esta atração no dia 19',
+        descricao: 'Opcional. Vocês repetem esta atração no dia 23',
         contexto:
           'Montanha-russa infantil de 1 minuto. Vale pela vista do castelo de Hogwarts e da ' +
           'cabana do Hagrid, iluminados.\n\n' +
@@ -2512,8 +2513,8 @@ window.ROTEIRO = {
           'passa de uma hora em fim de semana — num sábado de abertura de temporada, depois ' +
           'de um dia inteiro, é esperar em pé no estacionamento social. Aqui vocês comem ' +
           'dentro da decoração que vieram ver.\n\n' +
-          'É balcão: não leva gorjeta. E vocês voltam a comer aqui no almoço do dia 19 — se ' +
-          'quiserem variar, é o dia 19 que muda, não hoje.',
+          'É balcão: não leva gorjeta. E vocês voltam a comer aqui no almoço do dia 23 — se ' +
+          'quiserem variar, é o dia 23 que muda, não hoje.',
         restauranteId: 'r-broomsticks-14', areaParque: 'Hogsmeade', acesso: [],
         duracaoMin: 90 },
 
@@ -3644,7 +3645,7 @@ window.ROTEIRO = {
           motivo: 'Consenso de que é a pior atração do complexo' },
         { nome: 'Kang & Kodos' }, { nome: 'Woody Woodpecker' }, { nome: 'Animal Actors' },
         { nome: 'Hogwarts Express',
-          motivo: 'Deixem para o dia 19, quando dá para fazer ida e volta' },
+          motivo: 'Deixem para o dia 23, quando dá para fazer ida e volta' },
       ],
       idioma: null, fechado: [],
     },
@@ -3734,193 +3735,252 @@ window.ROTEIRO = {
     renuncias: null, ficha: null,
   },
 
-  /* ===== 19/11 · QUINTA · ISLANDS OF ADVENTURE ========================== */
+  /* ===== 19/11 · QUINTA · EPIC UNIVERSE ================================= */
   {
     id: 'd-2026-11-19',
     data: '2026-11-19',
     diaSemana: 'quinta',
-    emoji: '⚡',
-    titulo: 'Islands of Adventure',
-    subtitulo: 'O dia mais forte em montanha-russa da viagem',
+    emoji: '🌌',
+    titulo: 'Epic Universe',
+    subtitulo: 'Dia único — o parque inteiro cabe, mas só na ordem certa',
     tipo: 'parque',
     operadora: 'universal',
-    parqueId: 'islands-of-adventure',
+    parqueId: 'epic-universe',
     custoZero: false,
     referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: false },
     resumo:
-      'Hagrid’s não aceita Express desde julho de 2026 — a única arma é chegar primeiro. ' +
-      'Hoje é o dia com mais locker obrigatório da viagem: contem 10 a 15 minutos extras em ' +
-      'Hulk, VelociCoaster, Hagrid’s e Forbidden Journey.',
+      'O parque mais concorrido de Orlando, no dia mais vazio da segunda metade da viagem. ' +
+      'Este é o único dia de Epic — e ele cabe: as onze atrações de brinquedo do parque ' +
+      'estão todas aqui. O que decide o dia é a ordem, não o número de horas.',
     avisos: [
-      'Standby em tudo, os dois juntos. O que compra tempo hoje é a hora de chegada e o peso ' +
-      'da mochila: quatro atrações exigem locker obrigatório e isso custa 40 a 60 minutos ' +
-      'somados. Quanto menos vocês carregarem, mais atração cabe no dia.',
+      'Standby em tudo, os dois juntos. O segundo turno de 25/11 saiu do roteiro e virou a ' +
+      'noite de Natal no Disney Springs — este dia precisa ser refeito com essa lente antes ' +
+      'da viagem, porque ele foi montado contando com a volta.',
     ],
     notas: [
-      { tipo: 'atencao', texto:
-        'Somando os lockers obrigatórios do dia, são 40 a 60 minutos que o cronograma de ' +
-        '45 min por atração não previu. Levem o mínimo possível: quanto menos bagagem, menos ' +
-        'tempo perdido. Hulk e VelociCoaster têm detector de metal e não passa nem celular.',
+      { tipo: 'alerta', texto:
+        'O MINE-CART MADNESS ESTÁ NA HORA ERRADA, e é o defeito mais caro do dia.\n\n' +
+        'Ele é a maior fila do parque: 114 minutos de média e pico de 205, com a pior razão ' +
+        'entre tempo de fila e duração do brinquedo — e quebra com frequência. O bloco das ' +
+        '11h45 dá 35 minutos para ele.\n\n' +
+        'As duas janelas baratas dele são o rope drop, que vocês não têm porque a Super ' +
+        'Nintendo World é área de Early Park Admission e às 8h ele já marca 97 minutos, e a ' +
+        'ÚLTIMA HORA ANTES DE FECHAR, quando cai para 20 a 30 minutos.\n\n' +
+        'Ele precisa ir para o fim do dia — mesmo movimento do Flight of Passage no dia 13. ' +
+        'Isso se resolve quando este dia for montado em detalhe.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'alerta', texto:
+        'NÃO ESTÁ RESOLVIDO se hóspede de fora entra junto com o Early Park Admission.\n\n' +
+        'Duas fontes se contradizem em 10/09: uma diz que entram no mesmo horário, sem poder ' +
+        'acessar a Super Nintendo World e a Dark Universe; a outra diz que não entram antes ' +
+        'da abertura oficial. A diferença muda a primeira hora inteira do dia.\n\n' +
+        'As duas concordam no que importa: NÃO FAZER ROPE DROP NA SUPER NINTENDO WORLD. ' +
+        'Confirmar no app da Universal — está no checklist.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'info', texto:
+        'POR QUE ESTE DIA É 19/11 E NÃO 23/11. O parque estava marcado para a segunda-feira ' +
+        'da semana de Thanksgiving, dentro do bloqueio de 23 a 27/11 e listada entre os ' +
+        'períodos mais cheios do ano. A quinta 19/11 é apontada como um dos dois dias mais ' +
+        'vazios de toda a segunda metade de novembro. O Islands foi para 23/11 no lugar: ele ' +
+        'aguenta melhor uma multidão do que o Epic.\n\n' +
+        'O CUSTO DA TROCA: hoje vocês acordam no dia seguinte ao jogo da NBA, que termina ' +
+        '21h30 no Kia Center.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'info', texto:
+        'As três de maior demanda são Battle at the Ministry, Monsters Unchained e Stardust ' +
+        'Racers — e são exatamente as três primeiras do dia. A ordem está certa.',
         pesquisa: '2026-09-08' },
+      { tipo: 'info', texto:
+        'Early Park Admission no Epic existe, mas só para hóspedes de hotel Universal. Vocês ' +
+        'estão no Travelodge, então não têm. Isso significa que o parque já terá gente ' +
+        'dentro quando vocês entrarem às 9h.', pesquisa: '2026-09-08' },
     ],
     blocos: [
-      { id: 'b-1911-0745', hora: '07:45', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Sair do hotel', descricao: '', localId: 'islands-of-adventure', acesso: [] },
+      { id: 'b-1911-0645', hora: '06:45', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Sair de carro', descricao: '~30 min',
+        localId: 'epic-universe', acesso: [] },
 
-      { id: 'b-1911-0830', hora: '08:30', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Portão', descricao: 'Fiquem à esquerda, sentido Hogsmeade',
-        localId: 'islands-of-adventure', acesso: [] },
+      { id: 'b-1911-0730', hora: '07:30', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Portão',
+        descricao: 'A caminhada do estacionamento até a entrada é longa',
+        contexto:
+          'O Epic tem estacionamento próprio, mas a caminhada até a catraca passa por uma ' +
+          'esplanada grande e leva de 15 a 20 minutos. Chegar 90 minutos antes não é exagero ' +
+          'aqui.',
+        localId: 'epic-universe', acesso: [] },
 
       { id: 'b-1911-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Hagrid’s Magical Creatures Motorbike Adventure',
-        descricao: 'Rope drop, sem exceção. A melhor de Orlando',
+        titulo: 'Harry Potter and the Battle at the Ministry',
+        descricao: 'Rope drop. Maior fila do parque, disparado',
         contexto:
-          'Montanha-russa de lançamento em motos com sidecar, com sete lançamentos, uma queda ' +
-          'vertical e um trecho de ré. Sem inversões. É considerada a melhor montanha-russa de ' +
-          'Orlando e a fila passa de 2 horas o dia todo. Saiu do Express em julho de 2026: ' +
-          'chegar primeiro é literalmente a única saída.',
-        areaParque: 'Hogsmeade', acesso: ['rope-drop', 'standby'],
-        singleRider: true, locker: 'obrigatorio',
-        lockerNota: 'Pochete de 3 pontos na cintura costuma ser liberada, a critério do funcionário.',
-        pesquisa: '2026-09-08' },
-
-      { id: 'b-1911-0955', hora: '09:55', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'VelociCoaster',
-        descricao: 'A mais intensa do parque. Inversões sobre o lago',
-        contexto:
-          'Dois lançamentos, 70 metros de altura, quatro inversões e um trecho rasante sobre a ' +
-          'água. É consenso como a melhor montanha-russa da Flórida e uma das melhores do mundo. ' +
-          'Detector de metal: absolutamente nada nos bolsos.',
-        areaParque: 'Jurassic Park', acesso: ['standby'],
-        singleRider: true, locker: 'detector', pesquisa: '2026-09-08' },
-
-      { id: 'b-1911-1040', hora: '10:40', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Forbidden Journey',
-        descricao: 'Dentro do castelo de Hogwarts',
-        contexto:
-          'Braço robótico que carrega vocês por cenários físicos e telas, com voo sobre ' +
-          'Hogwarts. Balança bastante e causa enjoo em parte das pessoas. A fila atravessa o ' +
-          'castelo por dentro — retratos falantes, sala do Dumbledore — e vale a caminhada.',
-        areaParque: 'Hogsmeade', acesso: ['standby'],
-        singleRider: true, locker: 'obrigatorio', pesquisa: '2026-09-08' },
-
-      { id: 'b-1911-1125', hora: '11:25', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'The Incredible Hulk Coaster',
-        descricao: 'Lançamento de 0 a 64 km/h em 2 segundos',
-        contexto:
-          'Lançamento dentro de um túnel, sete inversões e muito barulho. Clássica de 1999, ' +
-          'reconstruída em 2016. Detector de metal — nada nos bolsos.',
-        areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
-        singleRider: true, locker: 'detector', pesquisa: '2026-09-08' },
-
-      { id: 'b-1911-1200', hora: '12:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Jurassic Park River Adventure',
-        descricao: 'Molha. Novembro é ameno, mas leve capa',
-        contexto:
-          'Passeio de barco que vira ataque de dinossauros e termina numa queda de 25 metros ' +
-          'no escuro. Molha de verdade, principalmente nas primeiras fileiras. A capa de ' +
-          'chuva do Walmart do dia 10 serve aqui.',
-        areaParque: 'Jurassic Park', acesso: ['standby'],
-        singleRider: true, molha: true, pesquisa: '2026-09-08' },
-
-      { id: 'b-1911-1240', hora: '12:40', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Almoço — Three Broomsticks',
-        descricao: 'Costelinha e frango assado',
-        contexto:
-          'Balcão temático dentro de Hogsmeade, com telhado alto e vigas tortas. Porções ' +
-          'grandes; o combo de costelinha e frango serve dois com folga.',
-        restauranteId: 'r-broomsticks', areaParque: 'Hogsmeade', acesso: [] },
-
-      { id: 'b-1911-1350', hora: '13:50', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'The Amazing Adventures of Spider-Man',
-        descricao: 'Clássico. Ainda é referência técnica',
-        contexto:
-          'Veículo em movimento que combina cenário físico, telas 3D e uma simulação de queda ' +
-          'livre de 120 metros que parece real. É de 1999 e continua sendo estudada como ' +
-          'referência de dark ride.',
-        areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
-        singleRider: true, singleRiderNota: 'Entrada pela esquerda, no corredor que liga a saída à loja.',
-        pesquisa: '2026-09-08' },
-
-      { id: 'b-1911-1435', hora: '14:35', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Skull Island: Reign of Kong',
-        descricao: '',
-        contexto:
-          'Caminhão expedicionário com telas 3D e um animatrônico enorme do Kong no fim. Tem ' +
-          'atores na fila. Escuro e barulhento, mas sem emoção física forte.',
-        areaParque: 'Skull Island', acesso: ['standby'],
+          'Dark ride pelo Ministério da Magia, misturando cenário físico, animatrônicos e telas ' +
+          'de forma quase invisível. É consenso como a melhor atração do parque e a de maior ' +
+          'demanda. Emoção baixa — é história, não adrenalina.',
+        areaParque: 'Ministry of Magic', acesso: ['rope-drop', 'standby'],
         singleRider: true, pesquisa: '2026-09-08' },
 
-      { id: 'b-1911-1520', hora: '15:20', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Hogwarts Express — ida',
-        descricao: 'Para o Beco Diagonal. Precisa do Park-to-Park, que vocês têm',
+      { id: 'b-1911-1005', hora: '10:05', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Stardust Racers',
+        descricao: 'Celestial Park. Coaster duplo, dois trens correndo',
         contexto:
-          'Trem real entre os dois parques, com janelas que são telas mostrando a paisagem e ' +
-          'sombras no corredor da cabine. Leva ~7 minutos e é uma atração, não só transporte.',
-        areaParque: 'Hogsmeade Station', acesso: ['standby'], duracaoMin: 7 },
+          'Dois trens que correm lado a lado em trilhos separados, com 1500 m de percurso, ' +
+          '133 metros e 100 km/h. Tem a "Celestial Spin", em que os dois carros se cruzam ' +
+          'invertidos. Detector de metal — nada nos bolsos, nem celular.',
+        areaParque: 'Celestial Park', acesso: ['standby'],
+        singleRider: true, locker: 'detector', pesquisa: '2026-09-08' },
 
-      { id: 'b-1911-1550', hora: '15:50', ancora: 'referencia', tipo: 'livre',
-        titulo: 'Beco Diagonal',
-        descricao: 'Cerveja amanteigada, o que ficou faltando no dia 17',
-        areaParque: 'Diagon Alley', acesso: [] },
-
-      { id: 'b-1911-1640', hora: '16:40', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Hogwarts Express — volta',
-        descricao: 'O trajeto é diferente na volta. Façam os dois',
+      { id: 'b-1911-1050', hora: '10:50', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Mario Kart: Bowser’s Challenge',
+        descricao: 'Super Nintendo World. Realidade aumentada',
         contexto:
-          'A ida e a volta têm filmes e cenas completamente diferentes — não é o mesmo passeio ' +
-          'invertido. É por isso que vale fazer os dois sentidos.',
-        areaParque: 'King’s Cross', acesso: ['standby'], duracaoMin: 7 },
+          'Vocês usam um visor de realidade aumentada acoplado ao boné e coletam moedas ' +
+          'girando o volante e apertando gatilhos. É a atração mais tecnicamente ambiciosa da ' +
+          'área. Sem emoção física — é um jogo.',
+        areaParque: 'Super Nintendo World', acesso: ['standby'],
+        singleRider: true, pesquisa: '2026-09-08' },
 
-      { id: 'b-1911-1720', hora: '17:20', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Doctor Doom’s Fearfall',
-        descricao: 'Torre de lançamento, rápido',
+      { id: 'b-1911-1145', hora: '11:45', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Mine-Cart Madness',
+        descricao: 'Donkey Kong. Trilhos que parecem quebrados',
         contexto:
-          'Torre que atira vocês para cima em vez de soltar de cima. Dura menos de 1 minuto. ' +
-          'A sensação de estômago é forte, mas acaba rápido.',
-        areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
-        singleRider: true, duracaoMin: 1, pesquisa: '2026-09-08' },
+          'Montanha-russa em carrinhos de mina com uma ilusão muito boa: o carrinho parece ' +
+          'saltar trechos de trilho faltando. Familiar, sem inversão.',
+        areaParque: 'Super Nintendo World', acesso: ['standby'],
+        singleRider: true, pesquisa: '2026-09-08' },
 
-      { id: 'b-1911-1750', hora: '17:50', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Flight of the Hippogriff',
-        descricao: 'Coaster leve, 1 min, boa vista do castelo',
-        areaParque: 'Hogsmeade', acesso: ['standby'], duracaoMin: 1 },
-
-      { id: 'b-1911-1830', hora: '18:30', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — Mythos',
-        descricao: 'Já eleito o melhor restaurante de parque temático do mundo',
+      { id: 'b-1911-1220', hora: '12:20', ancora: 'referencia', tipo: 'tarefa',
+        titulo: 'Entrar na lista do Toadstool Cafe',
+        descricao: 'Pelo app. A lista fecha cedo — façam isso às 10h se lembrarem',
         contexto:
-          'Serviço à mesa dentro de uma caverna cenográfica com vista para a lagoa central. ' +
-          'Ganhou várias vezes o prêmio de melhor restaurante de parque temático. ' +
-          'RESERVA CONFIRMADA COMO NECESSÁRIA — está no checklist.',
-        restauranteId: 'r-mythos', areaParque: 'The Lost Continent', acesso: ['reserva'] },
+          'O Toadstool não aceita reserva: funciona por lista virtual pelo app da Universal, e ' +
+          'a lista do almoço costuma fechar antes do meio-dia. Se vocês lembrarem de entrar às ' +
+          '10h, entram; se deixarem para 12h20, pode não ter mais.',
+        acesso: [], critico: true },
 
-      { id: 'b-1911-2000', hora: '20:00', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Hogsmeade à noite',
-        descricao: 'Projeção no castelo, se quiserem rever',
-        areaParque: 'Hogsmeade', acesso: [] },
+      { id: 'b-1911-1245', hora: '12:45', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Almoço — Toadstool Cafe',
+        descricao: '',
+        contexto:
+          'Restaurante temático do Mario, com pratos que imitam os itens do jogo. A comida é ' +
+          'secundária: vocês vão pelo cenário e pela apresentação.',
+        restauranteId: 'r-toadstool', areaParque: 'Super Nintendo World', acesso: [] },
+
+      { id: 'b-1911-1400', hora: '14:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Yoshi’s Adventure',
+        descricao: 'Leve, mas a vista de cima da área é a melhor foto',
+        contexto:
+          'Passeio lento em cima de um Yoshi, elevado sobre a área. É para criança, mas é a ' +
+          'única forma de ver a Super Nintendo World de cima.',
+        areaParque: 'Super Nintendo World', acesso: ['standby'] },
+
+      { id: 'b-1911-1440', hora: '14:40', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Monsters Unchained',
+        descricao: 'Dark Universe. Animatrônicos, a mais elaborada do parque',
+        contexto:
+          'A neta do Dr. Frankenstein faz experimentos com um Drácula capturado, e ele escapa. ' +
+          'É o dark ride mais imersivo do parque, com animatrônicos excepcionais. Tem sustos e ' +
+          'movimento, mas nada de queda grande. Locker obrigatório.',
+        areaParque: 'Dark Universe', acesso: ['standby'],
+        singleRider: true, locker: 'obrigatorio', pesquisa: '2026-09-08' },
+
+      { id: 'b-1911-1535', hora: '15:35', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Curse of the Werewolf',
+        descricao: 'Coaster familiar giratório',
+        contexto:
+          'Montanha-russa de carrinhos que giram livremente conforme o peso — cada volta é ' +
+          'diferente. Leve, mas embrulha o estômago de quem é sensível a rotação.',
+        areaParque: 'Dark Universe', acesso: ['standby'],
+        singleRider: true, pesquisa: '2026-09-08' },
+
+      { id: 'b-1911-1615', hora: '16:15', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Hiccup’s Wing Gliders',
+        descricao: 'Isle of Berk. Lançamento suave, temática linda',
+        contexto:
+          'Coaster familiar de lançamento no mundo de Como Treinar o Seu Dragão. Suave, e a ' +
+          'ambientação da vila viking é das mais bonitas do parque. Locker obrigatório.',
+        areaParque: 'Isle of Berk', acesso: ['standby'],
+        singleRider: true, locker: 'obrigatorio', pesquisa: '2026-09-08' },
+
+      { id: 'b-1911-1700', hora: '17:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Dragon Racer’s Rally',
+        descricao: '',
+        contexto: 'Braços giratórios que vocês controlam para inclinar. Leve e rápido de fazer.',
+        areaParque: 'Isle of Berk', acesso: ['standby'] },
+
+      { id: 'b-1911-1740', hora: '17:40', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Fyre Drill',
+        descricao: 'Interativo, molha',
+        contexto:
+          'Barcos giratórios em que vocês operam canhões de água — e levam água de volta dos ' +
+          'outros barcos e da plateia. Molha de verdade. Deixem para o fim do dia por isso.',
+        areaParque: 'Isle of Berk', acesso: ['standby'], molha: true },
+
+      { id: 'b-1911-1820', hora: '18:20', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Jantar — Atlantic ou Mead Hall',
+        descricao: '',
+        contexto:
+          'Atlantic fica no Celestial Park, com peixes e frutos do mar em ambiente mais ' +
+          'formal. Mead Hall é o salão viking do Isle of Berk, mais casual e mais temático.',
+        restauranteId: 'r-atlantic', acesso: [] },
+
+      { id: 'b-1911-1945', hora: '19:45', ancora: 'fixo', tipo: 'livre',
+        titulo: 'Constellation Carousel e Celestial Park iluminado',
+        descricao: 'O parque à noite é outro lugar',
+        contexto:
+          'O Celestial Park é a área central, com fontes coreografadas e iluminação que muda ' +
+          'completamente depois do anoitecer. O carrossel é temático de constelações e as ' +
+          'criaturas se movem de formas diferentes das de um carrossel comum.',
+        areaParque: 'Celestial Park', acesso: [] },
     ],
     ficha: {
       multiPass: null, singlePass: null,
       expressPass: {
         usar: false,
         motivo:
-          'O Hagrid’s saiu do Express em julho de 2026 — vocês pagariam e ainda enfrentariam ' +
-          'a fila que incomoda.',
-        alternativa: 'Express Pass Now dentro do parque (US$ 20–30, uma atração).',
+          'US$ 600 no casal por um dia. A decisão continua sendo não — mas ela ficou menos ' +
+          'confortável: o argumento antigo era que dois dias de ingresso valiam mais que um ' +
+          'dia de Express, e agora só um dia está agendado.',
+        alternativa:
+          'Duas saídas, nesta ordem. Express Pass Now dentro do parque, US$ 20 a 30 por ' +
+          'atração, para resolver uma fila específica. E o segundo dia do ingresso, que ' +
+          'continua pago e válido: se este dia der errado, reclamar o dia 25 custa a noite ' +
+          'do Disney Springs e nada mais.',
       },
       custoEstimadoCasal: { min: 0, max: 0, moeda: 'USD' },
-      extras: [],
+      extras: [
+        { nome: 'Power-Up Band',
+          custo: { min: 40, max: 40, moeda: 'USD' },
+          texto:
+            'Comprem se quiserem jogar os desafios interativos da Super Nintendo World. Sem ' +
+            'ela, metade da área vira só cenário. Custa ~US$ 40. Decisão pendente — está no ' +
+            'checklist de outubro.' },
+      ],
     },
     renuncias: {
       gerais: [
-        { nome: 'Pteranodon Flyers', motivo: 'Só com criança' },
-        { nome: 'Storm Force Accelatron' }, { nome: 'Caro-Seuss-el' },
-        { nome: 'One Fish Two Fish' }, { nome: 'Cat in the Hat' },
-        { nome: 'Popeye e Dudley Do-Right',
-          motivo: 'Molham muito e vocês já vão molhar no Jurassic Park' },
+        { nome: 'Astronomica',
+          motivo: 'Área interativa de brincar no Celestial Park. Vocês passam por ela ' +
+                  'quatro vezes no dia, indo de uma land para outra — se der vontade, é ' +
+                  'parar cinco minutos, não é bloco.' },
+        { nome: 'Bowser Jr. Shadow Showdown',
+          motivo: 'A menor fila do parque, 9 minutos de média, e é o único brinquedo ' +
+                  'classificado como infantil. Casal sem crianças não perde nada.' },
       ],
-      idioma: null, fechado: [],
+      idioma: {
+        itens: ['Le Cirque Arcanus', 'The Untrainable Dragon'],
+        motivo:
+          'Os dois shows de teatro do parque, falados em inglês. Mesmo teste que reprovou o ' +
+          'American Adventure no Epcot e o Indiana Jones no Hollywood Studios: são 25 a 30 ' +
+          'minutos sentados que rendem muito mais andando.\n\n' +
+          'ESTES DOIS, mais as duas áreas de brincar acima, SÃO A DIFERENÇA INTEIRA entre um ' +
+          'dia e dois no Epic Universe. Verificado em 10/09: o parque tem 11 atrações de ' +
+          'brinquedo, 2 shows e 2 áreas de brincar — e as 11 de brinquedo estão todas neste ' +
+          'dia. Foi por isso que o segundo turno pôde virar a despedida no Disney Springs.',
+      },
+      fechado: [],
     },
   },
 
@@ -3976,9 +4036,9 @@ window.ROTEIRO = {
         titulo: 'VAZIO PROPOSITAL',
         descricao: 'Descanso no hotel',
         contexto:
-          'Não preencham. A partir de amanhã são cinco dias seguidos pesados: Winter Garden ' +
-          'com hóquei à noite, SeaWorld, Epic, Busch Gardens com 3h de carro, e o último dia ' +
-          'de compras terminando tarde no Disney Springs.',
+          'Não preencham. A partir de amanhã são quatro dias seguidos pesados: Winter Garden ' +
+          'com hóquei à noite, SeaWorld, Islands of Adventure, e Busch Gardens com 3h de ' +
+          'carro — antes do último dia de compras, que termina tarde no Disney Springs.',
         acesso: [] },
 
       { id: 'b-2011-1530', hora: '15:30', ancora: 'fixo', tipo: 'tarefa',
@@ -4273,200 +4333,194 @@ window.ROTEIRO = {
     },
   },
 
-  /* ===== 23/11 · SEGUNDA · EPIC UNIVERSE (dia 1) ======================== */
+  /* ===== 23/11 · SEGUNDA · ISLANDS OF ADVENTURE ========================= */
   {
     id: 'd-2026-11-23',
     data: '2026-11-23',
     diaSemana: 'segunda',
-    emoji: '🌌',
-    titulo: 'Epic Universe — dia 1',
-    subtitulo: 'Hoje é para o que tem fila grande',
+    emoji: '⚡',
+    titulo: 'Islands of Adventure',
+    subtitulo: 'O dia mais forte em montanha-russa da viagem',
     tipo: 'parque',
     operadora: 'universal',
-    parqueId: 'epic-universe',
+    parqueId: 'islands-of-adventure',
     custoZero: false,
     referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: false },
     resumo:
-      'O melhor dia da semana para o parque mais concorrido de Orlando. Sem Early Park ' +
-      'Admission, o portão é a estratégia — e este é o único dia de Epic da viagem, então ' +
-      'o que não couber hoje não acontece.',
+      'Hagrid’s não aceita Express desde julho de 2026 — a única arma é chegar primeiro. ' +
+      'Hoje é o dia com mais locker obrigatório da viagem: contem 10 a 15 minutos extras em ' +
+      'Hulk, VelociCoaster, Hagrid’s e Forbidden Journey.',
     avisos: [
-      'Standby em tudo, os dois juntos. O segundo turno de 25/11 saiu do roteiro e virou a ' +
-      'noite de Natal no Disney Springs — este dia precisa ser refeito com essa lente antes ' +
-      'da viagem, porque ele foi montado contando com a volta.',
+      'Standby em tudo, os dois juntos. O que compra tempo hoje é a hora de chegada e o peso ' +
+      'da mochila: quatro atrações exigem locker obrigatório e isso custa 40 a 60 minutos ' +
+      'somados. Quanto menos vocês carregarem, mais atração cabe no dia.',
     ],
     notas: [
-      { tipo: 'info', texto:
-        'As três de maior demanda são Battle at the Ministry, Monsters Unchained e Stardust ' +
-        'Racers — e são exatamente as três primeiras do dia. A ordem está certa.',
+      { tipo: 'atencao', texto:
+        'Somando os lockers obrigatórios do dia, são 40 a 60 minutos que o cronograma de ' +
+        '45 min por atração não previu. Levem o mínimo possível: quanto menos bagagem, menos ' +
+        'tempo perdido. Hulk e VelociCoaster têm detector de metal e não passa nem celular.',
         pesquisa: '2026-09-08' },
-      { tipo: 'info', texto:
-        'Early Park Admission no Epic existe, mas só para hóspedes de hotel Universal. Vocês ' +
-        'estão no Travelodge, então não têm. Isso significa que o parque já terá gente ' +
-        'dentro quando vocês entrarem às 9h.', pesquisa: '2026-09-08' },
     ],
     blocos: [
-      { id: 'b-2311-0645', hora: '06:45', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Sair de carro', descricao: '~30 min',
-        localId: 'epic-universe', acesso: [] },
+      { id: 'b-2311-0745', hora: '07:45', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Sair do hotel', descricao: '', localId: 'islands-of-adventure', acesso: [] },
 
-      { id: 'b-2311-0730', hora: '07:30', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Portão',
-        descricao: 'A caminhada do estacionamento até a entrada é longa',
-        contexto:
-          'O Epic tem estacionamento próprio, mas a caminhada até a catraca passa por uma ' +
-          'esplanada grande e leva de 15 a 20 minutos. Chegar 90 minutos antes não é exagero ' +
-          'aqui.',
-        localId: 'epic-universe', acesso: [] },
+      { id: 'b-2311-0830', hora: '08:30', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Portão', descricao: 'Fiquem à esquerda, sentido Hogsmeade',
+        localId: 'islands-of-adventure', acesso: [] },
 
       { id: 'b-2311-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Harry Potter and the Battle at the Ministry',
-        descricao: 'Rope drop. Maior fila do parque, disparado',
+        titulo: 'Hagrid’s Magical Creatures Motorbike Adventure',
+        descricao: 'Rope drop, sem exceção. A melhor de Orlando',
         contexto:
-          'Dark ride pelo Ministério da Magia, misturando cenário físico, animatrônicos e telas ' +
-          'de forma quase invisível. É consenso como a melhor atração do parque e a de maior ' +
-          'demanda. Emoção baixa — é história, não adrenalina.',
-        areaParque: 'Ministry of Magic', acesso: ['rope-drop', 'standby'],
-        singleRider: true, pesquisa: '2026-09-08' },
+          'Montanha-russa de lançamento em motos com sidecar, com sete lançamentos, uma queda ' +
+          'vertical e um trecho de ré. Sem inversões. É considerada a melhor montanha-russa de ' +
+          'Orlando e a fila passa de 2 horas o dia todo. Saiu do Express em julho de 2026: ' +
+          'chegar primeiro é literalmente a única saída.',
+        areaParque: 'Hogsmeade', acesso: ['rope-drop', 'standby'],
+        singleRider: true, locker: 'obrigatorio',
+        lockerNota: 'Pochete de 3 pontos na cintura costuma ser liberada, a critério do funcionário.',
+        pesquisa: '2026-09-08' },
 
-      { id: 'b-2311-1005', hora: '10:05', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Stardust Racers',
-        descricao: 'Celestial Park. Coaster duplo, dois trens correndo',
+      { id: 'b-2311-0955', hora: '09:55', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'VelociCoaster',
+        descricao: 'A mais intensa do parque. Inversões sobre o lago',
         contexto:
-          'Dois trens que correm lado a lado em trilhos separados, com 1500 m de percurso, ' +
-          '133 metros e 100 km/h. Tem a "Celestial Spin", em que os dois carros se cruzam ' +
-          'invertidos. Detector de metal — nada nos bolsos, nem celular.',
-        areaParque: 'Celestial Park', acesso: ['standby'],
+          'Dois lançamentos, 70 metros de altura, quatro inversões e um trecho rasante sobre a ' +
+          'água. É consenso como a melhor montanha-russa da Flórida e uma das melhores do mundo. ' +
+          'Detector de metal: absolutamente nada nos bolsos.',
+        areaParque: 'Jurassic Park', acesso: ['standby'],
         singleRider: true, locker: 'detector', pesquisa: '2026-09-08' },
 
-      { id: 'b-2311-1050', hora: '10:50', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Mario Kart: Bowser’s Challenge',
-        descricao: 'Super Nintendo World. Realidade aumentada',
+      { id: 'b-2311-1040', hora: '10:40', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Forbidden Journey',
+        descricao: 'Dentro do castelo de Hogwarts',
         contexto:
-          'Vocês usam um visor de realidade aumentada acoplado ao boné e coletam moedas ' +
-          'girando o volante e apertando gatilhos. É a atração mais tecnicamente ambiciosa da ' +
-          'área. Sem emoção física — é um jogo.',
-        areaParque: 'Super Nintendo World', acesso: ['standby'],
-        singleRider: true, pesquisa: '2026-09-08' },
-
-      { id: 'b-2311-1145', hora: '11:45', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Mine-Cart Madness',
-        descricao: 'Donkey Kong. Trilhos que parecem quebrados',
-        contexto:
-          'Montanha-russa em carrinhos de mina com uma ilusão muito boa: o carrinho parece ' +
-          'saltar trechos de trilho faltando. Familiar, sem inversão.',
-        areaParque: 'Super Nintendo World', acesso: ['standby'],
-        singleRider: true, pesquisa: '2026-09-08' },
-
-      { id: 'b-2311-1220', hora: '12:20', ancora: 'referencia', tipo: 'tarefa',
-        titulo: 'Entrar na lista do Toadstool Cafe',
-        descricao: 'Pelo app. A lista fecha cedo — façam isso às 10h se lembrarem',
-        contexto:
-          'O Toadstool não aceita reserva: funciona por lista virtual pelo app da Universal, e ' +
-          'a lista do almoço costuma fechar antes do meio-dia. Se vocês lembrarem de entrar às ' +
-          '10h, entram; se deixarem para 12h20, pode não ter mais.',
-        acesso: [], critico: true },
-
-      { id: 'b-2311-1245', hora: '12:45', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Almoço — Toadstool Cafe',
-        descricao: '',
-        contexto:
-          'Restaurante temático do Mario, com pratos que imitam os itens do jogo. A comida é ' +
-          'secundária: vocês vão pelo cenário e pela apresentação.',
-        restauranteId: 'r-toadstool', areaParque: 'Super Nintendo World', acesso: [] },
-
-      { id: 'b-2311-1400', hora: '14:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Yoshi’s Adventure',
-        descricao: 'Leve, mas a vista de cima da área é a melhor foto',
-        contexto:
-          'Passeio lento em cima de um Yoshi, elevado sobre a área. É para criança, mas é a ' +
-          'única forma de ver a Super Nintendo World de cima.',
-        areaParque: 'Super Nintendo World', acesso: ['standby'] },
-
-      { id: 'b-2311-1440', hora: '14:40', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Monsters Unchained',
-        descricao: 'Dark Universe. Animatrônicos, a mais elaborada do parque',
-        contexto:
-          'A neta do Dr. Frankenstein faz experimentos com um Drácula capturado, e ele escapa. ' +
-          'É o dark ride mais imersivo do parque, com animatrônicos excepcionais. Tem sustos e ' +
-          'movimento, mas nada de queda grande. Locker obrigatório.',
-        areaParque: 'Dark Universe', acesso: ['standby'],
+          'Braço robótico que carrega vocês por cenários físicos e telas, com voo sobre ' +
+          'Hogwarts. Balança bastante e causa enjoo em parte das pessoas. A fila atravessa o ' +
+          'castelo por dentro — retratos falantes, sala do Dumbledore — e vale a caminhada.',
+        areaParque: 'Hogsmeade', acesso: ['standby'],
         singleRider: true, locker: 'obrigatorio', pesquisa: '2026-09-08' },
 
-      { id: 'b-2311-1535', hora: '15:35', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Curse of the Werewolf',
-        descricao: 'Coaster familiar giratório',
+      { id: 'b-2311-1125', hora: '11:25', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'The Incredible Hulk Coaster',
+        descricao: 'Lançamento de 0 a 64 km/h em 2 segundos',
         contexto:
-          'Montanha-russa de carrinhos que giram livremente conforme o peso — cada volta é ' +
-          'diferente. Leve, mas embrulha o estômago de quem é sensível a rotação.',
-        areaParque: 'Dark Universe', acesso: ['standby'],
+          'Lançamento dentro de um túnel, sete inversões e muito barulho. Clássica de 1999, ' +
+          'reconstruída em 2016. Detector de metal — nada nos bolsos.',
+        areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
+        singleRider: true, locker: 'detector', pesquisa: '2026-09-08' },
+
+      { id: 'b-2311-1200', hora: '12:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Jurassic Park River Adventure',
+        descricao: 'Molha. Novembro é ameno, mas leve capa',
+        contexto:
+          'Passeio de barco que vira ataque de dinossauros e termina numa queda de 25 metros ' +
+          'no escuro. Molha de verdade, principalmente nas primeiras fileiras. A capa de ' +
+          'chuva do Walmart do dia 10 serve aqui.',
+        areaParque: 'Jurassic Park', acesso: ['standby'],
+        singleRider: true, molha: true, pesquisa: '2026-09-08' },
+
+      { id: 'b-2311-1240', hora: '12:40', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Almoço — Three Broomsticks',
+        descricao: 'Costelinha e frango assado',
+        contexto:
+          'Balcão temático dentro de Hogsmeade, com telhado alto e vigas tortas. Porções ' +
+          'grandes; o combo de costelinha e frango serve dois com folga.',
+        restauranteId: 'r-broomsticks', areaParque: 'Hogsmeade', acesso: [] },
+
+      { id: 'b-2311-1350', hora: '13:50', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'The Amazing Adventures of Spider-Man',
+        descricao: 'Clássico. Ainda é referência técnica',
+        contexto:
+          'Veículo em movimento que combina cenário físico, telas 3D e uma simulação de queda ' +
+          'livre de 120 metros que parece real. É de 1999 e continua sendo estudada como ' +
+          'referência de dark ride.',
+        areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
+        singleRider: true, singleRiderNota: 'Entrada pela esquerda, no corredor que liga a saída à loja.',
+        pesquisa: '2026-09-08' },
+
+      { id: 'b-2311-1435', hora: '14:35', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Skull Island: Reign of Kong',
+        descricao: '',
+        contexto:
+          'Caminhão expedicionário com telas 3D e um animatrônico enorme do Kong no fim. Tem ' +
+          'atores na fila. Escuro e barulhento, mas sem emoção física forte.',
+        areaParque: 'Skull Island', acesso: ['standby'],
         singleRider: true, pesquisa: '2026-09-08' },
 
-      { id: 'b-2311-1615', hora: '16:15', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Hiccup’s Wing Gliders',
-        descricao: 'Isle of Berk. Lançamento suave, temática linda',
+      { id: 'b-2311-1520', hora: '15:20', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Hogwarts Express — ida',
+        descricao: 'Para o Beco Diagonal. Precisa do Park-to-Park, que vocês têm',
         contexto:
-          'Coaster familiar de lançamento no mundo de Como Treinar o Seu Dragão. Suave, e a ' +
-          'ambientação da vila viking é das mais bonitas do parque. Locker obrigatório.',
-        areaParque: 'Isle of Berk', acesso: ['standby'],
-        singleRider: true, locker: 'obrigatorio', pesquisa: '2026-09-08' },
+          'Trem real entre os dois parques, com janelas que são telas mostrando a paisagem e ' +
+          'sombras no corredor da cabine. Leva ~7 minutos e é uma atração, não só transporte.',
+        areaParque: 'Hogsmeade Station', acesso: ['standby'], duracaoMin: 7 },
 
-      { id: 'b-2311-1700', hora: '17:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Dragon Racer’s Rally',
-        descricao: '',
-        contexto: 'Braços giratórios que vocês controlam para inclinar. Leve e rápido de fazer.',
-        areaParque: 'Isle of Berk', acesso: ['standby'] },
+      { id: 'b-2311-1550', hora: '15:50', ancora: 'referencia', tipo: 'livre',
+        titulo: 'Beco Diagonal',
+        descricao: 'Cerveja amanteigada, o que ficou faltando no dia 17',
+        areaParque: 'Diagon Alley', acesso: [] },
 
-      { id: 'b-2311-1740', hora: '17:40', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Fyre Drill',
-        descricao: 'Interativo, molha',
+      { id: 'b-2311-1640', hora: '16:40', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Hogwarts Express — volta',
+        descricao: 'O trajeto é diferente na volta. Façam os dois',
         contexto:
-          'Barcos giratórios em que vocês operam canhões de água — e levam água de volta dos ' +
-          'outros barcos e da plateia. Molha de verdade. Deixem para o fim do dia por isso.',
-        areaParque: 'Isle of Berk', acesso: ['standby'], molha: true },
+          'A ida e a volta têm filmes e cenas completamente diferentes — não é o mesmo passeio ' +
+          'invertido. É por isso que vale fazer os dois sentidos.',
+        areaParque: 'King’s Cross', acesso: ['standby'], duracaoMin: 7 },
 
-      { id: 'b-2311-1820', hora: '18:20', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — Atlantic ou Mead Hall',
-        descricao: '',
+      { id: 'b-2311-1720', hora: '17:20', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Doctor Doom’s Fearfall',
+        descricao: 'Torre de lançamento, rápido',
         contexto:
-          'Atlantic fica no Celestial Park, com peixes e frutos do mar em ambiente mais ' +
-          'formal. Mead Hall é o salão viking do Isle of Berk, mais casual e mais temático.',
-        restauranteId: 'r-atlantic', acesso: [] },
+          'Torre que atira vocês para cima em vez de soltar de cima. Dura menos de 1 minuto. ' +
+          'A sensação de estômago é forte, mas acaba rápido.',
+        areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
+        singleRider: true, duracaoMin: 1, pesquisa: '2026-09-08' },
 
-      { id: 'b-2311-1945', hora: '19:45', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Constellation Carousel e Celestial Park iluminado',
-        descricao: 'O parque à noite é outro lugar',
+      { id: 'b-2311-1750', hora: '17:50', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Flight of the Hippogriff',
+        descricao: 'Coaster leve, 1 min, boa vista do castelo',
+        areaParque: 'Hogsmeade', acesso: ['standby'], duracaoMin: 1 },
+
+      { id: 'b-2311-1830', hora: '18:30', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Jantar — Mythos',
+        descricao: 'Já eleito o melhor restaurante de parque temático do mundo',
         contexto:
-          'O Celestial Park é a área central, com fontes coreografadas e iluminação que muda ' +
-          'completamente depois do anoitecer. O carrossel é temático de constelações e as ' +
-          'criaturas se movem de formas diferentes das de um carrossel comum.',
-        areaParque: 'Celestial Park', acesso: [] },
+          'Serviço à mesa dentro de uma caverna cenográfica com vista para a lagoa central. ' +
+          'Ganhou várias vezes o prêmio de melhor restaurante de parque temático. ' +
+          'RESERVA CONFIRMADA COMO NECESSÁRIA — está no checklist.',
+        restauranteId: 'r-mythos', areaParque: 'The Lost Continent', acesso: ['reserva'] },
+
+      { id: 'b-2311-2000', hora: '20:00', ancora: 'fixo', tipo: 'livre',
+        titulo: 'Hogsmeade à noite',
+        descricao: 'Projeção no castelo, se quiserem rever',
+        areaParque: 'Hogsmeade', acesso: [] },
     ],
     ficha: {
       multiPass: null, singlePass: null,
       expressPass: {
         usar: false,
         motivo:
-          'US$ 600 no casal por um dia. A decisão continua sendo não — mas ela ficou menos ' +
-          'confortável: o argumento antigo era que dois dias de ingresso valiam mais que um ' +
-          'dia de Express, e agora só um dia está agendado.',
-        alternativa:
-          'Duas saídas, nesta ordem. Express Pass Now dentro do parque, US$ 20 a 30 por ' +
-          'atração, para resolver uma fila específica. E o segundo dia do ingresso, que ' +
-          'continua pago e válido: se este dia der errado, reclamar o dia 25 custa a noite ' +
-          'do Disney Springs e nada mais.',
+          'O Hagrid’s saiu do Express em julho de 2026 — vocês pagariam e ainda enfrentariam ' +
+          'a fila que incomoda.',
+        alternativa: 'Express Pass Now dentro do parque (US$ 20–30, uma atração).',
       },
       custoEstimadoCasal: { min: 0, max: 0, moeda: 'USD' },
-      extras: [
-        { nome: 'Power-Up Band',
-          custo: { min: 40, max: 40, moeda: 'USD' },
-          texto:
-            'Comprem se quiserem jogar os desafios interativos da Super Nintendo World. Sem ' +
-            'ela, metade da área vira só cenário. Custa ~US$ 40. Decisão pendente — está no ' +
-            'checklist de outubro.' },
-      ],
+      extras: [],
     },
-    renuncias: null,
+    renuncias: {
+      gerais: [
+        { nome: 'Pteranodon Flyers', motivo: 'Só com criança' },
+        { nome: 'Storm Force Accelatron' }, { nome: 'Caro-Seuss-el' },
+        { nome: 'One Fish Two Fish' }, { nome: 'Cat in the Hat' },
+        { nome: 'Popeye e Dudley Do-Right',
+          motivo: 'Molham muito e vocês já vão molhar no Jurassic Park' },
+      ],
+      idioma: null, fechado: [],
+    },
   },
 
   /* ===== 24/11 · TERÇA · BUSCH GARDENS TAMPA ============================ */
@@ -4865,7 +4919,7 @@ window.ROTEIRO = {
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Balcão, sem reserva', blocoId: 'b-1411-2100',
       nota: 'Balcão dentro da Hogsmeade decorada — não leva gorjeta. Vocês voltam a comer ' +
-            'aqui no almoço do dia 19; se quiserem variar, é o dia 19 que muda.' },
+            'aqui no almoço do dia 23; se quiserem variar, é o dia 23 que muda.' },
 
     { id: 'r-docking-bay', nome: 'Docking Bay 7', data: '2026-11-15', hora: '12:20',
       refeicao: 'almoco', local: 'Hollywood Studios · Galaxy’s Edge',
@@ -4907,17 +4961,17 @@ window.ROTEIRO = {
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: null, blocoId: 'b-1711-1800', nota: null },
 
-    { id: 'r-broomsticks', nome: 'Three Broomsticks', data: '2026-11-19', hora: '12:40',
+    { id: 'r-broomsticks', nome: 'Three Broomsticks', data: '2026-11-23', hora: '12:40',
       refeicao: 'almoco', local: 'Islands of Adventure · Hogsmeade', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Mobile order pelo app da Universal', blocoId: 'b-1911-1240',
+      canal: 'Mobile order pelo app da Universal', blocoId: 'b-2311-1240',
       nota: 'Costelinha e frango assado. Combo serve dois com folga.' },
 
-    { id: 'r-mythos', nome: 'Mythos', data: '2026-11-19', hora: '18:30',
+    { id: 'r-mythos', nome: 'Mythos', data: '2026-11-23', hora: '18:30',
       refeicao: 'jantar', local: 'Islands of Adventure · The Lost Continent',
       alternativas: [],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
-      canal: 'App / site da Universal Orlando', blocoId: 'b-1911-1830',
+      canal: 'App / site da Universal Orlando', blocoId: 'b-2311-1830',
       nota: 'Reserva recomendada — confirmado em 08/09. Já eleito o melhor restaurante de ' +
             'parque temático do mundo.' },
 
@@ -4936,18 +4990,18 @@ window.ROTEIRO = {
       nota: 'Mesas coladas no tanque de tubarões. Prazo médio (outubro). ' +
             'Provavelmente NÃO está coberto pelo plano de refeição — confirmem.' },
 
-    { id: 'r-toadstool', nome: 'Toadstool Cafe', data: '2026-11-23', hora: '12:45',
+    { id: 'r-toadstool', nome: 'Toadstool Cafe', data: '2026-11-19', hora: '12:45',
       refeicao: 'almoco', local: 'Epic Universe · Super Nintendo World', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Lista virtual pelo app da Universal', blocoId: 'b-2311-1245',
+      canal: 'Lista virtual pelo app da Universal', blocoId: 'b-1911-1245',
       nota: 'Não aceita reserva: lista virtual pelo app, e ela fecha antes do meio-dia. ' +
             'Entrem na lista às 10h.' },
 
-    { id: 'r-atlantic', nome: 'Atlantic', data: '2026-11-23', hora: '18:20',
+    { id: 'r-atlantic', nome: 'Atlantic', data: '2026-11-19', hora: '18:20',
       refeicao: 'jantar', local: 'Epic Universe · Celestial Park',
       alternativas: ['Mead Hall (Isle of Berk)'],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
-      canal: 'App / site da Universal Orlando', blocoId: 'b-2311-1820',
+      canal: 'App / site da Universal Orlando', blocoId: 'b-1911-1820',
       nota: 'Reserva marcada como necessária por decisão de vocês — obriga a revisitar e ' +
             'confirmar, mesmo que na prática aceite walk-in.' },
 
@@ -5072,14 +5126,31 @@ window.ROTEIRO = {
         'depois de doze horas de viagem — que é exatamente quando ninguém faz.',
       restauranteIds: [] },
 
+    { id: 'ck-epa-epic', dataAlvo: '2026-10-25', dataEstimada: true,
+      motivoData: 'Junto com a conferência dos ingressos, na mesma sessão no app da Universal',
+      hora: null, fuso: null, janelaReserva: false, critico: false,
+      texto: 'Confirmar se hóspede de fora entra junto com o Early Park Admission no Epic',
+      nota:
+        'Duas fontes se contradizem em 10/09. Uma diz que hóspede de fora entra no mesmo ' +
+        'horário do Early Park Admission, só sem poder acessar a Super Nintendo World e a ' +
+        'Dark Universe. A outra diz que não entra antes da abertura oficial.\n\n' +
+        'A diferença muda a primeira hora inteira do dia 19: se entram junto, a Ministry of ' +
+        'Magic e a Isle of Berk ficam abertas antes do horário oficial e o Battle at the ' +
+        'Ministry sai quase de graça. Se não entram, a hora antes do portão é fila parada.\n\n' +
+        'As duas fontes concordam numa coisa: NÃO fazer rope drop na Super Nintendo World.',
+      restauranteIds: [] },
+
     { id: 'ck-ing-universal', dataAlvo: '2026-10-25', dataEstimada: true,
       motivoData: 'Duas semanas antes da viagem, com folga para acionar a agência',
       hora: null, fuso: null, janelaReserva: false, critico: false,
       texto: 'Ingressos Universal aparecendo no app — nos DOIS perfis',
       nota:
-        'Cobre os dias 14, 17, 19, 23 e 25. Confiram especificamente que é PARK-TO-PARK ' +
-        'e que o Epic Universe está incluído: o Hogwarts Express do dia 19 só funciona ' +
-        'com park-to-park, e o Epic é ingresso à parte em muitas combinações.\n\n' +
+        'Cobre os dias 14, 17, 19 e 23 — o dia 25 saiu quando o segundo turno no Epic virou ' +
+        'a despedida no Disney Springs. Confiram especificamente que é PARK-TO-PARK e que o ' +
+        'Epic Universe está incluído: o Hogwarts Express do dia 23 só funciona com ' +
+        'park-to-park, e o Epic é ingresso à parte em muitas combinações.\n\n' +
+        'E confiram se a troca de datas do Epic (era 23/11, virou 19/11) precisa de algum ' +
+        'ajuste: alguns ingressos da Universal são date-based.\n\n' +
         'Riscar só quando aparecer no app da Bianca também.',
       restauranteIds: [] },
 
@@ -5099,9 +5170,9 @@ window.ROTEIRO = {
       texto: 'Reservar Sharks Underwater Grill (SeaWorld, direto no site do parque)',
       restauranteIds: ['r-sharks'] },
 
-    { id: 'ck-mythos', dataAlvo: '2026-10-20', dataEstimada: true, motivoData: '30 dias antes do jantar de 19/11', hora: null, fuso: null,
+    { id: 'ck-mythos', dataAlvo: '2026-10-24', dataEstimada: true, motivoData: '30 dias antes do jantar de 23/11', hora: null, fuso: null,
       janelaReserva: false, critico: false,
-      texto: 'Reservar o Mythos para o jantar de 19/11 (Islands of Adventure)',
+      texto: 'Reservar o Mythos para o jantar de 23/11 (Islands of Adventure)',
       restauranteIds: ['r-mythos'] },
 
     { id: 'ck-homecomin', dataAlvo: '2026-10-26', dataEstimada: true,
@@ -5116,9 +5187,9 @@ window.ROTEIRO = {
         'mesmo lugar.',
       restauranteIds: ['r-homecomin'] },
 
-    { id: 'ck-atlantic', dataAlvo: '2026-10-24', dataEstimada: true, motivoData: '30 dias antes do jantar de 23/11', hora: null, fuso: null,
+    { id: 'ck-atlantic', dataAlvo: '2026-10-20', dataEstimada: true, motivoData: '30 dias antes do jantar de 19/11', hora: null, fuso: null,
       janelaReserva: false, critico: false,
-      texto: 'Reservar o Atlantic para o jantar de 23/11 (Epic Universe)',
+      texto: 'Reservar o Atlantic para o jantar de 19/11 (Epic Universe)',
       nota: 'Marcado como reserva necessária por decisão de vocês, para forçar a revisitar ' +
             'e confirmar — mesmo que na prática aceite walk-in.',
       restauranteIds: ['r-atlantic'] },
@@ -5700,9 +5771,9 @@ window.ROTEIRO = {
         'escurece. As atrações marcadas com o selo "molha" neste app são:\n\n' +
         'Kali River Rapids (13/11) — não é respingo, é balde. E é às 9h15, com nove ' +
         'horas de parque pela frente\n' +
-        'Jurassic Park River Adventure (19/11) — molha bastante, levem capa\n' +
+        'Jurassic Park River Adventure (23/11) — molha bastante, levem capa\n' +
         'Journey to Atlantis (22/11) — molha bastante\n' +
-        'Fyre Drill (23/11) — interativo, molha\n' +
+        'Fyre Drill (19/11) — interativo, molha\n' +
         '\n' +
         'Já foram cortadas do roteiro por molharem demais: Infinity Falls (SeaWorld), ' +
         'Popeye e Dudley Do-Right (Islands), Congo River Rapids e Stanley Falls (Busch).\n\n' +
@@ -5808,8 +5879,8 @@ window.ROTEIRO = {
         'Existem quatro blocos assim no roteiro: 12/11 às 14h30, 14/11 às 9h, 20/11 às 14h e ' +
         '21/11 às 15h.\n\n' +
         'Eles estão ali porque a segunda metade da viagem é mais pesada que a primeira: ' +
-        '19/11 Islands, 21/11 Winter Garden e hóquei, 22/11 SeaWorld, 23/11 Epic e 24/11 ' +
-        'Busch Gardens com 3h de carro. Chegar destruído no dia 23 transforma o melhor ' +
+        '19/11 Epic, 21/11 Winter Garden e hóquei, 22/11 SeaWorld, 23/11 Islands e 24/11 ' +
+        'Busch Gardens com 3h de carro. Chegar destruído no dia 19 transforma o melhor ' +
         'parque de Orlando em arrastar-se — e ele virou dia único.\n\n' +
         'Resistam à tentação de encaixar coisa neles.',
     },
