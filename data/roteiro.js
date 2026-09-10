@@ -897,7 +897,8 @@ window.ROTEIRO = {
           'abertura, custa uns 20 minutos de fila. O passe fica livre para o Peter Pan.\n\n' +
           'A Tiana’s Bayou Adventure, que seria a outra da área, está fechada.',
         areaParque: 'Frontierland', acesso: ['rope-drop', 'standby'],
-        critico: true, duracaoMin: 40, pesquisa: '2026-09-10' },
+        critico: true, duracaoMin: 40, pesquisa: '2026-09-10',
+        fila: { min: 20, quando: 'na abertura', pico: 60, estimado: true, fonte: '2026-09-10' } },
 
       { id: 'b-1111-1410', hora: '09:40', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Piratas do Caribe',
@@ -906,7 +907,8 @@ window.ROTEIRO = {
           'Passeio de barco de 1967, o clássico que originou os filmes. Cenários com ' +
           'animatrônicos, uma queda pequena no escuro, quase não molha. A capacidade é ' +
           'altíssima, então a fila anda mesmo quando parece grande — não vale gastar passe.',
-        areaParque: 'Adventureland', acesso: ['standby'], duracaoMin: 35 },
+        areaParque: 'Adventureland', acesso: ['standby'], duracaoMin: 35,
+        fila: { min: 15, quando: 'de manhã', pico: 45, estimado: true, fonte: '2026-09-10' } },
 
       { id: 'b-1111-1545', hora: '10:15', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Jungle Cruise',
@@ -918,7 +920,8 @@ window.ROTEIRO = {
           'vazia a esta hora. Depois das 11h ela passa de uma hora.\n\n' +
           'ATENÇÃO: é a única do dia que depende inteiramente de inglês falado. Se o humor ' +
           'não pegar, é o primeiro bloco a sacrificar quando o dia atrasar.',
-        areaParque: 'Adventureland', acesso: ['standby'], duracaoMin: 45 },
+        areaParque: 'Adventureland', acesso: ['standby'], duracaoMin: 45,
+        fila: { min: 25, quando: 'antes das 11h', pico: 60, fonte: '2026-09-10' } },
 
       { id: 'b-1111-1150', hora: '11:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mansão Mal-Assombrada',
@@ -931,7 +934,8 @@ window.ROTEIRO = {
           'ESTA É A PRIMEIRA RESERVA DO DIA E É POR ISSO QUE ELA VEM CEDO. No segundo em ' +
           'que vocês passarem a catraca, abre espaço para reservar a próxima — e a restrição ' +
           'de lista cai junto. Reservem o SPACE MOUNTAIN ali mesmo, de pé na saída.',
-        areaParque: 'Liberty Square', acesso: ['multi-pass'], critico: true, duracaoMin: 35 },
+        areaParque: 'Liberty Square', acesso: ['multi-pass'], critico: true, duracaoMin: 35,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 40, fonte: '2026-09-10' } },
 
       { id: 'b-1111-1115p', hora: '11:35', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
@@ -966,7 +970,8 @@ window.ROTEIRO = {
           'Passeio de barco de 1964 com centenas de bonecos animatrônicos e a música que ' +
           'gruda na cabeça por três dias. Lento e climatizado — serve de descanso depois do ' +
           'almoço, e a fila engana: some rápido.',
-        areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 35 },
+        areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 35,
+        fila: { min: 25, quando: 'depois do almoço', pico: 35, fonte: '2026-09-10' } },
 
       { id: 'b-1111-1015', hora: '13:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Peter Pan’s Flight',
@@ -978,7 +983,8 @@ window.ROTEIRO = {
           'É a ÚNICA reserva de lista alta que vocês gastam no dia. O Big Thunder e o Jungle ' +
           'Cruise, que também são lista alta, vocês fizeram de graça na abertura. O Peter Pan ' +
           'não tem essa saída: ele é ruim de fila o dia inteiro, de manhã à noite.',
-        areaParque: 'Fantasyland', acesso: ['multi-pass'], critico: true, duracaoMin: 30 },
+        areaParque: 'Fantasyland', acesso: ['multi-pass'], critico: true, duracaoMin: 30,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 70, fonte: '2026-09-10' } },
 
       { id: 'b-1111-1630', hora: '13:50', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mickey’s PhilharMagic',
@@ -987,7 +993,8 @@ window.ROTEIRO = {
           'Filme 3D com efeitos no teatro — cheiro, água, ar. Praticamente sem diálogo ' +
           'relevante, então não sofre com a barreira de idioma. É o melhor bloco de descanso ' +
           'do parque, e cai na pior hora de calor de propósito.',
-        areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 20 },
+        areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 20,
+        fila: { min: 10, quando: 'quase sempre', pico: 20, fonte: '2026-09-10' } },
 
       { id: 'b-1111-1645p', hora: '14:10', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
@@ -1052,7 +1059,8 @@ window.ROTEIRO = {
           '21h25, na última hora, que é a outra janela boa do dia.\n\n' +
           'Guardem tudo no locker antes — o TRON não permite nada solto.',
         areaParque: 'Tomorrowland', acesso: ['standby'], locker: true,
-        critico: true, duracaoMin: 55, pesquisa: '2026-09-10' },
+        critico: true, duracaoMin: 55, pesquisa: '2026-09-10',
+        fila: { min: 50, quando: 'na janela do desfile', pico: 90, estimado: true, fonte: '2026-09-10' } },
 
       { id: 'b-1111-1515p', hora: '16:25', ancora: 'fixo', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
@@ -1071,7 +1079,8 @@ window.ROTEIRO = {
           '— é uma das mais desconfortáveis para coluna do complexo.\n\n' +
           'É lista alta e vocês pegam com a reserva rolante, sem ter gasto nada da compra ' +
           'inicial nela.',
-        areaParque: 'Tomorrowland', acesso: ['multi-pass'], duracaoMin: 35 },
+        areaParque: 'Tomorrowland', acesso: ['multi-pass'], duracaoMin: 35,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 60, fonte: '2026-09-10' } },
 
       { id: 'b-1111-1700', hora: '17:15', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Buzz Lightyear',
@@ -1079,7 +1088,8 @@ window.ROTEIRO = {
         contexto:
           'Dark ride onde vocês atiram em alvos e disputam pontuação. Girem a cabine com o ' +
           'joystick central para mirar melhor, e os alvos com Z valem mais.',
-        areaParque: 'Tomorrowland', acesso: ['multi-pass'], duracaoMin: 40 },
+        areaParque: 'Tomorrowland', acesso: ['multi-pass'], duracaoMin: 40,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 35, fonte: '2026-09-10' } },
 
       { id: 'b-1111-1745', hora: '17:55', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Casey’s Corner',
@@ -1132,7 +1142,8 @@ window.ROTEIRO = {
           'A maior parte das vinte mil pessoas vai embora logo depois dos fogos, às 20h25, e ' +
           'as filas despencam. É por isso que hoje vocês ficam até o fim.',
         areaParque: 'Fantasyland', acesso: ['standby'], critico: true, duracaoMin: 55,
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        fila: { min: 40, quando: 'na última hora', pico: 90, estimado: true, fonte: '2026-09-10' } },
 
       { id: 'b-1111-2125', hora: '21:25', ancora: 'fixo', tipo: 'atracao',
         titulo: 'TRON de novo, se ainda tiverem pique',
@@ -1144,7 +1155,8 @@ window.ROTEIRO = {
           'Se o corpo não pedir, cortem sem culpa. Vocês estão no segundo dia de viagem e ' +
           'amanhã é o único dia sem alarme da primeira semana.',
         areaParque: 'Tomorrowland', acesso: ['standby'], locker: true, opcional: true,
-        duracaoMin: 35 },
+        duracaoMin: 35,
+        fila: { min: 35, quando: 'na última hora', pico: 90, estimado: true, fonte: '2026-09-10' } },
 
       { id: 'b-1111-2100', hora: '22:00', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Sair — pelo FERRY, não pelo monotrilho',

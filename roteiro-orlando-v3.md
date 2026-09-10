@@ -76,6 +76,28 @@ No Islands, o Hagrid's saiu do Express em julho de 2026 — vocês pagariam e ai
 | **21h25** | TRON de novo, se tiverem pique | Opcional. É também o plano B da fila das 15h30 |
 | **22h00** | Sair — **pelo ferry**, não pelo monotrilho | |
 
+### Por que o dia está nesta ordem — a fila típica de cada uma
+
+| Atração | Quando vocês fazem | Fila aí | No pico |
+|---|---|---|---|
+| Big Thunder Mountain | 9h00, na abertura | ~20 min | ~60 |
+| Piratas do Caribe | 9h40, de manhã | ~15 min | ~45 |
+| Jungle Cruise | 10h15, antes das 11h | ~25 min | ~60 |
+| Mansão Mal-Assombrada | 11h00, Multi Pass | ~10 min | ~40 |
+| it's a small world | 12h45 | ~25 min | ~35 |
+| **Peter Pan's Flight** | 13h20, Multi Pass | ~10 min | **~70** |
+| Mickey's PhilharMagic | 13h50 | ~10 min | ~20 |
+| **TRON Lightcycle / Run** | 15h30, na janela do desfile | ~50 min | **~90** |
+| Space Mountain | 16h40, Multi Pass | ~10 min | ~60 |
+| Buzz Lightyear | 17h15, Multi Pass | ~10 min | ~35 |
+| **Seven Dwarfs Mine Train** | 20h30, na última hora | ~40 min | **~90** |
+
+*Médias publicadas, consultadas em 10/09/2026. As três em negrito são as que
+fazem o dia: o Peter Pan é o único que só cede com passe, e o TRON e o Seven
+Dwarfs são os dois que o roteiro resolve por horário em vez de dinheiro. Quem
+faz o TRON às 9h e o Seven Dwarfs às 11h paga com noventa minutos de fila cada,
+ou com dois Single Pass.*
+
 > **As duas escolhas contraintuitivas do dia.** A primeira é começar pela Frontierland em vez de correr para o TRON — sem Early Entry, correr é chegar atrás. A segunda é assistir ao desfile na **Liberty Square**: ele começa na Frontierland, desce a Liberty Square, contorna o hub e só então vai para a Main Street. Quem vê no começo da rota assiste ao mesmo desfile e fica livre quinze minutos antes — que é exatamente o tempo de atravessar por Fantasyland e chegar ao TRON enquanto vinte mil pessoas continuam paradas na Main Street esperando ele chegar.
 
 > **Por que o dia vai até as 22h.** Os fogos são às 20h e o parque fecha às 22h. A multidão vai embora às 20h25 e sobram **duas horas de fila curta** — é nelas que cabem o Seven Dwarfs (média de 80 minutos o dia inteiro) e a segunda chance do TRON. Dá para esticar porque o dia 12 é o único da primeira semana sem alarme.
