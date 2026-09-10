@@ -3,7 +3,7 @@
 
 **Base:** Travelodge by Wyndham, Kissimmee (US-192) · **Chegada:** 10/11, ~12h · **Saída:** 26/11, ~12h
 **Perfil:** casal, sem crianças. Prioridade: clássicos + montanhas-russas fortes.
-**Decisões fechadas:** troca dos dias 21/22/23 confirmada · sem Mickey's Very Merry Christmas Party · sem Express Pass na Universal · carro alugado de 20 a 25/11
+**Decisões fechadas:** troca dos dias 21/22/23 confirmada · sem Mickey's Very Merry Christmas Party · sem Express Pass na Universal · carro alugado de 20 a 25/11, **devolvido no dia 25** · PID já emitida · **o segundo dia no Epic saiu do roteiro** e virou a despedida no Disney Springs
 
 > **Aviso sobre horários:** os horários oficiais dos parques só saem perto da data. Os relógios abaixo assumem abertura às 9h nos parques da Disney e da Universal, com três exceções: **o Animal Kingdom abre às 8h (13/11)**, e o **SeaWorld (22/11) e o Busch Gardens (24/11) abrem às 10h**. Confiram no app em novembro e desloquem o bloco inteiro se mudar — mas atenção: as retas finais dos dias 11 e 13 são fixas de propósito, porque seguem o desfile e o pôr do sol, não a abertura.
 
@@ -426,7 +426,9 @@ Infinity Falls (molha muito e anoitece frio), Sesame Street Land, Wild Arctic, S
 
 O melhor dia da semana para o parque mais concorrido de Orlando. Sem Early Park Admission, o portão é a estratégia.
 
-**Vocês voltam dia 25.** Isso muda tudo: hoje não é para fazer tudo, é para fazer o que tem fila grande. O que sobrar, sobra de propósito.
+**Este é o único dia de Epic da viagem.** O segundo turno de 25/11 saiu do roteiro e virou a noite de Natal no Disney Springs — o que não couber hoje não acontece. Este dia foi montado contando com a volta e precisa ser refeito com essa lente antes da viagem.
+
+O ingresso continua cobrindo dois dias e continua válido: se o dia 23 der errado, reclamar o dia 25 custa a noite do Disney Springs e nada mais.
 
 | Hora | O quê | Como |
 |---|---|---|
@@ -479,23 +481,9 @@ Scorpion, Sand Serpent, Congo River Rapids e Stanley Falls (molham, e vocês tê
 
 ---
 
-# 🌌 25/11 (quarta) — EPIC UNIVERSE (dia 2, tarde e noite)
+# 🛒 25/11 (quarta) — Compras e Disney Springs no Natal
 
-De manhã, compras. À tarde, o parque de novo — de graça, com o ingresso que vocês já têm.
-
-| Hora | O quê |
-|---|---|
-| **9h00** | **Best Buy** (Millenia ou I-Drive) — promoções de Black Friday já começam nesta semana |
-| **11h00** | Outlet, Ross, Marshalls, Walgreens |
-| **13h00** | Almoço |
-| **14h00** | **Arrumar as malas** — pesem tudo, 23 kg por mala |
-| **15h00** | **Devolver o carro** com o tanque cheio. **A partir daqui a noite é de Uber** |
-| **15h30** | Sair para o Epic Universe — de Uber |
-| **16h30** | **O que ficou faltando do dia 23** |
-| **17h30** | **Repetir os favoritos** — agora sem pressa de cobrir o mapa |
-| **18h30** | **Ministry of Magic à noite** — a área muda completamente no escuro |
-| **19h30** | **Super Nintendo World iluminada** e as fotos que vocês não pararam para tirar no dia 23 |
-| **21h00** | Sair |
+*Deixou de ser dia de parque: o segundo turno no Epic saiu e a noite virou a despedida no Disney Springs. O dia está detalhado no `roteiro-orlando-dias-livres.md`.*
 
 ---
 

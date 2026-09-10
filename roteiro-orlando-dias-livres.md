@@ -31,7 +31,7 @@ Os blocos marcados como **VAZIO PROPOSITAL** não são falha de planejamento. Re
 
 **Internet:** as duas linhas têm roaming incluso — Passaporte Américas na Claro, Travel na Vivo. O celular conecta sozinho ao pousar; confiram antes de descer para o nível 6 e, se não conectar, o wifi do MCO resolve enquanto vocês ligam o roaming nos ajustes.
 
-**Ainda sem decoração de Natal** — ela começa em 13/11. Existe uma segunda ida ao Disney Springs justamente para ver isso; a noite dela saiu do dia 21 quando o jogo do Solar Bears entrou e ainda vai ser remarcada.
+**Ainda sem decoração de Natal** — ela começa em 13/11. Vocês voltam ao Disney Springs na noite de **25/11**, a última da viagem, justamente para ver isso.
 
 ---
 
@@ -174,9 +174,9 @@ Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de 
 
 ---
 
-# 🛒 25/11 (quarta) — Compras e segundo turno no Epic
+# 🛒 25/11 (quarta) — Compras e Disney Springs no Natal
 
-*(detalhado no roteiro-orlando-v3.md — repetido aqui só para o app não ficar com buraco)*
+A última noite. De manhã, compras de Black Friday; à noite, a volta ao Disney Springs prometida desde o dia 10 — quando vocês estiveram lá antes de 13/11 e a decoração de Natal ainda não existia.
 
 | Hora | O quê |
 |---|---|
@@ -185,12 +185,18 @@ Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de 
 | **13h00** | Almoço |
 | **14h00** | **Arrumar as malas** — pesem tudo, 23 kg por mala. Antes de devolver o carro: o que não couber ainda dá para trocar numa loja da 192 |
 | **15h00** | **Devolver o carro** com o tanque cheio — mesma filial da 192. **A partir daqui a noite é de Uber** |
-| **15h30** | Sair para o **Epic Universe** — de Uber |
-| **16h30** | O que ficou faltando do dia 23 · repetir os favoritos |
-| **18h30** | **Ministry of Magic à noite** · **Super Nintendo World iluminada** |
-| **21h00** | Voltar |
+| **18h00** | **Disney Springs** — de Uber, ~20 min, US$ 15–25 |
+| **18h30** | **Christmas Tree Stroll** — gratuito. Árvores gigantes temáticas. Peguem o mapa do circuito |
+| **19h30** | Decoração de Natal, música ao vivo, encontro com o Papai Noel |
+| **20h00** | **Jantar de despedida — Homecomin'** ou **Polite Pig** |
+| **21h30** | **World of Disney com calma** — a última compra da viagem. Fecha às 23h |
+| **22h30** | Voltar |
 
-**Alternativa:** se estiverem exaustos, troquem o parque por um jantar de despedida — *Christner's Prime Steak*, *Capital Grille* (Millenia) ou *Bull & Bear* (Waldorf Astoria).
+**O que isso custou:** o segundo turno no Epic Universe. O ingresso continua cobrindo dois dias — o que a viagem não tem mais é a segunda visita agendada. Se o dia 23 der errado, reclamar este dia custa esta noite e nada mais.
+
+**Duas corridas de Uber:** o estacionamento do Disney Springs é gratuito e vocês não vão usá-lo, porque o carro volta para a locadora às 15h.
+
+**Alternativa:** se quiserem jantar sentados de verdade, a despedida pode sair do Disney Springs — *Christner's Prime Steak*, *Capital Grille* (Millenia) ou *Bull & Bear* (Waldorf Astoria). Mas aí é Uber a mais, e as árvores ficam para trás.
 
 ---
 

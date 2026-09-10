@@ -152,8 +152,11 @@ window.ROTEIRO = {
         usar: false,
         motivo:
           'No Islands, o Hagrid’s saiu do Express em julho de 2026 — vocês pagariam e ainda ' +
-          'enfrentariam a fila que incomoda. No Epic, dois dias de ingresso já pago valem mais ' +
-          'que um dia de Express a US$ 600 no casal.',
+          'enfrentariam a fila que incomoda. No Epic, o ingresso cobre dois dias e custa ' +
+          'zero a mais; o Express custa US$ 600 no casal por um.\n\n' +
+          'ATENÇÃO: o segundo dia de Epic saiu do roteiro em 10/09, quando a noite de 25/11 ' +
+          'virou a despedida no Disney Springs. O ingresso continua com os dois dias — o que ' +
+          'a viagem não tem mais é a segunda visita agendada.',
         alternativa:
           'Se algum dia específico ficar insuportável, existe o Express Pass Now dentro do ' +
           'parque — US$ 20 a 30, uma atração.',
@@ -3973,8 +3976,9 @@ window.ROTEIRO = {
         titulo: 'VAZIO PROPOSITAL',
         descricao: 'Descanso no hotel',
         contexto:
-          'Não preencham. A partir de amanhã são cinco dias seguidos pesados: Winter Garden, ' +
-          'SeaWorld, Epic, Busch Gardens com 3h de carro, e Epic de novo.',
+          'Não preencham. A partir de amanhã são cinco dias seguidos pesados: Winter Garden ' +
+          'com hóquei à noite, SeaWorld, Epic, Busch Gardens com 3h de carro, e o último dia ' +
+          'de compras terminando tarde no Disney Springs.',
         acesso: [] },
 
       { id: 'b-2011-1530', hora: '15:30', ancora: 'fixo', tipo: 'tarefa',
@@ -4284,11 +4288,12 @@ window.ROTEIRO = {
     referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: false },
     resumo:
       'O melhor dia da semana para o parque mais concorrido de Orlando. Sem Early Park ' +
-      'Admission, o portão é a estratégia. Vocês voltam dia 25 — então hoje não é para fazer ' +
-      'tudo, é para fazer o que tem fila grande. O que sobrar, sobra de propósito.',
+      'Admission, o portão é a estratégia — e este é o único dia de Epic da viagem, então ' +
+      'o que não couber hoje não acontece.',
     avisos: [
-      'Standby em tudo, os dois juntos. Hoje é a primeira vez em cada atração — e vocês voltam ' +
-      'dia 25, então o que não couber hoje não se perde.',
+      'Standby em tudo, os dois juntos. O segundo turno de 25/11 saiu do roteiro e virou a ' +
+      'noite de Natal no Disney Springs — este dia precisa ser refeito com essa lente antes ' +
+      'da viagem, porque ele foi montado contando com a volta.',
     ],
     notas: [
       { tipo: 'info', texto:
@@ -4442,8 +4447,14 @@ window.ROTEIRO = {
       expressPass: {
         usar: false,
         motivo:
-          'Dois dias de ingresso já pago valem mais que um dia de Express a US$ 600 no casal.',
-        alternativa: 'Express Pass Now dentro do parque (US$ 20–30, uma atração).',
+          'US$ 600 no casal por um dia. A decisão continua sendo não — mas ela ficou menos ' +
+          'confortável: o argumento antigo era que dois dias de ingresso valiam mais que um ' +
+          'dia de Express, e agora só um dia está agendado.',
+        alternativa:
+          'Duas saídas, nesta ordem. Express Pass Now dentro do parque, US$ 20 a 30 por ' +
+          'atração, para resolver uma fila específica. E o segundo dia do ingresso, que ' +
+          'continua pago e válido: se este dia der errado, reclamar o dia 25 custa a noite ' +
+          'do Disney Springs e nada mais.',
       },
       custoEstimadoCasal: { min: 0, max: 0, moeda: 'USD' },
       extras: [
@@ -4619,32 +4630,33 @@ window.ROTEIRO = {
     },
   },
 
-  /* ===== 25/11 · QUARTA · COMPRAS E EPIC UNIVERSE (dia 2) =============== */
+  /* ===== 25/11 · QUARTA · COMPRAS E DISNEY SPRINGS NO NATAL ============= */
   {
     id: 'd-2026-11-25',
     data: '2026-11-25',
     diaSemana: 'quarta',
     emoji: '🛒',
-    titulo: 'Compras e Epic Universe — dia 2',
-    subtitulo: 'Segundo turno · custo zero',
-    tipo: 'parque',
-    operadora: 'universal',
-    parqueId: 'epic-universe',
-    custoZero: true,
-    notaCusto:
-      'A segunda entrada no Epic Universe não custa nada: o ingresso de vocês já cobre. É por ' +
-      'isso que o dia 23 pôde deixar coisas de fora de propósito.',
+    titulo: 'Compras e Disney Springs no Natal',
+    subtitulo: 'A última noite, e a decoração que não existia no dia 10',
+    tipo: 'livre',
+    operadora: null,
+    parqueId: null,
+    custoZero: false,
     referencia: null,
     resumo:
-      'De manhã, compras de Black Friday. À tarde, o parque de novo — de graça, com o ingresso ' +
-      'que vocês já têm. Sem pressa de cobrir o mapa: hoje é repetir favorito e ver o que ' +
-      'ficou faltando.',
-    avisos: [],
+      'De manhã, compras de Black Friday. À noite, a volta ao Disney Springs que estava ' +
+      'prometida desde o dia 10 — quando vocês estiveram lá antes de 13/11 e a decoração de ' +
+      'Natal ainda não existia. É de graça e é literalmente outro lugar.',
+    avisos: [
+      'O segundo turno no Epic Universe saiu daqui para abrir esta noite. O ingresso ' +
+      'continua cobrindo dois dias — o que não acontece é a viagem ter um segundo dia lá.',
+    ],
     alternativa: {
-      titulo: 'Se estiverem exaustos',
+      titulo: 'Se quiserem jantar sentados de verdade',
       texto:
-        'Troquem o parque por um jantar de despedida: Christner’s Prime Steak, Capital Grille ' +
-        '(Millenia) ou Bull & Bear (Waldorf Astoria).',
+        'O jantar da despedida pode sair do Disney Springs: Christner’s Prime Steak, ' +
+        'Capital Grille (Millenia) ou Bull & Bear (Waldorf Astoria). Mas aí é Uber a mais, ' +
+        'e as árvores de Natal ficam para trás.',
     },
     blocos: [
       { id: 'b-2511-0900', hora: '09:00', ancora: 'fixo', tipo: 'compras',
@@ -4690,44 +4702,52 @@ window.ROTEIRO = {
           'que o estacionamento gratuito vinha cobrindo — contem com isso.',
         acesso: [], critico: true },
 
-      { id: 'b-2511-1530', hora: '15:30', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Sair para o Epic Universe',
-        descricao: 'De Uber — o carro já foi devolvido',
-        localId: 'epic-universe', acesso: [] },
-
-      { id: 'b-2511-1630', hora: '16:30', ancora: 'fixo', tipo: 'livre',
-        titulo: 'O que ficou faltando do dia 23',
-        descricao: '',
+      { id: 'b-2511-1800', hora: '18:00', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Disney Springs',
+        descricao: 'De Uber, ~20 min, US$ 15–25. O carro já foi devolvido às 15h',
         contexto:
-          'Use a timeline do dia 23 neste app como lista: o que não estiver marcado como feito ' +
-          'é exatamente o que sobrou.',
-        acesso: [] },
-
-      { id: 'b-2511-1730', hora: '17:30', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Repetir os favoritos',
-        descricao: 'Agora sem pressa de cobrir o mapa',
-        contexto:
-          'Sem meta de cobrir mapa: escolham as duas ou três que valeram mais no dia 23 e ' +
-          'façam de novo, com calma, sabendo o que vem.',
-        acesso: [] },
+          'O estacionamento do Disney Springs é gratuito e vocês não vão usá-lo: o carro voltou para a locadora hoje à tarde, para o dia da volta ser só café e aeroporto. São duas corridas de Uber que essa decisão custa.',
+        localId: 'disney-springs', acesso: [] },
 
       { id: 'b-2511-1830', hora: '18:30', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Ministry of Magic à noite',
-        descricao: 'A área muda completamente no escuro',
-        areaParque: 'Ministry of Magic', acesso: [] },
+        titulo: 'Christmas Tree Stroll',
+        descricao:
+          'Gratuito. Árvores gigantes temáticas — Mansão Mal-Assombrada, Piratas, ' +
+          'A Princesa e o Sapo, O Estranho Mundo de Jack. Peguem o mapa do circuito',
+        contexto:
+          'Circuito de árvores de Natal gigantes espalhadas por Disney Springs, cada uma ' +
+          'decorada com o tema de um filme ou atração. O mapa é distribuído nos quiosques e ' +
+          'transforma o passeio numa caça ao tesouro.',
+        localId: 'disney-springs', acesso: [] },
 
       { id: 'b-2511-1930', hora: '19:30', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Super Nintendo World iluminada',
-        descricao: 'E as fotos que vocês não pararam para tirar no dia 23',
-        areaParque: 'Super Nintendo World', acesso: [] },
+        titulo: 'Decoração de Natal, música ao vivo, encontro com o Papai Noel',
+        descricao: '', localId: 'disney-springs', acesso: [] },
 
-      { id: 'b-2511-2100', hora: '21:00', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Sair', descricao: 'Voltar ao hotel', acesso: [] },
+      { id: 'b-2511-2000', hora: '20:00', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Jantar — Homecomin’ ou Polite Pig',
+        descricao: 'O jantar de despedida. É o que vocês não comeram no dia 10',
+        contexto:
+          'Homecomin’ é comida caseira da Flórida, famoso pelo frango frito — é o mais ' +
+          'concorrido de Disney Springs e costuma ter 1h de espera sem reserva. Polite Pig é ' +
+          'barbecue de balcão, sem espera.',
+        restauranteId: 'r-homecomin', localId: 'disney-springs', acesso: [] },
+
+      { id: 'b-2511-2130', hora: '21:30', ancora: 'fixo', tipo: 'compras',
+        titulo: 'World of Disney, com calma',
+        descricao: 'A última compra da viagem. Fecha às 23h',
+        contexto:
+          'No dia 10 vocês tiveram 1h30 no Disney Springs inteiro. É a maior loja Disney do mundo e os fundos dela têm o que quase nenhum turista acha.\n\n' +
+          'AS MALAS JÁ FORAM PESADAS ÀS 14H. O que entrar aqui entra por cima — comprem sabendo disso, ou deixem espaço de manhã.',
+        localId: 'disney-springs', acesso: [] },
+
+      { id: 'b-2511-2230', hora: '22:30', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voltar', descricao: 'De Uber', acesso: [] },
     ],
     ficha: {
       multiPass: null, singlePass: null,
-      expressPass: { usar: false, motivo: 'Segundo dia, sem pressa. Não faz sentido.' },
-      custoEstimadoCasal: { min: 0, max: 0, moeda: 'USD' },
+      expressPass: null,
+      custoEstimadoCasal: { min: 60, max: 130, moeda: 'USD' },
       extras: [],
     },
     renuncias: null,
@@ -4900,6 +4920,14 @@ window.ROTEIRO = {
       canal: 'App / site da Universal Orlando', blocoId: 'b-1911-1830',
       nota: 'Reserva recomendada — confirmado em 08/09. Já eleito o melhor restaurante de ' +
             'parque temático do mundo.' },
+
+    { id: 'r-homecomin', nome: 'Homecomin’', data: '2026-11-25', hora: '20:00',
+      refeicao: 'jantar', local: 'Disney Springs · Town Center',
+      alternativas: ['Polite Pig'],
+      precisaReserva: true, janelaAbre: null, janelaHora: null,
+      canal: 'Site do restaurante / OpenTable', blocoId: 'b-2511-2000',
+      nota: 'Frango frito. O mais concorrido de Disney Springs — 1h de espera sem reserva. ' +
+            'Polite Pig é a alternativa de balcão, sem espera. É o jantar de despedida.' },
 
     { id: 'r-sharks', nome: 'Sharks Underwater Grill', data: '2026-11-22', hora: '18:30',
       refeicao: 'jantar', local: 'SeaWorld', alternativas: [],
@@ -5075,6 +5103,18 @@ window.ROTEIRO = {
       janelaReserva: false, critico: false,
       texto: 'Reservar o Mythos para o jantar de 19/11 (Islands of Adventure)',
       restauranteIds: ['r-mythos'] },
+
+    { id: 'ck-homecomin', dataAlvo: '2026-10-26', dataEstimada: true,
+      motivoData: '30 dias antes do jantar de 25/11',
+      hora: null, fuso: null, janelaReserva: false, critico: false,
+      texto: 'Reservar o Homecomin\u2019 para o jantar de 25/11 (Disney Springs)',
+      nota:
+        'É o restaurante mais concorrido de Disney Springs e passa de uma hora de ' +
+        'espera sem reserva. É o jantar de despedida da viagem, na última noite — não ' +
+        'é o dia de arriscar uma hora em pé.\n\n' +
+        'Se não conseguirem, o Polite Pig é a alternativa de balcão, sem espera, no ' +
+        'mesmo lugar.',
+      restauranteIds: ['r-homecomin'] },
 
     { id: 'ck-atlantic', dataAlvo: '2026-10-24', dataEstimada: true, motivoData: '30 dias antes do jantar de 23/11', hora: null, fuso: null,
       janelaReserva: false, critico: false,
@@ -5768,9 +5808,9 @@ window.ROTEIRO = {
         'Existem quatro blocos assim no roteiro: 12/11 às 14h30, 14/11 às 9h, 20/11 às 14h e ' +
         '21/11 às 15h.\n\n' +
         'Eles estão ali porque a segunda metade da viagem é mais pesada que a primeira: ' +
-        '19/11 Islands, 22/11 SeaWorld, 23/11 Epic, 24/11 Busch Gardens com 3h de carro e ' +
-        '25/11 Epic de novo. Chegar destruído no dia 23 transforma o melhor parque de Orlando ' +
-        'em arrastar-se.\n\n' +
+        '19/11 Islands, 21/11 Winter Garden e hóquei, 22/11 SeaWorld, 23/11 Epic e 24/11 ' +
+        'Busch Gardens com 3h de carro. Chegar destruído no dia 23 transforma o melhor ' +
+        'parque de Orlando em arrastar-se — e ele virou dia único.\n\n' +
         'Resistam à tentação de encaixar coisa neles.',
     },
   ],
