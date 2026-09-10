@@ -210,7 +210,10 @@ window.Fase3 = (function () {
 
   function blocoRegras() {
     const d = el('details', 'acordeao');
-    d.appendChild(el('summary', null, '⭐  As cinco regras de ouro'));
+    const EXTENSO = ['zero', 'uma', 'duas', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito',
+                     'nove', 'dez'];
+    const qtd = R.regrasDeOuro.length;
+    d.appendChild(el('summary', null, '⭐  As ' + (EXTENSO[qtd] || qtd) + ' regras de ouro'));
     const c = el('div', 'acordeao-corpo');
     R.regrasDeOuro.forEach(function (r) {
       const linha = el('div', 'regra');
@@ -275,42 +278,65 @@ window.Fase3 = (function () {
     return d;
   }
 
+  // O check e gravado pelo id do item, nao pelo texto: o texto muda quando a marca
+  // entra, e a chave por texto apagaria o que ja foi marcado. A chave antiga ainda
+  // e lida, para quem marcou antes de o id existir.
+  const chaveItem = (lista, item) => 'lista:' + lista.id + ':' + (item.id || item.texto);
+  const chaveAntiga = (lista, item) => 'lista:' + lista.id + ':' + item.texto;
+  const itemFeito = (lista, item) =>
+    E.feito(chaveItem(lista, item)) || (item.id ? E.feito(chaveAntiga(lista, item)) : false);
+
   function blocoLista(lista) {
-    const feitos = lista.itens.filter((i) => E.feito('lista:' + lista.id + ':' + i.texto)).length;
+    const feitos = lista.itens.filter((i) => itemFeito(lista, i)).length;
     const d = el('details', 'acordeao');
     d.appendChild(el('summary', null,
       '🛒  ' + lista.titulo + '  ·  ' + feitos + '/' + lista.itens.length));
     const c = el('div', 'acordeao-corpo');
     if (lista.intro) c.appendChild(el('p', 'lista-intro', lista.intro));
 
-    lista.itens.forEach(function (item) {
-      const chave = 'lista:' + lista.id + ':' + item.texto;
-      const marcado = E.feito(chave);
-      const li = el('div', 'item-lista' + (marcado ? ' marcado' : ''));
+    // Na ordem das secoes da loja: a ordem da lista e a rota dentro do Walmart.
+    const secoes = (R.meta.secoesLoja || []).slice();
+    lista.itens.forEach((i) => { if (i.secao && secoes.indexOf(i.secao) < 0) secoes.push(i.secao); });
+    const grupos = secoes
+      .map((s) => ({ secao: s, itens: lista.itens.filter((i) => i.secao === s) }))
+      .filter((g) => g.itens.length);
+    const semSecao = lista.itens.filter((i) => !i.secao);
+    if (semSecao.length) grupos.push({ secao: null, itens: semSecao });
 
-      const chk = el('button', 'bl-check');
-      chk.setAttribute('aria-pressed', marcado ? 'true' : 'false');
-      chk.setAttribute('aria-label', 'Marcar: ' + item.texto);
-      chk.appendChild(svgP('M4 12l6 6L20 6'));
-      chk.addEventListener('click', function () {
-        E.marcarFeito(chave, !E.feito(chave));
-        pintarFechamento(diaEmFoco);
+    grupos.forEach(function (g) {
+      if (g.secao) c.appendChild(el('div', 'lista-secao', g.secao));
+      g.itens.forEach(function (item) {
+        const marcado = itemFeito(lista, item);
+        const li = el('div', 'item-lista' + (marcado ? ' marcado' : ''));
+
+        const chk = el('button', 'bl-check');
+        chk.setAttribute('aria-pressed', marcado ? 'true' : 'false');
+        chk.setAttribute('aria-label', 'Marcar: ' + item.texto);
+        chk.appendChild(svgP('M4 12l6 6L20 6'));
+        chk.addEventListener('click', function () {
+          E.marcarFeito(chaveItem(lista, item), !marcado);
+          if (marcado && item.id) E.marcarFeito(chaveAntiga(lista, item), false);
+          pintarFechamento(diaEmFoco);
+        });
+        li.appendChild(chk);
+
+        const t = el('div', 'item-corpo');
+        const linha = el('div', 'item-texto');
+        linha.appendChild(document.createTextNode(item.texto));
+        if (item.essencial) linha.appendChild(el('span', 'selo selo-critico', 'essencial'));
+        t.appendChild(linha);
+        if (item.marca) t.appendChild(el('div', 'item-marca', item.marca));
+        if (item.alternativaBarata) {
+          t.appendChild(el('div', 'item-barato', 'mais barato: ' + item.alternativaBarata));
+        }
+        if (item.motivo) t.appendChild(el('div', 'item-motivo', item.motivo));
+        li.appendChild(t);
+        c.appendChild(li);
       });
-      li.appendChild(chk);
-
-      const t = el('div', 'item-corpo');
-      const linha = el('div', 'item-texto');
-      linha.appendChild(document.createTextNode(item.texto));
-      if (item.essencial) linha.appendChild(el('span', 'selo selo-critico', 'essencial'));
-      t.appendChild(linha);
-      if (item.motivo) t.appendChild(el('div', 'item-motivo', item.motivo));
-      li.appendChild(t);
-      c.appendChild(li);
     });
     d.appendChild(c);
     return d;
   }
-
   function blocoNaoPerca(itens) {
     const d = el('details', 'acordeao');
     d.appendChild(el('summary', null, '⭐  O que não perder — e o que fica para depois'));

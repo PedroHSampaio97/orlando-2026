@@ -145,5 +145,34 @@ const todosLL = R.dias.flatMap(d => d.blocos).filter(b =>
   (b.acesso || []).some(a => a === 'multi-pass' || a === 'single-pass'));
 ok(todosLL.length > 0, 'blocos com janela de Lightning Lane: ' + todosLL.length);
 
+console.log('\n--- single rider, lista do Walmart e Guia ---');
+const todosBlocos = R.dias.flatMap(d => d.blocos);
+ok(!todosBlocos.some(b => 'singleRider' in b || 'singleRiderNota' in b),
+   'nenhum bloco com o campo antigo singleRider');
+const comSR = todosBlocos.filter(b => b.acessoAlt === 'single-rider');
+ok(comSR.length === 21, 'blocos com single rider: ' + comSR.length + ' (esperado 21)');
+ok(!comSR.some(b => /Hagrid|Everest/.test(b.titulo)),
+   'Hagrid’s e Everest sem selo de single rider (fila saindo ou incerta)');
+const walmart = R.dias[0].listas.find(l => l.id === 'lista-walmart');
+const idsItem = walmart.itens.map(i => i.id);
+ok(idsItem.every(Boolean) && new Set(idsItem).size === idsItem.length,
+   'todo item do Walmart com id unico (' + idsItem.length + ')');
+ok(walmart.itens.every(i => R.meta.secoesLoja.includes(i.secao)),
+   'todo item do Walmart numa secao da loja');
+const textoLista = walmart.itens.map(i => [i.texto, i.marca, i.alternativaBarata].join(' ')).join(' ');
+ok(!/naprox|aleve/i.test(textoLista), 'sem naproxeno na lista (decisao do Pedro)');
+const guia = R.dicas.concat(R.regrasDeOuro);
+ok(guia.every(x => R.meta.momentos.includes(x.momento)), 'toda dica e regra com momento');
+const idsDias = new Set(R.dias.map(d => d.id));
+ok(R.dicas.every(d => (d.dias || []).every(id => idsDias.has(id))),
+   'toda dica de dia especifico aponta para dia que existe');
+const doDia = (id) => R.dicas.filter(d => (d.dias || []).includes(id)).map(d => d.id);
+ok(doDia('d-2026-11-20').includes('dica-bomba-zip') && doDia('d-2026-11-25').includes('dica-bomba-zip'),
+   'a dica da bomba de gasolina aparece nos dias 20 e 25');
+ok(R.dias.flatMap(d => d.notas || []).every(n => R.meta.tiposNota.includes(n.tipo)),
+   'toda nota com tipo conhecido');
+ok(R.contatos.some(c => c.id === 'tel-urgentcare-celebration' && c.numero),
+   'Urgent Care com telefone conferido');
+
 console.log(falhas ? '\n>>> ' + falhas + ' FALHA(S)' : '\n>>> TUDO OK');
 process.exit(falhas ? 1 : 0);

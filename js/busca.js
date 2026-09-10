@@ -39,12 +39,14 @@ window.Busca = (function () {
     naoperca: 'M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.2l5.9-.9z',
     preparar: 'M12 3a9 9 0 1 0 9 9|M12 7v5l3 2',
     plano: 'M9 3v15l-6 3V6zM9 18l6 3M15 21V6l6-3v15z',
+    contato: 'M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z',
   };
   const GRUPO = {
     bloco: 'No roteiro', restaurante: 'Restaurantes',
     local: 'Locais', dica: 'Dicas', pendencia: 'Pendências',
     lista: 'Listas de compras', naoperca: 'O que não perder',
     preparar: 'Deixar pronto na véspera', plano: 'Planos B e C',
+    contato: 'Telefones',
   };
 
   /* ---- índice ---------------------------------------------------------- */
@@ -75,7 +77,8 @@ window.Busca = (function () {
           indice.push({
             tipo: 'lista', nome: it.texto,
             onde: ddmm(dia.data) + ' · ' + l.titulo.split('—')[0].trim(),
-            busca: normal([it.texto, it.motivo, l.titulo].join(' ')),
+            busca: normal([it.texto, it.marca, it.alternativaBarata, it.secao, it.motivo,
+                           l.titulo].join(' ')),
             diaId: dia.id,
           });
         });
@@ -132,6 +135,20 @@ window.Busca = (function () {
       indice.push({
         tipo: 'dica', nome: d.titulo, onde: 'Guia · dicas',
         busca: normal([d.titulo, d.corpo].join(' ')), tela: 'guia',
+      });
+    });
+    // "gelada" e "urgent care" nao achavam nada: regras de ouro e telefones ficavam fora.
+    R.regrasDeOuro.forEach(function (r) {
+      indice.push({
+        tipo: 'dica', nome: 'Regra ' + r.n + ' — ' + r.titulo, onde: 'Guia · regras de ouro',
+        busca: normal([r.titulo, r.texto].join(' ')), tela: 'guia',
+      });
+    });
+    (R.contatos || []).forEach(function (c) {
+      indice.push({
+        tipo: 'contato', nome: c.nome,
+        onde: 'Guia · telefones' + (c.numero ? ' · ' + c.numero : ''),
+        busca: normal([c.nome, c.numero, c.quando].join(' ')), tela: 'guia',
       });
     });
     R.checklist.forEach(function (c) {
@@ -192,7 +209,7 @@ window.Busca = (function () {
       v.appendChild(svg(ICO.local));
       v.appendChild(el('p', null,
         'Busca em ' + indice.length + ' itens: atrações, listas de compras, o que ' +
-        'deixar pronto, restaurantes, locais, dicas e pendências.'));
+        'deixar pronto, restaurantes, locais, dicas, regras de ouro, telefones e pendências.'));
       alvo.appendChild(v);
       return;
     }
@@ -210,7 +227,7 @@ window.Busca = (function () {
     achados.forEach(function (a) { (porTipo[a.tipo] = porTipo[a.tipo] || []).push(a); });
 
     ['bloco', 'lista', 'preparar', 'naoperca', 'plano',
-     'restaurante', 'local', 'dica', 'pendencia'].forEach(function (tipo) {
+     'restaurante', 'local', 'dica', 'contato', 'pendencia'].forEach(function (tipo) {
       const lista = porTipo[tipo];
       if (!lista) return;
       alvo.appendChild(el('div', 'busca-grupo', GRUPO[tipo] + ' · ' + lista.length));
@@ -255,6 +272,6 @@ window.Busca = (function () {
     });
   }
 
-  return { ligar: ligar, abrir: abrir, fechar: fechar,
+  return { ligar: ligar, abrir: abrir, fechar: fechar, normal: normal,
            consultar: consultar, tamanhoIndice: () => indice.length };
 })();

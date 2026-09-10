@@ -21,7 +21,7 @@ Os blocos marcados como **VAZIO PROPOSITAL** não são falha de planejamento. Re
 | **14h15** | Confirmar a internet e chamar o Uber | Rideshare Pickup no nível 6. Só chamem com as malas na mão |
 | **14h45** | Uber para o hotel · check-in | ~30 min, US$ 35–45 |
 | **15h15** | Check-in e largar as malas | O check-in abre às 15h; vocês chegam 15h15 |
-| **15h35** | **Walmart Supercenter** — 3250 Vineland Rd | 4 min do hotel, US$ 7–10. Água (caixa de 24), café, protetor solar, ibuprofeno, barrinhas e frutas |
+| **15h35** | **Walmart Supercenter** — 3250 Vineland Rd | 4 min do hotel, US$ 7–10. A lista completa, com marca e na ordem da loja, está no app. O Publix de 3221 Vineland Rd fica a 600 m, com deli |
 | **16h25** | Voltar ao hotel e guardar as compras | Caixa de 24 garrafas não atravessa o Disney Springs |
 | **16h30** | Comer alguma coisa | Seis horas desde o pouso |
 | **16h55** | **Disney Springs** | Uber, ~20 min, US$ 15–25 |

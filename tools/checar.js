@@ -99,14 +99,12 @@ const CAMPOS_BLOCO = [
   'hora', 'ancora', 'tipo', 'titulo', 'descricao', 'contexto', 'fuso', 'acesso',
   'acessoAlt', 'condicao', 'confirmarHorario', 'molha', 'locker', 'critico',
   'duracaoMin', 'areaParque', 'endereco', 'localId', 'restauranteId', 'pesquisa',
-  'nota', 'opcional', 'fila',
+  'nota', 'opcional', 'fila', 'acessoAltNota',
 ];
 /* Campos que existem de proposito sem uso na tela. Cada um precisa de motivo. */
 const MORTOS_DE_PROPOSITO = {
-  singleRider: 'decisao do Pedro: nao usar. Fica como fato, a interface nao destaca.',
   horaAprox:   'so em dias ainda nao fechados; entra quando o dia for fechado.',
-  lockerNota:  'idem.',
-  singleRiderNota: 'idem singleRider.',
+  lockerNota:  'so em dias ainda nao fechados; entra quando o dia for fechado.',
 };
 const jsTelas = jsFiles.filter((f) => f.startsWith('js/')).map(ler).join('\n');
 const usadosNosDados = new Set();

@@ -612,7 +612,9 @@
       alvo.appendChild(el('div', 'aviso', t));
     });
     (dia.notas || []).forEach(function (n) {
-      const d = el('div', 'aviso ' + (n.tipo === 'atencao' ? '' : 'bom'));
+      // alerta e atencao pedem a mesma cor: as duas sao coisa a resolver, nao boa noticia
+      const resolver = n.tipo === 'atencao' || n.tipo === 'alerta';
+      const d = el('div', 'aviso ' + (resolver ? '' : 'bom'));
       d.textContent = n.texto;
       if (n.pesquisa) {
         d.appendChild(el('span', 'marca-pesquisa',
@@ -621,6 +623,18 @@
       alvo.appendChild(d);
     });
     if (dia.notaCusto) alvo.appendChild(el('div', 'aviso bom', dia.notaCusto));
+
+    // A dica mora uma vez so, em R.dicas. Quando e de dia especifico, aparece aqui
+    // e tambem no indice da aba Guia — mesmo objeto, dois lugares.
+    (R.dicas || []).filter(function (x) { return (x.dias || []).indexOf(dia.id) >= 0; })
+      .forEach(function (x) {
+        const det = el('details', 'acordeao dica dica-hoje');
+        det.appendChild(el('summary', null, '💡  ' + x.titulo));
+        const c = el('div', 'acordeao-corpo');
+        c.appendChild(el('div', 'dica-corpo', x.corpo));
+        det.appendChild(c);
+        alvo.appendChild(det);
+      });
   }
 
   /* ---------------------------------------------------------------------------
@@ -649,6 +663,7 @@
   const ROTULO_ACESSO = {
     'rope-drop': 'rope drop', 'multi-pass': 'multi pass',
     'single-pass': 'single pass', 'standby': 'standby', 'reserva': 'reserva',
+    'single-rider': 'single rider',
   };
 
   const acharLocal = (id) => R.locais.find((l) => l.id === id) || null;
@@ -873,6 +888,9 @@
     if (b.critico) selos.appendChild(el('span', 'selo selo-critico', 'crítico'));
     if (b.opcional) selos.appendChild(el('span', 'selo selo-opcional', 'opcional'));
     if (selos.children.length) card.appendChild(selos);
+    // O que se perde ao trocar de fila: no Forbidden Journey o single rider pula o
+    // castelo, e isso muda a decisao de pe, na frente da atracao.
+    if (b.acessoAltNota) card.appendChild(el('div', 'ct-alt-nota', b.acessoAltNota));
 
     // FILA TÍPICA. O número que importa não é a média do dia, é quanto custa a
     // fila NESTE horário — e quanto custaria no pico. É isso que mostra por que o

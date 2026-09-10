@@ -241,6 +241,10 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .selo-critico     { background: var(--perigo); color: #fff; }
 .selo-estimada    { background: var(--ouro-fundo); color: var(--ouro);
                     box-shadow: inset 0 0 0 1px currentColor; }
+/* fila alternativa: aparece como "ou single rider", ao lado da fila principal */
+.selo-single-rider { background: var(--superficie-2); color: var(--texto);
+                     box-shadow: inset 0 0 0 1px var(--borda-forte); }
+.ct-alt-nota { margin-top: 6px; font-size: 12.5px; line-height: 1.5; color: var(--texto-fraco); }
 
 /* ---------- progresso ---------- */
 .progresso { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--borda); }
@@ -1109,6 +1113,20 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--borda);
   font-weight: 650; }
 
+/* Guia como índice: filtro no lugar, nota dos dias da dica, dica de hoje no dia */
+#tela-guia [hidden] { display: none !important; }
+.guia-item { scroll-margin-top: 80px; }
+.guia-filtro {
+  width: 100%; min-height: 46px; margin: 0 0 8px; padding: 0 14px;
+  border: 1px solid var(--borda-forte); border-radius: var(--r-botao);
+  background: var(--superficie); color: var(--texto); font: inherit; font-size: 16px;
+}
+.guia-vazio { font-size: 14px; color: var(--texto-fraco); margin: 16px 0 0; }
+.guia-nota { font-size: 13.5px; color: var(--texto-fraco); line-height: 1.6; margin: 12px 0 0; }
+.dica-dias { font-size: 11.5px; font-weight: 700; letter-spacing: .04em;
+  color: var(--texto-fraco); margin-bottom: 10px; }
+.dica-hoje { margin-top: 12px; }
+
 .filtros-local { display: flex; gap: 6px; overflow-x: auto; padding: 2px 0 16px;
   scrollbar-width: none; }
 .filtros-local::-webkit-scrollbar { display: none; }
@@ -1249,6 +1267,12 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 }
 .item-motivo { font-size: 12.5px; color: var(--texto-fraco); margin-top: 4px;
   line-height: 1.55; }
+/* seção da loja: a lista é a rota dentro do Walmart */
+.lista-secao { font-size: 11px; font-weight: 800; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--texto-fraco); margin: 20px 0 4px; }
+.item-marca { font-size: 13.5px; font-weight: 650; color: var(--texto); margin-top: 3px;
+  line-height: 1.4; }
+.item-barato { font-size: 12.5px; color: var(--texto-fraco); margin-top: 2px; }
 
 /* ---------- não perca ---------- */
 .nao-perca { padding: 14px 0; border-bottom: 1px solid var(--borda); }

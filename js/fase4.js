@@ -9,6 +9,8 @@ window.Fase4 = (function () {
 
   const R = window.ROTEIRO;
   const $ = (s) => document.querySelector(s);
+  // Mesma normalizacao da lupa global: "farmacia" acha "Farmácia".
+  const normal = (s) => window.Busca.normal(s);
 
   const el = (tag, cls, texto) => {
     const n = document.createElement(tag);
@@ -71,25 +73,85 @@ window.Fase4 = (function () {
     : Math.floor(min / 60) + 'h' + (min % 60 ? String(min % 60).padStart(2, '0') : '');
 
   /* ===========================================================================
-     DICAS
+     GUIA COMO ÍNDICE
+     Quatro seções pelo momento em que se lê, não pelo assunto. A dica de dia
+     específico aparece aqui E na tela do dia dela — é o mesmo objeto de R.dicas.
      ======================================================================== */
-  function pintarDicas() {
-    const alvo = $('#lista-dicas');
-    alvo.innerHTML = '';
-    R.dicas.forEach(function (d) {
-      const det = el('details', 'acordeao dica');
-      det.appendChild(el('summary', null, d.titulo));
-      const c = el('div', 'acordeao-corpo');
-      c.appendChild(el('div', 'dica-corpo', d.corpo));
-      if (d.pesquisa) {
-        c.appendChild(el('div', 'dica-fonte',
-          'Verificado na web em ' + d.pesquisa.split('-').reverse().join('/') + '.'));
-      }
-      det.appendChild(c);
-      alvo.appendChild(det);
-    });
+  const diaCurto = (id) => { const p = id.replace('d-', '').split('-'); return (+p[2]) + '/' + p[1]; };
+
+  function cartaoDica(d) {
+    const det = el('details', 'acordeao dica guia-item');
+    det.appendChild(el('summary', null, d.titulo));
+    const c = el('div', 'acordeao-corpo');
+    if ((d.dias || []).length) {
+      c.appendChild(el('div', 'dica-dias',
+        'Aparece também na tela dos dias ' + d.dias.map(diaCurto).join(', ')));
+    }
+    c.appendChild(el('div', 'dica-corpo', d.corpo));
+    if (d.pesquisa) {
+      c.appendChild(el('div', 'dica-fonte',
+        'Verificado na web em ' + d.pesquisa.split('-').reverse().join('/') + '.'));
+    }
+    det.appendChild(c);
+    det.dataset.busca = normal([d.titulo, d.corpo].join(' '));
+    return det;
   }
 
+  function cartaoRegras() {
+    const det = el('details', 'acordeao guia-item');
+    det.appendChild(el('summary', null, '⭐  Regras de ouro · ' + R.regrasDeOuro.length));
+    const c = el('div', 'acordeao-corpo');
+    R.regrasDeOuro.forEach(function (r) {
+      const linha = el('div', 'regra');
+      linha.appendChild(el('div', 'regra-n', r.n));
+      const t = el('div');
+      t.appendChild(el('div', 'regra-t', r.titulo));
+      t.appendChild(el('div', 'regra-x', r.texto));
+      linha.appendChild(t);
+      c.appendChild(linha);
+    });
+    det.appendChild(c);
+    det.dataset.busca = normal(R.regrasDeOuro.map((r) => r.titulo + ' ' + r.texto).join(' '));
+    return det;
+  }
+
+  function pintarDicas() {
+    const antes = $('#guia-antes'), diaAdia = $('#guia-dia'), errado = $('#guia-errado');
+    antes.innerHTML = ''; diaAdia.innerHTML = ''; errado.innerHTML = '';
+    diaAdia.appendChild(cartaoRegras());
+
+    const destino = {
+      'antes-de-viajar': antes, 'todo-dia': diaAdia,
+      'dia-especifico': diaAdia, 'emergencia': errado,
+    };
+    // as de todo dia antes das de dia marcado: é a ordem em que elas servem
+    const ordem = { 'antes-de-viajar': 0, 'todo-dia': 1, 'dia-especifico': 2, 'emergencia': 3 };
+    R.dicas.slice()
+      .sort((a, b) => (ordem[a.momento] || 0) - (ordem[b.momento] || 0))
+      .forEach((d) => (destino[d.momento] || diaAdia).appendChild(cartaoDica(d)));
+
+    const pend = el('p', 'guia-nota guia-item',
+      'O que ainda precisa ser resolvido no Brasil — reservas, ingressos, documentos — ' +
+      'está na aba Pendências, com data.');
+    pend.dataset.busca = normal('pendencias reservas ingressos documentos brasil');
+    antes.appendChild(pend);
+  }
+
+  // Filtro no lugar: esconde o que não bate e a seção que ficar vazia.
+  function filtrarGuia(q) {
+    const termos = normal(q).split(/\s+/).filter(Boolean);
+    const itens = document.querySelectorAll('#tela-guia .guia-item');
+    itens.forEach(function (n) {
+      const alvo = n.dataset.busca || '';
+      n.hidden = termos.length > 0 && !termos.every((t) => alvo.indexOf(t) >= 0);
+    });
+    document.querySelectorAll('#tela-guia .guia-secao').forEach(function (s) {
+      const algum = [].some.call(s.querySelectorAll('.guia-item'), (n) => !n.hidden);
+      s.hidden = termos.length > 0 && !algum;
+    });
+    const algum = [].some.call(itens, (n) => !n.hidden);
+    $('#guia-vazio').hidden = !(termos.length && !algum);
+  }
   /* ===========================================================================
      TELEFONES
      Link tel: abre o discador do proprio aparelho. Nao e requisicao de rede:
@@ -99,7 +161,8 @@ window.Fase4 = (function () {
     const alvo = $('#lista-contatos');
     alvo.innerHTML = '';
     (R.contatos || []).forEach(function (c) {
-      const cartao = el('div', 'contato' + (c.critico ? ' contato-critico' : ''));
+      const cartao = el('div', 'contato guia-item' + (c.critico ? ' contato-critico' : ''));
+      cartao.dataset.busca = normal([c.nome, c.numero, c.quando].join(' '));
       const topo = el('div', 'contato-topo');
       topo.appendChild(el('div', 'contato-nome', c.nome));
       if (c.numero) {
@@ -179,11 +242,14 @@ window.Fase4 = (function () {
         return ta - tb;
       })
       .forEach((l) => alvo.appendChild(cartaoLocal(l, base)));
+    // o chip de tipo repinta os locais; o termo digitado continua valendo
+    filtrarGuia($('#guia-filtro').value);
   }
 
   function cartaoLocal(l, base) {
     const ehBase = l.id === R.viagem.baseLocalId;
-    const cx = el('div', 'local t-' + l.tipo);
+    const cx = el('div', 'local guia-item t-' + l.tipo);
+    cx.dataset.busca = normal([l.nome, l.endereco, l.tipo, l.nota].join(' '));
 
     const topo = el('div', 'local-topo');
     const ico = el('div', 'local-icone');
@@ -275,7 +341,15 @@ window.Fase4 = (function () {
     return cx;
   }
 
-  function pintarGuia() { pintarContatos(); pintarDicas(); pintarLocais(); }
+  let filtroLigado = false;
+  function pintarGuia() {
+    pintarDicas(); pintarContatos(); pintarLocais();
+    if (!filtroLigado) {
+      $('#guia-filtro').addEventListener('input', function (e) { filtrarGuia(e.target.value); });
+      filtroLigado = true;
+    }
+    filtrarGuia($('#guia-filtro').value);
+  }
 
   return { pintarGuia: pintarGuia };
 })();

@@ -115,15 +115,31 @@
 <!-- ====================== GUIA ====================== -->
 <main class="tela oculto" id="tela-guia">
   <h1 class="tela-titulo">Guia</h1>
-  <p class="tela-sub">Dicas de campo e os endereços da viagem.</p>
-  <h2 class="secao-rotulo">Telefones</h2>
-  <div id="lista-contatos"></div>
-  <h2 class="secao-rotulo">Dicas</h2>
-  <div id="lista-dicas"></div>
-  <h2 class="secao-rotulo">Locais</h2>
-  <div class="aviso" id="aviso-coords"></div>
-  <div class="filtros-local" id="filtros-local"></div>
-  <div id="lista-locais"></div>
+  <p class="tela-sub">Tudo o que vale saber na viagem, pelo momento em que se usa.</p>
+  <input class="guia-filtro" id="guia-filtro" type="search" autocomplete="off"
+    placeholder="Filtrar: gorjeta, farmácia, Uber…" aria-label="Filtrar o Guia">
+  <p class="guia-vazio" id="guia-vazio" hidden>Nada no Guia com esse termo. A lupa do topo busca no roteiro inteiro.</p>
+
+  <section class="guia-secao">
+    <h2 class="secao-rotulo">Antes de viajar</h2>
+    <div id="guia-antes"></div>
+  </section>
+  <section class="guia-secao">
+    <h2 class="secao-rotulo">No dia a dia</h2>
+    <div id="guia-dia"></div>
+  </section>
+  <section class="guia-secao">
+    <h2 class="secao-rotulo">Quando der errado</h2>
+    <div id="guia-errado"></div>
+  </section>
+  <section class="guia-secao">
+    <h2 class="secao-rotulo">Referência · telefones</h2>
+    <div id="lista-contatos"></div>
+    <h2 class="secao-rotulo">Referência · locais</h2>
+    <div class="aviso" id="aviso-coords"></div>
+    <div class="filtros-local" id="filtros-local"></div>
+    <div id="lista-locais"></div>
+  </section>
 </main>
 
 <!-- ====================== PENDÊNCIAS ====================== -->

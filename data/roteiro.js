@@ -43,8 +43,14 @@ window.ROTEIRO = {
     // Vocabulários fechados. A interface valida contra isto no load.
     tiposBloco: ['atracao', 'refeicao', 'deslocamento', 'show', 'compras',
                  'espera', 'tarefa', 'livre', 'vazio', 'pausa'],
-    tiposAcesso: ['rope-drop', 'multi-pass', 'single-pass', 'standby', 'reserva'],
+    tiposAcesso: ['rope-drop', 'multi-pass', 'single-pass', 'standby', 'reserva',
+                  'single-rider'],
     tiposAncora: ['referencia', 'fixo'],
+    tiposNota: ['atencao', 'alerta', 'info', 'bom'],
+    // Quando a pessoa lê a dica. É o que organiza a aba Guia em seções.
+    momentos: ['antes-de-viajar', 'todo-dia', 'dia-especifico', 'emergencia'],
+    // Seções do Walmart, na ordem da rota dentro da loja.
+    secoesLoja: ['Bebidas', 'Farmácia', 'Alimentos', 'Eletrônicos', 'Casa'],
   },
 
   viagem: {
@@ -69,23 +75,36 @@ window.ROTEIRO = {
      REGRAS DE OURO — Parte 3 do documento
      ------------------------------------------------------------------------ */
   regrasDeOuro: [
-    { n: 1, titulo: 'Rope drop vale mais que qualquer passe.',
+    { n: 1, momento: 'todo-dia', titulo: 'Rope drop vale mais que qualquer passe.',
       texto: 'A primeira hora de parque rende o que as três da tarde rendem. Chegar 45 ' +
              'minutos antes da abertura é a decisão mais barata e mais eficaz da viagem.' },
-    { n: 2, titulo: 'Não reserve Multi Pass para o que você vai fazer no rope drop.',
+    { n: 2, momento: 'todo-dia',
+      titulo: 'Não reserve Multi Pass para o que você vai fazer no rope drop.',
       texto: 'Erro clássico: reservar a atração que já estaria vazia às 9h e depois ' +
              'enfrentar fila de 80 minutos no resto.' },
-    { n: 3, titulo: 'Use a primeira reserva do Multi Pass cedo.',
+    { n: 3, momento: 'todo-dia', titulo: 'Use a primeira reserva do Multi Pass cedo.',
       texto: 'O sistema só libera a próxima depois que você usa a atual. Quem usa às 11h ' +
              'faz o dobro de quem usa às 15h.' },
-    { n: 4, titulo: 'Mobile order em tudo que for balcão.',
+    { n: 4, momento: 'todo-dia', titulo: 'Mobile order em tudo que for balcão.',
       texto: 'Disney e Universal permitem pedir pelo app e só buscar. Economiza 20 a 30 ' +
              'minutos por refeição.' },
-    { n: 5, titulo: 'Almoço às 11h30 ou às 14h.',
+    { n: 5, momento: 'todo-dia', titulo: 'Almoço às 11h30 ou às 14h.',
       texto: 'Meio-dia é o pico. E as filas das atrações caem exatamente quando todo mundo ' +
              'está comendo — use isso.' },
+    { n: 6, momento: 'todo-dia', titulo: 'Single rider quando a fila passar de 45 minutos.',
+      texto: 'Vocês entram separados e se encontram na saída: custa o andar junto e devolve ' +
+             'tempo de fila. Os blocos com o selo "ou single rider" têm essa fila. Três ' +
+             'exceções, escritas no próprio bloco: Forbidden Journey e Gringotts, onde a fila ' +
+             'é metade da atração, e o Millennium Falcon, onde single rider quase nunca pilota. ' +
+             'A fila de single rider abre e fecha ao longo do dia — a placa da entrada manda.',
+      pesquisa: '2026-09-10' },
+    { n: 7, momento: 'todo-dia', titulo: 'Peçam água gelada de graça em todo balcão.',
+      texto: 'Todo balcão de comida rápida da Disney e da Universal dá um copo de água gelada ' +
+             'sem cobrar — é só pedir "a cup of ice water". A garrafa lá dentro custa US$ 4 a ' +
+             '6. Com a garrafa reutilizável da lista do Walmart, vira reabastecimento o dia ' +
+             'inteiro.',
+      pesquisa: '2026-09-10' },
   ],
-
   /* ---------------------------------------------------------------------------
      ESTRATÉGIA DE PASSES — Parte 1 do documento + pesquisa
      ------------------------------------------------------------------------ */
@@ -162,14 +181,20 @@ window.ROTEIRO = {
           'parque — US$ 20 a 30, uma atração.',
       },
       singleRider: {
-        titulo: 'Single rider — fora do plano desta viagem',
-        prioridade: 'descartado',
+        titulo: 'Single rider — quando a fila passar de 45 minutos',
+        prioridade: 'usar',
         texto:
-          'Existe em 21 atracoes do complexo e economiza fila, mas separa voces na hora de embarcar. ' +
-          'DECISAO TOMADA: nao usar. Andar lado a lado na atracao e o motivo da viagem — a atracao ' +
-          'e o que voces foram fazer, nao a fila. Os blocos guardam o campo singleRider apenas como ' +
-          'informacao de fato; a interface nao destaca e o roteiro nao conta com isso em nenhum dia.',
-        pesquisa: '2026-09-08',
+          'Fila para quem aceita ir separado: vocês embarcam em carrinhos diferentes e se ' +
+          'encontram na saída. Os blocos com o selo "ou single rider" são as atrações do ' +
+          'roteiro que têm essa fila — a maior parte das montanhas-russas e dark rides da ' +
+          'Universal e, na Disney, Test Track, Rock ’n’ Roller e Millennium Falcon.\n\n' +
+          'A regra é a número 6: acima de 45 minutos de standby, single rider. Três exceções, ' +
+          'escritas no próprio bloco: Forbidden Journey e Gringotts, onde a fila é metade da ' +
+          'atração, e o Millennium Falcon, onde single rider quase sempre vira engenheiro.\n\n' +
+          'Hagrid’s e Expedition Everest ficam sem selo: a fila de single rider dos dois está ' +
+          'saindo ou tem informação conflitante. Perguntem na entrada.\n\n' +
+          'A fila de single rider abre e fecha ao longo do dia. A placa na entrada manda.',
+        pesquisa: '2026-09-10',
       },
       lockers: {
         titulo: 'O imposto de tempo que o cronograma não previa',
@@ -341,66 +366,195 @@ window.ROTEIRO = {
         id: 'lista-walmart',
         titulo: 'Walmart Supercenter — a compra que abastece a viagem inteira',
         intro:
-          'É a parada que mais economiza dinheiro na viagem. Água dentro do parque custa ' +
-          'US$ 4; aqui sai a US$ 0,25. Capa de chuva custa US$ 10 lá dentro e US$ 1 aqui. ' +
-          'Marcados como essenciais são os que, se faltarem, vocês vão comprar caro depois.',
+          'É a parada que mais economiza dinheiro na viagem. A lista está na ORDEM DA LOJA — ' +
+          'Bebidas, Farmácia, Alimentos, Eletrônicos, Casa — para vocês não cruzarem o ' +
+          'Supercenter duas vezes. Garrafa de água dentro do parque custa US$ 4 a 6; capa de ' +
+          'chuva, uns US$ 10 lá dentro e US$ 1 aqui.\n\n' +
+          'REFEIÇÕES NO QUARTO: o quarto tem cafeteira e micro-ondas. Em Alimentos estão o ' +
+          'café da manhã dos dias de saída cedo e o jantar das noites que terminam tarde — ' +
+          'tudo fora da geladeira, nada congelado e nada de fast food.\n\n' +
+          'A marca própria do Walmart — Great Value para comida, Equate para farmácia — ' +
+          'resolve quase tudo mais barato. Onde a marca de verdade importa, está dito. ' +
+          'Essenciais são os que, se faltarem, vocês vão comprar caro depois.',
         itens: [
-          { texto: 'Adaptador de tomada — 2 unidades', essencial: true,
-            motivo: 'ACRÉSCIMO. O plugue brasileiro não entra na tomada americana. A ' +
-                    'voltagem não é problema (carregador moderno é bivolt), o formato ' +
-                    'é. Sem isso o item \u201ccarregar celular e power bank a noite ' +
-                    'inteira\u201d da lista de amanhã não acontece, e o dia 11 começa ' +
-                    'com bateria pela metade. Se trouxeram do Brasil, ignorem.' },
-          { texto: 'Algo para comer agora', essencial: true,
-            motivo: 'ACRÉSCIMO. São seis horas entre o pouso e o jantar. Peguem algo ' +
-                    'para comer na volta ao hotel, não só para os dias de parque.' },
-          { texto: 'Água — caixa de 24 garrafas', essencial: true,
-            motivo: 'Levem 2 garrafas por pessoa em todo dia de parque. Dentro do parque a ' +
-                    'garrafa custa US$ 4; aqui sai a US$ 0,25.' },
-          { texto: 'Protetor solar FPS 50 + bastão para o rosto', essencial: true,
-            motivo: 'O bastão é para reaplicar na fila sem sujar a mão.' },
-          { texto: 'Ibuprofeno e analgésico', essencial: true,
-            motivo: 'Nos EUA sai muito mais barato que no Brasil.' },
-          { texto: 'Barrinhas de cereal e frutas', essencial: true,
-            motivo: 'É o café da manhã dos dias de rope drop, quando vocês saem do hotel ' +
-                    'antes de 7h e o do hotel ainda não abriu.' },
-          { texto: 'Barrinha de proteína Barebells', essencial: true,
-            motivo: 'Segura mais que barrinha de cereal e não derrete na mochila. Nos EUA ' +
-                    'custa uma fração do preço do Brasil.' },
-          { texto: 'Gatorade', essencial: true,
-            motivo: 'Doze horas em pé desidratam mais do que parece, e dentro do parque ' +
-                    'custa quatro vezes mais. Levem um por pessoa nos dias longos.' },
-          { texto: 'Beef jerky', essencial: false,
-            motivo: 'Proteína que não estraga na mochila no calor e segura a fome entre ' +
-                    'refeições espaçadas. É bem melhor e mais barato nos EUA.' },
-          { texto: 'Café', essencial: false,
-            motivo: 'Confiram se o quarto tem cafeteira antes de comprar cápsula.' },
-          { texto: 'Capas de chuva descartáveis — 8 unidades', essencial: true,
+          { id: 'agua', secao: 'Bebidas', essencial: true,
+            texto: 'Água — caixa de 24 garrafas',
+            marca: 'Great Value Purified Water', alternativaBarata: null,
+            motivo: 'Duas garrafas por pessoa nos dias de parque, completadas com a água gelada ' +
+                    'grátis dos balcões. Não paguem por Dasani nem Aquafina: é a mesma água ' +
+                    'purificada. Com a garrafa reutilizável da seção Casa, 24 bastam.' },
+          { id: 'isotonico', secao: 'Bebidas', essencial: true,
+            texto: 'Isotônico',
+            marca: 'Gatorade Zero', alternativaBarata: 'em pó: Propel Powder Packets',
+            motivo: 'Doze horas em pé desidratam mais do que parece. O Zero não tem açúcar e ' +
+                    'não empapuça. O pó ocupa menos espaço: um sachê na garrafa reutilizável.' },
+          { id: 'cafe', secao: 'Bebidas', essencial: false,
+            texto: 'Café — para a cafeteira do quarto',
+            marca: 'Dunkin’ Original Blend moído, ou Dunkin’ K-Cups', alternativaBarata: 'Folgers',
+            motivo: 'É o café dos dias de saída cedo, antes de o café da manhã do hotel abrir. ' +
+                    'Confiram o tipo da cafeteira: a de filtro pede o moído, a Keurig pede cápsula.' },
+
+          { id: 'ibuprofeno', secao: 'Farmácia', essencial: true,
+            texto: 'Ibuprofeno',
+            marca: 'Equate Ibuprofen 200mg', alternativaBarata: null,
+            motivo: 'É o Advil com a marca do Walmart, bem mais barato. Para dor muscular e de ' +
+                    'pé no fim do dia de parque.' },
+          { id: 'paracetamol', secao: 'Farmácia', essencial: true,
+            texto: 'Paracetamol',
+            marca: 'Equate Extra Strength Acetaminophen 500mg', alternativaBarata: null,
+            motivo: 'É o Tylenol. Nos EUA o nome no rótulo é acetaminophen, não paracetamol — ' +
+                    'procurem por esse. É de outra classe que o ibuprofeno.' },
+          { id: 'protetor-solar', secao: 'Farmácia', essencial: true,
+            texto: 'Protetor solar + bastão para o rosto',
+            marca: 'Neutrogena Ultra Sheer Dry-Touch SPF 70 · bastão Neutrogena Ultra Sheer Face Stick',
+            alternativaBarata: 'Equate Sport SPF 50',
+            motivo: 'O bastão é para reaplicar na fila sem sujar a mão. Evitem spray como ' +
+                    'protetor principal: quase ninguém aplica a quantidade suficiente.' },
+          { id: 'protetor-labial', secao: 'Farmácia', essencial: false,
+            texto: 'Protetor labial com FPS',
+            marca: 'Sun Bum SPF 30', alternativaBarata: null,
+            motivo: 'O item pequeno que ninguém lembra, e que resolve o lábio rachado depois ' +
+                    'de três dias de sol e vento.' },
+          { id: 'bolha', secao: 'Farmácia', essencial: true,
+            texto: 'Curativo de bolha e protetor preventivo',
+            marca: 'Band-Aid Hydro Seal Blister Cushions · Dr. Scholl’s Moleskin Plus',
+            alternativaBarata: null,
+            motivo: 'São 16 dias andando 15 a 25 mil passos. O Hydro Seal é hidrocoloide: sela a ' +
+                    'bolha e deixa continuar andando. O Moleskin se recorta e cola ANTES de a ' +
+                    'bolha aparecer, onde o tênis costuma incomodar.' },
+          { id: 'anti-atrito', secao: 'Farmácia', essencial: false,
+            texto: 'Anti-atrito',
+            marca: 'Body Glide Original', alternativaBarata: 'vaselina',
+            motivo: 'Assadura de coxa em dia de 25 mil passos é real. Vem em bastão, como ' +
+                    'desodorante.' },
+          { id: 'antiacido', secao: 'Farmácia', essencial: false,
+            texto: 'Antiácido',
+            marca: 'Tums · Pepto-Bismol mastigável', alternativaBarata: 'Equate',
+            motivo: 'A porção americana e o horário de refeição fora do normal.' },
+          { id: 'repelente', secao: 'Farmácia', essencial: false,
+            texto: 'Repelente',
+            marca: 'OFF! Deep Woods', alternativaBarata: null,
+            motivo: 'Novembro tem pouco mosquito. É pelo aerobarco do dia 20, num pântano.' },
+          { id: 'lenco', secao: 'Farmácia', essencial: false,
+            texto: 'Lenço umedecido antibacteriano',
+            marca: 'Wet Ones Antibacterial', alternativaBarata: null,
+            motivo: 'Mão suja de fila antes de comer num banco de praça.' },
+
+          { id: 'comer-agora', secao: 'Alimentos', essencial: true,
+            texto: 'Algo para comer agora',
+            marca: null, alternativaBarata: null,
+            motivo: 'São seis horas entre o pouso e o jantar. Peguem algo para comer na volta ' +
+                    'ao hotel, não só para os dias de parque.' },
+          { id: 'aveia', secao: 'Alimentos', essencial: false,
+            texto: 'Aveia instantânea — café da manhã no quarto',
+            marca: 'Quaker Instant Oatmeal, Original ou Lower Sugar', alternativaBarata: 'Great Value',
+            motivo: 'Água quente da cafeteira ou um minuto no micro-ondas, e vocês saem para o ' +
+                    'rope drop com comida de verdade no estômago — sem depender de o café da ' +
+                    'manhã do hotel já estar aberto.' },
+          { id: 'pao-pasta', secao: 'Alimentos', essencial: false,
+            texto: 'Pão integral e pasta de amendoim',
+            marca: 'Dave’s Killer Bread · Jif Natural', alternativaBarata: 'Great Value',
+            motivo: 'O café mais rápido que existe, sem geladeira: pão, pasta de amendoim e uma ' +
+                    'fruta. Serve também de lanche na volta de uma noite longa.' },
+          { id: 'iogurte', secao: 'Alimentos', essencial: false,
+            texto: 'Iogurte grego — só se o quarto tiver frigobar',
+            marca: 'Chobani', alternativaBarata: 'Great Value',
+            motivo: 'Proteína no café da manhã em um minuto. O site de reservas diz que o quarto ' +
+                    'tem frigobar, mas isso não está confirmado: conferiram só a cafeteira e o ' +
+                    'micro-ondas. Comprem depois de ver.' },
+          { id: 'barebells', secao: 'Alimentos', essencial: true,
+            texto: 'Barrinha de proteína',
+            marca: 'Barebells — Cookies & Cream ou Caramel Cashew', alternativaBarata: 'Pure Protein',
+            motivo: 'Segura mais que barrinha de cereal e não derrete na mochila.' },
+          { id: 'barrinha-fruta', secao: 'Alimentos', essencial: true,
+            texto: 'Barrinha de cereal e fruta',
+            marca: 'KIND Nuts & Spices', alternativaBarata: 'Nature Valley Protein',
+            motivo: 'Para comer no caminho ou na fila do rope drop. Maçã aguenta o dia inteiro na ' +
+                    'mochila; banana não.' },
+          { id: 'castanha', secao: 'Alimentos', essencial: false,
+            texto: 'Castanha',
+            marca: 'Blue Diamond Almonds', alternativaBarata: 'Planters',
+            motivo: 'Lanche que não amassa nem derrete.' },
+          { id: 'jerky', secao: 'Alimentos', essencial: false,
+            texto: 'Beef jerky',
+            marca: 'Jack Link’s Original', alternativaBarata: null,
+            motivo: 'Proteína que não estraga na mochila e segura a fome entre refeições ' +
+                    'espaçadas. O Chomps vem em bastão individual, mais fácil de levar no bolso.' },
+          { id: 'arroz-micro', secao: 'Alimentos', essencial: false,
+            texto: 'Arroz pronto de micro-ondas — jantar no quarto',
+            marca: 'Ben’s Original Ready Rice, integral', alternativaBarata: 'Great Value',
+            motivo: 'Noventa segundos no micro-ondas do quarto. Com o atum ou o frango em sachê ' +
+                    'por cima, é um jantar de verdade nas noites que terminam tarde.' },
+          { id: 'proteina-sache', secao: 'Alimentos', essencial: false,
+            texto: 'Atum ou frango em sachê',
+            marca: 'StarKist', alternativaBarata: 'Great Value',
+            motivo: 'Proteína pronta que não precisa de geladeira nem de abridor. Vai por cima do ' +
+                    'arroz ou dentro do pão.' },
+          { id: 'sopa', secao: 'Alimentos', essencial: false,
+            texto: 'Sopa pronta',
+            marca: 'Progresso', alternativaBarata: 'Great Value',
+            motivo: 'Para a noite fria depois do Epcot ou da volta de Tampa. Esquenta no ' +
+                    'micro-ondas — numa tigela, que está na seção Casa.' },
+
+          { id: 'power-bank', secao: 'Eletrônicos', essencial: true,
+            texto: 'Power bank — um por pessoa',
+            marca: 'Anker Nano Power Bank, com cabo USB-C embutido', alternativaBarata: 'onn. 10000mAh',
+            motivo: 'Este app, o da Disney, o da Universal, mapa e foto o dia todo. O modelo com ' +
+                    'cabo embutido elimina o cabo esquecido no hotel. Um por pessoa: dividir ' +
+                    'power bank em dia de parque não funciona.' },
+          { id: 'adaptador', secao: 'Eletrônicos', essencial: true,
+            texto: 'Adaptador de tomada — 2 unidades',
+            marca: null, alternativaBarata: null,
+            motivo: 'O plugue brasileiro não entra na tomada americana. A voltagem não é problema ' +
+                    '(carregador moderno é bivolt), o formato é. Se trouxeram do Brasil, ignorem.' },
+          { id: 'filtro-linha', secao: 'Eletrônicos', essencial: false,
+            texto: 'Filtro de linha com portas USB',
+            marca: 'onn. ou Belkin — com USB', alternativaBarata: null,
+            motivo: 'Quarto de hotel tem tomada de menos, e são dois celulares e duas power banks ' +
+                    'toda noite. O filtro americano entra direto na tomada, sem adaptador. O ' +
+                    'ganho está nas portas USB: o cabo liga direto nelas, sem o carregador ' +
+                    'brasileiro — e para isso nem precisa de adaptador.' },
+          { id: 'cabo', secao: 'Eletrônicos', essencial: false,
+            texto: 'Cabo extra',
+            marca: 'Anker', alternativaBarata: 'onn.',
+            motivo: 'Um cabo a mais resolve o dia em que um resolver morrer.' },
+
+          { id: 'garrafa', secao: 'Casa', essencial: true,
+            texto: 'Garrafa reutilizável — uma por pessoa',
+            marca: 'Owala FreeSip 24oz', alternativaBarata: 'Contigo Autoseal',
+            motivo: 'É o que transforma a regra de ouro 7 em economia de verdade: sem garrafa, a ' +
+                    'água gelada grátis vira um copinho bebido na hora; com garrafa, vira ' +
+                    'reabastecimento o dia inteiro.' },
+          { id: 'utensilios', secao: 'Casa', essencial: false,
+            texto: 'Tigela de micro-ondas, talheres e guardanapos',
+            marca: null, alternativaBarata: 'versão descartável',
+            motivo: 'Micro-ondas de quarto de hotel pode vir sem louça. Sem tigela, a aveia, o ' +
+                    'arroz e a sopa não servem de nada.' },
+          { id: 'sabao', secao: 'Casa', essencial: false,
+            texto: 'Sabão de lavanderia + moedas de 25 centavos',
+            marca: 'Tide Pods, embalagem pequena', alternativaBarata: null,
+            motivo: 'O Travelodge tem lavanderia de moeda, e são 16 dias. A moeda de 25 ' +
+                    'centavos (quarter) é a que a máquina usa.' },
+          { id: 'ziploc', secao: 'Casa', essencial: false,
+            texto: 'Sacos Ziploc grandes',
+            marca: 'Ziploc, tamanho gallon', alternativaBarata: 'Great Value',
+            motivo: 'Celular nas atrações que molham, roupa molhada, troco — e o que sobrar da ' +
+                    'comida do quarto.' },
+          { id: 'capa-chuva', secao: 'Casa', essencial: true,
+            texto: 'Capas de chuva descartáveis — 8 unidades',
+            marca: null, alternativaBarata: null,
             motivo: 'São QUATRO atrações que molham de verdade, e vocês são dois: Kali River ' +
-                    'Rapids no dia 13, Jurassic Park River Adventure no 19, Journey to ' +
-                    'Atlantis no 22 e Fyre Drill no 23. Oito usos. Custam US$ 1 aqui e ' +
-                    'US$ 10 dentro do parque — comprar oito sai mais barato que uma ' +
-                    'garrafa de água lá dentro.' },
-          { texto: 'Curativos e protetor de bolha (Band-Aid Blister / Moleskin)', essencial: true,
-            motivo: 'ACRÉSCIMO. São 16 dias andando 15 a 25 mil passos. Bolha no dia 3 ' +
-                    'estraga o resto da viagem, e é a lesão mais evitável que existe.' },
-          { texto: 'Meias extras — 3 pares de secagem rápida', essencial: true,
-            motivo: 'ACRÉSCIMO. Meia molhada depois do Jurassic Park às 12h significa pé ' +
-                    'macerado até as 20h.' },
-          { texto: 'Power bank e cabo', essencial: true,
-            motivo: 'ACRÉSCIMO. Este app, o app da Disney, o da Universal, mapa e foto o dia ' +
-                    'todo. Celular descarregado às 16h é o roteiro perdido.' },
-          { texto: 'Sacos Ziploc grandes', essencial: false,
-            motivo: 'ACRÉSCIMO. Para o celular nas atrações que molham e para o troco.' },
-          { texto: 'Eletrólito em pó ou isotônico', essencial: false,
-            motivo: 'ACRÉSCIMO. Novembro é ameno, mas 12 horas em pé desidratam.' },
-          { texto: 'Pomada anti-atrito (Body Glide ou vaselina)', essencial: false,
-            motivo: 'ACRÉSCIMO. Assadura de coxa em dia de 25 mil passos é real.' },
-          { texto: 'Antiácido', essencial: false,
-            motivo: 'ACRÉSCIMO. A porção americana e o horário de refeição fora do normal.' },
+                    'Rapids no dia 13, Fyre Drill no 19 (opcional), Journey to Atlantis no 22 ' +
+                    'e Jurassic Park River Adventure no 23. Oito usos. Procurem "disposable ' +
+                    'rain poncho" na seção de camping.' },
+          { id: 'meias', secao: 'Casa', essencial: true,
+            texto: 'Meias de secagem rápida — 3 pares',
+            marca: 'Balega Hidden Comfort, se tiver na loja', alternativaBarata: 'Hanes X-Temp ou Athletic Works',
+            motivo: 'Meia molhada depois do Jurassic Park significa pé macerado até a noite. A ' +
+                    'Balega é vendida no site do Walmart, mas o estoque na loja não está ' +
+                    'confirmado — se não tiver, a Hanes resolve.' },
         ],
-      },
-    ],
+      },    ],
 
     /* ---------------------------------------------------------------------
        DISNEY SPRINGS — o que cabe em 1h30 e o que fica para a volta
@@ -590,12 +744,15 @@ window.ROTEIRO = {
         contexto:
           'A compra que abastece os 16 dias. Fica a 1,5 km do hotel — a corrida sai por ' +
           'US$ 7 a 10 e leva 4 minutos.\n\n' +
-          'SE O DIA ESTIVER ATRASADO, comprem NESTA ordem e parem quando quiserem: água, ' +
-          'protetor solar, capa de chuva, curativo de bolha, power bank, ibuprofeno e ' +
+          'A LISTA ESTÁ NA ORDEM DA LOJA, seção por seção, para vocês não cruzarem o ' +
+          'Supercenter duas vezes.\n\n' +
+          'SE O DIA ESTIVER ATRASADO, comprem só estes, nesta ordem, e parem quando quiserem: ' +
+          'água, protetor solar, capa de chuva, curativo de bolha, power bank, ibuprofeno e ' +
           'barrinhas. Esses sete resolvem os quatro dias seguintes.\n\n' +
-          'NÃO se guiem pela ordem da lista: os essenciais estão espalhados por ela, e a ' +
-          'capa de chuva, o curativo e o power bank ficam lá embaixo justamente por serem ' +
-          'os que ninguém lembra.',
+          'O QUARTO TEM CAFETEIRA E MICRO-ONDAS, e a lista traz o café da manhã e o jantar de ' +
+          'emergência para eles.\n\n' +
+          'A 600 METROS, NA MESMA VINELAND RD: o Publix de 3221 Vineland Rd, das 7h às 23h, com ' +
+          'deli que faz sanduíche na hora.',
         endereco: '3250 Vineland Rd', localId: 'walmart-vineland', acesso: [], duracaoMin: 45 },
 
       { id: 'b-1011-1645', hora: '16:25', ancora: 'referencia', tipo: 'deslocamento',
@@ -1884,7 +2041,9 @@ window.ROTEIRO = {
           'andando para trás no escuro. É a mais intensa do parque, mas ainda assim familiar — ' +
           'sem inversões. A fila tem um museu de ioga e ietis que vale olhar.\n\n' +
           'Ela está no Early Entry, mas continua vazia na abertura oficial porque todo mundo ' +
-          'que entrou cedo foi para Pandora.',
+          'que entrou cedo foi para Pandora.\n\n' +
+          'SINGLE RIDER: a Disney retirou a placa da fila de single rider em julho de 2026, e ' +
+          'ela deve acabar. Se precisarem, perguntem ao funcionário da entrada.',
         areaParque: 'Asia', acesso: ['standby'], duracaoMin: 35,
         fila: { min: 15, quando: 'na abertura', pico: 40, fonte: '2026-09-10' } },
 
@@ -2808,7 +2967,8 @@ window.ROTEIRO = {
           'muito.\n\n' +
           'PEÇAM PARA SER PILOTOS ao funcionário que distribui as funções. Artilheiro e ' +
           'engenheiro são bem menos interessantes, e é a diferença entre jogar e assistir.',
-        areaParque: 'Galaxy’s Edge', acesso: ['standby'], duracaoMin: 45,
+        areaParque: 'Galaxy’s Edge', acesso: ['standby'], acessoAlt: 'single-rider', duracaoMin: 45,
+        acessoAltNota: 'Aqui não: single rider quase sempre vira engenheiro, e este bloco é para pilotar.',
         fila: { min: 35, quando: 'antes do meio-dia', pico: 65, estimado: true, fonte: '2026-09-10' } },
 
       { id: 'b-1511-1215', hora: '12:20', ancora: 'referencia', tipo: 'refeicao',
@@ -2841,7 +3001,7 @@ window.ROTEIRO = {
           'A temática saiu do Aerosmith e virou os Muppets, com o Dr. Teeth and the Electric ' +
           'Mayhem. Reabriu em 26/05/2026, então em novembro ainda é atração nova — e é por ' +
           'isso que ela leva a lista alta do Multi Pass agora que o Slinky foi no rope drop.',
-        areaParque: 'Sunset Blvd', acesso: ['multi-pass'], duracaoMin: 40,
+        areaParque: 'Sunset Blvd', acesso: ['multi-pass'], acessoAlt: 'single-rider', duracaoMin: 40,
         fila: { min: 10, quando: 'com o Multi Pass', pico: 75, estimado: true, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
@@ -3220,7 +3380,8 @@ window.ROTEIRO = {
           'muito — parada de quase 24 horas em 1º de agosto, outra de cinco horas no dia 23 ' +
           'que comeu a tarde inteira, e falhas mecânicas em fevereiro. Se ele vai cair, cai no ' +
           'meio do dia. Andar agora é a única forma de não depender disso.',
-        areaParque: 'World Discovery', acesso: ['rope-drop', 'standby'], critico: true,
+        areaParque: 'World Discovery', acesso: ['rope-drop', 'standby'], acessoAlt: 'single-rider',
+        critico: true,
         duracaoMin: 45,
         fila: { min: 53, quando: 'no rope drop', pico: 99, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
@@ -3626,7 +3787,9 @@ window.ROTEIRO = {
           'de 190. Não existe segunda chance barata neste dia — a outra janela é depois das ' +
           '21h, e vocês vão estar jantando.\n\n' +
           'LOCKER OBRIGATÓRIO. Deixem os bolsos vazios antes de entrar na fila.',
-        areaParque: 'Diagon Alley', acesso: [], critico: true, duracaoMin: 40,
+        areaParque: 'Diagon Alley', acesso: ['rope-drop', 'standby'], acessoAlt: 'single-rider',
+        acessoAltNota: 'Não na primeira vez: single rider pula o saguão dos duendes e os dois pré-shows.',
+        critico: true, duracaoMin: 40,
         fila: { min: 15, quando: 'na primeira hora', pico: 190, estimado: 57, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
@@ -3640,7 +3803,7 @@ window.ROTEIRO = {
           'ELE É WALK-ON POR EXATAMENTE UMA HORA DEPOIS DA ABERTURA, 30 minutos na segunda ' +
           'hora, e chega a 120 no pico. Fazer ele agora custa meia hora; fazer ao meio-dia ' +
           'custa o dobro.',
-        areaParque: 'Production Central', acesso: [], duracaoMin: 35,
+        areaParque: 'Production Central', acesso: ['standby'], acessoAlt: 'single-rider', duracaoMin: 35,
         fila: { min: 30, quando: 'na segunda hora', pico: 120, estimado: 33, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
@@ -3654,7 +3817,7 @@ window.ROTEIRO = {
           'A FILA DELE DISTRIBUI IGUAL O DIA INTEIRO, com média de 44 minutos: não existe hora ' +
           'boa nem hora ruim, e por isso ele fica aqui, entre duas atrações que têm hora certa.\n\n' +
           'DETECTOR DE METAL: nada nos bolsos, nem chave nem celular. Locker obrigatório.',
-        areaParque: 'New York', acesso: [], duracaoMin: 35,
+        areaParque: 'New York', acesso: ['standby'], acessoAlt: 'single-rider', duracaoMin: 35,
         fila: { min: 30, quando: 'de manhã', pico: 120, estimado: 44, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
@@ -3720,7 +3883,7 @@ window.ROTEIRO = {
           'A tarde é a hora dele — 22 minutos de média — e ele fica no World Expo, que é o ' +
           'canto do parque que vocês só passam uma vez.\n\n' +
           'LOCKER OBRIGATÓRIO, mas com mais tolerância que o Mummy.',
-        areaParque: 'World Expo', acesso: [], duracaoMin: 40,
+        areaParque: 'World Expo', acesso: ['standby'], acessoAlt: 'single-rider', duracaoMin: 40,
         fila: { min: 20, quando: 'à tarde', pico: 60, estimado: 22, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
@@ -4423,7 +4586,7 @@ window.ROTEIRO = {
           'Universal. Ela enche logo depois da abertura, e ao longo do dia é uma das menores do ' +
           'parque — então pegar vazia agora é o jeito de o resto do dia render.\n\n' +
           'LOCKER OBRIGATÓRIO. Bolsos vazios antes de entrar na fila.',
-        areaParque: 'Dark Universe', acesso: ['rope-drop', 'standby'], singleRider: true,
+        areaParque: 'Dark Universe', acesso: ['rope-drop', 'standby'], acessoAlt: 'single-rider',
         locker: 'obrigatorio', critico: true, duracaoMin: 35,
         fila: { min: 10, quando: 'na abertura', pico: 45, estimado: 14, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
@@ -4438,7 +4601,7 @@ window.ROTEIRO = {
           'A fila dela tem pico por volta das 13h e despenca no fim do dia. De manhã, logo ' +
           'depois da abertura, ela ainda não montou.\n\n' +
           'Sem locker obrigatório, mas prendam tudo que estiver solto.',
-        areaParque: 'Dark Universe', acesso: ['standby'], singleRider: true, duracaoMin: 35,
+        areaParque: 'Dark Universe', acesso: ['standby'], acessoAlt: 'single-rider', duracaoMin: 35,
         fila: { min: 20, quando: 'logo depois da abertura', pico: 75, estimado: 46, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
@@ -4453,7 +4616,7 @@ window.ROTEIRO = {
           'óculos solto. Tudo no locker gratuito.\n\n' +
           'Ela saiu do Early Park Admission em fevereiro de 2026, então a fila dela começa do ' +
           'zero às 9h, e no meio da manhã costuma estar baixa.',
-        areaParque: 'Celestial Park', acesso: ['standby'], singleRider: true, locker: 'detector',
+        areaParque: 'Celestial Park', acesso: ['standby'], acessoAlt: 'single-rider', locker: 'detector',
         duracaoMin: 40,
         fila: { min: 20, quando: 'no meio da manhã', pico: 105, estimado: 25, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
@@ -4471,7 +4634,7 @@ window.ROTEIRO = {
           'AO ENTRAR NA SUPER NINTENDO WORLD, ABRAM O APP DA UNIVERSAL e vejam se o Toadstool ' +
           'Cafe está com lista de espera. Se estiver, entrem nela agora, para o almoço das 13h.\n\n' +
           'E reparem na decoração: é o primeiro Natal da Super Nintendo World.',
-        areaParque: 'Super Nintendo World', acesso: ['standby'], singleRider: true,
+        areaParque: 'Super Nintendo World', acesso: ['standby'], acessoAlt: 'single-rider',
         critico: true, duracaoMin: 70,
         fila: { min: 60, quando: 'entre 11h e 12h', pico: 170, estimado: 72, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
@@ -4516,7 +4679,7 @@ window.ROTEIRO = {
           'A fila dela piora no fim da tarde, por volta das 17h. No começo da tarde ainda está ' +
           'no meio do caminho.\n\n' +
           'LOCKER OBRIGATÓRIO.',
-        areaParque: 'Isle of Berk', acesso: ['standby'], singleRider: true, locker: 'obrigatorio',
+        areaParque: 'Isle of Berk', acesso: ['standby'], acessoAlt: 'single-rider', locker: 'obrigatorio',
         duracaoMin: 45,
         fila: { min: 30, quando: 'no começo da tarde', pico: 120, estimado: 38, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
@@ -4593,7 +4756,7 @@ window.ROTEIRO = {
           'Na saída vocês estão na Place Cachée à noite, decorada para o Natal do mundo bruxo. ' +
           'Vale andar cinco minutos por ela antes de seguir para a Nintendo.\n\n' +
           'HORA A CONFIRMAR: este bloco segue o fechamento do parque. O roteiro assume 21h.',
-        areaParque: 'Ministry of Magic', acesso: ['standby'], singleRider: true, critico: true,
+        areaParque: 'Ministry of Magic', acesso: ['standby'], acessoAlt: 'single-rider', critico: true,
         confirmarHorario: true, duracaoMin: 90,
         fila: { min: 45, quando: 'nas últimas 2–3 horas', pico: 185, estimado: 76, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
@@ -4611,7 +4774,7 @@ window.ROTEIRO = {
           'ELE QUEBRA COM FREQUÊNCIA. Se estiver parado, acompanhem pelo app e fiquem por ' +
           'perto — o plano C trata disso.\n\n' +
           'Sem locker obrigatório, mas prendam tudo que estiver solto.',
-        areaParque: 'Super Nintendo World', acesso: ['standby'], singleRider: true,
+        areaParque: 'Super Nintendo World', acesso: ['standby'], acessoAlt: 'single-rider',
         critico: true, confirmarHorario: true, duracaoMin: 50,
         fila: { min: 20, quando: 'na última hora', pico: 205, estimado: 113, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
@@ -5112,9 +5275,11 @@ window.ROTEIRO = {
           'Montanha-russa de lançamento em motos com sidecar, com sete lançamentos, uma queda ' +
           'vertical e um trecho de ré. Sem inversões. É considerada a melhor montanha-russa de ' +
           'Orlando e a fila passa de 2 horas o dia todo. Saiu do Express em julho de 2026: ' +
-          'chegar primeiro é literalmente a única saída.',
+          'chegar primeiro é literalmente a única saída.\n\n' +
+          'SINGLE RIDER: as fontes divergem sobre a fila de single rider daqui continuar ' +
+          'existindo. Não contem com ela; se aparecer a placa, é bônus.',
         areaParque: 'Hogsmeade', acesso: ['rope-drop', 'standby'],
-        singleRider: true, locker: 'obrigatorio',
+        locker: 'obrigatorio',
         lockerNota: 'Pochete de 3 pontos na cintura costuma ser liberada, a critério do funcionário.',
         pesquisa: '2026-09-08' },
 
@@ -5126,7 +5291,7 @@ window.ROTEIRO = {
           'água. É consenso como a melhor montanha-russa da Flórida e uma das melhores do mundo. ' +
           'Detector de metal: absolutamente nada nos bolsos.',
         areaParque: 'Jurassic Park', acesso: ['standby'],
-        singleRider: true, locker: 'detector', pesquisa: '2026-09-08' },
+        acessoAlt: 'single-rider', locker: 'detector', pesquisa: '2026-09-08' },
 
       { id: 'b-2311-1040', hora: '10:40', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Forbidden Journey',
@@ -5136,7 +5301,8 @@ window.ROTEIRO = {
           'Hogwarts. Balança bastante e causa enjoo em parte das pessoas. A fila atravessa o ' +
           'castelo por dentro — retratos falantes, sala do Dumbledore — e vale a caminhada.',
         areaParque: 'Hogsmeade', acesso: ['standby'],
-        singleRider: true, locker: 'obrigatorio', pesquisa: '2026-09-08' },
+        acessoAlt: 'single-rider', locker: 'obrigatorio', pesquisa: '2026-09-08',
+        acessoAltNota: 'Na primeira visita, não: single rider pula o castelo, e a fila é metade da atração.' },
 
       { id: 'b-2311-1125', hora: '11:25', ancora: 'referencia', tipo: 'atracao',
         titulo: 'The Incredible Hulk Coaster',
@@ -5145,7 +5311,7 @@ window.ROTEIRO = {
           'Lançamento dentro de um túnel, sete inversões e muito barulho. Clássica de 1999, ' +
           'reconstruída em 2016. Detector de metal — nada nos bolsos.',
         areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
-        singleRider: true, locker: 'detector', pesquisa: '2026-09-08' },
+        acessoAlt: 'single-rider', locker: 'detector', pesquisa: '2026-09-08' },
 
       { id: 'b-2311-1200', hora: '12:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Jurassic Park River Adventure',
@@ -5155,7 +5321,7 @@ window.ROTEIRO = {
           'no escuro. Molha de verdade, principalmente nas primeiras fileiras. A capa de ' +
           'chuva do Walmart do dia 10 serve aqui.',
         areaParque: 'Jurassic Park', acesso: ['standby'],
-        singleRider: true, molha: true, pesquisa: '2026-09-08' },
+        acessoAlt: 'single-rider', molha: true, pesquisa: '2026-09-08' },
 
       { id: 'b-2311-1240', hora: '12:40', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Three Broomsticks',
@@ -5173,7 +5339,8 @@ window.ROTEIRO = {
           'livre de 120 metros que parece real. É de 1999 e continua sendo estudada como ' +
           'referência de dark ride.',
         areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
-        singleRider: true, singleRiderNota: 'Entrada pela esquerda, no corredor que liga a saída à loja.',
+        acessoAlt: 'single-rider',
+        acessoAltNota: 'Entrada do single rider pela esquerda, no corredor que liga a saída à loja.',
         pesquisa: '2026-09-08' },
 
       { id: 'b-2311-1435', hora: '14:35', ancora: 'referencia', tipo: 'atracao',
@@ -5183,7 +5350,7 @@ window.ROTEIRO = {
           'Caminhão expedicionário com telas 3D e um animatrônico enorme do Kong no fim. Tem ' +
           'atores na fila. Escuro e barulhento, mas sem emoção física forte.',
         areaParque: 'Skull Island', acesso: ['standby'],
-        singleRider: true, pesquisa: '2026-09-08' },
+        acessoAlt: 'single-rider', pesquisa: '2026-09-08' },
 
       { id: 'b-2311-1520', hora: '15:20', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Hogwarts Express — ida',
@@ -5213,7 +5380,7 @@ window.ROTEIRO = {
           'Torre que atira vocês para cima em vez de soltar de cima. Dura menos de 1 minuto. ' +
           'A sensação de estômago é forte, mas acaba rápido.',
         areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
-        singleRider: true, duracaoMin: 1, pesquisa: '2026-09-08' },
+        acessoAlt: 'single-rider', duracaoMin: 1, pesquisa: '2026-09-08' },
 
       { id: 'b-2311-1750', hora: '17:50', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Flight of the Hippogriff',
@@ -6367,6 +6534,22 @@ window.ROTEIRO = {
       doHotel: { tempoMin: 40, tempoFonte: 'documento',
                  uberUSD: null, uberFonte: null },
       nota: 'De carro. Farmers Market das 8h às 13h, só aos sábados.' },
+
+    { id: 'world-food-trucks', nome: 'World Food Trucks', tipo: 'restaurante',
+      lat: 28.3341309, lng: -81.5168648, verificado: true, fonteCoord: 'osm',
+      endereco: '5811 W Irlo Bronson Memorial Hwy, Kissimmee FL 34746',
+      doHotel: { tempoMin: 5, tempoFonte: 'estimado',
+                 uberUSD: { min: 7, max: 12 }, uberFonte: 'estimado' },
+      nota: 'Mais de 100 food trucks, das 11h às 2h, e até as 4h na sexta e no sábado. A ' +
+            'resposta para as noites que terminam tarde.' },
+
+    { id: 'publix-vineland', nome: 'Publix — Sunrise City Plaza', tipo: 'compras',
+      lat: 28.3462381, lng: -81.4832862, verificado: true, fonteCoord: 'osm',
+      endereco: '3221 Vineland Rd, Kissimmee FL 34746',
+      doHotel: { tempoMin: 5, tempoFonte: 'estimado',
+                 uberUSD: { min: 7, max: 10 }, uberFonte: 'estimado' },
+      nota: 'Supermercado a 600 m do Walmart do dia 10. Das 7h às 23h, com deli que faz ' +
+            'sanduíche na hora.' },
   ],
 
   /* ---------------------------------------------------------------------------
@@ -6557,6 +6740,25 @@ window.ROTEIRO = {
         'Para cancelar de vez, a linha da Disney acima resolve igual.',
       verificado: '2026-09-09', fonte: 'theboathouseorlando.com' },
 
+    { id: 'tel-urgentcare-celebration', nome: 'Urgent Care — AdventHealth Centra Care Celebration',
+      numero: '+1 407-845-8376', critico: true,
+      quando:
+        'O degrau entre o First Aid do parque e o 911: febre, torção, corte, dor de ouvido, ' +
+        'virose. Pronto-socorro por coisa pequena sai muito mais caro. Fica na 5850 W Irlo ' +
+        'Bronson, a menos de 1 km do hotel. Seg a sex das 8h às 20h, sáb e dom das 8h às 17h. ' +
+        'Não precisa marcar; dá para adiantar o cadastro online ("On My Way"). Levem a apólice ' +
+        'do seguro. Risco de vida: 911 primeiro.',
+      verificado: '2026-09-10', fonte: 'centracare.adventhealth.com' },
+
+    { id: 'tel-urgentcare-lbv', nome: 'Urgent Care à noite — Centra Care Lake Buena Vista',
+      numero: '+1 407-934-2273',
+      quando:
+        'Para depois das 20h, quando a de Celebration já fechou: aberta todos os dias das 7h à ' +
+        'meia-noite. Fica na 12500 S Apopka Vineland Rd, a uns 5 km de Disney Springs. Eles ' +
+        'levam de volta para hotéis da Disney — o Travelodge não é um deles, então a volta é ' +
+        'de Uber.',
+      verificado: '2026-09-10', fonte: 'centracare.adventhealth.com' },
+
     { id: 'tel-seguro', nome: 'Seguro viagem — central de atendimento',
       numero: null, critico: true,
       quando:
@@ -6579,6 +6781,8 @@ window.ROTEIRO = {
     {
       id: 'dica-lockers',
       categoria: 'universal',
+      momento: 'dia-especifico',
+      dias: ['d-2026-11-17', 'd-2026-11-19', 'd-2026-11-23'],
       titulo: 'Lockers obrigatórios: reserve 10 a 15 min a mais',
       corpo:
         'Guardar e buscar o locker come tempo real que o roteiro não previu. Em dias como 19/11 ' +
@@ -6595,6 +6799,8 @@ window.ROTEIRO = {
     {
       id: 'dica-molha',
       categoria: 'geral',
+      momento: 'dia-especifico',
+      dias: ['d-2026-11-13', 'd-2026-11-19', 'd-2026-11-22', 'd-2026-11-23'],
       titulo: 'O que molha de verdade',
       corpo:
         'Novembro em Orlando é ameno, e roupa molhada às 17h fica desconfortável rápido quando ' +
@@ -6612,9 +6818,14 @@ window.ROTEIRO = {
     {
       id: 'dica-gorjeta',
       categoria: 'geral',
-      titulo: 'Gorjeta e imposto: o preço na etiqueta não é o preço final',
+      momento: 'todo-dia',
+      titulo: 'Moeda, imposto e gorjeta: o preço na etiqueta não é o preço final',
       corpo:
-        'Duas coisas que confundem brasileiro e aparecem em toda conta da viagem.\n\n' +
+        'Três coisas que confundem brasileiro e aparecem em toda conta da viagem.\n\n' +
+        'MOEDA. Quando a maquininha perguntar se vocês querem pagar em reais ou em dólares, ' +
+        'escolham sempre DÓLARES. A conversão oferecida na hora embute uma taxa que costuma ' +
+        'ficar entre 3% e 7% acima da do banco, às vezes mais. Vale para maquininha de ' +
+        'restaurante, caixa eletrônico e site americano — e se repete em toda compra.\n\n' +
         'IMPOSTO. O preço exposto nunca inclui o sales tax. Em Orlando (Orange County) fica em ' +
         'torno de 6,5%, e em Kissimmee (Osceola) por volta de 7,5%. Só aparece no caixa.\n\n' +
         'GORJETA. Em restaurante com garçom, 18 a 20% é o esperado e faz parte do salário da ' +
@@ -6624,10 +6835,12 @@ window.ROTEIRO = {
         'Docking Bay 7, Three Broomsticks e Toadstool Cafe não levam gorjeta.\n\n' +
         'Onde se dá: The Boathouse, Columbia, Sanaa, Sci-Fi Dine-In, Oga\u2019s, Mythos, ' +
         'Sharks Underwater Grill e o Uber (opcional, mas comum).',
+      pesquisa: '2026-09-10',
     },
     {
       id: 'dica-rope-drop',
       categoria: 'geral',
+      momento: 'todo-dia',
       titulo: 'Como o rope drop funciona na prática',
       corpo:
         'A regra de ouro número 1 é a mais importante da viagem e a que mais gente executa ' +
@@ -6655,6 +6868,7 @@ window.ROTEIRO = {
     {
       id: 'dica-natal',
       categoria: 'geral',
+      momento: 'antes-de-viajar',
       titulo: 'A decoração de Natal e por que a ordem dos dias importa',
       corpo:
         'A viagem atravessa a virada da temporada de Natal, e isso foi usado de propósito no ' +
@@ -6664,8 +6878,8 @@ window.ROTEIRO = {
         'UNIVERSAL: a temporada começa exatamente em 14/11 — o dia em que vocês entram no ' +
         'Islands à noite. Vocês pegam a primeira noite da temporada.\n\n' +
         'DISNEY SPRINGS: no dia 10 ainda não tem decoração. Por isso existe uma segunda ida, ' +
-        'para o Christmas Tree Stroll — de graça, e literalmente outro lugar. A noite dela ' +
-        'saiu do dia 21 quando o jogo do Solar Bears entrou, e ainda vai ser remarcada.\n\n' +
+        'para o Christmas Tree Stroll — de graça, e literalmente outro lugar. É a última ' +
+        'noite da viagem, 25/11.\n\n' +
         'SEAWORLD e BUSCH: Christmas Celebration e Christmas Town rodam em datas selecionadas ' +
         'a partir de 06/11 e 13/11. Confirmem que 22/11 e 24/11 estão na lista.',
       pesquisa: '2026-09-08',
@@ -6673,7 +6887,8 @@ window.ROTEIRO = {
     {
       id: 'dica-emergencia',
       categoria: 'geral',
-      titulo: 'Quando dá errado: seguro, saúde, dinheiro e se vocês se perderem',
+      momento: 'emergencia',
+      titulo: 'Quando dá errado: saúde, bateria, seguro, dinheiro e se vocês se perderem',
       corpo:
         'Esta dica existe para ser lida uma vez agora e nunca mais — até o dia em que ' +
         'precisar.\n\n' +
@@ -6688,6 +6903,11 @@ window.ROTEIRO = {
         'socorros, com enfermeiro, ar-condicionado e remédio básico de graça. Peçam ' +
         '\u201cFirst Aid\u201d a qualquer funcionário — eles levam vocês. Para emergência ' +
         'de verdade, 911 de qualquer celular, inclusive sem chip americano.\n\n' +
+        'FORA DO PARQUE, PARA O QUE NÃO É EMERGÊNCIA — febre, torção, corte, dor de ouvido, ' +
+        'virose — o caminho é Urgent Care, não pronto-socorro. A mais perto é a Centra Care ' +
+        'de Celebration, a menos de 1 km do hotel, até as 20h (17h no fim de semana). Depois ' +
+        'disso, a de Lake Buena Vista fica aberta até a meia-noite. Endereço e telefone das ' +
+        'duas estão em Telefones, neste Guia.\n\n' +
         'O SEGURO VIAGEM. Deixem a apólice salva OFFLINE no celular dos dois, não só no ' +
         'e-mail. O que o hospital pede é o número da apólice e o telefone da central — ' +
         'os dois estão nela. Nos EUA, atendimento sem seguro é caro de um jeito que não ' +
@@ -6697,13 +6917,19 @@ window.ROTEIRO = {
         'trabalho. Levem um cartão de reserva guardado em outro lugar, não na mesma ' +
         'carteira. E uns US$ 100 em espécie: gorjeta de arrumadeira, motorista sem app e ' +
         'a máquina que não lê o chip.\n\n' +
+        'SE A BATERIA ACABAR E A POWER BANK TAMBÉM. Os parques da Disney e da Universal têm ' +
+        'máquinas de Fuel Rod: vocês compram uma bateria carregada por US$ 40 e depois trocam ' +
+        'a vazia por outra carregada. Na Disney a troca é de graça; na Universal cada troca ' +
+        'custa US$ 3. Enquanto isso, modo de economia de bateria e apps de mapa fechados.\n\n' +
         'SE UM CELULAR SUMIR. Os telefones do hotel, da Disney e do restaurante estão na ' +
         'aba Telefones deste Guia, e este app funciona nos dois aparelhos — mas só se ' +
         'vocês tiverem exportado o estado. A Home avisa quando faz tempo demais.',
+      pesquisa: '2026-09-10',
     },
     {
       id: 'dica-vazio-proposital',
       categoria: 'geral',
+      momento: 'antes-de-viajar',
       titulo: 'Os blocos VAZIO PROPOSITAL não são falha de planejamento',
       corpo:
         'Existem quatro blocos assim no roteiro: 12/11 às 14h30, 14/11 às 9h, 20/11 às 14h e ' +
@@ -6713,6 +6939,47 @@ window.ROTEIRO = {
         'Busch Gardens com 3h de carro. Chegar destruído no dia 19 transforma o melhor ' +
         'parque de Orlando em arrastar-se — e ele virou dia único.\n\n' +
         'Resistam à tentação de encaixar coisa neles.',
+    },
+    {
+      id: 'dica-bomba-zip',
+      categoria: 'geral',
+      momento: 'dia-especifico',
+      dias: ['d-2026-11-20', 'd-2026-11-25'],
+      titulo: 'Abastecer com cartão brasileiro: paguem dentro da loja',
+      corpo:
+        'A bomba automática pede o ZIP code do cartão antes de liberar o combustível. Cartão ' +
+        'brasileiro não tem ZIP, e a bomba recusa. Não é bloqueio do banco e não adianta ' +
+        'tentar outro cartão.\n\n' +
+        'A SOLUÇÃO: anotem o número da bomba, entrem na loja e paguem no caixa, dizendo o ' +
+        'número e um valor — ou peçam para encher. O caixa libera a bomba. Se sobrar, voltem ' +
+        'para pegar a diferença.\n\n' +
+        'Peçam Regular, a gasolina comum (87). E vale o mesmo para máquina de estacionamento: ' +
+        'se pedir ZIP, procurem uma pessoa.\n\n' +
+        'QUANDO: o carro é retirado em 20/11 e devolvido com o tanque cheio em 25/11, na ' +
+        'filial da 192. Abasteçam num posto da 192 antes de chegar.',
+      pesquisa: '2026-09-10',
+    },
+    {
+      id: 'dica-comida-tarde',
+      categoria: 'geral',
+      momento: 'dia-especifico',
+      dias: ['d-2026-11-11', 'd-2026-11-19', 'd-2026-11-24'],
+      titulo: 'Onde comer quando a noite acaba tarde',
+      corpo:
+        'Três noites terminam com fome e quase tudo fechado: 11/11, com o Magic Kingdom até ' +
+        'as 22h; 19/11, porque o jantar do Epic é às 17h; e 24/11, com a volta de Tampa.\n\n' +
+        'A PRIMEIRA SAÍDA É O PRÓPRIO QUARTO. Ele tem micro-ondas, e a lista do Walmart do ' +
+        'dia 10 traz o jantar para ele: arroz pronto com atum ou frango em sachê, ou sopa. ' +
+        'Três minutos, sem sair do hotel.\n\n' +
+        'SE FOR PARA SAIR, na própria 192, a poucos minutos do hotel:\n' +
+        'World Food Trucks, 5811 W Irlo Bronson — mais de 100 food trucks, das 11h às 2h, e ' +
+        'até as 4h na sexta e no sábado\n' +
+        'Perkins, 5170 W Irlo Bronson — restaurante de mesa, até a meia-noite\n' +
+        'Denny’s, 5855 W Irlo Bronson — 24 horas\n' +
+        'Waffle House, 5391 W Irlo Bronson — praticamente vizinho, 24 horas\n' +
+        'Walgreens, 5935 W Irlo Bronson — farmácia 24 horas, para o básico\n\n' +
+        'O World Food Trucks está nos Locais deste Guia, com a rota do hotel.',
+      pesquisa: '2026-09-10',
     },
   ],
 
@@ -6830,6 +7097,39 @@ window.ROTEIRO = {
     if (!c.dataAlvo) erros.push(`checklist ${c.id}: sem dataAlvo`);
     (c.restauranteIds || []).forEach((rid) => {
       if (!idsRest.has(rid)) erros.push(`checklist ${c.id}: restaurante "${rid}" não existe`);
+    });
+  });
+
+  // Vocabulários que a interface usa para decidir cor, seção e ordem.
+  R.dias.forEach((d) => {
+    (d.notas || []).forEach((n, i) => {
+      if (!M.tiposNota.includes(n.tipo)) erros.push(`${d.data}: nota[${i}] tipo "${n.tipo}"`);
+    });
+    d.blocos.forEach((b) => {
+      if (b.acessoAlt && !M.tiposAcesso.includes(b.acessoAlt)) {
+        erros.push(`${b.id}: acessoAlt "${b.acessoAlt}"`);
+      }
+    });
+    (d.listas || []).forEach((l) => {
+      const vistos = new Set();
+      l.itens.forEach((it) => {
+        if (!it.id) erros.push(`lista ${l.id}: item "${it.texto}" sem id`);
+        else if (vistos.has(it.id)) erros.push(`lista ${l.id}: id repetido "${it.id}"`);
+        vistos.add(it.id);
+        if (it.secao && !M.secoesLoja.includes(it.secao)) {
+          erros.push(`lista ${l.id}: seção "${it.secao}"`);
+        }
+      });
+    });
+  });
+  [...R.dicas, ...R.regrasDeOuro].forEach((x) => {
+    const nome = x.id || ('regra ' + x.n);
+    if (!M.momentos.includes(x.momento)) erros.push(`${nome}: momento "${x.momento}"`);
+    if (x.momento === 'dia-especifico' && !(x.dias || []).length) {
+      erros.push(`${nome}: dia-especifico sem dias`);
+    }
+    (x.dias || []).forEach((id) => {
+      if (!idsDia.has(id)) erros.push(`${nome}: dia "${id}" não existe`);
     });
   });
 
