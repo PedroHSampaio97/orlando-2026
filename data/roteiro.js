@@ -1771,22 +1771,18 @@ window.ROTEIRO = {
                 'A compra seria às 7h ET de 10/11, durante a conexão em Bogotá.',
         pesquisa: '2026-09-10' },
 
-      { nome: 'Starlight Safari', quando: 'decidir', custo: 'US$ 75 a 89 por pessoa',
-        condicao: 'reserva abre 60 dias antes, 6h ET — ou seja 14/09',
+      { nome: 'Starlight Safari', quando: 'descartado',
+        custo: 'US$ 75 a 89 por pessoa · US$ 150 a 178 no casal',
         motivo:
-          'Safári noturno na savana do Animal Kingdom Lodge, em veículo aberto e com ' +
-          'óculos de visão noturna. Cerca de 1h30, sai às 20h30 e às 22h, e NÃO exige ' +
-          'estar hospedado no Lodge — é aberto a qualquer visitante.\n\n' +
-          'O encaixe é bom demais para não registrar: vocês já vão estar no Lodge para o ' +
-          'Sanaa às 19h45. O jantar termina por volta das 21h15 e a saída das 22h começa ' +
-          'no mesmo lugar — zero deslocamento a mais. E é a única noite da viagem em que ' +
-          'dormir tarde não custa nada: o dia 14 abre com bloco vazio às 9h.\n\n' +
-          'O que pesa contra é o preço. US$ 150 a 178 no casal, e vocês descartaram o ' +
-          'Amphicar a US$ 62 por cabeça. Se a régua for a mesma, este também cai — mas ' +
-          'aqui são 90 minutos, não 20, e é a savana à noite, que não tem substituto no ' +
-          'resto do roteiro. E hoje vocês já terão feito o safári diurno duas vezes: ' +
-          'pesem se um terceiro, no escuro, ainda acrescenta.\n\n' +
-          'Decidam até 14/09, que é quando a reserva abre.',
+          'DESCARTADO em 10/09, e a decisão é fácil de defender. Safári noturno na ' +
+          'savana do Animal Kingdom Lodge, 1h30, com óculos de visão noturna, saindo ' +
+          'às 20h30 e às 22h. Não exige estar hospedado lá, e o encaixe era bom: ' +
+          'vocês já estarão no Lodge para o Sanaa.\n\n' +
+          'Dois motivos derrubaram. O preço — US$ 150 a 178 no casal, e vocês já ' +
+          'descartaram o Amphicar a US$ 62 por cabeça, então a régua é a mesma. E o ' +
+          'fato de que SERIA O TERCEIRO SAFÁRI DO MESMO DIA: o roteiro já faz o ' +
+          'Kilimanjaro de manhã e de novo ao entardecer, quando os leões acordam.\n\n' +
+          'Fica registrado para não ser reproposto.',
         pesquisa: '2026-09-09' },
     ],
 
@@ -4824,22 +4820,6 @@ window.ROTEIRO = {
         'bloqueio, e desbloquear de fora dá trabalho. Levem um cartão de reserva guardado ' +
         'em outro lugar que não a mesma carteira, e uns US$ 100 em espécie.\n\n' +
         'Detalhes na dica \u201cQuando dá errado\u201d, no Guia.',
-      restauranteIds: [] },
-
-    { id: 'ck-starlight', dataAlvo: '2026-09-14', hora: '06:00', fuso: 'ET',
-      janelaReserva: true, critico: false,
-      texto: 'DECIDIR: Starlight Safari no Animal Kingdom Lodge (13/11)',
-      nota:
-        'US$ 75 a 89 por pessoa — US$ 150 a 178 no casal. A reserva abre HOJE, 60 dias ' +
-        'antes, às 6h ET, pelo My Disney Experience.\n\n' +
-        'O ENCAIXE É BOM: safári noturno na savana, 1h30, com óculos de visão noturna, e ' +
-        'vocês já estarão no Lodge para o Sanaa às 19h45. O jantar termina 21h15 e a saída ' +
-        'das 22h parte do mesmo lugar. Não exige estar hospedado lá.\n\n' +
-        'O QUE PESA CONTRA: o preço, e o fato de que no dia 13 vocês já terão feito o ' +
-        'safári diurno DUAS vezes. Vocês descartaram o Amphicar a US$ 62 por cabeça — se a ' +
-        'régua for a mesma, este cai também.\n\n' +
-        'Se disserem sim, o dia 13 sai de US$ 0–40 para US$ 150–218 no casal.',
-      pesquisa: '2026-09-09',
       restauranteIds: [] },
 
     { id: 'ck-horarios-ak', dataAlvo: '2026-09-14', hora: null, fuso: null,
