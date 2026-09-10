@@ -213,39 +213,69 @@ antiga, com jantar no Toothsome e Grinchmas às 18h45. Um dia, um lugar.)*
 
 # 🎬 15/11 (domingo) — HOLLYWOOD STUDIOS
 
-O parque mais difícil da Disney e o dia mais caro em passes. Também o mais justificado.
+O parque mais difícil da Disney, e o único dos três em que o Single Pass se justifica.
 
-**Multi Pass:** lista alta → **Slinky Dog Dash** · lista baixa → **Torre do Terror** e **Toy Story Mania**
-**Single Pass:** Rise of the Resistance (peçam janela até as 11h)
+**Multi Pass:** lista alta → **Rock 'n' Roller Coaster** · lista baixa → **Torre do Terror** e **Runaway Railway**
+**Single Pass:** **Rise of the Resistance** — peçam janela entre 10h30 e 11h
+
+> **NÃO VÃO PARA O GALAXY'S EDGE NA ABERTURA.** Pela terceira vez o ponto certo é o contraintuitivo, e aqui o motivo tem nome: o Early Entry do Hollywood Studios inclui o **Rise, o Slinky e a Torre**, e a grande maioria dos hóspedes vai para o **Rise**. Quem entra às 9h e caminha para o Galaxy's Edge está indo para dentro da multidão que já está na fila há meia hora. A recomendação para quem está fora dos hotéis é o **Toy Story Land**.
+
+> **O Slinky Dog não tem hora barata.** 97 min na abertura, 79 de média, 64 à noite — ele nunca cede. O rope drop nele não é quando ele fica de graça, é quando custa menos, porque a noite de vocês está ocupada. E fazê-lo às 9h **libera a lista alta do Multi Pass** para o Rock 'n' Roller Coaster.
 
 | Hora | O quê | Como |
 |---|---|---|
-| **7h00** | Sair do hotel | |
-| **8h00** | Portão | Sem Early Entry, o lugar na fila é o que vocês têm |
-| **9h00** | **Millennium Falcon: Smugglers Run** | Standby, rope drop. Galaxy's Edge |
-| **9h45** | **Rock 'n' Roller Coaster (Muppets)** | Standby. Sunset Blvd, ainda cedo |
-| **10h30** | **Rise of the Resistance** | Single Pass. 18 minutos, a mais elaborada da Disney |
-| **11h15** | **Slinky Dog Dash** | Multi Pass |
-| **11h45** | **Alien Swirling Saucers** | Só se a fila estiver abaixo de 15 min |
-| **12h15** | **Almoço — Docking Bay 7** | Balcão, dentro de Galaxy's Edge |
-| **13h15** | **Torre do Terror** | Multi Pass |
-| **14h00** | **Mickey & Minnie's Runaway Railway** | Standby |
-| **14h50** | **The Magic of Disney Animation** | Standby. Abriu em setembro — se a fila passar de 45 min, use o Multi Pass rolando |
-| **15h45** | **Toy Story Mania** | Multi Pass |
-| **16h30** | **Star Tours** | Standby. Clássico, e o roteiro muda a cada visita |
-| **17h15** | **Oga's Cantina** | Reserva. 45 min |
-| **18h15** | **Jantar — Sci-Fi Dine-In** | Reserva. Mesas em formato de carro |
-| **19h45** | Sunset Blvd | Decoração de Natal, música ao vivo |
-| **20h15** | **Fantasmic!** | Cheguem 40 min antes. Confiram se está programado no dia |
+| **7h00** | Sair do hotel | Uber, ~30 min, US$ 22–32. A segurança daqui é lenta |
+| **8h00** | Portão · posicionar para o **Toy Story Land** | Não para o Galaxy's Edge |
+| **9h00** | **Slinky Dog Dash** | Rope drop. A fila mais teimosa do parque |
+| **9h40** | **Toy Story Mania** | Standby, mesma land |
+| **10h15** | **Alien Swirling Saucers** | Opcional. Só se a fila estiver abaixo de 15 min |
+| **10h45** | **Rise of the Resistance** | Single Pass |
+| **11h35** | **Millennium Falcon: Smugglers Run** | Standby. **Peçam para ser PILOTOS** |
+| **12h20** | **Almoço — Docking Bay 7** | Mobile order, pedido na fila do Falcon |
+| **13h20** | **Parada** | E a travessia mais longa do dia: 13 min até a Sunset Blvd |
+| **13h50** | **Rock 'n' Roller Coaster (Muppets)** | Multi Pass · lista alta. Reabriu em maio de 2026 |
+| **14h30** | **Torre do Terror** | Multi Pass. Ao usar, reservem o Runaway Railway |
+| **15h15** | **Mickey & Minnie's Runaway Railway** | Multi Pass rolando |
+| **16h00** | **Star Tours** | Standby. O roteiro muda a cada visita |
+| **16h45** | **Parada** | Comam algo da mochila: o Oga's é bebida, não jantar |
+| **17h00** | **Oga's Cantina** | Reserva. Limite de 45 min por grupo |
+| **18h00** | **Jantar — Sci-Fi Dine-In** | Reserva. Vocês sentam dentro de um carro dos anos 50 |
+| **19h25** | **Sunset Blvd** — Natal e compras | **É o momento de compra do dia.** As lojas fecham com o parque |
+| **20h00** | Posição para o Fantasmic! | Meio e um pouco atrás. As primeiras fileiras molham |
+| **20h15** | **Fantasmic!** | ~26 min. Segue o fechamento do parque, não a abertura |
+| **20h50** | Voltar ao hotel | Uber, ~30 min, US$ 22–32. Amanhã sai às 8h |
+
+### Por que o dia está nesta ordem — a fila típica
+
+| Atração | Quando vocês fazem | Fila aí | No pico |
+|---|---|---|---|
+| **Slinky Dog Dash** | 9h00, rope drop | ~40 min | **~97** |
+| Toy Story Mania | 9h40, de manhã | ~25 min | ~55 |
+| Alien Swirling Saucers | 10h15, de manhã | ~15 min | ~35 |
+| **Rise of the Resistance** | 10h45, Single Pass | ~10 min | **~100** |
+| Millennium Falcon | 11h35, antes do meio-dia | ~35 min | ~65 |
+| Rock 'n' Roller Coaster | 13h50, Multi Pass | ~10 min | ~75 |
+| Torre do Terror | 14h30, Multi Pass | ~10 min | ~35 |
+| Runaway Railway | 15h15, Multi Pass | ~10 min | ~50 |
+| Star Tours | 16h00, fim da tarde | ~25 min | ~45 |
+
+*Médias publicadas, consultadas em 10/09/2026.*
+
+> **Por que aqui o Single Pass fica, e nos dias 11 e 13 virou plano B.** Nos outros dois o horário resolvia: o TRON tinha a janela do desfile, o Flight of Passage tinha a última hora. Aqui **não existe janela livre** — o Rise faz 100 min na abertura e 63 depois das 19h, e as 19h de vocês já têm Oga's, Sci-Fi e Fantasmic. O plano B de graça existe e está registrado: entrar na fila **depois do Fantasmic**, por volta das 20h50, valendo a regra de que quem está na fila no fechamento anda. Saem por volta das 21h50 — e amanhã é Epcot com saída às 8h.
+
+> **As duas reservas ainda não existem.** A janela do Oga's e do Sci-Fi abre em **16/09**, e os horários acima são proposta: 17h e 18h fazem a tarde caber sem correria e deixam 35 minutos de Sunset Blvd antes do show. Se conseguirem outros, os blocos da noite acompanham.
 
 ### Renúncias
-Disney Junior, Frozen Sing-Along, Vacation Fun, Lightning McQueen's Racing Academy, Walt Disney Presents.
+Disney Junior, Frozen Sing-Along, Vacation Fun, Lightning McQueen's Racing Academy, Walt Disney Presents, Beauty and the Beast Live on Stage.
+
+**The Magic of Disney Animation** abriu em 14/09/2026, mas não é atração de fila: é aula de desenho com um animatrônico do Olaf, encontros com personagens e um teatro. Sem interesse para vocês, e ocuparia a janela do Star Tours.
 
 **Renúncia por idioma:** Indiana Jones Epic Stunt Spectacular é visual, mas tem muito texto falado entre as cenas. Se o dia atrasar, é o primeiro a cair.
 
-**Fechado:** Muppet Vision 3D.
+**Fechado:** Muppet*Vision 3D fechou em 08/06/2025, junto com o PizzeRizzo e o Muppets Courtyard inteiro, para dar lugar à Monstropolis — a land de Monsters, Inc. prevista para 2027.
 
 ---
+
 
 # 🌍 16/11 (segunda) — EPCOT
 

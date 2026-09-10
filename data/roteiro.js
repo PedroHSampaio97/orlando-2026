@@ -2535,154 +2535,412 @@ window.ROTEIRO = {
     operadora: 'disney',
     parqueId: 'hollywood-studios',
     custoZero: false,
+    fechado: true,
+    revisadoEm: '2026-09-10',
     referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: false },
+
     resumo:
-      'O parque mais difícil da Disney e o dia mais caro em passes. Também o mais justificado. ' +
-      'Sem Early Entry, o lugar na fila é o que vocês têm.',
-    avisos: [],
+      'O parque mais difícil da Disney, e o único dos três em que o Single Pass se ' +
+      'justifica. A manhã é no Toy Story Land, onde a multidão do Early Entry não vai; a ' +
+      'noite tem duas reservas e o Fantasmic, e por isso não sobra janela de graça para o ' +
+      'Rise of the Resistance.',
+
+    avisos: [
+      'NÃO VÃO PARA O GALAXY’S EDGE NA ABERTURA. O Early Entry inclui o Rise, o Slinky e a ' +
+      'Torre, e a maioria dos hóspedes vai para o Rise. Vocês vão para o Toy Story Land.',
+      'AS DUAS RESERVAS AINDA NÃO EXISTEM. A janela do Oga’s e do Sci-Fi abre em 16/09 e os ' +
+      'horários aqui são proposta — 17h e 18h fazem a tarde caber. Se conseguirem outros, ' +
+      'ajustem os blocos da noite.',
+    ],
+
     notas: [
       { tipo: 'bom', texto:
-        'VERIFICADO EM 08/09: 15/11 não é noite de Disney Jollywood Nights. As datas de ' +
-        'novembro são 7, 14, 16, 21, 23 e 28 — sábados e segundas. Nessas o parque fecha às ' +
-        '19h30 para quem não tem ingresso do evento, o que mataria o Fantasmic! das 20h15. ' +
-        'O domingo de vocês está limpo.', pesquisa: '2026-09-08' },
+        'VERIFICADO: 15/11 não é noite de Disney Jollywood Nights. As datas de novembro são ' +
+        '7, 14, 16, 21, 23 e 28 — sábados e segundas. Nessas o parque fecha às 19h30 para ' +
+        'quem não tem ingresso do evento, o que mataria o Fantasmic. O domingo de vocês está ' +
+        'limpo.', pesquisa: '2026-09-08' },
+
+      { tipo: 'atencao', texto:
+        'O SLINKY DOG NÃO TEM HORA BARATA. Ele faz 97 minutos na abertura, 79 de média e 64 ' +
+        'à noite — nunca cede. O rope drop nele não é o momento em que ele fica de graça, é ' +
+        'o momento em que ele custa menos, porque a noite de vocês está ocupada. E fazê-lo ' +
+        'às 9h libera a lista alta do Multi Pass para o Rock ’n’ Roller Coaster.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'bom', texto:
+        'O ROCK ’N’ ROLLER COASTER REABRIU. Fechou como Aerosmith em 02/03/2026 e voltou em ' +
+        '26/05/2026 com temática dos Muppets, com o Dr. Teeth and the Electric Mayhem. Em ' +
+        'novembro ainda é atração nova.', pesquisa: '2026-09-10' },
+
+      { tipo: 'atencao', texto:
+        'O FANTASMIC SEGUE O FECHAMENTO DO PARQUE, não a abertura. Com fechamento às 21h ele ' +
+        'costuma ser às 20h; com 22h, às 21h. Os horários oficiais de 15/11 saem por volta de ' +
+        '16/09, junto com a janela das reservas.', pesquisa: '2026-09-10' },
     ],
+
+    /* --------------------------------------------------------------------- */
+    planos: [
+      {
+        letra: 'A',
+        titulo: 'O dia como está escrito',
+        gatilho: 'Vocês estão no portão às 8h e o parque abre às 9h.',
+        passos: [
+          'Do portão, direto para o TOY STORY LAND — não para o Galaxy’s Edge.',
+          'Slinky Dog no rope drop, Toy Story Mania em seguida, Alien só se estiver vazio.',
+          'Rise às 10h45 com o Single Pass, e o Millennium Falcon no standby logo depois.',
+          'Almoço em Batuu, parada, e a travessia longa até a Sunset Blvd.',
+          'Rock ’n’ Roller na lista alta do Multi Pass; ao usar, reservem a Torre.',
+          'Noite sentada: Oga’s, Sci-Fi, Sunset Blvd e o Fantasmic.',
+        ],
+      },
+      {
+        letra: 'B',
+        titulo: 'O Slinky Dog já está com mais de 60 min na abertura',
+        gatilho: 'Vocês chegam nele às 9h e o painel marca 60 minutos ou mais.',
+        passos: [
+          'Sinal de que o Early Entry veio para o Toy Story Land em vez de ir ao Rise. ' +
+          'Acontece, e não é motivo para insistir.',
+          'Pivô imediato: Toy Story Mania e Alien agora, que estão do lado e vazios.',
+          'O Slinky passa para o Multi Pass, na lista alta — e aí o Rock ’n’ Roller vai para ' +
+          'a lista baixa ou fica no standby do fim da tarde.',
+          'O resto do dia não muda.',
+        ],
+      },
+      {
+        letra: 'B2',
+        titulo: 'O parque não abre às 9h, ou o Fantasmic é em outra hora',
+        gatilho: 'Os horários oficiais saem por volta de 16/09.',
+        passos: [
+          'ABERTURA DIFERENTE: mudem a referência do dia. A manhã inteira desloca junto, ' +
+          'inclusive a saída das 7h.',
+          'A NOITE NÃO DESLOCA COM A ABERTURA. As duas reservas têm hora própria e o ' +
+          'Fantasmic segue o fechamento. Se o app avisar colisão em vermelho no fim da ' +
+          'tarde, é o Star Tours ou a parada batendo no Oga’s — cortem esses, não a noite.',
+          'FANTASMIC EM OUTRA HORA: ajustem o selo de horário no bloco dele, e os dois ' +
+          'blocos anteriores andam junto.',
+        ],
+      },
+      {
+        letra: 'C',
+        titulo: 'Chuva ou o dia desandou',
+        gatilho: 'Chuva que não passa, cansaço, ou o dia atrasou demais.',
+        passos: [
+          'Este é o parque MAIS coberto da Disney. Rise, Runaway Railway, Toy Story Mania, ' +
+          'Star Tours e a Torre do Terror são todos internos, e o Oga’s e o Sci-Fi também.',
+          'O Slinky e o Rock ’n’ Roller param com raio. Se pararem de manhã, troquem a ordem: ' +
+          'Rise e Millennium Falcon primeiro, e voltem ao Toy Story Land depois.',
+          'O QUE NÃO SE SACRIFICA: o Fantasmic. Se for para cortar, cortem nesta ordem — ' +
+          'Alien, Star Tours e o Millennium Falcon.',
+          'O Fantasmic é cancelado com chuva forte. Se cancelarem, usem a hora para o Rise ' +
+          'de novo ou para a Torre, e saiam mais cedo: amanhã é Epcot com saída às 8h.',
+        ],
+      },
+    ],
+
+    /* --------------------------------------------------------------------- */
+    naoPerca: [
+      { nome: 'Fantasmic!', quando: 'hoje', custo: 'incluso no ingresso',
+        motivo: 'Fogo, água, barcos, projeção em cortina de água e um dragão de vinte ' +
+                'metros. É o show mais antigo e mais querido do parque, e é o fecho do dia. ' +
+                'Sentem no meio e um pouco atrás: de perto a projeção se perde e as ' +
+                'primeiras fileiras molham.' },
+
+      { nome: 'Ser piloto no Millennium Falcon', quando: 'hoje', custo: 'incluso',
+        motivo: 'São seis pessoas por nave, com funções diferentes, e só os dois pilotos ' +
+                'controlam de verdade. Peçam ao funcionário que distribui as funções. É a ' +
+                'diferença entre jogar e assistir, e não custa nada pedir.' },
+
+      { nome: 'A Sunset Blvd no Natal, antes do Fantasmic', quando: 'hoje', custo: 'grátis',
+        motivo: 'A rua mais bonita do parque à noite, com luz quente e música ao vivo, e o ' +
+                'teatro do Fantasmic fica no fim dela. É também o momento de compra do dia — ' +
+                'as lojas fecham com o parque e depois do show vocês vão direto para a saída.' },
+
+      { nome: 'Single Pass do Rise of the Resistance', quando: 'decidir',
+        custo: 'US$ 20–25 por pessoa',
+        motivo: 'DIFERENTE DOS DIAS 11 E 13, aqui o passe se justifica. Nos outros dois o ' +
+                'horário resolvia; aqui não existe janela livre — o Rise faz 100 min na ' +
+                'abertura e 63 depois das 19h, e as 19h de vocês já têm Oga’s, Sci-Fi e ' +
+                'Fantasmic.\n\n' +
+                'O plano B de graça existe e está no bloco: entrar na fila depois do ' +
+                'Fantasmic, por volta das 20h50, com a regra de que quem está na fila no ' +
+                'fechamento anda. Saem por volta das 21h50, e amanhã é Epcot com saída às 8h.',
+        pesquisa: '2026-09-10' },
+
+      { nome: 'Muppet*Vision 3D', quando: 'fechada', custo: '—',
+        motivo: 'Fechou em 08/06/2025, junto com o PizzeRizzo e o Muppets Courtyard, para dar ' +
+                'lugar à Monstropolis — a land de Monsters, Inc. prevista para 2027. Não é ' +
+                'escolha de vocês; fica registrado para ninguém procurar.',
+        pesquisa: '2026-09-10' },
+    ],
+
+    /* --------------------------------------------------------------------- */
+    prepararAmanha: {
+      paraODia: '2026-11-16',
+      titulo: 'Epcot · alarme 7h, saída 8h',
+      aviso:
+        'Hoje termina perto das 22h e amanhã sai às 8h. O Epcot é o dia mais leve dos ' +
+        'quatro da Disney — a tarde é comida, não fila — mas a manhã ainda tem hora.',
+      itens: [
+        { texto: 'Alarme para 7h nos dois celulares', critico: true,
+          motivo: 'Saída às 8h. Depois de um dia que acabou 22h, um alarme só falha.' },
+        { texto: 'Conferir se as reservas de Lightning Lane do dia 16 aparecem no app',
+          critico: true,
+          motivo: 'O Single Pass do Cosmic Rewind foi comprado em 13/11. Se falhou, hoje ' +
+                  'ainda dá para replanejar a manhã do Epcot.' },
+        { texto: 'Conferir o horário de abertura do Epcot e ajustar a referência',
+          critico: true,
+          motivo: 'O dia 16 assume 9h. Se for outro, mudem a referência e a manhã desloca ' +
+                  'junto, inclusive a saída das 8h.' },
+        { texto: 'Mochila remontada e celular carregando', critico: true,
+          motivo: 'Duas garrafas, barrinhas, protetor solar, power bank, cabo e uma camada ' +
+                  'leve para cada um — o Epcot é o parque com mais área aberta, e a World ' +
+                  'Showcase à noite esfria.' },
+        { texto: 'Guardar as compras da Sunset Blvd',
+          motivo: 'Vocês voltam com sacola hoje. Amanhã a mochila precisa sair leve.' },
+      ],
+    },
+
     blocos: [
       { id: 'b-1511-0700', hora: '07:00', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Sair do hotel', descricao: '', localId: 'hollywood-studios', acesso: [] },
+        titulo: 'Sair do hotel',
+        descricao: 'Uber, ~30 min, US$ 22–32',
+        contexto:
+          'O Hollywood Studios tem entrada direta, sem monotrilho. Mas a fila da segurança ' +
+          'aqui é das mais lentas da Disney, e é por isso que a saída é às 7h para uma ' +
+          'abertura às 9h.',
+        localId: 'hollywood-studios', acesso: [], critico: true, duracaoMin: 60 },
 
       { id: 'b-1511-0800', hora: '08:00', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Portão',
-        descricao: 'Sem Early Entry, o lugar na fila é o que vocês têm',
-        localId: 'hollywood-studios', acesso: [] },
+        titulo: 'Portão · posicionar para o TOY STORY LAND',
+        descricao: 'Não para o Galaxy’s Edge',
+        contexto:
+          'PELA TERCEIRA VEZ, O PONTO CERTO É O CONTRAINTUITIVO — e aqui o motivo está ' +
+          'documentado com nome e sobrenome.\n\n' +
+          'O Early Entry do Hollywood Studios inclui o Rise of the Resistance, o Slinky Dog ' +
+          'Dash e a Torre do Terror. E a grande maioria dos hóspedes vai para o RISE, que ' +
+          'fica no Galaxy’s Edge. Quem entra às 9h e caminha para lá está andando para ' +
+          'dentro da multidão que já está na fila há meia hora.\n\n' +
+          'A recomendação para quem está fora dos hotéis é ir ao Toy Story Land. É para lá ' +
+          'que vocês vão, direto, assim que passarem a catraca.\n\n' +
+          'PONTO DE ENCONTRO DE HOJE: o Chinese Theater, no fim da Hollywood Blvd. É o ' +
+          'prédio que se vê da entrada e por onde todo caminho passa. Se vocês se perderem, ' +
+          'vão para lá e ESPEREM — não saiam procurando.\n\n' +
+          'Café da manhã aqui na fila, das barrinhas da mochila: o almoço é 12h20.',
+        localId: 'hollywood-studios', acesso: [], duracaoMin: 60, pesquisa: '2026-09-10' },
 
-      { id: 'b-1511-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1511-1115', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Slinky Dog Dash — rope drop',
+        descricao: 'A fila mais teimosa do parque. Não existe hora barata para ela',
+        contexto:
+          'Montanha-russa familiar ao ar livre, com dois lançamentos suaves. Não é intensa — ' +
+          'o que ela é, é sempre cheia.\n\n' +
+          'SEJAM HONESTOS COM O NÚMERO: o Slinky faz 97 minutos na abertura, 79 de média no ' +
+          'dia e 64 à noite. Não existe janela barata para ele. O rope drop não é o momento ' +
+          'em que ele fica de graça, é o momento em que ele custa menos — e a noite de vocês ' +
+          'já está ocupada com Oga’s, Sci-Fi e Fantasmic.\n\n' +
+          'Fazê-lo agora também libera a lista alta do Multi Pass, que de outra forma ele ' +
+          'consumiria — e ela vai para o Rock ’n’ Roller Coaster.',
+        areaParque: 'Toy Story Land', acesso: ['rope-drop', 'standby'], critico: true,
+        duracaoMin: 40,
+        fila: { min: 40, quando: 'no rope drop', pico: 97, estimado: true, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1511-1545', hora: '09:40', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Toy Story Mania',
+        descricao: 'Standby, ainda cedo. Mesma land',
+        contexto:
+          'Jogo de tiro em 3D com óculos, em cabines giratórias — vocês competem por ' +
+          'pontuação. Puxem o gatilho o mais rápido possível: a pontuação premia volume de ' +
+          'tiros, não pontaria.',
+        areaParque: 'Toy Story Land', acesso: ['standby'], duracaoMin: 35,
+        fila: { min: 25, quando: 'de manhã', pico: 55, estimado: true, fonte: '2026-09-10' } },
+
+      { id: 'b-1511-1145', hora: '10:15', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Alien Swirling Saucers',
+        descricao: 'Opcional. Só se a fila estiver abaixo de 15 min',
+        contexto:
+          'Xícaras giratórias temáticas, 90 segundos. Leve, e o valor está em já estarem na ' +
+          'land. Se a fila passar de 15 minutos, sigam direto para o Rise — vocês têm hora ' +
+          'marcada com o Single Pass.',
+        areaParque: 'Toy Story Land', acesso: ['standby'], opcional: true, duracaoMin: 24,
+        condicao: 'Só se a fila estiver abaixo de 15 min',
+        fila: { min: 15, quando: 'de manhã', pico: 35, estimado: true, fonte: '2026-09-10' } },
+
+      { id: 'b-1511-1030', hora: '10:45', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Rise of the Resistance',
+        descricao: 'Single Pass. E aqui ele se justifica',
+        contexto:
+          'Não é uma atração, são quatro: pré-show, simulador de nave, um hangar em escala ' +
+          'real com dezenas de stormtroopers e o passeio em veículo sem trilhos. É consenso ' +
+          'como a coisa mais ambiciosa que a Disney já construiu.\n\n' +
+          'POR QUE AQUI O PASSE FICA, e nos dias 11 e 13 virou plano B: nos outros dois o ' +
+          'horário resolvia — o TRON tinha a janela do desfile, o Flight of Passage tinha a ' +
+          'última hora. Aqui não existe janela livre. O Rise faz 100 minutos na abertura e ' +
+          '63 depois das 19h, e as 19h de vocês já estão com Oga’s, Sci-Fi e Fantasmic.\n\n' +
+          'PLANO B DE GRAÇA, se vocês não comprarem: entrar na fila DEPOIS do Fantasmic, por ' +
+          'volta das 20h50. Vale a mesma regra do dia 13 — quem está na fila no fechamento ' +
+          'anda. Vocês sairiam por volta das 21h50, e o dia 16 é Epcot com saída às 8h.',
+        areaParque: 'Galaxy’s Edge', acesso: ['single-pass'], critico: true, duracaoMin: 50,
+        fila: { min: 10, quando: 'com o Single Pass', pico: 100, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1511-0900', hora: '11:35', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Millennium Falcon: Smugglers Run',
-        descricao: 'Standby, rope drop. Galaxy’s Edge',
+        descricao: 'Standby. Peçam para ser PILOTOS',
         contexto:
           'Simulador em que vocês pilotam a Millennium Falcon em grupos de seis, cada um com ' +
           'uma função. Se sentarem como pilotos, vocês controlam de verdade — e a nave bate ' +
-          'muito. Peçam para ser pilotos: as outras funções são bem menos interessantes.',
-        areaParque: 'Galaxy’s Edge', acesso: ['rope-drop', 'standby'] },
+          'muito.\n\n' +
+          'PEÇAM PARA SER PILOTOS ao funcionário que distribui as funções. Artilheiro e ' +
+          'engenheiro são bem menos interessantes, e é a diferença entre jogar e assistir.',
+        areaParque: 'Galaxy’s Edge', acesso: ['standby'], duracaoMin: 45,
+        fila: { min: 35, quando: 'antes do meio-dia', pico: 65, estimado: true, fonte: '2026-09-10' } },
 
-      { id: 'b-1511-0945', hora: '09:45', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Rock ’n’ Roller Coaster (Muppets)',
-        descricao: 'Standby. Sunset Blvd, ainda cedo',
-        contexto:
-          'Montanha-russa fechada, no escuro, com lançamento de 0 a 90 km/h em menos de 3 ' +
-          'segundos e três inversões. É a mais intensa da Disney em Orlando. A temática foi ' +
-          'trocada de Aerosmith para os Muppets.',
-        areaParque: 'Sunset Blvd', acesso: ['standby'] },
-
-      { id: 'b-1511-1030', hora: '10:30', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Rise of the Resistance',
-        descricao: 'Single Pass. 18 minutos, a mais elaborada da Disney',
-        contexto:
-          'Não é uma atração, são quatro: pré-show, simulador de nave, um hangar em escala real ' +
-          'com dezenas de stormtroopers e o passeio em veículo sem trilhos. É consenso como a ' +
-          'coisa mais ambiciosa que a Disney já construiu. Vale o Single Pass sozinho.',
-        areaParque: 'Galaxy’s Edge', acesso: ['single-pass'], duracaoMin: 18 },
-
-      { id: 'b-1511-1115', hora: '11:15', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Slinky Dog Dash',
-        descricao: 'Multi Pass',
-        contexto:
-          'Montanha-russa familiar ao ar livre no Toy Story Land, com dois lançamentos suaves. ' +
-          'Não é intensa, mas é das filas mais longas do parque o dia inteiro — por isso está ' +
-          'na lista alta do Multi Pass.',
-        areaParque: 'Toy Story Land', acesso: ['multi-pass'] },
-
-      { id: 'b-1511-1145', hora: '11:45', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Alien Swirling Saucers',
-        descricao: 'Só se a fila estiver abaixo de 15 min',
-        contexto: 'Xícaras giratórias temáticas, 90 segundos. Leve. Só se estiver vazio mesmo.',
-        areaParque: 'Toy Story Land', acesso: ['standby'],
-        condicao: 'Só se a fila estiver abaixo de 15 min' },
-
-      { id: 'b-1511-1215', hora: '12:15', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-1511-1215', hora: '12:20', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Docking Bay 7',
-        descricao: 'Balcão, dentro de Galaxy’s Edge',
+        descricao: 'Balcão, dentro de Galaxy’s Edge. Mobile order',
         contexto:
-          'Balcão temático de Batuu, com pratos de nomes alienígenas que são versões de comida ' +
-          'reconhecível. Usem mobile order — a fila do balcão é longa e a retirada é imediata.',
-        restauranteId: 'r-docking-bay', areaParque: 'Galaxy’s Edge', acesso: [] },
+          'Balcão temático de Batuu, com pratos de nomes alienígenas que são versões de ' +
+          'comida reconhecível. Usem mobile order — a fila do balcão é longa e a retirada é ' +
+          'imediata. Peçam ainda dentro da fila do Millennium Falcon.\n\n' +
+          'É a última comida de verdade até as 18h: o Oga’s às 17h serve bebida e petisco, ' +
+          'não refeição.',
+        restauranteId: 'r-docking-bay', areaParque: 'Galaxy’s Edge', acesso: [], duracaoMin: 60 },
 
-      { id: 'b-1511-1315', hora: '13:15', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1511-1320p', hora: '13:20', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Parada — e a travessia mais longa do dia',
+        descricao: 'Quinze minutos aqui, e treze de caminhada até a Sunset Blvd',
+        contexto:
+          'Banheiro, garrafas cheias e sentar, ainda em Batuu.\n\n' +
+          'DEPOIS DAQUI VEM A CAMINHADA MAIS LONGA DO PARQUE: do Galaxy’s Edge até a Sunset ' +
+          'Blvd são treze minutos atravessando o parque inteiro, e num dia cheio mais. Ela ' +
+          'está contada no relógio — não é atraso, é o mapa.',
+        areaParque: 'Galaxy’s Edge', acesso: [], duracaoMin: 15 },
+
+      { id: 'b-1511-0945', hora: '13:50', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Rock ’n’ Roller Coaster (Muppets)',
+        descricao: 'Multi Pass · lista alta. Reabriu em maio de 2026',
+        contexto:
+          'Montanha-russa fechada, no escuro, com lançamento de 0 a 90 km/h em menos de três ' +
+          'segundos e três inversões. É a mais intensa da Disney em Orlando.\n\n' +
+          'A temática saiu do Aerosmith e virou os Muppets, com o Dr. Teeth and the Electric ' +
+          'Mayhem. Reabriu em 26/05/2026, então em novembro ainda é atração nova — e é por ' +
+          'isso que ela leva a lista alta do Multi Pass agora que o Slinky foi no rope drop.',
+        areaParque: 'Sunset Blvd', acesso: ['multi-pass'], duracaoMin: 40,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 75, estimado: true, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10' },
+
+      { id: 'b-1511-1315', hora: '14:30', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Torre do Terror',
-        descricao: 'Multi Pass',
+        descricao: 'Multi Pass · lista baixa. Ao usar, reservem o Runaway Railway',
         contexto:
           'Queda livre dentro de um hotel abandonado cenográfico, com sequência aleatória de ' +
-          'subidas e quedas que muda a cada volta. A ambientação é a melhor da Disney. Sensação ' +
-          'de estômago forte — se alguém tiver medo de queda, é esta.',
-        areaParque: 'Sunset Blvd', acesso: ['multi-pass'] },
+          'subidas e quedas que muda a cada volta. A ambientação é a melhor da Disney.\n\n' +
+          'Sensação de estômago forte — se algum dos dois tem medo de queda, é esta e não as ' +
+          'montanhas-russas.',
+        areaParque: 'Sunset Blvd', acesso: ['multi-pass'], duracaoMin: 41,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 35, fonte: '2026-09-10' } },
 
-      { id: 'b-1511-1400', hora: '14:00', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1511-1400', hora: '15:15', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mickey & Minnie’s Runaway Railway',
-        descricao: 'Standby',
+        descricao: 'Multi Pass rolando',
         contexto:
-          'Dark ride sem trilhos visíveis onde vocês entram literalmente dentro de um desenho. ' +
-          'Colorido, rápido, sem emoção forte. Tem diálogo, mas a graça é visual.',
-        areaParque: 'Hollywood Blvd', acesso: ['standby'] },
+          'Dark ride sem trilhos visíveis onde vocês entram literalmente dentro de um ' +
+          'desenho. Colorido, rápido, sem emoção forte. Tem diálogo, mas a graça é visual.',
+        areaParque: 'Hollywood Blvd', acesso: ['multi-pass'], duracaoMin: 40,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 50, estimado: true, fonte: '2026-09-10' } },
 
-      { id: 'b-1511-1450', hora: '14:50', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'The Magic of Disney Animation',
-        descricao: 'Standby. Abriu em setembro — se a fila passar de 45 min, use o Multi Pass rolando',
-        contexto:
-          'Atração nova, reabertura do antigo pavilhão de animação. Por ser recente, a fila é ' +
-          'imprevisível e pode estourar. Se passar de 45 minutos, gastem uma reserva ' +
-          'rolando do Multi Pass em vez de esperar.',
-        areaParque: 'Animation Courtyard', acesso: ['standby'], acessoAlt: 'multi-pass',
-        condicao: 'Se a fila passar de 45 min, use o Multi Pass rolando' },
-
-      { id: 'b-1511-1545', hora: '15:45', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Toy Story Mania',
-        descricao: 'Multi Pass',
-        contexto:
-          'Jogo de tiro em 3D com óculos, em cabines giratórias — vocês competem por pontuação. ' +
-          'Puxem o gatilho o mais rápido possível: a pontuação premia volume de tiros.',
-        areaParque: 'Toy Story Land', acesso: ['multi-pass'] },
-
-      { id: 'b-1511-1630', hora: '16:30', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1511-1630', hora: '16:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Star Tours',
-        descricao: 'Standby. Clássico, e o roteiro muda a cada visita',
+        descricao: 'Standby. O roteiro muda a cada visita',
         contexto:
-          'Simulador de cabine com tela e movimento. O sistema sorteia destinos e personagens ' +
-          'a cada sessão, então duas voltas quase nunca são iguais. Legendas disponíveis, e a ' +
-          'trama é simples.',
-        areaParque: 'Echo Lake', acesso: ['standby'] },
+          'Simulador de cabine com tela e movimento. O sistema sorteia destinos e ' +
+          'personagens a cada sessão, então duas voltas quase nunca são iguais. Legendas ' +
+          'disponíveis, e a trama é simples.',
+        areaParque: 'Echo Lake', acesso: ['standby'], duracaoMin: 39,
+        fila: { min: 25, quando: 'no fim da tarde', pico: 45, estimado: true, fonte: '2026-09-10' } },
 
-      { id: 'b-1511-1715', hora: '17:15', ancora: 'fixo', tipo: 'refeicao',
+      { id: 'b-1511-1645p', hora: '16:45', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Parada — antes da noite',
+        descricao: 'Quinze minutos. A partir daqui o dia é sentado',
+        contexto:
+          'Banheiro, garrafas e power bank. Daqui até a saída são quatro horas, e três delas ' +
+          'são sentadas: Oga’s, Sci-Fi e Fantasmic.\n\n' +
+          'COMAM ALGUMA COISA DA MOCHILA se estiverem com fome: o almoço foi 12h20 e o ' +
+          'Oga’s serve bebida, não jantar. A comida de verdade só chega às 18h.',
+        areaParque: 'Galaxy’s Edge', acesso: [], duracaoMin: 15 },
+
+      { id: 'b-1511-1715', hora: '17:00', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Oga’s Cantina',
-        descricao: 'Reserva. 45 min',
+        descricao: 'Reserva. Limite de 45 min por grupo',
         contexto:
-          'Bar temático de Batuu com DJ droide, drinks autorais bem estranhos e limite de tempo ' +
-          'de 45 minutos por grupo. É quase impossível entrar sem reserva. Janela abre 16/09. ' +
-          'HORÁRIO FIXO de reserva.',
-        restauranteId: 'r-ogas', areaParque: 'Galaxy’s Edge', acesso: ['reserva'], duracaoMin: 45 },
+          'Bar temático de Batuu com DJ droide, drinks autorais bem estranhos e limite de ' +
+          'tempo de 45 minutos por grupo. É quase impossível entrar sem reserva.\n\n' +
+          'HORÁRIO FIXO de reserva, e ele é PROPOSTA: a janela abre em 16/09 e nada foi ' +
+          'reservado ainda. Pedir 17h faz a tarde caber sem correria e deixa doze minutos ' +
+          'de caminhada até o Sci-Fi. Se só conseguirem outro horário, ajustem os blocos ' +
+          'daqui até o Fantasmic.',
+        restauranteId: 'r-ogas', areaParque: 'Galaxy’s Edge', acesso: ['reserva'],
+        duracaoMin: 45 },
 
-      { id: 'b-1511-1815', hora: '18:15', ancora: 'fixo', tipo: 'refeicao',
+      { id: 'b-1511-1815', hora: '18:00', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Sci-Fi Dine-In',
-        descricao: 'Reserva. Mesas em formato de carro',
+        descricao: 'Reserva. Vocês sentam dentro de um carro dos anos 50',
         contexto:
-          'Vocês sentam dentro de conversíveis dos anos 50 num cinema drive-in cenográfico, ' +
-          'assistindo a trailers de ficção científica ruim em loop. A comida é americana comum ' +
-          '— vocês vão pelo cenário, que é único. Janela abre 16/09. HORÁRIO FIXO de reserva.',
-        restauranteId: 'r-scifi', areaParque: 'Commissary Lane', acesso: ['reserva'] },
+          'Vocês sentam dentro de conversíveis num cinema drive-in cenográfico, assistindo a ' +
+          'trailers de ficção científica ruim em loop, sob um céu estrelado falso. A comida é ' +
+          'americana comum — vocês vão pelo cenário, que não existe em nenhum outro lugar.\n\n' +
+          'É mesa com garçom: 18 a 20% de gorjeta, e o preço da etiqueta não inclui o ' +
+          'imposto.\n\n' +
+          'HORÁRIO FIXO de reserva, também proposta. Janela abre 16/09.',
+        restauranteId: 'r-scifi', areaParque: 'Commissary Lane', acesso: ['reserva'],
+        duracaoMin: 78 },
 
-      { id: 'b-1511-1945', hora: '19:45', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Sunset Blvd',
-        descricao: 'Decoração de Natal, música ao vivo',
-        areaParque: 'Sunset Blvd', acesso: [] },
+      { id: 'b-1511-1945', hora: '19:25', ancora: 'fixo', tipo: 'compras',
+        titulo: 'Sunset Blvd · decoração de Natal e compras',
+        descricao: 'A caminho do Fantasmic, sem voltar depois',
+        contexto:
+          'A Sunset Blvd é a rua mais bonita do parque à noite e no Natal ganha luz quente e ' +
+          'música ao vivo. O teatro do Fantasmic fica no fim dela — vocês passam por aqui de ' +
+          'qualquer jeito.\n\n' +
+          'É O MOMENTO DE COMPRA DO DIA, e é agora e não depois: as lojas fecham com o ' +
+          'parque, e depois do Fantasmic vocês vão direto para a saída no meio de dez mil ' +
+          'pessoas. A Tower of Terror Gift Shop e a Legends of Hollywood ficam nesta rua.',
+        areaParque: 'Sunset Blvd', acesso: [], duracaoMin: 35 },
+
+      { id: 'b-1511-2000p', hora: '20:00', ancora: 'fixo', tipo: 'espera',
+        titulo: 'Posição para o Fantasmic!',
+        descricao: 'Quinze minutos antes. O teatro tem 6.900 lugares e enche',
+        contexto:
+          'O Hollywood Hills Amphitheater tem quase sete mil lugares e ainda assim enche nas ' +
+          'noites de temporada.\n\n' +
+          'Sentem no MEIO e um pouco atrás, não na frente: o show usa projeção em cortina de ' +
+          'água, e de perto demais a imagem se perde. As primeiras fileiras também molham.',
+        areaParque: 'Sunset Blvd', acesso: [], duracaoMin: 15 },
 
       { id: 'b-1511-2015', hora: '20:15', ancora: 'fixo', tipo: 'show',
         titulo: 'Fantasmic!',
-        descricao: 'Cheguem 40 min antes. Confiram se está programado no dia',
+        descricao: '~26 min. O fecho do dia',
         contexto:
-          'Espetáculo noturno em anfiteatro a céu aberto de 6900 lugares, com projeção em telas ' +
-          'de água, fogo, barcos e um dragão. Cerca de 30 minutos. Não roda todas as ' +
-          'noites, então confirmem no app antes de contar com ele. HORÁRIO FIXO.',
-        areaParque: 'Sunset Blvd', acesso: [], duracaoMin: 30, confirmarHorario: true },
+          'Espetáculo noturno com fogo, água, barcos, projeção em cortina de água e um ' +
+          'dragão de vinte metros. É o show mais antigo e mais querido do parque.\n\n' +
+          'HORÁRIO A CONFIRMAR: ele acompanha o fechamento do parque. Com fechamento às 21h ' +
+          'costuma ser às 20h; com 22h, às 21h. Confiram no app da Disney e ajustem aqui — ' +
+          'este bloco e os dois anteriores andam juntos.',
+        areaParque: 'Sunset Blvd', acesso: [], duracaoMin: 35,
+        confirmarHorario: true, pesquisa: '2026-09-10' },
+
+      { id: 'b-1511-2050', hora: '20:50', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voltar ao hotel',
+        descricao: 'Uber, ~30 min, US$ 22–32. Amanhã sai às 8h',
+        contexto:
+          'Saindo com o fluxo do Fantasmic, a caminhada até o ponto de rideshare leva uns ' +
+          'quinze minutos — o parque inteiro sai ao mesmo tempo.\n\n' +
+          'Se a tarifa estiver em alta, andem um pouco para longe da entrada antes de chamar. ' +
+          'Amanhã é Epcot com saída às 8h, então não estiquem.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 60 },
     ],
+
     ficha: {
       multiPass: {
         usar: true, opcional: false,
@@ -2692,16 +2950,32 @@ window.ROTEIRO = {
       },
       singlePass: {
         itens: ['Rise of the Resistance'], opcionais: [],
-        nota: 'Peçam janela até as 11h.',
+        nota:
+          'ESTE É O ÚNICO DOS TRÊS DIAS DE PASSE EM QUE ELE SE JUSTIFICA. No dia 11 o TRON ' +
+          'tinha a janela do desfile; no dia 13 o Flight of Passage tinha a última hora. ' +
+          'Aqui não existe janela livre: o Rise faz 100 min na abertura e 63 depois das ' +
+          '19h, e a noite de vocês já tem Oga’s, Sci-Fi e Fantasmic.\n\n' +
+          'Peçam janela entre 10h30 e 11h. Se não comprarem, o plano B está no bloco: fila ' +
+          'depois do Fantasmic, por volta das 20h50.',
       },
       expressPass: null,
-      custoEstimadoCasal: { min: 115, max: 130, moeda: 'USD' },
-      extras: [],
+      custoEstimadoCasal: { min: 55, max: 130, moeda: 'USD' },
+      extras: [
+        { nome: 'A travessia mais longa dos parques mapeados',
+          texto: 'Do Galaxy’s Edge até a Sunset Blvd são treze minutos atravessando o ' +
+                 'parque inteiro, e mais num dia cheio. Ela está contada no relógio, com ' +
+                 'uma parada antes — não é atraso, é o mapa.' },
+      ],
     },
     renuncias: {
       gerais: [
         { nome: 'Disney Junior' }, { nome: 'Frozen Sing-Along' }, { nome: 'Vacation Fun' },
         { nome: 'Lightning McQueen’s Racing Academy' }, { nome: 'Walt Disney Presents' },
+        { nome: 'Beauty and the Beast Live on Stage' },
+        { nome: 'The Magic of Disney Animation — abriu em 14/09/2026, mas não é atração ' +
+                 'de fila: é aula de desenho com um animatrônico do Olaf, encontros com ' +
+                 'personagens e um teatro. Sem nenhum interesse para vocês, e ocuparia a ' +
+                 'janela do Star Tours' },
       ],
       idioma: {
         itens: ['Indiana Jones Epic Stunt Spectacular'],
@@ -2709,7 +2983,11 @@ window.ROTEIRO = {
           'É visual, mas tem muito texto falado entre as cenas. Se o dia atrasar, é o primeiro ' +
           'a cair.',
       },
-      fechado: ['Muppet Vision 3D'],
+      fechado: [
+        'Muppet*Vision 3D — fechou em 08/06/2025 para dar lugar à Monstropolis, a land de ' +
+        'Monsters, Inc. prevista para 2027',
+        'PizzeRizzo e o Muppets Courtyard inteiro — fecharam junto, em junho de 2025',
+      ],
     },
   },
 
@@ -4258,20 +4536,24 @@ window.ROTEIRO = {
       nota: 'Balcão dentro da Hogsmeade decorada — não leva gorjeta. Vocês voltam a comer ' +
             'aqui no almoço do dia 19; se quiserem variar, é o dia 19 que muda.' },
 
-    { id: 'r-docking-bay', nome: 'Docking Bay 7', data: '2026-11-15', hora: '12:15',
-      refeicao: 'almoco', local: 'Hollywood Studios · Galaxy’s Edge', alternativas: [],
+    { id: 'r-docking-bay', nome: 'Docking Bay 7', data: '2026-11-15', hora: '12:20',
+      refeicao: 'almoco', local: 'Hollywood Studios · Galaxy’s Edge',
+      alternativas: ['Ronto Roasters, na mesma land, sem mesa', 'Woody’s Lunch Box, no Toy Story Land'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Mobile order pelo My Disney Experience', blocoId: 'b-1511-1215',
       nota: 'Balcão temático de Batuu.' },
 
-    { id: 'r-ogas', nome: 'Oga’s Cantina', data: '2026-11-15', hora: '17:15',
-      refeicao: 'drink', local: 'Hollywood Studios · Galaxy’s Edge', alternativas: [],
+    { id: 'r-ogas', nome: 'Oga’s Cantina', data: '2026-11-15', hora: '17:00',
+      refeicao: 'drink', local: 'Hollywood Studios · Galaxy’s Edge',
+      alternativas: ['Sem reserva não entra. Se não conseguirem, a Milk Stand da mesma ' +
+                     'land serve o leite azul e o verde sem fila de reserva'],
       precisaReserva: true, janelaAbre: '2026-09-16', janelaHora: '06:00 ET',
       canal: 'My Disney Experience', blocoId: 'b-1511-1715',
       nota: 'Limite de 45 min por grupo. Quase impossível entrar sem reserva.' },
 
-    { id: 'r-scifi', nome: 'Sci-Fi Dine-In Theater', data: '2026-11-15', hora: '18:15',
-      refeicao: 'jantar', local: 'Hollywood Studios · Commissary Lane', alternativas: [],
+    { id: 'r-scifi', nome: 'Sci-Fi Dine-In Theater', data: '2026-11-15', hora: '18:00',
+      refeicao: 'jantar', local: 'Hollywood Studios · Commissary Lane',
+      alternativas: ['ABC Commissary, ao lado, balcão e sem reserva', 'Mama Melrose, na Grand Avenue'],
       precisaReserva: true, janelaAbre: '2026-09-16', janelaHora: '06:00 ET',
       canal: 'My Disney Experience', blocoId: 'b-1511-1815',
       nota: 'Mesas em formato de carro num drive-in cenográfico.' },
@@ -4844,6 +5126,25 @@ window.ROTEIRO = {
      Por isso: area a area, com a margem dita na cara.
      ------------------------------------------------------------------------ */
   topografia: {
+    'hollywood-studios': {
+      forma: 'Uma espinha: a Hollywood Blvd entra até o Chinese Theater e de lá tudo se ' +
+             'abre. O Galaxy’s Edge fica no fundo, atrás do Echo Lake, e é o ponto mais ' +
+             'longe de tudo.',
+      margem: 'Somem 50% em dia cheio. E a travessia Galaxy’s Edge ↔ Sunset Blvd é a mais ' +
+              'longa de todos os parques mapeados: treze minutos de ponta a ponta.',
+      arestas: [
+        ['Hollywood Blvd', 'Echo Lake', 3],
+        ['Hollywood Blvd', 'Sunset Blvd', 4],
+        ['Hollywood Blvd', 'Commissary Lane', 3],
+        ['Hollywood Blvd', 'The Walt Disney Studios', 4],
+        ['Echo Lake', 'Grand Avenue', 3],
+        ['Grand Avenue', 'Galaxy’s Edge', 3],
+        ['Commissary Lane', 'Toy Story Land', 5],
+        ['The Walt Disney Studios', 'Toy Story Land', 4],
+        ['Galaxy’s Edge', 'Toy Story Land', 6],
+      ],
+    },
+
     'islands-of-adventure': {
       forma: 'Um anel em volta da lagoa. Do portão dá para ir pelos dois lados, e o ' +
              'caminho mais curto entre duas áreas quase nunca passa pelo meio.',
