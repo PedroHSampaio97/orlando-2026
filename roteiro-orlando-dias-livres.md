@@ -183,8 +183,9 @@ Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de 
 | **9h00** | **Best Buy** (Millenia ou I-Drive) — promoções de Black Friday já começam nesta semana |
 | **11h00** | Outlet, *Ross*, *Marshalls*, *Walgreens* (vitaminas e cosméticos compensam muito) |
 | **13h00** | Almoço |
-| **14h00** | **Arrumar as malas** — pesem tudo, 23 kg por mala |
-| **15h30** | Sair para o **Epic Universe** |
+| **14h00** | **Arrumar as malas** — pesem tudo, 23 kg por mala. Antes de devolver o carro: o que não couber ainda dá para trocar numa loja da 192 |
+| **15h00** | **Devolver o carro** com o tanque cheio — mesma filial da 192. **A partir daqui a noite é de Uber** |
+| **15h30** | Sair para o **Epic Universe** — de Uber |
 | **16h30** | O que ficou faltando do dia 23 · repetir os favoritos |
 | **18h30** | **Ministry of Magic à noite** · **Super Nintendo World iluminada** |
 | **21h00** | Voltar |
@@ -200,8 +201,7 @@ Thanksgiving. Um dos dias mais tranquilos do ano para voar — o caos é na ter�
 | Hora | O quê | Notas |
 |---|---|---|
 | **7h30** | Café no hotel, últimas conferências | |
-| **8h30** | **Devolver o carro** com o tanque cheio | A locadora cobra um valor absurdo por litro |
-| **9h00** | Uber para o MCO | ~30 min, US$ 35–45 |
+| **9h00** | Uber para o MCO | ~30 min, US$ 35–45. **O carro já foi devolvido ontem** |
 | **9h30** | Check-in e imigração | Três horas de antecedência para voo internacional |
 | | **Restaurantes fechados no feriado** | Comam no aeroporto ou levem algo do hotel |
 | | Duty-free no Terminal C | Se sobrar espaço na mala |

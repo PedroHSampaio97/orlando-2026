@@ -487,12 +487,15 @@ De manhã, compras. À tarde, o parque de novo — de graça, com o ingresso que
 |---|---|
 | **9h00** | **Best Buy** (Millenia ou I-Drive) — promoções de Black Friday já começam nesta semana |
 | **11h00** | Outlet, Ross, Marshalls, Walgreens |
-| **15h30** | Sair para o Epic Universe |
+| **13h00** | Almoço |
+| **14h00** | **Arrumar as malas** — pesem tudo, 23 kg por mala |
+| **15h00** | **Devolver o carro** com o tanque cheio. **A partir daqui a noite é de Uber** |
+| **15h30** | Sair para o Epic Universe — de Uber |
 | **16h30** | **O que ficou faltando do dia 23** |
 | **17h30** | **Repetir os favoritos** — agora sem pressa de cobrir o mapa |
 | **18h30** | **Ministry of Magic à noite** — a área muda completamente no escuro |
 | **19h30** | **Super Nintendo World iluminada** e as fotos que vocês não pararam para tirar no dia 23 |
-| **21h00** | Sair. Arrumar as malas |
+| **21h00** | Sair |
 
 ---
 

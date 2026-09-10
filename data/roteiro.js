@@ -59,7 +59,9 @@ window.ROTEIRO = {
       'Troca dos dias 21/22/23 confirmada — 21 Winter Garden, 22 SeaWorld, 23 Epic Universe',
       'Sem Mickey’s Very Merry Christmas Party',
       'Sem Express Pass na Universal',
-      'Carro alugado de 20 a 25/11',
+      'Carro alugado de 20 a 25/11 — devolvido no dia 25, para o dia 26 ser só ' +
+      'café da manhã e aeroporto',
+      'PID (Permissão Internacional para Dirigir) já emitida',
     ],
   },
 
@@ -97,7 +99,7 @@ window.ROTEIRO = {
           singlePass: 'Flight of Passage — só se o fim de dia não resolver', custo: { min: 0, max: 40 } },
         { data: '2026-11-15', parque: 'Hollywood Studios', multiPass: 'Sim',
           singlePass: 'Rise of the Resistance',                  custo: { min: 115, max: 130 } },
-        { data: '2026-11-16', parque: 'Epcot',             multiPass: 'Opcional',
+        { data: '2026-11-16', parque: 'Epcot',             multiPass: 'Sim',
           singlePass: 'Cosmic Rewind',                           custo: { min: 36,  max: 95  } },
       ],
       correcao:
@@ -122,16 +124,20 @@ window.ROTEIRO = {
             'MULTI PASS: se o ingresso de 4 dias for date-based (datas fixas), dá para comprar ' +
             '3 dias antes do primeiro dia do ingresso e cobrir os 4 dias de uma vez — aí 08/11 ' +
             'compra de 08/11 resolve os quatro dias de uma vez.\n\n' +
+            'MULTI PASS, dia a dia: 11/11 Peter Pan / Mansão / Buzz. 13/11 nenhum, o ' +
+            'Animal Kingdom não usa. 15/11 Slinky Dog / Torre do Terror / Toy Story Mania. ' +
+            '16/11 Frozen / Remy / Test Track.\n\n' +
             'SINGLE PASS: a regra é 3 dias antes de CADA visita — mas a lista encolheu. ' +
-            'Depois de refazer os dias 11 e 13, sobraram DOIS momentos, não quatro:\n' +
+            'Com os quatro dias já refeitos, sobraram DOIS momentos, não quatro:\n' +
             '  · Seven Dwarfs e TRON (11/11) → NÃO COMPRAR. Viraram plano B pago, ' +
             'resolvidos por janela de horário dentro do parque.\n' +
-            '  · Flight of Passage (13/11) → só se o fim de dia não resolver. Decisão, ' +
-            'não alarme.\n' +
+            '  · Flight of Passage (13/11) → NÃO COMPRAR antes. Se for preciso, compra-se ' +
+            'dentro do parque às 17h30.\n' +
             '  · Rise of the Resistance (15/11) → comprar 12/11\n' +
             '  · Cosmic Rewind (16/11) → comprar 13/11\n\n' +
-            'Os dias 15 e 16 ainda não foram refeitos com essa mesma lente. Quando forem, ' +
-            'a lista pode encolher de novo.\n\n' +
+            'O custo do Epcot aqui em cima foi calculado quando o Multi Pass daquele dia ' +
+            'ainda era opcional. Ele virou decisão de comprar, então o piso é mais alto ' +
+            'que os US$ 36 da tabela.\n\n' +
             'É por isso que "confirmar com a agência a regra de validade do ingresso" deixou ' +
             'de ser burocracia e virou a pendência mais importante da lista. O checklist já ' +
             'está montado com as quatro datas separadas.',
@@ -1445,6 +1451,14 @@ window.ROTEIRO = {
           motivo: 'Saída às 6h30 — uma hora mais cedo do que nos outros dias de parque, ' +
                   'porque o Animal Kingdom abre às 8h e não às 9h. Depois de um dia sem ' +
                   'alarme, o corpo não ajuda.' },
+
+        { texto: 'Decidir HOJE o Lightning Lane do dia 16, que se compra às 7h de amanhã',
+          critico: true,
+          motivo: 'Às 7h de amanhã vocês já saíram: a saída é 6h30. A compra vai ser no ' +
+                  'celular, dentro do Uber ou na fila da catraca do Animal Kingdom, e não ' +
+                  'é hora de escolher atração. Deixem decidido: Multi Pass com Frozen na ' +
+                  'lista alta, Remy e Test Track na baixa, e Single Pass do Cosmic Rewind ' +
+                  'com janela entre 9h30 e 10h.' },
 
         { texto: 'Decidir sobre o Kali River Rapids olhando a previsão', critico: false,
           motivo: 'Ele está às 9h15 e molha de verdade. Em novembro Orlando amanhece por ' +
@@ -3971,8 +3985,12 @@ window.ROTEIRO = {
         contexto:
           'Essa é a tarefa mais crítica do dia. Se a filial fechar antes de vocês chegarem, o ' +
           'dia 21 em Winter Garden cai — o Farmers Market abre às 8h e não dá para ir de Uber ' +
-          'a esse preço. Levem carteira de motorista, passaporte e o cartão de crédito ' +
-          'internacional em nome do condutor.',
+          'a esse preço.\n\n' +
+          'QUATRO DOCUMENTOS, todos em nome do condutor: carteira de motorista, PID ' +
+          '(Permissão Internacional para Dirigir, já emitida), passaporte e cartão de ' +
+          'crédito internacional. O cartão precisa ser de crédito — débito costuma não ser ' +
+          'aceito para a caução.\n\n' +
+          'A devolução é no dia 25, na mesma filial.',
         acesso: [], critico: true },
 
       { id: 'b-2011-1630', hora: '16:30', ancora: 'fixo', tipo: 'livre',
@@ -4654,13 +4672,28 @@ window.ROTEIRO = {
         titulo: 'Arrumar as malas',
         descricao: 'Pesem tudo, 23 kg por mala',
         contexto:
-          'Façam isso hoje, não amanhã de manhã. Excesso de bagagem no balcão custa caro e ' +
-          'amanhã vocês ainda têm que devolver o carro antes do voo.',
+          'Façam isso hoje, não amanhã de manhã. Excesso de bagagem no balcão custa caro, e ' +
+          'amanhã cedo vocês não vão querer descobrir isso.\n\n' +
+          'E façam AGORA, antes de devolver o carro: o que não couber ainda dá para levar ' +
+          'de carro a uma loja da 192 e trocar.',
+        acesso: [], critico: true },
+
+      { id: 'b-2511-1500', hora: '15:00', ancora: 'fixo', tipo: 'tarefa',
+        titulo: 'Devolver o carro com o tanque cheio',
+        descricao: 'Mesma filial da 192 onde vocês pegaram. A locadora cobra caro por litro',
+        contexto:
+          'DEVOLUÇÃO HOJE, NÃO AMANHÃ — decisão tomada para o dia da volta ser só café da ' +
+          'manhã e aeroporto. Filial de bairro fecha cedo, então não dá para deixar para ' +
+          'depois do parque.\n\n' +
+          'Abasteçam num posto da 192 antes de chegar, e guardem o comprovante.\n\n' +
+          'A PARTIR DAQUI A NOITE É DE UBER. O trecho até o Epic e a volta saem do bolso ' +
+          'que o estacionamento gratuito vinha cobrindo — contem com isso.',
         acesso: [], critico: true },
 
       { id: 'b-2511-1530', hora: '15:30', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Sair para o Epic Universe',
-        descricao: '', localId: 'epic-universe', acesso: [] },
+        descricao: 'De Uber — o carro já foi devolvido',
+        localId: 'epic-universe', acesso: [] },
 
       { id: 'b-2511-1630', hora: '16:30', ancora: 'fixo', tipo: 'livre',
         titulo: 'O que ficou faltando do dia 23',
@@ -4722,14 +4755,6 @@ window.ROTEIRO = {
     blocos: [
       { id: 'b-2611-0730', hora: '07:30', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Café no hotel, últimas conferências', descricao: '', acesso: [] },
-
-      { id: 'b-2611-0830', hora: '08:30', ancora: 'fixo', tipo: 'tarefa',
-        titulo: 'Devolver o carro com o tanque cheio',
-        descricao: 'A locadora cobra um valor absurdo por litro',
-        contexto:
-          'Abasteçam num posto fora do aeroporto — os mais próximos das locadoras cobram bem ' +
-          'mais caro. Guardem o comprovante.',
-        acesso: [], critico: true },
 
       { id: 'b-2611-0900', hora: '09:00', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Uber para o MCO', descricao: '~30 min, US$ 35–45',
@@ -4936,12 +4961,24 @@ window.ROTEIRO = {
 
     { id: 'ck-1609', dataAlvo: '2026-09-16', hora: '06:00', fuso: 'ET',
       janelaReserva: true, critico: false,
-      texto: 'Hollywood Studios: Oga’s Cantina e Sci-Fi Dine-In',
+      texto: 'Hollywood Studios: Oga’s Cantina e Sci-Fi Dine-In — e ajustar os blocos',
+      nota:
+        'As 17h do Oga’s e as 18h do Sci-Fi que estão no dia 15 são PROPOSTA, não reserva: ' +
+        'elas fazem a tarde caber e deixam doze minutos de caminhada entre os dois.\n\n' +
+        'Se só conseguirem outros horários, a pendência não acaba na reserva — voltem no ' +
+        'dia 15 e ajustem os dois blocos e o que vem depois deles, até o Fantasmic. Sem ' +
+        'isso o app vai seguir mostrando 17h e 18h o resto da viagem.',
       restauranteIds: ['r-ogas', 'r-scifi'] },
 
     { id: 'ck-1709', dataAlvo: '2026-09-17', hora: '06:00', fuso: 'ET',
       janelaReserva: true, critico: false,
-      texto: 'Epcot, se quiserem mesa em vez das barracas',
+      texto: 'Epcot: abrir a janela de mesa só se mudarem de ideia sobre o Food & Wine',
+      nota:
+        'JÁ DECIDIDO: o jantar do dia 16 É o Food & Wine — três voltas de barracas ao ' +
+        'longo da tarde, e a última às 20h antes de pegar lugar para o Luminous.\n\n' +
+        'Esta janela fica registrada porque hoje é o único dia em que ela abre. Se em ' +
+        'algum momento vocês decidirem que querem uma mesa de verdade no Epcot, é hoje ' +
+        'ou nunca. Não decidindo nada, não façam nada — e risquem.',
       restauranteIds: ['r-epcot-mesa'] },
 
     { id: 'ck-ingresso', dataAlvo: '2026-09-15', dataEstimada: true, motivoData: 'Bloqueia o plano de Lightning Lane inteiro', hora: null, fuso: null,
@@ -4992,6 +5029,19 @@ window.ROTEIRO = {
         'Lane em 08/11, e sem Lightning Lane o dia 11 inteiro muda. Se algo estiver ' +
         'errado, resolver com a agência leva dias — por isso a data é 01/10 e não ' +
         'véspera.',
+      restauranteIds: [] },
+
+    { id: 'ck-mde-cartao', dataAlvo: '2026-10-01', dataEstimada: true,
+      motivoData: 'Na mesma sessão em que vocês conferem os ingressos no My Disney Experience',
+      hora: null, fuso: null, janelaReserva: false, critico: false,
+      texto: 'Cartão de crédito salvo no My Disney Experience, nos DOIS perfis',
+      nota:
+        'É o que destrava o mobile order, e o mobile order aparece quatro vezes nos dias ' +
+        'fechados: Columbia Harbour House e Casey’s no dia 11, Satu’li Canteen no dia 13 e ' +
+        'Docking Bay 7 no dia 15. Cada um desses pula de 20 a 30 minutos de fila de balcão ' +
+        'que o roteiro já não conta.\n\n' +
+        'Sem cartão salvo, não pula. E a alternativa era descobrir isso na noite de 10/11, ' +
+        'depois de doze horas de viagem — que é exatamente quando ninguém faz.',
       restauranteIds: [] },
 
     { id: 'ck-ing-universal', dataAlvo: '2026-10-25', dataEstimada: true,
@@ -5078,7 +5128,28 @@ window.ROTEIRO = {
              'Christmas Town (Busch Gardens) — ambos rodam em datas selecionadas',
       restauranteIds: [] },
 
+    { id: 'ck-roda-icon', dataAlvo: '2026-10-15', dataEstimada: true,
+      motivoData: 'O dia 12 manda conferir em outubro, e o plano B depende da resposta',
+      hora: null, fuso: null, janelaReserva: false, critico: false,
+      texto: 'Conferir se The Wheel do ICON Park voltou a operar (para 12/11)',
+      nota:
+        'Ela está fechada para manutenção anual desde o fim de junho, sem data de ' +
+        'reabertura anunciada até 09/09. Se voltar, vira a atração das 18h do dia 12 e ' +
+        'desloca o resto da noite — o plano B daquele dia tem essa conferência como ' +
+        'gatilho declarado. Confiram o preço junto: não há valor confirmado.',
+      restauranteIds: [] },
+
     /* --- já em Orlando --- */
+    { id: 'ck-hotel', dataAlvo: '2026-11-05', hora: null, fuso: null,
+      janelaReserva: false, critico: false,
+      texto: 'Reserva do Travelodge salva OFFLINE nos dois celulares',
+      nota:
+        'Mesma lógica da apólice: e-mail sem internet não abre, e vocês chegam de ' +
+        'madrugada num país onde ninguém fala português. O endereço também vai escrito ' +
+        'no papel — 5367 W Irlo Bronson Memorial Hwy, Kissimmee — porque é o que resolve ' +
+        'se o celular não conectar no aeroporto.',
+      restauranteIds: [] },
+
     { id: 'ck-seguro', dataAlvo: '2026-11-05', hora: null, fuso: null,
       janelaReserva: false, critico: true,
       texto: 'Apólice do seguro salva OFFLINE nos dois celulares, e banco avisado',
@@ -5129,11 +5200,19 @@ window.ROTEIRO = {
 
     { id: 'ck-ll-0811', dataAlvo: '2026-11-08', hora: '07:00', fuso: 'ET',
       janelaReserva: false, critico: true,
-      texto: 'Lightning Lane — Magic Kingdom (11/11): SÓ o Multi Pass',
+      texto: 'Lightning Lane — Multi Pass do Magic Kingdom (11/11), e talvez dos 4 dias',
       nota:
         'Cinco minutos antes de o sistema soltar as seleções. Cheguem decididos:\n\n' +
         'MULTI PASS — lista alta: Peter Pan. Lista baixa: Mansão e Buzz.\n' +
         'SINGLE PASS — NENHUM. Não comprem nada aqui.\n\n' +
+        'SE O INGRESSO FOR DATE-BASED, HOJE COBRE OS QUATRO DIAS. Nesse caso escolham ' +
+        'agora também:\n' +
+        '  · 15/11 Hollywood Studios — alta: Slinky Dog Dash. Baixa: Torre do Terror e ' +
+        'Toy Story Mania.\n' +
+        '  · 16/11 Epcot — alta: Frozen Ever After. Baixa: Remy e Test Track.\n' +
+        '  · 13/11 Animal Kingdom — nenhuma. O dia não usa Multi Pass.\n\n' +
+        'Se NÃO for date-based, o app só vai deixar escolher o dia 11 hoje — e aí os dias ' +
+        '15 e 16 têm data própria, 12/11 e 13/11, já no checklist.\n\n' +
         'NÃO peçam o Big Thunder nem o Jungle Cruise: os dois são lista alta e vocês vão ' +
         'fazer os dois de graça, no standby, antes das 11h. O Space Mountain entra rolando ' +
         'dentro do parque, assim que vocês usarem a Mansão às 11h.',
@@ -5141,27 +5220,48 @@ window.ROTEIRO = {
 
     { id: 'ck-ll-1011', dataAlvo: '2026-11-10', hora: '07:00', fuso: 'ET',
       janelaReserva: false, critico: false,
-      texto: 'DECIDIR: comprar ou não o Single Pass do Flight of Passage (13/11)',
+      texto: 'NÃO é compra: o Single Pass do Flight of Passage se decide dentro do parque',
       nota:
-        'VIROU DECISÃO, NÃO ALARME. O plano do dia 13 é fazer o Flight of Passage no fim ' +
-        'do dia, quando a fila cai para 40 a 55 minutos contra 90 a 120 o resto do tempo. ' +
-        'Se esse plano estiver de pé, não compra.\n\n' +
-        'Comprem só se: o Animal Kingdom fechar cedo demais para o plano caber, ou vocês ' +
-        'decidirem que 40 minutos de fila no fim de um dia de parque é demais. Nesse caso ' +
-        'a compra é às 7h ET de hoje, durante a conexão em Bogotá — que é o pior momento ' +
-        'da viagem para depender de internet. Mais um motivo para não precisar dela.',
+        'ESTA PENDÊNCIA EXISTE PARA VOCÊS NÃO FAZEREM NADA HOJE. Ela está em 10/11 porque ' +
+        'é a data em que a compra antecipada seria possível — às 7h ET, no meio da conexão ' +
+        'em Bogotá, que é o pior momento da viagem para depender de internet.\n\n' +
+        'E não precisa. O Single Pass do Flight of Passage se compra NA HORA, pelo app, de ' +
+        'pé dentro do Animal Kingdom. A decisão é das 17h30 do dia 13, olhando a fila — ' +
+        'não das 7h de hoje, olhando um portão de embarque.\n\n' +
+        'O plano do dia 13 é fazer a atração no fim do dia, quando a fila cai para 40 a 55 ' +
+        'minutos contra 90 a 120 o resto do tempo. Comprem só se o parque fechar cedo ' +
+        'demais para esse plano caber, ou se 40 minutos de fila no fim de dez horas de ' +
+        'parque for demais no dia.',
       restauranteIds: [] },
 
     { id: 'ck-ll-1211', dataAlvo: '2026-11-12', hora: '07:00', fuso: 'ET',
       janelaReserva: false, critico: true,
-      texto: 'Lightning Lane — Single Pass do Rise of the Resistance (para 15/11)',
-      nota: 'Peçam janela até as 11h. Só necessário se o ingresso NÃO for date-based.',
+      texto: 'Lightning Lane para 15/11 — Multi Pass do dia e Single Pass do Rise',
+      nota:
+        'SÃO DUAS COISAS, e a segunda é a que some quando ninguém escreve.\n\n' +
+        'MULTI PASS do dia 15 — lista alta: Slinky Dog Dash. Lista baixa: Torre do Terror ' +
+        'e Toy Story Mania. Se o ingresso for date-based, isto já foi feito em 08/11 e ' +
+        'hoje não tem nada a escolher.\n\n' +
+        'SINGLE PASS do Rise of the Resistance — peçam janela entre 10h30 e 11h. Este é o ' +
+        'único dos três dias de passe em que o Single se justifica: o Rise faz 100 min na ' +
+        'abertura e 63 depois das 19h, e a noite de vocês já tem Oga\u2019s, Sci-Fi e ' +
+        'Fantasmic.',
       restauranteIds: [] },
 
     { id: 'ck-ll-1311', dataAlvo: '2026-11-13', hora: '07:00', fuso: 'ET',
       janelaReserva: false, critico: true,
-      texto: 'Lightning Lane — Single Pass do Cosmic Rewind (para 16/11)',
-      nota: 'Só necessário se o ingresso NÃO for date-based.',
+      texto: 'Lightning Lane para 16/11 — Multi Pass do dia e Single Pass do Cosmic Rewind',
+      nota:
+        'ATENÇÃO À HORA: às 7h de hoje vocês já saíram do hotel — a saída para o Animal ' +
+        'Kingdom é 6h30. Isto se resolve no celular, dentro do Uber ou na fila da catraca. ' +
+        'Cheguem decididos, porque não vai dar para pensar.\n\n' +
+        'MULTI PASS do dia 16 — lista alta: Frozen Ever After. Lista baixa: Remy e Test ' +
+        'Track. O Test Track está na baixa de propósito, como rede de segurança: se ele ' +
+        'quebrar de manhã e voltar à tarde, vocês o pegam rolando. Se o ingresso for ' +
+        'date-based, isto já foi feito em 08/11.\n\n' +
+        'SINGLE PASS do Cosmic Rewind — peçam janela entre 9h30 e 10h. Ele faz 101 min de ' +
+        'média e passa de uma hora mesmo às 8h: não existe janela barata em hora nenhuma ' +
+        'do dia.',
       restauranteIds: [] },
 
     { id: 'ck-horarios-mk', dataAlvo: '2026-09-13', dataEstimada: true,
