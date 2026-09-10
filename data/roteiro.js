@@ -219,7 +219,7 @@ window.ROTEIRO = {
       'O dia mais fácil de salvar da viagem inteira: não tem ingresso, não tem hora de ' +
       'parque, e o único compromisso de relógio é o jantar às 19h. Tudo o mais é ' +
       'sacrificável sem perda real — inclusive o Disney Springs, porque vocês voltam lá ' +
-      'no dia 21, quando estiver decorado de Natal.',
+      'numa noite mais adiante, quando estiver decorado de Natal.',
 
     avisos: [
       'O dia começa na véspera: com decolagem 01h40, vocês precisam estar no GIG por volta ' +
@@ -313,9 +313,9 @@ window.ROTEIRO = {
           'PRIMEIRA COISA: cancelem o The Boathouse assim que souberem — +1 407-939-3463, ' +
           'ou pelo My Disney Experience. Com menos de 2 horas de antecedência a Disney ' +
           'cobra a taxa de não comparecimento no cartão. Os telefones estão no Guia.',
-          'Esqueçam o Disney Springs hoje. Vocês voltam no dia 21 e, honestamente, o dia 21 ' +
-          'é melhor: tem o Christmas Tree Stroll e a decoração de Natal, que hoje ainda ' +
-          'não existe.',
+          'Esqueçam o Disney Springs hoje. Vocês voltam mais adiante na viagem e, ' +
+          'honestamente, a volta é melhor: tem o Christmas Tree Stroll e a decoração de ' +
+          'Natal, que hoje ainda não existe.',
           'Uber direto para o hotel. Jantem na 192 mesmo — Black Angus, Miller’s Ale ' +
           'House, ou qualquer coisa aberta perto.',
           'Walmart passa para o dia 12. Durmam. O dia 11 é Magic Kingdom com saída às 6h45 ' +
@@ -394,7 +394,7 @@ window.ROTEIRO = {
     ],
 
     /* ---------------------------------------------------------------------
-       DISNEY SPRINGS — o que cabe em 1h30 e o que fica para o dia 21
+       DISNEY SPRINGS — o que cabe em 1h30 e o que fica para a volta
        ------------------------------------------------------------------ */
     naoPerca: [
       { nome: 'World of Disney', quando: 'hoje', custo: 'grátis entrar',
@@ -413,14 +413,15 @@ window.ROTEIRO = {
                 'vocês dentro, 20 minutos. Fica registrado aqui só para não ser reproposto: ' +
                 'US$ 62 por cabeça por 20 minutos não passa no teste.',
         pesquisa: '2026-09-08' },
-      { nome: 'Aerophile — balão cativo', quando: 'dia 21', custo: '~US$ 25',
+      { nome: 'Aerophile — balão cativo', quando: 'na volta', custo: '~US$ 25',
         motivo: 'Sobe 120 m preso por cabo, 8 minutos, vista de até 16 km. Não voa com vento ' +
                 'forte, então nunca dá para contar com ele.',
         pesquisa: '2026-09-08' },
-      { nome: 'Christmas Tree Stroll', quando: 'dia 21', condicao: 'só existe a partir de 13/11',
+      { nome: 'Christmas Tree Stroll', quando: 'na volta', condicao: 'só existe a partir de 13/11',
         custo: 'grátis',
         motivo: 'A decoração de Natal do Disney Springs começa em 13/11. Hoje não existe. ' +
-                'É exatamente por isso que vocês voltam no dia 21.' },
+                'É exatamente por isso que existe uma segunda ida ao Disney Springs — a ' +
+                'noite dela ainda está para ser escolhida.' },
     ],
 
     /* ---------------------------------------------------------------------
@@ -4001,26 +4002,27 @@ window.ROTEIRO = {
     renuncias: null, ficha: null,
   },
 
-  /* ===== 21/11 · SÁBADO · WINTER GARDEN E DISNEY SPRINGS ================ */
+  /* ===== 21/11 · SÁBADO · WINTER GARDEN E SOLAR BEARS ================== */
   {
     id: 'd-2026-11-21',
     data: '2026-11-21',
     diaSemana: 'sábado',
     emoji: '🌻',
-    titulo: 'Winter Garden e Disney Springs no Natal',
-    subtitulo: 'Primeiro dia com carro',
+    titulo: 'Winter Garden e Solar Bears',
+    subtitulo: 'Manhã no interior, noite no gelo',
     tipo: 'livre',
     operadora: null,
     parqueId: null,
     custoZero: false,
     referencia: null,
     resumo:
-      'Primeiro dia com carro. E o dia em que vocês voltam ao Disney Springs para ver o que ' +
-      'não existia no dia 10: a decoração de Natal, que começou em 13/11. É de graça e é ' +
-      'literalmente outro lugar.',
+      'Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de Orlando ' +
+      'à noite. O carro, retirado ontem, é o que torna os dois possíveis no mesmo dia.',
     avisos: [
       'O Farmers Market funciona das 8h às 13h e é o motivo de vir a Winter Garden. Chegar ' +
       'depois das 11h esvazia o sentido do dia.',
+      'O ingresso do Solar Bears já está comprado e o jogo começa às 19h. Este é o único ' +
+      'compromisso com hora marcada e dinheiro já gasto no dia.',
     ],
     blocos: [
       { id: 'b-2111-0745', hora: '07:45', ancora: 'fixo', tipo: 'deslocamento',
@@ -4066,37 +4068,34 @@ window.ROTEIRO = {
         contexto: 'Não preencham. Amanhã é SeaWorld o dia inteiro e depois Epic Universe.',
         acesso: [] },
 
-      { id: 'b-2111-1800', hora: '18:00', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Disney Springs',
-        descricao: 'De carro, estacionamento gratuito',
-        localId: 'disney-springs', acesso: [] },
-
-      { id: 'b-2111-1830', hora: '18:30', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Christmas Tree Stroll',
-        descricao:
-          'Gratuito. Árvores gigantes temáticas — Mansão Mal-Assombrada, Piratas, ' +
-          'A Princesa e o Sapo, O Estranho Mundo de Jack. Peguem o mapa do circuito',
+      { id: 'b-2111-1730', hora: '17:30', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Sair para o centro de Orlando',
+        descricao: 'De carro, ~35 min. Estacionamento pago nos prédios em volta da arena',
         contexto:
-          'Circuito de árvores de Natal gigantes espalhadas por Disney Springs, cada uma ' +
-          'decorada com o tema de um filme ou atração. O mapa é distribuído nos quiosques e ' +
-          'transforma o passeio numa caça ao tesouro.',
-        localId: 'disney-springs', acesso: [] },
+          'Primeiro evento com carro próprio. Os estacionamentos em volta do Kia Center ' +
+          'cobram por evento e enchem perto do horário — chegar com folga vale mais do que ' +
+          'economizar dois quarteirões.',
+        localId: 'kia-center', acesso: [] },
 
-      { id: 'b-2111-1930', hora: '19:30', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Decoração de Natal, música ao vivo, encontro com o Papai Noel',
-        descricao: '', localId: 'disney-springs', acesso: [] },
+      { id: 'b-2111-1815', hora: '18:15', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Kia Center — portões abrem',
+        descricao: 'Sem mochila. Só bolsa pequena, do tamanho de uma carteira de mão',
+        localId: 'kia-center', acesso: [] },
 
-      { id: 'b-2111-2000', hora: '20:00', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — Homecomin’ ou Polite Pig',
-        descricao: 'O que vocês não comeram no dia 10',
+      { id: 'b-2111-1900', hora: '19:00', ancora: 'fixo', tipo: 'show',
+        titulo: 'Orlando Solar Bears x Jacksonville Icemen',
+        descricao: 'Hóquei da ECHL. Ingresso já comprado',
         contexto:
-          'Homecomin’ é comida caseira da Flórida, famoso pelo frango frito — é o mais ' +
-          'concorrido de Disney Springs e costuma ter 1h de espera sem reserva. Polite Pig é ' +
-          'barbecue de balcão, sem espera.',
-        restauranteId: 'r-homecomin', localId: 'disney-springs', acesso: [] },
+          'Hóquei de liga de acesso, no mesmo ginásio do jogo da NBA do dia 18 — e mesmo ' +
+          'assim é uma noite bem diferente: gelo no lugar da quadra, arena reconfigurada ' +
+          'menor e a torcida muito mais perto do jogo.\n\n' +
+          'Cerca de 2h30 com os dois intervalos.',
+        localId: 'kia-center', acesso: [], pesquisa: '2026-09-10' },
 
-      { id: 'b-2111-2200', hora: '22:00', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Voltar', descricao: '', acesso: [] },
+      { id: 'b-2111-2130', hora: '21:30', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voltar',
+        descricao: 'De carro. Saiam junto com o público ou esperem cinco minutos no saguão',
+        acesso: [] },
     ],
     renuncias: null, ficha: null,
   },
@@ -4877,14 +4876,6 @@ window.ROTEIRO = {
       nota: 'Reserva recomendada — confirmado em 08/09. Já eleito o melhor restaurante de ' +
             'parque temático do mundo.' },
 
-    { id: 'r-homecomin', nome: 'Homecomin’', data: '2026-11-21', hora: '20:00',
-      refeicao: 'jantar', local: 'Disney Springs · Town Center',
-      alternativas: ['Polite Pig'],
-      precisaReserva: true, janelaAbre: null, janelaHora: null,
-      canal: 'Site do restaurante / OpenTable', blocoId: 'b-2111-2000',
-      nota: 'Frango frito. O mais concorrido de Disney Springs — 1h de espera sem reserva. ' +
-            'Polite Pig é a alternativa de balcão, sem espera.' },
-
     { id: 'r-sharks', nome: 'Sharks Underwater Grill', data: '2026-11-22', hora: '18:30',
       refeicao: 'jantar', local: 'SeaWorld', alternativas: [],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
@@ -5034,17 +5025,6 @@ window.ROTEIRO = {
       janelaReserva: false, critico: false,
       texto: 'Reservar o Mythos para o jantar de 19/11 (Islands of Adventure)',
       restauranteIds: ['r-mythos'] },
-
-    { id: 'ck-homecomin', dataAlvo: '2026-10-22', dataEstimada: true,
-      motivoData: '30 dias antes do jantar de 21/11',
-      hora: null, fuso: null, janelaReserva: false, critico: false,
-      texto: 'Reservar o Homecomin\u2019 para o jantar de 21/11 (Disney Springs)',
-      nota:
-        'É o restaurante mais concorrido de Disney Springs e passa de uma hora de ' +
-        'espera sem reserva — num dia que já termina tarde, vindo de Winter Garden. ' +
-        'Se não conseguirem, o Polite Pig é a alternativa de balcão, sem espera, no ' +
-        'mesmo lugar.',
-      restauranteIds: ['r-homecomin'] },
 
     { id: 'ck-atlantic', dataAlvo: '2026-10-24', dataEstimada: true, motivoData: '30 dias antes do jantar de 23/11', hora: null, fuso: null,
       janelaReserva: false, critico: false,
@@ -5288,7 +5268,7 @@ window.ROTEIRO = {
       lat: 28.3702539, lng: -81.5209851, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 20, tempoFonte: 'documento',
                  uberUSD: { min: 15, max: 25 }, uberFonte: 'estimado' },
-      nota: 'Estacionamento gratuito — no dia 21 vocês vão de carro.' },
+      nota: 'Estacionamento gratuito. Na segunda ida vocês já estarão de carro.' },
 
     { id: 'universal-studios', nome: 'Universal Studios Florida', tipo: 'parque',
       lat: 28.4752, lng: -81.467, verificado: true, fonteCoord: 'wikipedia', endereco: null,
@@ -5602,7 +5582,7 @@ window.ROTEIRO = {
         'Onde NÃO se dá gorjeta: balcão de fast food e mobile order. Ou seja, Satu\u2019li Canteen, ' +
         'Docking Bay 7, Three Broomsticks e Toadstool Cafe não levam gorjeta.\n\n' +
         'Onde se dá: The Boathouse, Columbia, Sanaa, Sci-Fi Dine-In, Oga\u2019s, Mythos, ' +
-        'Sharks Underwater Grill, Homecomin\u2019, e o Uber (opcional, mas comum).',
+        'Sharks Underwater Grill e o Uber (opcional, mas comum).',
     },
     {
       id: 'dica-rope-drop',
@@ -5642,8 +5622,9 @@ window.ROTEIRO = {
         'Party rola em noites selecionadas a partir de 08/11, e vocês decidiram não ir.\n\n' +
         'UNIVERSAL: a temporada começa exatamente em 14/11 — o dia em que vocês entram no ' +
         'Islands à noite. Vocês pegam a primeira noite da temporada.\n\n' +
-        'DISNEY SPRINGS: no dia 10 ainda não tem decoração. Por isso vocês voltam no dia 21, ' +
-        'para o Christmas Tree Stroll. É de graça e é literalmente outro lugar.\n\n' +
+        'DISNEY SPRINGS: no dia 10 ainda não tem decoração. Por isso existe uma segunda ida, ' +
+        'para o Christmas Tree Stroll — de graça, e literalmente outro lugar. A noite dela ' +
+        'saiu do dia 21 quando o jogo do Solar Bears entrou, e ainda vai ser remarcada.\n\n' +
         'SEAWORLD e BUSCH: Christmas Celebration e Christmas Town rodam em datas selecionadas ' +
         'a partir de 06/11 e 13/11. Confirmem que 22/11 e 24/11 estão na lista.',
       pesquisa: '2026-09-08',

@@ -31,7 +31,7 @@ Os blocos marcados como **VAZIO PROPOSITAL** não são falha de planejamento. Re
 
 **Internet:** as duas linhas têm roaming incluso — Passaporte Américas na Claro, Travel na Vivo. O celular conecta sozinho ao pousar; confiram antes de descer para o nível 6 e, se não conectar, o wifi do MCO resolve enquanto vocês ligam o roaming nos ajustes.
 
-**Ainda sem decoração de Natal** — ela começa em 13/11. Vocês voltam ao Disney Springs no dia 21 justamente para ver isso.
+**Ainda sem decoração de Natal** — ela começa em 13/11. Existe uma segunda ida ao Disney Springs justamente para ver isso; a noite dela saiu do dia 21 quando o jogo do Solar Bears entrou e ainda vai ser remarcada.
 
 ---
 
@@ -152,9 +152,9 @@ Dia inteiro dentro de Kissimmee. O mais barato da viagem em deslocamento.
 
 ---
 
-# 🌻 21/11 (sábado) — Winter Garden e Disney Springs no Natal
+# 🌻 21/11 (sábado) — Winter Garden e Solar Bears
 
-Primeiro dia com carro. E o dia em que vocês voltam ao Disney Springs para ver o que não existia no dia 10.
+Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de Orlando à noite. O carro, retirado no dia 20, é o que torna os dois possíveis no mesmo dia.
 
 | Hora | O quê | Notas |
 |---|---|---|
@@ -165,13 +165,12 @@ Primeiro dia com carro. E o dia em que vocês voltam ao Disney Springs para ver 
 | **12h30** | **Almoço — Plant Street Market** | Mercado gastronômico com a *Crooked Can Brewing* dentro |
 | **14h00** | **West Orange Trail** — opcional | Ciclovia de 35 km. Aluguel de bicicleta no centro. Uma hora resolve |
 | **15h00** | Voltar ao hotel | **VAZIO PROPOSITAL** — descanso |
-| **18h00** | **Disney Springs** | De carro, estacionamento gratuito |
-| **18h30** | **Christmas Tree Stroll** | Gratuito. Árvores gigantes temáticas — Mansão Mal-Assombrada, Piratas, A Princesa e o Sapo, O Estranho Mundo de Jack. Peguem o mapa do circuito |
-| **19h30** | Decoração de Natal, música ao vivo, encontro com o Papai Noel | |
-| **20h00** | **Jantar — Homecomin'** ou **Polite Pig** | O que vocês não comeram no dia 10 |
-| **22h00** | Voltar | |
+| **17h30** | Sair para o centro de Orlando | De carro, ~35 min. Estacionamento pago nos prédios em volta da arena |
+| **18h15** | **Kia Center** — portões abrem | Sem mochila. Só bolsa pequena, do tamanho de uma carteira de mão |
+| **19h00** | **Orlando Solar Bears × Jacksonville Icemen** | Hóquei da ECHL. **Ingresso já comprado.** ~2h30 com os dois intervalos |
+| **21h30** | Voltar | De carro |
 
-**Por que voltar ao Disney Springs:** no dia 10 vocês estiveram lá antes de 13/11, quando a decoração de Natal ainda não existia. É literalmente outro lugar agora, e é de graça.
+**Por que o Disney Springs saiu daqui:** o ingresso do jogo é para 21/11 às 19h e não se remarca. A noite de Natal no Disney Springs continua no roteiro — só ainda sem dia.
 
 ---
 
@@ -218,6 +217,6 @@ Thanksgiving. Um dos dias mais tranquilos do ano para voar — o caos é na ter�
 | 14/11 | Celebration + CityWalk | manhã livre proposital + Celebration + CityWalk + Islands |
 | 18/11 | compras + NBA | compras + Lake Eola no pôr do sol + jantar no centro + NBA |
 | 20/11 | Old Town à tarde | aerobarco pela manhã + lago + carro + Old Town |
-| 21/11 | Winter Garden, tarde vazia | Winter Garden + Disney Springs decorado à noite |
+| 21/11 | Winter Garden, tarde vazia | Winter Garden + Solar Bears no Kia Center à noite |
 
-**Custos novos a somar no orçamento:** aerobarco (~US$ 32/pessoa), atrações do ICON Park (combo de duas a partir de US$ 39/pessoa), aluguel de bicicleta em Winter Garden (opcional). Lake Eola, Kissimmee Lakefront, Old Town e Christmas Tree Stroll são gratuitos.
+**Custos novos a somar no orçamento:** aerobarco (~US$ 32/pessoa), atrações do ICON Park (combo de duas a partir de US$ 39/pessoa), aluguel de bicicleta em Winter Garden (opcional). Lake Eola, Kissimmee Lakefront e Old Town são gratuitos, e o Christmas Tree Stroll também será, no dia em que a segunda ida ao Disney Springs for remarcada.
