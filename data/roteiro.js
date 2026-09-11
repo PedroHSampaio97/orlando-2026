@@ -35,10 +35,11 @@ window.ROTEIRO = {
     geradoEm: '2026-09-08',
     avisoHorarios:
       'Os horários oficiais dos parques só saem perto da data. Os relógios deste ' +
-      'roteiro assumem abertura às 9h, com três exceções anotadas: o ANIMAL KINGDOM ' +
-      'às 8h (13/11), e o SeaWorld e o Busch Gardens às 10h. Confiram em novembro e ' +
-      'ajustem a referência do dia — os blocos ancorados deslocam junto, mas as retas ' +
-      'finais dos dias 11 e 13 são fixas de propósito e não se mexem.',
+      'roteiro assumem abertura às 9h, com duas exceções anotadas: o ANIMAL KINGDOM ' +
+      'às 8h (13/11) e o Busch Gardens às 10h (24/11). O SeaWorld (22/11) também está em ' +
+      '9h, pela previsão do Queue-Times. Confiram em novembro e ajustem a referência do ' +
+      'dia — os blocos ancorados deslocam junto, mas as retas finais dos dias 11, 13 e 22 ' +
+      'são fixas de propósito e não se mexem.',
 
     // Vocabulários fechados. A interface valida contra isto no load.
     tiposBloco: ['atracao', 'refeicao', 'deslocamento', 'show', 'compras',
@@ -5272,7 +5273,7 @@ window.ROTEIRO = {
         passos: [
           'Andem até a esquina da Hughey Ave com a Pine St, a zona oficial de rideshare.',
           'Se ainda estiver caro, esperem 15 a 20 minutos num bar da Church St e chamem de novo.',
-          'Não esperem mais que isso: amanhã o alarme é às 7h45.',
+          'Não esperem mais que isso: amanhã o alarme é às 6h45.',
         ] },
     ],
     blocos: [
@@ -5421,7 +5422,7 @@ window.ROTEIRO = {
           'caminhada curta da arena. Marquem o ponto ali antes de chamar.\n\n' +
           'A tarifa dinâmica logo depois do apito final pode triplicar. Se estiver alta, vale ' +
           'o plano C2.\n\n' +
-          'AMANHÃ É SEAWORLD: alarme às 7h45, e a mochila já está pronta. Durmam assim que ' +
+          'AMANHÃ É SEAWORLD: alarme às 6h45, e a mochila já está pronta. Durmam assim que ' +
           'chegarem.',
         acesso: [], duracaoMin: 45 },
     ],
@@ -5440,18 +5441,19 @@ window.ROTEIRO = {
     ],
     prepararAmanha: {
       paraODia: '2026-11-22',
-      titulo: 'SeaWorld · chegada 9h15',
+      titulo: 'SeaWorld · portão 8h15',
       aviso: 'Vocês chegam do jogo por volta das 22h15. A mochila do SeaWorld fica pronta na ' +
              'tarde de descanso, antes de sair para o centro — não depois.',
       itens: [
         { texto: 'Mochila do SeaWorld montada ANTES de sair para o jogo', critico: true,
           motivo: 'Hoje vocês saem só com o bolso e voltam depois das 22h. Duas garrafas, ' +
                   'barrinhas, protetor solar, power bank, cabo e capa de chuva.' },
-        { texto: 'Alarme para 7h45 nos dois celulares', critico: true,
-          motivo: 'Chegada ao SeaWorld às 9h15, a 25 minutos do hotel. Depois de uma noite que ' +
-                  'termina às 22h15, um alarme só falha.' },
+        { texto: 'Alarme para 6h45 nos dois celulares', critico: true,
+          motivo: 'Saída 7h45 e portão às 8h15, 45 minutos antes da abertura. Depois de uma ' +
+                  'noite que termina às 22h15, um alarme só falha.' },
         { texto: 'Conferir o horário de abertura do SeaWorld', critico: true,
-          motivo: 'Amanhã assume abertura às 10h. Se for outro horário, a manhã inteira desloca.' },
+          motivo: 'Amanhã assume abertura às 9h, pela previsão do Queue-Times. Se o oficial ' +
+                  'sair diferente, a manhã inteira desloca.' },
         { texto: 'Roupa que pode molhar e Ziploc para o celular', critico: false,
           motivo: 'O Journey to Atlantis molha de verdade.' },
       ],
@@ -5489,147 +5491,392 @@ window.ROTEIRO = {
     diaSemana: 'domingo',
     emoji: '🐋',
     titulo: 'SeaWorld',
-    subtitulo: 'Plano de refeição incluso no Promo Park',
+    subtitulo: 'Montanhas-russas de manhã, orcas à tarde, Natal à noite',
     tipo: 'parque',
     operadora: 'seaworld',
     parqueId: 'seaworld',
     custoZero: false,
-    // ATENÇÃO: referência 10h, não 9h. Ver nota abaixo.
-    referencia: { rotulo: 'Abertura do parque', padrao: '10:00', confirmado: false },
+    fechado: true,
+    revisadoEm: '2026-09-11',
+    referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: false },
     resumo:
-      'Cinco montanhas-russas fortes na primeira metade do dia, animais na segunda, Natal à ' +
-      'noite. O plano de refeição do Promo Park cobre duas refeições e lanches ao longo do dia.',
-    avisos: [],
+      'As montanhas-russas grandes e o simulador novo até as 15h30, os animais e o Orca ' +
+      'Encounter à tarde, e o Natal à noite: árvores dançantes na lagoa, show no gelo e fogos ' +
+      'no fechamento. O plano de refeição do ingresso cobre almoço, lanche e jantar.',
+    avisos: [
+      'OBJETO SOLTO É PROIBIDO NAS MONTANHAS-RUSSAS. Cada uma tem armário de US$ 2 na entrada ' +
+      'da fila, e a entrada do parque tem detector de metal. Levem o mínimo.',
+      'Amanhã é o Islands, com saída às 7h45. Vocês chegam dos fogos por volta das 22h: a ' +
+      'mochila de amanhã fica pronta antes de dormir.',
+    ],
     notas: [
       { tipo: 'atencao', texto:
-        'O SEAWORLD ABRE ÀS 10H, não às 9h como os parques da Disney. A referência do dia ' +
-        'já está em 10h, o que deixa a chegada das 9h15 exatamente 45 minutos antes da ' +
-        'abertura — como manda a regra de ouro nº 1. Se confirmarem outro horário, mudem a ' +
-        'referência e o dia inteiro desloca junto.',
-        pesquisa: '2026-09-08', verificado: false },
-      { tipo: 'atencao', texto:
-        'A Christmas Celebration roda em DATAS SELECIONADAS a partir de 06/11. 22/11 é domingo ' +
-        'e muito provavelmente está incluído, mas confirmem — os blocos das 17h15 e 19h45 ' +
-        'dependem disso.', pesquisa: '2026-09-08' },
+        'O HORÁRIO É PREVISÃO, NÃO É OFICIAL. O calendário do Queue-Times dá 9h às 21h para ' +
+        '22/11, e o site do SeaWorld ainda não publicou novembro. A referência do dia está em ' +
+        '9h: se o oficial sair diferente, mudem a referência e a manhã inteira desloca junto. ' +
+        'O Orca e a noite são fixos de propósito.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'CHRISTMAS CELEBRATION: roda em datas selecionadas, do começo de novembro ao começo de ' +
+        'janeiro. O calendário do Queue-Times marca 22/11 como dia de evento; a confirmação ' +
+        'oficial está no checklist. Os fogos do Holiday Reflections são no fechamento, em toda ' +
+        'noite do evento.\n\n' +
+        'Os horários dos shows só saem no app, no dia. O Orca, o show no gelo e os fogos estão ' +
+        'marcados para conferir.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'O PLANO DE REFEIÇÃO É O ALL-DAY DINING DEAL: uma refeição a cada 90 minutos, do abrir ' +
+        'ao fechar — um prato, um acompanhamento ou sobremesa e um refrigerante ou chá gelado. ' +
+        'Vale em oito restaurantes: Voyager’s Smokehouse, Expedition Café, Captain Pete’s ' +
+        'Island Hot Dogs, Seafire Grill, Lakeside Grill, Altitude Burgers, Panini Shore Café e ' +
+        'Waterway Grill. Não vale para água em garrafa, bebida alcoólica nem para o Sharks ' +
+        'Underwater Grill.\n\n' +
+        'O dia usa três: almoço às 12h55, lanche às 16h20 e jantar às 18h05.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'DE CARRO: uns 20 minutos do hotel, e o estacionamento geral custa US$ 37. De Uber ' +
+        'seriam US$ 44 a 64 ida e volta, fora a tarifa dinâmica na saída dos fogos — o carro ' +
+        'sai mais barato.\n\n' +
+        'O SEAWORLD NÃO TEM FILA DE SINGLE RIDER em nenhuma atração.',
+        pesquisa: '2026-09-11' },
+    ],
+    planos: [
+      { letra: 'A', titulo: 'O dia como está escrito',
+        gatilho: 'O parque abre às 9h e o dia 22 tem Christmas Celebration.',
+        passos: [
+          'Portão às 8h15. Pipeline, Ice Breaker e Expedition Odyssey antes das 11h.',
+          'Mako, Shark Encounter e Penguin Trek; almoço no Voyager’s Smokehouse às 12h55.',
+          'Kraken, Journey to Atlantis e Manta à tarde, depois os animais da Sea of Shallows.',
+          'Orca Encounter às 17h30, jantar no Waterway Grill e o show no gelo.',
+          'Sea of Trees, fogos às 21h e saída.',
+        ] },
+      { letra: 'B', titulo: 'O SEAQuest abriu',
+        gatilho: 'O dark ride novo, ainda sem data anunciada, já está funcionando em 22/11.',
+        passos: [
+          'Ele vira a maior fila do parque. Pipeline no rope drop e o SEAQuest logo depois: ele ' +
+          'fica atrás do Expedition Odyssey, na mesma direção.',
+          'O Ice Breaker passa para depois do Expedition Odyssey.',
+          'O atraso sai da tarde: os animais da Sea of Shallows caem primeiro.',
+        ] },
+      { letra: 'B2', titulo: 'O parque abre às 10h',
+        gatilho: 'O horário oficial sai com abertura às 10h.',
+        passos: [
+          'Mudem a referência para 10h: a manhã inteira desloca uma hora.',
+          'A tarde perde os animais da Sea of Shallows e a pausa. O app vai avisar o aperto.',
+          'O Orca, o jantar e a noite não mudam.',
+        ] },
+      { letra: 'C', titulo: 'Tempestade com raio',
+        gatilho: 'As montanhas-russas param por causa de raio.',
+        passos: [
+          'Enquanto estiverem paradas, o circuito coberto é Expedition Odyssey, Shark ' +
+          'Encounter, o hábitat dos pinguins e o Turtle Trek.',
+          'Se esfriar, o Journey to Atlantis sai do dia.',
+        ] },
+      { letra: 'C2', titulo: 'Cansaço à noite',
+        gatilho: 'Depois do show no gelo, o corpo pediu cama.',
+        passos: [
+          'Vejam o Sea of Trees e saiam por volta das 20h40, antes da multidão dos fogos.',
+          'Amanhã a saída é 7h45: o que se ganha é uma hora de sono.',
+        ] },
     ],
     blocos: [
-      { id: 'b-2211-0915', hora: '09:15', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Chegada', descricao: '', localId: 'seaworld', acesso: [] },
-
-      { id: 'b-2211-1000', hora: '10:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Mako',
-        descricao: 'A mais alta e rápida da Flórida. Hipercoaster, sensação de flutuar',
+      { id: 'b-2211-0745', hora: '07:45', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Sair do hotel de carro',
+        descricao: '~20 min. Estacionamento geral US$ 37',
         contexto:
-          'Hipercoaster: sem inversões, feita para dar "airtime" — a sensação de sair do banco ' +
-          'nas descidas. 60 metros e 118 km/h. É suave e longa, das mais agradáveis do complexo.',
-        acesso: ['rope-drop', 'standby'] },
+          'São 13 km até o SeaWorld. O estacionamento geral custa US$ 37, e pagar antes pelo ' +
+          'site agiliza a entrada.',
+        localId: 'seaworld', acesso: [], duracaoMin: 30, pesquisa: '2026-09-11' },
 
-      { id: 'b-2211-1035', hora: '10:35', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Manta',
-        descricao: 'Você voa deitado de bruços',
+      { id: 'b-2211-0815', hora: '08:15', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Portão',
+        descricao: 'A Pipeline fica colada na entrada. É a primeira',
         contexto:
-          'Coaster voadora: o banco gira e vocês ficam de barriga para baixo, com os braços ' +
-          'soltos, rasando a água. Sensação totalmente diferente de qualquer outra do dia.',
-        acesso: ['standby'] },
+          'Quarenta e cinco minutos antes da abertura, como manda a regra de ouro nº 1. A ' +
+          'entrada tem detector de metal.\n\n' +
+          'A Pipeline carrega devagar, e é por isso que ela vem primeiro: no rope drop a fila ' +
+          'fica em 10 a 15 minutos.',
+        localId: 'seaworld', acesso: [], duracaoMin: 45, pesquisa: '2026-09-11' },
 
-      { id: 'b-2211-1110', hora: '11:10', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Kraken',
-        descricao: 'Coaster invertido, 7 inversões',
+      { id: 'b-2211-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Pipeline: The Surf Coaster',
+        descricao: 'Rope drop. Vocês vão de pé, e o piso sobe e desce como onda',
         contexto:
-          'Pés soltos no ar, sete inversões, 65 metros. É a mais intensa do parque em ' +
-          'inversão pura.',
-        acesso: ['standby'] },
+          'A primeira surf coaster do mundo: vocês vão de pé numa prancha, lançados a 96 km/h, ' +
+          'e o piso se mexe sob os pés simulando a onda. Quase dois minutos.\n\n' +
+          'POR QUE PRIMEIRO: carrega devagar e a fila cresce rápido. No rope drop são 10 a 15 ' +
+          'minutos; no resto do dia, 27 de média.\n\n' +
+          'Altura máxima de 1,98 m. Nada solto: armário de US$ 2 na entrada da fila.',
+        areaParque: 'Port of Entry', acesso: ['rope-drop', 'standby'], duracaoMin: 30,
+        pesquisa: '2026-09-11' },
 
-      { id: 'b-2211-1145', hora: '11:45', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2211-0935', hora: '09:35', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Ice Breaker',
-        descricao: 'Lançamentos para frente e para trás',
+        descricao: 'Lançamentos para frente e para trás. Colada na Pipeline',
         contexto:
-          'Coaster de lançamento múltiplo: acelera para frente, volta de ré, e repete até ' +
-          'vencer a rampa. Curta e divertida, não é assustadora.',
-        acesso: ['standby'] },
+          'Montanha-russa de lançamento: acelera para frente, volta de ré e repete até vencer ' +
+          'a rampa.\n\n' +
+          'A fila média do dia é de 22 minutos, e à tarde fica em 30 a 45. De manhã, a cinco ' +
+          'minutos da Pipeline, sai barata.\n\n' +
+          'Nada solto: armário de US$ 2 na entrada da fila.',
+        areaParque: 'Sea of Power', acesso: ['standby'], duracaoMin: 30, pesquisa: '2026-09-11' },
 
-      { id: 'b-2211-1215', hora: '12:15', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Pipeline',
-        descricao: 'Você anda em pé. Único no mundo nesse formato',
+      { id: 'b-2211-1005', hora: '10:05', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Expedition Odyssey: Fire & Ice',
+        descricao: 'A maior fila do parque. Simulador, com belugas e morsas na saída',
         contexto:
-          'A primeira "surf coaster" do mundo: vocês vão de pé numa prancha, e o piso sobe e ' +
-          'desce sob os pés simulando a onda. Formato que não existe em nenhum outro parque.',
-        acesso: ['standby'] },
+          'Simulador de voo numa expedição ao Ártico, com pré-show e filme novo: a versão Fire ' +
+          '& Ice abriu em 25/05/2026. O circuito termina com animais de verdade, belugas e ' +
+          'morsas — não passem direto.\n\n' +
+          'POR QUE DE MANHÃ: é a maior fila do parque, 46 minutos de média e 81 de pico médio. ' +
+          'Como fica ao lado do Ice Breaker, entra no começo do dia sem custar caminhada.\n\n' +
+          'Intensidade de família. Altura mínima de 99 cm.',
+        areaParque: 'Sea of Power', acesso: ['standby'], duracaoMin: 45, pesquisa: '2026-09-11' },
 
-      { id: 'b-2211-1250', hora: '12:50', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Almoço',
-        descricao: 'Plano de refeição incluso no Promo Park', acesso: [] },
+      { id: 'b-2211-1105', hora: '11:05', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Mako',
+        descricao: 'A mais alta e rápida de Orlando. Hipercoaster, feita para flutuar',
+        contexto:
+          'Hipercoaster: sem inversões, feita para dar airtime — a sensação de sair do banco ' +
+          'nas descidas. 61 metros e 118 km/h.\n\n' +
+          'Não precisa de manhã: a fila média do dia é de 13 minutos.\n\n' +
+          'São onze minutos a pé do Expedition Odyssey, passando pelo estádio do Orca. Nada ' +
+          'solto: armário de US$ 2 na entrada da fila.',
+        areaParque: 'Sea of Mystery', acesso: ['standby'], duracaoMin: 30, pesquisa: '2026-09-11' },
+
+      { id: 'b-2211-1140', hora: '11:40', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Shark Encounter',
+        descricao: 'Túnel de acrílico dentro do tanque de tubarões',
+        contexto:
+          'Um túnel que passa por dentro do tanque, com os tubarões em volta. É a mesma vista ' +
+          'do Sharks Underwater Grill, sem a conta.\n\n' +
+          'É caminhar e parar onde quiserem.',
+        areaParque: 'Sea of Mystery', acesso: [], duracaoMin: 20, pesquisa: '2026-09-11' },
+
+      { id: 'b-2211-1205', hora: '12:05', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Penguin Trek',
+        descricao: 'Montanha-russa de lançamento que termina no hábitat dos pinguins',
+        contexto:
+          'Montanha-russa de família em carrinhos de snowmobile, com lançamento, que termina ' +
+          'dentro do hábitat gelado dos pinguins de verdade. A graça é a mistura de ' +
+          'montanha-russa com aquário.\n\n' +
+          'É a segunda maior fila do parque, 35 minutos de média. Levem algo de manga longa: o ' +
+          'hábitat é mantido a poucos graus.',
+        areaParque: 'Sea of Ice', acesso: ['standby'], duracaoMin: 45, pesquisa: '2026-09-11' },
+
+      { id: 'b-2211-1255', hora: '12:55', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Almoço — Voyager’s Smokehouse',
+        descricao: 'Churrasco defumado. Plano de refeição',
+        contexto:
+          'Churrasco americano no Waterfront: brisket texano, costela St. Louis, frango ' +
+          'defumado e sanduíches de peru e de porco desfiado.\n\n' +
+          'PLANO DE REFEIÇÃO: um prato, um acompanhamento ou sobremesa e um refrigerante. A ' +
+          'próxima refeição do plano só libera 90 minutos depois, a partir das 14h25.',
+        restauranteId: 'r-voyagers', areaParque: 'Sea of Delight', acesso: [], duracaoMin: 50,
+        pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1350', hora: '13:50', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Penguin Trek',
-        descricao: 'Coaster com passagem pelo hábitat dos pinguins',
+        titulo: 'Kraken',
+        descricao: 'Sem piso, sete inversões. A fila mais curta das grandes',
         contexto:
-          'Coaster familiar em carrinhos de snowmobile que termina dentro do hábitat gelado ' +
-          'dos pinguins de verdade. Leve — a graça é a mistura de coaster com zoológico.',
-        acesso: ['standby'] },
+          'A única montanha-russa sem piso de Orlando: os pés ficam soltos no ar. 47 metros, ' +
+          '105 km/h e sete inversões em dois minutos.\n\n' +
+          'A fila média do dia é de 10 minutos, a menor entre as montanhas-russas grandes — por ' +
+          'isso ela fica para depois do almoço.\n\n' +
+          'Nada solto: armário de US$ 2 na entrada da fila.',
+        areaParque: 'Sea of Legends', acesso: ['standby'], duracaoMin: 25, pesquisa: '2026-09-11' },
 
-      { id: 'b-2211-1430', hora: '14:30', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2211-1420', hora: '14:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Journey to Atlantis',
-        descricao: 'Molha bastante',
+        descricao: 'Molha bastante. Na hora mais quente do dia, de propósito',
         contexto:
-          'Híbrido de log flume com coaster: uma queda grande molhada e depois um trecho seco ' +
-          'de montanha-russa no escuro. Molha de verdade.',
-        acesso: ['standby'], molha: true },
+          'Barco que vira montanha-russa: uma queda grande molhada e um trecho seco no escuro.\n\n' +
+          'MOLHA DE VERDADE. Está às 14h20 porque é a hora mais quente do dia, e sobra a tarde ' +
+          'inteira para secar antes de escurecer. Capa de chuva, e o celular no Ziploc ou no ' +
+          'armário de US$ 2.\n\n' +
+          'Fila média de 21 minutos.',
+        areaParque: 'Sea of Legends', acesso: ['standby'], molha: true, duracaoMin: 35,
+        pesquisa: '2026-09-11' },
 
-      { id: 'b-2211-1515', hora: '15:15', ancora: 'fixo', tipo: 'show',
+      { id: 'b-2211-1500', hora: '15:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Manta',
+        descricao: 'Montanha-russa voadora: vocês vão de bruços, rasando a água',
+        contexto:
+          'A única montanha-russa voadora da Flórida: o banco gira e vocês ficam de barriga ' +
+          'para baixo, braços soltos, passando rente à água. 43 metros, 90 km/h e quatro ' +
+          'inversões.\n\n' +
+          'Fila média de 19 minutos. Nada solto: armário de US$ 2 na entrada da fila.',
+        areaParque: 'Sea of Shallows', acesso: ['standby'], duracaoMin: 30, pesquisa: '2026-09-11' },
+
+      { id: 'b-2211-1535', hora: '15:35', ancora: 'referencia', tipo: 'livre',
+        titulo: 'Tartarugas, golfinhos e arraias',
+        descricao: 'Turtle Trek, golfinhos e o tanque de arraias. Sem fila',
+        contexto:
+          'A Sea of Shallows é a área dos animais de água rasa: o Turtle Trek, com o domo de ' +
+          'filme e as tartarugas e peixes-boi resgatados, o tanque de arraias e os golfinhos.\n\n' +
+          'DOLPHIN ADVENTURES: o show dos golfinhos é no Dolphin Stadium, aqui ao lado. Em 2025 ' +
+          'era às 11h e às 15h; se no dia houver sessão perto das 15h30, é aqui que ela cabe.',
+        areaParque: 'Sea of Shallows', acesso: [], duracaoMin: 40, pesquisa: '2026-09-11' },
+
+      { id: 'b-2211-1620', hora: '16:20', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Pausa e lanche no Waterfront',
+        descricao: 'Segunda refeição do plano. Sentem',
+        contexto:
+          'O lanche entra no plano de refeição: os 90 minutos desde o almoço já passaram. O ' +
+          'Seafire Grill e o Lakeside Grill ficam por aqui.\n\n' +
+          'É a última parada antes de uma noite longa, que só termina depois dos fogos das ' +
+          '21h.\n\n' +
+          'O SHOW DOS LEÕES-MARINHOS é no estádio ao lado. Em 2025 era às 14h e às 16h; se ' +
+          'houver sessão nesta hora, cabe.',
+        areaParque: 'Sea of Delight', acesso: [], duracaoMin: 35, pesquisa: '2026-09-11' },
+
+      { id: 'b-2211-1710', hora: '17:10', ancora: 'fixo', tipo: 'show',
         titulo: 'Orca Encounter',
-        descricao: 'O show principal',
+        descricao: 'O show das orcas. Cheguem 20 min antes; as primeiras fileiras molham',
         contexto:
-          'Apresentação com orcas num formato de documentário ao vivo, com foco em ' +
-          'comportamento natural. Cerca de 25 minutos. As primeiras fileiras são a "zona ' +
-          'molhada" e ela é real. HORÁRIO FIXO de sessão.',
-        acesso: [], duracaoMin: 25 },
+          'Apresentação de 30 minutos com as orcas, no estádio do fundo do parque. É o clássico ' +
+          'do SeaWorld.\n\n' +
+          'HORÁRIO A CONFIRMAR: em 2025 as sessões eram às 12h e às 17h30. O bloco assume ' +
+          '17h30 — a grade do dia sai no app, confiram de manhã.\n\n' +
+          'Cheguem 20 minutos antes: os bons lugares acabam rápido. As primeiras fileiras são a ' +
+          'zona molhada, e ela é real.',
+        areaParque: 'Orca Encounter', acesso: [], confirmarHorario: true, critico: true,
+        duracaoMin: 50, pesquisa: '2026-09-11' },
 
-      { id: 'b-2211-1615', hora: '16:15', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Shark Encounter e Antarctica',
-        descricao: '',
+      { id: 'b-2211-1805', hora: '18:05', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Jantar — Waterway Grill',
+        descricao: 'Churrasco, frango com sofrito ou pernil. Plano de refeição',
         contexto:
-          'Shark Encounter é um túnel de acrílico dentro do tanque de tubarões. Antarctica ' +
-          'combina um passeio curto com o hábitat de pinguins, mantido a poucos graus — leve ' +
-          'algo de manga longa.',
-        acesso: [] },
+          'A terceira refeição do plano: churrasco grelhado, frango com sofrito, porco assado ' +
+          'devagar ou tiras de frango.\n\n' +
+          'Fica a quatro minutos do estádio do Orca, e é onde o Papai Noel recebe visitas no ' +
+          'Natal.',
+        restauranteId: 'r-waterway', areaParque: 'Sea of Fun', acesso: [], duracaoMin: 55,
+        pesquisa: '2026-09-11' },
 
-      { id: 'b-2211-1715', hora: '17:15', ancora: 'fixo', tipo: 'show',
-        titulo: 'Christmas Celebration',
-        descricao: 'Neve artificial no Waterfront, corais',
-        acesso: [], confirmarHorario: true },
-
-      { id: 'b-2211-1830', hora: '18:30', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — Sharks Underwater Grill',
-        descricao: 'Mesas coladas no tanque de tubarões. Reservem',
+      { id: 'b-2211-1910', hora: '19:10', ancora: 'fixo', tipo: 'show',
+        titulo: 'Winter Wonderland on Ice',
+        descricao: 'Show de patinação no Bayside Stadium, de frente para a lagoa',
         contexto:
-          'Serviço à mesa com uma parede inteira de vidro para o tanque de tubarões. É o único ' +
-          'restaurante do SeaWorld que precisa de reserva, feita direto no site do parque. ' +
-          'Provavelmente NÃO está coberto pelo plano de refeição — confirmem.',
-        restauranteId: 'r-sharks', acesso: ['reserva'] },
+          'Patinação no gelo em estilo Broadway, com clássicos de Natal, no estádio que dá para ' +
+          'a lagoa. Antes dos patinadores, um violinista toca um repertório natalino.\n\n' +
+          'HORÁRIO A CONFIRMAR: as sessões do dia só aparecem no app. O bloco assume uma sessão ' +
+          'por volta das 19h10; se for outra, troquem de lugar com o Sea of Trees, que roda a ' +
+          'noite toda.',
+        areaParque: 'Sea of Power', acesso: [], confirmarHorario: true, duracaoMin: 40,
+        pesquisa: '2026-09-11' },
 
-      { id: 'b-2211-1945', hora: '19:45', ancora: 'fixo', tipo: 'show',
-        titulo: 'Sea of Trees',
-        descricao: 'Árvores luminosas sincronizadas sobre o lago',
+      { id: 'b-2211-2000', hora: '20:00', ancora: 'fixo', tipo: 'show',
+        titulo: 'Sea of Trees e o Waterfront aceso',
+        descricao: 'Árvores que dançam com música sobre a lagoa',
         contexto:
-          'Centenas de árvores de Natal flutuando no lago central, com luzes coreografadas em ' +
-          'sincronia com música. É o ponto alto do Natal do SeaWorld.',
-        acesso: [], confirmarHorario: true },
+          'Árvores de Natal iluminadas que dançam com músicas natalinas sobre a lagoa, com uma ' +
+          'central de 21 metros. Roda a noite toda. Os pontos indicados para ver são o ' +
+          'Waterfront, o Bayside Stadium e o caminho do Orca.\n\n' +
+          'NO CAMINHO, perto da entrada: a Rudolph’s Christmas Town, no caminho da Pipeline, com ' +
+          'o Rudolph e o Bumble para foto.',
+        areaParque: 'Sea of Delight', acesso: [], duracaoMin: 40, pesquisa: '2026-09-11' },
+
+      { id: 'b-2211-2040', hora: '20:40', ancora: 'fixo', tipo: 'espera',
+        titulo: 'Lugar para os fogos',
+        descricao: 'Beira da lagoa, no Waterfront',
+        contexto:
+          'Os fogos são sobre a lagoa. Escolham o ponto na beira do Waterfront com calma, ' +
+          'enquanto ainda há espaço.',
+        areaParque: 'Sea of Delight', acesso: [], duracaoMin: 20 },
+
+      { id: 'b-2211-2100', hora: '21:00', ancora: 'fixo', tipo: 'show',
+        titulo: 'Holiday Reflections',
+        descricao: 'Fogos de Natal no fechamento, sobre a lagoa',
+        contexto:
+          'O final da noite: fogos sobre a lagoa no fechamento do parque, em toda noite da ' +
+          'Christmas Celebration.\n\n' +
+          'HORA A CONFIRMAR: o bloco segue o fechamento previsto, às 21h.',
+        areaParque: 'Sea of Delight', acesso: [], confirmarHorario: true, critico: true,
+        duracaoMin: 15, pesquisa: '2026-09-11' },
+
+      { id: 'b-2211-2115', hora: '21:15', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Saída',
+        descricao: 'Carro no estacionamento. Hotel por volta das 22h',
+        contexto:
+          'O parque inteiro sai junto depois dos fogos, e a fila de carros do estacionamento ' +
+          'entra na conta: por isso a volta tem 45 minutos para uma estrada de 20.\n\n' +
+          'AMANHÃ É ISLANDS: saída às 7h45, alarme às 6h45.',
+        acesso: [], duracaoMin: 45 },
     ],
+    naoPerca: [
+      { nome: 'Sea of Trees', quando: 'hoje', custo: 'incluso',
+        motivo: 'Árvores que dançam com música sobre a lagoa, com uma de 21 metros no centro. ' +
+                'Roda a noite toda.',
+        pesquisa: '2026-09-11' },
+      { nome: 'Holiday Reflections', quando: 'hoje', custo: 'incluso',
+        motivo: 'Os fogos de Natal no fechamento, sobre a lagoa.',
+        pesquisa: '2026-09-11' },
+      { nome: 'Belugas e morsas', quando: 'hoje', custo: 'incluso',
+        motivo: 'Ficam no fim do circuito do Expedition Odyssey — não passem direto.',
+        pesquisa: '2026-09-11' },
+      { nome: 'Papai Noel no Waterway Grill', quando: 'hoje', custo: 'incluso',
+        motivo: 'É onde ele recebe visitas no Natal, e é o restaurante do jantar.',
+        pesquisa: '2026-09-11' },
+      { nome: 'Sharks Underwater Grill', quando: 'descartado', custo: 'fora do plano de refeição',
+        motivo: 'DESCARTADO em 11/09. Mesa colada no tanque de tubarões, mas paga à parte — o ' +
+                'filé custa uns US$ 49 — enquanto o plano de refeição já cobre o jantar. A mesma ' +
+                'vista está no Shark Encounter.',
+        pesquisa: '2026-09-11' },
+    ],
+    prepararAmanha: {
+      paraODia: '2026-11-23',
+      titulo: 'Islands of Adventure · saída 7h45',
+      aviso: 'Vocês chegam do SeaWorld por volta das 22h, e amanhã é o dia com mais locker ' +
+             'obrigatório da viagem. A mochila sai mínima.',
+      itens: [
+        { texto: 'Alarme para 6h45 nos dois celulares', critico: true,
+          motivo: 'Saída 7h45 para o rope drop do Hagrid’s. Depois de uma noite que termina às ' +
+                  '22h, um alarme só falha.' },
+        { texto: 'Mochila mínima para o Islands', critico: true,
+          motivo: 'Hulk e VelociCoaster têm detector de metal e não passa nem celular, e quatro ' +
+                  'atrações exigem locker. Quanto menos bagagem, mais atração cabe no dia.' },
+        { texto: 'Conferir o horário de abertura do Islands', critico: true,
+          motivo: 'Amanhã assume abertura às 9h. Se for outro horário, a manhã inteira desloca.' },
+        { texto: 'Capa de chuva e Ziploc para o celular', critico: false,
+          motivo: 'O Jurassic Park River Adventure molha bastante.' },
+      ],
+    },
     ficha: {
       multiPass: null, singlePass: null, expressPass: null,
-      custoEstimadoCasal: { min: 0, max: 0, moeda: 'USD' },
+      custoEstimadoCasal: { min: 37, max: 49, moeda: 'USD' },
       extras: [
+        { nome: 'Estacionamento geral',
+          custo: { min: 37, max: 37, moeda: 'USD' },
+          texto: 'US$ 37 por carro. Pagar antes pelo site agiliza a entrada.' },
+        { nome: 'Armários das montanhas-russas',
+          custo: { min: 0, max: 12, moeda: 'USD' },
+          texto: 'US$ 2 por uso, na entrada da Pipeline, Ice Breaker, Mako, Kraken, Manta e ' +
+                 'Journey to Atlantis. Um armário serve para os dois.' },
         { nome: 'Plano de refeição',
-          texto: 'Incluso no Promo Park. Usem: duas refeições e lanches ao longo do dia.' },
+          texto: 'Incluso no ingresso: uma refeição a cada 90 minutos em oito restaurantes. O ' +
+                 'dia usa três.' },
+        { nome: 'Quick Queue — não',
+          custo: { min: 0, max: 0, moeda: 'USD' },
+          texto: 'Domingo de lotação média, e as três filas longas do parque caem na manhã. E o ' +
+                 'Quick Queue ilimitado só dá uma passagem na Pipeline, no Penguin Trek e no ' +
+                 'Expedition Odyssey.' },
       ],
     },
     renuncias: {
       gerais: [
-        { nome: 'Infinity Falls', motivo: 'Molha muito e anoitece frio' },
-        { nome: 'Sesame Street Land' }, { nome: 'Wild Arctic' }, { nome: 'Sea Lion High' },
+        { nome: 'Infinity Falls', motivo: 'Molha demais, e a noite de novembro esfria.' },
+        { nome: 'Sesame Street Land', motivo: 'Área infantil.' },
+        { nome: 'Sky Tower', motivo: 'Pago à parte.' },
+        { nome: 'O Wondrous Night',
+          motivo: 'Show de corais no Nautilus Theater, na mesma faixa da noite que o show no ' +
+                  'gelo.' },
       ],
-      idioma: null, fechado: [],
+      idioma: null,
+      fechado: [],
     },
   },
 
@@ -6296,12 +6543,19 @@ window.ROTEIRO = {
       nota: 'Frango frito. O mais concorrido de Disney Springs — 1h de espera sem reserva. ' +
             'Polite Pig é a alternativa de balcão, sem espera. É o jantar de despedida.' },
 
-    { id: 'r-sharks', nome: 'Sharks Underwater Grill', data: '2026-11-22', hora: '18:30',
-      refeicao: 'jantar', local: 'SeaWorld', alternativas: [],
-      precisaReserva: true, janelaAbre: null, janelaHora: null,
-      canal: 'Direto no site do parque', blocoId: 'b-2211-1830',
-      nota: 'Mesas coladas no tanque de tubarões. Prazo médio (outubro). ' +
-            'Provavelmente NÃO está coberto pelo plano de refeição — confirmem.' },
+    { id: 'r-voyagers', nome: 'Voyager’s Smokehouse', data: '2026-11-22', hora: '12:55',
+      refeicao: 'almoco', local: 'SeaWorld · Waterfront', alternativas: [],
+      precisaReserva: false, janelaAbre: null, janelaHora: null,
+      canal: 'Plano de refeição (All-Day Dining Deal)', blocoId: 'b-2211-1255',
+      nota: 'Churrasco defumado: brisket texano, costela e frango. Coberto pelo plano de ' +
+            'refeição do ingresso.' },
+
+    { id: 'r-waterway', nome: 'Waterway Grill', data: '2026-11-22', hora: '18:05',
+      refeicao: 'jantar', local: 'SeaWorld · Sea of Fun', alternativas: [],
+      precisaReserva: false, janelaAbre: null, janelaHora: null,
+      canal: 'Plano de refeição (All-Day Dining Deal)', blocoId: 'b-2211-1805',
+      nota: 'Churrasco grelhado, frango com sofrito e pernil. Coberto pelo plano de refeição. ' +
+            'É onde o Papai Noel recebe visitas no Natal.' },
 
     { id: 'r-toadstool', nome: 'Toadstool Cafe', data: '2026-11-19', hora: '13:00',
       refeicao: 'almoco', local: 'Epic Universe · Super Nintendo World', alternativas: [],
@@ -6527,15 +6781,12 @@ window.ROTEIRO = {
       texto: 'Ingressos SeaWorld e Busch Gardens (Promo Park) — com o plano de refeição',
       nota:
         'Os dois parques são da mesma empresa e vieram na mesma compra. Confiram que o ' +
-        'PLANO DE REFEIÇÃO está incluído nos dois: o roteiro do dia 22 e do dia 24 ' +
-        'conta com ele para o almoço, e sem plano o custo desses dias muda.\n\n' +
+        'PLANO DE REFEIÇÃO — o All-Day Dining Deal, uma refeição a cada 90 minutos — está ' +
+        'incluído nos dois: o dia 22 usa três refeições dele, e o dia 24 conta com ele para o ' +
+        'almoço. Sem plano, o custo desses dias muda.\n\n' +
         'Riscar só quando aparecer no app da Bianca também.',
       restauranteIds: [] },
 
-    { id: 'ck-sharks', dataAlvo: '2026-10-01', dataEstimada: true, motivoData: 'Prazo de outubro, com folga para o site do parque', hora: null, fuso: null,
-      janelaReserva: false, critico: false,
-      texto: 'Reservar Sharks Underwater Grill (SeaWorld, direto no site do parque)',
-      restauranteIds: ['r-sharks'] },
 
     { id: 'ck-kres', dataAlvo: '2026-10-19', dataEstimada: true,
       motivoData: '30 dias antes do jantar de 18/11',
@@ -6626,6 +6877,10 @@ window.ROTEIRO = {
       janelaReserva: false, critico: false,
       texto: 'Confirmar que 22/11 tem Christmas Celebration (SeaWorld) e 24/11 tem ' +
              'Christmas Town (Busch Gardens) — ambos rodam em datas selecionadas',
+      nota:
+        'O calendário do Queue-Times já marca 22/11 com a Christmas Celebration e horário ' +
+        'das 9h às 21h. É previsão de terceiro: a confirmação é o calendário oficial do ' +
+        'SeaWorld, e com ela a referência do dia 22.',
       restauranteIds: [] },
 
     { id: 'ck-roda-icon', dataAlvo: '2026-10-15', dataEstimada: true,
@@ -6903,8 +7158,9 @@ window.ROTEIRO = {
 
     { id: 'seaworld', nome: 'SeaWorld Orlando', tipo: 'parque',
       lat: 28.41083333, lng: -81.4625, verificado: true, fonteCoord: 'wikipedia', endereco: null,
-      doHotel: { tempoMin: 25, tempoFonte: 'estimado',
-                 uberUSD: { min: 22, max: 32 }, uberFonte: 'estimado' } },
+      doHotel: { tempoMin: 20, tempoFonte: 'estimado',
+                 uberUSD: { min: 22, max: 32 }, uberFonte: 'estimado' },
+      nota: 'Estacionamento geral US$ 37. Detector de metal na entrada.' },
 
     { id: 'busch-gardens', nome: 'Busch Gardens Tampa Bay', tipo: 'parque',
       lat: 28.0375, lng: -82.4225, verificado: true, fonteCoord: 'wikipedia', endereco: null,
@@ -7144,6 +7400,32 @@ window.ROTEIRO = {
         pesquisa: '2026-09-09',
       },
     },
+
+    seaworld: {
+      forma: 'Um anel em volta da lagoa, com a entrada no lado oeste e a Pipeline colada ' +
+             'nela. Ao sul ficam a Sea of Power — Ice Breaker, Expedition Odyssey e o Bayside ' +
+             'Stadium — e o estádio do Orca; do outro lado do anel, Mako, Penguin Trek, Kraken ' +
+             'e Manta. O Waterfront é o centro, na margem da lagoa.',
+      margem: 'Somem 50% em dia cheio. E ATENÇÃO: não há tempos publicados para conferir. ' +
+              'Estes saem das coordenadas do OpenStreetMap, com 30% de desvio sobre a linha ' +
+              'reta e passo de 75 metros por minuto. A volta inteira dá uns 32 minutos e da ' +
+              'entrada ao Mako são 9 — o que bate com o "5 a 10 minutos entre atrações" dos ' +
+              'guias.',
+      arestas: [
+        ['Port of Entry', 'Sea of Shallows', 5],
+        ['Port of Entry', 'Sea of Delight', 5],
+        ['Port of Entry', 'Sea of Power', 5],
+        ['Sea of Shallows', 'Sea of Delight', 3],
+        ['Sea of Shallows', 'Sea of Legends', 4],
+        ['Sea of Legends', 'Sea of Ice', 2],
+        ['Sea of Ice', 'Sea of Delight', 3],
+        ['Sea of Ice', 'Sea of Mystery', 5],
+        ['Sea of Delight', 'Sea of Mystery', 4],
+        ['Sea of Mystery', 'Sea of Fun', 3],
+        ['Sea of Fun', 'Orca Encounter', 4],
+        ['Orca Encounter', 'Sea of Power', 4],
+      ],
+    },
   },
 
   contatos: [
@@ -7274,10 +7556,12 @@ window.ROTEIRO = {
         'GORJETA. Em restaurante com garçom, 18 a 20% é o esperado e faz parte do salário da ' +
         'pessoa, não é opcional na prática. Muita casa já traz sugestões impressas na conta, e ' +
         'grupos grandes às vezes têm gratuity incluída — confira antes de somar duas vezes.\n\n' +
-        'Onde NÃO se dá gorjeta: balcão de fast food e mobile order. Ou seja, Satu\u2019li Canteen, ' +
-        'Docking Bay 7, Three Broomsticks e Toadstool Cafe não levam gorjeta.\n\n' +
-        'Onde se dá: The Boathouse, Columbia, Sanaa, Sci-Fi Dine-In, Oga\u2019s, Mythos, ' +
-        'Sharks Underwater Grill e o Uber (opcional, mas comum).',
+        'Onde NÃO se dá gorjeta: balcão de fast food e mobile order. Ou seja, Satu’li Canteen, ' +
+        'Docking Bay 7, Three Broomsticks, Toadstool Cafe e os restaurantes do plano de ' +
+        'refeição do SeaWorld e do Busch Gardens não levam gorjeta.\n\n' +
+        'Onde se dá: The Boathouse, Columbia, Sanaa, Sci-Fi Dine-In, Oga’s, Kres, Atlantic, ' +
+        'IHOP, El Cilantrillo, Harp & Celt, Mythos, Homecomin’ — e o Uber (opcional, mas ' +
+        'comum).',
       pesquisa: '2026-09-10',
     },
     {

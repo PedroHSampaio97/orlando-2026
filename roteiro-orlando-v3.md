@@ -5,7 +5,7 @@
 **Perfil:** casal, sem crianças. Prioridade: clássicos + montanhas-russas fortes.
 **Decisões fechadas:** troca dos dias 21/22/23 confirmada · sem Mickey's Very Merry Christmas Party · sem Express Pass na Universal · carro alugado de 20 a 25/11, **devolvido no dia 25** · PID já emitida · **o segundo dia no Epic saiu do roteiro** e virou a despedida no Disney Springs
 
-> **Aviso sobre horários:** os horários oficiais dos parques só saem perto da data. Os relógios abaixo assumem abertura às 9h nos parques da Disney e da Universal, com três exceções: **o Animal Kingdom abre às 8h (13/11)**, e o **SeaWorld (22/11) e o Busch Gardens (24/11) abrem às 10h**. Confiram no app em novembro e desloquem o bloco inteiro se mudar — mas atenção: as retas finais dos dias 11 e 13 são fixas de propósito, porque seguem o desfile e o pôr do sol, não a abertura.
+> **Aviso sobre horários:** os horários oficiais dos parques só saem perto da data. Os relógios abaixo assumem abertura às 9h, com duas exceções: **o Animal Kingdom abre às 8h (13/11)** e o **Busch Gardens (24/11) às 10h**. O **SeaWorld (22/11)** também está em 9h, pela previsão do Queue-Times. Confiram no app em novembro e desloquem o bloco inteiro se mudar — mas atenção: as retas finais dos dias 11, 13 e 22 são fixas de propósito, porque seguem o desfile, o pôr do sol e o show das orcas, não a abertura.
 
 ---
 
@@ -475,27 +475,43 @@ A Super Nintendo World ganha decoração **pela primeira vez**, Berk faz o **Sno
 
 # 🐋 22/11 (domingo) — SEAWORLD
 
-Plano de refeição incluso no seu Promo Park. Usem: duas refeições e lanches ao longo do dia.
+As montanhas-russas grandes e o simulador novo até as 15h30, os animais e o Orca Encounter à tarde, e o Natal à noite: árvores dançantes na lagoa, show no gelo e fogos no fechamento. O plano de refeição do ingresso cobre almoço, lanche e jantar.
 
-| Hora | O quê |
-|---|---|
-| **9h15** | Chegada |
-| **10h00** | **Mako** — a mais alta e rápida da Flórida. Hipercoaster, sensação de flutuar |
-| **10h35** | **Manta** — você voa deitado de bruços |
-| **11h10** | **Kraken** — coaster invertido, 7 inversões |
-| **11h45** | **Ice Breaker** — lançamentos para frente e para trás |
-| **12h15** | **Pipeline** — você anda em pé. Único no mundo nesse formato |
-| **12h50** | **Almoço** |
-| **13h50** | **Penguin Trek** — coaster com passagem pelo hábitat dos pinguins |
-| **14h30** | **Journey to Atlantis** — molha bastante |
-| **15h15** | **Orca Encounter** — o show principal |
-| **16h15** | **Shark Encounter** e **Antarctica** |
-| **17h15** | **Christmas Celebration** — neve artificial no Waterfront, corais |
-| **18h30** | **Jantar — Sharks Underwater Grill** — mesas coladas no tanque de tubarões. Reservem |
-| **19h45** | **Sea of Trees** — árvores luminosas sincronizadas sobre o lago |
+| Hora | O quê | Onde |
+|---|---|---|
+| **7h45** | Sair do hotel de carro — ~20 min, estacionamento US$ 37 | |
+| **8h15** | Portão | |
+| **9h00** | **Pipeline** — rope drop. De pé numa prancha, lançados a 96 km/h | Port of Entry |
+| **9h35** | **Ice Breaker** — lançamentos para frente e para trás | Sea of Power |
+| **10h05** | **Expedition Odyssey: Fire & Ice** — a maior fila do parque. Belugas e morsas no fim | Sea of Power |
+| **11h05** | **Mako** — a mais alta e rápida de Orlando | Sea of Mystery |
+| **11h40** | **Shark Encounter** — túnel dentro do tanque | Sea of Mystery |
+| **12h05** | **Penguin Trek** — termina no hábitat dos pinguins | Sea of Ice |
+| **12h55** | **Almoço — Voyager's Smokehouse** — plano de refeição | Sea of Delight |
+| **13h50** | **Kraken** — sem piso, sete inversões | Sea of Legends |
+| **14h20** | **Journey to Atlantis** — molha bastante | Sea of Legends |
+| **15h00** | **Manta** — de bruços, rasando a água | Sea of Shallows |
+| **15h35** | Tartarugas, golfinhos e arraias | Sea of Shallows |
+| **16h20** | Pausa e lanche — plano de refeição | Sea of Delight |
+| **17h10** | **Orca Encounter** — sessão das 17h30, a confirmar | Estádio do Orca |
+| **18h05** | **Jantar — Waterway Grill** — plano de refeição. É onde fica o Papai Noel | Sea of Fun |
+| **19h10** | **Winter Wonderland on Ice** — horário a confirmar | Bayside Stadium |
+| **20h00** | **Sea of Trees** e o Waterfront aceso | Sea of Delight |
+| **21h00** | **Holiday Reflections** — fogos no fechamento | Lagoa |
+| **21h15** | Saída — hotel por volta das 22h | |
+
+**O horário é previsão:** 9h às 21h, pelo calendário do Queue-Times. O site oficial ainda não publicou novembro. Se mudar, a manhã desloca; o Orca e a noite são fixos.
+
+**A ordem é um anel:** a Pipeline fica colada na entrada, e o dia dá a volta na lagoa sem voltar atrás. As três filas longas do parque — Expedition Odyssey (46 min de média), Penguin Trek (35) e Pipeline (27) — caem na manhã. Mako (13), Kraken (10) e Manta (19) ficam para a tarde.
+
+**Plano de refeição:** é o All-Day Dining Deal — uma refeição a cada 90 minutos (prato, acompanhamento ou sobremesa, e refrigerante) em oito restaurantes. Não vale no Sharks Underwater Grill: a mesma vista do tanque está no Shark Encounter.
+
+**Nada solto nas montanhas-russas:** armário de US$ 2 na entrada de cada uma, e detector de metal na entrada do parque. O SeaWorld não tem fila de single rider.
+
+**Christmas Celebration:** datas selecionadas; o Queue-Times marca 22/11 com o evento. Os horários dos shows de Natal só saem no app.
 
 ### Renúncias
-Infinity Falls (molha muito e anoitece frio), Sesame Street Land, Wild Arctic, Sea Lion High.
+Infinity Falls (molha demais e a noite esfria), Sesame Street Land, Sky Tower (pago à parte), O Wondrous Night (mesma faixa da noite que o show no gelo), Quick Queue (as filas longas caem no rope drop) e o Sharks Underwater Grill (fora do plano de refeição).
 
 ---
 
@@ -588,7 +604,6 @@ Scorpion, Sand Serpent, Congo River Rapids e Stanley Falls (molham, e vocês tê
 - [ ] Reservar o carro para **20 a 25/11**, em filial de bairro na 192
 
 **Prazo médio (outubro):**
-- [ ] Reservar **Sharks Underwater Grill** (SeaWorld, direto no site do parque)
 - [ ] Decidir sobre a Power-Up Band do Epic Universe
 
 - [ ] **Até 19/11 — reservar o MCO Reserve para a volta de 26/11.** É grátis, reserva-se até 7 dias antes, e garante uma faixa de horário no raio-x da TSA sem fila. Terminal C opera das 5h às 19h para voos entre 6h30 e 22h30, e a decolagem de vocês é ~12h. Uma reserva cobre os dois.
