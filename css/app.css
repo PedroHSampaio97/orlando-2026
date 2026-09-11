@@ -511,6 +511,17 @@ button.selo::after { content: ''; position: absolute; left: 0; right: 0; top: -6
 .sync-botoes { display: flex; flex-wrap: wrap; gap: 8px; flex: 1; }
 .sync-botoes .btn-secundario { flex: 1; min-width: 88px; }
 
+/* login da conta da viagem, no painel da nuvem */
+.nuvem-form { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.sync-campo {
+  flex: 1 1 200px; min-width: 0; min-height: 44px; padding: 0 14px;
+  border: 1px solid var(--borda-forte); border-radius: var(--r-botao);
+  background: var(--fundo); color: var(--texto); font: inherit; font-size: 15px;
+}
+.sync-campo::placeholder { color: var(--texto-fraco); }
+.nuvem-form .btn-secundario { flex: 1 1 100%; }
+@media (min-width: 560px) { .nuvem-form .btn-secundario { flex: 0 0 auto; } }
+
 /* ---------- modal ---------- */
 .modal {
   position: fixed; inset: 0; z-index: 80; background: rgba(12,16,20,.62);

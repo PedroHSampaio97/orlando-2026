@@ -1510,6 +1510,7 @@
 
   Fase3.pintarPendencias();
   Fase5.ligar();
+  Sync.ligar();
   Busca.ligar();
 
   const pedida = new URLSearchParams(location.search).get('tela');
