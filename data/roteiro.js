@@ -552,8 +552,8 @@ window.ROTEIRO = {
             texto: 'Sabão de lavanderia + moedas de 25 centavos',
             marca: 'Tide Pods, embalagem pequena', alternativaBarata: null,
             motivo: 'O Travelodge tem lavanderia de moeda, e são 16 dias. A moeda de 25 ' +
-                    'centavos (quarter) é a que a máquina usa. A segunda rodada tem bloco na ' +
-                    'manhã livre do dia 20.' },
+                    'centavos (quarter) é a que a máquina usa. A lavanderia, uma rodada só, tem ' +
+                    'bloco na manhã livre do dia 20.' },
           { id: 'ziploc', secao: 'Casa', essencial: false,
             texto: 'Sacos Ziploc grandes',
             marca: 'Ziploc, tamanho gallon', alternativaBarata: 'Great Value',
@@ -4071,7 +4071,11 @@ window.ROTEIRO = {
         { texto: 'Para a arena amanhã, só bolso ou clutch', critico: true,
           motivo: 'O Kia Center NÃO aceita bolsa: só uma clutch de 11 × 16 × 2,5 cm, menor que ' +
                   'a maioria das carteiras. A mochila e as sacolas do shopping ficam no hotel ' +
-                  'na volta das 14h15 — ou vão para um armário Binbox na Church St.' },
+                  'na volta das 14h40 — ou vão para um armário Binbox na Church St.' },
+        { texto: 'Pedido do Oakley pronto para retirada no app do Best Buy', critico: false,
+          motivo: 'Amanhã às 14h15, depois do almoço no Millenia, vocês passam no Best Buy só ' +
+                  'para retirar. Se o app não mostrar o pedido pronto, liguem para a loja, +1 ' +
+                  '407-248-2439, antes de sair do mall.' },
         { texto: 'Guardar as compras de hoje e esvaziar a mochila', critico: false,
           motivo: 'Sair com a mochila cheia do dia anterior é começar errado.' },
         { texto: 'Conferir a abertura e o fechamento do Epic no dia 19, no app da Universal',
@@ -4181,7 +4185,7 @@ window.ROTEIRO = {
         'A REGRA DA BOLSA É O DETALHE QUE ESTRAGA A NOITE SE FOR IGNORADO. Bolsa nenhuma ' +
         'passa. A exceção é uma clutch de 11 × 16 × 2,5 cm, e bolsas médicas ou de bebê até ' +
         '35 × 35 × 15 cm, essas passando por raio-X.\n\n' +
-        'É por isso que a volta ao hotel às 14h15 existe. Ela não é descanso: é a única ' +
+        'É por isso que a volta ao hotel às 14h40 existe. Ela não é descanso: é a única ' +
         'janela do dia para largar as compras do Millenia. Sem ela vocês chegam na catraca ' +
         'com sacola e têm de pagar armário.\n\n' +
         'PLANO B: os armários Binbox ficam do lado de fora, perto do Tavern on Church, na ' +
@@ -4220,7 +4224,7 @@ window.ROTEIRO = {
         gatilho: 'Vocês compraram o suficiente para valer a volta ao hotel.',
         passos: [
           'Macy’s primeiro, com passaporte, antes de qualquer compra.',
-          'Millenia até as 13h, almoço lá mesmo.',
+          'Millenia até as 13h, almoço lá mesmo e o Oakley no Best Buy às 14h15.',
           'Volta ao hotel só para largar sacola — e sair de novo às 16h.',
           'Barco-cisne às 16h30, enquanto ainda há sol.',
           'Pôr do sol na margem, jantar no Kres e cinco minutos a pé até a arena.',
@@ -4228,7 +4232,8 @@ window.ROTEIRO = {
       { letra: 'B', titulo: 'Vocês compraram pouco',
         gatilho: 'Cabe tudo numa sacola só, ou vocês não compraram nada.',
         passos: [
-          'PULEM A VOLTA AO HOTEL. Millenia → centro são uns 13 minutos sem trânsito.',
+          'O Best Buy continua às 14h15, e de lá PULEM A VOLTA AO HOTEL: do Millenia ao ' +
+          'centro são uns 13 minutos sem trânsito.',
           'Ganham duas horas no Lake Eola: dá para andar a volta inteira de 1,4 km em torno ' +
           'do lago, e ainda tomar alguma coisa no Relax Grill.',
           'A sacola vai para um armário Binbox na Church St. antes de entrar na arena.',
@@ -4293,6 +4298,19 @@ window.ROTEIRO = {
         localId: 'millenia', acesso: [], duracaoMin: 75 },
 
       { id: 'b-1811-1415', hora: '14:15', ancora: 'fixo', tipo: 'tarefa',
+        titulo: 'Best Buy do Millenia — retirar o Oakley',
+        descricao: 'Só a retirada do pedido feito no app. Menos de 1 km do mall',
+        contexto:
+          'O Oakley Meta Vanguard já foi comprado no app do Best Buy, com retirada nesta ' +
+          'loja — está nas pendências. Aqui é só mostrar o pedido no balcão de retirada.\n\n' +
+          'FICA A MENOS DE 1 KM DO MALL: uns 10 minutos a pé, ou 3 minutos de Uber se as ' +
+          'sacolas pesarem. Na quarta abre das 10h às 21h. Telefone +1 407-248-2439.\n\n' +
+          'O BEST BUY SEGURA O PEDIDO POR 5 DIAS e depois cancela. Se não houver óculos para ' +
+          'retirar, o plano B do dia 25 assume.',
+        endereco: '4155 Millenia Blvd', localId: 'best-buy', acesso: [], duracaoMin: 25,
+        pesquisa: '2026-09-11' },
+
+      { id: 'b-1811-1440', hora: '14:40', ancora: 'fixo', tipo: 'tarefa',
         titulo: 'Voltar ao hotel — deixar as compras',
         descricao: 'NÃO é descanso. É a única janela de largar sacola antes da arena',
         contexto:
@@ -4304,7 +4322,7 @@ window.ROTEIRO = {
           'DEIXEM A MOCHILA DO EPIC PRONTA AGORA. Amanhã de manhã vocês não vão ter tempo, e ' +
           'hoje à noite vocês vão chegar mortos.\n\n' +
           'SE VOCÊS COMPRARAM POUCO, este bloco não precisa existir: vejam o plano B.',
-        localId: 'hotel-travelodge', acesso: [], duracaoMin: 105 },
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 80 },
 
       { id: 'b-1811-1600', hora: '16:00', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Sair para o centro',
@@ -4888,8 +4906,8 @@ window.ROTEIRO = {
           motivo: 'Carteira de motorista, PID, passaporte e cartão de CRÉDITO internacional, ' +
                   'todos em nome do condutor. A retirada é às 15h, na Avis do Old Town, e sem ' +
                   'um deles não sai carro.' },
-        { texto: 'Separar a roupa suja da semana', critico: false,
-          motivo: 'Amanhã às 10h é a segunda rodada de lavanderia, com a roupa dos dias 15 a 20.' },
+        { texto: 'Separar a roupa suja', critico: false,
+          motivo: 'Amanhã às 10h é a lavanderia, a única rodada da viagem.' },
         { texto: 'Guardar as compras e esvaziar a mochila do parque', critico: false,
           motivo: 'Amanhã é dia de Old Town e de carro. A mochila de parque fica.' },
         { texto: 'Celular e power bank carregando', critico: false,
@@ -5013,7 +5031,7 @@ window.ROTEIRO = {
         gatilho: 'O Epic de ontem correu bem e o carro está reservado para as 15h.',
         passos: [
           'Dormir sem alarme. Café da manhã no IHOP da 5184 W Irlo Bronson.',
-          'Lavanderia às 10h: a roupa dos dias 15 a 20.',
+          'Lavanderia às 10h, a única rodada da viagem.',
           'Almoço no El Cilantrillo, dentro do Old Town, e uma volta por lá até o carro.',
           'Carro às 15h na Avis do Old Town e descanso no hotel.',
           'Às 17h20, de volta ao Old Town, já de carro. Jantar no World Food Trucks, lugar na ' +
@@ -5067,12 +5085,13 @@ window.ROTEIRO = {
         pesquisa: '2026-09-11' },
 
       { id: 'b-2011-1000', hora: '10:00', ancora: 'fixo', tipo: 'tarefa',
-        titulo: 'Lavanderia — segunda rodada',
-        descricao: 'Roupa dos dias 15 a 20. Sabão e moedas de 25 centavos vêm da lista do Walmart',
+        titulo: 'Lavanderia',
+        descricao: 'A única rodada da viagem. Sabão e moedas de 25 centavos vêm da lista do Walmart',
         contexto:
           'O Travelodge tem lavanderia de moeda, segundo os sites de reserva. Lavar e secar ' +
           'leva perto de duas horas — é estimativa, não medida.\n\n' +
-          'É a última rodada antes da volta: o que sair limpo daqui cobre os dias 21 a 26.\n\n' +
+          'É a única rodada da viagem, no meio do caminho: o que sair limpo daqui cobre os ' +
+          'dias 21 a 26.\n\n' +
           'Se a máquina do hotel não funcionar, procurem uma lavanderia self-service na 192.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 150 },
 
@@ -5196,10 +5215,9 @@ window.ROTEIRO = {
                 'Spot é grátis; cada brinquedo é pago à parte.',
         pesquisa: '2026-09-11' },
       { nome: 'Boggy Creek Airboat Adventures', quando: 'descartado', custo: 'US$ 108 a 122 no casal',
-        motivo: 'DESCARTADO em 11/09. Passeio de aerobarco de uma hora, a 38 minutos do hotel. ' +
-                'Não é objetivo da viagem, novembro é a pior época para ver bicho de manhã, e ' +
-                'ele obrigaria a pegar o carro cedo, com uma diária a mais. A manhã livre rende ' +
-                'mais.',
+        motivo: 'Passeio de aerobarco de uma hora, a 38 minutos do hotel. Fica de fora: não é ' +
+                'objetivo da viagem, novembro é a pior época para ver bicho de manhã, e ele ' +
+                'obrigaria a pegar o carro cedo, com uma diária a mais. A manhã livre rende mais.',
         pesquisa: '2026-09-11' },
     ],
     prepararAmanha: {
@@ -5223,7 +5241,7 @@ window.ROTEIRO = {
     },
     ficha: {
       multiPass: null, singlePass: null, expressPass: null,
-      custoEstimadoCasal: { min: 0, max: 0, moeda: 'USD' },
+      custoEstimadoCasal: { min: 0, max: 40, moeda: 'USD' },
       extras: [
         { nome: 'e-Toll Unlimited da Avis — recusar',
           custo: { min: 0, max: 0, moeda: 'USD' },
@@ -5239,8 +5257,7 @@ window.ROTEIRO = {
     renuncias: {
       gerais: [
         { nome: 'Kissimmee Lakefront Park',
-          motivo: 'Estava no dia por causa do aerobarco. Sem carro de manhã, seriam 16 minutos ' +
-                  'de Uber em cada sentido para ver um lago.' },
+          motivo: 'Sem carro de manhã, são 16 minutos de Uber em cada sentido para ver um lago.' },
       ],
       idioma: null,
       fechado: [],
@@ -5443,7 +5460,7 @@ window.ROTEIRO = {
         descricao: 'Pub irlandês com mesa e garçom, a 11 minutos a pé da arena. Reservem',
         contexto:
           'Pub e restaurante irlandês no centro: fish and chips, shepherd’s pie, cottage pie, ' +
-          'Irish stew e sanduíches. Outro estilo do jantar do dia 18, que foi churrascaria.\n\n' +
+          'Irish stew e sanduíches. Um estilo bem diferente da steakhouse do dia 18.\n\n' +
           'RESERVA POR TELEFONE: ele não está no OpenTable. +1 407-481-2928. Está no ' +
           'checklist. Avisem na chegada que vocês têm jogo às 19h.\n\n' +
           'SEM MESA: o Underground Public House, gastropub britânico no 19 S Orange Ave, a um ' +
@@ -5518,6 +5535,12 @@ window.ROTEIRO = {
         { texto: 'Conferir o horário de abertura do SeaWorld', critico: true,
           motivo: 'Amanhã assume abertura às 9h, pela previsão do Queue-Times. Se o oficial ' +
                   'sair diferente, a manhã inteira desloca.' },
+        { texto: 'Ingresso do SeaWorld e o plano de refeição abertos nos dois celulares',
+          critico: true,
+          motivo: 'O portão pede o ingresso, e o almoço, o lanche e o jantar saem do plano de ' +
+                  'refeição. Abram no hotel, com o Wi-Fi, e não na fila da catraca.' },
+        { texto: 'Estacionamento do SeaWorld pago antes, pelo site', critico: false,
+          motivo: 'US$ 37 por carro. Pago antes, a entrada do estacionamento anda mais rápido.' },
         { texto: 'Roupa que pode molhar e Ziploc para o celular', critico: false,
           motivo: 'O Journey to Atlantis molha de verdade.' },
       ],
@@ -5886,7 +5909,7 @@ window.ROTEIRO = {
         motivo: 'É onde ele recebe visitas no Natal, e é o restaurante do jantar.',
         pesquisa: '2026-09-11' },
       { nome: 'Sharks Underwater Grill', quando: 'descartado', custo: 'fora do plano de refeição',
-        motivo: 'DESCARTADO em 11/09. Mesa colada no tanque de tubarões, mas paga à parte — o ' +
+        motivo: 'Fica de fora. Mesa colada no tanque de tubarões, mas paga à parte — o ' +
                 'filé custa uns US$ 49 — enquanto o plano de refeição já cobre o jantar. A mesma ' +
                 'vista está no Shark Encounter.',
         pesquisa: '2026-09-11' },
@@ -5894,8 +5917,8 @@ window.ROTEIRO = {
     prepararAmanha: {
       paraODia: '2026-11-23',
       titulo: 'Islands of Adventure · saída 7h45',
-      aviso: 'Vocês chegam do SeaWorld por volta das 22h, e amanhã é o dia com mais locker ' +
-             'obrigatório da viagem. A mochila sai mínima.',
+      aviso: 'Vocês chegam do SeaWorld por volta das 22h, e amanhã é o dia com mais detector ' +
+             'de metal da viagem. A mochila sai mínima.',
       itens: [
         { texto: 'Alarme para 6h45 nos dois celulares', critico: true,
           motivo: 'Saída 7h45 para o rope drop do Hagrid’s. Depois de uma noite que termina às ' +
@@ -5963,12 +5986,12 @@ window.ROTEIRO = {
       'Hagrid’s na abertura, que é a única janela abaixo de uma hora, e depois uma volta ' +
       'inteira no anel do parque sem voltar atrás: Marvel, Kong, Jurassic Park e a ' +
       'VelociCoaster por single rider. À noite, Hogwarts Express, o castelo iluminado e o ' +
-      'jantar no Mythos, no último Natal dele.',
+      'jantar no Mythos, provavelmente no último Natal dele.',
     avisos: [
       'O HAGRID’S NÃO ACEITA EXPRESS DESDE 1º DE JULHO DE 2026, e a janela barata dele é a ' +
       'abertura. Portão às 8h35 e direto para Hogsmeade, sem parar em nada.',
-      'Hoje é o dia com mais locker obrigatório da viagem, e Hulk e VelociCoaster têm ' +
-      'detector de metal. Levem o mínimo.',
+      'Hoje é o dia com mais detector de metal da viagem: Hulk e VelociCoaster, onde não ' +
+      'passa nem celular. E quatro atrações exigem locker. Levem o mínimo.',
     ],
     notas: [
       { tipo: 'atencao', texto:
@@ -5992,7 +6015,7 @@ window.ROTEIRO = {
         'O Jurassic Park River Adventure passou dez meses em reforma e reabre em 19 ou 20/11. ' +
         'Se atrasar, vale o plano B.\n\n' +
         'A Lost Continent está sendo demolida em fases. O prédio do Poseidon’s Fury já foi ao ' +
-        'chão, e o Mythos continua aberto até 2027.\n\n' +
+        'chão. O Mythos continua aberto e, pela Universal, fecha em 2027, ainda sem data.\n\n' +
         'O Thunder Falls Terrace, no Jurassic Park, fechou em julho e vira o novo restaurante ' +
         'com mesa do parque em 2027.',
         pesquisa: '2026-09-11' },
@@ -6185,19 +6208,19 @@ window.ROTEIRO = {
           'Projeções e efeitos no castelo de Hogwarts com cenas de Natal dos filmes, depois ' +
           'que escurece. Repete a cada vinte minutos até o parque fechar — não precisa pegar ' +
           'na hora exata.\n\n' +
-          'É a Hogsmeade decorada à noite, a parte do Natal que o dia 14 deixou para hoje — ' +
-          'numa segunda-feira, não num sábado.',
+          'É a segunda vez da projeção: a primeira foi no dia 14, na noite de estreia da ' +
+          'temporada, num sábado. Hoje é segunda-feira, e dá para ver com calma.',
         areaParque: 'Hogsmeade', acesso: [], duracaoMin: 30, pesquisa: '2026-09-11' },
 
       { id: 'b-2311-1915', hora: '19:15', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Mythos',
-        descricao: 'O melhor restaurante de parque temático, no último Natal dele',
+        descricao: 'O melhor restaurante de parque temático, provavelmente no último Natal dele',
         contexto:
           'Mesa com garçom dentro de uma caverna cenográfica, com vista para a lagoa. Ganhou ' +
           'dez vezes o prêmio de melhor restaurante de parque temático do Theme Park Insider. ' +
           'Pratos de US$ 26 a 42.\n\n' +
-          'É O ÚLTIMO NATAL DELE: a Lost Continent está sendo demolida em fases, e o Mythos ' +
-          'fecha em 2027.\n\n' +
+          'PROVAVELMENTE É O ÚLTIMO NATAL DELE: a Lost Continent está sendo demolida em fases, ' +
+          'e a Universal diz que o Mythos fecha em 2027, ainda sem data.\n\n' +
           'RESERVADO: 19h15, duas pessoas, confirmação 639247495205005056. Cheguem às 19h10 — ' +
           'a mesa é segurada por 15 minutos depois do horário. É mesa com garçom: 18 a 20% de ' +
           'gorjeta sobre o valor sem imposto.',
@@ -6223,7 +6246,8 @@ window.ROTEIRO = {
         motivo: 'A ida e a volta têm filmes diferentes.',
         pesquisa: '2026-09-11' },
       { nome: 'Mythos', quando: 'hoje', custo: 'US$ 26 a 42 o prato',
-        motivo: 'Dez vezes eleito o melhor restaurante de parque temático, e fecha em 2027.',
+        motivo: 'Dez vezes eleito o melhor restaurante de parque temático. A Universal diz que ' +
+                'ele fecha em 2027.',
         pesquisa: '2026-09-11' },
     ],
     prepararAmanha: {
@@ -6240,6 +6264,11 @@ window.ROTEIRO = {
                   'a saída muda junto.' },
         { texto: 'Ingresso do Busch Gardens e o plano de refeição no celular', critico: true,
           motivo: 'É o mesmo ingresso do SeaWorld, com o plano de refeição incluso.' },
+        { texto: 'Combustível para 218 km: abaixo da metade do tanque, abasteçam na volta',
+          critico: false,
+          motivo: 'Amanhã são 109 km até Tampa e 109 de volta, com a estrada às 7h30 e sem ' +
+                  'tempo para posto. No posto, paguem dentro da loja: a bomba pede o ZIP code ' +
+                  'do cartão.' },
       ],
     },
     ficha: {
@@ -6314,8 +6343,9 @@ window.ROTEIRO = {
         pesquisa: '2026-09-11' },
 
       { tipo: 'info', texto:
-        'AS FILAS DO BUSCH SÃO CURTAS. A média de 2026 vai de 33 minutos no Cheetah Hunt a 10 ' +
-        'na SheiKra — por isso não há Quick Queue. A previsão de lotação para 24/11 é de 66%, ' +
+        'AS FILAS DO BUSCH SÃO CURTAS. A média de 2026 vai de 33 minutos no Cheetah Hunt a 7 ' +
+        'na Falcon’s Fury — por isso não há Quick Queue. A previsão de lotação para 24/11 é ' +
+        'de 66%, ' +
         'alta para uma terça, por ser semana de Thanksgiving.\n\n' +
         'O QUE FECHOU: o Kumba parou em 02/08/2026, e o Kumba’s Revenge, que vai no lugar, não ' +
         'tem data. A Stanley Falls fechou em setembro de 2025 e a Scorpion em 2024.',
@@ -6506,13 +6536,15 @@ window.ROTEIRO = {
 
       { id: 'b-2411-1720', hora: '17:20', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Dragon Fire Grill & Pub',
-        descricao: 'Mesa com garçom, e dentro do plano de refeição',
+        descricao: 'Salão coberto, de balcão. Dentro do plano de refeição',
         contexto:
-          'Restaurante com mesa e bar, com comida de pub e cardápio variado. É o único com mesa ' +
-          'entre os do plano de refeição — a terceira refeição do dia.\n\n' +
+          'Salão grande em estilo market: cada um pega o prato nos balcões — frango, ' +
+          'hambúrguer e cozinha asiática — e senta onde quiser. É a terceira refeição do ' +
+          'plano no dia. O pub do mesmo salão tem cerveja artesanal e drinques, pagos à ' +
+          'parte.\n\n' +
           'Fica em Pantopia, a nove minutos do Moroccan Palace e ao lado da planície do ' +
           'Serengeti, onde são as luzes depois.\n\n' +
-          'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
+          'É balcão: não leva gorjeta.',
         restauranteId: 'r-dragonfire', areaParque: 'Pantopia', acesso: [], duracaoMin: 60,
         pesquisa: '2026-09-11' },
 
@@ -6660,8 +6692,8 @@ window.ROTEIRO = {
         'AS COMPRAS DO DIA SÃO AS DA LISTA: vitaminas e cosméticos na Walgreens, e o garimpo do ' +
         'Ross e do Marshalls. O outlet do Vineland fica ao lado do Marshalls, com horário ' +
         'estendido na semana da Black Friday.\n\n' +
-        'A BLACK FRIDAY cai em 27/11, dois dias depois da volta — mas as promoções da semana ' +
-        'começam antes.',
+        'A BLACK FRIDAY cai em 27/11, o dia em que vocês pousam no Rio — mas as promoções da ' +
+        'semana começam antes.',
         pesquisa: '2026-09-11' },
 
       { tipo: 'info', texto:
@@ -6672,18 +6704,19 @@ window.ROTEIRO = {
     ],
     planos: [
       { letra: 'A', titulo: 'O dia como está escrito',
-        gatilho: 'O Oakley já foi comprado no dia 18 e a reserva do Homecomin’ saiu.',
+        gatilho: 'O Oakley foi retirado no dia 18 e a reserva do Homecomin’ saiu.',
         passos: [
           'Café do hotel às 9h, outlet do Vineland às 10h15 e o Marshalls ao lado.',
           'Almoço no Sofrito, Ross na Vineland Rd, e Walgreens e posto antes da Avis.',
           'Carro devolvido às 15h, malas no hotel e descanso.',
           'Uber às 17h45: Christmas Tree Stroll, Homecomin’ às 19h30 e World of Disney.',
         ] },
-      { letra: 'B', titulo: 'O Oakley não saiu no dia 18',
-        gatilho: 'Os óculos ficaram para hoje.',
+      { letra: 'B', titulo: 'O Oakley não foi retirado no dia 18',
+        gatilho: 'O pedido não estava pronto, ou a loja não tinha os óculos.',
         passos: [
           'Reservem a retirada no app do Best Buy antes de sair do hotel.',
-          'Best Buy do Millenia às 10h, no lugar do outlet: uns 30 minutos de carro.',
+          'Best Buy do Millenia no lugar do outlet: saída às 9h45, uns 30 minutos de carro, ' +
+          'e a loja abre às 10h.',
           'Do Millenia, sigam para o Marshalls do Vineland. O resto do dia não muda.',
         ] },
       { letra: 'B2', titulo: 'Sem mesa no Homecomin’',
@@ -6754,11 +6787,11 @@ window.ROTEIRO = {
 
       { id: 'b-2511-1335', hora: '13:35', ancora: 'fixo', tipo: 'compras',
         titulo: 'Ross — Vineland Rd',
-        descricao: 'Ao lado do Walmart do dia 10, a 1,5 km do hotel',
+        descricao: 'Ao lado do Publix, a 600 m do Walmart do dia 10',
         contexto:
           'Ponta de estoque de roupa, casa e beleza, na 3231 Vineland Rd — o mesmo centro do ' +
-          'Walmart e do Publix do dia 10.',
-        endereco: '3231 Vineland Rd', localId: 'walmart-vineland', acesso: [], duracaoMin: 35,
+          'Publix, a 600 metros do Walmart do dia 10.',
+        endereco: '3231 Vineland Rd', localId: 'publix-vineland', acesso: [], duracaoMin: 35,
         pesquisa: '2026-09-11' },
 
       { id: 'b-2511-1415', hora: '14:15', ancora: 'fixo', tipo: 'tarefa',
@@ -6888,8 +6921,9 @@ window.ROTEIRO = {
     },
     renuncias: {
       gerais: [
-        { nome: 'Best Buy', motivo: 'O Oakley é do dia 18. O Best Buy só entra no plano B.' },
-        { nome: 'Black Friday', motivo: 'Cai em 27/11, dois dias depois da volta.' },
+        { nome: 'Best Buy',
+          motivo: 'A retirada do Oakley é no dia 18. Aqui o Best Buy só entra no plano B.' },
+        { nome: 'Black Friday', motivo: 'Cai em 27/11, o dia seguinte ao voo de volta.' },
       ],
       idioma: null,
       fechado: [],
@@ -6962,10 +6996,13 @@ window.ROTEIRO = {
           'salvo offline, tem o localizador.',
         ] },
       { letra: 'C', titulo: 'Uber demorando no feriado',
-        gatilho: 'Às 10h25 não aparece motorista.',
+        gatilho: 'Às 10h15, quando vocês pedem a corrida, o app não acha motorista.',
         passos: [
-          'Peçam a corrida às 10h15, não às 10h25.',
-          'Se não aparecer em 10 minutos, tentem o Lyft. A recepção do hotel também chama táxi.',
+          'Peçam a corrida às 10h15, dez minutos antes da saída: é Thanksgiving.',
+          'Se em 10 minutos não aparecer motorista, tentem o Lyft. A recepção do hotel também ' +
+          'chama táxi.',
+          'O balcão da Avianca fecha de 45 a 60 minutos antes do voo: saindo do hotel até ' +
+          'as 11h30, ainda dá.',
         ] },
     ],
     blocos: [
@@ -7237,8 +7274,8 @@ window.ROTEIRO = {
       statusPadrao: 'confirmado', confirmacaoPadrao: '639247495205005056',
       nota: 'RESERVADO em 11/09 — confirmação 639247495205005056, duas pessoas, 19h15. ' +
             'Cheguem 5 minutos antes: a mesa é segurada por 15 minutos. Dez vezes eleito o ' +
-            'melhor restaurante de parque temático. Pratos de US$ 26 a 42. Fecha em 2027, com ' +
-            'a demolição da Lost Continent.' },
+            'melhor restaurante de parque temático. Pratos de US$ 26 a 42. A Universal diz que ' +
+            'ele fecha em 2027, com a demolição da Lost Continent, ainda sem data.' },
 
     { id: 'r-sofrito', nome: 'Sofrito Latin Cafe', data: '2026-11-25', hora: '12:35',
       refeicao: 'almoco', local: 'Lake Buena Vista · 8607 Palm Pkwy', alternativas: [],
@@ -7330,7 +7367,8 @@ window.ROTEIRO = {
       refeicao: 'jantar', local: 'Busch Gardens Tampa · Pantopia', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Plano de refeição (All-Day Dining Deal)', blocoId: 'b-2411-1720',
-      nota: 'Mesa com garçom e bar, dentro do plano de refeição.' },
+      nota: 'Salão em estilo market, de balcão: frango, hambúrguer e cozinha asiática. O pub ' +
+            'tem cerveja artesanal e drinques, pagos à parte. Coberto pelo plano de refeição.' },
   ],
 
   /* ---------------------------------------------------------------------------
@@ -7746,6 +7784,20 @@ window.ROTEIRO = {
         'do dia.',
       restauranteIds: [] },
 
+    { id: 'ck-oakley', dataAlvo: '2026-11-14', hora: null, fuso: null,
+      janelaReserva: false, critico: false,
+      texto: 'Comprar o Oakley Meta Vanguard no app do Best Buy, com retirada no Best Buy do ' +
+             'Millenia (4155 Millenia Blvd)',
+      nota:
+        'A retirada é no dia 18, às 14h15, logo depois do almoço no Millenia.\n\n' +
+        'POR QUE HOJE: o Best Buy segura o pedido por 5 dias e depois cancela e devolve o ' +
+        'dinheiro. Comprado no dia 14, ele espera a retirada do dia 18 — e sobra tempo se a ' +
+        'loja não tiver estoque e o app oferecer retirada em data mais adiante.\n\n' +
+        'ANTES DE PAGAR, confiram no app que a loja do Millenia tem a cor e a lente ' +
+        'escolhidas. Se a retirada do dia 18 falhar, o plano B do dia 25 assume.',
+      pesquisa: '2026-09-11',
+      restauranteIds: [] },
+
     { id: 'ck-horarios-mk', dataAlvo: '2026-09-13', dataEstimada: true,
       motivoData: 'A Disney publica com 60 dias de antecedência, e 60 dias antes de 11/11 é 12/09',
       hora: null, fuso: null, janelaReserva: false, critico: true,
@@ -7926,7 +7978,8 @@ window.ROTEIRO = {
       lat: 28.4914395, lng: -81.431323, verificado: true, fonteCoord: 'osm', endereco: '4155 Millenia Blvd',
       doHotel: { tempoMin: 30, tempoFonte: 'estimado',
                  uberUSD: { min: 28, max: 40 }, uberFonte: 'estimado' },
-      nota: 'Plano B do dia 25, só se o Oakley não sair no dia 18. Abre às 10h.' },
+      nota: 'Retirada do Oakley no dia 18, às 14h15, a menos de 1 km do Millenia. Na quarta ' +
+            'abre das 10h às 21h. Se a retirada falhar, é também o plano B do dia 25.' },
 
     { id: 'lake-eola', nome: 'Lake Eola Park', tipo: 'livre',
       lat: 28.54361111, lng: -81.37277778, verificado: true, fonteCoord: 'wikipedia', endereco: null,

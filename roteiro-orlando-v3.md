@@ -506,7 +506,7 @@ Infinity Falls (molha demais e a noite esfria), Sesame Street Land, Sky Tower (p
 
 # ⚡ 23/11 (segunda) — ISLANDS OF ADVENTURE
 
-Hagrid's na abertura, que é a única janela abaixo de uma hora, e depois uma volta inteira no anel do parque sem voltar atrás. À noite, Hogwarts Express, o castelo iluminado e o jantar no Mythos, no último Natal dele.
+Hagrid's na abertura, que é a única janela abaixo de uma hora, e depois uma volta inteira no anel do parque sem voltar atrás. À noite, Hogwarts Express, o castelo iluminado e o jantar no Mythos, provavelmente no último Natal dele.
 
 | Hora | O quê | Onde |
 |---|---|---|
@@ -522,7 +522,7 @@ Hagrid's na abertura, que é a única janela abaixo de uma hora, e depois uma vo
 | **15h35** | **Jurassic Park River Adventure** — molha. Reaberto depois da reforma | Jurassic Park |
 | **16h20** | **VelociCoaster** — por single rider | Jurassic Park |
 | **17h20** | **Hogwarts Express** — ida e volta, filmes diferentes. Precisa park-to-park | Hogsmeade |
-| **18h35** | **Hogsmeade à noite · projeção no castelo** — a cada 20 min | Hogsmeade |
+| **18h35** | **Hogsmeade à noite · projeção no castelo** — a segunda vez, agora numa segunda-feira. A cada 20 min | Hogsmeade |
 | **19h15** | **Jantar — Mythos** — reservado, pratos de US$ 26 a 42. Cheguem às 19h10 | Lost Continent |
 | **20h30** | Saída — hotel por volta das 21h30 | |
 
@@ -530,7 +530,7 @@ Hagrid's na abertura, que é a única janela abaixo de uma hora, e depois uma vo
 
 **Por que a VelociCoaster à tarde:** ela fica entre 67 e 102 minutos o dia inteiro — não tem hora boa. Por single rider, a hora deixa de importar.
 
-**O que mudou no parque:** o Jurassic Park River Adventure reabre em 19–20/11 depois de dez meses de reforma. A Lost Continent está sendo demolida em fases, e o Mythos fecha em 2027. O Thunder Falls Terrace fechou em julho.
+**O que mudou no parque:** o Jurassic Park River Adventure reabre em 19–20/11 depois de dez meses de reforma. A Lost Continent está sendo demolida em fases, e a Universal diz que o Mythos fecha em 2027, ainda sem data. O Thunder Falls Terrace fechou em julho.
 
 **Horário:** o de 23/11 ainda não saiu. A referência é 9h; o fechamento tende a 20–21h na semana de Thanksgiving. Se fechar às 20h, remarquem o Mythos para 18h35 e a projeção fica para depois do jantar.
 
@@ -558,13 +558,13 @@ Só de carro, 1h25 de cada lado. Cinco montanhas-russas e a torre de queda até 
 | **14h55** | Serengeti Express — o trem pela planície dos animais | Stanleyville |
 | **15h40** | Pausa e lanche — plano de refeição | Stanleyville |
 | **16h20** | **Christmas on Ice** — horário a confirmar | Morocco |
-| **17h20** | **Jantar — Dragon Fire Grill & Pub** — mesa com garçom, plano de refeição | Pantopia |
+| **17h20** | **Jantar — Dragon Fire Grill & Pub** — salão de balcão, plano de refeição | Pantopia |
 | **18h25** | **Show de luzes no Serengeti** e o parque aceso | Pantopia |
 | **19h10** | **Cheetah Hunt à noite** | Edge of Africa |
 | **19h55** | Iron Gwazi à noite — opcional | Morocco |
 | **20h30** | Estrada de volta — hotel por volta das 22h15 | |
 
-**As filas são curtas:** a média de 2026 vai de 33 minutos no Cheetah Hunt a 10 na SheiKra. Sem Quick Queue.
+**As filas são curtas:** a média de 2026 vai de 33 minutos no Cheetah Hunt a 7 na Falcon's Fury. Sem Quick Queue.
 
 **Nada solto:** nove atrações proíbem objeto solto, e o armário avulso custa US$ 4 pelas primeiras duas horas. Levem o mínimo; o resto fica no carro.
 

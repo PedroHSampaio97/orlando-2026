@@ -121,7 +121,8 @@ Dia de cidade, não de parque. É também **a véspera do Epic Universe** — a 
 | **10h30** | Sair para o Millenia | ~25 min. Uber US$ 28–40 |
 | **11h00** | **The Mall at Millenia** — 4200 Conroy Rd | **Abre 11h.** Primeira parada: balcão da Macy's, **com passaporte** |
 | **13h00** | **Almoço no mall** | *The Cheesecake Factory* na entrada principal |
-| **14h15** | **Voltar ao hotel — deixar as compras** | **Não é descanso.** É a única janela de largar sacola antes da arena |
+| **14h15** | **Best Buy do Millenia — retirar o Oakley** — 4155 Millenia Blvd | Pedido feito no app. Menos de 1 km do mall |
+| **14h40** | **Voltar ao hotel — deixar as compras** | **Não é descanso.** É a única janela de largar sacola antes da arena |
 | **16h00** | Sair para o centro | ~30 min |
 | **16h30** | **Lake Eola — barco-cisne** | US$ 15 / 30 min, para dois. Ter–dom, 10h–19h. Sem reserva |
 | **17h15** | **Pôr do sol na margem** | A volta do lago tem 1,4 km. Sol cai ~17h30 |
@@ -129,6 +130,8 @@ Dia de cidade, não de parque. É também **a véspera do Epic Universe** — a 
 | **18h50** | **Kia Center** — portões | Clutch de 11 cm, ou nada |
 | **19h00** | **Orlando Magic × Philadelphia 76ers** | ⟵ **referência do dia** |
 | **21h30** | Saída | Andem dois quarteirões antes de chamar o Uber |
+
+**O Oakley:** o Oakley Meta Vanguard é comprado no app do Best Buy no dia 14, com retirada nesta loja — está nas pendências. O Best Buy segura o pedido por 5 dias; se a retirada falhar, vale o plano B do dia 25.
 
 ### ⚠️ A regra de bagagem do Kia Center
 
@@ -142,7 +145,7 @@ Se chegarem com sacola, existem os armários **Binbox**, do lado de fora, perto 
 
 Millenia → Lake Eola são **uns 13 minutos** sem trânsito. O hotel é a 25–30 min dos dois. A ida ao hotel custa quase uma hora de carro e duas corridas — para terminar a treze minutos de onde vocês já estavam.
 
-Ela fica **pelo motivo da bolsa, não por geografia**. Se as compras couberem numa sacola só, pulem: Millenia → centro direto, e a sacola vai para um Binbox. Aí o jantar deixa de ser apertado e dá para sentar às 17h30.
+Ela fica **pelo motivo da bolsa, não por geografia**. Se as compras couberem numa sacola só, pulem: do Best Buy, direto para o centro, e a sacola vai para um Binbox. Aí o jantar deixa de ser apertado e dá para sentar às 17h30.
 
 ### Dinheiro de graça
 
@@ -165,7 +168,7 @@ O único respiro entre o Epic e cinco dias pesados seguidos. Café sem pressa no
 | Hora | O quê | Notas |
 |---|---|---|
 | **8h30** | **Café da manhã — IHOP**, 5184 W Irlo Bronson | Sem alarme. A 750 m do hotel, aberto desde as 6h. Ou o do hotel, incluso |
-| **10h00** | **Lavanderia** — segunda rodada | Roupa dos dias 15 a 20. Sabão e moedas da lista do Walmart |
+| **10h00** | **Lavanderia** | A única rodada da viagem. Sabão e moedas da lista do Walmart |
 | **12h45** | **Almoço — El Cilantrillo**, dentro do Old Town | Porto-riquenho de mesa: mofongo, pernil. Pratos perto de US$ 20 |
 | **14h00** | **Old Town de dia** · Mine Blower opcional | Montanha-russa de madeira do Fun Spot, ao lado. Paga por brinquedo |
 | **15h00** | **Retirar o carro — Avis do Old Town** | Suíte 434, das 7h às 19h. **Recusem o e-Toll Unlimited** |
@@ -184,7 +187,7 @@ O único respiro entre o Epic e cinco dias pesados seguidos. Café sem pressa no
 
 **Rede de segurança do Epic:** se o dia 19 der muito errado, esta manhã é o lugar mais barato para voltar ao Epic — se o ingresso tiver um dia sobrando com Epic, o que ainda depende da agência.
 
-**Descartado:** o aerobarco do Boggy Creek — US$ 108 a 122 no casal, 38 minutos de estrada, e novembro é a pior época para ver bicho de manhã.
+**Fica de fora:** o aerobarco do Boggy Creek — US$ 108 a 122 no casal, 38 minutos de estrada, e novembro é a pior época para ver bicho de manhã.
 
 ---
 
@@ -231,7 +234,7 @@ A última noite. De manhã, o outlet do Vineland, Marshalls, Ross e Walgreens. O
 | **10h15** | **Orlando Vineland Premium Outlets** — 8200 Vineland Ave | Abre às 10h. Horário estendido na semana da Black Friday |
 | **11h50** | **Marshalls** — Vineland Pointe, 7655 Lake St | Ao lado do outlet |
 | **12h35** | Almoço — **Sofrito Latin Cafe**, 8607 Palm Pkwy | Cozinha latina de balcão, US$ 3–15 |
-| **13h35** | **Ross** — 3231 Vineland Rd | Ao lado do Walmart do dia 10 |
+| **13h35** | **Ross** — 3231 Vineland Rd | Ao lado do Publix, a 600 m do Walmart do dia 10 |
 | **14h15** | **Walgreens** (5935 W Irlo Bronson) e **posto** (7-Eleven, 5880 W Irlo Bronson) | Vitaminas e cosméticos. No posto, paguem dentro da loja |
 | **15h00** | **Devolver o carro — Avis do Old Town** | Tanque cheio. Tolerância de 29 min |
 | **15h15** | Uber até o hotel · **malas** | Pesem tudo: 23 kg por mala |
@@ -246,7 +249,7 @@ A última noite. De manhã, o outlet do Vineland, Marshalls, Ross e Walgreens. O
 
 **O carro:** retirado às 15h do dia 20, fecha cinco diárias certas às 15h de hoje. A Avis tolera 29 minutos; depois disso cobra fração de diária.
 
-**Se o Oakley não saiu no dia 18:** Best Buy do Millenia às 10h, no lugar do outlet, com a retirada reservada no app antes de sair.
+**Se o Oakley não foi retirado no dia 18:** Best Buy do Millenia no lugar do outlet — saída às 9h45, com a retirada reservada no app antes de sair.
 
 **Natal no Disney Springs:** de 13/11 a 06/01, sem ingresso — árvores temáticas, neve toda noite, música ao vivo e Papai Noel (em 2025, com fila virtual no app da Disney).
 
