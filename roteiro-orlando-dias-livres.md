@@ -176,7 +176,7 @@ O único respiro entre o Epic e cinco dias pesados seguidos. Café sem pressa no
 | **18h30** | **Jantar — World Food Trucks**, 5811 W Irlo Bronson | Mais de 100 food trucks, a 300 m do Old Town. Estacionamento grátis |
 | **20h10** | Lugar na calçada | |
 | **20h30** | **Muscle Car Cruise** | Grátis, toda sexta |
-| **21h15** | Voltar | Três minutos. Amanhã a saída é 7h45 |
+| **21h15** | Voltar | Três minutos. Amanhã a saída é 8h |
 
 **O carro:** a Avis fica dentro do Old Town e conta o aluguel em períodos de 24 horas — retirando às 15h de hoje e devolvendo às 15h do dia 25, são cinco diárias certas. **Pedágio:** o e-Toll Unlimited cobra de US$ 11 a 26 por dia de aluguel, com ou sem pedágio; sem ele, paga-se cada pedágio pela placa, mais US$ 6,95 só nos dias em que houve pedágio.
 
@@ -192,23 +192,33 @@ O único respiro entre o Epic e cinco dias pesados seguidos. Café sem pressa no
 
 # 🌻 21/11 (sábado) — Winter Garden e Solar Bears
 
-Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de Orlando à noite. O carro, retirado no dia 20, leva a Winter Garden; à noite ele fica no hotel e o jogo é de Uber.
+Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de Orlando à noite, com uma tarde inteira de descanso no meio. O carro leva a Winter Garden; à noite ele fica no hotel e o jogo é de Uber.
 
 | Hora | O quê | Notas |
 |---|---|---|
-| **7h45** | Sair de carro | ~40 min |
-| **8h30** | **Winter Garden Farmers Market** — Downtown Pavilion, 104 S. Lakeview Ave | Mais de 100 barracas, 8h às 13h. **É o motivo de vir a Winter Garden** |
-| **10h30** | **Plant Street** | Rua histórica de tijolos. Dois museus gratuitos: Central Florida Railroad Museum e Winter Garden Heritage Museum |
-| **11h30** | **Axum Coffee** | A cafeteria da cidade. Café de verdade |
-| **12h30** | **Almoço — Plant Street Market** | Mercado gastronômico com a *Crooked Can Brewing* dentro |
-| **14h00** | **West Orange Trail** — opcional | Ciclovia de 35 km. Aluguel de bicicleta no centro. Uma hora resolve |
-| **15h00** | Voltar ao hotel | **VAZIO PROPOSITAL** — descanso |
-| **17h30** | Uber para o centro de Orlando | ~35 min, US$ 32–45. O carro fica no hotel |
-| **18h15** | **Kia Center** — portões abrem | Sem mochila. Só bolsa pequena, do tamanho de uma carteira de mão |
-| **19h00** | **Orlando Solar Bears × Jacksonville Icemen** | Hóquei da ECHL. **Ingresso já comprado.** ~2h30 com os dois intervalos |
-| **21h30** | Voltar | De Uber. Andem dois quarteirões antes de chamar |
+| **7h15** | Café da manhã do hotel | Incluso e rápido. Se não estiver aberto, café no Axum Coffee, em Winter Garden |
+| **8h00** | De carro para Winter Garden | ~40 min pela SR-429, pedágio pela placa. Garagem grátis na 160 S Boyd St |
+| **8h45** | **Winter Garden Farmers Market** — Downtown Pavilion, 104 S. Lakeview Ave | Mais de 100 barracas, das 8h às 13h. Faça chuva ou sol |
+| **10h15** | **Central Florida Railroad Museum** — 101 S Boyd St | Grátis. Abre às 10h no sábado |
+| **10h45** | Plant Street a pé · **Axum Coffee** | Heritage Museum opcional, a partir das 11h |
+| **11h45** | **Almoço — Plant Street Market**, 426 W Plant St | 17 balcões e a cervejaria Crooked Can. Quem dirige não bebe |
+| **13h00** | Voltar ao hotel | ~40 min |
+| **13h45** | **VAZIO PROPOSITAL** | Quase três horas de descanso. Montem a mochila do SeaWorld |
+| **16h40** | Uber para o centro de Orlando | ~35 min, US$ 32–45. Sem bolsa |
+| **17h20** | **Jantar — Harp & Celt**, 25 S Magnolia Ave | Pub irlandês com mesa e garçom. **Reservem por telefone** |
+| **18h30** | A pé até o Kia Center | 840 m, 11 min. Portões desde as 18h |
+| **19h00** | **Orlando Solar Bears × Jacksonville Icemen** | Hóquei da ECHL. **Ingresso já comprado.** Noite de Food Drive. Cowbell liberado |
+| **21h30** | Uber na esquina da **Hughey Ave com a Pine St** | Zona oficial de rideshare. Hotel por volta das 22h15 |
 
-**Por que o Disney Springs saiu daqui:** o ingresso do jogo é para 21/11 às 19h e não se remarca. A noite de Natal no Disney Springs continua no roteiro — só ainda sem dia.
+**A noite anda com o jogo:** o início às 19h é a referência. Se ele mudar, o Uber, o jantar e a caminhada deslocam junto.
+
+**A bolsa:** a regra do Kia Center é a mesma do dia 18 — só uma clutch de 11 × 16 × 2,5 cm. Hoje é fácil: a mochila de Winter Garden fica no quarto na tarde de descanso.
+
+**Cowbell:** a arena proíbe qualquer objeto que faça barulho, com uma exceção — o cowbell, e só nos jogos do Solar Bears.
+
+**Estrada:** a SR-429 é pedágio sem cabine, cobrado pela placa, mais a taxa de US$ 6,95 da Avis no dia. Estacionar é grátis em todo o centro de Winter Garden.
+
+**Ficou de fora:** a West Orange Trail de bicicleta — ela passa pelo meio da Plant Street, e vocês a veem a pé. E o Natal de Winter Garden, que começa na primeira sexta de dezembro.
 
 ---
 
@@ -260,7 +270,7 @@ Thanksgiving. Um dos dias mais tranquilos do ano para voar — o caos é na ter�
 | 12/11 | outlet, noite vazia após o cancelamento da festa | outlet na I-Drive + ICON Park à noite |
 | 14/11 | Celebration + CityWalk | manhã livre proposital + Celebration + CityWalk + Islands |
 | 18/11 | compras + NBA | compras + barco-cisne no Lake Eola ao pôr do sol + jantar no Kres + NBA |
-| 20/11 | Old Town à tarde | manhã livre + lavanderia + carro + muscle cars no Old Town |
-| 21/11 | Winter Garden, tarde vazia | Winter Garden + Solar Bears no Kia Center à noite |
+| 20/11 | Old Town à tarde | café no IHOP + lavanderia + almoço no Old Town + carro + food trucks e muscle cars |
+| 21/11 | Winter Garden, tarde vazia | Winter Garden + descanso à tarde + jantar no Harp & Celt + Solar Bears no Kia Center |
 
-**Custos novos a somar no orçamento:** atrações do ICON Park (combo de duas a partir de US$ 39/pessoa), aluguel de bicicleta em Winter Garden (opcional). Lake Eola, Old Town e o Christmas Tree Stroll do dia 25 são gratuitos.
+**Custos novos a somar no orçamento:** atrações do ICON Park (combo de duas a partir de US$ 39/pessoa) e o pedágio da SR-429 no dia 21. Lake Eola, Old Town, os museus de Winter Garden e o Christmas Tree Stroll do dia 25 são gratuitos.

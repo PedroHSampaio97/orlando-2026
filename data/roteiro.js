@@ -4971,7 +4971,7 @@ window.ROTEIRO = {
           'Liguem para a filial, +1 321-219-7041, e resolvam antes do jantar.',
           'Se às 16h ainda não houver solução, a Hertz de 7471 W Irlo Bronson é a próxima — ' +
           'e ela fecha às 17h.',
-          'O que não pode acontecer é terminar o dia sem carro: amanhã a saída é 7h45.',
+          'O que não pode acontecer é terminar o dia sem carro: amanhã a saída é 8h.',
         ] },
       { letra: 'C', titulo: 'Chuva à noite',
         gatilho: 'A previsão do meio-dia dá chuva para o fim da tarde ou a noite.',
@@ -4981,7 +4981,7 @@ window.ROTEIRO = {
           'salão fechado, aberto até a meia-noite na sexta.',
           'O desfile é ao ar livre, com carro de coleção. Confiram a página de eventos do Old ' +
           'Town antes de sair do hotel.',
-          'Se o desfile não sair, a noite termina no jantar. Amanhã a saída é 7h45.',
+          'Se o desfile não sair, a noite termina no jantar. Amanhã a saída é 8h.',
         ] },
     ],
     blocos: [
@@ -5113,7 +5113,7 @@ window.ROTEIRO = {
 
       { id: 'b-2011-2200', hora: '21:15', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar',
-        descricao: 'Três minutos de carro. Amanhã a saída é 7h45',
+        descricao: 'Três minutos de carro. Amanhã a saída é 8h',
         contexto:
           'O dia 21 começa cedo: Farmers Market de Winter Garden às 8h e hóquei à noite. Durmam.',
         acesso: [], duracaoMin: 15 },
@@ -5139,13 +5139,13 @@ window.ROTEIRO = {
     ],
     prepararAmanha: {
       paraODia: '2026-11-21',
-      titulo: 'Winter Garden e Solar Bears · saída 7h45',
+      titulo: 'Winter Garden e Solar Bears · saída 8h',
       aviso: 'Amanhã é o primeiro dia de carro de verdade, mas só até Winter Garden: à noite o ' +
              'carro fica no hotel e o jogo é de Uber, numa arena que não aceita bolsa.',
       itens: [
         { texto: 'Alarme para 6h45 nos dois celulares', critico: true,
-          motivo: 'Saída 7h45. O Farmers Market de Winter Garden vai das 8h às 13h e só funciona ' +
-                  'aos sábados.' },
+          motivo: 'Café da manhã do hotel às 7h15 e saída às 8h. O Farmers Market de Winter ' +
+                  'Garden vai das 8h às 13h e só funciona aos sábados.' },
         { texto: 'A mochila fica no quarto antes do jogo', critico: true,
           motivo: 'O Kia Center não aceita bolsa — só uma clutch de 11 × 16 cm. A volta de ' +
                   'Winter Garden passa pelo hotel à tarde: a mochila fica lá, junto com o carro.' },
@@ -5193,90 +5193,293 @@ window.ROTEIRO = {
     operadora: null,
     parqueId: null,
     custoZero: false,
-    referencia: null,
+    fechado: true,
+    revisadoEm: '2026-09-11',
+    referencia: { rotulo: 'Início do jogo', padrao: '19:00', confirmado: true },
     resumo:
       'Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de Orlando ' +
-      'à noite. O carro, retirado ontem, leva a Winter Garden; à noite ele fica no hotel e o ' +
-      'jogo é de Uber.',
+      'à noite, com uma tarde inteira de descanso no meio. O carro leva a Winter Garden; à ' +
+      'noite ele fica no hotel e o jogo é de Uber.',
     avisos: [
-      'O Farmers Market funciona das 8h às 13h e é o motivo de vir a Winter Garden. Chegar ' +
-      'depois das 11h esvazia o sentido do dia.',
-      'O ingresso do Solar Bears já está comprado e o jogo começa às 19h. Este é o único ' +
-      'compromisso com hora marcada e dinheiro já gasto no dia.',
+      'O KIA CENTER NÃO ACEITA BOLSA. Só uma clutch de 11 × 16 × 2,5 cm. A mochila de Winter ' +
+      'Garden fica no quarto, e para o jogo vocês saem só com o bolso.',
+      'Amanhã é SeaWorld e vocês voltam do jogo por volta das 22h15. A mochila de amanhã fica ' +
+      'pronta na tarde de descanso, ANTES de sair para o centro.',
+    ],
+    notas: [
+      { tipo: 'info', texto:
+        'JOGO CONFIRMADO: sábado, 21/11/2026, 19h, Kia Center. Orlando Solar Bears contra o ' +
+        'Jacksonville Icemen, pela ECHL. É noite de Food Drive, de arrecadação de alimentos — ' +
+        'o time ainda não publicou como funciona.\n\n' +
+        'O início do jogo é a referência da noite: se ele mudar, o Uber, o jantar e a ' +
+        'caminhada deslocam junto, e o app avisa.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'alerta', texto:
+        'A REGRA DA BOLSA É A MESMA DO DIA 18. Bolsa nenhuma passa; a exceção é uma clutch de ' +
+        '11 × 16 × 2,5 cm. Hoje é mais fácil: não há compras, e a volta de Winter Garden passa ' +
+        'pelo hotel. Celular, cartão e documento no bolso, ingresso no celular dos dois.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'WINTER GARDEN DE CARRO: uns 40 minutos pela SR-429, pedágio sem cabine cobrado pela ' +
+        'placa — poucos dólares, mais a taxa de US$ 6,95 da Avis no dia.\n\n' +
+        'ESTACIONAR É GRÁTIS em todo o centro. A garagem de três andares da 160 S Boyd St fica ' +
+        'ao lado da feira, e há vagas grátis na West Plant Street e em outros estacionamentos ' +
+        'da prefeitura. No sábado a vaga é disputada por causa da feira.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'NA SAÍDA DO JOGO, A ZONA OFICIAL DE UBER E LYFT é a esquina da Hughey Ave com a Pine ' +
+        'St, a uma caminhada curta da arena. Marquem o ponto ali antes de chamar.',
+        pesquisa: '2026-09-11' },
+    ],
+    planos: [
+      { letra: 'A', titulo: 'O dia como está escrito',
+        gatilho: 'Manhã sem imprevisto e o café do hotel aberto às 7h15.',
+        passos: [
+          'Café do hotel às 7h15 e saída às 8h.',
+          'Feira às 8h45, museu ferroviário às 10h15 e Plant Street a pé até o almoço.',
+          'Almoço no Plant Street Market às 11h45 e volta ao hotel às 13h.',
+          'Descanso até 16h40, Uber para o centro e jantar no Harp & Celt às 17h20.',
+          'Jogo às 19h e Uber na esquina da Hughey com a Pine, na saída.',
+        ] },
+      { letra: 'B', titulo: 'Chuva de manhã',
+        gatilho: 'Chove em Winter Garden.',
+        passos: [
+          'A feira acontece faça chuva ou sol, e o pavilhão é coberto. Capa de chuva na mochila.',
+          'Os dois museus e o Plant Street Market são cobertos: só a caminhada pela Plant ' +
+          'Street cai.',
+          'O resto do dia não muda.',
+        ] },
+      { letra: 'B2', titulo: 'O café do hotel não está aberto',
+        gatilho: 'Às 7h15 o café da manhã do hotel ainda não começou.',
+        passos: [
+          'Saiam às 7h45, sem esperar.',
+          'Café da manhã no Axum Coffee, 146 W Plant St: café, panini e doces. Se ele ainda ' +
+          'estiver fechado, a feira tem barracas de padaria.',
+          'A feira às 8h45 continua de pé.',
+        ] },
+      { letra: 'C', titulo: 'Cansaço ou atraso',
+        gatilho: 'A manhã atrasou ou o corpo pediu descanso.',
+        passos: [
+          'Os museus caem primeiro. A feira e o almoço ficam.',
+          'Almocem às 11h e voltem mais cedo: a tarde de descanso é o que segura o SeaWorld ' +
+          'de amanhã.',
+        ] },
+      { letra: 'C2', titulo: 'Uber caro na saída do jogo',
+        gatilho: 'A tarifa dinâmica disparou quando o jogo acabou.',
+        passos: [
+          'Andem até a esquina da Hughey Ave com a Pine St, a zona oficial de rideshare.',
+          'Se ainda estiver caro, esperem 15 a 20 minutos num bar da Church St e chamem de novo.',
+          'Não esperem mais que isso: amanhã o alarme é às 7h45.',
+        ] },
     ],
     blocos: [
-      { id: 'b-2111-0745', hora: '07:45', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Sair de carro', descricao: '~40 min',
-        localId: 'winter-garden', acesso: [] },
+      { id: 'b-2111-0715', hora: '07:15', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Café da manhã do hotel',
+        descricao: 'Incluso e rápido: a saída é às 8h',
+        contexto:
+          'O café da manhã do hotel é continental e incluso, e abre às 7h segundo os sites de ' +
+          'reserva. Hoje é ele porque não há tempo para um café fora antes da estrada.\n\n' +
+          'SE AINDA NÃO ESTIVER ABERTO: plano B2 — saiam às 7h45 e comam no Axum Coffee, em ' +
+          'Winter Garden.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 35 },
 
-      { id: 'b-2111-0830', hora: '08:30', ancora: 'fixo', tipo: 'livre',
+      { id: 'b-2111-0745', hora: '08:00', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'De carro para Winter Garden',
+        descricao: '~40 min pela SR-429, pedágio pela placa. Garagem grátis na 160 S Boyd St',
+        contexto:
+          'A primeira estrada de verdade com o carro. A SR-429 é pedágio sem cabine: a Avis ' +
+          'cobra cada pórtico pela placa e soma a taxa de US$ 6,95 do dia. Poucos dólares.\n\n' +
+          'ONDE PARAR: a garagem de três andares da 160 S Boyd St, ao lado da feira. É grátis, ' +
+          'como todo estacionamento no centro de Winter Garden. No sábado a vaga é disputada; ' +
+          'se a garagem estiver cheia, há vagas grátis na West Plant Street.',
+        endereco: '160 S Boyd St', localId: 'winter-garden', acesso: [], duracaoMin: 40,
+        pesquisa: '2026-09-11' },
+
+      { id: 'b-2111-0830', hora: '08:45', ancora: 'fixo', tipo: 'livre',
         titulo: 'Winter Garden Farmers Market',
-        descricao:
-          'Downtown Pavilion, 104 S. Lakeview Ave. Mais de 100 barracas, 8h às 13h. ' +
-          'É o motivo de vir a Winter Garden',
+        descricao: 'Mais de 100 barracas, das 8h às 13h. Faça chuva ou sol, sob o pavilhão',
         contexto:
-          'Feira de sábado numa cidadezinha histórica a 40 minutos de Orlando, sem nada de ' +
-          'turístico de parque. Produtores locais, comida pronta, artesanato. É o contraponto ' +
-          'mais forte da viagem em relação aos parques.',
-        endereco: '104 S. Lakeview Ave', localId: 'winter-garden', acesso: [] },
+          'A feira de sábado de uma cidadezinha histórica a 40 minutos de Orlando, sem nada de ' +
+          'parque: produtores locais, padaria, empórios, arte, bijuteria, decoração e ' +
+          'artesanato. Mais de cem barracas e uns 3.500 visitantes por sábado.\n\n' +
+          'É o contraponto mais forte da viagem aos parques.\n\n' +
+          'Funciona o ano todo, faça chuva ou sol, e o Downtown Pavilion é coberto.',
+        endereco: '104 S. Lakeview Ave', localId: 'winter-garden', acesso: [], duracaoMin: 90,
+        pesquisa: '2026-09-11' },
 
-      { id: 'b-2111-1030', hora: '10:30', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Plant Street',
-        descricao:
-          'Rua histórica de tijolos. Dois museus gratuitos: Central Florida Railroad Museum e ' +
-          'Winter Garden Heritage Museum',
-        localId: 'winter-garden', acesso: [] },
+      { id: 'b-2111-1015', hora: '10:15', ancora: 'fixo', tipo: 'livre',
+        titulo: 'Central Florida Railroad Museum',
+        descricao: 'Grátis. Do outro lado da rua da feira. Abre às 10h no sábado',
+        contexto:
+          'O museu das ferrovias da Flórida Central: mais de 40 padrões de louça de 25 ' +
+          'ferrovias da era de ouro dos trens de passageiros, lanternas, lampiões, sinos de ' +
+          'locomotiva, um vagonete a motor e placas de estação.\n\n' +
+          'Meia hora resolve. No sábado abre das 10h às 15h, e a entrada é gratuita.',
+        endereco: '101 S Boyd St', localId: 'winter-garden', acesso: [], duracaoMin: 30,
+        pesquisa: '2026-09-11' },
 
-      { id: 'b-2111-1130', hora: '11:30', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Axum Coffee',
-        descricao: 'A cafeteria da cidade. Café de verdade',
-        localId: 'winter-garden', acesso: [] },
+      { id: 'b-2111-1030', hora: '10:45', ancora: 'fixo', tipo: 'livre',
+        titulo: 'Plant Street a pé · Axum Coffee',
+        descricao: 'A rua de tijolos, a ciclovia no canteiro central e um café',
+        contexto:
+          'A Plant Street é a rua principal do centro histórico, e a West Orange Trail passa ' +
+          'pelo canteiro do meio dela: vocês veem a ciclovia sem alugar bicicleta.\n\n' +
+          'AXUM COFFEE, no 146 W Plant St: café, espresso, chá, panini e doces. É a pausa ' +
+          'antes do almoço.\n\n' +
+          'WINTER GARDEN HERITAGE MUSEUM, opcional: fica no 1 N Main St, na antiga estação da ' +
+          'Atlantic Coast Line, e abre às 11h no sábado. Conta a história da cidade, dos ' +
+          'laranjais e das ferrovias.',
+        endereco: '146 W Plant St', localId: 'winter-garden', acesso: [], duracaoMin: 60,
+        pesquisa: '2026-09-11' },
 
-      { id: 'b-2111-1230', hora: '12:30', ancora: 'fixo', tipo: 'refeicao',
+      { id: 'b-2111-1230', hora: '11:45', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Almoço — Plant Street Market',
-        descricao: 'Mercado gastronômico com a Crooked Can Brewing dentro',
-        localId: 'winter-garden', acesso: [] },
-
-      { id: 'b-2111-1400', hora: '14:00', ancora: 'fixo', tipo: 'atracao',
-        titulo: 'West Orange Trail',
-        descricao: 'Opcional. Ciclovia de 35 km. Aluguel de bicicleta no centro. Uma hora resolve',
-        localId: 'winter-garden', acesso: [], opcional: true },
-
-      { id: 'b-2111-1500', hora: '15:00', ancora: 'fixo', tipo: 'vazio',
-        titulo: 'VAZIO PROPOSITAL',
-        descricao: 'Voltar ao hotel, descanso',
-        contexto: 'Não preencham. Amanhã é SeaWorld o dia inteiro e depois Epic Universe.',
-        acesso: [] },
-
-      { id: 'b-2111-1730', hora: '17:30', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Uber para o centro de Orlando',
-        descricao: '~35 min, US$ 32–45. O carro fica no hotel',
+        descricao: 'Mercado gastronômico com 17 balcões e a cervejaria Crooked Can dentro',
         contexto:
-          'O carro fica no estacionamento do hotel e o jogo é de Uber, ida e volta.\n\n' +
-          'Sem mochila: o Kia Center não aceita bolsa, só uma clutch de 11 × 16 cm.',
-        localId: 'kia-center', acesso: [] },
+          'Um salão de balcões independentes: churrasco americano no This Little Piggy, ostras ' +
+          'no Bruno’s, empanadas, ceviche, pizza no forno a carvão, frango apimentado no JAM Hot ' +
+          'Chicken, queijaria, sorvete mexicano e donuts. Cada um pede onde quiser.\n\n' +
+          'A CROOKED CAN é a cervejaria do mesmo salão. Quem dirige na volta não bebe: a ' +
+          'estrada para o hotel é às 13h.\n\n' +
+          'É balcão: não leva gorjeta.',
+        endereco: '426 W Plant St', restauranteId: 'r-plant-street-market',
+        localId: 'winter-garden', acesso: [], duracaoMin: 75, pesquisa: '2026-09-11' },
 
-      { id: 'b-2111-1815', hora: '18:15', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Kia Center — portões abrem',
-        descricao: 'A arena não aceita bolsa. Só clutch de 11 × 16 cm — ou nada nas mãos',
-        localId: 'kia-center', acesso: [] },
+      { id: 'b-2111-1300', hora: '13:00', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voltar ao hotel',
+        descricao: '~40 min de carro. O carro fica no hotel até amanhã',
+        contexto: 'A noite é de Uber: o carro só sai de novo para o SeaWorld.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 45 },
 
-      { id: 'b-2111-1900', hora: '19:00', ancora: 'fixo', tipo: 'show',
-        titulo: 'Orlando Solar Bears x Jacksonville Icemen',
-        descricao: 'Hóquei da ECHL. Ingresso já comprado',
+      { id: 'b-2111-1500', hora: '13:45', ancora: 'fixo', tipo: 'vazio',
+        titulo: 'VAZIO PROPOSITAL',
+        descricao: 'Quase três horas de descanso no hotel',
+        contexto:
+          'Não preencham. A noite termina às 22h15, e amanhã começam três dias de parque ' +
+          'seguidos: SeaWorld, Islands of Adventure e Busch Gardens.\n\n' +
+          'É também a hora de deixar a mochila de Winter Garden no quarto e montar a do ' +
+          'SeaWorld. Para o jogo, vocês saem só com o bolso.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 165 },
+
+      { id: 'b-2111-1730', hora: '16:40', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Uber para o centro de Orlando',
+        descricao: '~35 min, US$ 32–45. Direto para o Harp & Celt',
+        contexto:
+          'O carro fica no hotel e a noite é de Uber, ida e volta.\n\n' +
+          'ANTES DE SAIR: nada de bolsa. Celular, cartão e documento no bolso, ou numa clutch ' +
+          'de 11 × 16 × 2,5 cm. Ingresso do jogo no celular dos dois.',
+        endereco: '25 S Magnolia Ave', localId: 'kia-center', acesso: [], duracaoMin: 40 },
+
+      { id: 'b-2111-1720', hora: '17:20', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Jantar — Harp & Celt',
+        descricao: 'Pub irlandês com mesa e garçom, a 11 minutos a pé da arena. Reservem',
+        contexto:
+          'Pub e restaurante irlandês no centro: fish and chips, shepherd’s pie, cottage pie, ' +
+          'Irish stew e sanduíches. Outro estilo do jantar do dia 18, que foi churrascaria.\n\n' +
+          'RESERVA POR TELEFONE: ele não está no OpenTable. +1 407-481-2928. Está no ' +
+          'checklist. Avisem na chegada que vocês têm jogo às 19h.\n\n' +
+          'SEM MESA: o Underground Public House, gastropub britânico no 19 S Orange Ave, a um ' +
+          'quarteirão, abre às 11h30 no sábado.\n\n' +
+          'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
+        restauranteId: 'r-harp', endereco: '25 S Magnolia Ave', localId: 'kia-center',
+        acesso: ['reserva'], duracaoMin: 70, pesquisa: '2026-09-11' },
+
+      { id: 'b-2111-1830', hora: '18:30', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'A pé até o Kia Center',
+        descricao: '840 m, 11 minutos. Portões abertos desde as 18h',
+        contexto:
+          'Do pub até a arena são 840 metros pelo centro. Os portões abrem uma hora antes do ' +
+          'jogo, às 18h.\n\n' +
+          'ÚLTIMA CONFERÊNCIA ANTES DA CATRACA: nada de bolsa, ingresso no celular dos dois, ' +
+          'cada um com o seu.',
+        localId: 'kia-center', acesso: [], duracaoMin: 20, pesquisa: '2026-09-11' },
+
+      { id: 'b-2111-1900', hora: '19:00', ancora: 'referencia', tipo: 'show',
+        titulo: 'Orlando Solar Bears × Jacksonville Icemen',
+        descricao: 'Hóquei da ECHL. Ingresso já comprado. Cowbell liberado',
         contexto:
           'Hóquei de liga de acesso, no mesmo ginásio do jogo da NBA do dia 18 — e mesmo ' +
-          'assim é uma noite bem diferente: gelo no lugar da quadra, arena reconfigurada ' +
-          'menor e a torcida muito mais perto do jogo.\n\n' +
-          'Cerca de 2h30 com os dois intervalos.',
-        localId: 'kia-center', acesso: [], pesquisa: '2026-09-10' },
+          'assim é uma noite bem diferente: gelo no lugar da quadra e a torcida muito mais ' +
+          'perto do jogo.\n\n' +
+          'É NOITE DE FOOD DRIVE, de arrecadação de alimentos. O time ainda não publicou como ' +
+          'funciona.\n\n' +
+          'COWBELL: a arena proíbe qualquer objeto que faça barulho, com uma exceção — o ' +
+          'cowbell, e só nos jogos do Solar Bears.\n\n' +
+          'Cerca de 2h30 com os dois intervalos. Comida e bebida lá dentro são caras; o jantar ' +
+          'já foi.',
+        localId: 'kia-center', acesso: [], critico: true, duracaoMin: 150,
+        pesquisa: '2026-09-11' },
 
-      { id: 'b-2111-2130', hora: '21:30', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Voltar',
-        descricao: 'De Uber. Andem dois quarteirões antes de chamar: a tarifa dinâmica da saída é alta',
-        acesso: [] },
+      { id: 'b-2111-2130', hora: '21:30', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Uber na esquina da Hughey com a Pine',
+        descricao: 'Zona oficial de rideshare da arena. Hotel por volta das 22h15',
+        contexto:
+          'A zona de Uber e Lyft do Kia Center é a esquina da Hughey Ave com a Pine St, a uma ' +
+          'caminhada curta da arena. Marquem o ponto ali antes de chamar.\n\n' +
+          'A tarifa dinâmica logo depois do apito final pode triplicar. Se estiver alta, vale ' +
+          'o plano C2.\n\n' +
+          'AMANHÃ É SEAWORLD: alarme às 7h45, e a mochila já está pronta. Durmam assim que ' +
+          'chegarem.',
+        acesso: [], duracaoMin: 45 },
     ],
-    renuncias: null, ficha: null,
+    naoPerca: [
+      { nome: 'Central Florida Railroad Museum', quando: 'hoje', custo: 'grátis',
+        motivo: 'Louça de 25 ferrovias da era de ouro dos trens de passageiros, lanternas e ' +
+                'sinos de locomotiva, do outro lado da rua da feira. Abre às 10h.',
+        pesquisa: '2026-09-11' },
+      { nome: 'Cowbell no hóquei', quando: 'hoje',
+        motivo: 'A Kia Center proíbe qualquer objeto que faça barulho, com uma exceção: o ' +
+                'cowbell, e só nos jogos do Solar Bears.',
+        pesquisa: '2026-09-11' },
+      { nome: 'Crooked Can Brewing', quando: 'hoje',
+        motivo: 'A cervejaria dentro do Plant Street Market. Para quem não estiver dirigindo.',
+        pesquisa: '2026-09-11' },
+    ],
+    prepararAmanha: {
+      paraODia: '2026-11-22',
+      titulo: 'SeaWorld · chegada 9h15',
+      aviso: 'Vocês chegam do jogo por volta das 22h15. A mochila do SeaWorld fica pronta na ' +
+             'tarde de descanso, antes de sair para o centro — não depois.',
+      itens: [
+        { texto: 'Mochila do SeaWorld montada ANTES de sair para o jogo', critico: true,
+          motivo: 'Hoje vocês saem só com o bolso e voltam depois das 22h. Duas garrafas, ' +
+                  'barrinhas, protetor solar, power bank, cabo e capa de chuva.' },
+        { texto: 'Alarme para 7h45 nos dois celulares', critico: true,
+          motivo: 'Chegada ao SeaWorld às 9h15, a 25 minutos do hotel. Depois de uma noite que ' +
+                  'termina às 22h15, um alarme só falha.' },
+        { texto: 'Conferir o horário de abertura do SeaWorld', critico: true,
+          motivo: 'Amanhã assume abertura às 10h. Se for outro horário, a manhã inteira desloca.' },
+        { texto: 'Roupa que pode molhar e Ziploc para o celular', critico: false,
+          motivo: 'O Journey to Atlantis molha de verdade.' },
+      ],
+    },
+    ficha: {
+      multiPass: null, singlePass: null, expressPass: null,
+      custoEstimadoCasal: { min: 9, max: 15, moeda: 'USD' },
+      extras: [
+        { nome: 'Pedágio da SR-429, pela placa',
+          custo: { min: 9, max: 15, moeda: 'USD' },
+          texto: 'Ida e volta a Winter Garden. A Avis repassa cada pedágio pela placa e soma a ' +
+                 'taxa de US$ 6,95 do dia. Com transponder, cada pórtico da região custa de ' +
+                 'US$ 0,63 a 1,56; pela placa sai mais.' },
+      ],
+    },
+    renuncias: {
+      gerais: [
+        { nome: 'West Orange Trail de bicicleta',
+          motivo: 'Uma hora de ciclovia com bicicleta alugada. Não é objetivo da viagem, e ' +
+                  'custaria a tarde de descanso de uma noite que termina às 22h15, véspera do ' +
+                  'SeaWorld. A ciclovia passa pelo meio da Plant Street: vocês a veem a pé.' },
+        { nome: 'Natal de Winter Garden',
+          motivo: 'A decoração e o acendimento da árvore, no Light Up Winter Garden, são na ' +
+                  'primeira sexta de dezembro — depois da viagem.' },
+      ],
+      idioma: null,
+      fechado: [],
+    },
   },
 
   /* ===== 22/11 · DOMINGO · SEAWORLD ===================================== */
@@ -6135,6 +6338,22 @@ window.ROTEIRO = {
       nota: 'Mais de 100 food trucks, das 11h às 2h todos os dias. Estacionamento grátis. ' +
             'Balcão: não leva gorjeta.' },
 
+    { id: 'r-plant-street-market', nome: 'Plant Street Market', data: '2026-11-21', hora: '11:45',
+      refeicao: 'almoco', local: 'Winter Garden · 426 W Plant St',
+      alternativas: [],
+      precisaReserva: false, janelaAbre: null, janelaHora: null,
+      canal: 'Balcão, sem reserva', blocoId: 'b-2111-1230',
+      nota: 'Mercado gastronômico com 17 balcões — churrasco, ostras, empanadas, pizza a ' +
+            'carvão, ceviche — e a cervejaria Crooked Can. Balcão: não leva gorjeta.' },
+
+    { id: 'r-harp', nome: 'Harp & Celt', data: '2026-11-21', hora: '17:20',
+      refeicao: 'jantar', local: 'Centro de Orlando · 25 S Magnolia Ave',
+      alternativas: ['Underground Public House, 19 S Orange Ave — gastropub britânico'],
+      precisaReserva: true, janelaAbre: null, janelaHora: null,
+      canal: 'Telefone +1 407-481-2928 (não está no OpenTable)', blocoId: 'b-2111-1720',
+      nota: 'Pub irlandês com mesa e garçom, a 11 minutos a pé do Kia Center. Noite de jogo ' +
+            'no centro num sábado: reservem, e avisem na chegada que vocês têm hora.' },
+
     { id: 'r-zambia', nome: 'Zambia Smokehouse', data: '2026-11-24', hora: '12:45',
       refeicao: 'almoco', local: 'Busch Gardens Tampa', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
@@ -6329,6 +6548,18 @@ window.ROTEIRO = {
         'Alternativa no mesmo bairro: The Boheme, no Grand Bohemian. O Ace Cafe, que estava ' +
         'no roteiro antigo, fechou em 2023.',
       restauranteIds: ['r-kres'] },
+
+    { id: 'ck-harp', dataAlvo: '2026-10-22', dataEstimada: true,
+      motivoData: '30 dias antes do jantar de 21/11',
+      hora: null, fuso: null, janelaReserva: false, critico: false,
+      texto: 'Reservar o Harp & Celt para as 17h20 de 21/11 (centro de Orlando), por telefone',
+      nota:
+        'Noite de jogo do Solar Bears no centro, num sábado. O jantar tem 70 minutos antes da ' +
+        'caminhada até a arena: chegar sem reserva e pegar espera acaba com ele.\n\n' +
+        'Não está no OpenTable. É pelo telefone +1 407-481-2928, ou pelo e-mail do site, ' +
+        'harpandcelt1@gmail.com.\n\n' +
+        'Alternativa sem reserva: o Underground Public House, a um quarteirão.',
+      restauranteIds: ['r-harp'] },
 
     { id: 'ck-mythos', dataAlvo: '2026-10-24', dataEstimada: true, motivoData: '30 dias antes do jantar de 23/11', hora: null, fuso: null,
       janelaReserva: false, critico: false,
@@ -6714,8 +6945,9 @@ window.ROTEIRO = {
       doHotel: { tempoMin: 35, tempoFonte: 'estimado',
                  uberUSD: { min: 32, max: 45 }, uberFonte: 'estimado' },
       nota: 'NÃO ACEITA BOLSA. Só uma clutch de 4,5" × 6,5" × 1" (11 × 16 × 2,5 cm). ' +
-            'Armários Binbox do lado de fora, na Church St. com Division Ave. Andem 2 ' +
-            'quarteirões antes de chamar o Uber na saída — a tarifa dinâmica é brutal.' },
+            'Armários Binbox do lado de fora, na Church St. com Division Ave. Na saída, a ' +
+            'zona oficial de Uber e Lyft é a esquina da Hughey Ave com a Pine St — andem até ' +
+            'lá antes de chamar: a tarifa dinâmica na porta é brutal.' },
 
     { id: 'celebration', nome: 'Celebration', tipo: 'livre',
       lat: 28.31027778, lng: -81.55083333, verificado: true, fonteCoord: 'wikipedia', endereco: null,
@@ -6734,7 +6966,9 @@ window.ROTEIRO = {
       lat: 28.5647018, lng: -81.5877242, verificado: true, fonteCoord: 'osm', endereco: '104 S. Lakeview Ave',
       doHotel: { tempoMin: 40, tempoFonte: 'documento',
                  uberUSD: null, uberFonte: null },
-      nota: 'De carro. Farmers Market das 8h às 13h, só aos sábados.' },
+      nota: 'De carro, ~40 min pela SR-429. Farmers Market das 8h às 13h, só aos sábados, faça ' +
+            'chuva ou sol. Estacionamento grátis em todo o centro; a garagem da 160 S Boyd St ' +
+            'fica ao lado da feira.' },
 
     { id: 'world-food-trucks', nome: 'World Food Trucks', tipo: 'restaurante',
       lat: 28.3341309, lng: -81.5168648, verificado: true, fonteCoord: 'osm',
