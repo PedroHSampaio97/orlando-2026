@@ -30,9 +30,15 @@ window.Sync = (function () {
   const CHAVE_PENDENTE = 'orlando2026:sync-pendente';
   const ESPERA_ENVIO = 4000;
 
-  // O que NUNCA sobe. Decisão de 11/09: telefone e apólice do seguro ficam no
-  // aparelho, cruzando só pelo exportar/importar.
-  const GRUPOS_LOCAIS = ['pessoais'];
+  // O QUE SOBE, nomeado um a um — lista de permissão, não de proibição. O
+  // primeiro envio de verdade levou junto um grupo morto de uma versão antiga
+  // ("notas"), que estava parado no aparelho: com lista de proibição, qualquer
+  // chave esquecida ou futura viaja de carona. Com esta, sobe só o que está aqui.
+  // `pessoais` fica de fora por decisão de 11/09: telefone e apólice do seguro
+  // não saem do aparelho, e cruzam só pelo exportar/importar.
+  const GRUPOS_QUE_SOBEM = ['referencias', 'ancoras', 'horas', 'feitos', 'reservas',
+                            'checklist', 'datasCheck', 'coordsLocal'];
+  const CAMPOS_QUE_SOBEM = ['versao', 'dispositivo', 'atualizadoEm'];
 
   const E = window.Estado;
   const $ = (s) => document.querySelector(s);
@@ -174,12 +180,18 @@ window.Sync = (function () {
   /* ---------------------------------------------------------------------------
      Corpo do sync
      ------------------------------------------------------------------------ */
-  // Cópia sem os grupos que não saem do aparelho. Cópia mesmo: mexer no objeto
-  // vivo do Estado apagaria a apólice da tela.
+  // Monta a carga do zero, campo a campo. Cópia mesmo: mexer no objeto vivo do
+  // Estado apagaria a apólice da tela.
   function cargaLocal() {
-    const copia = JSON.parse(JSON.stringify(E.bruto()));
-    GRUPOS_LOCAIS.forEach(function (g) { delete copia[g]; });
-    return copia;
+    const bruto = E.bruto();
+    const carga = {};
+    CAMPOS_QUE_SOBEM.forEach(function (c) {
+      if (bruto[c] !== undefined && bruto[c] !== null) carga[c] = bruto[c];
+    });
+    GRUPOS_QUE_SOBEM.forEach(function (g) {
+      carga[g] = JSON.parse(JSON.stringify(bruto[g] || {}));
+    });
+    return carga;
   }
 
   function enviar() {

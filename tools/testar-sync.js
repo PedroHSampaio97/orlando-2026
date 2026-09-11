@@ -145,6 +145,16 @@ async function main() {
        'mas leva os grupos que devem cruzar');
     ok(a.E.pessoal('seguro-apolice') === 'APOLICE-SECRETA',
        'a apolice continua no aparelho, intacta');
+
+    // Lista de permissao, e nao de proibicao: o primeiro envio de verdade levou
+    // junto um grupo morto de uma versao antiga que estava no aparelho.
+    a.E.bruto().notas = { 'd-2026-11-11': { texto: 'de uma versao antiga', em: '2020-01-01T00:00:00Z' } };
+    a.E.bruto().segredoFuturo = 'nao deveria viajar';
+    const carga2 = a.S.cargaLocal();
+    ok(!('notas' in carga2), 'grupo morto de versao antiga NAO sobe');
+    ok(!('segredoFuturo' in carga2), 'e chave desconhecida tambem nao sobe');
+    ok(Object.keys(carga2).length === 11,
+       'a carga tem exatamente os 11 campos previstos', Object.keys(carga2).join(','));
   }
 
   /* --- 2. dois aparelhos, atraves do servidor --- */
