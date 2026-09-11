@@ -370,9 +370,9 @@ window.ROTEIRO = {
           'Bebidas, Farmácia, Alimentos, Eletrônicos, Casa — para vocês não cruzarem o ' +
           'Supercenter duas vezes. Garrafa de água dentro do parque custa US$ 4 a 6; capa de ' +
           'chuva, uns US$ 10 lá dentro e US$ 1 aqui.\n\n' +
-          'REFEIÇÕES NO QUARTO: o quarto tem cafeteira e micro-ondas. Em Alimentos estão o ' +
-          'café da manhã dos dias de saída cedo e o jantar das noites que terminam tarde — ' +
-          'tudo fora da geladeira, nada congelado e nada de fast food.\n\n' +
+          'REFEIÇÕES NO QUARTO: o quarto tem cafeteira, micro-ondas e frigobar. Em Alimentos ' +
+          'estão o café da manhã dos dias de saída cedo e o jantar das noites que terminam ' +
+          'tarde — nada congelado e nada de fast food.\n\n' +
           'A marca própria do Walmart — Great Value para comida, Equate para farmácia — ' +
           'resolve quase tudo mais barato. Onde a marca de verdade importa, está dito. ' +
           'Essenciais são os que, se faltarem, vocês vão comprar caro depois.',
@@ -453,11 +453,10 @@ window.ROTEIRO = {
             motivo: 'O café mais rápido que existe, sem geladeira: pão, pasta de amendoim e uma ' +
                     'fruta. Serve também de lanche na volta de uma noite longa.' },
           { id: 'iogurte', secao: 'Alimentos', essencial: false,
-            texto: 'Iogurte grego — só se o quarto tiver frigobar',
+            texto: 'Iogurte grego — para o frigobar do quarto',
             marca: 'Chobani', alternativaBarata: 'Great Value',
-            motivo: 'Proteína no café da manhã em um minuto. O site de reservas diz que o quarto ' +
-                    'tem frigobar, mas isso não está confirmado: conferiram só a cafeteira e o ' +
-                    'micro-ondas. Comprem depois de ver.' },
+            motivo: 'Proteína no café da manhã dos dias de saída cedo, em um minuto. O frigobar ' +
+                    'do quarto é pequeno: comprem pouco de cada vez.' },
           { id: 'barebells', secao: 'Alimentos', essencial: true,
             texto: 'Barrinha de proteína',
             marca: 'Barebells — Cookies & Cream ou Caramel Cashew', alternativaBarata: 'Pure Protein',
@@ -746,8 +745,8 @@ window.ROTEIRO = {
           'SE O DIA ESTIVER ATRASADO, comprem só estes, nesta ordem, e parem quando quiserem: ' +
           'água, protetor solar, capa de chuva, curativo de bolha, power bank, ibuprofeno e ' +
           'barrinhas. Esses sete resolvem os quatro dias seguintes.\n\n' +
-          'O QUARTO TEM CAFETEIRA E MICRO-ONDAS, e a lista traz o café da manhã e o jantar de ' +
-          'emergência para eles.\n\n' +
+          'O QUARTO TEM CAFETEIRA, MICRO-ONDAS E FRIGOBAR, e a lista traz o café da manhã e o ' +
+          'jantar de emergência para eles.\n\n' +
           'A 600 METROS, NA MESMA VINELAND RD: o Publix de 3221 Vineland Rd, das 7h às 23h, com ' +
           'deli que faz sanduíche na hora.',
         endereco: '3250 Vineland Rd', localId: 'walmart-vineland', acesso: [], duracaoMin: 45 },
@@ -4902,9 +4901,9 @@ window.ROTEIRO = {
     revisadoEm: '2026-09-11',
     referencia: null,
     resumo:
-      'O único respiro entre o Epic e cinco dias pesados seguidos. A manhã é livre de ' +
-      'verdade, o carro chega às 15h — a tarefa crítica do dia — e a noite é o desfile de ' +
-      'muscle cars do Old Town, a três minutos do hotel.',
+      'O único respiro entre o Epic e cinco dias pesados seguidos. Café sem pressa no IHOP, ' +
+      'almoço porto-riquenho no Old Town, o carro às 15h — a tarefa crítica do dia — e, à ' +
+      'noite, food trucks e o desfile de muscle cars, a três minutos do hotel.',
     avisos: [
       'O ÚNICO HORÁRIO QUE NÃO PODE FALHAR É A RETIRADA DO CARRO, ÀS 15H. Sem carro, o dia 21 ' +
       'em Winter Garden cai: o Farmers Market abre às 8h e só funciona aos sábados.',
@@ -4926,8 +4925,8 @@ window.ROTEIRO = {
         'aluguel, em todos os dias, com ou sem pedágio. Sem ele, a Avis cobra cada pedágio ' +
         'pela placa, mais uma taxa de US$ 6,95 só nos dias em que houve pedágio.\n\n' +
         'A estrada pedagiada que o roteiro provavelmente usa é a SR-429, para Winter Garden, ' +
-        'amanhã — poucos dólares. SeaWorld, Islands, Tampa e o centro de Orlando ficam pela ' +
-        'I-4, que é grátis fora das faixas expressas.',
+        'amanhã — poucos dólares. SeaWorld, Islands e Tampa ficam pela I-4, que é grátis ' +
+        'fora das faixas expressas.',
         pesquisa: '2026-09-11' },
 
       { tipo: 'info', texto:
@@ -4948,17 +4947,19 @@ window.ROTEIRO = {
       { letra: 'A', titulo: 'O dia como está escrito',
         gatilho: 'O Epic de ontem correu bem e o carro está reservado para as 15h.',
         passos: [
-          'Dormir sem alarme. Café no quarto.',
+          'Dormir sem alarme. Café da manhã no IHOP da 5184 W Irlo Bronson.',
           'Lavanderia às 10h: a roupa dos dias 15 a 20.',
-          'Almoço sem compromisso e carro às 15h, na Avis do Old Town.',
-          'Descanso no hotel e, às 17h20, de volta ao Old Town, já de carro.',
-          'Jantar no Sakeba, lugar na calçada às 20h10 e desfile às 20h30.',
+          'Almoço no El Cilantrillo, dentro do Old Town, e uma volta por lá até o carro.',
+          'Carro às 15h na Avis do Old Town e descanso no hotel.',
+          'Às 17h20, de volta ao Old Town, já de carro. Jantar no World Food Trucks, lugar na ' +
+          'calçada às 20h10 e desfile às 20h30.',
         ] },
       { letra: 'B', titulo: 'O Epic de ontem deu errado',
         gatilho: 'Uma atração grande ficou de fora ontem — o Mine-Cart parado, chuva — e a ' +
                  'agência confirmou que o segundo dia do ingresso vale hoje.',
         passos: [
-          'Uber às 8h15 para o ponto de embarque do Epic, na 1222 Epic Blvd.',
+          'Café da manhã do hotel e Uber às 8h15 para o ponto de embarque do Epic, na 1222 ' +
+          'Epic Blvd.',
           'Só o que ficou de fora. Saída às 13h30, sem esticar.',
           'Uber direto para a Avis do Old Town: a retirada das 15h não muda.',
           'A lavanderia passa para as 15h30, no lugar do descanso.',
@@ -4972,25 +4973,33 @@ window.ROTEIRO = {
           'e ela fecha às 17h.',
           'O que não pode acontecer é terminar o dia sem carro: amanhã a saída é 7h45.',
         ] },
-      { letra: 'C', titulo: 'Chuva forte à noite',
-        gatilho: 'Chove pesado no fim da tarde.',
+      { letra: 'C', titulo: 'Chuva à noite',
+        gatilho: 'A previsão do meio-dia dá chuva para o fim da tarde ou a noite.',
         passos: [
+          'Invertam as refeições: World Food Trucks no almoço, El Cilantrillo no jantar. Os ' +
+          'trucks são ao ar livre, e o site não diz se há área coberta; o El Cilantrillo é ' +
+          'salão fechado, aberto até a meia-noite na sexta.',
           'O desfile é ao ar livre, com carro de coleção. Confiram a página de eventos do Old ' +
           'Town antes de sair do hotel.',
-          'O jantar no Sakeba fica: é restaurante de mesa.',
           'Se o desfile não sair, a noite termina no jantar. Amanhã a saída é 7h45.',
         ] },
     ],
     blocos: [
-      { id: 'b-2011-0800', hora: '08:00', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Manhã livre — sem alarme',
-        descricao: 'Café no quarto: cafeteira e micro-ondas são do quarto',
+      { id: 'b-2011-0800', hora: '08:30', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Café da manhã — IHOP',
+        descricao: 'Sem alarme. A 750 m do hotel, aberto desde as 6h. Ou o do hotel, incluso',
         contexto:
           'O único respiro entre o Epic de ontem e cinco dias seguidos pesados: Winter Garden ' +
           'com hóquei, SeaWorld, Islands, Busch Gardens e o último dia de compras. Não é para ' +
-          'encher.\n\n' +
-          'A lista do Walmart do dia 10 tem o café da manhã para o quarto.',
-        localId: 'hotel-travelodge', acesso: [], duracaoMin: 120 },
+          'encher — é o dia de tomar café fora, sem pressa.\n\n' +
+          'O IHOP da 5184 W Irlo Bronson é o mais perto dos três da 192: uns 750 metros a ' +
+          'leste do hotel, três minutos de Uber. Na sexta abre das 6h à meia-noite. Panqueca, ' +
+          'ovos e bacon — o café americano de diner.\n\n' +
+          'SE NÃO DER VONTADE DE SAIR: o café da manhã do hotel é incluso e continental, e vai ' +
+          'até as 10h segundo os sites de reserva — a Wyndham não publica o horário.\n\n' +
+          'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
+        endereco: '5184 W Irlo Bronson Memorial Hwy', acesso: [], duracaoMin: 75,
+        pesquisa: '2026-09-11' },
 
       { id: 'b-2011-1000', hora: '10:00', ancora: 'fixo', tipo: 'tarefa',
         titulo: 'Lavanderia — segunda rodada',
@@ -5002,14 +5011,31 @@ window.ROTEIRO = {
           'Se a máquina do hotel não funcionar, procurem uma lavanderia self-service na 192.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 150 },
 
-      { id: 'b-2011-1230', hora: '12:30', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Almoço sem compromisso',
-        descricao: 'Comida do quarto, ou o Old Town, a três minutos',
+      { id: 'b-2011-1230', hora: '12:45', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Almoço — El Cilantrillo',
+        descricao: 'Porto-riquenho de mesa, dentro do Old Town. Três minutos de Uber',
         contexto:
-          'Sem carro até as 15h, o que está perto resolve: a comida do Walmart no micro-ondas ' +
-          'do quarto, ou um Uber curto até o Old Town, onde o Southern Breeze e o World Food ' +
-          'Trucks abrem às 11h. Almoçando lá, dá para emendar direto na retirada do carro.',
-        localId: 'hotel-travelodge', acesso: [], duracaoMin: 150 },
+          'Comida caseira porto-riquenha: mofongo — purê de banana-da-terra com alho — com ' +
+          'churrasco, carne de porco ou frutos do mar por cima; pernil assado devagar; e o ' +
+          'pargo inteiro frito, no estilo boricua.\n\n' +
+          'Pratos da rede perto de US$ 20. Na sexta abre das 11h à meia-noite. Aceita reserva ' +
+          'pelo Yelp ou pelo telefone +1 407-204-9685.\n\n' +
+          'Fica na suíte 130 do Old Town, o mesmo complexo da Avis: daqui, a tarde segue a pé ' +
+          'até a retirada do carro.\n\n' +
+          'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
+        endereco: '5770 W Irlo Bronson Memorial Hwy, Suite 130', restauranteId: 'r-cilantrillo',
+        localId: 'old-town', acesso: [], duracaoMin: 75, pesquisa: '2026-09-11' },
+
+      { id: 'b-2011-1401', hora: '14:00', ancora: 'fixo', tipo: 'livre',
+        titulo: 'Old Town de dia · Mine Blower opcional',
+        descricao: 'Uma volta pela rua de tijolinho. A montanha-russa do Fun Spot, se a comida deixar',
+        contexto:
+          'Uma hora sem roteiro entre o almoço e o carro, no mesmo complexo. De dia dá para ver ' +
+          'as lojas com calma; à noite a rua é do desfile.\n\n' +
+          'MINE BLOWER, no Fun Spot, ao lado do Old Town: montanha-russa de madeira com ' +
+          'inversão. A entrada no Fun Spot é grátis e cada brinquedo é pago à parte, de US$ 3 ' +
+          'a 40. Logo depois de um mofongo, julguem vocês.',
+        localId: 'old-town', acesso: [], duracaoMin: 60, pesquisa: '2026-09-11' },
 
       { id: 'b-2011-1530', hora: '15:00', ancora: 'fixo', tipo: 'tarefa',
         titulo: 'Retirar o carro — Avis do Old Town',
@@ -5017,8 +5043,8 @@ window.ROTEIRO = {
         contexto:
           'A TAREFA CRÍTICA DO DIA. Sem carro, o dia 21 em Winter Garden cai — o Farmers Market ' +
           'abre às 8h e não dá para ir de Uber a esse preço.\n\n' +
-          'ONDE: dentro do Old Town, nos fundos, em frente à montanha-russa. Três minutos de ' +
-          'Uber do hotel. Aberta das 7h às 19h, telefone +1 321-219-7041.\n\n' +
+          'ONDE: dentro do Old Town, nos fundos, em frente à montanha-russa — a pé desde o ' +
+          'almoço. Aberta das 7h às 19h, telefone +1 321-219-7041.\n\n' +
           'QUATRO DOCUMENTOS, todos em nome do condutor: carteira de motorista, PID ' +
           '(Permissão Internacional para Dirigir, já emitida), passaporte e cartão de CRÉDITO ' +
           'internacional. Débito costuma não ser aceito para a caução.\n\n' +
@@ -5046,23 +5072,25 @@ window.ROTEIRO = {
           'O pôr do sol é por volta das 17h30: vocês chegam na luz baixa e veem as luzes ' +
           'acendendo.\n\n' +
           'DECORAÇÃO DE NATAL: o Old Town monta árvore e luzes a partir de meados de novembro. ' +
-          'A data exata do acendimento não saiu.\n\n' +
-          'Ao lado fica o Fun Spot, com a Mine Blower, montanha-russa de madeira com inversão, ' +
-          'paga por brinquedo. Não é bloco: é se sobrar tempo antes do jantar.',
+          'A data exata do acendimento não saiu.',
         endereco: '5770 W Irlo Bronson Memorial Hwy', localId: 'old-town',
         acesso: [], duracaoMin: 70, pesquisa: '2026-09-11' },
 
       { id: 'b-2011-1830', hora: '18:30', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — Sakeba Asian Pub & Grill',
-        descricao: 'Sushi e grelhados asiáticos, dentro do Old Town. Mesa com garçom',
+        titulo: 'Jantar — World Food Trucks',
+        descricao: 'Mais de 100 food trucks, a 300 m do Old Town. Estacionamento grátis',
         contexto:
-          'Asiático de mesa no meio do Old Town: sushi, teriyaki, pratos tailandeses e coreanos ' +
-          'e um bar de saquê. Nota 4,6 no Google, e na sexta fica aberto até 1h30.\n\n' +
-          'ALTERNATIVAS SEM FAST FOOD: El Cilantrillo, comida porto-riquenha, também no Old ' +
-          'Town; ou o World Food Trucks, colado nele, com mais de cem food trucks.\n\n' +
-          'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
-        restauranteId: 'r-sakeba', localId: 'old-town', acesso: [], duracaoMin: 90,
-        pesquisa: '2026-09-11' },
+          'Um estacionamento com mais de cem food trucks: mexicano, venezuelano, colombiano, ' +
+          'cubano, porto-riquenho, brasileiro, coreano, japonês, italiano, caribenho. Cada um ' +
+          'escolhe o seu — e é à noite, com tudo aceso, que o lugar faz sentido.\n\n' +
+          'FICA NA PRÓPRIA 192, a uns 300 metros do Old Town. Vão de carro: são poucos ' +
+          'minutos, o estacionamento é grátis, e às 20h10 vocês voltam para pegar lugar na ' +
+          'calçada.\n\n' +
+          'Aberto das 11h às 2h, todos os dias. O site não diz se há área coberta: com chuva ' +
+          'prevista, vale o plano C.\n\n' +
+          'Food truck é balcão: não leva gorjeta.',
+        endereco: '5811 W Irlo Bronson Memorial Hwy', restauranteId: 'r-world-food-trucks',
+        localId: 'world-food-trucks', acesso: [], duracaoMin: 90, pesquisa: '2026-09-11' },
 
       { id: 'b-2011-2010', hora: '20:10', ancora: 'fixo', tipo: 'espera',
         titulo: 'Lugar na calçada',
@@ -5098,7 +5126,7 @@ window.ROTEIRO = {
         condicao: 'montada a partir de meados de novembro', custo: 'grátis',
         motivo: 'Árvore e luzes na rua de tijolinho. A data do acendimento ainda não saiu.',
         pesquisa: '2026-09-11' },
-      { nome: 'Mine Blower, no Fun Spot', quando: 'se sobrar tempo', custo: 'pago por brinquedo',
+      { nome: 'Mine Blower, no Fun Spot', quando: 'depois do almoço', custo: 'pago por brinquedo',
         motivo: 'Montanha-russa de madeira com inversão, ao lado do Old Town. A entrada no Fun ' +
                 'Spot é grátis; cada brinquedo é pago à parte.',
         pesquisa: '2026-09-11' },
@@ -5112,16 +5140,15 @@ window.ROTEIRO = {
     prepararAmanha: {
       paraODia: '2026-11-21',
       titulo: 'Winter Garden e Solar Bears · saída 7h45',
-      aviso: 'Amanhã é o primeiro dia de carro de verdade: estrada até Winter Garden de manhã e ' +
-             'centro de Orlando à noite, numa arena que não aceita bolsa.',
+      aviso: 'Amanhã é o primeiro dia de carro de verdade, mas só até Winter Garden: à noite o ' +
+             'carro fica no hotel e o jogo é de Uber, numa arena que não aceita bolsa.',
       itens: [
         { texto: 'Alarme para 6h45 nos dois celulares', critico: true,
           motivo: 'Saída 7h45. O Farmers Market de Winter Garden vai das 8h às 13h e só funciona ' +
                   'aos sábados.' },
-        { texto: 'A mochila do dia vai no porta-malas, fora de vista', critico: true,
-          motivo: 'O Kia Center não aceita bolsa — só uma clutch de 11 × 16 cm. O que vocês ' +
-                  'levarem para Winter Garden fica no carro, no porta-malas, quando estacionarem ' +
-                  'no centro à noite.' },
+        { texto: 'A mochila fica no quarto antes do jogo', critico: true,
+          motivo: 'O Kia Center não aceita bolsa — só uma clutch de 11 × 16 cm. A volta de ' +
+                  'Winter Garden passa pelo hotel à tarde: a mochila fica lá, junto com o carro.' },
         { texto: 'Ingresso do Solar Bears nos dois celulares', critico: true,
           motivo: 'Jogo às 19h no Kia Center.' },
         { texto: 'Se o GPS escolher a SR-429, deixem', critico: false,
@@ -5169,7 +5196,8 @@ window.ROTEIRO = {
     referencia: null,
     resumo:
       'Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de Orlando ' +
-      'à noite. O carro, retirado ontem, é o que torna os dois possíveis no mesmo dia.',
+      'à noite. O carro, retirado ontem, leva a Winter Garden; à noite ele fica no hotel e o ' +
+      'jogo é de Uber.',
     avisos: [
       'O Farmers Market funciona das 8h às 13h e é o motivo de vir a Winter Garden. Chegar ' +
       'depois das 11h esvazia o sentido do dia.',
@@ -5221,12 +5249,11 @@ window.ROTEIRO = {
         acesso: [] },
 
       { id: 'b-2111-1730', hora: '17:30', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Sair para o centro de Orlando',
-        descricao: 'De carro, ~35 min. Estacionamento pago nos prédios em volta da arena',
+        titulo: 'Uber para o centro de Orlando',
+        descricao: '~35 min, US$ 32–45. O carro fica no hotel',
         contexto:
-          'Primeiro evento com carro próprio. Os estacionamentos em volta do Kia Center ' +
-          'cobram por evento e enchem perto do horário — chegar com folga vale mais do que ' +
-          'economizar dois quarteirões.',
+          'O carro fica no estacionamento do hotel e o jogo é de Uber, ida e volta.\n\n' +
+          'Sem mochila: o Kia Center não aceita bolsa, só uma clutch de 11 × 16 cm.',
         localId: 'kia-center', acesso: [] },
 
       { id: 'b-2111-1815', hora: '18:15', ancora: 'fixo', tipo: 'deslocamento',
@@ -5246,7 +5273,7 @@ window.ROTEIRO = {
 
       { id: 'b-2111-2130', hora: '21:30', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar',
-        descricao: 'De carro. Saiam junto com o público ou esperem cinco minutos no saguão',
+        descricao: 'De Uber. Andem dois quarteirões antes de chamar: a tarifa dinâmica da saída é alta',
         acesso: [] },
     ],
     renuncias: null, ficha: null,
@@ -6092,13 +6119,21 @@ window.ROTEIRO = {
             'jantar cedo libera as três últimas horas para o Ministry e o Mine-Cart. Pratos de ' +
             'US$ 35 a 48.' },
 
-    { id: 'r-sakeba', nome: 'Sakeba Asian Pub & Grill', data: '2026-11-20', hora: '18:30',
-      refeicao: 'jantar', local: 'Old Town Kissimmee',
-      alternativas: ['El Cilantrillo (Old Town)', 'World Food Trucks'],
+    { id: 'r-cilantrillo', nome: 'El Cilantrillo', data: '2026-11-20', hora: '12:45',
+      refeicao: 'almoco', local: 'Old Town Kissimmee',
+      alternativas: ['World Food Trucks, trocando com o jantar se houver chuva prevista à noite'],
+      precisaReserva: false, janelaAbre: null, janelaHora: null,
+      canal: 'Chegar direto — aceita reserva pelo Yelp ou +1 407-204-9685', blocoId: 'b-2011-1230',
+      nota: 'Porto-riquenho de mesa, dentro do Old Town: mofongo, pernil, pargo frito. Pratos ' +
+            'da rede perto de US$ 20. Na sexta, das 11h à meia-noite.' },
+
+    { id: 'r-world-food-trucks', nome: 'World Food Trucks', data: '2026-11-20', hora: '18:30',
+      refeicao: 'jantar', local: 'W Irlo Bronson, a 300 m do Old Town',
+      alternativas: ['El Cilantrillo, trocando com o almoço se houver chuva prevista à noite'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Chegar direto', blocoId: 'b-2011-1830',
-      nota: 'Sushi e grelhados asiáticos, mesa com garçom. Nota 4,6 no Google; na sexta abre ' +
-            'das 13h à 1h30.' },
+      nota: 'Mais de 100 food trucks, das 11h às 2h todos os dias. Estacionamento grátis. ' +
+            'Balcão: não leva gorjeta.' },
 
     { id: 'r-zambia', nome: 'Zambia Smokehouse', data: '2026-11-24', hora: '12:45',
       refeicao: 'almoco', local: 'Busch Gardens Tampa', alternativas: [],
@@ -6706,7 +6741,7 @@ window.ROTEIRO = {
       endereco: '5811 W Irlo Bronson Memorial Hwy, Kissimmee FL 34746',
       doHotel: { tempoMin: 5, tempoFonte: 'estimado',
                  uberUSD: { min: 7, max: 12 }, uberFonte: 'estimado' },
-      nota: 'Mais de 100 food trucks, das 11h às 2h, e até as 4h na sexta e no sábado. A ' +
+      nota: 'Mais de 100 food trucks, das 11h às 2h todos os dias, com estacionamento grátis. A ' +
             'resposta para as noites que terminam tarde.' },
 
     { id: 'publix-vineland', nome: 'Publix — Sunrise City Plaza', tipo: 'compras',
@@ -7146,8 +7181,8 @@ window.ROTEIRO = {
         'dia 10 traz o jantar para ele: arroz pronto com atum ou frango em sachê, ou sopa. ' +
         'Três minutos, sem sair do hotel.\n\n' +
         'SE FOR PARA SAIR, na própria 192, a poucos minutos do hotel:\n' +
-        'World Food Trucks, 5811 W Irlo Bronson — mais de 100 food trucks, das 11h às 2h, e ' +
-        'até as 4h na sexta e no sábado\n' +
+        'World Food Trucks, 5811 W Irlo Bronson — mais de 100 food trucks, das 11h às 2h ' +
+        'todos os dias\n' +
         'Perkins, 5170 W Irlo Bronson — restaurante de mesa, até a meia-noite\n' +
         'Denny’s, 5855 W Irlo Bronson — 24 horas\n' +
         'Waffle House, 5391 W Irlo Bronson — praticamente vizinho, 24 horas\n' +

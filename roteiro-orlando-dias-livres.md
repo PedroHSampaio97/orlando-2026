@@ -162,17 +162,18 @@ O **show de luz e música da fonte** do Lake Eola é às 20h e às 21h30 — voc
 
 # 🚗 20/11 (sexta) — Carro e Old Town
 
-O único respiro entre o Epic e cinco dias pesados seguidos. Manhã livre, carro às 15h — a tarefa crítica do dia — e o desfile de muscle cars do Old Town à noite, a três minutos do hotel.
+O único respiro entre o Epic e cinco dias pesados seguidos. Café sem pressa no IHOP, almoço porto-riquenho no Old Town, o carro às 15h — a tarefa crítica do dia — e, à noite, food trucks e o desfile de muscle cars, a três minutos do hotel.
 
 | Hora | O quê | Notas |
 |---|---|---|
-| **8h00** | **Manhã livre** — sem alarme | Café no quarto |
+| **8h30** | **Café da manhã — IHOP**, 5184 W Irlo Bronson | Sem alarme. A 750 m do hotel, aberto desde as 6h. Ou o do hotel, incluso |
 | **10h00** | **Lavanderia** — segunda rodada | Roupa dos dias 15 a 20. Sabão e moedas da lista do Walmart |
-| **12h30** | Almoço sem compromisso | Comida do quarto, ou o Old Town a três minutos |
+| **12h45** | **Almoço — El Cilantrillo**, dentro do Old Town | Porto-riquenho de mesa: mofongo, pernil. Pratos perto de US$ 20 |
+| **14h00** | **Old Town de dia** · Mine Blower opcional | Montanha-russa de madeira do Fun Spot, ao lado. Paga por brinquedo |
 | **15h00** | **Retirar o carro — Avis do Old Town** | Suíte 434, das 7h às 19h. **Recusem o e-Toll Unlimited** |
 | **15h30** | **VAZIO PROPOSITAL** — descanso no hotel | |
 | **17h20** | **Old Town Kissimmee** — 5770 W Irlo Bronson Memorial Hwy | Muscle cars expostos desde as 15h. Pôr do sol por volta das 17h30 |
-| **18h30** | **Jantar — Sakeba Asian Pub & Grill** | Sushi e grelhados asiáticos, mesa com garçom |
+| **18h30** | **Jantar — World Food Trucks**, 5811 W Irlo Bronson | Mais de 100 food trucks, a 300 m do Old Town. Estacionamento grátis |
 | **20h10** | Lugar na calçada | |
 | **20h30** | **Muscle Car Cruise** | Grátis, toda sexta |
 | **21h15** | Voltar | Três minutos. Amanhã a saída é 7h45 |
@@ -180,6 +181,8 @@ O único respiro entre o Epic e cinco dias pesados seguidos. Manhã livre, carro
 **O carro:** a Avis fica dentro do Old Town e conta o aluguel em períodos de 24 horas — retirando às 15h de hoje e devolvendo às 15h do dia 25, são cinco diárias certas. **Pedágio:** o e-Toll Unlimited cobra de US$ 11 a 26 por dia de aluguel, com ou sem pedágio; sem ele, paga-se cada pedágio pela placa, mais US$ 6,95 só nos dias em que houve pedágio.
 
 **O desfile:** o de sexta é o dos muscle cars (1964 em diante). No sábado há outro, dos clássicos anteriores a 1985, também às 20h30 — mas no sábado vocês estão no hóquei.
+
+**As refeições:** dia sem pressa é refeição fora. O IHOP é o café americano de diner; o do hotel é continental e vai até as 10h, segundo os sites de reserva. O World Food Trucks abre das 11h às 2h, e é à noite, com tudo aceso, que ele faz sentido. **Com chuva prevista para a noite, invertam:** food trucks no almoço e El Cilantrillo — salão fechado, aberto até a meia-noite na sexta — no jantar.
 
 **Rede de segurança do Epic:** se o dia 19 der muito errado, esta manhã é o lugar mais barato para usar o segundo dia do ingresso — se o ingresso permitir.
 
@@ -189,7 +192,7 @@ O único respiro entre o Epic e cinco dias pesados seguidos. Manhã livre, carro
 
 # 🌻 21/11 (sábado) — Winter Garden e Solar Bears
 
-Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de Orlando à noite. O carro, retirado no dia 20, é o que torna os dois possíveis no mesmo dia.
+Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de Orlando à noite. O carro, retirado no dia 20, leva a Winter Garden; à noite ele fica no hotel e o jogo é de Uber.
 
 | Hora | O quê | Notas |
 |---|---|---|
@@ -200,10 +203,10 @@ Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de 
 | **12h30** | **Almoço — Plant Street Market** | Mercado gastronômico com a *Crooked Can Brewing* dentro |
 | **14h00** | **West Orange Trail** — opcional | Ciclovia de 35 km. Aluguel de bicicleta no centro. Uma hora resolve |
 | **15h00** | Voltar ao hotel | **VAZIO PROPOSITAL** — descanso |
-| **17h30** | Sair para o centro de Orlando | De carro, ~35 min. Estacionamento pago nos prédios em volta da arena |
+| **17h30** | Uber para o centro de Orlando | ~35 min, US$ 32–45. O carro fica no hotel |
 | **18h15** | **Kia Center** — portões abrem | Sem mochila. Só bolsa pequena, do tamanho de uma carteira de mão |
 | **19h00** | **Orlando Solar Bears × Jacksonville Icemen** | Hóquei da ECHL. **Ingresso já comprado.** ~2h30 com os dois intervalos |
-| **21h30** | Voltar | De carro |
+| **21h30** | Voltar | De Uber. Andem dois quarteirões antes de chamar |
 
 **Por que o Disney Springs saiu daqui:** o ingresso do jogo é para 21/11 às 19h e não se remarca. A noite de Natal no Disney Springs continua no roteiro — só ainda sem dia.
 
