@@ -34,12 +34,16 @@ window.ROTEIRO = {
     fontes: ['roteiro-orlando-v3.md', 'roteiro-orlando-dias-livres.md'],
     geradoEm: '2026-09-08',
     avisoHorarios:
-      'Os horários oficiais dos parques só saem perto da data. Os relógios deste ' +
-      'roteiro assumem abertura às 9h, com duas exceções anotadas: o ANIMAL KINGDOM ' +
-      'às 8h (13/11) e o Busch Gardens às 10h (24/11). O SeaWorld (22/11) também está em ' +
-      '9h, pela previsão do Queue-Times. Confiram em novembro e ajustem a referência do ' +
-      'dia — os blocos ancorados deslocam junto, mas as retas finais dos dias 11, 13 e 22 ' +
-      'são fixas de propósito e não se mexem.',
+      'Os horários oficiais dos parques só saem perto da data, e as pendências dizem quando ' +
+      'conferir cada um. Os relógios deste roteiro assumem abertura às 9h, com duas ' +
+      'exceções: o ANIMAL KINGDOM às 8h (13/11) e o Busch Gardens às 10h (24/11). O ' +
+      'SeaWorld (22/11) também está em 9h, pela previsão do Queue-Times. Ajustem a ' +
+      'referência do dia e os blocos ancorados deslocam junto.\n\n' +
+      'A PARTIR DO COMPROMISSO DE HORA MARCADA — desfile, show, reserva, pôr do sol —, os ' +
+      'blocos são fixos e não se mexem com a abertura.\n\n' +
+      'Cinco dias têm outra referência: a saída do Terminal C no dia 10, a sessão do ' +
+      'Grinchmas no dia 14, o início do jogo nos dias 18 e 21 e a decolagem de Orlando no ' +
+      'dia 26. Os dias 12, 20 e 25 não têm referência: todos os blocos são fixos.',
 
     // Vocabulários fechados. A interface valida contra isto no load.
     tiposBloco: ['atracao', 'refeicao', 'deslocamento', 'show', 'compras',
@@ -63,12 +67,14 @@ window.ROTEIRO = {
     perfil: 'Casal, sem crianças. Prioridade: clássicos + montanhas-russas fortes.',
     baseLocalId: 'hotel-travelodge',
     decisoesFechadas: [
-      'Troca dos dias confirmada — 19 Epic Universe, 21 Winter Garden, 22 SeaWorld, 23 Islands of Adventure',
+      'Dias 19 Epic Universe, 21 Winter Garden, 22 SeaWorld e 23 Islands of Adventure',
+      'O Epic Universe é um dia só, 19/11',
       'Sem Mickey’s Very Merry Christmas Party',
       'Sem Express Pass na Universal',
       'Carro alugado de 20 a 25/11 — devolvido no dia 25, para o dia 26 ser só ' +
       'café da manhã e aeroporto',
       'PID (Permissão Internacional para Dirigir) já emitida',
+      'A última noite é no Disney Springs, 25/11',
     ],
   },
 
@@ -78,20 +84,25 @@ window.ROTEIRO = {
   regrasDeOuro: [
     { n: 1, momento: 'todo-dia', titulo: 'Rope drop vale mais que qualquer passe.',
       texto: 'A primeira hora de parque rende o que as três da tarde rendem. Chegar 45 ' +
-             'minutos antes da abertura é a decisão mais barata e mais eficaz da viagem.' },
+             'minutos antes da abertura é a decisão mais barata e mais eficaz da viagem. ' +
+             'Quando o dia marca outra hora de portão, vale a do dia: vai de 75 minutos antes ' +
+             'no Magic Kingdom, por causa do monotrilho, a 15 no Epcot.' },
     { n: 2, momento: 'todo-dia',
       titulo: 'Não reserve Multi Pass para o que você vai fazer no rope drop.',
       texto: 'Erro clássico: reservar a atração que já estaria vazia às 9h e depois ' +
              'enfrentar fila de 80 minutos no resto.' },
     { n: 3, momento: 'todo-dia', titulo: 'Use a primeira reserva do Multi Pass cedo.',
       texto: 'O sistema só libera a próxima depois que você usa a atual. Quem usa às 11h ' +
-             'faz o dobro de quem usa às 15h.' },
+             'faz o dobro de quem usa às 15h. Nos dias 11 e 16 a primeira é usada às 11h e às ' +
+             '9h45. No dia 15 ela fica para as 13h50, porque a manhã já sai no rope drop, no ' +
+             'standby e no Single Pass do Rise.' },
     { n: 4, momento: 'todo-dia', titulo: 'Mobile order em tudo que for balcão.',
       texto: 'Disney e Universal permitem pedir pelo app e só buscar. Economiza 20 a 30 ' +
              'minutos por refeição.' },
     { n: 5, momento: 'todo-dia', titulo: 'Almoço às 11h30 ou às 14h.',
       texto: 'Meio-dia é o pico. E as filas das atrações caem exatamente quando todo mundo ' +
-             'está comendo — use isso.' },
+             'está comendo — use isso. Nos dias de parque, cada almoço está na hora que ' +
+             'encaixa entre as filas daquele dia, de 11h40 a 14h20: sigam a do bloco.' },
     { n: 6, momento: 'todo-dia', titulo: 'Single rider quando a fila passar de 45 minutos.',
       texto: 'Vocês entram separados e se encontram na saída: custa o andar junto e devolve ' +
              'tempo de fila. Os blocos com o selo "ou single rider" têm essa fila. Três ' +
@@ -215,7 +226,7 @@ window.ROTEIRO = {
         pesquisa: '2026-09-10',
       },
       lockers: {
-        titulo: 'O imposto de tempo que o cronograma não previa',
+        titulo: 'O imposto de tempo dos lockers',
         texto:
           'Várias atrações exigem guardar tudo em locker antes de embarcar — inclusive o ' +
           'celular —, e três delas têm detector de metal na entrada. Isso custa 10 a 15 ' +
@@ -649,7 +660,7 @@ window.ROTEIRO = {
                   'inclusive a hora de sair do hotel. O desfile e os fogos ficam parados.' },
 
         { texto: 'Cartão cadastrado no My Disney Experience para mobile order',
-          motivo: 'Almoço no Columbia Harbour House e jantar no Casey\u2019s são os dois de ' +
+          motivo: 'Almoço no Columbia Harbour House e jantar no Casey’s são os dois de ' +
                   'balcão. Com mobile order vocês pulam a fila; sem cartão salvo, não pulam.' },
 
         { texto: 'Mochila montada e deixada na porta', critico: true,
@@ -663,10 +674,10 @@ window.ROTEIRO = {
         { texto: 'Roupa e tênis separados fora da mala',
           motivo: 'Puramente para não procurar nada no escuro às 5h45.' },
 
-        { texto: 'Uber de amanhã: o destino é o TTC, não \u201cMagic Kingdom\u201d',
+        { texto: 'Uber de amanhã: o destino é o TTC, não “Magic Kingdom”',
           motivo: 'O Magic Kingdom é o único parque sem acesso direto de carro. O Uber ' +
                   'para no Ticket & Transportation Center e de lá ainda são 15 a 20 min de ' +
-                  'monotrilho ou barco. Quem digita \u201cMagic Kingdom\u201d no app é levado ' +
+                  'monotrilho ou barco. Quem digita “Magic Kingdom” no app é levado ' +
                   'para o lugar errado e perde o rope drop.' },
 
         { texto: 'Dormir', critico: true,
@@ -2155,8 +2166,8 @@ window.ROTEIRO = {
         contexto:
           'Bar ao lado do Tiffins, com varanda sobre a água e ventiladores. Drinks autorais e ' +
           'petiscos.\n\n' +
-          'Costuma ter espera de 15 a 30 minutos e não aceita reserva — coloquem o nome na ' +
-          'lista e passeiem enquanto esperam.\n\n' +
+          'Costuma ter espera de 15 a 30 minutos e não aceita reserva: entrem na lista de ' +
+          'espera pelo app da Disney, ou no balcão, e passeiem enquanto esperam.\n\n' +
           'Esta hora é o VAZIO PROPOSITAL do dia, só que com sombra e bebida. Vocês vão ' +
           'precisar dela: a partir das 16h30 o dia não para mais até o jantar.',
         restauranteId: 'r-nomad', areaParque: 'Discovery Island', acesso: [], duracaoMin: 60 },
@@ -2167,7 +2178,7 @@ window.ROTEIRO = {
         contexto:
           'A reta final começa agora e é coreografada minuto a minuto.\n\n' +
           'COMAM ALGUMA COISA DA MOCHILA. Os petiscos do Nomad foram às 14h25 e o Sanaa é ' +
-          'às 19h45 — cinco horas, com o safári, o Na\u2019vi e 55 minutos de fila do ' +
+          'às 19h45 — cinco horas, com o safári, o Na’vi e 55 minutos de fila do ' +
           'Flight of Passage no meio. Entrar naquela fila com fome é o erro mais fácil de ' +
           'evitar do dia.\n\n' +
           'E duas conferências antes de tudo:\n\n' +
@@ -2605,8 +2616,9 @@ window.ROTEIRO = {
           'O ingresso Universal de vocês já cobre hoje — esta noite não custa nada a mais.\n\n' +
           'Do portão, o Seuss Landing fica logo à direita, a uns quatro minutos. Vão direto: ' +
           'a fila do Grinchmas é o único compromisso de relógio da noite.\n\n' +
-          'PONTO DE ENCONTRO DE HOJE: a fonte do Port of Entry, logo depois da catraca. O ' +
-          'parque é um anel e ela é o único ponto por onde todo mundo passa.',
+          'PONTO DE ENCONTRO DE HOJE: o farol do Port of Entry, o Pharos Lighthouse, na beira ' +
+          'da lagoa. O parque é um anel, e o Port of Entry é o único ponto por onde todo mundo ' +
+          'passa.',
         localId: 'islands-of-adventure', acesso: [], duracaoMin: 15 },
 
       { id: 'b-1411-1700', hora: '17:00', ancora: 'referencia', tipo: 'espera',
@@ -2648,7 +2660,7 @@ window.ROTEIRO = {
           'temporada e vocês voltam aqui no dia 23 — hoje é para andar devagar e olhar, não ' +
           'para pegar atração.\n\n' +
           'É TAMBÉM O MELHOR MOMENTO DE COMPRA DA SEMANA, e é de propósito: no dia 23 ' +
-          'vocês vão estar atrás do Hagrid\u2019s e do VelociCoaster, e ninguém para numa ' +
+          'vocês vão estar atrás do Hagrid’s e do VelociCoaster, e ninguém para numa ' +
           'loja nesse dia. A Honeydukes e a Dervish and Banges ficam na rua principal, e a ' +
           'Ollivanders de Hogsmeade tem a varinha escolhendo o bruxo — a do Beco Diagonal, ' +
           'que vocês fazem no dia 17, é a versão maior.',
@@ -5684,6 +5696,8 @@ window.ROTEIRO = {
         contexto:
           'Quarenta e cinco minutos antes da abertura, como manda a regra de ouro nº 1. A ' +
           'entrada tem detector de metal.\n\n' +
+          'PONTO DE ENCONTRO DE HOJE: o farol do Port of Entry, logo depois da entrada. Se ' +
+          'vocês se perderem, vão para lá e ESPEREM.\n\n' +
           'A Pipeline carrega devagar, e é por isso que ela vem primeiro: no rope drop a fila ' +
           'fica em 10 a 15 minutos.',
         localId: 'seaworld', acesso: [], duracaoMin: 45, pesquisa: '2026-09-11' },
@@ -5697,7 +5711,8 @@ window.ROTEIRO = {
           'POR QUE PRIMEIRO: carrega devagar e a fila cresce rápido. No rope drop são 10 a 15 ' +
           'minutos; no resto do dia, 27 de média.\n\n' +
           'Altura máxima de 1,98 m. Nada solto: armário de US$ 2 na entrada da fila.',
-        areaParque: 'Port of Entry', acesso: ['rope-drop', 'standby'], duracaoMin: 30,
+        areaParque: 'Port of Entry', acesso: ['rope-drop', 'standby'], locker: true,
+        duracaoMin: 30,
         pesquisa: '2026-09-11' },
 
       { id: 'b-2211-0935', hora: '09:35', ancora: 'referencia', tipo: 'atracao',
@@ -5709,7 +5724,8 @@ window.ROTEIRO = {
           'A fila média do dia é de 22 minutos, e à tarde fica em 30 a 45. De manhã, a cinco ' +
           'minutos da Pipeline, sai barata.\n\n' +
           'Nada solto: armário de US$ 2 na entrada da fila.',
-        areaParque: 'Sea of Power', acesso: ['standby'], duracaoMin: 30, pesquisa: '2026-09-11' },
+        areaParque: 'Sea of Power', acesso: ['standby'], locker: true, duracaoMin: 30,
+        pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1005', hora: '10:05', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Expedition Odyssey: Fire & Ice',
@@ -5732,7 +5748,8 @@ window.ROTEIRO = {
           'Não precisa de manhã: a fila média do dia é de 13 minutos.\n\n' +
           'São onze minutos a pé do Expedition Odyssey, passando pelo estádio do Orca. Nada ' +
           'solto: armário de US$ 2 na entrada da fila.',
-        areaParque: 'Sea of Mystery', acesso: ['standby'], duracaoMin: 30, pesquisa: '2026-09-11' },
+        areaParque: 'Sea of Mystery', acesso: ['standby'], locker: true, duracaoMin: 30,
+        pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1140', hora: '11:40', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Shark Encounter',
@@ -5774,7 +5791,8 @@ window.ROTEIRO = {
           'A fila média do dia é de 10 minutos, a menor entre as montanhas-russas grandes — por ' +
           'isso ela fica para depois do almoço.\n\n' +
           'Nada solto: armário de US$ 2 na entrada da fila.',
-        areaParque: 'Sea of Legends', acesso: ['standby'], duracaoMin: 25, pesquisa: '2026-09-11' },
+        areaParque: 'Sea of Legends', acesso: ['standby'], locker: true, duracaoMin: 25,
+        pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1420', hora: '14:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Journey to Atlantis',
@@ -5785,7 +5803,8 @@ window.ROTEIRO = {
           'inteira para secar antes de escurecer. Capa de chuva, e o celular no Ziploc ou no ' +
           'armário de US$ 2.\n\n' +
           'Fila média de 21 minutos.',
-        areaParque: 'Sea of Legends', acesso: ['standby'], molha: true, duracaoMin: 35,
+        areaParque: 'Sea of Legends', acesso: ['standby'], molha: true, locker: true,
+        duracaoMin: 35,
         pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1500', hora: '15:00', ancora: 'referencia', tipo: 'atracao',
@@ -5796,7 +5815,8 @@ window.ROTEIRO = {
           'para baixo, braços soltos, passando rente à água. 43 metros, 90 km/h e quatro ' +
           'inversões.\n\n' +
           'Fila média de 19 minutos. Nada solto: armário de US$ 2 na entrada da fila.',
-        areaParque: 'Sea of Shallows', acesso: ['standby'], duracaoMin: 30, pesquisa: '2026-09-11' },
+        areaParque: 'Sea of Shallows', acesso: ['standby'], locker: true, duracaoMin: 30,
+        pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1535', hora: '15:35', ancora: 'referencia', tipo: 'livre',
         titulo: 'Tartarugas, golfinhos e arraias',
@@ -5934,15 +5954,16 @@ window.ROTEIRO = {
     },
     ficha: {
       multiPass: null, singlePass: null, expressPass: null,
-      custoEstimadoCasal: { min: 37, max: 49, moeda: 'USD' },
+      custoEstimadoCasal: { min: 37, max: 47, moeda: 'USD' },
       extras: [
         { nome: 'Estacionamento geral',
           custo: { min: 37, max: 37, moeda: 'USD' },
           texto: 'US$ 37 por carro. Pagar antes pelo site agiliza a entrada.' },
         { nome: 'Armários das montanhas-russas',
-          custo: { min: 0, max: 12, moeda: 'USD' },
-          texto: 'US$ 2 por uso, na entrada da Pipeline, Ice Breaker, Mako, Kraken, Manta e ' +
-                 'Journey to Atlantis. Um armário serve para os dois.' },
+          custo: { min: 0, max: 10, moeda: 'USD' },
+          texto: 'US$ 2 pelas primeiras duas horas, na entrada da Pipeline, Ice Breaker, Mako, ' +
+                 'Kraken, Manta e Journey to Atlantis. O de uso múltiplo, que muda de atração o ' +
+                 'dia inteiro, custa US$ 10. Um armário serve para os dois.' },
         { nome: 'Plano de refeição',
           texto: 'Incluso no ingresso: uma refeição a cada 90 minutos em oito restaurantes. O ' +
                  'dia usa três.' },
@@ -6073,7 +6094,9 @@ window.ROTEIRO = {
           'Passando a catraca, sigam pela esquerda: Seuss Landing, Lost Continent e Hogsmeade, ' +
           'uns 12 minutos a pé. Pela direita, pela Marvel, é mais longe.\n\n' +
           'Quem está hospedado na Universal entra uma hora antes, e o Hagrid’s costuma estar ' +
-          'nessa lista. Mesmo assim, a abertura é a hora mais barata dele para vocês.',
+          'nessa lista. Mesmo assim, a abertura é a hora mais barata dele para vocês.\n\n' +
+          'PONTO DE ENCONTRO DE HOJE: o mesmo do dia 14, o farol do Port of Entry, na beira da ' +
+          'lagoa. Se vocês se perderem, vão para lá e ESPEREM.',
         localId: 'islands-of-adventure', acesso: [], duracaoMin: 25, pesquisa: '2026-09-11' },
 
       { id: 'b-2311-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
@@ -6322,9 +6345,9 @@ window.ROTEIRO = {
       'da tarde, o trem pela planície dos animais e o Natal à noite, com mais duas voltas no ' +
       'escuro antes da estrada. O dia mais pesado fisicamente da viagem.',
     avisos: [
-      'OBJETO SOLTO É PROIBIDO EM NOVE ATRAÇÕES, entre elas todas as montanhas-russas do dia. ' +
-      'O armário avulso custa US$ 4 pelas primeiras duas horas. Levem o mínimo: o resto fica ' +
-      'no carro.',
+      'OBJETO SOLTO É PROIBIDO EM NOVE ATRAÇÕES, entre elas todas as montanhas-russas do dia, ' +
+      'e a Iron Gwazi tem detector de metal. O armário custa US$ 4 por duas horas, ou US$ 12 ' +
+      'o dia inteiro trocando de atração. Levem o mínimo: o resto fica no carro.',
       'Vocês chegam ao hotel por volta das 22h15, e amanhã o carro volta à Avis às 15h.',
     ],
     notas: [
@@ -6424,6 +6447,8 @@ window.ROTEIRO = {
         contexto:
           'A entrada é pelo Morocco, e a Iron Gwazi fica a poucos passos. Detector de metal na ' +
           'entrada.\n\n' +
+          'PONTO DE ENCONTRO DE HOJE: o Guest Relations, logo depois da entrada, no Morocco. Se ' +
+          'vocês se perderem, vão para lá e ESPEREM.\n\n' +
           'MOCHILA MÍNIMA: objeto solto é proibido nas montanhas-russas, e cada armário avulso ' +
           'custa US$ 4 pelas primeiras duas horas.',
         localId: 'busch-gardens', acesso: [], duracaoMin: 45, pesquisa: '2026-09-11' },
@@ -6437,8 +6462,11 @@ window.ROTEIRO = {
           'América do Norte.\n\n' +
           'POR QUE PRIMEIRO: fica na entrada e é a que mais disputa o rope drop. A fila média de ' +
           '2026 é de 23 minutos, com pico de 46.\n\n' +
-          'Nada solto: armário obrigatório.',
-        areaParque: 'Morocco', acesso: ['rope-drop', 'standby'], duracaoMin: 40,
+          'DETECTOR DE METAL: nada nos bolsos, nem celular nem chave do carro. O armário é ' +
+          'pago e obrigatório — US$ 4 por duas horas, ou o do dia inteiro, que muda de ' +
+          'atração.',
+        areaParque: 'Morocco', acesso: ['rope-drop', 'standby'], locker: 'detector',
+        duracaoMin: 40,
         pesquisa: '2026-09-11' },
 
       { id: 'b-2411-1045', hora: '10:45', ancora: 'referencia', tipo: 'atracao',
@@ -6449,7 +6477,8 @@ window.ROTEIRO = {
           'É a maior fila média do Busch em 2026: 33 minutos, com pico de 56. Por isso vem logo ' +
           'depois da Iron Gwazi, a dois minutos a pé.\n\n' +
           'Nada solto: armário obrigatório.',
-        areaParque: 'Edge of Africa', acesso: ['standby'], duracaoMin: 45, pesquisa: '2026-09-11' },
+        areaParque: 'Edge of Africa', acesso: ['standby'], locker: true, duracaoMin: 45,
+        pesquisa: '2026-09-11' },
 
       { id: 'b-2411-1135', hora: '11:35', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Montu',
@@ -6459,7 +6488,8 @@ window.ROTEIRO = {
           'e sete inversões em uns três minutos. Quando abriu, em 1996, era a invertida mais alta ' +
           'e rápida do mundo.\n\n' +
           'Fila média de 12 minutos. Nada solto: armário obrigatório.',
-        areaParque: 'Egypt', acesso: ['standby'], duracaoMin: 30, pesquisa: '2026-09-11' },
+        areaParque: 'Egypt', acesso: ['standby'], locker: true, duracaoMin: 30,
+        pesquisa: '2026-09-11' },
 
       { id: 'b-2411-1220', hora: '12:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Falcon’s Fury',
@@ -6469,7 +6499,8 @@ window.ROTEIRO = {
           'caem de cara para o chão — cerca de cinco segundos de queda livre, a 97 km/h.\n\n' +
           'São onze minutos a pé do Montu, passando pela Nairobi. Fila média de 7 minutos. Nada ' +
           'solto: armário obrigatório.',
-        areaParque: 'Pantopia', acesso: ['standby'], duracaoMin: 20, pesquisa: '2026-09-11' },
+        areaParque: 'Pantopia', acesso: ['standby'], locker: true, duracaoMin: 20,
+        pesquisa: '2026-09-11' },
 
       { id: 'b-2411-1245', hora: '12:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'SheiKra',
@@ -6479,7 +6510,8 @@ window.ROTEIRO = {
           'e cai na vertical. Depois vêm um loop, uma segunda queda a 90° para dentro de um túnel ' +
           'e uma passagem rente à água que levanta um paredão de spray.\n\n' +
           'Fila média de 10 minutos. Nada solto: armário obrigatório.',
-        areaParque: 'Stanleyville', acesso: ['standby'], duracaoMin: 30, pesquisa: '2026-09-11' },
+        areaParque: 'Stanleyville', acesso: ['standby'], locker: true, duracaoMin: 30,
+        pesquisa: '2026-09-11' },
 
       { id: 'b-2411-1320', hora: '13:20', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Zambia Smokehouse',
@@ -6499,7 +6531,8 @@ window.ROTEIRO = {
           'Montanha-russa de lançamento que vai e volta: três lançamentos, 46 metros e 100 km/h, ' +
           'com um giro de cabeça para baixo. Curta e intensa.\n\n' +
           'Fila média de 18 minutos. Nada solto: armário obrigatório.',
-        areaParque: 'Stanleyville', acesso: ['standby'], duracaoMin: 30, pesquisa: '2026-09-11' },
+        areaParque: 'Stanleyville', acesso: ['standby'], locker: true, duracaoMin: 30,
+        pesquisa: '2026-09-11' },
 
       { id: 'b-2411-1455', hora: '14:55', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Serengeti Express',
@@ -6567,15 +6600,18 @@ window.ROTEIRO = {
           'A mesma montanha-russa da manhã, agora no escuro — é a volta noturna mais elogiada do ' +
           'parque. Fica perto da saída.\n\n' +
           'Nada solto: armário obrigatório.',
-        areaParque: 'Edge of Africa', acesso: ['standby'], duracaoMin: 40, pesquisa: '2026-09-11' },
+        areaParque: 'Edge of Africa', acesso: ['standby'], locker: true, duracaoMin: 40,
+        pesquisa: '2026-09-11' },
 
       { id: 'b-2411-1955', hora: '19:55', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Iron Gwazi à noite',
         descricao: 'Opcional. Ao lado da saída',
         contexto:
           'A última volta do dia, a dois minutos do Cheetah Hunt e colada na saída. Se o parque ' +
-          'fechar às 20h, ela sai — é o plano B2.',
-        areaParque: 'Morocco', acesso: ['standby'], opcional: true, duracaoMin: 30,
+          'fechar às 20h, ela sai — é o plano B2.\n\n' +
+          'DETECTOR DE METAL de novo: celular e chave no armário.',
+        areaParque: 'Morocco', acesso: ['standby'], opcional: true, locker: 'detector',
+        duracaoMin: 30,
         pesquisa: '2026-09-11' },
 
       { id: 'b-2411-2030', hora: '20:30', ancora: 'fixo', tipo: 'deslocamento',
@@ -6616,15 +6652,16 @@ window.ROTEIRO = {
     },
     ficha: {
       multiPass: null, singlePass: null, expressPass: null,
-      custoEstimadoCasal: { min: 32, max: 59, moeda: 'USD' },
+      custoEstimadoCasal: { min: 40, max: 47, moeda: 'USD' },
       extras: [
         { nome: 'Estacionamento geral',
           custo: { min: 32, max: 35, moeda: 'USD' },
           texto: 'US$ 32 mais imposto, do outro lado da rua do parque.' },
         { nome: 'Armários das montanhas-russas',
-          custo: { min: 0, max: 24, moeda: 'USD' },
-          texto: 'US$ 4 pelas primeiras duas horas, em cada atração que proíbe objeto solto. Sem ' +
-                 'bolsa, custa zero: o que não couber no bolso fica no carro.' },
+          custo: { min: 8, max: 12, moeda: 'USD' },
+          texto: 'A Iron Gwazi tem detector de metal: celular e chave vão para o armário pago, de ' +
+                 'manhã e à noite — US$ 8 em dois avulsos de US$ 4. O armário do dia, US$ 12, ' +
+                 'muda de atração e cobre as outras montanhas-russas.' },
         { nome: 'Plano de refeição',
           texto: 'Incluso no ingresso: uma refeição a cada 90 minutos. O dia usa três.' },
         { nome: 'Quick Queue — não',
@@ -7136,8 +7173,8 @@ window.ROTEIRO = {
      ------------------------------------------------------------------------ */
   restaurantes: [
     { id: 'r-boathouse', nome: 'The Boathouse', data: '2026-11-10', hora: '19:00',
-      refeicao: 'jantar', local: 'Disney Springs · The Landing', alternativas: ['Black Angus ou Miller\u2019s Ale House, na 192, se o dia virar plano C'],
-      precisaReserva: true, janelaAbre: '2026-09-11', janelaHora: '06:00 ET',
+      refeicao: 'jantar', local: 'Disney Springs · The Landing', alternativas: ['Black Angus ou Miller’s Ale House, na 192, se o dia virar plano C'],
+      precisaReserva: true, janelaAbre: null, janelaHora: null,
       canal: 'Disney Springs / OpenTable', blocoId: 'b-1011-1900',
       statusPadrao: 'confirmado', confirmacaoPadrao: '2111918775',
       nota: 'RESERVADO em 08/09 — confirmação 2111918775. Frutos do mar e carnes na ' +
@@ -7149,16 +7186,14 @@ window.ROTEIRO = {
       alternativas: ['Liberty Tree Tavern, na mesma Liberty Square', 'Skipper Canteen, na Adventureland'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Mobile order pelo My Disney Experience', blocoId: 'b-1111-1230',
-      nota: 'DECIDIDO em 08/09: parque corrido, almoço de balcão sem reserva. Peixe e ' +
-            'sanduíches. Subam para o segundo andar — quase ninguém acha, e é o lugar ' +
-            'mais silencioso do Magic Kingdom. Liberty Tree Tavern e Skipper Canteen ' +
-            'ficaram de fora.' },
+      nota: 'Parque corrido, almoço de balcão sem reserva: peixe e sanduíches. Subam para o ' +
+            'segundo andar — quase ninguém acha, e é o lugar mais silencioso do Magic Kingdom.' },
 
     { id: 'r-caseys', nome: 'Casey’s Corner', data: '2026-11-11', hora: '17:55',
-      refeicao: 'jantar', local: 'Magic Kingdom · Main Street', alternativas: ['Pecos Bill, na Frontierland', 'Cosmic Ray\u2019s, na Tomorrowland'],
+      refeicao: 'jantar', local: 'Magic Kingdom · Main Street', alternativas: ['Pecos Bill, na Frontierland', 'Cosmic Ray’s, na Tomorrowland'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Mobile order pelo My Disney Experience', blocoId: 'b-1111-1745',
-      nota: 'DECIDIDO em 08/09: escolhido pela experiência do pianista, que toca na porta ' +
+      nota: 'Escolhido pela experiência do pianista, que toca na porta ' +
             'ao ar livre. Usem mobile order e comam nas mesas de fora, de frente para o ' +
             'piano — comer dentro perde o motivo da escolha.' },
 
@@ -7172,19 +7207,20 @@ window.ROTEIRO = {
             'das 11h às 22h. A conta já vem com 20% de taxa de serviço, no lugar da gorjeta.' },
 
     { id: 'r-satuli', nome: 'Satu’li Canteen', data: '2026-11-13', hora: '12:30',
-      refeicao: 'almoco', local: 'Animal Kingdom · Pandora', alternativas: ['Flame Tree Barbecue, na Discovery Island', 'Harambe Market, na \u00c1frica'],
+      refeicao: 'almoco', local: 'Animal Kingdom · Pandora', alternativas: ['Flame Tree Barbecue, na Discovery Island', 'Harambe Market, na África'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Mobile order pelo My Disney Experience', blocoId: 'b-1311-1215',
       nota: 'Balcão. Eleito o melhor quick service do Walt Disney World.' },
 
     { id: 'r-nomad', nome: 'Nomad Lounge', data: '2026-11-13', hora: '14:25',
-      refeicao: 'drink', local: 'Animal Kingdom · Discovery Island', alternativas: ['Tiffins, ao lado \u2014 mesma cozinha, mesa e reserva'],
+      refeicao: 'drink', local: 'Animal Kingdom · Discovery Island', alternativas: ['Tiffins, ao lado — mesma cozinha, mesa e reserva'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Lista de espera no local', blocoId: 'b-1311-1630',
-      nota: 'Não aceita reserva. Coloquem o nome na lista e passeiem enquanto esperam.' },
+      canal: 'Lista de espera pelo My Disney Experience ou no balcão', blocoId: 'b-1311-1630',
+      nota: 'Não aceita reserva. Entrem na lista de espera pelo app da Disney, ou no balcão, ' +
+            'e passeiem enquanto esperam. Mesa com garçom: leva gorjeta.' },
 
     { id: 'r-sanaa', nome: 'Sanaa', data: '2026-11-13', hora: '19:45',
-      refeicao: 'jantar', local: 'Animal Kingdom Lodge', alternativas: ['The Mara, balc\u00e3o no mesmo hotel', 'Boma, bufe no mesmo hotel'],
+      refeicao: 'jantar', local: 'Animal Kingdom Lodge', alternativas: ['The Mara, balcão no mesmo hotel', 'Boma, bufe no mesmo hotel'],
       precisaReserva: true, janelaAbre: '2026-09-14', janelaHora: '06:00 ET',
       canal: 'My Disney Experience', blocoId: 'b-1311-1945',
       nota: 'Vão pela comida, não pela janela: às 19h45 de novembro está escuro há mais ' +
@@ -7193,7 +7229,7 @@ window.ROTEIRO = {
             'Animal Kingdom Lodge, não dentro do parque.' },
 
     { id: 'r-columbia', nome: 'Columbia Restaurant', data: '2026-11-14', hora: '12:30',
-      refeicao: 'almoco', local: 'Celebration · Market Street', alternativas: ['Qualquer coisa da Market Street, a p\u00e9', 'Ou voltar ao hotel e almo\u00e7ar na 192'],
+      refeicao: 'almoco', local: 'Celebration · Market Street', alternativas: ['Qualquer coisa da Market Street, a pé', 'Ou voltar ao hotel e almoçar na 192'],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
       canal: 'Site do restaurante / OpenTable', blocoId: 'b-1411-1230',
       nota: 'Peçam o 1905 Salad, preparado na mesa, e o sanduíche cubano.' },
@@ -7382,10 +7418,10 @@ window.ROTEIRO = {
       texto: 'The Boathouse (10/11) — RESERVADO, confirmação 2111918775',
       restauranteIds: ['r-boathouse'] },
 
-    { id: 'ck-1209', dataAlvo: '2026-09-12', hora: '06:00', fuso: 'ET',
+    { id: 'ck-1209', dataAlvo: '2026-09-12', hora: null, fuso: null,
       janelaReserva: false, critico: false, feitoPadrao: true,
-      texto: 'Magic Kingdom — DISPENSADA. Almoço e jantar do dia 11 viraram balcão ' +
-             '(Columbia Harbour House e Casey’s), sem reserva. A janela de 12/09 caiu.',
+      texto: 'Magic Kingdom — sem reserva: almoço e jantar do dia 11 são de balcão ' +
+             '(Columbia Harbour House e Casey’s)',
       restauranteIds: ['r-columbia-harbour'] },
 
     { id: 'ck-1409', dataAlvo: '2026-09-14', hora: '06:00', fuso: 'ET',
@@ -7415,8 +7451,8 @@ window.ROTEIRO = {
       janelaReserva: true, critico: false,
       texto: 'Epcot: abrir a janela de mesa só se mudarem de ideia sobre o Food & Wine',
       nota:
-        'JÁ DECIDIDO: o jantar do dia 16 É o Food & Wine — três voltas de barracas ao ' +
-        'longo da tarde, e a última às 20h antes de pegar lugar para o Luminous.\n\n' +
+        'O JANTAR DO DIA 16 É O FOOD & WINE — quatro voltas de barracas ao longo da tarde e ' +
+        'da noite, a última às 20h, antes de pegar lugar para o Luminous.\n\n' +
         'Esta janela fica registrada porque hoje é o único dia em que ela abre. Se em ' +
         'algum momento vocês decidirem que querem uma mesa de verdade no Epcot, é hoje ' +
         'ou nunca. Não decidindo nada, não façam nada — e risquem.',
@@ -7426,9 +7462,10 @@ window.ROTEIRO = {
       janelaReserva: false, critico: true,
       texto: 'Confirmar com a agência a regra exata de validade do ingresso Disney de 4 dias',
       nota:
-        'Virou a pendência mais importante da lista. Se o ingresso for date-based, o Multi ' +
-        'Pass dos 4 dias sai numa compra só em 08/11. Se não for, são quatro compras separadas. ' +
-        'Isso muda as quatro tarefas de Lightning Lane deste checklist.',
+        'É a pendência mais importante da lista. Se o ingresso for de datas fixas, o ' +
+        'Lightning Lane dos três dias de passe — Multi Pass e Single Pass — sai numa compra ' +
+        'só, em 08/11. Se não for, são três compras: 08/11, 12/11 e 13/11. Isso muda as ' +
+        'quatro pendências de Lightning Lane deste checklist.',
       restauranteIds: [] },
 
     { id: 'ck-shuttle', dataAlvo: '2026-10-06', dataEstimada: true,
@@ -7440,7 +7477,8 @@ window.ROTEIRO = {
         'economiza Uber nos dias 11 e 15. ATENÇÃO: shuttle de hotel quase sempre chega ' +
         'depois da abertura e tem volta em horário fixo — provavelmente NÃO serve para o ' +
         'rope drop das 9h, que é a estratégia dos dois dias. Vale confirmar o horário real ' +
-        'antes de contar com ele. Se a primeira saída for depois das 7h30, ignorem.',
+        'antes de contar com ele. O roteiro sai às 6h45 no dia 11 e às 7h no dia 15: se o ' +
+        'primeiro shuttle sair depois disso, ignorem.',
       restauranteIds: [] },
 
     { id: 'ck-carro', dataAlvo: '2026-10-06', dataEstimada: true, motivoData: 'Preço de locadora sobe perto da data', hora: null, fuso: null,
@@ -7483,8 +7521,8 @@ window.ROTEIRO = {
         'fechados: Columbia Harbour House e Casey’s no dia 11, Satu’li Canteen no dia 13 e ' +
         'Docking Bay 7 no dia 15. Cada um desses pula de 20 a 30 minutos de fila de balcão ' +
         'que o roteiro já não conta.\n\n' +
-        'Sem cartão salvo, não pula. E a alternativa era descobrir isso na noite de 10/11, ' +
-        'depois de doze horas de viagem — que é exatamente quando ninguém faz.',
+        'Sem cartão salvo, não pula — e descobrir isso na noite de 10/11, depois de doze ' +
+        'horas de viagem, é tarde.',
       restauranteIds: [] },
 
     { id: 'ck-horarios-epic', dataAlvo: '2026-11-01', dataEstimada: true,
@@ -7538,8 +7576,8 @@ window.ROTEIRO = {
       nota:
         'Os dois parques são da mesma empresa e vieram na mesma compra. Confiram que o ' +
         'PLANO DE REFEIÇÃO — o All-Day Dining Deal, uma refeição a cada 90 minutos — está ' +
-        'incluído nos dois: o dia 22 usa três refeições dele, e o dia 24 conta com ele para o ' +
-        'almoço. Sem plano, o custo desses dias muda.\n\n' +
+        'incluído nos dois: os dias 22 e 24 usam três refeições dele cada um — almoço, ' +
+        'lanche e jantar. Sem plano, o custo desses dias muda.\n\n' +
         'Riscar só quando aparecer no app da Bianca também.',
       restauranteIds: [] },
 
@@ -7599,9 +7637,9 @@ window.ROTEIRO = {
       restauranteIds: [] },
 
     { id: 'ck-esim', dataAlvo: '2026-10-25', dataEstimada: true,
-      motivoData: 'Duas semanas antes, com folga para contratar pacote se a linha da Bianca for cobrada por dia',
+      motivoData: 'Duas semanas antes, com folga para resolver a ativação com as operadoras',
       hora: null, fuso: null, janelaReserva: false, critico: true,
-      texto: 'Ativar o roaming nas duas linhas e confirmar se a da Bianca é cobrada por dia',
+      texto: 'Ativar o roaming nas duas linhas e confirmar a cobertura na Colômbia',
       nota:
         'São duas operadoras diferentes, com regras diferentes. Isso é bom — dá ' +
         'redundância, e dentro de parque lotado uma pode pegar sinal onde a outra não ' +
@@ -7615,8 +7653,8 @@ window.ROTEIRO = {
         'só a ativação: alguns planos pedem que o serviço seja ligado no app da operadora ' +
         'antes da viagem, e ninguém quer descobrir isso no desembarque.\n\n' +
         'NOS DOIS CASOS: ligar o roaming de dados nos ajustes do aparelho, além de ativar ' +
-        'no app da operadora. E confirmar que a Colômbia está coberta — se estiver, a ' +
-        'compra do Single Pass às 7h ET do dia 10 deixa de depender do wifi de Bogotá.',
+        'no app da operadora. E confirmar que a Colômbia está coberta: as duas conexões da ' +
+        'viagem são em Bogotá, na ida e na volta.',
       restauranteIds: [] },
 
     { id: 'ck-vip-outlet', dataAlvo: '2026-11-05', dataEstimada: true,
@@ -7658,8 +7696,9 @@ window.ROTEIRO = {
       janelaReserva: false, critico: false,
       texto: 'Reserva do Travelodge salva OFFLINE nos dois celulares',
       nota:
-        'Mesma lógica da apólice: e-mail sem internet não abre, e vocês chegam de ' +
-        'madrugada num país onde ninguém fala português. O endereço também vai escrito ' +
+        'Mesma lógica da apólice: e-mail sem internet não abre, e vocês chegam depois de ' +
+        'uma noite inteira de voo, num país onde ninguém fala português. O endereço também ' +
+        'vai escrito ' +
         'no papel — 5367 W Irlo Bronson Memorial Hwy, Kissimmee — porque é o que resolve ' +
         'se o celular não conectar no aeroporto.',
       restauranteIds: [] },
@@ -7675,7 +7714,7 @@ window.ROTEIRO = {
         'O BANCO: avisem da viagem. Compra internacional inesperada é motivo comum de ' +
         'bloqueio, e desbloquear de fora dá trabalho. Levem um cartão de reserva guardado ' +
         'em outro lugar que não a mesma carteira, e uns US$ 100 em espécie.\n\n' +
-        'Detalhes na dica \u201cQuando dá errado\u201d, no Guia.',
+        'Detalhes na dica “Quando dá errado”, no Guia.',
       restauranteIds: [] },
 
     { id: 'ck-horarios-ak', dataAlvo: '2026-09-14', hora: null, fuso: null,
@@ -7699,7 +7738,8 @@ window.ROTEIRO = {
       janelaReserva: false, critico: false,
       texto: 'Reservar o MCO Reserve para a volta de 26/11',
       nota:
-        'É GRÁTIS e reserva-se até 7 dias antes, em flymco.com. Garante uma faixa de ' +
+        'É GRÁTIS, em flymco.com, e a reserva abre 7 dias antes do voo: para 26/11, em ' +
+        '19/11. Garante uma faixa de ' +
         'horário numa fila dedicada do raio-x da TSA, sem precisar de TSA PreCheck nem ' +
         'CLEAR. Uma reserva cobre até 10 pessoas, então é uma só para os dois.\n\n' +
         'O Terminal C opera das 5h às 19h, para voos que decolam entre 6h30 e 22h30 — a ' +
@@ -7807,7 +7847,7 @@ window.ROTEIRO = {
         'mudem a referência na tela do dia 11 e tudo o que é ancorado desloca junto, ' +
         'inclusive a saída do hotel. O desfile e os fogos não deslocam.\n\n' +
         'Confiram na mesma visita: a hora do Festival of Fantasy (15h é o padrão), a ' +
-        'hora do Happily Ever After (20h a partir de 01/11) e se a Tiana\u2019s voltou ' +
+        'hora do Happily Ever After (20h a partir de 01/11) e se a Tiana’s voltou ' +
         'da reforma antes do previsto.',
       restauranteIds: [] },
 
@@ -7818,15 +7858,17 @@ window.ROTEIRO = {
         'Os dois shows SEGUEM O FECHAMENTO DO PARQUE, não a abertura, e cada um fecha o ' +
         'seu dia.\n\n' +
         'FANTASMIC (15/11): com fechamento às 21h ele costuma ser às 20h; com 22h, às ' +
-        '21h. O roteiro assume 20h15.\n\n' +
+        '21h. O roteiro assume 20h.\n\n' +
         'LUMINOUS (16/11): roda junto do fechamento. O roteiro assume 21h.\n\n' +
-        'Se algum mudar, ajustem o selo de horário no bloco do show — os blocos de ' +
-        'posição andam junto. E confiram a abertura dos dois dias, que move a manhã.',
+        'Se algum mudar, ajustem a hora no bloco do show. A posição para o show, o bloco ' +
+        'antes dela e a volta ao hotel não andam junto: ajustem à mão. E confiram a abertura ' +
+        'dos dois dias, que move a manhã.',
       restauranteIds: [] },
 
-    { id: 'ck-horarios', dataAlvo: '2026-10-10', dataEstimada: true, motivoData: 'A Disney publica os horários ~60 dias antes', hora: null, fuso: null,
-      janelaReserva: false, critico: true,
-      texto: 'Conferir horários oficiais dos demais parques e ajustar a referência de cada dia',
+    { id: 'ck-horarios', dataAlvo: '2026-10-10', dataEstimada: true,
+      motivoData: 'Universal, SeaWorld e Busch Gardens publicam novembro sem data fixa: confiram em outubro e de novo na semana da viagem',
+      hora: null, fuso: null, janelaReserva: false, critico: true,
+      texto: 'Conferir os horários oficiais de 17, 22, 23 e 24/11 e ajustar a referência de cada dia',
       nota: 'É só editar o horário de abertura no dia — os blocos ancorados deslocam sozinhos.',
       restauranteIds: [] },
 
@@ -7835,10 +7877,13 @@ window.ROTEIRO = {
       texto: 'Confirmar horário do Grinchmas (14/11), do desfile da Macy’s (17/11) e do ' +
              'Fantasmic! (15/11) — e o fechamento do parque em 17/11',
       nota:
-        'O Grinchmas é a referência do dia 14 — ajustando ele, a noite inteira desloca.\n\n' +
+        'O Grinchmas é a referência do dia 14: ajustando ele, deslocam a saída, a fila e a ' +
+        'Hogsmeade decorada. A projeção no castelo, o Hippogriff, o jantar e a volta são ' +
+        'fixos e se ajustam à mão.\n\n' +
         'O DESFILE DA MACY’S É O MAIS INCERTO DOS TRÊS. O dia 17 assume 17h30, mas em anos ' +
         'anteriores ele rodou tanto às 17h30 quanto às 19h30 — duas horas de diferença. ' +
-        'Três blocos andam com ele: o desfile, o jantar no Lombard’s — com reserva, remarcada ' +
+        'Três blocos dependem dele e se ajustam à mão: o desfile, o jantar no Lombard’s — com ' +
+        'reserva, remarcada ' +
         'pelo app da Universal — e o Beco Diagonal à ' +
         'noite.\n\n' +
         'CONFIRAM TAMBÉM O FECHAMENTO DE 17/11. O parque fecha entre 19h e 22h conforme a ' +
@@ -7849,9 +7894,9 @@ window.ROTEIRO = {
 
   /* ---------------------------------------------------------------------------
      LOCAIS
-     ATENÇÃO: todas as coordenadas têm verificado:false. São aproximações de
-     conhecimento público, não do documento. Confira antes de confiar no pin.
-     Tempos com fonte:'documento' vieram do roteiro; 'estimado' são meus.
+     Coordenadas conferidas no OpenStreetMap ou na Wikipedia (fonteCoord).
+     Tempos com tempoFonte:'documento' vieram do roteiro, 'confirmado' foi
+     medido na rota, e 'estimado' é estimativa.
      ------------------------------------------------------------------------ */
   locais: [
     { id: 'hotel-travelodge', nome: 'Travelodge by Wyndham Orlando Lake Buena Vista South',
@@ -7888,7 +7933,7 @@ window.ROTEIRO = {
 
     { id: 'animal-kingdom', nome: 'Disney’s Animal Kingdom', tipo: 'parque',
       lat: 28.358, lng: -81.59, verificado: true, fonteCoord: 'wikipedia', endereco: null,
-      doHotel: { tempoMin: 25, tempoFonte: 'estimado',
+      doHotel: { tempoMin: 35, tempoFonte: 'documento',
                  uberUSD: { min: 20, max: 30 }, uberFonte: 'estimado' } },
 
     { id: 'ak-lodge', nome: 'Animal Kingdom Lodge (Sanaa)', tipo: 'restaurante',
@@ -7899,8 +7944,8 @@ window.ROTEIRO = {
 
     { id: 'hollywood-studios', nome: 'Disney’s Hollywood Studios', tipo: 'parque',
       lat: 28.3575, lng: -81.56, verificado: true, fonteCoord: 'wikipedia', endereco: null,
-      doHotel: { tempoMin: 25, tempoFonte: 'estimado',
-                 uberUSD: { min: 20, max: 30 }, uberFonte: 'estimado' } },
+      doHotel: { tempoMin: 30, tempoFonte: 'documento',
+                 uberUSD: { min: 22, max: 32 }, uberFonte: 'estimado' } },
 
     { id: 'epcot', nome: 'Epcot', tipo: 'parque',
       lat: 28.371, lng: -81.55, verificado: true, fonteCoord: 'wikipedia', endereco: null,
@@ -7917,7 +7962,7 @@ window.ROTEIRO = {
     { id: 'universal-studios', nome: 'Universal Studios Florida', tipo: 'parque',
       lat: 28.4752, lng: -81.467, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 33, tempoFonte: 'documento',
-                 uberUSD: { min: 28, max: 40 }, uberFonte: 'estimado' },
+                 uberUSD: { min: 25, max: 35 }, uberFonte: 'estimado' },
       nota: 'Documento: 30–35 min de Kissimmee. Do estacionamento à catraca são +15–20 min a pé.' },
 
     { id: 'islands-of-adventure', nome: 'Islands of Adventure', tipo: 'parque',
@@ -7971,7 +8016,7 @@ window.ROTEIRO = {
 
     { id: 'millenia', nome: 'The Mall at Millenia', tipo: 'compras',
       lat: 28.48538, lng: -81.431312, verificado: true, fonteCoord: 'wikipedia', endereco: '4200 Conroy Rd',
-      doHotel: { tempoMin: 30, tempoFonte: 'documento',
+      doHotel: { tempoMin: 25, tempoFonte: 'documento',
                  uberUSD: { min: 28, max: 40 }, uberFonte: 'estimado' } },
 
     { id: 'best-buy', nome: 'Best Buy — Millenia', tipo: 'compras',
@@ -8034,15 +8079,6 @@ window.ROTEIRO = {
             'sanduíche na hora.' },
   ],
 
-  /* ---------------------------------------------------------------------------
-     DICAS E RECOMENDAÇÕES — conteúdo de leitura, sem interação
-     ------------------------------------------------------------------------ */
-  /* ---------------------------------------------------------------------------
-     TELEFONES
-     So entra numero conferido na fonte oficial. O da companhia aerea nao esta
-     aqui de proposito: o certo para o bilhete de voces esta no proprio bilhete,
-     e numero de companhia aerea achado em busca costuma ser de revenda.
-     ------------------------------------------------------------------------ */
   /* ---------------------------------------------------------------------------
      TOPOGRAFIA DOS PARQUES
      Nao e mapa e nao quer ser. Sao as arestas de que temos certeza — quais areas
@@ -8121,7 +8157,7 @@ window.ROTEIRO = {
              'abre. O Galaxy’s Edge fica no fundo, atrás do Echo Lake, e é o ponto mais ' +
              'longe de tudo.',
       margem: 'Somem 50% em dia cheio. E a travessia Galaxy’s Edge ↔ Sunset Blvd é a mais ' +
-              'longa de todos os parques mapeados: treze minutos de ponta a ponta.',
+              'longa dos parques da Disney: treze minutos de ponta a ponta.',
       arestas: [
         ['Hollywood Blvd', 'Echo Lake', 3],
         ['Hollywood Blvd', 'Sunset Blvd', 4],
@@ -8247,6 +8283,12 @@ window.ROTEIRO = {
     },
   },
 
+  /* ---------------------------------------------------------------------------
+     TELEFONES
+     So entra numero conferido na fonte oficial. O da companhia aerea nao esta
+     aqui de proposito: o certo para o bilhete de voces esta no proprio bilhete,
+     e numero de companhia aerea achado em busca costuma ser de revenda.
+     ------------------------------------------------------------------------ */
   contatos: [
     { id: 'tel-emergencia', nome: 'Emergência — polícia, bombeiro, ambulância',
       numero: '911', critico: true,
@@ -8257,17 +8299,20 @@ window.ROTEIRO = {
     { id: 'tel-hotel', nome: 'Travelodge by Wyndham Orlando Lake Buena Vista South',
       numero: '+1 407-449-2357', critico: true,
       quando:
-        'Recepção. Guardar mala antes do check-in, avisar que vocês chegam tarde, e o ' +
-        'endereço para onde a companhia aérea entrega a mala extraviada.',
+        'Recepção. Confirmar a reserva e o check-in das 15h, perguntar pela lavanderia e ' +
+        'pelo café da manhã — e é o endereço que vocês dão à companhia aérea se a mala ' +
+        'extraviar.',
       verificado: '2026-09-09', fonte: 'wyndhamhotels.com' },
 
     { id: 'tel-disney-dining', nome: 'Disney — reservas de restaurante',
       numero: '+1 407-939-3463', critico: true,
       quando:
-        'Cancelar ou remarcar o The Boathouse (10/11) e o Sanaa (13/11). CANCELEM COM ' +
-        'PELO MENOS 2 HORAS de antecedência: abaixo disso a Disney cobra a taxa de não ' +
-        'comparecimento no cartão. Dá para cancelar pelo My Disney Experience também.',
-      verificado: '2026-09-09', fonte: 'disneyworld.disney.go.com' },
+        'Cancelar ou remarcar o The Boathouse (10/11), o Sanaa (13/11), o Oga’s e o Sci-Fi ' +
+        '(15/11) e o Homecomin’ (25/11). CANCELEM COM PELO MENOS 2 HORAS de antecedência: ' +
+        'abaixo disso a Disney cobra a taxa de não comparecimento no cartão. Dá para ' +
+        'cancelar pelo My Disney Experience também. O Homecomin’ tem linha direta: ' +
+        '+1 407-560-0100.',
+      verificado: '2026-09-11', fonte: 'disneyworld.disney.go.com e mickeyvisit.com' },
 
     { id: 'tel-universal-dining', nome: 'Universal — reservas de restaurante',
       numero: '+1 407-224-3663',
@@ -8289,7 +8334,7 @@ window.ROTEIRO = {
       quando:
         'O degrau entre o First Aid do parque e o 911: febre, torção, corte, dor de ouvido, ' +
         'virose. Pronto-socorro por coisa pequena sai muito mais caro. Fica na 5850 W Irlo ' +
-        'Bronson, a menos de 1 km do hotel. Seg a sex das 8h às 20h, sáb e dom das 8h às 17h. ' +
+        'Bronson, a uns 2 km do hotel. Seg a sex das 8h às 20h, sáb e dom das 8h às 17h. ' +
         'Não precisa marcar; dá para adiantar o cadastro online ("On My Way"). Levem a apólice ' +
         'do seguro. Risco de vida: 911 primeiro.',
       verificado: '2026-09-10', fonte: 'centracare.adventhealth.com' },
@@ -8302,6 +8347,20 @@ window.ROTEIRO = {
         'levam de volta para hotéis da Disney — o Travelodge não é um deles, então a volta é ' +
         'de Uber.',
       verificado: '2026-09-10', fonte: 'centracare.adventhealth.com' },
+
+    { id: 'tel-avis', nome: 'Avis — Old Town Kissimmee',
+      numero: '+1 321-219-7041',
+      quando:
+        'A loja da retirada e da devolução do carro, de 20 a 25/11, das 7h às 19h, na suíte ' +
+        '434 do Old Town. Atraso na devolução do dia 25 ou problema com a reserva.',
+      verificado: '2026-09-11', fonte: 'avis.com' },
+
+    { id: 'tel-avis-estrada', nome: 'Avis — assistência na estrada, 24 horas',
+      numero: '+1 800-354-2847',
+      quando:
+        'Pane, pneu furado, bateria, chave trancada dentro do carro ou acidente, de 20 a ' +
+        '25/11. Em acidente com ferido, 911 primeiro.',
+      verificado: '2026-09-11', fonte: 'avis.com' },
 
     { id: 'tel-seguro', nome: 'Seguro viagem — central de atendimento',
       numero: null, critico: true,
@@ -8321,24 +8380,37 @@ window.ROTEIRO = {
         'a mala não chega ou o voo é remarcado.' },
   ],
 
+  /* ---------------------------------------------------------------------------
+     DICAS E RECOMENDAÇÕES — conteúdo de leitura, sem interação
+     ------------------------------------------------------------------------ */
   dicas: [
     {
       id: 'dica-lockers',
-      categoria: 'universal',
+      categoria: 'geral',
       momento: 'dia-especifico',
-      dias: ['d-2026-11-17', 'd-2026-11-19', 'd-2026-11-23'],
+      dias: ['d-2026-11-11', 'd-2026-11-13', 'd-2026-11-17', 'd-2026-11-19', 'd-2026-11-22',
+             'd-2026-11-23', 'd-2026-11-24'],
       titulo: 'Lockers obrigatórios: reserve 10 a 15 min a mais',
       corpo:
-        'Guardar e buscar o locker come tempo real que o roteiro não previu. Em dias como 19/11 ' +
-        'e 23/11, com várias dessas seguidas, isso pode custar mais de uma hora somada.\n\n' +
-        'Detector de metal — absolutamente nada nos bolsos, nem celular:\n' +
-        'Hulk · VelociCoaster · Stardust Racers · Revenge of the Mummy\n\n' +
-        'Locker obrigatório, com mais tolerância:\n' +
-        'Hagrid\u2019s · Forbidden Journey · Escape from Gringotts · Men in Black · ' +
-        'Monsters Unchained · Hiccup\u2019s Wing Gliders\n\n' +
-        'Padrão é grátis pelo tempo da fila + atração. O grande custa US$ 2 a 3. ' +
+        'Guardar e buscar o locker come tempo que a duração dos blocos não conta. Em dias como ' +
+        '19/11 e 23/11, com várias dessas seguidas, isso pode passar de uma hora somada.\n\n' +
+        'UNIVERSAL — detector de metal, absolutamente nada nos bolsos, nem celular:\n' +
+        'Hulk · VelociCoaster · Stardust Racers\n\n' +
+        'UNIVERSAL — locker obrigatório, sem detector:\n' +
+        'Revenge of the Mummy · Hagrid’s · Forbidden Journey · Escape from Gringotts · ' +
+        'Men in Black · Monsters Unchained · Hiccup’s Wing Gliders\n\n' +
+        'O locker padrão da Universal é grátis pelo tempo da fila mais a atração; o grande é ' +
+        'pago, de US$ 3 a 6 conforme a fonte.\n\n' +
+        'DISNEY: o TRON (11/11) e o Flight of Passage (13/11) não deixam nada solto e têm ' +
+        'locker grátis na entrada.\n\n' +
+        'SEAWORLD (22/11): armário na entrada da Pipeline, Ice Breaker, Mako, Kraken, Manta e ' +
+        'Journey to Atlantis — US$ 2 pelas primeiras duas horas, ou US$ 10 o de uso múltiplo, ' +
+        'que muda de atração o dia inteiro. A entrada do parque tem detector de metal.\n\n' +
+        'BUSCH GARDENS (24/11): nove atrações proíbem objeto solto. O armário custa US$ 4 por ' +
+        'duas horas, ou US$ 12 o do dia inteiro. A Iron Gwazi tem detector de metal e ' +
+        'armário pago obrigatório desde o fim de 2025.\n\n' +
         'Estratégia: levem o mínimo possível nesses dias. Quanto menos bagagem, menos locker.',
-      pesquisa: '2026-09-08',
+      pesquisa: '2026-09-11',
     },
     {
       id: 'dica-molha',
@@ -8355,7 +8427,7 @@ window.ROTEIRO = {
         'Journey to Atlantis (22/11) — molha bastante\n' +
         'Fyre Drill (19/11) — o guia oficial diz "possivelmente encharca". Opcional, às 15h45\n' +
         '\n' +
-        'Já foram cortadas do roteiro por molharem demais: Infinity Falls (SeaWorld), ' +
+        'Ficam de fora por molharem demais: Infinity Falls (SeaWorld), ' +
         'Popeye e Dudley Do-Right (Islands) e Congo River Rapids (Busch).\n\n' +
         'Capa de chuva descartável custa ~US$ 1 no Walmart do dia 10 e ~US$ 10 dentro do parque.',
     },
@@ -8375,13 +8447,18 @@ window.ROTEIRO = {
         'GORJETA. Em restaurante com garçom, 18 a 20% é o esperado e faz parte do salário da ' +
         'pessoa, não é opcional na prática. Muita casa já traz sugestões impressas na conta, e ' +
         'grupos grandes às vezes têm gratuity incluída — confira antes de somar duas vezes.\n\n' +
-        'Onde NÃO se dá gorjeta: balcão de fast food e mobile order. Ou seja, Satu’li Canteen, ' +
-        'Docking Bay 7, Three Broomsticks, Toadstool Cafe e os restaurantes do plano de ' +
-        'refeição do SeaWorld e do Busch Gardens não levam gorjeta.\n\n' +
-        'Onde se dá: The Boathouse, Columbia, Sanaa, Sci-Fi Dine-In, Oga’s, Kres, Atlantic, ' +
-        'IHOP, El Cilantrillo, Harp & Celt, Mythos, Homecomin’ — e o Uber (opcional, mas ' +
-        'comum).',
-      pesquisa: '2026-09-10',
+        'Onde NÃO se dá gorjeta: balcão e mobile order. Ou seja, Columbia Harbour House, ' +
+        'Casey’s, Satu’li Canteen, Three Broomsticks, Docking Bay 7, as barracas do Food & ' +
+        'Wine, Leaky Cauldron, Toadstool Cafe, World Food Trucks, Plant Street Market, Sofrito ' +
+        'e os restaurantes do plano de refeição do SeaWorld e do Busch Gardens, inclusive o ' +
+        'Dragon Fire.\n\n' +
+        'Onde se dá: The Boathouse, Yard House ou Tin Roof, Nomad Lounge, Sanaa, Columbia, ' +
+        'Oga’s, Sci-Fi Dine-In, Lombard’s, Cheesecake Factory, Kres, Atlantic, IHOP, El ' +
+        'Cilantrillo, Harp & Celt, Confisco Grille, Mythos e Homecomin’ — e o Uber (opcional, ' +
+        'mas comum).\n\n' +
+        'O FORD’S GARAGE, NO DIA 12, JÁ COBRA 20% DE TAXA DE SERVIÇO NA CONTA, no lugar da ' +
+        'gorjeta: não somem outra por cima.',
+      pesquisa: '2026-09-11',
     },
     {
       id: 'dica-rope-drop',
@@ -8391,25 +8468,25 @@ window.ROTEIRO = {
       corpo:
         'A regra de ouro número 1 é a mais importante da viagem e a que mais gente executa ' +
         'errado.\n\n' +
-        'Chegar "na abertura" não é chegar às 9h. É estar dentro do portão às 9h — o que ' +
-        'significa chegar 45 minutos antes, passar segurança, passar catraca, e estar de pé no ' +
-        'ponto certo do parque quando soltarem.\n\n' +
-        'São 45 minutos em todo parque com estacionamento na porta. No MAGIC KINGDOM são 75, ' +
-        'e cada dia diz o número dele — sigam o do dia, não este.\n\n' +
-        'No Magic Kingdom há um agravante: o Uber deixa vocês no TTC, e ainda falta monotrilho ' +
-        'ou barco. Por isso a saída do hotel é às 6h45 para uma abertura às 9h.\n\n' +
+        'Chegar "na abertura" não é chegar na hora em que o parque abre. É estar do lado de ' +
+        'dentro quando soltarem — o que significa passar segurança e catraca antes, e estar ' +
+        'de pé no ponto certo do parque.\n\n' +
+        'SIGAM A HORA DO PORTÃO DE CADA DIA, e não uma conta fixa. Ela vai de 75 minutos ' +
+        'antes da abertura no MAGIC KINGDOM, onde o Uber deixa no TTC e ainda falta ' +
+        'monotrilho ou barco, a 15 minutos no Epcot.\n\n' +
         'Onde ficar de pé enquanto espera define o que vocês fazem primeiro. Cada dia diz o ' +
-        'ponto: FRONTIERLAND no Magic Kingdom, checkpoint da ÁFRICA no Animal Kingdom, ' +
-        'à esquerda sentido Hogsmeade no Islands, Galaxy\u2019s Edge no Hollywood Studios, ' +
-        'Beco Diagonal no Universal Studios.\n\n' +
-        'NOS DOIS PARQUES DA DISNEY O PONTO É CONTRAINTUITIVO, e é de propósito. Vocês não ' +
+        'ponto: FRONTIERLAND no Magic Kingdom, checkpoint da ÁFRICA no Animal Kingdom, TOY ' +
+        'STORY LAND no Hollywood Studios, WORLD DISCOVERY no Epcot, Beco Diagonal no Universal ' +
+        'Studios, o portal da Dark Universe no Epic e à esquerda, sentido Hogsmeade, no ' +
+        'Islands.\n\n' +
+        'NOS QUATRO PARQUES DA DISNEY O PONTO É CONTRAINTUITIVO, e é de propósito. Vocês não ' +
         'têm Early Entry em lugar nenhum — não estão em hotel Disney nem Universal. Isso ' +
         'significa que os hóspedes já estão DENTRO do parque meia hora antes de vocês, e ' +
         'já estão de pé onde o Early Entry deixa entrar. Correr para lá é chegar atrás ' +
         'deles.\n\n' +
-        'A saída é ir onde o Early Entry NÃO vai: Frontierland no Magic Kingdom, África e ' +
-        'Ásia no Animal Kingdom. São as áreas que ficam vazias exatamente na hora em que ' +
-        'todo mundo está aglomerado do outro lado.',
+        'A saída é ir para onde essa multidão não está: Frontierland no Magic Kingdom, África ' +
+        'e Ásia no Animal Kingdom, Toy Story Land no Hollywood Studios — os hóspedes correm ' +
+        'para o Rise — e o Test Track no Epcot, enquanto eles correm para o Cosmic Rewind.',
     },
     {
       id: 'dica-natal',
@@ -8419,7 +8496,7 @@ window.ROTEIRO = {
       corpo:
         'A viagem atravessa a virada da temporada de Natal, e isso foi usado de propósito no ' +
         'roteiro.\n\n' +
-        'DISNEY: decoração já montada quando vocês chegam. Mickey\u2019s Very Merry Christmas ' +
+        'DISNEY: decoração já montada quando vocês chegam. Mickey’s Very Merry Christmas ' +
         'Party rola em noites selecionadas a partir de 08/11, e vocês decidiram não ir.\n\n' +
         'UNIVERSAL: a temporada começa exatamente em 14/11 — o dia em que vocês entram no ' +
         'Islands à noite. Vocês pegam a primeira noite da temporada.\n\n' +
@@ -8441,17 +8518,15 @@ window.ROTEIRO = {
         'SE VOCÊS SE PERDEREM DENTRO DE UM PARQUE. Combinem AGORA, não na hora: cada dia ' +
         'de parque tem o ponto de encontro escrito no bloco de entrada. A regra é ir para ' +
         'lá e esperar, não procurar — duas pessoas procurando uma à outra num parque de ' +
-        'vinte mil pessoas não se acham.\n\n' +
-        'Combinar antes vale mesmo com os dois celulares funcionando: duas pessoas ' +
-        'procurando uma à outra num parque de vinte mil não se acham, e ligação dentro ' +
-        'de parque cheio cai ou não se ouve.\n\n' +
+        'vinte mil pessoas não se acham. E vale mesmo com os dois celulares funcionando: ' +
+        'ligação dentro de parque cheio cai ou não se ouve.\n\n' +
         'SE ALGUÉM PASSAR MAL. Todo parque da Disney e da Universal tem posto de primeiros ' +
         'socorros, com enfermeiro, ar-condicionado e remédio básico de graça. Peçam ' +
-        '\u201cFirst Aid\u201d a qualquer funcionário — eles levam vocês. Para emergência ' +
+        '“First Aid” a qualquer funcionário — eles levam vocês. Para emergência ' +
         'de verdade, 911 de qualquer celular, inclusive sem chip americano.\n\n' +
         'FORA DO PARQUE, PARA O QUE NÃO É EMERGÊNCIA — febre, torção, corte, dor de ouvido, ' +
         'virose — o caminho é Urgent Care, não pronto-socorro. A mais perto é a Centra Care ' +
-        'de Celebration, a menos de 1 km do hotel, até as 20h (17h no fim de semana). Depois ' +
+        'de Celebration, a uns 2 km do hotel, até as 20h (17h no fim de semana). Depois ' +
         'disso, a de Lake Buena Vista fica aberta até a meia-noite. Endereço e telefone das ' +
         'duas estão em Telefones, neste Guia.\n\n' +
         'O SEGURO VIAGEM. Deixem a apólice salva OFFLINE no celular dos dois, não só no ' +
@@ -8478,19 +8553,19 @@ window.ROTEIRO = {
       momento: 'antes-de-viajar',
       titulo: 'Os blocos VAZIO PROPOSITAL não são falha de planejamento',
       corpo:
-        'Existem quatro blocos assim no roteiro: 12/11 às 14h30, 14/11 às 9h, 20/11 às 15h30 e ' +
-        '21/11 às 15h.\n\n' +
+        'Existem seis blocos assim no roteiro: 12/11 às 14h30, 14/11 às 9h, 14/11 às 14h30, ' +
+        '20/11 às 15h30, 21/11 às 13h45 e 25/11 às 16h15.\n\n' +
         'Eles estão ali porque a segunda metade da viagem é mais pesada que a primeira: ' +
         '19/11 Epic, 21/11 Winter Garden e hóquei, 22/11 SeaWorld, 23/11 Islands e 24/11 ' +
         'Busch Gardens com 3h de carro. Chegar destruído no dia 19 transforma o melhor ' +
-        'parque de Orlando em arrastar-se — e ele virou dia único.\n\n' +
+        'parque de Orlando em arrastar-se — e ele é dia único.\n\n' +
         'Resistam à tentação de encaixar coisa neles.',
     },
     {
       id: 'dica-bomba-zip',
       categoria: 'geral',
       momento: 'dia-especifico',
-      dias: ['d-2026-11-20', 'd-2026-11-25'],
+      dias: ['d-2026-11-20', 'd-2026-11-23', 'd-2026-11-25'],
       titulo: 'Abastecer com cartão brasileiro: paguem dentro da loja',
       corpo:
         'A bomba automática pede o ZIP code do cartão antes de liberar o combustível. Cartão ' +
@@ -8501,31 +8576,32 @@ window.ROTEIRO = {
         'para pegar a diferença.\n\n' +
         'Peçam Regular, a gasolina comum (87). E vale o mesmo para máquina de estacionamento: ' +
         'se pedir ZIP, procurem uma pessoa.\n\n' +
-        'QUANDO: o carro é retirado em 20/11 e devolvido com o tanque cheio em 25/11, na ' +
-        'filial da 192. Abasteçam num posto da 192 antes de chegar.',
+        'QUANDO: na véspera de Tampa, 23/11, se o tanque estiver abaixo da metade, e antes de ' +
+        'devolver o carro em 25/11, com o tanque cheio, na Avis do Old Town. O 7-Eleven da ' +
+        '5880 W Irlo Bronson fica a uns 450 metros dela.',
       pesquisa: '2026-09-10',
     },
     {
       id: 'dica-comida-tarde',
       categoria: 'geral',
       momento: 'dia-especifico',
-      dias: ['d-2026-11-11', 'd-2026-11-19', 'd-2026-11-24'],
+      dias: ['d-2026-11-11', 'd-2026-11-18', 'd-2026-11-19', 'd-2026-11-21', 'd-2026-11-24'],
       titulo: 'Onde comer quando a noite acaba tarde',
       corpo:
-        'Três noites terminam com fome e quase tudo fechado: 11/11, com o Magic Kingdom até ' +
-        'as 22h; 19/11, porque o jantar do Epic é às 17h; e 24/11, com a volta de Tampa.\n\n' +
-        'A PRIMEIRA SAÍDA É O PRÓPRIO QUARTO. Ele tem micro-ondas, e a lista do Walmart do ' +
+        'Cinco noites terminam com fome e quase tudo fechado: 11/11, com o Magic Kingdom até ' +
+        'as 22h; 18/11 e 21/11, com o jantar antes do jogo e o hotel perto das 22h15; 19/11, ' +
+        'porque o jantar do Epic é às 17h; e 24/11, com a volta de Tampa.\n\n' +
+        'SE O CANSAÇO MANDAR, O QUARTO RESOLVE. Ele tem micro-ondas, e a lista do Walmart do ' +
         'dia 10 traz o jantar para ele: arroz pronto com atum ou frango em sachê, ou sopa. ' +
         'Três minutos, sem sair do hotel.\n\n' +
-        'SE FOR PARA SAIR, na própria 192, a poucos minutos do hotel:\n' +
+        'SE FOR PARA SAIR, na própria 192:\n' +
         'World Food Trucks, 5811 W Irlo Bronson — mais de 100 food trucks, das 11h às 2h ' +
         'todos os dias\n' +
-        'Perkins, 5170 W Irlo Bronson — restaurante de mesa, até a meia-noite\n' +
-        'Denny’s, 5855 W Irlo Bronson — 24 horas\n' +
-        'Waffle House, 5391 W Irlo Bronson — praticamente vizinho, 24 horas\n' +
+        'Miller’s Ale House, 8123 W Irlo Bronson — mesa com garçom, das 11h às 2h\n' +
+        'Perkins, 5170 W Irlo Bronson — mesa com garçom, até a meia-noite\n' +
         'Walgreens, 5935 W Irlo Bronson — farmácia 24 horas, para o básico\n\n' +
         'O World Food Trucks está nos Locais deste Guia, com a rota do hotel.',
-      pesquisa: '2026-09-10',
+      pesquisa: '2026-09-11',
     },
   ],
 

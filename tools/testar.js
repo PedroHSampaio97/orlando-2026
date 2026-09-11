@@ -215,5 +215,45 @@ const celularesBR = textoPublico.match(/(?<!\d)\+?55[\s-]?\(?\d{2}\)?[\s-]?9\d{4
 ok(celularesBR.length === 0, 'nenhum celular brasileiro nos dados e nos documentos',
    celularesBR.join(', '));
 
+console.log('\n--- guia e documentos ---');
+// O roteiro fala no presente, nas tres camadas: nada narra a versao anterior.
+const FRASES_DE_VERSAO = ['roteiro antigo', 'o roteiro dizia', 'versão anterior', 'Estava | Ficou',
+  'DESCARTADO em', 'DECIDIDO em', 'DISPENSADA', 'virou dia único', 'viraram balcão',
+  'não previa', 'não previu', 'foram cortadas', 'foi acrescentado', 'Custos novos',
+  'Fica registrado para não', 'filial da 192', 'filial de bairro', 'Virou a pendência',
+  'segunda rodada'];
+const versaoAntiga = FRASES_DE_VERSAO.filter(f => textoPublico.includes(f));
+ok(versaoAntiga.length === 0, 'nenhuma frase que narra versao antiga nos dados e nos documentos',
+   versaoAntiga.join(' | '));
+
+const dicaPorId = id => R.dicas.find(d => d.id === id) || { dias: [], corpo: '' };
+[['molha', 'dica-molha'], ['locker', 'dica-lockers']].forEach(function ([campo, idDica]) {
+  const faltam = R.dias.filter(d => d.blocos.some(b => b[campo])).map(d => d.id)
+    .filter(id => !(dicaPorId(idDica).dias || []).includes(id));
+  ok(faltam.length === 0, idDica + ' cobre todo dia com bloco ' + campo, faltam.join(', '));
+});
+
+const citadosVazio = [...dicaPorId('dica-vazio-proposital').corpo.matchAll(/(\d{2})\/11 às (\d{1,2})h(\d{2})?/g)]
+  .map(m => m[1] + ' ' + m[2].padStart(2, '0') + ':' + (m[3] || '00'));
+const vaziosReais = R.dias.flatMap(d => d.blocos.filter(b => b.tipo === 'vazio')
+  .map(b => d.data.slice(8) + ' ' + b.hora));
+ok(citadosVazio.length === vaziosReais.length && citadosVazio.every(c => vaziosReais.includes(c)),
+   'a dica do vazio proposital lista cada bloco vazio com a hora certa',
+   'dica: ' + citadosVazio.join(', ') + ' | roteiro: ' + vaziosReais.join(', '));
+
+const saidasErradas = [];
+R.dias.forEach(function (dia, i) {
+  const p = dia.prepararAmanha, prox = R.dias[i + 1];
+  const m = p && prox && p.titulo.match(/saída (\d{1,2})h(\d{2})?/);
+  if (!m) return;
+  const hora = m[1].padStart(2, '0') + ':' + (m[2] || '00');
+  const saida = prox.blocos.find(b => b.tipo === 'deslocamento');
+  if (!saida || saida.hora !== hora) {
+    saidasErradas.push(dia.data.slice(5) + ' diz ' + hora + ', o dia seguinte sai ' + (saida ? saida.hora : '?'));
+  }
+});
+ok(saidasErradas.length === 0, 'a saida da vespera bate com o primeiro deslocamento do dia seguinte',
+   saidasErradas.join(' | '));
+
 console.log(falhas ? '\n>>> ' + falhas + ' FALHA(S)' : '\n>>> TUDO OK');
 process.exit(falhas ? 1 : 0);

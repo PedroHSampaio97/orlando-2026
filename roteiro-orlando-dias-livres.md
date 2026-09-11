@@ -1,13 +1,13 @@
 # Roteiro Orlando — Complemento: dias sem parque
 ### Anexo ao roteiro-orlando-v3.md · mesmo formato, mesmas regras
 
-> **Como usar com o Claude Code:** este arquivo entra na mesma pasta do `roteiro-orlando-v3.md` e complementa aquele documento. Nenhuma informação aqui contradiz o v3 — apenas preenche os blocos que estavam vazios.
+> Este arquivo complementa o `roteiro-orlando-v3.md` com os dias sem parque — 10, 12, 14, 18, 20, 21, 25 e 26 —, no mesmo formato e com as mesmas regras.
 
 ---
 
 ## Antes de tudo: um aviso sobre densidade
 
-Estes são os únicos dias em que vocês podem não fazer nada. Eu deixei blocos vazios **de propósito** em três deles. Se vocês preencherem esses buracos, chegam no dia 21 destruídos e o Islands of Adventure do dia 23 vira arrastar-se.
+Estes são os únicos dias em que vocês podem não fazer nada, e cinco deles têm blocos vazios **de propósito**: 12, 14, 20, 21 e 25. Se vocês preencherem esses buracos, chegam destruídos ao Epic do dia 19, aos três parques seguidos de 22 a 24 e à última noite, no Disney Springs.
 
 Os blocos marcados como **VAZIO PROPOSITAL** não são falha de planejamento. Resistam à tentação de encaixar coisa ali.
 
@@ -66,8 +66,7 @@ O dia inteiro roda no eixo da International Drive, economizando Uber.
 
 > **A neve de Celebration não acontece nas datas de vocês.** O *Now Snowing* — neve de
 > sabão na Market Street às 18h, 19h, 20h e 21h — roda de **28/11 a 31/12**, e vocês
-> voltam ao Brasil em 26/11. Não adianta voltar de carro depois. Fica registrado para
-> não ser reproposto.
+> voltam ao Brasil em 26/11. Não adianta voltar de carro depois.
 >
 > A feira de produtores é aos **domingos** e vocês vão no sábado.
 
@@ -277,17 +276,3 @@ Thanksgiving. Manhã sem pressa, aeroporto três horas antes e a volta pela mesm
 **Power bank e bateria de lítio:** só na bagagem de mão, nunca na despachada.
 
 **Receita Federal na chegada:** US$ 1.000 por pessoa, individual — a dos dois não se soma. O free shop do desembarque no Brasil tem mais US$ 1.000 por pessoa. O que passar é declarado pela e-DBV. Roupa usada e celular ou relógio de uso próprio não entram na conta, e o duty-free de Orlando conta na cota do exterior.
-
----
-
-## Resumo do que foi acrescentado
-
-| Dia | Estava | Ficou |
-|---|---|---|
-| 12/11 | outlet, noite vazia após o cancelamento da festa | outlet na I-Drive + ICON Park à noite |
-| 14/11 | Celebration + CityWalk | manhã livre proposital + Celebration + CityWalk + Islands |
-| 18/11 | compras + NBA | compras + barco-cisne no Lake Eola ao pôr do sol + jantar no Kres + NBA |
-| 20/11 | Old Town à tarde | café no IHOP + lavanderia + almoço no Old Town + carro + food trucks e muscle cars |
-| 21/11 | Winter Garden, tarde vazia | Winter Garden + descanso à tarde + jantar no Harp & Celt + Solar Bears no Kia Center |
-
-**Custos novos a somar no orçamento:** atrações do ICON Park (combo de duas a partir de US$ 39/pessoa) e o pedágio da SR-429 no dia 21. Lake Eola, Old Town, os museus de Winter Garden e o Christmas Tree Stroll do dia 25 são gratuitos.

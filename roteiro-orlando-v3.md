@@ -3,9 +3,9 @@
 
 **Base:** Travelodge by Wyndham, Kissimmee (US-192) · **Chegada:** 10/11, 12h35 no MCO · **Saída:** 26/11, 14h10 do MCO
 **Perfil:** casal, sem crianças. Prioridade: clássicos + montanhas-russas fortes.
-**Decisões fechadas:** troca dos dias 21/22/23 confirmada · sem Mickey's Very Merry Christmas Party · sem Express Pass na Universal · carro alugado de 20 a 25/11, **devolvido no dia 25** · PID já emitida · **o Epic Universe é um dia só, 19/11**, e a última noite é no Disney Springs
+**Decisões fechadas:** dias 19 Epic Universe, 21 Winter Garden, 22 SeaWorld e 23 Islands of Adventure · **o Epic Universe é um dia só, 19/11** · sem Mickey's Very Merry Christmas Party · sem Express Pass na Universal · carro alugado de 20 a 25/11, **devolvido no dia 25**, para o dia 26 ser só café da manhã e aeroporto · PID já emitida · a última noite é no Disney Springs, 25/11
 
-> **Aviso sobre horários:** os horários oficiais dos parques só saem perto da data. Os relógios abaixo assumem abertura às 9h, com duas exceções: **o Animal Kingdom abre às 8h (13/11)** e o **Busch Gardens (24/11) às 10h**. O **SeaWorld (22/11)** também está em 9h, pela previsão do Queue-Times. Confiram no app em novembro e desloquem o bloco inteiro se mudar — mas atenção: as retas finais dos dias 11, 13 e 22 são fixas de propósito, porque seguem o desfile, o pôr do sol e o show das orcas, não a abertura.
+> **Aviso sobre horários:** os horários oficiais dos parques só saem perto da data, e as pendências dizem quando conferir cada um. Os relógios abaixo assumem abertura às 9h, com duas exceções: **o Animal Kingdom abre às 8h (13/11)** e o **Busch Gardens (24/11) às 10h**. O **SeaWorld (22/11)** também está em 9h, pela previsão do Queue-Times. Ajustem a referência do dia no app e os blocos ancorados deslocam junto. **A partir do compromisso de hora marcada — desfile, show, reserva, pôr do sol — os blocos são fixos** e não se mexem com a abertura. Cinco dias têm outra referência: a saída do Terminal C no dia 10, a sessão do Grinchmas no dia 14, o início do jogo nos dias 18 e 21 e a decolagem de Orlando no dia 26. Os dias 12, 20 e 25 não têm referência.
 
 ---
 
@@ -586,43 +586,71 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 
 ---
 
-## PARTE 3 — Cinco regras que valem para todos os dias
+## PARTE 3 — Sete regras que valem para todos os dias
 
-**1. Rope drop vale mais que qualquer passe.** A primeira hora de parque rende o que as três da tarde rendem. Chegar 45 minutos antes da abertura é a decisão mais barata e mais eficaz da viagem.
+**1. Rope drop vale mais que qualquer passe.** A primeira hora de parque rende o que as três da tarde rendem. Chegar 45 minutos antes da abertura é a decisão mais barata e mais eficaz da viagem. Quando o dia marca outra hora de portão, vale a do dia: vai de 75 minutos antes no Magic Kingdom, por causa do monotrilho, a 15 no Epcot.
 
 **2. Não reserve Multi Pass para o que você vai fazer no rope drop.** Erro clássico: reservar a atração que já estaria vazia às 9h e depois enfrentar fila de 80 minutos no resto.
 
-**3. Use a primeira reserva do Multi Pass cedo.** O sistema só libera a próxima depois que você usa a atual. Quem usa às 11h faz o dobro de quem usa às 15h.
+**3. Use a primeira reserva do Multi Pass cedo.** O sistema só libera a próxima depois que você usa a atual. Quem usa às 11h faz o dobro de quem usa às 15h. Nos dias 11 e 16 a primeira é usada às 11h e às 9h45. No dia 15 ela fica para as 13h50, porque a manhã já sai no rope drop, no standby e no Single Pass do Rise.
 
 **4. Mobile order em tudo que for balcão.** Disney e Universal permitem pedir pelo app e só buscar. Economiza 20 a 30 minutos por refeição.
 
-**5. Almoço às 11h30 ou às 14h.** Meio-dia é o pico. E as filas das atrações caem exatamente quando todo mundo está comendo — use isso.
+**5. Almoço às 11h30 ou às 14h.** Meio-dia é o pico. E as filas das atrações caem exatamente quando todo mundo está comendo — use isso. Nos dias de parque, cada almoço está na hora que encaixa entre as filas daquele dia, de 11h40 a 14h20: sigam a do bloco.
+
+**6. Single rider quando a fila passar de 45 minutos.** Vocês entram separados e se encontram na saída: custa o andar junto e devolve tempo de fila. Os blocos com o selo "ou single rider" têm essa fila. Três exceções, escritas no próprio bloco: Forbidden Journey e Gringotts, onde a fila é metade da atração, e o Millennium Falcon, onde single rider quase nunca pilota. A fila de single rider abre e fecha ao longo do dia — a placa da entrada manda.
+
+**7. Peçam água gelada de graça em todo balcão.** Todo balcão de comida rápida da Disney e da Universal dá um copo de água gelada sem cobrar — é só pedir "a cup of ice water". A garrafa lá dentro custa US$ 4 a 6. Com a garrafa reutilizável da lista do Walmart, vira reabastecimento o dia inteiro.
 
 ---
 
 ## PARTE 4 — Pendências
 
-**Prazo curto (setembro):**
-- [ ] **11/09, 6h ET** — restaurantes de 10/11 (Disney Springs)
-- [ ] **12/09, 6h ET** — Magic Kingdom: Liberty Tree Tavern ou Skipper Canteen
-- [ ] **16/09, 6h ET** — Hollywood Studios: **Oga's Cantina** e **Sci-Fi Dine-In**
-- [ ] **17/09, 6h ET** — Epcot, se quiserem mesa em vez das barracas
-- [ ] Reservar **Sanaa** para o jantar do dia 13/11 (via My Disney Experience, mesma janela de 60 dias — abre 14/09)
-- [ ] Confirmar com a agência a regra exata de validade do ingresso Disney de 4 dias
-- [ ] Reservar o carro para **20 a 25/11**, em filial de bairro na 192
+*A mesma lista da aba Pendências do app, que traz a nota de cada item. Hora em ET é o horário da Flórida.*
 
-**Prazo médio (outubro):**
-- [ ] Decidir sobre a Power-Up Band do Epic Universe
+**Setembro**
+- [x] **11/09, 6h ET** — The Boathouse (10/11) — RESERVADO, confirmação 2111918775
+- [ ] **11/09** — Reservar o Columbia Restaurant para o almoço de 14/11 (Celebration) *(data estimada)*
+- [ ] **11/09** — Reservar o Kres Chophouse para o jantar de 18/11 (centro de Orlando) *(data estimada)*
+- [ ] **11/09** — Reservar o Harp & Celt para as 17h20 de 21/11 (centro de Orlando), por telefone *(data estimada)*
+- [x] **11/09** — Mythos (23/11, 19h15) — RESERVADO, confirmação 639247495205005056
+- [x] **11/09** — Lombard’s Seafood Grille (17/11, 18h45) — RESERVADO, confirmação 639247504692187392
+- [x] **11/09** — Atlantic (19/11, 17h) — RESERVADO, confirmação 639247233607631616
+- [x] **12/09** — Magic Kingdom — sem reserva: almoço e jantar do dia 11 são de balcão (Columbia Harbour House e Casey’s)
+- [ ] **13/09** — Conferir o horário oficial do Magic Kingdom em 11/11 e ajustar a referência do dia *(data estimada)*
+- [ ] **14/09, 6h ET** — Reservar Sanaa para o jantar de 13/11 (janela de 60 dias)
+- [ ] **14/09** — Conferir ABERTURA E FECHAMENTO do Animal Kingdom em 13/11
+- [ ] **15/09** — Confirmar com a agência a regra exata de validade do ingresso Disney de 4 dias *(data estimada)*
+- [ ] **16/09, 6h ET** — Hollywood Studios: Oga’s Cantina e Sci-Fi Dine-In — e ajustar os blocos
+- [ ] **17/09, 6h ET** — Epcot: abrir a janela de mesa só se mudarem de ideia sobre o Food & Wine
+- [ ] **17/09** — Horários oficiais de 15/11 e 16/11 — e a hora do Fantasmic e do Luminous
+- [ ] **26/09, 6h ET** — Reservar o Homecomin’ para as 19h30 de 25/11 — a janela de 60 dias abre às 6h ET
 
-- [ ] **Até 19/11 — reservar o MCO Reserve para a volta de 26/11.** É grátis, reserva-se até 7 dias antes, e garante uma faixa de horário no raio-x da TSA sem fila. Terminal C opera das 5h às 19h para voos entre 6h30 e 22h30, e a decolagem de vocês é às 14h10. Uma reserva cobre os dois.
-- [ ] Conferir **antes de embarcar** que o app do roteiro diz "Pronto para usar sem internet" em Ajustes
+**Outubro**
+- [ ] **01/10** — Ingressos Disney aparecendo no My Disney Experience — nos DOIS perfis *(data estimada)*
+- [ ] **01/10** — Cartão de crédito salvo no My Disney Experience, nos DOIS perfis *(data estimada)*
+- [ ] **06/10** — Confirmar o transfer gratuito do hotel para Magic Kingdom e Hollywood Studios *(data estimada)*
+- [ ] **06/10** — Reservar o carro na Avis do Old Town: retirada 20/11 às 15h, devolução 25/11 às 15h *(data estimada)*
+- [ ] **10/10** — Conferir os horários oficiais de 17, 22, 23 e 24/11 e ajustar a referência de cada dia *(data estimada)*
+- [ ] **15/10** — Decidir sobre a Power-Up Band do Epic Universe (~US$ 40) *(data estimada)*
+- [ ] **15/10** — Confirmar que 22/11 tem Christmas Celebration (SeaWorld) e 24/11 tem Christmas Town (Busch Gardens) — ambos rodam em datas selecionadas *(data estimada)*
+- [ ] **15/10** — Conferir se The Wheel do ICON Park voltou a operar (para 12/11) *(data estimada)*
+- [ ] **25/10** — Ingressos Universal aparecendo no app — nos DOIS perfis *(data estimada)*
+- [ ] **25/10** — Ingressos SeaWorld e Busch Gardens (Promo Park) — com o plano de refeição *(data estimada)*
+- [ ] **25/10** — Ativar o roaming nas duas linhas e confirmar a cobertura na Colômbia *(data estimada)*
 
-**Na semana da viagem (a primeira delas ainda no Brasil):**
-- [ ] **Lightning Lane, 7h ET.** Quem está fora dos hotéis Disney compra com 3 dias de antecedência, não 7. Depois de refazer os dias 11 e 13, a lista encolheu:
-  - **08/11** — Magic Kingdom (dia 11): **só o Multi Pass**. Single Pass nenhum
-  - **10/11** — Flight of Passage (dia 13): decisão, não alarme. Só se o fim de dia não resolver
-  - **12/11** — Single Pass do Rise of the Resistance, para o dia 15
-  - **13/11** — Single Pass do Cosmic Rewind, para o dia 16
-  - *Os dias 15 e 16 ainda não foram refeitos com a mesma lente; a lista pode encolher de novo*
-- [ ] Conferir horários oficiais dos parques e deslocar os blocos se a abertura não for às 9h
-- [ ] Conferir horário do Grinchmas (14/11), do desfile da Macy's (17/11) e do Fantasmic! (15/11)
+**Novembro, antes de embarcar**
+- [ ] **01/11** — Horário do Epic Universe em 19/11 — abertura, FECHAMENTO e shows de Natal *(data estimada)*
+- [ ] **01/11** — Confirmar horário do Grinchmas (14/11), do desfile da Macy’s (17/11) e do Fantasmic! (15/11) — e o fechamento do parque em 17/11 *(data estimada)*
+- [ ] **05/11** — Cadastrar no Simon VIP Club para o cupom do outlet sair de graça *(data estimada)*
+- [ ] **05/11** — Reserva do Travelodge salva OFFLINE nos dois celulares
+- [ ] **05/11** — Apólice do seguro salva OFFLINE nos dois celulares, e banco avisado
+- [ ] **08/11, 7h ET** — Lightning Lane — Multi Pass do Magic Kingdom (11/11) e, com ingresso de datas fixas, dos quatro dias
+
+**Durante a viagem**
+- [ ] **10/11, 7h ET** — NÃO é compra: o Single Pass do Flight of Passage se decide dentro do parque
+- [ ] **12/11, 7h ET** — Lightning Lane para 15/11 — Multi Pass do dia e Single Pass do Rise
+- [ ] **12/11** — Conferir quais lands do Epic estão no Early Park Admission em 19/11 *(data estimada)*
+- [ ] **13/11, 7h ET** — Lightning Lane para 16/11 — Multi Pass do dia e Single Pass do Cosmic Rewind
+- [ ] **14/11** — Comprar o Oakley Meta Vanguard no app do Best Buy, com retirada no Best Buy do Millenia (4155 Millenia Blvd)
+- [ ] **19/11** — Reservar o MCO Reserve para a volta de 26/11
