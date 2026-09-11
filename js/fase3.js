@@ -94,6 +94,10 @@ window.Fase3 = (function () {
           ul.appendChild(el('li', 'rotulo-lista', 'lista baixa — escolham 2'));
           mp.listaBaixa.forEach((a) => ul.appendChild(el('li', null, a)));
         }
+        if ((mp.rolando || []).length) {
+          ul.appendChild(el('li', 'rotulo-lista', 'rolando — reservem dentro do parque'));
+          mp.rolando.forEach((a) => ul.appendChild(el('li', null, a)));
+        }
         if (ul.children.length) s.appendChild(ul);
         if (mp.planoB) s.appendChild(el('div', 'plano-b', '⚠ Plano B: ' + mp.planoB));
       }

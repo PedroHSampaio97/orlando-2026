@@ -174,5 +174,46 @@ ok(R.dias.flatMap(d => d.notas || []).every(n => R.meta.tiposNota.includes(n.tip
 ok(R.contatos.some(c => c.id === 'tel-urgentcare-celebration' && c.numero),
    'Urgent Care com telefone conferido');
 
+console.log('\n--- passes e reservas ---');
+// Nivel 1 de cada parque: so um entra na compra antecipada do Multi Pass.
+const niveis = R.estrategiaPasses.disney.niveis || {};
+const comeca = (titulo, nomes) => nomes.some(n => titulo.startsWith(n));
+R.dias.filter(d => d.ficha && d.ficha.multiPass && d.ficha.multiPass.usar).forEach(function (dia) {
+  const mp = dia.ficha.multiPass;
+  const n1 = niveis[dia.parqueId] || [];
+  ok(n1.length > 0, dia.id + ': niveis do Multi Pass declarados para ' + dia.parqueId);
+  ok((mp.listaAlta || []).length <= 1 && (mp.listaAlta || []).every(a => n1.includes(a)),
+     dia.id + ': lista alta com no maximo 1 atracao, e do nivel 1', JSON.stringify(mp.listaAlta));
+  ok((mp.listaBaixa || []).every(a => !n1.includes(a)),
+     dia.id + ': lista baixa sem atracao do nivel 1', JSON.stringify(mp.listaBaixa));
+  const todas = [].concat(mp.listaAlta || [], mp.listaBaixa || [], mp.rolando || []);
+  const soltos = dia.blocos.filter(b => (b.acesso || []).includes('multi-pass') && !comeca(b.titulo, todas));
+  ok(soltos.length === 0, dia.id + ': todo bloco de Multi Pass esta na compra ou rolando',
+     soltos.map(b => b.titulo).join(', '));
+});
+const confirmados = R.restaurantes.filter(r => r.statusPadrao === 'confirmado');
+const semNumero = confirmados.filter(r => !r.confirmacaoPadrao || !R.checklist.some(c =>
+  c.feitoPadrao && (c.restauranteIds || []).includes(r.id) && c.texto.includes(r.confirmacaoPadrao)));
+ok(semNumero.length === 0,
+   'reserva confirmada tem numero e pendencia feita com esse numero (' + confirmados.length + ')',
+   semNumero.map(r => r.id).join(', '));
+const semPendencia = R.restaurantes.filter(r => r.precisaReserva &&
+  !R.checklist.some(c => (c.restauranteIds || []).includes(r.id)));
+ok(semPendencia.length === 0, 'restaurante com reserva e citado por alguma pendencia',
+   semPendencia.map(r => r.id).join(', '));
+
+// Privacidade: o site e publico. Nenhum celular brasileiro e nenhum e-mail pessoal nos
+// dados e nos documentos. E-mail de estabelecimento entra na lista abaixo.
+const textoPublico = ['/../data/roteiro.js', '/../roteiro-orlando-v3.md', '/../roteiro-orlando-dias-livres.md']
+  .map(f => fs.readFileSync(__dirname + f, 'utf8')).join(' ');
+const EMAILS_DE_ESTABELECIMENTO = ['harpandcelt1@gmail.com'];
+const emails = (textoPublico.match(/[\w.+-]+@[\w-]+\.[\w.]+/g) || [])
+  .map(e => e.replace(/\.+$/, ''))
+  .filter(e => !EMAILS_DE_ESTABELECIMENTO.includes(e));
+ok(emails.length === 0, 'nenhum e-mail pessoal nos dados e nos documentos', emails.join(', '));
+const celularesBR = textoPublico.match(/(?<!\d)\+?55[\s-]?\(?\d{2}\)?[\s-]?9\d{4}[\s-]?\d{4}(?!\d)/g) || [];
+ok(celularesBR.length === 0, 'nenhum celular brasileiro nos dados e nos documentos',
+   celularesBR.join(', '));
+
 console.log(falhas ? '\n>>> ' + falhas + ' FALHA(S)' : '\n>>> TUDO OK');
 process.exit(falhas ? 1 : 0);

@@ -184,7 +184,7 @@ O único respiro entre o Epic e cinco dias pesados seguidos. Café sem pressa no
 
 **As refeições:** dia sem pressa é refeição fora. O IHOP é o café americano de diner; o do hotel é continental e vai até as 10h, segundo os sites de reserva. O World Food Trucks abre das 11h às 2h, e é à noite, com tudo aceso, que ele faz sentido. **Com chuva prevista para a noite, invertam:** food trucks no almoço e El Cilantrillo — salão fechado, aberto até a meia-noite na sexta — no jantar.
 
-**Rede de segurança do Epic:** se o dia 19 der muito errado, esta manhã é o lugar mais barato para usar o segundo dia do ingresso — se o ingresso permitir.
+**Rede de segurança do Epic:** se o dia 19 der muito errado, esta manhã é o lugar mais barato para voltar ao Epic — se o ingresso tiver um dia sobrando com Epic, o que ainda depende da agência.
 
 **Descartado:** o aerobarco do Boggy Creek — US$ 108 a 122 no casal, 38 minutos de estrada, e novembro é a pior época para ver bicho de manhã.
 
@@ -268,7 +268,7 @@ Thanksgiving. Manhã sem pressa, aeroporto três horas antes e a volta pela mesm
 | **12h25** | Almoço no Terminal C | Tudo fica depois do raio-x. Feriado: confiram o que abre |
 | **13h25** | Portão | |
 | **14h10** | **Voo Orlando → Bogotá** | Pouso às 18h15 — Bogotá e Orlando no mesmo fuso em novembro |
-| **18h15** | **Conexão em Bogotá** — 3h10 | A imigração colombiana passa até em trânsito: vão direto |
+| **18h15** | **Conexão em Bogotá** — 3h10 | Sem imigração: controle de segurança de trânsito e portão |
 | **21h25** | **Voo Bogotá → Rio** | Pouso às 5h55 de 27/11, horário de Brasília |
 
 **Não há imigração na saída dos Estados Unidos:** a companhia aérea confere o passaporte e manda os dados ao governo americano. O embarque pode ter reconhecimento facial no portão.

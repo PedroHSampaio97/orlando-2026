@@ -114,24 +114,25 @@ window.ROTEIRO = {
     disney: {
       resumo: [
         { data: '2026-11-11', parque: 'Magic Kingdom',     multiPass: 'Sim',
-          singlePass: 'Nenhum — os dois viraram plano B pago', custo: { min: 40, max: 70 } },
+          singlePass: 'Nenhum — os dois ficam como plano B pago', custo: { min: 40, max: 70 } },
         { data: '2026-11-13', parque: 'Animal Kingdom',    multiPass: 'Não',
           singlePass: 'Flight of Passage — só se o fim de dia não resolver', custo: { min: 0, max: 40 } },
         { data: '2026-11-15', parque: 'Hollywood Studios', multiPass: 'Sim',
-          singlePass: 'Rise of the Resistance',                  custo: { min: 115, max: 130 } },
+          singlePass: 'Rise of the Resistance',                  custo: { min: 70, max: 130 } },
         { data: '2026-11-16', parque: 'Epcot',             multiPass: 'Sim',
-          singlePass: 'Cosmic Rewind',                           custo: { min: 36,  max: 95  } },
+          singlePass: 'Cosmic Rewind',                           custo: { min: 60, max: 110 } },
       ],
       correcao:
         'Seven Dwarfs Mine Train e Flight of Passage NÃO estão no Multi Pass. São Single ' +
         'Pass, compra separada, no máximo duas por dia.',
       comoFuncionam:
-        'No Magic Kingdom, Epcot e Hollywood Studios vocês escolhem 1 da lista alta e 2 da ' +
-        'lista baixa. O Animal Kingdom não tem listas. O app mostra a divisão no momento da ' +
-        'compra — se alguma sugestão estiver na lista errada, troquem pela alternativa indicada.',
+        'No Magic Kingdom, Epcot e Hollywood Studios vocês escolhem 1 do nível 1 (a lista ' +
+        'alta) e 2 do nível 2 (a lista baixa). O Animal Kingdom não tem listas. As listas ' +
+        'deste roteiro seguem os níveis de maio de 2026; se o app mostrar outra divisão no ' +
+        'dia da compra, vale a do app.',
       regraDeOuro:
-        'Depois de usar a primeira reserva, abre espaço para reservar outra. Usem cedo para ' +
-        'girar mais vezes.',
+        'Cada reserva usada libera a próxima, uma de cada vez. Usem cedo para girar mais ' +
+        'vezes.',
       compra: {
         documento: { data: '2026-11-08', hora: '07:00', fuso: 'ET' },
         nota: 'Vocês têm cerca de 5 minutos para concluir antes de o sistema soltar as seleções.',
@@ -140,30 +141,44 @@ window.ROTEIRO = {
           titulo: 'A compra provavelmente não é uma só',
           texto:
             'A antecedência depende de onde vocês estão hospedados. No Travelodge, que é ' +
-            'fora dos hotéis Disney, a janela é de 3 dias, não 7.\n\n' +
-            'MULTI PASS: se o ingresso de 4 dias for date-based (datas fixas), dá para comprar ' +
-            '3 dias antes do primeiro dia do ingresso e cobrir os 4 dias de uma vez — aí 08/11 ' +
-            'compra de 08/11 resolve os quatro dias de uma vez.\n\n' +
+            'fora dos hotéis Disney, a janela é de 3 dias, não 7 — e a regra muda com o tipo ' +
+            'de ingresso.\n\n' +
+            'INGRESSO DE DATAS FIXAS (date-based): a compra abre 3 dias antes do PRIMEIRO dia ' +
+            'do ingresso e cobre todos os dias de uma vez, Multi Pass e Single Pass. Aí 08/11 ' +
+            'resolve os quatro dias.\n\n' +
+            'INGRESSO SEM DATA FIXA: 3 dias antes de CADA visita — 08/11 para o dia 11, 12/11 ' +
+            'para o dia 15 e 13/11 para o dia 16.\n\n' +
             'MULTI PASS, dia a dia: 11/11 Peter Pan / Mansão / Buzz. 13/11 nenhum, o ' +
-            'Animal Kingdom não usa. 15/11 Slinky Dog / Torre do Terror / Toy Story Mania. ' +
-            '16/11 Frozen / Remy / Test Track.\n\n' +
-            'SINGLE PASS: a regra é 3 dias antes de CADA visita — mas a lista encolheu. ' +
-            'Com os quatro dias já refeitos, sobraram DOIS momentos, não quatro:\n' +
-            '  · Seven Dwarfs e TRON (11/11) → NÃO COMPRAR. Viraram plano B pago, ' +
-            'resolvidos por janela de horário dentro do parque.\n' +
+            'Animal Kingdom não usa. 15/11 Rock ’n’ Roller Coaster / Torre do Terror / Star ' +
+            'Tours, com o Runaway Railway rolando. 16/11 Frozen / Mission: SPACE / Soarin’, ' +
+            'com o Remy rolando.\n\n' +
+            'SINGLE PASS: dois dias compram.\n' +
+            '  · Seven Dwarfs e TRON (11/11) → NÃO COMPRAR. São plano B pago, resolvidos por ' +
+            'janela de horário dentro do parque.\n' +
             '  · Flight of Passage (13/11) → NÃO COMPRAR antes. Se for preciso, compra-se ' +
-            'dentro do parque às 17h30.\n' +
-            '  · Rise of the Resistance (15/11) → comprar 12/11\n' +
-            '  · Cosmic Rewind (16/11) → comprar 13/11\n\n' +
-            'O custo do Epcot aqui em cima foi calculado quando o Multi Pass daquele dia ' +
-            'ainda era opcional. Ele virou decisão de comprar, então o piso é mais alto ' +
-            'que os US$ 36 da tabela.\n\n' +
-            'É por isso que "confirmar com a agência a regra de validade do ingresso" deixou ' +
-            'de ser burocracia e virou a pendência mais importante da lista. O checklist já ' +
-            'está montado com as quatro datas separadas.',
-          pesquisa: '2026-09-08',
-          verificado: false,
+            'dentro do parque às 17h30, se ainda houver janela.\n' +
+            '  · Rise of the Resistance (15/11) → janela entre 10h30 e 11h\n' +
+            '  · Cosmic Rewind (16/11) → janela entre 10h15 e 10h45\n\n' +
+            'PREÇO: dinâmico. Em setembro de 2026 o Multi Pass custava US$ 15–37 no Epcot e ' +
+            'US$ 20–39 no Hollywood Studios, por pessoa; o Single Pass, US$ 14–17 no Cosmic ' +
+            'Rewind e US$ 15–25 no Rise. Novembro tende a ser mais caro.\n\n' +
+            'É por isso que a pendência de 15/09 — confirmar com a agência a regra de validade ' +
+            'do ingresso — define quantas compras são.',
+          pesquisa: '2026-09-11',
+          verificado: true,
         },
+      },
+      // Nível 1 de cada parque: só um deles entra na compra antecipada do Multi Pass.
+      niveis: {
+        'magic-kingdom': ['Big Thunder Mountain', 'Jungle Cruise', 'Peter Pan’s Flight',
+                          'Space Mountain', 'Tiana’s Bayou Adventure'],
+        'hollywood-studios': ['Mickey & Minnie’s Runaway Railway',
+                              'Millennium Falcon: Smugglers Run', 'Rock ’n’ Roller Coaster',
+                              'Slinky Dog Dash'],
+        'epcot': ['Frozen Ever After', 'Remy’s Ratatouille Adventure', 'Test Track'],
+        fonte: 'Mousehacking (Hollywood Studios, 26/05/2026), Wandering in Disney (Epcot, ' +
+               '25/05/2026) e Deep Arrival (Magic Kingdom, com a volta do Big Thunder em 03/05/2026)',
+        pesquisa: '2026-09-11',
       },
     },
 
@@ -172,13 +187,16 @@ window.ROTEIRO = {
         usar: false,
         motivo:
           'No Islands, o Hagrid’s saiu do Express em julho de 2026 — vocês pagariam e ainda ' +
-          'enfrentariam a fila que incomoda. No Epic, o ingresso cobre dois dias e custa ' +
-          'zero a mais; o Express custa US$ 600 no casal por um.\n\n' +
-          'O ingresso cobre dois dias de Epic, e o roteiro usa um: 19/11. Se esse dia der ' +
-          'muito errado, a manhã livre do dia 20 é o lugar de usar o segundo — se o ingresso ' +
-          'permitir.',
+          'enfrentariam a fila que incomoda. No Epic, o Express tem preço dinâmico, de ' +
+          'US$ 150 a mais de 360 por pessoa, por dia, e o dia de vocês não precisa dele para ' +
+          'caber.\n\n' +
+          'Se o dia 19 der muito errado, a manhã livre do dia 20 é o lugar de voltar ao Epic — ' +
+          'se o ingresso tiver um dia sobrando com Epic. Isso está na pendência dos ingressos ' +
+          'da Universal.',
         alternativa:
-          'Nas filas longas, single rider a partir de 45 minutos, onde houver.',
+          'Nas filas longas, single rider a partir de 45 minutos, onde houver. Para uma fila ' +
+          'específica, o Universal Express Now: comprado no app, dentro do parque, US$ 20 a 25 ' +
+          'por pessoa e por atração, com a lista de atrações mudando ao longo do dia.',
       },
       singleRider: {
         titulo: 'Single rider — quando a fila passar de 45 minutos',
@@ -269,17 +287,18 @@ window.ROTEIRO = {
     ],
 
     notas: [
-      { tipo: 'atencao', texto:
-        'CONEXÃO EM BOGOTÁ — 2h20. O mínimo oficial para internacional-internacional em El ' +
-        'Dorado é 1h30, então vocês têm folga. Mas a Colômbia faz vocês passarem pela ' +
-        'imigração mesmo em trânsito, e essa fila leva de 20 a 45 minutos. Sobram 1h35 a 2h ' +
-        'de margem real. Não é apertado, mas também não é para passear.',
-        pesquisa: '2026-09-08' },
+      { tipo: 'bom', texto:
+        'CONEXÃO EM BOGOTÁ — 2h20, SEM IMIGRAÇÃO. A Avianca confirmou em 11/09: na conexão ' +
+        'internacional vocês não entram na Colômbia. Sigam as placas de conexão até o ' +
+        'controle de segurança de trânsito e dali para o portão. O mínimo oficial para ' +
+        'internacional-internacional em El Dorado é 1h30, então sobra folga. Sem imigração, ' +
+        'o Check-MIG não se aplica.',
+        pesquisa: '2026-09-11' },
       { tipo: 'bom', texto:
         'CONFIRMADO em 08/09: é bilhete único. A bagagem vai despachada de ponta a ponta ' +
-        'até Orlando e em Bogotá vocês só passam pela imigração e seguem para o portão — ' +
-        'sem retirar e sem redespachar mala. Isso tira o único cenário em que as 2h20 de ' +
-        'conexão ficariam apertadas.' },
+        'até Orlando e em Bogotá vocês passam pelo controle de segurança de trânsito e seguem ' +
+        'para o portão — sem retirar e sem redespachar mala. Isso tira o único cenário em que ' +
+        'as 2h20 de conexão ficariam apertadas.' },
       { tipo: 'bom', texto:
         'Voos internacionais chegam no Terminal C do MCO, que é novo e rápido. O ponto de ' +
         'Uber fica no NÍVEL 6 do Terminal C, sinalizado como "Rideshare Pickup". Só peçam a ' +
@@ -613,11 +632,12 @@ window.ROTEIRO = {
         { texto: 'Conferir se as reservas de Lightning Lane do dia 11 aparecem no app',
           critico: true,
           motivo: 'Compradas em 08/11, e são só três: Peter Pan na lista alta, Mansão e ' +
-                  'Buzz na baixa. Single Pass NENHUM — os dois viraram plano B pago. ' +
+                  'Buzz na baixa. Single Pass nenhum — os dois ficam como plano B pago. ' +
                   'Big Thunder, Jungle Cruise e Space Mountain não estão aí de propósito: ' +
                   'os dois primeiros vocês fazem no standby antes das 11h, e o Space entra ' +
-                  'rolando depois que usarem a Mansão. Se alguma das três não aparecer, ' +
-                  'hoje ainda dá tempo de rever o plano. Amanhã às 9h, não.' },
+                  'rolando depois que usarem a Mansão. Com ingresso de datas fixas, as ' +
+                  'reservas dos dias 15 e 16 também aparecem. Se alguma faltar, hoje ainda ' +
+                  'dá tempo de rever o plano. Amanhã às 9h, não.' },
 
         { texto: 'Conferir o horário real de abertura do Magic Kingdom e ajustar aqui no app',
           critico: true,
@@ -664,13 +684,14 @@ window.ROTEIRO = {
 
       { id: 'b-1011-0600', hora: '06:00', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Conexão em Bogotá — El Dorado',
-        descricao: '2h20 de conexão. Imigração colombiana leva de 20 a 45 min',
+        descricao: '2h20 de conexão. Sem imigração: controle de segurança e portão',
         fuso: 'Bogotá',
         contexto:
-          'Mesmo em trânsito, a Colômbia faz passar pela imigração. Vá direto, sem parar ' +
-          'em loja: a fila é o único risco real. Depois dela sobram 1h35 a 2h, aí sim dá ' +
-          'para tomar um café. A conexão internacional da Avianca costuma sair do Terminal 1.',
-        acesso: [], critico: true, duracaoMin: 140, pesquisa: '2026-09-08' },
+          'A conexão internacional não entra na Colômbia — confirmado com a Avianca em ' +
+          '11/09. Sigam as placas de conexão até o controle de segurança de trânsito, que ' +
+          'costuma andar em 5 a 10 minutos, e dali para o portão. Sobra tempo para um café. ' +
+          'A conexão internacional da Avianca costuma sair do Terminal 1.',
+        acesso: [], critico: true, duracaoMin: 140, pesquisa: '2026-09-11' },
 
       { id: 'b-1011-0820', hora: '08:20', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voo Bogotá → Orlando',
@@ -1015,11 +1036,11 @@ window.ROTEIRO = {
         'chegam ao hotel perto das 23h. São dezessete horas de pé. O dia 12 é de ' +
         'propósito o mais leve da primeira semana, e a lista é curta porque tem que ser.',
       itens: [
-        { texto: 'Conferir se o Single Pass do dia 15 precisa ser comprado às 7h de amanhã',
-          critico: true,
-          motivo: 'Se o ingresso NÃO for date-based, o Rise of the Resistance se compra ' +
-                  'amanhã às 7h ET e aí PRECISA de alarme. Se for date-based, já está ' +
-                  'coberto e amanhã não tem hora. Decidam isso hoje, não às 6h59.' },
+        { texto: 'Conferir se o Lightning Lane do dia 15 já está no app', critico: true,
+          motivo: 'Com ingresso de datas fixas, o Multi Pass do dia 15 e o Single Pass do ' +
+                  'Rise saíram em 08/11 — confiram que as reservas estão lá. Se não ' +
+                  'estiverem, ou se o ingresso não for de datas fixas, a compra é amanhã às ' +
+                  '7h ET e PRECISA de alarme. Decidam isso hoje, não às 6h59.' },
         { texto: 'Se não houver compra, dormir até acordar', critico: true,
           motivo: 'O café do hotel vai até tarde e o outlet abre às 10h. Fora a compra ' +
                   'das 7h, nada no dia 12 depende de vocês acordarem cedo.' },
@@ -1367,6 +1388,7 @@ window.ROTEIRO = {
         usar: true, opcional: false,
         listaAlta: ['Peter Pan’s Flight'],
         listaBaixa: ['Mansão Mal-Assombrada', 'Buzz Lightyear'],
+        rolando: ['Space Mountain'],
         planoB:
           'Nenhum. Esta é a compra e ela é simples: uma da alta, duas da baixa. Se o Peter ' +
           'Pan não estiver disponível na hora, troquem pelo Space Mountain e reservem o ' +
@@ -1459,9 +1481,9 @@ window.ROTEIRO = {
       'bloco vazio da tarde não é folga, é manutenção.',
 
     avisos: [
-      'ANTES DE DORMIR, CONFIRAM UMA COISA: se o ingresso da Disney NÃO for date-based, ' +
-      'tem uma compra às 7h ET hoje — o Single Pass do Rise of the Resistance, para o ' +
-      'dia 15. Está nas pendências. Se for date-based, não tem nada: durmam.',
+      'COMPRA ÀS 7H ET HOJE, se ela não saiu em 08/11: o Multi Pass do dia 15 e o Single ' +
+      'Pass do Rise of the Resistance. Com ingresso de datas fixas, os dois saíram em ' +
+      '08/11 — confiram no app e voltem a dormir. Está nas pendências.',
       'Fora isso, nada hoje depende de acordar cedo. É o único dia assim da primeira semana.',
     ],
 
@@ -1613,8 +1635,9 @@ window.ROTEIRO = {
           motivo: 'Às 7h de amanhã vocês já saíram: a saída é 6h30. A compra vai ser no ' +
                   'celular, dentro do Uber ou na fila da catraca do Animal Kingdom, e não ' +
                   'é hora de escolher atração. Deixem decidido: Multi Pass com Frozen na ' +
-                  'lista alta, Remy e Test Track na baixa, e Single Pass do Cosmic Rewind ' +
-                  'com janela entre 9h30 e 10h.' },
+                  'lista alta, Mission: SPACE e Soarin’ na baixa, e Single Pass do Cosmic ' +
+                  'Rewind com janela entre 10h15 e 10h45. Com ingresso de datas fixas, isso ' +
+                  'saiu em 08/11 e é só conferir.' },
 
         { texto: 'Decidir sobre o Kali River Rapids olhando a previsão', critico: false,
           motivo: 'Ele está às 9h15 e molha de verdade. Em novembro Orlando amanhece por ' +
@@ -2489,9 +2512,10 @@ window.ROTEIRO = {
       itens: [
         { texto: 'Conferir se as reservas de Lightning Lane do dia 15 aparecem no app',
           critico: true,
-          motivo: 'Multi Pass: Slinky Dog Dash na lista alta, Torre do Terror e Toy Story ' +
-                  'Mania na baixa. Single Pass do Rise of the Resistance, se vocês ' +
-                  'compraram em 12/11. Se faltar alguma, hoje ainda dá para replanejar.' },
+          motivo: 'Multi Pass: Rock ’n’ Roller Coaster na lista alta, Torre do Terror e ' +
+                  'Star Tours na baixa — o Runaway Railway se reserva lá dentro. Single ' +
+                  'Pass do Rise of the Resistance. Tudo sai em 12/11, ou em 08/11 com ' +
+                  'ingresso de datas fixas. Se faltar alguma, hoje ainda dá para replanejar.' },
         { texto: 'Conferir o horário de abertura do Hollywood Studios', critico: true,
           motivo: 'O dia 15 assume 9h. Se for outro, mudem a referência e a manhã inteira ' +
                   'desloca junto, inclusive a saída das 7h.' },
@@ -2743,8 +2767,9 @@ window.ROTEIRO = {
 
       { tipo: 'atencao', texto:
         'O FANTASMIC SEGUE O FECHAMENTO DO PARQUE, não a abertura. Com fechamento às 21h ele ' +
-        'costuma ser às 20h; com 22h, às 21h. Os horários oficiais de 15/11 saem por volta de ' +
-        '16/09, junto com a janela das reservas.', pesquisa: '2026-09-10' },
+        'costuma ser às 20h; com 22h, às 21h. O roteiro assume 20h, com fechamento às 21h — é ' +
+        'previsão. Os horários oficiais de 15/11 saem por volta de 16/09, junto com a janela ' +
+        'das reservas.', pesquisa: '2026-09-10' },
     ],
 
     /* --------------------------------------------------------------------- */
@@ -2758,7 +2783,8 @@ window.ROTEIRO = {
           'Slinky Dog no rope drop, Toy Story Mania em seguida, Alien só se estiver vazio.',
           'Rise às 10h45 com o Single Pass, e o Millennium Falcon no standby logo depois.',
           'Almoço em Batuu, parada, e a travessia longa até a Sunset Blvd.',
-          'Rock ’n’ Roller na lista alta do Multi Pass; ao usar, reservem a Torre.',
+          'Rock ’n’ Roller com o Multi Pass às 13h50; ao usar, reservem o Runaway Railway. ' +
+          'Torre e Star Tours já estão reservados.',
           'Noite sentada: Oga’s, Sci-Fi, Sunset Blvd e o Fantasmic.',
         ],
       },
@@ -2770,8 +2796,8 @@ window.ROTEIRO = {
           'Sinal de que o Early Entry veio para o Toy Story Land em vez de ir ao Rise. ' +
           'Acontece, e não é motivo para insistir.',
           'Pivô imediato: Toy Story Mania e Alien agora, que estão do lado e vazios.',
-          'O Slinky passa para o Multi Pass, na lista alta — e aí o Rock ’n’ Roller vai para ' +
-          'a lista baixa ou fica no standby do fim da tarde.',
+          'Troquem no app a reserva do Rock ’n’ Roller pelo Slinky — os dois são do nível 1, e ' +
+          'a troca vale se houver horário. O Rock ’n’ Roller vai para a fila de single rider.',
           'O resto do dia não muda.',
         ],
       },
@@ -2785,8 +2811,8 @@ window.ROTEIRO = {
           'A NOITE NÃO DESLOCA COM A ABERTURA. As duas reservas têm hora própria e o ' +
           'Fantasmic segue o fechamento. Se o app avisar colisão em vermelho no fim da ' +
           'tarde, é o Star Tours ou a parada batendo no Oga’s — cortem esses, não a noite.',
-          'FANTASMIC EM OUTRA HORA: ajustem o selo de horário no bloco dele, e os dois ' +
-          'blocos anteriores andam junto.',
+          'FANTASMIC EM OUTRA HORA: ajustem o selo de horário no bloco dele e mudem à mão a ' +
+          'posição e a Sunset Blvd — o app não move esses dois sozinho.',
         ],
       },
       {
@@ -2801,7 +2827,7 @@ window.ROTEIRO = {
           'O QUE NÃO SE SACRIFICA: o Fantasmic. Se for para cortar, cortem nesta ordem — ' +
           'Alien, Star Tours e o Millennium Falcon.',
           'O Fantasmic é cancelado com chuva forte. Se cancelarem, usem a hora para o Rise ' +
-          'de novo ou para a Torre, e saiam mais cedo: amanhã é Epcot com saída às 8h.',
+          'de novo ou para a Torre, e saiam mais cedo: amanhã é Epcot com saída às 7h45.',
         ],
       },
     ],
@@ -2831,8 +2857,8 @@ window.ROTEIRO = {
                 'abertura e 63 depois das 19h, e as 19h de vocês já têm Oga’s, Sci-Fi e ' +
                 'Fantasmic.\n\n' +
                 'O plano B de graça existe e está no bloco: entrar na fila depois do ' +
-                'Fantasmic, por volta das 20h50, com a regra de que quem está na fila no ' +
-                'fechamento anda. Saem por volta das 21h50, e amanhã é Epcot com saída às 8h.',
+                'Fantasmic, por volta das 20h35, com a regra de que quem está na fila no ' +
+                'fechamento anda. Saem por volta das 21h40, e amanhã é Epcot com saída às 7h45.',
         pesquisa: '2026-09-10' },
 
       { nome: 'Muppet*Vision 3D', quando: 'fechada', custo: '—',
@@ -2845,21 +2871,22 @@ window.ROTEIRO = {
     /* --------------------------------------------------------------------- */
     prepararAmanha: {
       paraODia: '2026-11-16',
-      titulo: 'Epcot · alarme 7h, saída 8h',
+      titulo: 'Epcot · alarme 6h45, saída 7h45',
       aviso:
-        'Hoje termina perto das 22h e amanhã sai às 8h. O Epcot é o dia mais leve dos ' +
+        'Hoje termina perto das 21h35 e amanhã sai às 7h45. O Epcot é o dia mais leve dos ' +
         'quatro da Disney — a tarde é comida, não fila — mas a manhã ainda tem hora.',
       itens: [
-        { texto: 'Alarme para 7h nos dois celulares', critico: true,
-          motivo: 'Saída às 8h. Depois de um dia que acabou 22h, um alarme só falha.' },
+        { texto: 'Alarme para 6h45 nos dois celulares', critico: true,
+          motivo: 'Saída às 7h45. Depois de um dia que termina às 21h35, um alarme só falha.' },
         { texto: 'Conferir se as reservas de Lightning Lane do dia 16 aparecem no app',
           critico: true,
-          motivo: 'O Single Pass do Cosmic Rewind foi comprado em 13/11. Se falhou, hoje ' +
-                  'ainda dá para replanejar a manhã do Epcot.' },
+          motivo: 'O Multi Pass do dia 16 (Mission: SPACE, Soarin’ e Frozen) e o Single Pass ' +
+                  'do Cosmic Rewind saíram em 13/11, ou em 08/11 com ingresso de datas fixas. ' +
+                  'Se algo falhou, hoje ainda dá para replanejar a manhã do Epcot.' },
         { texto: 'Conferir o horário de abertura do Epcot e ajustar a referência',
           critico: true,
           motivo: 'O dia 16 assume 9h. Se for outro, mudem a referência e a manhã desloca ' +
-                  'junto, inclusive a saída das 8h.' },
+                  'junto, inclusive a saída das 7h45.' },
         { texto: 'Mochila remontada e celular carregando', critico: true,
           motivo: 'Duas garrafas, barrinhas, protetor solar, power bank, cabo e uma camada ' +
                   'leve para cada um — o Epcot é o parque com mais área aberta, e a World ' +
@@ -2942,13 +2969,13 @@ window.ROTEIRO = {
           'Não é uma atração, são quatro: pré-show, simulador de nave, um hangar em escala ' +
           'real com dezenas de stormtroopers e o passeio em veículo sem trilhos. É consenso ' +
           'como a coisa mais ambiciosa que a Disney já construiu.\n\n' +
-          'POR QUE AQUI O PASSE FICA, e nos dias 11 e 13 virou plano B: nos outros dois o ' +
+          'POR QUE AQUI O PASSE FICA, e nos dias 11 e 13 é plano B: nos outros dois o ' +
           'horário resolvia — o TRON tinha a janela do desfile, o Flight of Passage tinha a ' +
           'última hora. Aqui não existe janela livre. O Rise faz 100 minutos na abertura e ' +
           '63 depois das 19h, e as 19h de vocês já estão com Oga’s, Sci-Fi e Fantasmic.\n\n' +
           'PLANO B DE GRAÇA, se vocês não comprarem: entrar na fila DEPOIS do Fantasmic, por ' +
-          'volta das 20h50. Vale a mesma regra do dia 13 — quem está na fila no fechamento ' +
-          'anda. Vocês sairiam por volta das 21h50, e o dia 16 é Epcot com saída às 8h.',
+          'volta das 20h35. Vale a mesma regra do dia 13 — quem está na fila no fechamento ' +
+          'anda. Vocês sairiam por volta das 21h40, e o dia 16 é Epcot com saída às 7h45.',
         areaParque: 'Galaxy’s Edge', acesso: ['single-pass'], critico: true, duracaoMin: 50,
         fila: { min: 10, quando: 'com o Single Pass', pico: 100, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
@@ -2989,20 +3016,22 @@ window.ROTEIRO = {
 
       { id: 'b-1511-0945', hora: '13:50', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Rock ’n’ Roller Coaster (Muppets)',
-        descricao: 'Multi Pass · lista alta. Reabriu em maio de 2026',
+        descricao: 'Multi Pass · lista alta. Ao usar, reservem o Runaway Railway',
         contexto:
           'Montanha-russa fechada, no escuro, com lançamento de 0 a 90 km/h em menos de três ' +
           'segundos e três inversões. É a mais intensa da Disney em Orlando.\n\n' +
-          'A temática saiu do Aerosmith e virou os Muppets, com o Dr. Teeth and the Electric ' +
-          'Mayhem. Reabriu em 26/05/2026, então em novembro ainda é atração nova — e é por ' +
-          'isso que ela leva a lista alta do Multi Pass agora que o Slinky foi no rope drop.',
+          'Tem temática dos Muppets, com o Dr. Teeth and the Electric Mayhem, desde ' +
+          '26/05/2026 — em novembro ainda é atração nova. Ela leva a lista alta do Multi Pass ' +
+          'porque o Slinky vai no rope drop.\n\n' +
+          'AO USAR, RESERVEM O RUNAWAY RAILWAY no app, ainda na saída. Cada reserva usada ' +
+          'libera a próxima.',
         areaParque: 'Sunset Blvd', acesso: ['multi-pass'], acessoAlt: 'single-rider', duracaoMin: 40,
         fila: { min: 10, quando: 'com o Multi Pass', pico: 75, estimado: true, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
       { id: 'b-1511-1315', hora: '14:30', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Torre do Terror',
-        descricao: 'Multi Pass · lista baixa. Ao usar, reservem o Runaway Railway',
+        descricao: 'Multi Pass · lista baixa',
         contexto:
           'Queda livre dentro de um hotel abandonado cenográfico, com sequência aleatória de ' +
           'subidas e quedas que muda a cada volta. A ambientação é a melhor da Disney.\n\n' +
@@ -3013,22 +3042,25 @@ window.ROTEIRO = {
 
       { id: 'b-1511-1400', hora: '15:15', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mickey & Minnie’s Runaway Railway',
-        descricao: 'Multi Pass rolando',
+        descricao: 'Multi Pass rolando — reservado às 13h50',
         contexto:
           'Dark ride sem trilhos visíveis onde vocês entram literalmente dentro de um ' +
-          'desenho. Colorido, rápido, sem emoção forte. Tem diálogo, mas a graça é visual.',
+          'desenho. Colorido, rápido, sem emoção forte. Tem diálogo, mas a graça é visual.\n\n' +
+          'É A RESERVA ROLANDO, feita às 13h50, assim que o Rock ’n’ Roller é usado. Se não ' +
+          'houver horário perto das 15h15, façam no standby — a fila chega a uns 50 minutos ' +
+          'no pico.',
         areaParque: 'Hollywood Blvd', acesso: ['multi-pass'], duracaoMin: 40,
         fila: { min: 10, quando: 'com o Multi Pass', pico: 50, estimado: true, fonte: '2026-09-10' } },
 
       { id: 'b-1511-1630', hora: '16:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Star Tours',
-        descricao: 'Standby. O roteiro muda a cada visita',
+        descricao: 'Multi Pass · lista baixa. O roteiro muda a cada visita',
         contexto:
           'Simulador de cabine com tela e movimento. O sistema sorteia destinos e ' +
           'personagens a cada sessão, então duas voltas quase nunca são iguais. Legendas ' +
           'disponíveis, e a trama é simples.',
-        areaParque: 'Echo Lake', acesso: ['standby'], duracaoMin: 39,
-        fila: { min: 25, quando: 'no fim da tarde', pico: 45, estimado: true, fonte: '2026-09-10' } },
+        areaParque: 'Echo Lake', acesso: ['multi-pass'], duracaoMin: 39,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 45, estimado: true, fonte: '2026-09-10' } },
 
       { id: 'b-1511-1645p', hora: '16:45', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — antes da noite',
@@ -3076,9 +3108,9 @@ window.ROTEIRO = {
           'É O MOMENTO DE COMPRA DO DIA, e é agora e não depois: as lojas fecham com o ' +
           'parque, e depois do Fantasmic vocês vão direto para a saída no meio de dez mil ' +
           'pessoas. A Tower of Terror Gift Shop e a Legends of Hollywood ficam nesta rua.',
-        areaParque: 'Sunset Blvd', acesso: [], duracaoMin: 35 },
+        areaParque: 'Sunset Blvd', acesso: [], duracaoMin: 20 },
 
-      { id: 'b-1511-2000p', hora: '20:00', ancora: 'fixo', tipo: 'espera',
+      { id: 'b-1511-2000p', hora: '19:45', ancora: 'fixo', tipo: 'espera',
         titulo: 'Posição para o Fantasmic!',
         descricao: 'Quinze minutos antes. O teatro tem 6.900 lugares e enche',
         contexto:
@@ -3088,35 +3120,44 @@ window.ROTEIRO = {
           'água, e de perto demais a imagem se perde. As primeiras fileiras também molham.',
         areaParque: 'Sunset Blvd', acesso: [], duracaoMin: 15 },
 
-      { id: 'b-1511-2015', hora: '20:15', ancora: 'fixo', tipo: 'show',
+      { id: 'b-1511-2015', hora: '20:00', ancora: 'fixo', tipo: 'show',
         titulo: 'Fantasmic!',
         descricao: '~26 min. O fecho do dia',
         contexto:
           'Espetáculo noturno com fogo, água, barcos, projeção em cortina de água e um ' +
           'dragão de vinte metros. É o show mais antigo e mais querido do parque.\n\n' +
           'HORÁRIO A CONFIRMAR: ele acompanha o fechamento do parque. Com fechamento às 21h ' +
-          'costuma ser às 20h; com 22h, às 21h. Confiram no app da Disney e ajustem aqui — ' +
-          'este bloco e os dois anteriores andam juntos.',
+          'costuma ser às 20h; com 22h, às 21h. O roteiro assume 20h. Confiram no app da ' +
+          'Disney e ajustem aqui; a posição e a Sunset Blvd, antes dele, se ajustam à mão.',
         areaParque: 'Sunset Blvd', acesso: [], duracaoMin: 35,
         confirmarHorario: true, pesquisa: '2026-09-10' },
 
-      { id: 'b-1511-2050', hora: '20:50', ancora: 'fixo', tipo: 'deslocamento',
+      { id: 'b-1511-2050', hora: '20:35', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel',
-        descricao: 'Uber, ~30 min, US$ 22–32. Amanhã sai às 8h',
+        descricao: 'Uber, ~30 min, US$ 22–32. Amanhã sai às 7h45',
         contexto:
           'Saindo com o fluxo do Fantasmic, a caminhada até o ponto de rideshare leva uns ' +
           'quinze minutos — o parque inteiro sai ao mesmo tempo.\n\n' +
           'Se a tarifa estiver em alta, andem um pouco para longe da entrada antes de chamar. ' +
-          'Amanhã é Epcot com saída às 8h, então não estiquem.',
+          'Amanhã é Epcot com saída às 7h45, então não estiquem.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 60 },
     ],
 
     ficha: {
       multiPass: {
         usar: true, opcional: false,
-        listaAlta: ['Slinky Dog Dash'],
-        listaBaixa: ['Torre do Terror', 'Toy Story Mania'],
-        planoB: null,
+        listaAlta: ['Rock ’n’ Roller Coaster'],
+        listaBaixa: ['Torre do Terror', 'Star Tours'],
+        rolando: ['Mickey & Minnie’s Runaway Railway'],
+        planoB:
+          'Se o Slinky passar de 60 minutos na abertura, troquem no app a reserva do Rock ’n’ ' +
+          'Roller pelo Slinky — os dois são do nível 1 — e façam o Rock ’n’ Roller pela fila ' +
+          'de single rider.',
+        nota:
+          'Nível 1 no Hollywood Studios: Slinky Dog Dash, Runaway Railway, Rock ’n’ Roller ' +
+          'Coaster e Millennium Falcon — só um entra na compra antecipada. O Slinky vai no ' +
+          'rope drop e o Falcon no standby; o Rock ’n’ Roller leva o nível 1, e o Runaway ' +
+          'Railway é reservado rolando assim que ele é usado, às 13h50.',
       },
       singlePass: {
         itens: ['Rise of the Resistance'], opcionais: [],
@@ -3126,10 +3167,10 @@ window.ROTEIRO = {
           'Aqui não existe janela livre: o Rise faz 100 min na abertura e 63 depois das ' +
           '19h, e a noite de vocês já tem Oga’s, Sci-Fi e Fantasmic.\n\n' +
           'Peçam janela entre 10h30 e 11h. Se não comprarem, o plano B está no bloco: fila ' +
-          'depois do Fantasmic, por volta das 20h50.',
+          'depois do Fantasmic, por volta das 20h35.',
       },
       expressPass: null,
-      custoEstimadoCasal: { min: 55, max: 130, moeda: 'USD' },
+      custoEstimadoCasal: { min: 70, max: 130, moeda: 'USD' },
       extras: [
         { nome: 'A travessia mais longa dos parques mapeados',
           texto: 'Do Galaxy’s Edge até a Sunset Blvd são treze minutos atravessando o ' +
@@ -3142,7 +3183,7 @@ window.ROTEIRO = {
         { nome: 'Disney Junior' }, { nome: 'Frozen Sing-Along' }, { nome: 'Vacation Fun' },
         { nome: 'Lightning McQueen’s Racing Academy' }, { nome: 'Walt Disney Presents' },
         { nome: 'Beauty and the Beast Live on Stage' },
-        { nome: 'The Magic of Disney Animation — abriu em 14/09/2026, mas não é atração ' +
+        { nome: 'The Magic of Disney Animation — abre em 14/09/2026, mas não é atração ' +
                  'de fila: é aula de desenho com um animatrônico do Olaf, encontros com ' +
                  'personagens e um teatro. Sem nenhum interesse para vocês, e ocuparia a ' +
                  'janela do Star Tours' },
@@ -3210,10 +3251,18 @@ window.ROTEIRO = {
         'fica, como no dia 15.', pesquisa: '2026-09-10' },
 
       { tipo: 'bom', texto:
-        'O WORLD SHOWCASE ABRE ÀS 9H AGORA. A abertura das 11h foi aposentada quando o Frozen ' +
-        'e o Remy viraram atrações grandes. As lojas e barracas dos pavilhões é que só ativam ' +
-        'por volta das 11h — o que não muda nada no roteiro de vocês, que só chega lá às 13h.',
+        'O WORLD SHOWCASE ABRE ÀS 9H, junto com o resto do parque. As lojas e barracas dos ' +
+        'pavilhões é que só ativam por volta das 11h — o que não muda nada no roteiro de ' +
+        'vocês, que só chega lá às 13h.',
         pesquisa: '2026-09-10' },
+
+      { tipo: 'atencao', texto:
+        'SÓ UM DO NÍVEL 1 NA COMPRA. No Epcot, Frozen, Remy e Test Track são do nível 1, e a ' +
+        'compra antecipada leva só um: vai o Frozen. O Remy é reservado rolando, e o Multi ' +
+        'Pass dele costuma esgotar antes das 11h — nos dados de agosto e setembro de 2026, ' +
+        'por volta das 10h50. Por isso o Mission: SPACE é o primeiro uso, às 9h45: na saída ' +
+        'dele, reservem o Remy para o fim da tarde.',
+        pesquisa: '2026-09-11' },
     ],
 
     /* --------------------------------------------------------------------- */
@@ -3224,10 +3273,10 @@ window.ROTEIRO = {
         gatilho: 'Vocês estão no portão às 8h45 e o Test Track está operando.',
         passos: [
           'Test Track no rope drop, sem desviar para o Cosmic Rewind.',
-          'Cosmic Rewind às 9h45 com o Single Pass, e o resto do World Discovery no standby.',
-          'Soarin’ e o pavilhão do The Land antes do meio-dia, enquanto ainda estão baratos.',
-          'A partir das 13h, World Showcase no sentido horário e três voltas de barracas.',
-          'Frozen e Remy com o Multi Pass — são as duas únicas filas da tarde.',
+          'Mission: SPACE às 9h45 com o Multi Pass — e, na saída, reservem o Remy.',
+          'Cosmic Rewind às 10h20 com o Single Pass e Soarin’ às 11h15 com o Multi Pass.',
+          'A partir das 13h, World Showcase no sentido horário e quatro voltas de barracas.',
+          'Frozen com o Multi Pass e o Remy com a reserva rolando — as duas únicas filas da tarde.',
           'Última volta às 20h e posição para o Luminous às 20h30.',
         ],
       },
@@ -3238,12 +3287,12 @@ window.ROTEIRO = {
         passos: [
           'ISSO ACONTECE COM FREQUÊNCIA REAL AQUI. Não esperem em frente: as paradas dele em ' +
           '2026 duraram horas, não minutos.',
-          'Pivô imediato para o Soarin’ e o pavilhão do The Land, que ficam do outro lado e ' +
-          'estão praticamente vazios na abertura.',
-          'O Cosmic Rewind não muda — vocês têm hora marcada com o Single Pass.',
-          'Se o Test Track voltar durante o dia, ele entra no Multi Pass rolando, depois de ' +
-          'vocês usarem o Frozen. Se não voltar, não voltou: é o único bloco do dia que não ' +
-          'tem substituto, e não vale reorganizar a tarde por causa dele.',
+          'Pivô imediato para o pavilhão do The Land — The Seas e Living with the Land, ' +
+          'praticamente vazios na abertura. O Mission: SPACE continua às 9h45, com o passe.',
+          'O Cosmic Rewind e o Soarin’ não mudam — os dois têm hora marcada.',
+          'Se o Test Track voltar durante o dia, reservem-no rolando assim que usarem o ' +
+          'Soarin’, às 11h15 — o Remy já foi reservado depois do Mission: SPACE. Se não ' +
+          'voltar, não voltou: não vale reorganizar a tarde por causa dele.',
         ],
       },
       {
@@ -3256,7 +3305,7 @@ window.ROTEIRO = {
           'O LUMINOUS E A POSIÇÃO NÃO DESLOCAM: eles seguem o fechamento do parque, não a ' +
           'abertura. Se o app avisar colisão em vermelho no fim da tarde, é a última volta de ' +
           'barracas batendo na posição — e a solução é encurtar a volta, não atrasar o lugar.',
-          'As três voltas do Food & Wine são elásticas de propósito. Elas são a folga do dia.',
+          'As quatro voltas do Food & Wine são elásticas de propósito. Elas são a folga do dia.',
         ],
       },
       {
@@ -3269,7 +3318,7 @@ window.ROTEIRO = {
           'O que funciona coberto: Spaceship Earth, The Seas, Living with the Land, Frozen, ' +
           'Remy e o Gran Fiesta. Todos de fila curta, e os pavilhões do Japão, Marrocos e ' +
           'Reino Unido têm área interna generosa.',
-          'O QUE NÃO SE SACRIFICA: o Luminous, e as três voltas de barracas — que são o dia.',
+          'O QUE NÃO SE SACRIFICA: o Luminous, e as quatro voltas de barracas — que são o dia.',
           'Se o Luminous for cancelado por vento, saiam mais cedo. Amanhã é Universal Studios.',
         ],
       },
@@ -3279,7 +3328,7 @@ window.ROTEIRO = {
     naoPerca: [
       { nome: 'O passaporte do Food & Wine', quando: 'hoje', custo: 'grátis',
         motivo: 'Peguem na entrada do parque. É onde vocês marcam as barracas que já fizeram ' +
-                'e é o que transforma três voltas soltas numa coisa só. Sem ele, às 20h ' +
+                'e é o que transforma quatro voltas soltas numa coisa só. Sem ele, às 20h ' +
                 'ninguém lembra o que faltou.' },
 
       { nome: 'Dividir cada prato entre os dois', quando: 'hoje', custo: 'economiza',
@@ -3297,12 +3346,6 @@ window.ROTEIRO = {
                 'saco no assento por um motivo. A verde é a mesma cabine sem girar, mesma ' +
                 'fila, mesma história. Se qualquer um dos dois tem tendência a enjoo, a verde ' +
                 'salva as duas horas seguintes, e a decisão é tomada na hora de entrar.' },
-
-      { nome: 'The American Adventure', quando: 'descartado', custo: 'incluso',
-        motivo: 'DESCARTADO em 10/09. Show de animatrônicos sobre a história dos Estados ' +
-                'Unidos, tecnicamente impressionante e completamente dependente de inglês — ' +
-                'trinta minutos sentados ouvindo texto. Ocuparia a janela do Remy, que é uma ' +
-                'das duas filas que o Multi Pass existe para resolver.' },
     ],
 
     /* --------------------------------------------------------------------- */
@@ -3316,18 +3359,19 @@ window.ROTEIRO = {
         { texto: 'Ingressos Universal aparecendo no app da Universal, nos DOIS perfis',
           critico: true,
           motivo: 'É outro aplicativo, outra conta. Confiram HOJE que os dois estão lá. O ' +
-                  'PARK-TO-PARK não é para amanhã — o Hogwarts Express ficou para o dia 23 — ' +
+                  'PARK-TO-PARK não é para amanhã — o Hogwarts Express é no dia 23 — ' +
                   'mas é o mesmo ingresso, e se estiver errado é melhor descobrir agora do ' +
                   'que na catraca.' },
         { texto: 'Conferir o horário de abertura do Universal Studios', critico: true,
           motivo: 'Amanhã assume 9h. Se for outro, mudem a referência e a manhã desloca junto.' },
-        { texto: 'Alarme nos dois celulares', critico: true,
-          motivo: 'Hoje termina perto das 22h30. Um alarme só falha.' },
+        { texto: 'Alarme para 6h45 nos dois celulares', critico: true,
+          motivo: 'Saída às 7h45, e hoje termina perto das 22h30. Um alarme só falha.' },
         { texto: 'Mochila remontada e celular carregando', critico: true,
           motivo: 'Duas garrafas, barrinhas, protetor solar, power bank, cabo e uma camada ' +
                   'leve para cada um.\n\n' +
                   'E ATENÇÃO ÀS ATRAÇÕES COM LOCKER OBRIGATÓRIO: a Universal tem dez delas, ' +
-                  'com detector de metal em quatro. Levem o mínimo possível nos bolsos ' +
+                  'com detector de metal em três — Hulk, VelociCoaster e Stardust Racers, ' +
+                  'nenhuma delas amanhã. Levem o mínimo possível nos bolsos ' +
                   'amanhã — cada locker custa 10 a 15 minutos que o roteiro não conta.' },
         { texto: 'Guardar as compras do World Showcase',
           motivo: 'A Mitsukoshi do Japão e as lojas do Reino Unido são as melhores do parque. ' +
@@ -3381,9 +3425,25 @@ window.ROTEIRO = {
         fila: { min: 53, quando: 'no rope drop', pico: 99, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
-      { id: 'b-1611-0900', hora: '09:45', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1611-1035', hora: '09:45', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Mission: SPACE — Orange',
+        descricao: 'Multi Pass · lista baixa. Na saída, reservem o Remy',
+        contexto:
+          'Simulador de lançamento espacial dentro de uma centrífuga que gera força G real. A ' +
+          'versão LARANJA causa enjoo em muita gente — tem saco no assento por um motivo.\n\n' +
+          'A VERDE é a mesma cabine sem girar, e a fila é a mesma até o ponto em que vocês ' +
+          'escolhem. Se qualquer um dos dois tem tendência a enjoo, peguem a verde: não é ' +
+          'vergonha nenhuma e salva as duas horas seguintes.\n\n' +
+          'É O PRIMEIRO USO DO MULTI PASS, e cada reserva usada libera a próxima. NA SAÍDA, ' +
+          'RESERVEM O REMY no app, para o fim da tarde: o Multi Pass dele costuma esgotar ' +
+          'antes das 11h.',
+        areaParque: 'World Discovery', acesso: ['multi-pass'], duracaoMin: 33,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 40, estimado: true, fonte: '2026-09-10' },
+        pesquisa: '2026-09-11' },
+
+      { id: 'b-1611-0900', hora: '10:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Guardians of the Galaxy: Cosmic Rewind',
-        descricao: 'Single Pass. Aqui ele se justifica, como no dia 15',
+        descricao: 'Single Pass, janela entre 10h15 e 10h45',
         contexto:
           'Montanha-russa fechada e no escuro, com lançamento e cabines que giram 360° para ' +
           'onde a cena está acontecendo. Sem inversões, mas rápida. Cada volta sorteia uma ' +
@@ -3393,36 +3453,25 @@ window.ROTEIRO = {
           'do dia, e é a mesma situação do Rise of the Resistance no dia 15.\n\n' +
           'A fila virtual acabou em fevereiro de 2025: hoje é standby ou Single Pass, sem ' +
           'sorteio às 7h da manhã.',
-        areaParque: 'World Discovery', acesso: ['single-pass'], critico: true, duracaoMin: 50,
+        areaParque: 'World Discovery', acesso: ['single-pass'], critico: true, duracaoMin: 45,
         fila: { min: 10, quando: 'com o Single Pass', pico: 101, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
-      { id: 'b-1611-1035', hora: '10:35', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Mission: SPACE — Orange',
-        descricao: 'A laranja é a intensa, com centrífuga de verdade',
-        contexto:
-          'Simulador de lançamento espacial dentro de uma centrífuga que gera força G real. A ' +
-          'versão LARANJA causa enjoo em muita gente — tem saco no assento por um motivo.\n\n' +
-          'A VERDE é a mesma cabine sem girar, e a fila é a mesma até o ponto em que vocês ' +
-          'escolhem. Se qualquer um dos dois tem tendência a enjoo, peguem a verde: não é ' +
-          'vergonha nenhuma e salva as duas horas seguintes.',
-        areaParque: 'World Discovery', acesso: ['standby'], duracaoMin: 33,
-        fila: { min: 20, quando: 'de manhã', pico: 40, estimado: true, fonte: '2026-09-10' } },
-
       { id: 'b-1611-1115', hora: '11:15', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Soarin’ Across America',
-        descricao: 'Filme novo desde maio de 2026',
+        descricao: 'Multi Pass · lista baixa. Filme novo desde maio de 2026',
         contexto:
           'Vocês sentam num banco que sobe e balança na frente de uma tela IMAX côncava, com ' +
           'sensação de estar voando de pernas soltas. Tem cheiro sincronizado com as cenas. ' +
           'Suave, sem emoção forte — agrada praticamente todo mundo.\n\n' +
-          'O filme trocou em 26/05/2026: saiu o Around the World e entrou o Across America, ' +
-          'com trilha nova e uma fila temática da National Geographic.\n\n' +
-          'A fila dele sai de praticamente zero na abertura para 74 minutos às 16h. Às 11h15 ' +
-          'ainda está barato, e é por isso que ele vem antes do World Showcase.',
-        areaParque: 'World Nature', acesso: ['standby'], duracaoMin: 45,
-        fila: { min: 25, quando: 'antes do meio-dia', pico: 74, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+          'O filme é o Across America desde 26/05/2026, com trilha nova e uma fila temática ' +
+          'da National Geographic.\n\n' +
+          'A fila dele sai de praticamente zero na abertura para 74 minutos às 16h. Com o ' +
+          'Multi Pass às 11h15 ela deixa de importar, e ele fecha a manhã antes do World ' +
+          'Showcase.',
+        areaParque: 'World Nature', acesso: ['multi-pass'], duracaoMin: 45,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 74, fonte: '2026-09-10' },
+        pesquisa: '2026-09-11' },
 
       { id: 'b-1611-1200', hora: '12:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'The Seas e Living with the Land',
@@ -3471,7 +3520,7 @@ window.ROTEIRO = {
 
       { id: 'b-1611-1330', hora: '13:40', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Frozen Ever After',
-        descricao: 'Noruega. Multi Pass',
+        descricao: 'Noruega. Multi Pass · lista alta',
         contexto:
           'Passeio de barco pelo mundo de Frozen, com animatrônicos muito bons e um trecho ' +
           'curto de ré. A fila é sempre desproporcional ao tamanho da atração — 45 a 75 ' +
@@ -3492,7 +3541,7 @@ window.ROTEIRO = {
           'A ESTRATÉGIA: dividam cada prato entre os dois e provem oito a dez barracas ao ' +
           'longo da tarde, em vez de fazer três refeições. É assim que o festival funciona, e ' +
           'é por isso que hoje não existe bloco de almoço nem de jantar — o Food & Wine É as ' +
-          'duas refeições, servidas em três voltas.\n\n' +
+          'duas refeições, servidas em quatro voltas.\n\n' +
           'Destaques que se repetem todo ano: Canadá (sopa de cheddar com bacon), Alemanha, ' +
           'Grécia e o waffle da Bélgica. O cardápio de 2026 sai no app da Disney.\n\n' +
           'A caminhada entre os pavilhões está dentro da duração deste bloco — ele não é uma ' +
@@ -3511,15 +3560,19 @@ window.ROTEIRO = {
 
       { id: 'b-1611-1700', hora: '16:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Remy’s Ratatouille Adventure',
-        descricao: 'França. Multi Pass',
+        descricao: 'França. Multi Pass rolando, reservado às 9h45',
         contexto:
           'Vocês encolhem ao tamanho de um rato e andam por uma cozinha em escala gigante, em ' +
           'veículos sem trilhos com telas 3D e cheiro sincronizado. Sem emoção forte, e a ' +
           'escala do cenário é o ponto alto.\n\n' +
           'Segunda das duas filas do World Showcase, e a segunda razão do Multi Pass: 40 a 60 ' +
-          'minutos no standby, dez com o passe.',
+          'minutos no standby, dez com o passe.\n\n' +
+          'É A RESERVA ROLANDO, feita na saída do Mission: SPACE. SE NÃO HOUVER HORÁRIO, a ' +
+          'fila de standby do Remy à tarde fica perto de uma hora: decidam na hora entre ' +
+          'trocar a volta 2 pela fila ou deixar o Remy de fora.',
         areaParque: 'World Showcase', acesso: ['multi-pass'], duracaoMin: 45,
-        fila: { min: 10, quando: 'com o Multi Pass', pico: 60, fonte: '2026-09-10' } },
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 60, fonte: '2026-09-10' },
+        pesquisa: '2026-09-11' },
 
       { id: 'b-1611-1745', hora: '17:30', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Food & Wine — volta 3',
@@ -3597,15 +3650,20 @@ window.ROTEIRO = {
       multiPass: {
         usar: true, opcional: false,
         listaAlta: ['Frozen Ever After'],
-        listaBaixa: ['Remy’s Ratatouille Adventure', 'Test Track'],
+        listaBaixa: ['Mission: SPACE', 'Soarin’ Across America'],
+        rolando: ['Remy’s Ratatouille Adventure'],
         planoB:
-          'O Test Track está na lista baixa como rede de segurança: se ele quebrar de ' +
-          'manhã e voltar à tarde, vocês o pegam rolando, depois de usar o Frozen.',
+          'Se o Test Track estiver fechado de manhã e voltar, reservem-no rolando assim que ' +
+          'usarem o Soarin’, às 11h15.',
         nota:
           'DECIDIDO: comprar. O Epcot é o único parque em que a fila compete com o que ' +
           'vocês vieram fazer — o Frozen e o Remy são as duas únicas filas do World ' +
           'Showcase, e são 45–75 e 40–60 minutos parados no meio das barracas do Food & ' +
-          'Wine. Nos outros dias a fila compete com outra fila; aqui compete com o dia.',
+          'Wine.\n\n' +
+          'Nível 1 no Epcot: Frozen, Remy e Test Track — só um entra na compra antecipada. ' +
+          'Vai o Frozen, a fila maior; o Test Track é o rope drop; o Remy é reservado rolando ' +
+          'na saída do Mission: SPACE, às 9h45, porque o Multi Pass dele costuma esgotar ' +
+          'antes das 11h. Sem horário, ele vai de standby.',
       },
       singlePass: {
         itens: ['Guardians of the Galaxy: Cosmic Rewind'], opcionais: [],
@@ -3613,11 +3671,11 @@ window.ROTEIRO = {
           'Segundo dia seguido em que o passe se justifica. O Cosmic Rewind faz 101 minutos ' +
           'de média e passa de uma hora mesmo às 8h — não existe janela barata em nenhum ' +
           'momento do dia, diferente do TRON e do Flight of Passage.\n\n' +
-          'Peçam janela entre 9h30 e 10h: é logo depois do Test Track e antes de a manhã ' +
-          'esquentar.',
+          'Peçam janela entre 10h15 e 10h45: logo depois do Mission: SPACE, que é o primeiro ' +
+          'uso do Multi Pass.',
       },
       expressPass: null,
-      custoEstimadoCasal: { min: 36, max: 95, moeda: 'USD' },
+      custoEstimadoCasal: { min: 60, max: 110, moeda: 'USD' },
       extras: [
         { nome: 'Estratégia do Food & Wine',
           texto:
@@ -3943,16 +4001,19 @@ window.ROTEIRO = {
         pesquisa: '2026-09-10' },
 
       { id: 'b-1711-1845', hora: '18:45', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — Finnegan’s Bar & Grill',
-        descricao: 'Pub irlandês na New York. Sem reserva',
+        titulo: 'Jantar — Lombard’s Seafood Grille',
+        descricao: 'Reservado. Frutos do mar na San Francisco',
         contexto:
-          'Pub irlandês dentro do cenário de Nova York, com música ao vivo à noite e cerveja ' +
-          'tirada na hora. É comida de pub — fish and chips, shepherd’s pie, hambúrguer — e ' +
-          'o valor está em sentar num salão que parece de rua de verdade.\n\n' +
+          'O restaurante de mesa do parque, na San Francisco, a dois minutos do Beco ' +
+          'Diagonal. Frutos do mar e carnes, com um aquário grande no meio do salão. Pratos ' +
+          'principais de US$ 35 a 49, nos preços de 2025.\n\n' +
+          'RESERVADO: 18h45, duas pessoas, confirmação 639247504692187392. Remarcar ou ' +
+          'cancelar é pelo app da Universal ou pelo telefone de reservas nos Contatos.\n\n' +
           'É mesa com garçom: 18 a 20% de gorjeta, e o preço da etiqueta não inclui o imposto.\n\n' +
           'ALTERNATIVA: o CityWalk fica fora da catraca e não fecha com o parque. Se o parque ' +
           'fechar às 19h, o jantar vai para lá — e aí o dia acaba no desfile.',
-        restauranteId: 'r-finnegans', areaParque: 'New York', acesso: [], duracaoMin: 70 },
+        restauranteId: 'r-lombards', areaParque: 'San Francisco', acesso: ['reserva'],
+        duracaoMin: 70, pesquisa: '2026-09-11' },
 
       { id: 'b-1711-2000', hora: '20:00', ancora: 'fixo', tipo: 'livre',
         titulo: 'Beco Diagonal à noite',
@@ -4432,7 +4493,8 @@ window.ROTEIRO = {
       'Hoje não tem carro — ele só é retirado amanhã. É Uber na ida e na volta, e o ponto ' +
       'de embarque do Epic é próprio, a cinco minutos a pé da entrada.',
       'É o único dia de Epic da viagem. Se hoje der muito errado, a manhã livre de amanhã é o ' +
-      'lugar mais barato para usar o segundo dia do ingresso — se ele permitir.',
+      'lugar mais barato para voltar — se o ingresso tiver um dia sobrando com Epic, o que ' +
+      'ainda precisa ser confirmado com a agência.',
     ],
     notas: [
       { tipo: 'alerta', texto:
@@ -4836,12 +4898,14 @@ window.ROTEIRO = {
       multiPass: null, singlePass: null,
       expressPass: {
         usar: false,
-        motivo: 'US$ 600 no casal por um dia. Continua sendo não — e com o rope drop na Dark ' +
-                'Universe e as duas maiores filas no fim, o dia não precisa dele para caber.',
-        alternativa: 'Duas saídas, nesta ordem. Express Pass Now dentro do parque, US$ 20 a 30 ' +
-                     'por atração, para resolver uma fila específica. E o segundo dia do ' +
-                     'ingresso, se ele permitir: a manhã livre do dia 20 não tira nada do ' +
-                     'roteiro.',
+        motivo: 'O Express tem preço dinâmico, de US$ 150 a mais de 360 por pessoa por dia. ' +
+                'Continua sendo não — com o rope drop na Dark Universe e as duas maiores filas ' +
+                'no fim, o dia não precisa dele para caber.',
+        alternativa: 'Duas saídas, nesta ordem. O Universal Express Now, comprado no app ' +
+                     'dentro do parque, US$ 20 a 25 por pessoa e por atração — a lista muda ' +
+                     'ao longo do dia e pode não ter o Mine-Cart nem o Ministry. E, se o ' +
+                     'ingresso tiver um dia sobrando com Epic, a manhã livre do dia 20, que ' +
+                     'não tira nada do roteiro.',
       },
       custoEstimadoCasal: { min: 0, max: 0, moeda: 'USD' },
       extras: [
@@ -4936,10 +5000,11 @@ window.ROTEIRO = {
 
       { tipo: 'info', texto:
         'A MANHÃ LIVRE TAMBÉM É A REDE DE SEGURANÇA DO EPIC. Se ontem der muito errado — o ' +
-        'Mine-Cart parado a noite inteira, chuva —, esta manhã é o lugar mais barato para usar ' +
-        'o segundo dia do ingresso, porque não tira nada do roteiro. Só vale se o ingresso ' +
-        'permitir: alguns ingressos de dois dias da Universal têm um único dia de Epic. É ' +
-        'pergunta para a agência, na conferência dos ingressos da Universal.',
+        'Mine-Cart parado a noite inteira, chuva —, esta manhã é o lugar mais barato para ' +
+        'voltar ao Epic, porque não tira nada do roteiro. Só vale se o ingresso tiver um dia ' +
+        'sobrando com Epic: os ingressos de vários dias da Universal só liberam o Epic em ' +
+        'outro dia se sobrar dia sem uso. É pergunta para a agência, na conferência dos ' +
+        'ingressos da Universal.',
         pesquisa: '2026-09-11' },
     ],
     planos: [
@@ -4955,7 +5020,7 @@ window.ROTEIRO = {
         ] },
       { letra: 'B', titulo: 'O Epic de ontem deu errado',
         gatilho: 'Uma atração grande ficou de fora ontem — o Mine-Cart parado, chuva — e a ' +
-                 'agência confirmou que o segundo dia do ingresso vale hoje.',
+                 'agência confirmou que o ingresso tem um dia sobrando com Epic.',
         passos: [
           'Café da manhã do hotel e Uber às 8h15 para o ponto de embarque do Epic, na 1222 ' +
           'Epic Blvd.',
@@ -5944,7 +6009,7 @@ window.ROTEIRO = {
           'Portão às 8h35, Hagrid’s na abertura e Forbidden Journey logo depois.',
           'Almoço no Confisco Grille às 11h40, na entrada do parque.',
           'Marvel, Kong, Jurassic Park River Adventure e VelociCoaster por single rider.',
-          'Hogwarts Express ida e volta, projeção no castelo e jantar no Mythos às 19h10.',
+          'Hogwarts Express ida e volta, projeção no castelo e jantar no Mythos às 19h15.',
         ] },
       { letra: 'B', titulo: 'O Jurassic Park River Adventure não reabriu',
         gatilho: 'A reforma atrasou e ele continua fechado em 23/11.',
@@ -5955,7 +6020,8 @@ window.ROTEIRO = {
       { letra: 'B2', titulo: 'O parque fecha às 20h',
         gatilho: 'O horário oficial sai com fechamento às 20h.',
         passos: [
-          'Mudem a reserva do Mythos para 18h35, logo depois do Hogwarts Express.',
+          'Remarquem o Mythos, reservado para 19h15, para 18h35, logo depois do Hogwarts ' +
+          'Express — pelo app da Universal ou pelo +1 407-224-3663.',
           'A projeção no castelo fica para depois do jantar: ela repete a cada 20 minutos até ' +
           'o parque fechar.',
         ] },
@@ -6122,7 +6188,7 @@ window.ROTEIRO = {
           'numa segunda-feira, não num sábado.',
         areaParque: 'Hogsmeade', acesso: [], duracaoMin: 30, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-1910', hora: '19:10', ancora: 'fixo', tipo: 'refeicao',
+      { id: 'b-2311-1915', hora: '19:15', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Mythos',
         descricao: 'O melhor restaurante de parque temático, no último Natal dele',
         contexto:
@@ -6131,8 +6197,9 @@ window.ROTEIRO = {
           'Pratos de US$ 26 a 42.\n\n' +
           'É O ÚLTIMO NATAL DELE: a Lost Continent está sendo demolida em fases, e o Mythos ' +
           'fecha em 2027.\n\n' +
-          'RESERVA: está no checklist, pelo app da Universal ou pelo telefone de reservas nos ' +
-          'Contatos. É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
+          'RESERVADO: 19h15, duas pessoas, confirmação 639247495205005056. Cheguem às 19h10 — ' +
+          'a mesa é segurada por 15 minutos depois do horário. É mesa com garçom: 18 a 20% de ' +
+          'gorjeta sobre o valor sem imposto.',
         restauranteId: 'r-mythos', areaParque: 'Lost Continent', acesso: ['reserva'],
         duracaoMin: 75, pesquisa: '2026-09-11' },
 
@@ -6888,8 +6955,8 @@ window.ROTEIRO = {
       { letra: 'B', titulo: 'Atraso no voo de Orlando',
         gatilho: 'O app da Avianca mostra o voo de Orlando atrasado.',
         passos: [
-          'A conexão em Bogotá tem 3h10, e a imigração colombiana leva de 20 a 45 minutos: ' +
-          'até umas duas horas de atraso ainda cabe.',
+          'A conexão em Bogotá tem 3h10, sem imigração, e o mínimo oficial em El Dorado é ' +
+          '1h30: até 1h40 de atraso a conexão continua dentro do mínimo.',
           'Se a conexão cair, a remarcação é no balcão da Avianca em Bogotá. O bilhete em PDF, ' +
           'salvo offline, tem o localizador.',
         ] },
@@ -6976,12 +7043,13 @@ window.ROTEIRO = {
 
       { id: 'b-2611-1815', hora: '18:15', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Conexão em Bogotá — El Dorado',
-        descricao: '3h10 de conexão. Imigração colombiana leva de 20 a 45 min',
+        descricao: '3h10 de conexão. Sem imigração',
         fuso: 'Bogotá',
         contexto:
-          'Mesmo em trânsito, a Colômbia faz passar pela imigração, como na ida. Vão direto, ' +
-          'sem parar em loja: a fila é o único risco real. Depois dela sobram umas duas horas ' +
-          'e meia, e dá para jantar com calma antes de uma noite inteira de voo.',
+          'A conexão internacional não entra na Colômbia, como na ida — confirmado com a ' +
+          'Avianca em 11/09. Sigam as placas de conexão até o controle de segurança de ' +
+          'trânsito e dali para o portão. Sobram mais de duas horas e meia para jantar com ' +
+          'calma antes de uma noite inteira de voo.',
         acesso: [], critico: true, duracaoMin: 190, pesquisa: '2026-09-11' },
 
       { id: 'b-2611-2125', hora: '21:25', ancora: 'fixo', tipo: 'deslocamento',
@@ -7127,11 +7195,15 @@ window.ROTEIRO = {
       canal: 'Mobile order pelo app da Universal', blocoId: 'b-1711-1315',
       nota: 'Bangers and mash, fish and chips. O melhor quick service da Universal.' },
 
-    { id: 'r-finnegans', nome: 'Finnegan’s Bar & Grill', data: '2026-11-17', hora: '18:45',
-      refeicao: 'jantar', local: 'Universal Studios · New York',
-      alternativas: ['CityWalk'],
-      precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: null, blocoId: 'b-1711-1845', nota: null },
+    { id: 'r-lombards', nome: 'Lombard’s Seafood Grille', data: '2026-11-17', hora: '18:45',
+      refeicao: 'jantar', local: 'Universal Studios · San Francisco',
+      alternativas: ['CityWalk, fora da catraca, se o parque fechar cedo'],
+      precisaReserva: true, janelaAbre: null, janelaHora: null,
+      canal: 'App / site da Universal Orlando', blocoId: 'b-1711-1845',
+      statusPadrao: 'confirmado', confirmacaoPadrao: '639247504692187392',
+      nota: 'RESERVADO em 11/09 — confirmação 639247504692187392, duas pessoas, 18h45. ' +
+            'Frutos do mar e carnes, com aquário no meio do salão. Pratos principais de ' +
+            'US$ 35 a 49, nos preços de 2025.' },
 
     { id: 'r-confisco', nome: 'Confisco Grille', data: '2026-11-23', hora: '11:40',
       refeicao: 'almoco', local: 'Islands of Adventure · Port of Entry', alternativas: [],
@@ -7148,13 +7220,16 @@ window.ROTEIRO = {
             'minutos a pé. Noite de jogo da NBA enche o centro: reservem. Avisem na chegada ' +
             'que vocês têm hora.' },
 
-    { id: 'r-mythos', nome: 'Mythos', data: '2026-11-23', hora: '19:10',
+    { id: 'r-mythos', nome: 'Mythos', data: '2026-11-23', hora: '19:15',
       refeicao: 'jantar', local: 'Islands of Adventure · Lost Continent',
-      alternativas: [],
+      alternativas: ['Three Broomsticks, em Hogsmeade, sem reserva'],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
-      canal: 'App / site da Universal Orlando, ou +1 407-224-3663', blocoId: 'b-2311-1910',
-      nota: 'Dez vezes eleito o melhor restaurante de parque temático. Pratos de US$ 26 a 42. ' +
-            'Fecha em 2027, com a demolição da Lost Continent.' },
+      canal: 'App / site da Universal Orlando, ou +1 407-224-3663', blocoId: 'b-2311-1915',
+      statusPadrao: 'confirmado', confirmacaoPadrao: '639247495205005056',
+      nota: 'RESERVADO em 11/09 — confirmação 639247495205005056, duas pessoas, 19h15. ' +
+            'Cheguem 5 minutos antes: a mesa é segurada por 15 minutos. Dez vezes eleito o ' +
+            'melhor restaurante de parque temático. Pratos de US$ 26 a 42. Fecha em 2027, com ' +
+            'a demolição da Lost Continent.' },
 
     { id: 'r-sofrito', nome: 'Sofrito Latin Cafe', data: '2026-11-25', hora: '12:35',
       refeicao: 'almoco', local: 'Lake Buena Vista · 8607 Palm Pkwy', alternativas: [],
@@ -7333,7 +7408,7 @@ window.ROTEIRO = {
       pesquisa: '2026-09-11',
       restauranteIds: [] },
 
-    { id: 'ck-columbia', dataAlvo: '2026-10-15', dataEstimada: true, motivoData: '30 dias antes do almoço de 14/11', hora: null, fuso: null,
+    { id: 'ck-columbia', dataAlvo: '2026-09-11', dataEstimada: true, motivoData: 'O Columbia não publica a janela: tentem já, e se 14/11 ainda não abrir, de novo em 01/10', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Reservar o Columbia Restaurant para o almoço de 14/11 (Celebration)',
       restauranteIds: ['r-columbia'] },
@@ -7403,8 +7478,9 @@ window.ROTEIRO = {
         'Cobre os dias 14, 17, 19 e 23. Confiram especificamente que é PARK-TO-PARK e que o ' +
         'Epic Universe está incluído: o Hogwarts Express do dia 23 só funciona com ' +
         'park-to-park, e o Epic é ingresso à parte em muitas combinações.\n\n' +
-        'E confiram que o dia do Epic no ingresso é 19/11: alguns ingressos da Universal são ' +
-        'date-based.\n\n' +
+        'E perguntem à agência: quantos dias o ingresso tem, se o dia do Epic é 19/11 e se ' +
+        'sobra algum dia com Epic. É isso que decide se a manhã do dia 20 serve de rede de ' +
+        'segurança para o Epic.\n\n' +
         'Riscar só quando aparecer no app da Bianca também.',
       restauranteIds: [] },
 
@@ -7421,20 +7497,19 @@ window.ROTEIRO = {
       restauranteIds: [] },
 
 
-    { id: 'ck-kres', dataAlvo: '2026-10-19', dataEstimada: true,
-      motivoData: '30 dias antes do jantar de 18/11',
+    { id: 'ck-kres', dataAlvo: '2026-09-11', dataEstimada: true,
+      motivoData: 'O Kres não publica a janela: tentem já, e se 18/11 ainda não abrir, de novo em 01/10',
       hora: null, fuso: null, janelaReserva: false, critico: false,
       texto: 'Reservar o Kres Chophouse para o jantar de 18/11 (centro de Orlando)',
       nota:
         'É noite de jogo da NBA no centro e o restaurante fica a cinco minutos da arena — ' +
         'ele enche por causa disso. E o jantar de vocês tem só 65 minutos: chegar sem ' +
         'reserva e pegar espera acaba com o bloco.\n\n' +
-        'Alternativa no mesmo bairro: The Boheme, no Grand Bohemian. O Ace Cafe, que estava ' +
-        'no roteiro antigo, fechou em 2023.',
+        'Alternativa no mesmo bairro: The Boheme, no Grand Bohemian.',
       restauranteIds: ['r-kres'] },
 
-    { id: 'ck-harp', dataAlvo: '2026-10-22', dataEstimada: true,
-      motivoData: '30 dias antes do jantar de 21/11',
+    { id: 'ck-harp', dataAlvo: '2026-09-11', dataEstimada: true,
+      motivoData: 'O Harp & Celt não publica janela: tentem já, por e-mail ou telefone, e de novo em 01/10 se ainda não aceitarem 21/11',
       hora: null, fuso: null, janelaReserva: false, critico: false,
       texto: 'Reservar o Harp & Celt para as 17h20 de 21/11 (centro de Orlando), por telefone',
       nota:
@@ -7445,10 +7520,15 @@ window.ROTEIRO = {
         'Alternativa sem reserva: o Underground Public House, a um quarteirão.',
       restauranteIds: ['r-harp'] },
 
-    { id: 'ck-mythos', dataAlvo: '2026-10-24', dataEstimada: true, motivoData: '30 dias antes do jantar de 23/11', hora: null, fuso: null,
-      janelaReserva: false, critico: false,
-      texto: 'Reservar o Mythos para as 19h10 de 23/11 (Islands of Adventure)',
+    { id: 'ck-mythos', dataAlvo: '2026-09-11', dataEstimada: false, hora: null, fuso: null,
+      janelaReserva: false, critico: true, feitoPadrao: true,
+      texto: 'Mythos (23/11, 19h15) — RESERVADO, confirmação 639247495205005056',
       restauranteIds: ['r-mythos'] },
+
+    { id: 'ck-lombards', dataAlvo: '2026-09-11', dataEstimada: false, hora: null, fuso: null,
+      janelaReserva: false, critico: true, feitoPadrao: true,
+      texto: 'Lombard’s Seafood Grille (17/11, 18h45) — RESERVADO, confirmação 639247504692187392',
+      restauranteIds: ['r-lombards'] },
 
     { id: 'ck-homecomin', dataAlvo: '2026-09-26', dataEstimada: false,
       hora: '06:00', fuso: 'ET', janelaReserva: true, critico: true,
@@ -7588,19 +7668,22 @@ window.ROTEIRO = {
 
     { id: 'ck-ll-0811', dataAlvo: '2026-11-08', hora: '07:00', fuso: 'ET',
       janelaReserva: false, critico: true,
-      texto: 'Lightning Lane — Multi Pass do Magic Kingdom (11/11), e talvez dos 4 dias',
+      texto: 'Lightning Lane — Multi Pass do Magic Kingdom (11/11) e, com ingresso de datas fixas, dos quatro dias',
       nota:
         'Cinco minutos antes de o sistema soltar as seleções. Cheguem decididos:\n\n' +
-        'MULTI PASS — lista alta: Peter Pan. Lista baixa: Mansão e Buzz.\n' +
-        'SINGLE PASS — NENHUM. Não comprem nada aqui.\n\n' +
-        'SE O INGRESSO FOR DATE-BASED, HOJE COBRE OS QUATRO DIAS. Nesse caso escolham ' +
-        'agora também:\n' +
-        '  · 15/11 Hollywood Studios — alta: Slinky Dog Dash. Baixa: Torre do Terror e ' +
-        'Toy Story Mania.\n' +
-        '  · 16/11 Epcot — alta: Frozen Ever After. Baixa: Remy e Test Track.\n' +
-        '  · 13/11 Animal Kingdom — nenhuma. O dia não usa Multi Pass.\n\n' +
-        'Se NÃO for date-based, o app só vai deixar escolher o dia 11 hoje — e aí os dias ' +
-        '15 e 16 têm data própria, 12/11 e 13/11, já no checklist.\n\n' +
+        'DIA 11, MAGIC KINGDOM — Multi Pass: lista alta Peter Pan; lista baixa Mansão e ' +
+        'Buzz. Single Pass: nenhum.\n\n' +
+        'SE O INGRESSO FOR DE DATAS FIXAS, HOJE ABRE A COMPRA DOS QUATRO DIAS — Multi Pass ' +
+        'e Single Pass. Escolham agora também:\n' +
+        '  · 15/11 Hollywood Studios — Multi Pass: alta Rock ’n’ Roller Coaster; baixa Torre ' +
+        'do Terror e Star Tours. Single Pass do Rise of the Resistance, janela entre 10h30 e ' +
+        '11h.\n' +
+        '  · 16/11 Epcot — Multi Pass: alta Frozen Ever After; baixa Mission: SPACE e ' +
+        'Soarin’. Single Pass do Cosmic Rewind, janela entre 10h15 e 10h45.\n' +
+        '  · 13/11 Animal Kingdom — nada. O dia não usa Multi Pass, e o Single Pass do ' +
+        'Flight of Passage se decide dentro do parque.\n\n' +
+        'Se o ingresso NÃO for de datas fixas, hoje só abre o dia 11 — e os dias 15 e 16 ' +
+        'têm data própria, 12/11 e 13/11, já nas pendências.\n\n' +
         'NÃO peçam o Big Thunder nem o Jungle Cruise: os dois são lista alta e vocês vão ' +
         'fazer os dois de graça, no standby, antes das 11h. O Space Mountain entra rolando ' +
         'dentro do parque, assim que vocês usarem a Mansão às 11h.',
@@ -7626,13 +7709,14 @@ window.ROTEIRO = {
       janelaReserva: false, critico: true,
       texto: 'Lightning Lane para 15/11 — Multi Pass do dia e Single Pass do Rise',
       nota:
-        'SÃO DUAS COISAS, e a segunda é a que some quando ninguém escreve.\n\n' +
-        'MULTI PASS do dia 15 — lista alta: Slinky Dog Dash. Lista baixa: Torre do Terror ' +
-        'e Toy Story Mania. Se o ingresso for date-based, isto já foi feito em 08/11 e ' +
-        'hoje não tem nada a escolher.\n\n' +
+        'SÃO DUAS COISAS, e a segunda é a que some quando ninguém escreve. Com ingresso de ' +
+        'datas fixas, as duas saíram em 08/11: confiram no app que estão lá e risquem.\n\n' +
+        'MULTI PASS do dia 15 — lista alta: Rock ’n’ Roller Coaster. Lista baixa: Torre do ' +
+        'Terror e Star Tours. O Runaway Railway não entra aqui: ele é reservado dentro do ' +
+        'parque, assim que o Rock ’n’ Roller é usado.\n\n' +
         'SINGLE PASS do Rise of the Resistance — peçam janela entre 10h30 e 11h. Este é o ' +
         'único dos três dias de passe em que o Single se justifica: o Rise faz 100 min na ' +
-        'abertura e 63 depois das 19h, e a noite de vocês já tem Oga\u2019s, Sci-Fi e ' +
+        'abertura e 63 depois das 19h, e a noite de vocês já tem Oga’s, Sci-Fi e ' +
         'Fantasmic.',
       restauranteIds: [] },
 
@@ -7642,12 +7726,12 @@ window.ROTEIRO = {
       nota:
         'ATENÇÃO À HORA: às 7h de hoje vocês já saíram do hotel — a saída para o Animal ' +
         'Kingdom é 6h30. Isto se resolve no celular, dentro do Uber ou na fila da catraca. ' +
-        'Cheguem decididos, porque não vai dar para pensar.\n\n' +
-        'MULTI PASS do dia 16 — lista alta: Frozen Ever After. Lista baixa: Remy e Test ' +
-        'Track. O Test Track está na baixa de propósito, como rede de segurança: se ele ' +
-        'quebrar de manhã e voltar à tarde, vocês o pegam rolando. Se o ingresso for ' +
-        'date-based, isto já foi feito em 08/11.\n\n' +
-        'SINGLE PASS do Cosmic Rewind — peçam janela entre 9h30 e 10h. Ele faz 101 min de ' +
+        'Cheguem decididos, porque não vai dar para pensar. Com ingresso de datas fixas, ' +
+        'tudo saiu em 08/11: é só conferir no app.\n\n' +
+        'MULTI PASS do dia 16 — lista alta: Frozen Ever After. Lista baixa: Mission: SPACE e ' +
+        'Soarin’. Frozen, Remy e Test Track são todos do nível 1, e a compra leva só um. O ' +
+        'Remy é reservado dentro do parque, na saída do Mission: SPACE, às 9h45.\n\n' +
+        'SINGLE PASS do Cosmic Rewind — peçam janela entre 10h15 e 10h45. Ele faz 101 min de ' +
         'média e passa de uma hora mesmo às 8h: não existe janela barata em hora nenhuma ' +
         'do dia.',
       restauranteIds: [] },
@@ -7692,7 +7776,8 @@ window.ROTEIRO = {
         'O Grinchmas é a referência do dia 14 — ajustando ele, a noite inteira desloca.\n\n' +
         'O DESFILE DA MACY’S É O MAIS INCERTO DOS TRÊS. O dia 17 assume 17h30, mas em anos ' +
         'anteriores ele rodou tanto às 17h30 quanto às 19h30 — duas horas de diferença. ' +
-        'Três blocos andam com ele: o desfile, o jantar no Finnegan’s e o Beco Diagonal à ' +
+        'Três blocos andam com ele: o desfile, o jantar no Lombard’s — com reserva, remarcada ' +
+        'pelo app da Universal — e o Beco Diagonal à ' +
         'noite.\n\n' +
         'CONFIRAM TAMBÉM O FECHAMENTO DE 17/11. O parque fecha entre 19h e 22h conforme a ' +
         'época, e a temporada de Natal estica. Se fechar às 19h, o Beco à noite não existe ' +
@@ -8124,10 +8209,10 @@ window.ROTEIRO = {
     { id: 'tel-universal-dining', nome: 'Universal — reservas de restaurante',
       numero: '+1 407-224-3663',
       quando:
-        'Remarcar ou cancelar o Atlantic (19/11, 17h) — e o Mythos (23/11), quando for ' +
-        'reservado. Dá para fazer pela conta da Universal no app também. No Atlantic, a mesa ' +
-        'é segurada só por 15 minutos depois do horário.',
-      verificado: '2026-09-11', fonte: 'confirmação da reserva do Atlantic' },
+        'Remarcar ou cancelar o Lombard’s (17/11, 18h45), o Atlantic (19/11, 17h) e o Mythos ' +
+        '(23/11, 19h15). Dá para fazer pela conta da Universal no app também. No Atlantic e ' +
+        'no Mythos, a mesa é segurada só por 15 minutos depois do horário.',
+      verificado: '2026-09-11', fonte: 'confirmações das reservas do Atlantic e do Mythos' },
 
     { id: 'tel-boathouse', nome: 'The Boathouse — direto',
       numero: '+1 407-939-2628',
@@ -8480,6 +8565,10 @@ window.ROTEIRO = {
     (d.listas || []).forEach((l) => {
       if (!(l.itens || []).length) erros.push(`dia ${d.data}: lista ${l.id} vazia`);
     });
+    const mp = d.ficha && d.ficha.multiPass;
+    if (mp && mp.rolando !== undefined && !Array.isArray(mp.rolando)) {
+      erros.push(`dia ${d.data}: ficha.multiPass.rolando precisa ser uma lista`);
+    }
   });
 
   R.locais.forEach((l) => {
