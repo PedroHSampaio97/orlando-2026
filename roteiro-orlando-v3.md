@@ -610,9 +610,9 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 
 **Setembro**
 - [x] **11/09, 6h ET** — The Boathouse (10/11) — RESERVADO, confirmação 2111918775
-- [ ] **11/09** — Reservar o Columbia Restaurant para o almoço de 14/11 (Celebration) *(data estimada)*
-- [ ] **11/09** — Reservar o Kres Chophouse para o jantar de 18/11 (centro de Orlando) *(data estimada)*
-- [ ] **11/09** — Reservar o Harp & Celt para as 17h20 de 21/11 (centro de Orlando), por telefone *(data estimada)*
+- [x] **11/09** — Columbia Restaurant (14/11, 12h30) — RESERVADO, confirmação 2110915279
+- [x] **11/09** — Kres Chophouse (18/11, 17h45) — RESERVADO, confirmação 2110248556
+- [ ] **11/09** — Reservar o Underground Public House para as 17h20 de 21/11 (centro de Orlando), pelo OpenTable *(data estimada)*
 - [x] **11/09** — Mythos (23/11, 19h15) — RESERVADO, confirmação 639247495205005056
 - [x] **11/09** — Lombard’s Seafood Grille (17/11, 18h45) — RESERVADO, confirmação 639247504692187392
 - [x] **11/09** — Atlantic (19/11, 17h) — RESERVADO, confirmação 639247233607631616

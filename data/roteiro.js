@@ -5335,7 +5335,7 @@ window.ROTEIRO = {
           'Café do hotel às 7h15 e saída às 8h.',
           'Feira às 8h45, museu ferroviário às 10h15 e Plant Street a pé até o almoço.',
           'Almoço no Plant Street Market às 11h45 e volta ao hotel às 13h.',
-          'Descanso até 16h40, Uber para o centro e jantar no Harp & Celt às 17h20.',
+          'Descanso até 16h40, Uber para o centro e jantar no Underground às 17h20.',
           'Jogo às 19h e Uber na esquina da Hughey com a Pine, na saída.',
         ] },
       { letra: 'B', titulo: 'Chuva de manhã',
@@ -5460,33 +5460,34 @@ window.ROTEIRO = {
 
       { id: 'b-2111-1730', hora: '16:40', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Uber para o centro de Orlando',
-        descricao: '~35 min, US$ 32–45. Direto para o Harp & Celt',
+        descricao: '~35 min, US$ 32–45. Direto para o Underground Public House',
         contexto:
           'O carro fica no hotel e a noite é de Uber, ida e volta.\n\n' +
           'ANTES DE SAIR: nada de bolsa. Celular, cartão e documento no bolso, ou numa clutch ' +
           'de 11 × 16 × 2,5 cm. Ingresso do jogo no celular dos dois.',
-        endereco: '25 S Magnolia Ave', localId: 'kia-center', acesso: [], duracaoMin: 40 },
+        endereco: '19 S Orange Ave', localId: 'kia-center', acesso: [], duracaoMin: 40 },
 
       { id: 'b-2111-1720', hora: '17:20', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Jantar — Harp & Celt',
-        descricao: 'Pub irlandês com mesa e garçom, a 11 minutos a pé da arena. Reservem',
+        titulo: 'Jantar — Underground Public House',
+        descricao: 'Gastropub britânico com mesa e garçom, a 9 minutos a pé da arena. Reservem',
         contexto:
-          'Pub e restaurante irlandês no centro: fish and chips, shepherd’s pie, cottage pie, ' +
-          'Irish stew e sanduíches. Um estilo bem diferente da steakhouse do dia 18.\n\n' +
-          'RESERVA POR TELEFONE: ele não está no OpenTable. +1 407-481-2928. Está no ' +
-          'checklist. Avisem na chegada que vocês têm jogo às 19h.\n\n' +
-          'SEM MESA: o Underground Public House, gastropub britânico no 19 S Orange Ave, a um ' +
-          'quarteirão, abre às 11h30 no sábado.\n\n' +
+          'Gastropub britânico-americano no centro: fish and chips US$ 20, shepherd’s pie ' +
+          'US$ 18, bangers and mash US$ 16, hambúrguer US$ 17 — e versão vegana de cada um. ' +
+          'Um estilo bem diferente da steakhouse do dia 18.\n\n' +
+          'RESERVA PELO OPENTABLE, pelo botão do site do restaurante. Está no checklist. ' +
+          'Avisem na chegada que vocês têm jogo às 19h.\n\n' +
+          'SEM MESA: o Harp & Celt, pub irlandês no 25 S Magnolia Ave, a um quarteirão — mas ' +
+          'lá a reserva é só por telefone, +1 407-481-2928.\n\n' +
           'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
-        restauranteId: 'r-harp', endereco: '25 S Magnolia Ave', localId: 'kia-center',
+        restauranteId: 'r-underground', endereco: '19 S Orange Ave', localId: 'kia-center',
         acesso: ['reserva'], duracaoMin: 70, pesquisa: '2026-09-11' },
 
       { id: 'b-2111-1830', hora: '18:30', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'A pé até o Kia Center',
-        descricao: '840 m, 11 minutos. Portões abertos desde as 18h',
+        descricao: '650 m, 9 minutos. Portões abertos desde as 18h',
         contexto:
-          'Do pub até a arena são 840 metros pelo centro. Os portões abrem uma hora antes do ' +
-          'jogo, às 18h.\n\n' +
+          'Do pub até a arena são 650 metros pelo centro, pouco menos de dez minutos. Os ' +
+          'portões abrem uma hora antes do jogo, às 18h.\n\n' +
           'ÚLTIMA CONFERÊNCIA ANTES DA CATRACA: nada de bolsa, ingresso no celular dos dois, ' +
           'cada um com o seu.',
         localId: 'kia-center', acesso: [], duracaoMin: 20, pesquisa: '2026-09-11' },
@@ -7232,7 +7233,9 @@ window.ROTEIRO = {
       refeicao: 'almoco', local: 'Celebration · Market Street', alternativas: ['Qualquer coisa da Market Street, a pé', 'Ou voltar ao hotel e almoçar na 192'],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
       canal: 'Site do restaurante / OpenTable', blocoId: 'b-1411-1230',
-      nota: 'Peçam o 1905 Salad, preparado na mesa, e o sanduíche cubano.' },
+      statusPadrao: 'confirmado', confirmacaoPadrao: '2110915279',
+      nota: 'RESERVADO — confirmação 2110915279, duas pessoas, 12h30. Peçam o 1905 Salad, ' +
+            'preparado na mesa, e o sanduíche cubano.' },
 
     { id: 'r-broomsticks-14', nome: 'Three Broomsticks', data: '2026-11-14', hora: '20:00',
       refeicao: 'jantar', local: 'Islands of Adventure · Hogsmeade',
@@ -7298,9 +7301,10 @@ window.ROTEIRO = {
       alternativas: ['The Boheme (Grand Bohemian)'],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
       canal: 'OpenTable / site do restaurante', blocoId: 'b-1811-1745',
-      nota: 'Steakhouse no centro de Orlando — do prato à catraca do Kia Center são cinco ' +
-            'minutos a pé. Noite de jogo da NBA enche o centro: reservem. Avisem na chegada ' +
-            'que vocês têm hora.' },
+      statusPadrao: 'confirmado', confirmacaoPadrao: '2110248556',
+      nota: 'RESERVADO — confirmação 2110248556, duas pessoas, 17h45. Steakhouse no centro de ' +
+            'Orlando: do prato à catraca do Kia Center são cinco minutos a pé. Avisem na ' +
+            'chegada que vocês têm hora.' },
 
     { id: 'r-mythos', nome: 'Mythos', data: '2026-11-23', hora: '19:15',
       refeicao: 'jantar', local: 'Islands of Adventure · Lost Continent',
@@ -7385,13 +7389,15 @@ window.ROTEIRO = {
       nota: 'Mercado gastronômico com 17 balcões — churrasco, ostras, empanadas, pizza a ' +
             'carvão, ceviche — e a cervejaria Crooked Can. Balcão: não leva gorjeta.' },
 
-    { id: 'r-harp', nome: 'Harp & Celt', data: '2026-11-21', hora: '17:20',
-      refeicao: 'jantar', local: 'Centro de Orlando · 25 S Magnolia Ave',
-      alternativas: ['Underground Public House, 19 S Orange Ave — gastropub britânico'],
+    { id: 'r-underground', nome: 'Underground Public House', data: '2026-11-21', hora: '17:20',
+      refeicao: 'jantar', local: 'Centro de Orlando · 19 S Orange Ave',
+      alternativas: ['Harp & Celt, 25 S Magnolia Ave — pub irlandês, reserva só por telefone'],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
-      canal: 'Telefone +1 407-481-2928 (não está no OpenTable)', blocoId: 'b-2111-1720',
-      nota: 'Pub irlandês com mesa e garçom, a 11 minutos a pé do Kia Center. Noite de jogo ' +
-            'no centro num sábado: reservem, e avisem na chegada que vocês têm hora.' },
+      canal: 'OpenTable, pelo site do restaurante', blocoId: 'b-2111-1720',
+      nota: 'Gastropub britânico-americano com mesa e garçom, a 9 minutos a pé do Kia Center. ' +
+            'Fish and chips US$ 20, shepherd’s pie US$ 18, bangers and mash US$ 16 — e versão ' +
+            'vegana de cada prato. Noite de jogo no centro num sábado: reservem, e avisem na ' +
+            'chegada que vocês têm hora.' },
 
     { id: 'r-zambia', nome: 'Zambia Smokehouse', data: '2026-11-24', hora: '13:20',
       refeicao: 'almoco', local: 'Busch Gardens Tampa · Stanleyville', alternativas: [],
@@ -7493,9 +7499,9 @@ window.ROTEIRO = {
       pesquisa: '2026-09-11',
       restauranteIds: [] },
 
-    { id: 'ck-columbia', dataAlvo: '2026-09-11', validaAte: '2026-11-14', dataEstimada: true, motivoData: 'O Columbia não publica a janela: tentem já, e se 14/11 ainda não abrir, de novo em 01/10', hora: null, fuso: null,
-      janelaReserva: false, critico: false,
-      texto: 'Reservar o Columbia Restaurant para o almoço de 14/11 (Celebration)',
+    { id: 'ck-columbia', dataAlvo: '2026-09-11', dataEstimada: false, hora: null, fuso: null,
+      janelaReserva: false, critico: false, feitoPadrao: true,
+      texto: 'Columbia Restaurant (14/11, 12h30) — RESERVADO, confirmação 2110915279',
       restauranteIds: ['r-columbia'] },
 
     /* --- prazo médio (outubro) --- */
@@ -7582,28 +7588,26 @@ window.ROTEIRO = {
       restauranteIds: [] },
 
 
-    { id: 'ck-kres', dataAlvo: '2026-09-11', validaAte: '2026-11-18', dataEstimada: true,
-      motivoData: 'O Kres não publica a janela: tentem já, e se 18/11 ainda não abrir, de novo em 01/10',
-      hora: null, fuso: null, janelaReserva: false, critico: false,
-      texto: 'Reservar o Kres Chophouse para o jantar de 18/11 (centro de Orlando)',
+    { id: 'ck-kres', dataAlvo: '2026-09-11', dataEstimada: false,
+      hora: null, fuso: null, janelaReserva: false, critico: false, feitoPadrao: true,
+      texto: 'Kres Chophouse (18/11, 17h45) — RESERVADO, confirmação 2110248556',
       nota:
-        'É noite de jogo da NBA no centro e o restaurante fica a cinco minutos da arena — ' +
-        'ele enche por causa disso. E o jantar de vocês tem só 65 minutos: chegar sem ' +
-        'reserva e pegar espera acaba com o bloco.\n\n' +
-        'Alternativa no mesmo bairro: The Boheme, no Grand Bohemian.',
+        'O jantar tem 65 minutos antes da catraca, e a arena fica a cinco minutos a pé. ' +
+        'Avisem na chegada que vocês têm hora.\n\n' +
+        'Alternativa no mesmo bairro, se algo cair: The Boheme, no Grand Bohemian.',
       restauranteIds: ['r-kres'] },
 
-    { id: 'ck-harp', dataAlvo: '2026-09-11', validaAte: '2026-11-21', dataEstimada: true,
-      motivoData: 'O Harp & Celt não publica janela: tentem já, por e-mail ou telefone, e de novo em 01/10 se ainda não aceitarem 21/11',
+    { id: 'ck-underground', dataAlvo: '2026-09-11', validaAte: '2026-11-21', dataEstimada: true,
+      motivoData: 'O OpenTable não abre a data toda de uma vez: tentem já e, se 21/11 ainda não aparecer, de novo em 01/10',
       hora: null, fuso: null, janelaReserva: false, critico: false,
-      texto: 'Reservar o Harp & Celt para as 17h20 de 21/11 (centro de Orlando), por telefone',
+      texto: 'Reservar o Underground Public House para as 17h20 de 21/11 (centro de Orlando), pelo OpenTable',
       nota:
         'Noite de jogo do Solar Bears no centro, num sábado. O jantar tem 70 minutos antes da ' +
         'caminhada até a arena: chegar sem reserva e pegar espera acaba com ele.\n\n' +
-        'Não está no OpenTable. É pelo telefone +1 407-481-2928, ou pelo e-mail do site, ' +
-        'harpandcelt1@gmail.com.\n\n' +
-        'Alternativa sem reserva: o Underground Public House, a um quarteirão.',
-      restauranteIds: ['r-harp'] },
+        'A reserva é pelo OpenTable, pelo botão do site do restaurante.\n\n' +
+        'Alternativa, se não abrir mesa: o Harp & Celt, 25 S Magnolia Ave, pub irlandês a um ' +
+        'quarteirão — mas lá a reserva é só por telefone, +1 407-481-2928.',
+      restauranteIds: ['r-underground'] },
 
     { id: 'ck-mythos', dataAlvo: '2026-09-11', dataEstimada: false, hora: null, fuso: null,
       janelaReserva: false, critico: true, feitoPadrao: true,
@@ -8454,7 +8458,8 @@ window.ROTEIRO = {
         'Dragon Fire.\n\n' +
         'Onde se dá: The Boathouse, Yard House ou Tin Roof, Nomad Lounge, Sanaa, Columbia, ' +
         'Oga’s, Sci-Fi Dine-In, Lombard’s, Cheesecake Factory, Kres, Atlantic, IHOP, El ' +
-        'Cilantrillo, Harp & Celt, Confisco Grille, Mythos e Homecomin’ — e o Uber (opcional, ' +
+        'Cilantrillo, Underground Public House, Confisco Grille, Mythos e Homecomin’ — e o ' +
+        'Uber (opcional, ' +
         'mas comum).\n\n' +
         'O FORD’S GARAGE, NO DIA 12, JÁ COBRA 20% DE TAXA DE SERVIÇO NA CONTA, no lugar da ' +
         'gorjeta: não somem outra por cima.',

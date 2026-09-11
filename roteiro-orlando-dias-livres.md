@@ -77,7 +77,7 @@ Sábado. O objetivo do dia é ficar longe de parque cheio e chegar inteiro na se
 | **9h00** | **VAZIO PROPOSITAL** — dormir sem alarme, café no hotel, piscina | |
 | **11h00** | Uber para **Celebration** | 10 min, US$ 10–15 |
 | **11h15** | Market Street, o lago, o coreto, a Water Tower Place | Cidade planejada pela Disney nos anos 90 |
-| **12h30** | **Almoço — Columbia Restaurant** (reserva) | Peçam o "1905 Salad", preparado na mesa, e o sanduíche cubano |
+| **12h30** | **Almoço — Columbia Restaurant** (reservado) | Peçam o "1905 Salad", preparado na mesa, e o sanduíche cubano |
 | **14h00** | **Kilwins** — sorvete | Na Market Street |
 | **14h30** | Voltar ao hotel e descansar | Hora e meia. A noite vai até as 21h30 |
 | **16h00** | Sair para a Universal | Uber, ~30 min, US$ 28–40. Passem pelo CityWalk |
@@ -152,7 +152,7 @@ A **Macy's dá 11% para visitante estrangeiro** — passaporte no balcão de ate
 
 ### O jantar tem 65 minutos numa steakhouse
 
-É apertado. O Kres fica a cinco minutos a pé da arena e lida com noite de jogo toda semana — avisem na chegada que vocês têm hora. Se atrasar, comam leve e completem lá dentro. **Reservem**: é noite de NBA no centro. Está nas pendências.
+É apertado. O Kres fica a cinco minutos a pé da arena e lida com noite de jogo toda semana — avisem na chegada que vocês têm hora. Se atrasar, comam leve e completem lá dentro. **A mesa está reservada**, confirmação 2110248556: numa noite de NBA no centro, isso é o que segura o bloco.
 
 ### O que não dá para fazer hoje
 
@@ -205,8 +205,8 @@ Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de 
 | **13h00** | Voltar ao hotel | ~40 min |
 | **13h45** | **VAZIO PROPOSITAL** | Quase três horas de descanso. Montem a mochila do SeaWorld |
 | **16h40** | Uber para o centro de Orlando | ~35 min, US$ 32–45. Sem bolsa |
-| **17h20** | **Jantar — Harp & Celt**, 25 S Magnolia Ave | Pub irlandês com mesa e garçom. **Reservem por telefone** |
-| **18h30** | A pé até o Kia Center | 840 m, 11 min. Portões desde as 18h |
+| **17h20** | **Jantar — Underground Public House**, 19 S Orange Ave | Gastropub britânico com mesa e garçom. **Reservem pelo OpenTable** |
+| **18h30** | A pé até o Kia Center | 650 m, 9 min. Portões desde as 18h |
 | **19h00** | **Orlando Solar Bears × Jacksonville Icemen** | Hóquei da ECHL. **Ingresso já comprado.** Noite de Food Drive. Cowbell liberado |
 | **21h30** | Uber na esquina da **Hughey Ave com a Pine St** | Zona oficial de rideshare. Hotel por volta das 22h15 |
 

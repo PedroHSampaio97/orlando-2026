@@ -206,7 +206,7 @@ ok(semPendencia.length === 0, 'restaurante com reserva e citado por alguma pende
 // dados e nos documentos. E-mail de estabelecimento entra na lista abaixo.
 const textoPublico = ['/../data/roteiro.js', '/../roteiro-orlando-v3.md', '/../roteiro-orlando-dias-livres.md']
   .map(f => fs.readFileSync(__dirname + f, 'utf8')).join(' ');
-const EMAILS_DE_ESTABELECIMENTO = ['harpandcelt1@gmail.com'];
+const EMAILS_DE_ESTABELECIMENTO = [];
 const emails = (textoPublico.match(/[\w.+-]+@[\w-]+\.[\w.]+/g) || [])
   .map(e => e.replace(/\.+$/, ''))
   .filter(e => !EMAILS_DE_ESTABELECIMENTO.includes(e));
