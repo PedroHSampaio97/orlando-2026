@@ -116,5 +116,17 @@ console.log('\n=== export de versao antiga ===');
      'reserva sem carimbo por campo ainda e aceita inteira', JSON.stringify(v));
 }
 
+/* --- 6. os dados do seguro atravessam --- */
+console.log('\n=== a apolice do seguro chega no outro aparelho ===');
+{
+  const p = Aparelho('p'), q = Aparelho('q');
+  p.definirPessoal('seguro-apolice', 'ABC-123');
+  q.importar(p.exportar(), 'mesclar');
+  ok(q.pessoal('seguro-apolice') === 'ABC-123', 'o numero da apolice chegou no outro aparelho');
+  p.definirPessoal('seguro-apolice', null);
+  q.importar(p.exportar(), 'mesclar');
+  ok(q.pessoal('seguro-apolice') === null, 'e apagar tambem atravessa');
+}
+
 console.log('\n' + (falhas ? '>>> ' + falhas + ' FALHA(S)' : '>>> TUDO OK') + '\n');
 process.exit(falhas ? 1 : 0);

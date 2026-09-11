@@ -22,6 +22,52 @@ window.Fase3 = (function () {
   const ddmm = (iso) => { const p = iso.split('-'); return (+p[2]) + '/' + p[1]; };
   const dataExtenso = (iso) => { const p = iso.split('-'); return (+p[2]) + ' ' + MES[+p[1]-1]; };
 
+  /* ---------------------------------------------------------------------------
+     RELÓGIO DE ORLANDO
+     A pendência das 7h ET é às 9h no Brasil em novembro. O celular diz a hora do
+     lugar onde está; o roteiro diz a de Orlando. Estas contas convertem.
+     ------------------------------------------------------------------------ */
+  const FUSOS = { ET: 'America/New_York', Orlando: 'America/New_York',
+                  'Bogotá': 'America/Bogota', Rio: 'America/Sao_Paulo' };
+  // Minutos que o fuso está à frente do UTC no instante t (Orlando em novembro: -300).
+  function deslocamentoFuso(tz, t) {
+    const p = {};
+    new Intl.DateTimeFormat('en-US', { timeZone: tz, hourCycle: 'h23', year: 'numeric',
+      month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })
+      .formatToParts(new Date(t)).forEach(function (x) { p[x.type] = x.value; });
+    return (Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour, +p.minute) - t) / 60000;
+  }
+  function instanteNoFuso(dataISO, hora, tz) {
+    const d = dataISO.split('-').map(Number), h = hora.split(':').map(Number);
+    const palpite = Date.UTC(d[0], d[1] - 1, d[2], h[0], h[1]);
+    const primeiro = palpite - deslocamentoFuso(tz, palpite) * 60000;
+    return palpite - deslocamentoFuso(tz, primeiro) * 60000;
+  }
+  // O instante da pendência: com fuso, no relógio dele; sem fuso, no do aparelho.
+  function instante(dataISO, hora, fuso) {
+    return FUSOS[fuso] ? instanteNoFuso(dataISO, hora, FUSOS[fuso])
+      : new Date(dataISO + 'T' + hora + ':00').getTime();
+  }
+  const minutosAte = (dataISO, hora, fuso) =>
+    Math.round((instante(dataISO, hora, fuso) - Date.now()) / 60000);
+  // "07:00 ET · 09:00 aqui" quando o aparelho está noutro fuso; só "07:00 ET" em Orlando.
+  function rotuloHora(dataISO, hora, fuso) {
+    if (!fuso) return hora;
+    if (!FUSOS[fuso]) return hora + ' ' + fuso;
+    const aqui = new Date(instante(dataISO, hora, fuso));
+    const local = String(aqui.getHours()).padStart(2, '0') + ':' +
+                  String(aqui.getMinutes()).padStart(2, '0');
+    return local === hora ? hora + ' ' + fuso : hora + ' ' + fuso + ' · ' + local + ' aqui';
+  }
+  // O bloco está no fuso em que o aparelho está agora? No voo, não — e o agora não se aplica.
+  function fusoDoAparelho(fuso) {
+    if (!fuso || !FUSOS[fuso]) return true;
+    const t = Date.now();
+    return deslocamentoFuso(FUSOS[fuso], t) === -new Date(t).getTimezoneOffset();
+  }
+  const intervalo = (m) => m < 60 ? m + ' min'
+    : Math.floor(m / 60) + 'h' + (m % 60 ? String(m % 60).padStart(2, '0') : '');
+
   const ddmmP = (iso) => { const p = iso.split('-'); return (+p[2]) + '/' + p[1]; };
   function svgP(d) {
     const s = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -260,11 +306,13 @@ window.Fase3 = (function () {
 
   function blocoPlanos(planos) {
     const d = el('details', 'acordeao');
+    d.dataset.chave = 'planos';
     d.appendChild(el('summary', null, '🧭  Plano A, B e C — o que fazer se o dia virar'));
     const c = el('div', 'acordeao-corpo');
 
     planos.forEach(function (p) {
       const bloco = el('div', 'plano ' + (LETRA_COR[p.letra] || ''));
+      bloco.dataset.item = 'plano:' + p.letra;
       const topo = el('div', 'plano-topo');
       topo.appendChild(el('span', 'plano-letra', p.letra));
       const t = el('div');
@@ -294,6 +342,7 @@ window.Fase3 = (function () {
     const rotulo = () => '🛒  ' + lista.titulo + '  ·  ' +
       lista.itens.filter((i) => itemFeito(lista, i)).length + '/' + lista.itens.length;
     const d = el('details', 'acordeao');
+    d.dataset.chave = 'lista:' + lista.id;
     const sum = el('summary', null, rotulo());
     d.appendChild(sum);
     const c = el('div', 'acordeao-corpo');
@@ -313,6 +362,7 @@ window.Fase3 = (function () {
       g.itens.forEach(function (item) {
         const marcado = itemFeito(lista, item);
         const li = el('div', 'item-lista' + (marcado ? ' marcado' : ''));
+        li.dataset.item = 'item:' + (item.id || item.texto);
 
         const chk = el('button', 'bl-check');
         chk.setAttribute('aria-pressed', marcado ? 'true' : 'false');
@@ -349,11 +399,14 @@ window.Fase3 = (function () {
   }
   function blocoNaoPerca(itens) {
     const d = el('details', 'acordeao');
-    d.appendChild(el('summary', null, '⭐  O que não perder — e o que fica para depois'));
+    d.dataset.chave = 'naoperca';
+    // A estrela é das regras de ouro; o que não perder ganha outro sinal.
+    d.appendChild(el('summary', null, '📌  O que não perder — e o que fica para depois'));
     const c = el('div', 'acordeao-corpo');
     itens.forEach(function (x) {
       const b = el('div', 'nao-perca' +
         ((x.quando === 'descartado' || x.quando === 'fechada') ? ' np-fora' : ''));
+      b.dataset.item = 'np:' + x.nome;
       const topo = el('div', 'np-topo');
       topo.appendChild(el('span', 'np-nome', x.nome));
       if (x.quando) {
@@ -388,6 +441,7 @@ window.Fase3 = (function () {
       p.itens.filter((i) => E.feito(chave(i))).length + '/' + p.itens.length;
 
     const d = el('details', 'acordeao');
+    d.dataset.chave = 'preparar';
     const sum = el('summary', null, rotulo());
     d.appendChild(sum);
     const c = el('div', 'acordeao-corpo');
@@ -410,6 +464,7 @@ window.Fase3 = (function () {
       const k = chave(item);
       const marcado = E.feito(k);
       const li = el('div', 'item-lista' + (marcado ? ' marcado' : ''));
+      li.dataset.item = 'prep:' + item.texto;
 
       const chk = el('button', 'bl-check');
       chk.setAttribute('aria-pressed', marcado ? 'true' : 'false');
@@ -458,7 +513,7 @@ window.Fase3 = (function () {
     return r.confirmacaoPadrao || '';
   };
 
-  function pintarRestaurantes() {
+  function pintarRestaurantes(opcoes) {
     const comReserva = R.restaurantes.filter((r) => r.precisaReserva);
     const pendentes = comReserva.filter((r) => statusDe(r) === 'a-reservar').length;
     $('#comer-sub').textContent =
@@ -478,16 +533,28 @@ window.Fase3 = (function () {
 
     Object.keys(porDia).sort().forEach(function (data) {
       const dia = R.dias.find((d) => d.data === data);
-      alvo.appendChild(el('div', 'rest-dia',
-        ddmm(data) + '  ·  ' + (dia ? dia.diaSemana + '  ·  ' + dia.titulo : '')));
+      const cab = el('div', 'rest-dia',
+        ddmm(data) + '  ·  ' + (dia ? dia.diaSemana + '  ·  ' + dia.titulo : ''));
+      cab.dataset.data = data;
+      alvo.appendChild(cab);
       porDia[data]
         .sort((a, b) => String(a.hora || '').localeCompare(String(b.hora || '')))
         .forEach((r) => alvo.appendChild(cartaoRestaurante(r)));
     });
+    // Durante a viagem a aba abre nas refeições de hoje, e não no dia 10.
+    if (opcoes && opcoes.rolarParaHoje) {
+      const cab = alvo.querySelector('.rest-dia[data-data="' + hojeISO() + '"]');
+      if (cab) {
+        requestAnimationFrame(function () {
+          window.scrollTo(0, Math.max(0, cab.getBoundingClientRect().top + window.scrollY - 72));
+        });
+      }
+    }
   }
 
   function cartaoRestaurante(r) {
     const cx = el('div', 'rest' + (r.precisaReserva ? '' : ' sem-reserva'));
+    cx.dataset.item = r.id;
 
     const topo = el('div', 'rest-topo');
     topo.appendChild(el('span', 'rest-hora', r.hora || '—'));
@@ -536,9 +603,18 @@ window.Fase3 = (function () {
         inp.type = 'text';
         inp.placeholder = 'ex.: 1234567890';
         inp.value = confirmacaoDe(r);
-        inp.addEventListener('change', function () {
+        // Grava enquanto digita, com 400 ms de folga: fechar o app sem sair do campo
+        // perdia o número.
+        let espera = null;
+        const gravar = function () {
+          clearTimeout(espera);
           E.definirReserva(r.id, { confirmacao: inp.value.trim() });
+        };
+        inp.addEventListener('input', function () {
+          clearTimeout(espera);
+          espera = setTimeout(gravar, 400);
         });
+        inp.addEventListener('change', gravar);
         conf.appendChild(inp);
         cx.appendChild(conf);
       }
@@ -589,7 +665,10 @@ window.Fase3 = (function () {
      ======================================================================== */
   const MESES_EXT = ['janeiro','fevereiro','março','abril','maio','junho','julho',
                      'agosto','setembro','outubro','novembro','dezembro'];
+  // O filtro fica guardado: o iOS mata a página em segundo plano.
+  const CHAVE_PEND_FALTA = 'orlando2026:pend-so-falta';
   let pendSoFalta = false;
+  try { pendSoFalta = localStorage.getItem(CHAVE_PEND_FALTA) === '1'; } catch (e) { pendSoFalta = false; }
 
   const dataDe = (c) => E.dataChecklist(c.id) || c.dataAlvo;
 
@@ -663,6 +742,7 @@ window.Fase3 = (function () {
 
     const cx = el('div', 'pend' + (feito ? ' feita' : '') + (vencida ? ' vencida' : '') +
       (atrasada ? ' atrasada' : '') + (!feito && !vencida && faltam === 0 ? ' hoje' : ''));
+    cx.dataset.item = c.id;
 
     const chk = el('button', 'bl-check');
     chk.setAttribute('aria-pressed', feito ? 'true' : 'false');
@@ -675,15 +755,21 @@ window.Fase3 = (function () {
     cx.appendChild(chk);
 
     const corpo = el('div', 'pend-corpo');
-    const quando = el('div', 'pend-quando');
+    // A data fica neutra quando falta mais de uma semana: coral só para o que está perto.
+    const quando = el('div', 'pend-quando' +
+      (!feito && !vencida && faltam >= 0 && faltam <= 7 ? ' pq-perto' : ''));
     quando.appendChild(document.createTextNode(
-      ddmmP(data) + (c.hora ? ' · ' + c.hora + ' ' + (c.fuso || '') : '')));
+      ddmmP(data) + (c.hora ? ' · ' + rotuloHora(data, c.hora, c.fuso) : '')));
     if (vencida) {
       quando.appendChild(document.createTextNode(' · perdeu a validade em ' + ddmmP(c.validaAte)));
     } else if (!feito) {
+      // No dia, com hora marcada, a conta é em minutos — e "venceu" quando a hora passa.
+      const min = c.hora && faltam === 0 ? minutosAte(data, c.hora, c.fuso) : null;
       quando.appendChild(document.createTextNode(
         faltam > 0 ? ' · em ' + faltam + (faltam === 1 ? ' dia' : ' dias')
-        : faltam === 0 ? ' · HOJE'
+        : faltam === 0 ? (min === null ? ' · HOJE'
+          : min >= 0 ? ' · em ' + intervalo(min)
+          : ' · venceu às ' + c.hora + (c.fuso ? ' ' + c.fuso : ''))
         : ' · ATRASADA ' + (-faltam) + (faltam === -1 ? ' dia' : ' dias')));
     }
     corpo.appendChild(quando);
@@ -709,7 +795,7 @@ window.Fase3 = (function () {
     }
     if (c.janelaReserva) selos.appendChild(el('span', 'selo selo-reserva', 'janela de reserva'));
     if (c.critico) selos.appendChild(el('span', 'selo selo-critico', 'crítico'));
-    if (c.dataEstimada && !editada) selos.appendChild(el('span', 'selo selo-estimada', 'data estimada'));
+    if (c.dataEstimada && !editada) selos.appendChild(el('span', 'selo-estimativa', 'data estimada'));
     if (editada) selos.appendChild(el('span', 'selo selo-tipo', 'data ajustada'));
     (c.restauranteIds || []).forEach(function (rid) {
       const r = R.restaurantes.find((x) => x.id === rid);
@@ -717,16 +803,23 @@ window.Fase3 = (function () {
     });
     if (selos.children.length) corpo.appendChild(selos);
 
-    // a data é editável: estimativa minha não vira lei
-    const inp = el('input', 'pend-data-edit');
-    inp.type = 'date';
-    inp.value = data;
-    inp.setAttribute('aria-label', 'Ajustar a data de: ' + c.texto);
-    inp.addEventListener('change', function () {
-      E.definirDataChecklist(c.id, inp.value === c.dataAlvo ? null : inp.value);
-      pintarPendencias();
+    // a data é editável — estimativa minha não vira lei —, mas o campo fica atrás de
+    // um toque, e não aberto em todos os cartões
+    const ajustar = el('button', 'pend-ajustar', editada ? 'Mudar a data ajustada' : 'Ajustar data');
+    ajustar.type = 'button';
+    ajustar.addEventListener('click', function () {
+      const inp = el('input', 'pend-data-edit');
+      inp.type = 'date';
+      inp.value = data;
+      inp.setAttribute('aria-label', 'Ajustar a data de: ' + c.texto);
+      inp.addEventListener('change', function () {
+        E.definirDataChecklist(c.id, inp.value === c.dataAlvo ? null : inp.value);
+        pintarPendencias();
+      });
+      ajustar.replaceWith(inp);
+      inp.focus();
     });
-    corpo.appendChild(inp);
+    corpo.appendChild(ajustar);
 
     cx.appendChild(corpo);
     return cx;
@@ -735,13 +828,17 @@ window.Fase3 = (function () {
   /* ===== ligação dos controles próprios ===== */
   document.addEventListener('DOMContentLoaded', function () {
     const chk = $('#chk-pend-falta');
-    if (chk) chk.addEventListener('change', function (e) {
+    if (!chk) return;
+    chk.checked = pendSoFalta;
+    chk.addEventListener('change', function (e) {
       pendSoFalta = e.target.checked;
+      try { localStorage.setItem(CHAVE_PEND_FALTA, pendSoFalta ? '1' : '0'); } catch (err) {}
       pintarPendencias();
     });
   });
 
   return {
+    minutosAte: minutosAte, rotuloHora: rotuloHora, fusoDoAparelho: fusoDoAparelho,
     pintarFicha: pintarFicha, pintarFechamento: pintarFechamento,
     pintarRestaurantes: pintarRestaurantes,
     pintarPendencias: pintarPendencias,

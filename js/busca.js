@@ -61,11 +61,15 @@ window.Busca = (function () {
       dia.blocos.forEach(function (b) {
         indice.push({
           tipo: 'bloco', nome: b.titulo,
-          onde: ddmm(dia.data) + ' · ' + dia.titulo +
-                (b.areaParque ? ' · ' + b.areaParque : '') + ' · ' + b.hora,
+          // A hora com os ajustes do dia: referência deslocada e horário confirmado.
+          onde: function () {
+            return ddmm(dia.data) + ' · ' + dia.titulo +
+              (b.areaParque ? ' · ' + b.areaParque : '') + ' · ' +
+              (window.AppNav && AppNav.horaDoBloco ? AppNav.horaDoBloco(dia, b) : b.hora);
+          },
           busca: normal([b.titulo, b.descricao, b.contexto, b.areaParque,
                          dia.titulo, b.nota].join(' ')),
-          diaId: dia.id,
+          diaId: dia.id, foco: '.parada[data-bloco="' + b.id + '"]',
         });
       });
     });
@@ -80,6 +84,7 @@ window.Busca = (function () {
             busca: normal([it.texto, it.marca, it.alternativaBarata, it.secao, it.motivo,
                            l.titulo].join(' ')),
             diaId: dia.id,
+            foco: '#fechamento-dia [data-item="' + CSS.escape('item:' + (it.id || it.texto)) + '"]',
           });
         });
       });
@@ -89,6 +94,7 @@ window.Busca = (function () {
           onde: ddmm(dia.data) + ' · ' + dia.titulo + ' · o que não perder',
           busca: normal([p.nome, p.motivo, p.custo, p.condicao].join(' ')),
           diaId: dia.id,
+          foco: '#fechamento-dia [data-item="' + CSS.escape('np:' + p.nome) + '"]',
         });
       });
       const pa = dia.prepararAmanha;
@@ -99,6 +105,7 @@ window.Busca = (function () {
             onde: ddmm(dia.data) + ' · deixar pronto para amanhã',
             busca: normal([it.texto, it.motivo, pa.titulo].join(' ')),
             diaId: dia.id,
+            foco: '#fechamento-dia [data-item="' + CSS.escape('prep:' + it.texto) + '"]',
           });
         });
       }
@@ -108,6 +115,7 @@ window.Busca = (function () {
           onde: ddmm(dia.data) + ' · ' + dia.titulo,
           busca: normal([p.titulo, p.gatilho, (p.passos || []).join(' ')].join(' ')),
           diaId: dia.id,
+          foco: '#fechamento-dia [data-item="plano:' + p.letra + '"]',
         });
       });
     });
@@ -118,7 +126,7 @@ window.Busca = (function () {
         onde: ddmm(r.data) + (r.hora ? ' · ' + r.hora : '') +
               (r.local ? ' · ' + r.local : ''),
         busca: normal([r.nome, r.local, r.nota, (r.alternativas || []).join(' ')].join(' ')),
-        tela: 'comer',
+        tela: 'comer', foco: '.rest[data-item="' + r.id + '"]',
       });
     });
     R.locais.forEach(function (l) {
@@ -128,13 +136,14 @@ window.Busca = (function () {
               (l.doHotel && l.doHotel.tempoMin != null
                 ? ' · ' + l.doHotel.tempoMin + ' min do hotel' : ''),
         busca: normal([l.nome, l.endereco, l.tipo, l.nota].join(' ')),
-        tela: 'guia',
+        tela: 'guia', foco: '.local[data-item="' + l.id + '"]',
       });
     });
     R.dicas.forEach(function (d) {
       indice.push({
         tipo: 'dica', nome: d.titulo, onde: 'Guia · dicas',
         busca: normal([d.titulo, d.corpo].join(' ')), tela: 'guia',
+        foco: '.dica[data-item="' + d.id + '"]',
       });
     });
     // "gelada" e "urgent care" nao achavam nada: regras de ouro e telefones ficavam fora.
@@ -142,6 +151,7 @@ window.Busca = (function () {
       indice.push({
         tipo: 'dica', nome: 'Regra ' + r.n + ' — ' + r.titulo, onde: 'Guia · regras de ouro',
         busca: normal([r.titulo, r.texto].join(' ')), tela: 'guia',
+        foco: '[data-item="regras"]',
       });
     });
     (R.contatos || []).forEach(function (c) {
@@ -149,14 +159,19 @@ window.Busca = (function () {
         tipo: 'contato', nome: c.nome,
         onde: 'Guia · telefones' + (c.numero ? ' · ' + c.numero : ''),
         busca: normal([c.nome, c.numero, c.quando].join(' ')), tela: 'guia',
+        foco: '.contato[data-item="' + c.id + '"]', tel: c.numero,
       });
     });
     R.checklist.forEach(function (c) {
       indice.push({
         tipo: 'pendencia', nome: c.texto,
-        onde: c.dataAlvo ? ddmm(c.dataAlvo) + (c.dataEstimada ? ' · estimada' : '') : 'sem data',
+        // A data que a aba Pendências mostra, inclusive quando foi ajustada à mão.
+        onde: function () {
+          const ajustada = window.Estado && Estado.dataChecklist(c.id);
+          return ddmm(ajustada || c.dataAlvo) + (c.dataEstimada && !ajustada ? ' · estimada' : '');
+        },
         busca: normal([c.texto, c.nota, c.motivoData].join(' ')),
-        tela: 'pendencias',
+        tela: 'pendencias', foco: '.pend[data-item="' + c.id + '"]',
       });
     });
   }
@@ -238,25 +253,51 @@ window.Busca = (function () {
         const n = el('div', 'busca-nome');
         n.appendChild(realce(it.nome, q));
         t.appendChild(n);
-        t.appendChild(el('div', 'busca-onde', it.onde));
+        t.appendChild(el('div', 'busca-onde', typeof it.onde === 'function' ? it.onde() : it.onde));
         b.appendChild(t);
         b.addEventListener('click', function () {
           fechar();
-          if (it.diaId) window.AppNav.irParaDia(window.AppNav.acharDia(it.diaId));
-          else if (it.tela) window.AppNav.mostrarTela(it.tela);
+          // Abre a tela e vai até o item, com o acordeão aberto: abrir no topo
+          // deixava o item a vários toques de distância.
+          if (it.diaId) {
+            window.AppNav.irParaDia(window.AppNav.acharDia(it.diaId), { semRolar: !!it.foco });
+          } else if (it.tela) {
+            window.AppNav.mostrarTela(it.tela, { semRolar: true });
+          }
+          if (it.foco) window.AppNav.focar(it.foco);
         });
-        alvo.appendChild(b);
+        if (it.tel) {
+          // O telefone liga direto da busca, sem passar pelo Guia.
+          const linha = el('div', 'busca-linha');
+          linha.appendChild(b);
+          const a = el('a', 'busca-ligar', 'Ligar');
+          a.href = 'tel:' + it.tel.replace(/[^+0-9]/g, '');
+          a.setAttribute('aria-label', 'Ligar para ' + it.nome);
+          linha.appendChild(a);
+          alvo.appendChild(linha);
+        } else {
+          alvo.appendChild(b);
+        }
       });
     });
   }
 
+  let focoAntes = null;
   function abrir() {
+    focoAntes = document.activeElement;
     $('#tela-busca').classList.remove('oculto');
     const c = $('#busca-campo');
     c.value = ''; pintar('');
     setTimeout(function () { c.focus(); }, 50);
   }
-  function fechar() { $('#tela-busca').classList.add('oculto'); }
+  function fechar() {
+    $('#tela-busca').classList.add('oculto');
+    // O foco volta para onde estava; sem isto o leitor de tela recomeçava do topo.
+    if (focoAntes && focoAntes.focus && document.body.contains(focoAntes)) {
+      focoAntes.focus({ preventScroll: true });
+    }
+    focoAntes = null;
+  }
 
   function ligar() {
     montarIndice();

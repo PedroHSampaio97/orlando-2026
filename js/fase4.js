@@ -81,6 +81,7 @@ window.Fase4 = (function () {
 
   function cartaoDica(d) {
     const det = el('details', 'acordeao dica guia-item');
+    det.dataset.item = d.id;
     det.appendChild(el('summary', null, d.titulo));
     const c = el('div', 'acordeao-corpo');
     if ((d.dias || []).length) {
@@ -99,6 +100,7 @@ window.Fase4 = (function () {
 
   function cartaoRegras() {
     const det = el('details', 'acordeao guia-item');
+    det.dataset.item = 'regras';
     det.appendChild(el('summary', null, '⭐  Regras de ouro · ' + R.regrasDeOuro.length));
     const c = el('div', 'acordeao-corpo');
     R.regrasDeOuro.forEach(function (r) {
@@ -153,6 +155,87 @@ window.Fase4 = (function () {
     $('#guia-vazio').hidden = !(termos.length && !algum);
   }
   /* ===========================================================================
+     LIGAR AGORA
+     911, hotel, Urgent Care e seguro, no topo do Guia e em "Quando der errado".
+     Os telefones ficavam depois de dez acordeões.
+     ======================================================================== */
+  function pintarLigar() {
+    const E = window.Estado;
+    const h = new Date().getHours(), sem = new Date().getDay();
+    // A de Celebration fecha às 20h (17h no fim de semana); depois disso vale a de
+    // Lake Buena Vista, aberta até a meia-noite.
+    const celebration = h >= 8 && h < (sem === 0 || sem === 6 ? 17 : 20);
+    const urgent = R.contatos.find((c) => c.id ===
+      (celebration ? 'tel-urgentcare-celebration' : 'tel-urgentcare-lbv'));
+    const hotel = R.contatos.find((c) => c.id === 'tel-hotel');
+    const seguro = E.pessoal('seguro-telefone');
+    const botoes = [
+      { rotulo: '911', sub: 'emergência', numero: '911', urgente: true },
+      hotel && { rotulo: 'Hotel', sub: 'Travelodge', numero: hotel.numero },
+      urgent && { rotulo: 'Urgent Care', sub: celebration ? 'Celebration' : 'Lake Buena Vista',
+                  numero: urgent.numero },
+      { rotulo: 'Seguro', sub: seguro ? 'central' : 'cadastrar', numero: seguro },
+    ].filter(Boolean);
+    ['#guia-ligar', '#guia-ligar-errado'].forEach(function (sel) {
+      const alvo = document.querySelector(sel);
+      if (!alvo) return;
+      alvo.innerHTML = '';
+      botoes.forEach(function (x) {
+        let a;
+        if (x.numero) {
+          a = el('a', 'ligar-btn' + (x.urgente ? ' ligar-911' : ''));
+          a.href = 'tel:' + String(x.numero).replace(/[^+0-9]/g, '');
+        } else {
+          // Sem o telefone da central, o botão leva ao campo onde ele se cadastra.
+          a = el('button', 'ligar-btn');
+          a.type = 'button';
+          a.addEventListener('click', function () {
+            const campo = document.getElementById('seguro-telefone');
+            if (!campo) return;
+            campo.scrollIntoView({ block: 'center' });
+            campo.focus({ preventScroll: true });
+          });
+        }
+        a.appendChild(svg(P.fone));
+        const t = el('span', 'ligar-txt');
+        t.appendChild(el('b', null, x.rotulo));
+        t.appendChild(el('small', null, x.sub));
+        a.appendChild(t);
+        alvo.appendChild(a);
+      });
+    });
+  }
+
+  // O número da apólice e o telefone da central ficam só neste aparelho — e no
+  // export para o outro celular. O site é público: nada disto vai para o roteiro.
+  function camposSeguro() {
+    const E = window.Estado;
+    const cx = el('div', 'seguro-campos');
+    [['seguro-telefone', 'Telefone da central', 'tel'],
+     ['seguro-apolice', 'Número da apólice', 'text']].forEach(function (x) {
+      const lab = el('label', 'seguro-rot', x[1]);
+      lab.setAttribute('for', x[0]);
+      const inp = el('input', 'seguro-campo');
+      inp.id = x[0];
+      inp.type = x[2];
+      inp.autocomplete = 'off';
+      inp.placeholder = 'como está no PDF da apólice';
+      inp.value = E.pessoal(x[0]) || '';
+      let espera = null;
+      inp.addEventListener('input', function () {
+        clearTimeout(espera);
+        espera = setTimeout(function () {
+          E.definirPessoal(x[0], inp.value.trim());
+          pintarLigar();
+        }, 400);
+      });
+      cx.appendChild(lab);
+      cx.appendChild(inp);
+    });
+    return cx;
+  }
+
+  /* ===========================================================================
      TELEFONES
      Link tel: abre o discador do proprio aparelho. Nao e requisicao de rede:
      funciona offline, que e exatamente quando esta tela importa.
@@ -162,6 +245,7 @@ window.Fase4 = (function () {
     alvo.innerHTML = '';
     (R.contatos || []).forEach(function (c) {
       const cartao = el('div', 'contato guia-item' + (c.critico ? ' contato-critico' : ''));
+      cartao.dataset.item = c.id;
       cartao.dataset.busca = normal([c.nome, c.numero, c.quando].join(' '));
       const topo = el('div', 'contato-topo');
       topo.appendChild(el('div', 'contato-nome', c.nome));
@@ -176,6 +260,7 @@ window.Fase4 = (function () {
       }
       cartao.appendChild(topo);
       cartao.appendChild(el('div', 'contato-quando', c.quando));
+      if (c.id === 'tel-seguro') cartao.appendChild(camposSeguro());
       if (c.verificado) {
         cartao.appendChild(el('div', 'contato-fonte',
           'Conferido em ' + c.verificado.split('-').reverse().join('/') +
@@ -249,6 +334,7 @@ window.Fase4 = (function () {
   function cartaoLocal(l, base) {
     const ehBase = l.id === R.viagem.baseLocalId;
     const cx = el('div', 'local guia-item t-' + l.tipo);
+    cx.dataset.item = l.id;
     cx.dataset.busca = normal([l.nome, l.endereco, l.tipo, l.nota].join(' '));
 
     const topo = el('div', 'local-topo');
@@ -343,7 +429,7 @@ window.Fase4 = (function () {
 
   let filtroLigado = false;
   function pintarGuia() {
-    pintarDicas(); pintarContatos(); pintarLocais();
+    pintarDicas(); pintarContatos(); pintarLocais(); pintarLigar();
     if (!filtroLigado) {
       $('#guia-filtro').addEventListener('input', function (e) { filtrarGuia(e.target.value); });
       filtroLigado = true;

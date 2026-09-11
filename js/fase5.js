@@ -110,8 +110,10 @@ window.Fase5 = (function () {
     } else if (estadoSW.registrado) {
       classe = 'aviso';
       titulo = '◐  Guardando arquivos…';
-      texto = estadoSW.emCache + ' de ' + (estadoSW.esperado || '?') +
-        ' arquivos. Deixe o app aberto alguns segundos com internet e recarregue.';
+      texto = estadoSW.esperado
+        ? estadoSW.emCache + ' de ' + estadoSW.esperado +
+          ' arquivos. Deixe o app aberto alguns segundos com internet e recarregue.'
+        : 'Verificando os arquivos guardados no aparelho…';
     } else {
       classe = 'aviso'; titulo = '○  Verificando…'; texto = 'Consultando o cache.';
     }
@@ -178,12 +180,21 @@ window.Fase5 = (function () {
   /* ---------------------------------------------------------------------------
      Importar
      ------------------------------------------------------------------------ */
+  let focoAntesImportar = null;
   function abrirImportar() {
+    focoAntesImportar = document.activeElement;
     $('#modal-importar').classList.remove('oculto');
     $('#imp-texto').value = '';
     $('#imp-resultado').textContent = '';
+    setTimeout(function () { $('#imp-texto').focus(); }, 50);
   }
-  function fecharImportar() { $('#modal-importar').classList.add('oculto'); }
+  function fecharImportar() {
+    $('#modal-importar').classList.add('oculto');
+    if (focoAntesImportar && focoAntesImportar.focus) {
+      focoAntesImportar.focus({ preventScroll: true });
+    }
+    focoAntesImportar = null;
+  }
 
   function aplicarImportacao(modo) {
     const txt = $('#imp-texto').value.trim();
@@ -229,6 +240,9 @@ window.Fase5 = (function () {
     $('#imp-arquivo').addEventListener('change', lerArquivo);
     $('#modal-importar').addEventListener('click', function (e) {
       if (e.target === this) fecharImportar();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !$('#modal-importar').classList.contains('oculto')) fecharImportar();
     });
     registrar();
   }

@@ -111,7 +111,8 @@ const PARES_TEXTO = [
   ['--sobre-op', '--op-busch'], ['--sobre-op', '--op-livre'], ['--sobre-op', '--op-logistica'],
   ['--sobre-perigo', '--perigo'], ['--sobre-ok', '--ok'], ['--sobre-acento', '--acento'],
   ['--sobre-marca', '--marca'], ['--sobre-marca', '--marca-clara'], ['--sobre-alerta', '--alerta'],
-  ['--fundo', '--texto-fraco'],
+  ['--fundo', '--texto-fraco'], ['--fundo', '--texto'],
+  ['--acento-texto', '--superficie'], ['--acento-texto', '--fundo'],
   ['--texto', '--fundo'], ['--texto', '--superficie'],
   ['--texto-fraco', '--fundo'], ['--texto-fraco', '--superficie'], ['--texto-fraco', '--superficie-2'],
 ];

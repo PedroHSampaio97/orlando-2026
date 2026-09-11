@@ -69,6 +69,10 @@
   --sobre-acento:  #14181C;   /* o coral é claro demais para branco: dava 3,8:1 */
   --sobre-marca:   #FFFFFF;
   --sobre-alerta:  #FFFFFF;
+  --acento-texto:  #A84A1B;   /* coral de texto: o #D2622F dava 3,8:1 no branco */
+
+  color-scheme: light;
+  accent-color: var(--marca);
 }
 
 /* modo escuro: manual e por sistema, mesmos valores */
@@ -89,6 +93,8 @@
   --fio-topo: inset 0 1px 0 rgba(255,255,255,.06);
   --sobre-op:#12171C; --sobre-perigo:#12171C; --sobre-ok:#12171C;
   --sobre-acento:#12171C; --sobre-marca:#12171C; --sobre-alerta:#12171C;
+  --acento-texto:#F09A6B;
+  color-scheme: dark;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-tema="claro"]) {
@@ -108,6 +114,8 @@
     --fio-topo: inset 0 1px 0 rgba(255,255,255,.06);
     --sobre-op:#12171C; --sobre-perigo:#12171C; --sobre-ok:#12171C;
     --sobre-acento:#12171C; --sobre-marca:#12171C; --sobre-alerta:#12171C;
+    --acento-texto:#F09A6B;
+    color-scheme: dark;
   }
 }
 
@@ -142,12 +150,12 @@ body {
 .t-corpo-g { font-size: 17px; font-weight: 600; line-height: 1.35; }
 .t-corpo   { font-size: 15px; line-height: 1.55; }
 .t-apoio   { font-size: 13px; line-height: 1.5; color: var(--texto-fraco); }
-.t-micro   { font-size: 11px; font-weight: 800; letter-spacing: .09em;
+.t-micro   { font-size: 12px; font-weight: 800; letter-spacing: .09em;
              text-transform: uppercase; }
 
 /* rótulo de seção: micro + fio, não "cinza menor" */
 .secao-rotulo {
-  font-size: 11px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
+  font-size: 12px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
   color: var(--texto-fraco); margin: 32px 0 12px;
   display: flex; align-items: center; gap: 12px;
 }
@@ -179,7 +187,7 @@ body {
 .topo-titulo { text-align: center; line-height: 1.15; overflow: hidden; }
 .topo-titulo strong { display: block; color: var(--sobre-op); font-size: 15px; font-weight: 700;
   letter-spacing: -.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.topo-titulo span { display: block; color: color-mix(in srgb, var(--sobre-op) 78%, transparent); font-size: 11px;
+.topo-titulo span { display: block; color: color-mix(in srgb, var(--sobre-op) 78%, transparent); font-size: 12px;
   font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
 
 .btn-icone {
@@ -220,24 +228,27 @@ body {
 /* ---------- avisos ---------- */
 .aviso {
   margin-top: 12px; padding: 12px 16px; border-radius: var(--r-botao); font-size: 14px;
-  line-height: 1.55; border-left: 3px solid var(--alerta);
+  line-height: 1.55; border-left: 4px solid var(--alerta);
   background: var(--alerta-fundo); color: var(--texto);
 }
 .aviso.bom    { border-left-color: var(--ok);     background: var(--ok-fundo); }
 .aviso.perigo { border-left-color: var(--perigo); background: var(--perigo-fundo); }
+.aviso.info   { border-left-color: var(--borda-forte); background: var(--superficie-2); }
 .aviso strong { display: block; margin-bottom: 4px; font-weight: 750; }
-.aviso .marca-pesquisa { font-size: 11px; opacity: .72; display: block; margin-top: 8px;
+.aviso .marca-pesquisa { font-size: 12px; opacity: .72; display: block; margin-top: 8px;
   font-weight: 700; letter-spacing: .04em; }
 
 /* ---------- selos ---------- */
 .selo {
-  font-size: 10.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
   padding: 4px 7px; border-radius: var(--r-selo); white-space: nowrap; line-height: 1.3;
 }
 /* o selo de confirmar horario e um botao: precisa herdar a tipografia do selo
    e ganhar area de toque, senao vira um texto minusculo com cara de sistema. */
 button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 32px;
-  display: inline-flex; align-items: center; }
+  display: inline-flex; align-items: center; position: relative; }
+/* área de toque de 44 px sem engordar o selo */
+button.selo::after { content: ''; position: absolute; left: 0; right: 0; top: -6px; bottom: -6px; }
 .selo-rope-drop   { background: #7A2E0E; color: #fff; }
 .selo-multi-pass  { background: #1A4F8A; color: #fff; }
 .selo-single-pass { background: #6A2585; color: #fff; }
@@ -250,7 +261,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
                     box-shadow: inset 0 0 0 1px currentColor; }
 .selo-molha       { background: #0E5A72; color: #fff; }
 .selo-locker      { background: #6B3B06; color: #fff; }
-.selo-critico     { background: var(--perigo); color: var(--sobre-perigo); }
+.selo-critico     { background: var(--texto); color: var(--fundo); }
 .selo-estimada    { background: var(--ouro-fundo); color: var(--ouro);
                     box-shadow: inset 0 0 0 1px currentColor; }
 /* fila alternativa: aparece como "ou single rider", ao lado da fila principal */
@@ -292,7 +303,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   position: relative; flex: 1; min-height: var(--barra-h); border: 0; background: none;
   cursor: pointer; display: flex; flex-direction: column; align-items: center;
   justify-content: center; gap: 3px; color: var(--texto-fraco); font: inherit;
-  font-size: 10px; font-weight: 700; letter-spacing: -.01em;
+  font-size: 12px; font-weight: 700; letter-spacing: -.01em;
   -webkit-tap-highlight-color: transparent;
 }
 .aba svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.75;
@@ -304,8 +315,8 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 }
 .badge {
   position: absolute; top: 8px; right: calc(50% - 22px);
-  min-width: 17px; height: 17px; padding: 0 5px; border-radius: 9px;
-  background: var(--perigo); color: var(--sobre-perigo); font-size: 10px; font-weight: 800;
+  min-width: 19px; height: 19px; padding: 0 5px; border-radius: 10px;
+  background: var(--perigo); color: var(--sobre-perigo); font-size: 12px; font-weight: 800;
   font-style: normal; display: grid; place-items: center;
 }
 
@@ -339,7 +350,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 }
 .acao > * { position: relative; z-index: 1; }
 .acao-rot {
-  font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+  font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
   opacity: .78; display: flex; align-items: center; gap: 6px;
 }
 .acao-prazo { font-size: 40px; font-weight: 800; letter-spacing: -.03em;
@@ -378,14 +389,14 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 }
 .mini-pend-dias b { display: block; font-size: 20px; font-weight: 800;
   font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
-.mini-pend-dias span { display: block; font-size: 9.5px; font-weight: 800;
+.mini-pend-dias span { display: block; font-size: 12px; font-weight: 800;
   letter-spacing: .08em; text-transform: uppercase; color: var(--texto-fraco); }
-.mini-pend.urgente .mini-pend-dias b { color: var(--acento); }
+.mini-pend.urgente .mini-pend-dias b { color: var(--acento-texto); }
 .mini-pend.atrasada { border-left: 3px solid var(--perigo); }
 .mini-pend.atrasada .mini-pend-dias b { color: var(--perigo); }
 .mini-pend-txt { flex: 1; min-width: 0; font-size: 14px; font-weight: 600;
   line-height: 1.4; }
-.mini-pend-data { font-size: 11.5px; color: var(--texto-fraco); font-weight: 700;
+.mini-pend-data { font-size: 12px; color: var(--texto-fraco); font-weight: 700;
   margin-top: 2px; }
 
 /* LISTA DOS 17 DIAS — vertical e legível, na cor da operadora */
@@ -406,7 +417,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 }
 .ld-data b { font-size: 19px; font-weight: 800; letter-spacing: -.02em;
   font-variant-numeric: tabular-nums; line-height: 1; }
-.ld-data span { font-size: 9.5px; font-weight: 800; letter-spacing: .07em;
+.ld-data span { font-size: 12px; font-weight: 800; letter-spacing: .07em;
   text-transform: uppercase; color: var(--texto-fraco); margin-top: 2px; }
 .ld-corpo { flex: 1; min-width: 0; padding: 12px 14px; display: flex;
   flex-direction: column; justify-content: center; gap: 4px; }
@@ -421,12 +432,12 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .ld-prog i { display: block; height: 100%; background: var(--op); border-radius: 2px; }
 .ld-hoje {
   flex: 0 0 auto; white-space: nowrap;
-  font-size: 9.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
   color: var(--op); background: var(--superficie-2); padding: 3px 6px;
   border-radius: var(--r-selo); margin-left: auto; flex: 0 0 auto;
 }
 .ld-zero {
-  font-size: 9.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
   color: var(--ok); flex: 0 0 auto;
 }
 
@@ -439,7 +450,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 }
 .resumo-item b { display: block; font-size: 24px; font-weight: 800; letter-spacing: -.02em;
   font-variant-numeric: tabular-nums; line-height: 1; }
-.resumo-item span { display: block; font-size: 10px; font-weight: 700; letter-spacing: .05em;
+.resumo-item span { display: block; font-size: 12px; font-weight: 700; letter-spacing: .05em;
   text-transform: uppercase; color: var(--texto-fraco); margin-top: 5px; line-height: 1.3; }
 
 /* =============================================================================
@@ -462,7 +473,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .busca-campo:focus { outline: 2px solid var(--marca); outline-offset: -2px; }
 .busca-corpo { flex: 1; overflow-y: auto; padding: 8px 16px 32px;
   -webkit-overflow-scrolling: touch; }
-.busca-grupo { font-size: 11px; font-weight: 800; letter-spacing: .09em;
+.busca-grupo { font-size: 12px; font-weight: 800; letter-spacing: .09em;
   text-transform: uppercase; color: var(--texto-fraco); margin: 20px 0 8px; }
 .busca-item {
   display: flex; align-items: flex-start; gap: 10px; width: 100%; text-align: left;
@@ -495,7 +506,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .sync-linha { display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
   padding-top: 12px; border-top: 1px solid var(--borda); }
 .sync-linha:first-of-type { padding-top: 0; border-top: 0; }
-.sync-rot { font-size: 11px; text-transform: uppercase; letter-spacing: .08em;
+.sync-rot { font-size: 12px; text-transform: uppercase; letter-spacing: .08em;
   font-weight: 800; color: var(--texto-fraco); flex: 0 0 72px; }
 .sync-botoes { display: flex; flex-wrap: wrap; gap: 8px; flex: 1; }
 .sync-botoes .btn-secundario { flex: 1; min-width: 88px; }
@@ -560,7 +571,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 }
 .pilula b { display: block; font-size: 17px; font-weight: 800; letter-spacing: -.02em;
   font-variant-numeric: tabular-nums; }
-.pilula span { display: block; font-size: 9px; font-weight: 800; letter-spacing: .07em;
+.pilula span { display: block; font-size: 12px; font-weight: 800; letter-spacing: .07em;
   color: var(--texto-fraco); text-transform: uppercase; }
 .pilula.ativa { background: var(--op-p); border-color: var(--op-p); color: var(--sobre-op); }
 .pilula.ativa span { color: color-mix(in srgb, var(--sobre-op) 85%, transparent); }
@@ -592,7 +603,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .selos-dia { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
 .selo-dia {
   flex: 0 0 auto; white-space: nowrap;
-  font-size: 10.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
   padding: 4px 8px; border-radius: var(--r-selo);
   background: var(--superficie-2); color: var(--texto-fraco);
 }
@@ -610,12 +621,12 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .btn-rota-dia svg { width: 17px; height: 17px; fill: none; stroke: currentColor;
   stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
 .btn-rota-dia:active { background: color-mix(in srgb, var(--op) 12%, transparent); }
-.rota-nota { font-size: 11.5px; color: var(--texto-fraco); margin: 6px 0 0;
+.rota-nota { font-size: 12px; color: var(--texto-fraco); margin: 6px 0 0;
   text-align: center; }
 
 /* referência (horário de abertura) */
 .referencia { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--borda); }
-.referencia label { display: block; font-size: 11px; text-transform: uppercase;
+.referencia label { display: block; font-size: 12px; text-transform: uppercase;
   letter-spacing: .08em; font-weight: 800; color: var(--texto-fraco); margin-bottom: 8px; }
 .referencia-controle { display: flex; gap: 8px; }
 .referencia input[type=time] {
@@ -627,7 +638,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .referencia input[type=time].editado { border-color: var(--acento); }
 .referencia-ajuda { font-size: 12.5px; color: var(--texto-fraco); margin: 10px 0 0;
   line-height: 1.55; }
-.referencia-ajuda.ativa { color: var(--acento); font-weight: 700; }
+.referencia-ajuda.ativa { color: var(--acento-texto); font-weight: 700; }
 
 /* =============================================================================
    TIMELINE — trilho na cor da operadora
@@ -662,8 +673,8 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .parada.t-refeicao .marcador svg { stroke: var(--acento); }
 .parada.t-compras  .marcador { border-color: var(--ouro); }
 .parada.t-compras  .marcador svg { stroke: var(--ouro); }
-.parada.t-tarefa   .marcador { border-color: var(--perigo); }
-.parada.t-tarefa   .marcador svg { stroke: var(--perigo); }
+.parada.t-tarefa   .marcador { border-color: var(--marca); }
+.parada.t-tarefa   .marcador svg { stroke: var(--marca); }
 .parada.t-deslocamento .marcador { background: var(--superficie-2); }
 
 .cartao {
@@ -673,14 +684,14 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .cartao-cabeca { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
 .ct-hora { flex: 0 0 auto; white-space: nowrap; font-size: 18px; font-weight: 800; color: var(--op);
   font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
-.ct-hora-antiga { flex: 0 0 auto; white-space: nowrap; font-size: 11.5px; font-weight: 700; color: var(--texto-fraco);
+.ct-hora-antiga { flex: 0 0 auto; white-space: nowrap; font-size: 12px; font-weight: 700; color: var(--texto-fraco);
   text-decoration: line-through; }
 .ct-pin { width: 6px; height: 6px; border-radius: 50%; background: var(--acento);
   flex: 0 0 auto; }
-.ct-dur { flex: 0 0 auto; white-space: nowrap; font-size: 11.5px; color: var(--texto-fraco); font-weight: 650; }
+.ct-dur { flex: 0 0 auto; white-space: nowrap; font-size: 12px; color: var(--texto-fraco); font-weight: 650; }
 
 .ct-check {
-  margin-left: auto; flex: 0 0 auto; width: 40px; height: 40px; border-radius: 12px;
+  margin-left: auto; flex: 0 0 auto; width: 48px; height: 48px; border-radius: 14px;
   cursor: pointer; border: 2px solid var(--borda); background: var(--fundo);
   display: grid; place-items: center; padding: 0;
   transition: transform .12s cubic-bezier(.34,1.56,.64,1), background .15s, border-color .15s;
@@ -696,21 +707,21 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 
 .ct-titulo { font-size: 17px; font-weight: 680; line-height: 1.3; letter-spacing: -.01em; }
 .ct-desc { font-size: 14px; color: var(--texto-fraco); margin-top: 4px; line-height: 1.5; }
-.ct-area { font-size: 12px; color: var(--texto-fraco); margin-top: 6px;
+.ct-area { font-size: 14px; color: var(--texto-fraco); margin-top: 6px;
   display: flex; align-items: center; gap: 5px; font-weight: 650; }
 .ct-area svg { width: 12px; height: 12px; fill: none; stroke: currentColor;
   stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
 .ct-contexto { font-size: 13.5px; color: var(--texto-fraco); margin-top: 12px;
   padding-top: 12px; border-top: 1px solid var(--borda); line-height: 1.6; }
-.ct-nota { font-size: 13px; margin-top: 8px; color: var(--acento); font-weight: 700; }
-.ct-colisao { font-size: 12.5px; color: var(--perigo); font-weight: 700; margin-top: 8px;
+.ct-nota { font-size: 13px; margin-top: 8px; color: var(--acento-texto); font-weight: 700; }
+.ct-colisao { font-size: 14px; color: var(--perigo); font-weight: 700; margin-top: 8px;
   background: var(--perigo-fundo); padding: 8px 10px; border-radius: var(--r-botao); }
 .ct-selos { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
 
 /* atalho do Maps por atração */
 .ct-maps {
-  display: inline-flex; align-items: center; gap: 5px; min-height: 34px;
-  margin-top: 10px; padding: 0 11px; border-radius: 17px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 5px; min-height: 44px;
+  margin-top: 10px; padding: 0 12px; border-radius: 22px; cursor: pointer;
   text-decoration: none; border: 1px solid var(--borda); background: var(--fundo);
   color: var(--texto-fraco); font: inherit; font-size: 12px; font-weight: 700;
 }
@@ -718,8 +729,9 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .ct-maps:active { background: var(--superficie-2); }
 
-.parada.feita .cartao { opacity: .5; }
-.parada.feita .ct-titulo { text-decoration: line-through; }
+/* feito: sem opacidade, que derrubava o contraste para 2:1 — o cartão recua e o título risca */
+.parada.feita .cartao { background: var(--superficie-2); box-shadow: none; }
+.parada.feita .ct-titulo { text-decoration: line-through; color: var(--texto-fraco); }
 .parada.colide .cartao { border-color: var(--perigo); }
 
 /* VAZIO PROPOSITAL: passa a parecer ausência de propósito */
@@ -744,7 +756,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 
 /* travessia entre areas, no conector */
 .conector-travessia { display: inline-flex; align-items: center; gap: 5px;
-  font-size: 11.5px; font-weight: 700; color: var(--texto-fraco);
+  font-size: 12px; font-weight: 700; color: var(--texto-fraco);
   white-space: nowrap; }
 .conector-travessia svg { width: 13px; height: 13px; fill: none;
   stroke: currentColor; stroke-width: 1.8; stroke-linecap: round;
@@ -762,11 +774,11 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   content: ''; position: absolute; left: 17px; top: 0; bottom: 0;
   width: 2px; background: var(--borda);
 }
-.conector-tempo { font-size: 11.5px; font-weight: 700; color: var(--texto-fraco);
+.conector-tempo { font-size: 12px; font-weight: 700; color: var(--texto-fraco);
   background: var(--fundo); padding: 3px 0; }
 .btn-maps {
-  display: inline-flex; align-items: center; gap: 5px; min-height: 34px;
-  padding: 0 11px; border-radius: 17px; cursor: pointer; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 5px; min-height: 44px;
+  padding: 0 12px; border-radius: 22px; cursor: pointer; text-decoration: none;
   border: 1px solid var(--borda); background: var(--superficie);
   color: var(--marca); font: inherit; font-size: 12px; font-weight: 700;
 }
@@ -782,12 +794,12 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .agora::before {
   content: ''; position: absolute; left: 11px; top: 50%; transform: translateY(-50%);
   width: 14px; height: 14px; border-radius: 50%;
-  background: var(--perigo); box-shadow: 0 0 0 3px var(--fundo);
+  background: var(--marca); box-shadow: 0 0 0 3px var(--fundo);
 }
-.agora-linha { flex: 1; height: 2px; background: var(--perigo); border-radius: 1px; }
+.agora-linha { flex: 1; height: 2px; background: var(--marca); border-radius: 1px; }
 .agora-rot {
-  font-size: 10.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
-  color: var(--sobre-perigo); background: var(--perigo); padding: 3px 8px; border-radius: 10px;
+  font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--sobre-marca); background: var(--marca); padding: 3px 8px; border-radius: 10px;
   font-variant-numeric: tabular-nums;
 }
 
@@ -796,10 +808,10 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 
 /* estado da reserva dentro do bloco */
 .ct-reserva { display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-  width: 100%; margin-top: 9px; padding: 9px 12px; min-height: 40px;
+  width: 100%; margin-top: 9px; padding: 9px 12px; min-height: 44px;
   border: 1px solid var(--borda); border-radius: var(--r-botao);
   background: var(--fundo); font: inherit; text-align: left; cursor: pointer; }
-.ct-reserva-rot { font-size: 11px; font-weight: 800; letter-spacing: .06em;
+.ct-reserva-rot { font-size: 12px; font-weight: 800; letter-spacing: .06em;
   text-transform: uppercase; white-space: nowrap; }
 .ct-reserva-num { font-size: 14px; font-weight: 750; margin-left: auto;
   font-variant-numeric: tabular-nums; white-space: nowrap; }
@@ -807,21 +819,21 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .ct-reserva-cancelado { border-color: var(--perigo); }
 .ct-reserva-cancelado .ct-reserva-rot { color: var(--perigo); }
 .ct-reserva-a-reservar { border-color: var(--acento); }
-.ct-reserva-a-reservar .ct-reserva-rot { color: var(--acento); }
+.ct-reserva-a-reservar .ct-reserva-rot { color: var(--acento-texto); }
 .ct-reserva-sem .ct-reserva-rot { color: var(--texto-fraco); }
 
 /* procedencia: verificado na web em / estimativa */
 .ct-pesquisa { display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
-  margin-top: 9px; font-size: 11px; color: var(--texto-fraco); opacity: .8; }
+  margin-top: 9px; font-size: 12px; color: var(--texto-fraco); opacity: .8; }
 .ct-pesquisa-est { font-weight: 750; text-transform: uppercase; letter-spacing: .05em;
   border: 1px dashed var(--borda); border-radius: 999px; padding: 1px 7px;
   white-space: nowrap; opacity: 1; }
-.np-pesquisa { font-size: 11px; color: var(--texto-fraco); opacity: .8;
+.np-pesquisa { font-size: 12px; color: var(--texto-fraco); opacity: .8;
   margin-top: 7px; }
 
 /* fila tipica do bloco */
 .ct-fila { display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
-  margin-top: 9px; font-size: 12.5px; color: var(--texto-fraco); line-height: 1.5; }
+  margin-top: 9px; font-size: 14px; color: var(--texto-fraco); line-height: 1.5; }
 .ct-fila svg { width: 14px; height: 14px; fill: none; stroke: currentColor;
   stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; flex: none; }
 .ct-fila b { color: var(--texto); font-weight: 800; font-variant-numeric: tabular-nums; }
@@ -835,7 +847,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .ct-janela { display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
   margin-top: 9px; padding: 7px 10px; border-radius: var(--r-botao);
   background: var(--marca-fundo); }
-.ct-janela-rot { font-size: 10px; font-weight: 800; letter-spacing: .07em;
+.ct-janela-rot { font-size: 12px; font-weight: 800; letter-spacing: .07em;
   text-transform: uppercase; color: var(--marca); white-space: nowrap; }
 .ct-janela-hora { font-size: 13.5px; font-weight: 750; color: var(--marca);
   font-variant-numeric: tabular-nums; white-space: nowrap; }
@@ -880,13 +892,13 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .vence { border: 1px solid var(--acento); border-left: 4px solid var(--acento);
   border-radius: var(--r-card); background: var(--superficie); padding: 14px 16px;
   margin-bottom: 12px; }
-.vence-rot { font-size: 11.5px; font-weight: 800; letter-spacing: .08em;
-  text-transform: uppercase; color: var(--acento); margin-bottom: 9px; }
+.vence-rot { font-size: 12px; font-weight: 800; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--acento-texto); margin-bottom: 9px; }
 .vence-item { display: flex; gap: 10px; align-items: baseline; font-size: 14.5px;
   line-height: 1.5; padding: 5px 0; }
 .vence-critico { font-weight: 700; }
 .vence-hora { white-space: nowrap; font-weight: 800; font-variant-numeric: tabular-nums;
-  color: var(--acento); font-size: 13px; }
+  color: var(--acento-texto); font-size: 13px; }
 .vence-texto { flex: 1 1 auto; min-width: 0; }
 .vence-btn { margin-top: 11px; width: 100%; min-height: 44px; border: none;
   border-radius: var(--r-botao); background: var(--acento); color: var(--sobre-acento);
@@ -911,7 +923,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   padding: 5px 11px; }
 .contato-quando { font-size: 14px; line-height: 1.6; color: var(--texto-fraco);
   margin-top: 9px; white-space: pre-line; }
-.contato-fonte { font-size: 11.5px; color: var(--texto-fraco); opacity: .8;
+.contato-fonte { font-size: 12px; color: var(--texto-fraco); opacity: .8;
   margin-top: 7px; }
 
 /* =============================================================================
@@ -942,7 +954,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .passe { border-top: 1px solid var(--borda); padding-top: 16px; margin-top: 16px; }
 .passe.primeiro { border-top: 0; padding-top: 0; margin-top: 0; }
 .passe-nome {
-  font-size: 10.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
   color: #fff; padding: 5px 9px; border-radius: var(--r-selo); display: inline-block;
 }
 .passe-nome.multi  { background: #1A4F8A; }
@@ -962,7 +974,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   font-weight: 700;
 }
 .lista-atracoes .rotulo-lista {
-  font-size: 10.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
   color: var(--texto-fraco); padding: 12px 0 4px; border-bottom: 0;
 }
 .lista-atracoes .rotulo-lista:first-child { padding-top: 0; }
@@ -971,7 +983,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .plano-b {
   margin-top: 12px; padding: 12px 14px; border-radius: var(--r-botao);
   background: var(--alerta-fundo); font-size: 13.5px; line-height: 1.55;
-  border-left: 3px solid var(--alerta);
+  border-left: 4px solid var(--alerta);
 }
 .custo-passe { margin-top: 16px; font-size: 14px; color: var(--texto-fraco); }
 .custo-passe b { color: var(--texto); font-size: 20px; font-weight: 800;
@@ -982,7 +994,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .renuncia-grupo { margin-top: 20px; }
 .renuncia-grupo.primeiro { margin-top: 0; }
 .renuncia-grupo h4 {
-  font-size: 10.5px; text-transform: uppercase; letter-spacing: .08em;
+  font-size: 12px; text-transform: uppercase; letter-spacing: .08em;
   color: var(--texto-fraco); margin: 0 0 8px; font-weight: 800;
 }
 .renuncia-lista { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -1018,7 +1030,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 }
 .janela-cartao.passou { opacity: .5; border-left-color: var(--borda); }
 .janela-cartao.hoje { border-left-color: var(--perigo); background: var(--perigo-fundo); }
-.janela-data { font-size: 12.5px; font-weight: 800; color: var(--acento);
+.janela-data { font-size: 12.5px; font-weight: 800; color: var(--acento-texto);
   letter-spacing: .03em; }
 .janela-cartao.hoje .janela-data { color: var(--perigo); }
 .janela-quais { font-size: 14.5px; margin-top: 4px; font-weight: 600; }
@@ -1026,7 +1038,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   font-weight: 650; }
 
 .rest-dia {
-  font-size: 11px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
+  font-size: 12px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
   color: var(--texto-fraco); margin: 24px 0 10px;
   display: flex; align-items: center; gap: 12px;
 }
@@ -1060,7 +1072,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .pill-status[aria-pressed="true"][data-s="cancelado"]  { background: var(--perigo); color: var(--sobre-perigo); }
 
 .rest-conf { margin-top: 12px; }
-.rest-conf label { font-size: 10.5px; text-transform: uppercase; letter-spacing: .08em;
+.rest-conf label { font-size: 12px; text-transform: uppercase; letter-spacing: .08em;
   color: var(--texto-fraco); display: block; margin-bottom: 6px; font-weight: 800; }
 .rest-conf input {
   width: 100%; min-height: 48px; padding: 0 14px; font: inherit; font-size: 16px;
@@ -1070,7 +1082,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .rest.sem-reserva { opacity: .84; box-shadow: none; }
 .tag-balcao {
   flex: 0 0 auto; white-space: nowrap;
-  font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
   padding: 4px 8px; border-radius: var(--r-selo); background: var(--superficie-2);
   color: var(--texto-fraco); margin-left: auto; flex: 0 0 auto;
 }
@@ -1079,7 +1091,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
    PENDÊNCIAS
    ========================================================================== */
 .pend-mes {
-  font-size: 11px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
+  font-size: 12px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
   color: var(--texto-fraco); margin: 24px 0 10px;
   display: flex; align-items: center; gap: 12px;
 }
@@ -1094,7 +1106,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .pend.feita { opacity: .48; box-shadow: none; }
 .pend.feita .pend-texto { text-decoration: line-through; }
 .pend-corpo { flex: 1; min-width: 0; }
-.pend-quando { font-size: 11.5px; font-weight: 800; color: var(--acento);
+.pend-quando { font-size: 12px; font-weight: 800; color: var(--texto-fraco);
   text-transform: uppercase; letter-spacing: .05em; display: flex;
   align-items: center; gap: 8px; flex-wrap: wrap; }
 .pend.atrasada .pend-quando { color: var(--perigo); }
@@ -1107,13 +1119,13 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   font-style: italic; }
 .pend-selos { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
 .pend-data-edit {
-  min-height: 36px; padding: 0 8px; font: inherit; font-size: 13px; font-weight: 700;
+  min-height: 44px; padding: 0 8px; font: inherit; font-size: 13px; font-weight: 700;
   border: 1px solid var(--borda); border-radius: var(--r-selo);
   background: var(--fundo); color: var(--texto); margin-top: 8px;
   font-variant-numeric: tabular-nums;
 }
 .bl-check {
-  flex: 0 0 auto; width: 40px; height: 40px; border-radius: 12px; cursor: pointer;
+  flex: 0 0 auto; width: 48px; height: 48px; border-radius: 14px; cursor: pointer;
   border: 2px solid var(--borda); background: var(--fundo);
   display: grid; place-items: center; padding: 0;
   transition: transform .12s cubic-bezier(.34,1.56,.64,1), background .15s;
@@ -1131,7 +1143,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .dica > summary { align-items: flex-start; line-height: 1.35; }
 .dica-corpo { white-space: pre-line; font-size: 14.5px; line-height: 1.65;
   color: var(--texto-fraco); }
-.dica-fonte { font-size: 11.5px; color: var(--texto-fraco); opacity: .8;
+.dica-fonte { font-size: 12px; color: var(--texto-fraco); opacity: .8;
   margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--borda);
   font-weight: 650; }
 
@@ -1145,7 +1157,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 }
 .guia-vazio { font-size: 14px; color: var(--texto-fraco); margin: 16px 0 0; }
 .guia-nota { font-size: 13.5px; color: var(--texto-fraco); line-height: 1.6; margin: 12px 0 0; }
-.dica-dias { font-size: 11.5px; font-weight: 700; letter-spacing: .04em;
+.dica-dias { font-size: 12px; font-weight: 700; letter-spacing: .04em;
   color: var(--texto-fraco); margin-bottom: 10px; }
 .dica-hoje { margin-top: 12px; }
 
@@ -1153,7 +1165,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   scrollbar-width: none; }
 .filtros-local::-webkit-scrollbar { display: none; }
 .filtro {
-  flex: 0 0 auto; min-height: 40px; padding: 0 14px; border-radius: 20px;
+  flex: 0 0 auto; min-height: 44px; padding: 0 14px; border-radius: 22px;
   border: 1px solid var(--borda); background: var(--superficie); color: var(--texto-fraco);
   font: inherit; font-size: 13px; font-weight: 700; cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -1186,11 +1198,11 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   flex: 1 1 116px; background: var(--fundo); border: 1px solid var(--borda);
   border-radius: var(--r-botao); padding: 10px 12px;
 }
-.metrica-rot { font-size: 10px; text-transform: uppercase; letter-spacing: .08em;
+.metrica-rot { font-size: 12px; text-transform: uppercase; letter-spacing: .08em;
   color: var(--texto-fraco); font-weight: 800; }
 .metrica-val { font-size: 18px; font-weight: 800; margin-top: 3px;
   font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
-.metrica-fonte { font-size: 10.5px; margin-top: 3px; font-weight: 700; }
+.metrica-fonte { font-size: 12px; margin-top: 3px; font-weight: 700; }
 .metrica-fonte.doc { color: var(--ok); }
 .metrica-fonte.est { color: var(--alerta); }
 
@@ -1212,13 +1224,13 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   flex: 0 0 auto; padding: 0 16px; }
 
 .selo-verificar {
-  font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
   padding: 4px 7px; border-radius: var(--r-selo); background: var(--alerta-fundo);
   color: var(--alerta); box-shadow: inset 0 0 0 1px currentColor;
   margin-left: auto; flex: 0 0 auto;
 }
 .selo-fonte {
-  font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
   padding: 4px 7px; border-radius: var(--r-selo); background: var(--ok-fundo);
   color: var(--ok); margin-left: auto; flex: 0 0 auto;
 }
@@ -1237,7 +1249,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .selo-dia.fechado { background: var(--ok-fundo); color: var(--ok); }
 .ct-fuso {
   flex: 0 0 auto; white-space: nowrap;
-  font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
   color: var(--texto-fraco); background: var(--superficie-2);
   padding: 3px 6px; border-radius: var(--r-selo);
 }
@@ -1290,7 +1302,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .item-motivo { font-size: 12.5px; color: var(--texto-fraco); margin-top: 4px;
   line-height: 1.55; }
 /* seção da loja: a lista é a rota dentro do Walmart */
-.lista-secao { font-size: 11px; font-weight: 800; letter-spacing: .09em;
+.lista-secao { font-size: 12px; font-weight: 800; letter-spacing: .09em;
   text-transform: uppercase; color: var(--texto-fraco); margin: 20px 0 4px; }
 .item-marca { font-size: 13.5px; font-weight: 650; color: var(--texto); margin-top: 3px;
   line-height: 1.4; }
@@ -1306,7 +1318,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   font-size: 15.5px; font-weight: 700; letter-spacing: -.01em; }
 .np-quando {
   flex: 0 0 auto; white-space: nowrap;
-  font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
   padding: 4px 7px; border-radius: var(--r-selo);
 }
 .np-quando.np-hoje    { background: var(--ok-fundo);     color: var(--ok); }
@@ -1314,11 +1326,11 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .np-quando.np-depois  { background: var(--superficie-2); color: var(--texto-fraco); }
 .np-quando.np-fora    { background: var(--superficie-2); color: var(--texto-fraco);
                      text-decoration: line-through; }
-.np-condicao { flex: 0 0 auto; font-size: 11.5px; font-weight: 650;
+.np-condicao { flex: 0 0 auto; font-size: 12px; font-weight: 650;
   color: var(--texto-fraco); font-style: italic; }
 .nao-perca.np-fora { opacity: .5; }
 .nao-perca.np-fora .np-nome { text-decoration: line-through; }
-.np-custo { font-size: 12.5px; color: var(--acento); font-weight: 700; margin-top: 4px; }
+.np-custo { font-size: 12.5px; color: var(--acento-texto); font-weight: 700; margin-top: 4px; }
 .np-motivo { font-size: 13.5px; color: var(--texto-fraco); margin-top: 6px; line-height: 1.6; }
 
 /* ---------- preparar para amanhã ---------- */
@@ -1352,7 +1364,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .ct-mais .ct-contexto { margin-top: 2px; }
 
 /* agora e a seguir, na cor do dia */
-.ct-momento { flex: 0 0 auto; white-space: nowrap; font-size: 10.5px; font-weight: 800;
+.ct-momento { flex: 0 0 auto; white-space: nowrap; font-size: 12px; font-weight: 800;
   letter-spacing: .08em; text-transform: uppercase; padding: 3px 7px;
   border-radius: var(--r-selo); background: var(--op); color: var(--sobre-op); }
 .parada.pa-em-curso .cartao { border-color: var(--op);
@@ -1364,7 +1376,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 /* avisos do dia: a primeira frase do que é para resolver, o resto no acordeão */
 .avisos-resumo { list-style: none; margin: 12px 0 0; padding: 12px 14px 12px 16px;
   border-radius: var(--r-botao); background: var(--alerta-fundo);
-  border-left: 3px solid var(--alerta); display: grid; gap: 8px; }
+  border-left: 4px solid var(--alerta); display: grid; gap: 8px; }
 .avisos-resumo li { font-size: 14px; line-height: 1.45; font-weight: 650; color: var(--texto); }
 .avisos-todos .aviso { white-space: pre-line; }
 .avisos-todos .aviso:first-child { margin-top: 0; }
@@ -1398,7 +1410,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   font: inherit; font-size: 14px; font-weight: 750; font-variant-numeric: tabular-nums;
   cursor: pointer; -webkit-tap-highlight-color: transparent; }
 .atraso-btn:active { background: var(--superficie-2); }
-.atraso-zerar { color: var(--perigo); border-color: currentColor; }
+.atraso-zerar { color: var(--texto-fraco); }
 .atraso-resumo { flex-basis: 100%; font-size: 13px; font-weight: 700; line-height: 1.45;
   color: var(--perigo); background: var(--perigo-fundo); padding: 8px 10px;
   border-radius: var(--r-botao); }
@@ -1406,3 +1418,84 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 /* pendência que passou do dia em que servia */
 .pend.vencida { opacity: .6; box-shadow: none; }
 .pend.vencida .pend-quando { color: var(--texto-fraco); }
+
+/* =============================================================================
+   SEGUNDA LEVA — navegação, busca, desfazer, ligar e componentes
+   ========================================================================== */
+/* coral de texto só para a data que está perto */
+.pq-perto { color: var(--acento-texto); }
+
+/* um ícone por tipo nas notas do dia */
+.avisos-todos .aviso::before { content: "⚠"; margin-right: 6px; font-weight: 800; }
+.avisos-todos .aviso.bom::before { content: "✓"; }
+.avisos-todos .aviso.info::before { content: "ℹ"; }
+
+/* voltar para hoje, ao alcance do polegar */
+.voltar-hoje { position: fixed; left: 50%; transform: translateX(-50%); z-index: 45;
+  bottom: calc(var(--barra-h) + env(safe-area-inset-bottom, 0px) + 12px);
+  min-height: 44px; max-width: calc(100% - 32px); padding: 0 18px; border: 0;
+  border-radius: 22px; background: var(--marca); color: var(--sobre-marca); font: inherit;
+  font-size: 14px; font-weight: 750; white-space: nowrap; overflow: hidden;
+  text-overflow: ellipsis; box-shadow: var(--sombra-2); cursor: pointer; }
+
+/* o item que a busca ou um atalho abriu */
+.realce { outline: 3px solid var(--marca); outline-offset: 3px; }
+
+/* ligar direto da busca */
+.busca-linha { display: flex; gap: 6px; align-items: stretch; margin-bottom: 6px; }
+.busca-linha .busca-item { margin-bottom: 0; }
+.busca-ligar { flex: 0 0 auto; display: grid; place-items: center; min-width: 64px;
+  min-height: 44px; border-radius: var(--r-botao); background: var(--marca);
+  color: var(--sobre-marca); font-weight: 800; font-size: 14px; text-decoration: none; }
+
+/* aviso curto no pé da tela, com desfazer */
+.toast { position: fixed; left: 12px; right: 12px; z-index: 55;
+  bottom: calc(var(--barra-h) + env(safe-area-inset-bottom, 0px) + 12px);
+  display: flex; align-items: center; gap: 12px; padding: 8px 8px 8px 16px;
+  border-radius: var(--r-card); background: var(--texto); color: var(--fundo);
+  box-shadow: var(--sombra-2); font-size: 14.5px; font-weight: 650;
+  transform: translateY(16px); opacity: 0; pointer-events: none;
+  transition: opacity .18s, transform .18s; }
+.toast.visivel { transform: none; opacity: 1; pointer-events: auto; }
+.toast-texto { flex: 1; min-width: 0; line-height: 1.35; padding: 8px 0; }
+.toast-acao { flex: 0 0 auto; min-height: 44px; padding: 0 14px; border: 0;
+  border-radius: var(--r-botao); background: color-mix(in srgb, var(--fundo) 20%, transparent);
+  color: var(--fundo); font: inherit; font-weight: 800; cursor: pointer; }
+
+/* ligar agora: 911, hotel, Urgent Care e seguro */
+.ligar-rapido { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px;
+  margin: 0 0 16px; }
+.ligar-btn { display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 4px; min-height: 64px; padding: 8px 4px; border-radius: var(--r-botao);
+  border: 1px solid var(--borda); background: var(--superficie); color: var(--marca);
+  text-decoration: none; font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.ligar-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round; }
+.ligar-txt { display: flex; flex-direction: column; align-items: center; text-align: center;
+  line-height: 1.15; gap: 2px; }
+.ligar-txt b { font-size: 13.5px; font-weight: 800; }
+.ligar-txt small { font-size: 12px; font-weight: 650; color: var(--texto-fraco); }
+.ligar-911 { background: var(--perigo); border-color: var(--perigo); color: var(--sobre-perigo); }
+.ligar-911 .ligar-txt small { color: var(--sobre-perigo); }
+.seguro-campos { display: grid; gap: 6px; margin-top: 12px; }
+.seguro-rot { font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--texto-fraco); }
+.seguro-campo { min-height: 48px; padding: 0 12px; margin-bottom: 6px; font: inherit;
+  font-size: 16px; border: 1px solid var(--borda); border-radius: var(--r-botao);
+  background: var(--fundo); color: var(--texto); }
+
+/* a data da pendência fica atrás de um toque */
+.pend-ajustar { margin-top: 8px; min-height: 44px; padding: 0 12px; border: 1px solid var(--borda);
+  border-radius: var(--r-botao); background: var(--superficie); color: var(--marca); font: inherit;
+  font-size: 13px; font-weight: 700; cursor: pointer; }
+
+/* estimativa: uma forma só no app inteiro */
+.selo-estimativa { display: inline-block; font-size: 12px; font-weight: 750; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--texto-fraco); border: 1px dashed var(--borda-forte);
+  border-radius: 999px; padding: 1px 8px; white-space: nowrap; line-height: 1.5; }
+
+/* movimento reduzido: nada desliza nem anima */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important;
+    animation-duration: .01ms !important; scroll-behavior: auto !important; }
+}

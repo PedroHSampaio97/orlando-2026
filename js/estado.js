@@ -24,6 +24,7 @@ window.Estado = (function () {
     checklist:   {},  // ckId   -> { feito, em }
     datasCheck:  {},  // ckId   -> { data, em }
     coordsLocal: {},  // localId-> { lat, lng, em }
+    pessoais:    {},  // chave  -> { valor, em }  apólice do seguro: fica no aparelho, nunca no site
   });
 
   let dados = vazio();
@@ -93,6 +94,7 @@ window.Estado = (function () {
     const c = dados.coordsLocal[id];
     return (c && c.lat != null) ? c : null;   // lápide devolve ausência
   };
+  const pessoal     = (chave) => (dados.pessoais[chave] ? dados.pessoais[chave].valor : null);
 
   /* ---- escrita ---- */
   function marcarFeito(id, valor) {
@@ -143,6 +145,10 @@ window.Estado = (function () {
     } else { dados.coordsLocal[id] = { lat: null, lng: null, em: agora() }; }
     salvar();
   }
+  function definirPessoal(chave, valor) {
+    dados.pessoais[chave] = { valor: valor || null, em: agora() };
+    salvar();
+  }
 
   /* ---- exportar / importar (a base do sync manual e do automático depois) ---- */
   const CHAVE_EXPORT = 'orlando2026:ultimo-export';
@@ -159,7 +165,7 @@ window.Estado = (function () {
   // Merge por campo, vencendo o timestamp mais recente. É isto que evita que o
   // import de um celular apague o trabalho feito no outro.
   const GRUPOS = ['referencias', 'ancoras', 'horas', 'feitos', 'reservas',
-                  'checklist', 'datasCheck', 'coordsLocal'];
+                  'checklist', 'datasCheck', 'coordsLocal', 'pessoais'];
 
   // Grupos cujo registro tem mais de um campo editavel de forma independente.
   // Nestes o merge desce ao campo; nos outros o registro inteiro e a unidade.
@@ -243,6 +249,7 @@ window.Estado = (function () {
     checkFeito: checkFeito, marcarChecklist: marcarChecklist,
     dataChecklist: dataChecklist, definirDataChecklist: definirDataChecklist,
     coordLocal: coordLocal, definirCoordLocal: definirCoordLocal,
+    pessoal: pessoal, definirPessoal: definirPessoal,
     exportar: exportar, ultimoExport: ultimoExport,
     importar: importar, limpar: limpar,
     bruto: function () { return dados; },
