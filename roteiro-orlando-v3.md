@@ -424,7 +424,7 @@ O parque mais concorrido de Orlando, **no dia mais vazio da segunda metade da vi
 | **15h00** | **Dragon Racer's Rally** | Você controla a inclinação e as inversões |
 | **15h45** | **Fyre Drill** — opcional | O guia oficial diz "possivelmente encharca". Frio, pulem |
 | **16h15** | **Pausa · Carrossel · Celestial Park de Natal** | Água, banheiro, mochila |
-| **17h00** | **Jantar — Atlantic** | **Reserva obrigatória.** Cedo de propósito |
+| **17h00** | **Jantar — Atlantic** | **Reservado.** A mesa espera só 15 min — cheguem 16h55 |
 | **18h20** | **Harry Potter and the Battle at the Ministry** | Nas últimas horas cai para 45–75 min |
 | **20h00** | **Mine-Cart Madness** | Na última hora cai para 20–30 min. Quem está na fila no fechamento anda |
 | **21h00** | Sair — Uber | Pelo Celestial Park iluminado |
@@ -448,7 +448,7 @@ Ou seja: às 9h os hóspedes de hotel já estão há uma hora no Battle at the M
 | Monsters Unchained | 13–15 min | enche logo depois da abertura |
 | Fyre Drill · Carrossel | 13–21 min | qualquer hora |
 
-É isso que obriga o **jantar às 17h**: as três últimas horas são das duas maiores filas. A reserva do Atlantic é obrigatória e a janela da Universal já está aberta — **está no checklist para agora**. Sem mesa, o **Mead Hall** (Isle of Berk) não aceita reserva e entra no lugar.
+É isso que obriga o **jantar às 17h**: as três últimas horas são das duas maiores filas. O Atlantic está **reservado** para as 17h, duas pessoas. A Universal pede chegada 5 minutos antes e **segura a mesa só por 15 minutos** — a pausa das 16h15 termina às 16h55 no próprio Celestial Park, exatamente a folga pedida. Remarcar ou cancelar: app da Universal ou **+1 407-224-3663**. Se perderem a mesa, o **Mead Hall** (Isle of Berk) não aceita reserva e entra no lugar.
 
 ### O que o guia oficial da Universal corrige
 

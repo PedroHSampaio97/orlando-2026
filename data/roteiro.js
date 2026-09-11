@@ -4370,6 +4370,9 @@ window.ROTEIRO = {
         { texto: 'Guardar as compras do Millenia', critico: false,
           motivo: 'Amanhã a mochila precisa sair leve — o Epic tem locker obrigatório em ' +
                   'três atrações, e detector de metal no Stardust Racers.' },
+        { texto: 'Confirmação do Atlantic à mão: 639247233607631616', critico: false,
+          motivo: 'Jantar às 17h de amanhã. A mesa é segurada só por 15 minutos, então o número ' +
+                  'fica no celular, não perdido no e-mail.' },
       ],
     },
     ficha: {
@@ -4725,18 +4728,21 @@ window.ROTEIRO = {
 
       { id: 'b-1911-1700', hora: '17:00', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Atlantic',
-        descricao: 'Reserva obrigatória. É cedo de propósito: libera as três últimas horas',
+        descricao: 'Reservado para as 17h. Cheguem 5 min antes: a mesa espera só 15 min',
         contexto:
           'Restaurante de frutos do mar e carnes no Celestial Park, o mais formal do parque. ' +
           'Pratos principais de US$ 35 a 48.\n\n' +
           'POR QUE ÀS 17H: é o jantar cedo que paga o dia. As duas maiores filas do parque só ' +
           'ficam razoáveis no fim — o Ministry nas últimas duas ou três horas, o Mine-Cart na ' +
           'última — e as duas precisam de todo o tempo depois daqui.\n\n' +
-          'RESERVA OBRIGATÓRIA, e a janela da Universal abre cerca de seis meses antes — ou ' +
-          'seja, já está aberta. Está no checklist para agora.\n\n' +
-          'ALTERNATIVA SEM RESERVA: o Mead Hall, salão viking da Isle of Berk, mais barato e ' +
-          'mais temático. Se forem para lá, saiam cinco minutos antes: Berk fica do outro lado ' +
-          'do Ministry.\n\n' +
+          'RESERVADO: confirmação 639247233607631616, duas pessoas, 17h. A Universal pede ' +
+          'chegada 5 minutos antes e segura a mesa só por 15 minutos — às 17h15 a reserva é ' +
+          'liberada. A pausa das 16h15 termina às 16h55 no próprio Celestial Park: é ' +
+          'exatamente a folga pedida.\n\n' +
+          'Para remarcar ou cancelar: pela conta da Universal no app, ou +1 407-224-3663.\n\n' +
+          'SE PERDEREM A MESA: o Mead Hall, salão viking da Isle of Berk, não aceita reserva — ' +
+          'é mais barato e mais temático. Berk fica do outro lado do Ministry: contem a ' +
+          'caminhada de volta para as 18h20.\n\n' +
           'É mesa com garçom: 18 a 20% de gorjeta, e o preço da etiqueta não inclui o imposto.',
         restauranteId: 'r-atlantic', areaParque: 'Celestial Park', acesso: ['reserva'],
         duracaoMin: 75, pesquisa: '2026-09-10' },
@@ -6080,8 +6086,11 @@ window.ROTEIRO = {
       alternativas: ['Mead Hall (Isle of Berk, sem reserva)'],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
       canal: 'App / site da Universal Orlando', blocoId: 'b-1911-1700',
-      nota: 'Reserva obrigatória, confirmada em 10/09. Às 17h de propósito: o jantar cedo ' +
-            'libera as três últimas horas para o Ministry e o Mine-Cart. Pratos de US$ 35 a 48.' },
+      statusPadrao: 'confirmado', confirmacaoPadrao: '639247233607631616',
+      nota: 'RESERVADO em 11/09 — confirmação 639247233607631616, duas pessoas, 17h. Cheguem ' +
+            '5 minutos antes: a mesa é segurada só por 15 minutos. Às 17h de propósito — o ' +
+            'jantar cedo libera as três últimas horas para o Ministry e o Mine-Cart. Pratos de ' +
+            'US$ 35 a 48.' },
 
     { id: 'r-sakeba', nome: 'Sakeba Asian Pub & Grill', data: '2026-11-20', hora: '18:30',
       refeicao: 'jantar', local: 'Old Town Kissimmee',
@@ -6303,18 +6312,9 @@ window.ROTEIRO = {
         'mesmo lugar.',
       restauranteIds: ['r-homecomin'] },
 
-    { id: 'ck-atlantic', dataAlvo: '2026-09-12', dataEstimada: false,
-      motivoData: 'A janela de reserva da Universal abre ~6 meses antes — já está aberta',
-      hora: null, fuso: null, janelaReserva: false, critico: true,
-      texto: 'Reservar o Atlantic para as 17h de 19/11 (Epic Universe)',
-      nota:
-        'RESERVA OBRIGATÓRIA, confirmado em 10/09. E a hora é o que sustenta o dia: o jantar ' +
-        'às 17h libera as três últimas horas do parque para o Battle at the Ministry e o ' +
-        'Mine-Cart Madness, as duas maiores filas, nas únicas janelas baratas delas.\n\n' +
-        'A pendência antiga dizia "30 dias antes" — era atraso à toa, com a janela aberta ' +
-        'desde maio. Se não houver 17h, peguem o mais perto disso ANTES, nunca depois.\n\n' +
-        'Sem mesa: o Mead Hall, na Isle of Berk, não aceita reserva e entra no lugar.',
-      pesquisa: '2026-09-10',
+    { id: 'ck-atlantic', dataAlvo: '2026-09-11', dataEstimada: false,
+      hora: null, fuso: null, janelaReserva: false, critico: true, feitoPadrao: true,
+      texto: 'Atlantic (19/11, 17h) — RESERVADO, confirmação 639247233607631616',
       restauranteIds: ['r-atlantic'] },
 
     { id: 'ck-powerband', dataAlvo: '2026-10-15', dataEstimada: true, motivoData: 'Prazo de outubro, com folga para o site do parque', hora: null, fuso: null,
@@ -6898,6 +6898,14 @@ window.ROTEIRO = {
         'PELO MENOS 2 HORAS de antecedência: abaixo disso a Disney cobra a taxa de não ' +
         'comparecimento no cartão. Dá para cancelar pelo My Disney Experience também.',
       verificado: '2026-09-09', fonte: 'disneyworld.disney.go.com' },
+
+    { id: 'tel-universal-dining', nome: 'Universal — reservas de restaurante',
+      numero: '+1 407-224-3663',
+      quando:
+        'Remarcar ou cancelar o Atlantic (19/11, 17h) — e o Mythos (23/11), quando for ' +
+        'reservado. Dá para fazer pela conta da Universal no app também. No Atlantic, a mesa ' +
+        'é segurada só por 15 minutos depois do horário.',
+      verificado: '2026-09-11', fonte: 'confirmação da reserva do Atlantic' },
 
     { id: 'tel-boathouse', nome: 'The Boathouse — direto',
       numero: '+1 407-939-2628',
