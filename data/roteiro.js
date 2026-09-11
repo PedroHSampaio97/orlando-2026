@@ -1531,7 +1531,7 @@ window.ROTEIRO = {
           'Tarde inteira no hotel. Não preencham esse bloco.',
           'ICON Park a partir das 17h30, pegando o pôr do sol na promenade.',
           'Museum of Illusions, e o Madame Tussauds só se estiverem com pique.',
-          'Jantar no Yard House ou no Tin Roof, os dois dentro do próprio ICON Park.',
+          'Jantar no Shake Shack, dentro do próprio ICON Park.',
         ],
       },
       {
@@ -1777,17 +1777,21 @@ window.ROTEIRO = {
         pesquisa: '2026-09-11' },
 
       { id: 'b-1211-2000', hora: '20:30', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — Yard House ou Tin Roof',
-        descricao: 'Os dois ficam DENTRO do ICON Park',
+        titulo: 'Jantar — Shake Shack',
+        descricao: 'Dentro do próprio ICON Park, a 200 m do Tussauds',
         contexto:
-          'Yard House tem 140 torneiras de chope e cardápio grande. Tin Roof tem música ao ' +
-          'vivo todas as noites.\n\n' +
-          'A vantagem dos dois é a mesma: ficam dentro do próprio ICON Park, então vocês ' +
-          'saem da atração e sentam. O Cooper’s Hawk fica em outro ponto da I-Drive e ' +
-          'obrigaria mais um Uber no fim da noite.\n\n' +
-          'São 20h30 porque o Madame Tussauds leva uma hora e termina 20h15. Se pularem ' +
-          'o Tussauds, jantem 19h30 — nenhum dos dois pede reserva.',
-        localId: 'icon-park', acesso: [], pesquisa: '2026-09-10', duracaoMin: 60 },
+          'ShackBurger simples uns US$ 7, duplo US$ 10,29, e com fritas e shake para os dois ' +
+          'a conta fica entre US$ 30 e 40 — bem menos que uma mesa no Yard House.\n\n' +
+          'ELE FICA DENTRO DO ICON PARK, no 8359 International Drive: vocês saem da atração e ' +
+          'sentam, sem Uber no meio da noite. Pedido no balcão ou no totem, e a comida chega à ' +
+          'mesa pelo pager — é balcão, não leva gorjeta.\n\n' +
+          'Na quinta ele vai até as 23h30, segundo o site do ICON Park (o Yelp mostra até 1h; ' +
+          'na dúvida, vale o horário menor).\n\n' +
+          'São 20h30 porque o Madame Tussauds leva uma hora e termina 20h15. Se pularem o ' +
+          'Tussauds, jantem 19h30. E se a noite pedir mesa, cerveja e música ao vivo, o Yard ' +
+          'House e o Tin Roof continuam ali do lado, sem reserva.',
+        endereco: '8359 International Dr', restauranteId: 'r-shake-shack',
+        localId: 'icon-park', acesso: [], pesquisa: '2026-09-11', duracaoMin: 60 },
 
       { id: 'b-1211-2130', hora: '21:30', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel',
@@ -5046,8 +5050,8 @@ window.ROTEIRO = {
           'Lavanderia às 10h, a única rodada da viagem.',
           'Almoço no El Cilantrillo, dentro do Old Town, e uma volta por lá até o carro.',
           'Carro às 15h na Avis do Old Town e descanso no hotel.',
-          'Às 17h20, de volta ao Old Town, já de carro. Jantar no World Food Trucks, lugar na ' +
-          'calçada às 20h10 e desfile às 20h30.',
+          'Às 17h20, de volta ao Old Town, já de carro. Jantar no Red Lobster às 18h30, lugar ' +
+          'na calçada às 20h10 e desfile às 20h30.',
         ] },
       { letra: 'B', titulo: 'O Epic de ontem deu errado',
         gatilho: 'Uma atração grande ficou de fora ontem — o Mine-Cart parado, chuva — e a ' +
@@ -5071,9 +5075,8 @@ window.ROTEIRO = {
       { letra: 'C', titulo: 'Chuva à noite',
         gatilho: 'A previsão do meio-dia dá chuva para o fim da tarde ou a noite.',
         passos: [
-          'Invertam as refeições: World Food Trucks no almoço, El Cilantrillo no jantar. Os ' +
-          'trucks são ao ar livre, e o site não diz se há área coberta; o El Cilantrillo é ' +
-          'salão fechado, aberto até a meia-noite na sexta.',
+          'As refeições não mudam: o El Cilantrillo e o Red Lobster são os dois salão fechado, ' +
+          'e o Red Lobster fica a três minutos de carro do hotel.',
           'O desfile é ao ar livre, com carro de coleção. Confiram a página de eventos do Old ' +
           'Town antes de sair do hotel.',
           'Se o desfile não sair, a noite termina no jantar. Amanhã a saída é 8h.',
@@ -5173,19 +5176,21 @@ window.ROTEIRO = {
         acesso: [], duracaoMin: 70, pesquisa: '2026-09-11' },
 
       { id: 'b-2011-1830', hora: '18:30', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — World Food Trucks',
-        descricao: 'Mais de 100 food trucks, a 300 m do Old Town. Estacionamento grátis',
+        titulo: 'Jantar — Red Lobster',
+        descricao: 'Na mesma 192, ao lado do Old Town. Na sexta, até as 23h',
         contexto:
-          'Um estacionamento com mais de cem food trucks: mexicano, venezuelano, colombiano, ' +
-          'cubano, porto-riquenho, brasileiro, coreano, japonês, italiano, caribenho. Cada um ' +
-          'escolhe o seu — e é à noite, com tudo aceso, que o lugar faz sentido.\n\n' +
-          'FICA NA PRÓPRIA 192, a uns 300 metros do Old Town. Vão de carro: são poucos ' +
-          'minutos, o estacionamento é grátis, e às 20h10 vocês voltam para pegar lugar na ' +
-          'calçada.\n\n' +
-          'Aberto das 11h às 2h, todos os dias. O site não diz se há área coberta: com chuva ' +
-          'prevista, vale o plano C.\n\n' +
-          'Food truck é balcão: não leva gorjeta.',
-        endereco: '5811 W Irlo Bronson Memorial Hwy', restauranteId: 'r-world-food-trucks',
+          'Mesa com garçom na 5690 W Irlo Bronson, a 1,9 km do hotel — três minutos de carro — ' +
+          'e praticamente ao lado do Old Town, onde vocês já estão.\n\n' +
+          'O Ultimate Feast sai por US$ 32,99, com cauda de lagosta, snow crab e camarão; ' +
+          'pratos simples começam perto de US$ 20, e os Cheddar Bay Biscuits vêm de cortesia. ' +
+          'Contem US$ 50 a 70 no casal, já com a gorjeta.\n\n' +
+          'Na sexta ele vai das 11h às 23h. A rede trabalha sobretudo com lista de espera, mas ' +
+          'esta unidade tem Priority Seating no OpenTable: se quiserem garantir a mesa, ponham ' +
+          'o nome antes de sair do hotel.\n\n' +
+          'ÀS 20H10 VOCÊS VOLTAM ao Old Town para pegar lugar na calçada — são poucos minutos ' +
+          'de carro e o estacionamento de lá é grátis.\n\n' +
+          'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
+        endereco: '5690 W Irlo Bronson Memorial Hwy', restauranteId: 'r-red-lobster',
         localId: 'world-food-trucks', acesso: [], duracaoMin: 90, pesquisa: '2026-09-11' },
 
       { id: 'b-2011-2010', hora: '20:10', ancora: 'fixo', tipo: 'espera',
@@ -5335,7 +5340,7 @@ window.ROTEIRO = {
           'Café do hotel às 7h15 e saída às 8h.',
           'Feira às 8h45, museu ferroviário às 10h15 e Plant Street a pé até o almoço.',
           'Almoço no Plant Street Market às 11h45 e volta ao hotel às 13h.',
-          'Descanso até 16h40, Uber para o centro e jantar no Underground às 17h20.',
+          'Descanso até 17h05, Chick-fil-A às 17h35 e Uber para a arena às 18h10.',
           'Jogo às 19h e Uber na esquina da Hughey com a Pine, na saída.',
         ] },
       { letra: 'B', titulo: 'Chuva de manhã',
@@ -5452,42 +5457,43 @@ window.ROTEIRO = {
         titulo: 'VAZIO PROPOSITAL',
         descricao: 'Quase três horas de descanso no hotel',
         contexto:
-          'Não preencham. A noite termina às 22h15, e amanhã começam três dias de parque ' +
-          'seguidos: SeaWorld, Islands of Adventure e Busch Gardens.\n\n' +
+          'Não preencham. A noite termina perto das 23h, com o jantar depois do jogo, e amanhã ' +
+          'começam três dias de parque seguidos: SeaWorld, Islands of Adventure e Busch ' +
+          'Gardens.\n\n' +
           'É também a hora de deixar a mochila de Winter Garden no quarto e montar a do ' +
           'SeaWorld. Para o jogo, vocês saem só com o bolso.',
-        localId: 'hotel-travelodge', acesso: [], duracaoMin: 165 },
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 195 },
 
-      { id: 'b-2111-1730', hora: '16:40', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Uber para o centro de Orlando',
-        descricao: '~35 min, US$ 32–45. Direto para o Underground Public House',
+      { id: 'b-2111-1730', hora: '17:05', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Uber para o Chick-fil-A da S Orange Ave',
+        descricao: '30 km, ~29 min, US$ 32–45. O carro fica no hotel',
         contexto:
           'O carro fica no hotel e a noite é de Uber, ida e volta.\n\n' +
           'ANTES DE SAIR: nada de bolsa. Celular, cartão e documento no bolso, ou numa clutch ' +
           'de 11 × 16 × 2,5 cm. Ingresso do jogo no celular dos dois.',
-        endereco: '19 S Orange Ave', localId: 'kia-center', acesso: [], duracaoMin: 40 },
+        endereco: '2885 S Orange Ave', localId: 'kia-center', acesso: [], duracaoMin: 30 },
 
-      { id: 'b-2111-1720', hora: '17:20', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Jantar — Underground Public House',
-        descricao: 'Gastropub britânico com mesa e garçom, a 9 minutos a pé da arena. Reservem',
+      { id: 'b-2111-1735', hora: '17:35', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Jantar — Chick-fil-A',
+        descricao: 'Balcão, na 2885 S Orange Ave. A 8 minutos de carro da arena',
         contexto:
-          'Gastropub britânico-americano no centro: fish and chips US$ 20, shepherd’s pie ' +
-          'US$ 18, bangers and mash US$ 16, hambúrguer US$ 17 — e versão vegana de cada um. ' +
-          'Um estilo bem diferente da steakhouse do dia 18.\n\n' +
-          'RESERVA PELO OPENTABLE, pelo botão do site do restaurante. Está no checklist. ' +
-          'Avisem na chegada que vocês têm jogo às 19h.\n\n' +
-          'SEM MESA: o Harp & Celt, pub irlandês no 25 S Magnolia Ave, a um quarteirão — mas ' +
-          'lá a reserva é só por telefone, +1 407-481-2928.\n\n' +
-          'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
-        restauranteId: 'r-underground', endereco: '19 S Orange Ave', localId: 'kia-center',
-        acesso: ['reserva'], duracaoMin: 70, pesquisa: '2026-09-11' },
+          'Nenhuma rede americana clássica ficou a pé do Kia Center — o Five Guys que existia ' +
+          'na 55 W Church St fechou. Este Chick-fil-A é o mais perto que sobrou: 7 km da ' +
+          'arena, oito minutos de carro, e fica no caminho de quem vem de Kissimmee.\n\n' +
+          'Combo de sanduíche com waffle fries e bebida sai por uns US$ 11 por pessoa. No ' +
+          'sábado ele abre das 6h às 22h — e fecha aos domingos, o que não afeta hoje.\n\n' +
+          'É balcão: não leva gorjeta. Comam com calma, que às 18h10 vocês pedem o Uber ' +
+          'para a arena e ainda chegam antes dos portões, que abrem às 18h.',
+        restauranteId: 'r-chickfila', endereco: '2885 S Orange Ave', localId: 'kia-center',
+        acesso: [], duracaoMin: 35, pesquisa: '2026-09-11' },
 
-      { id: 'b-2111-1830', hora: '18:30', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'A pé até o Kia Center',
-        descricao: '650 m, 9 minutos. Portões abertos desde as 18h',
+      { id: 'b-2111-1810', hora: '18:10', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Uber até o Kia Center',
+        descricao: '7 km, 8 minutos. Portões abertos desde as 18h',
         contexto:
-          'Do pub até a arena são 650 metros pelo centro, pouco menos de dez minutos. Os ' +
-          'portões abrem uma hora antes do jogo, às 18h.\n\n' +
+          'Do Chick-fil-A até a arena são 7 quilômetros pela Orange Ave, uns oito minutos. ' +
+          'Peçam o carro ainda sentados: em noite de jogo o entorno da arena congestiona, e o ' +
+          'ponto de desembarque fica a um quarteirão da catraca.\n\n' +
           'ÚLTIMA CONFERÊNCIA ANTES DA CATRACA: nada de bolsa, ingresso no celular dos dois, ' +
           'cada um com o seu.',
         localId: 'kia-center', acesso: [], duracaoMin: 20, pesquisa: '2026-09-11' },
@@ -5509,16 +5515,35 @@ window.ROTEIRO = {
         pesquisa: '2026-09-11' },
 
       { id: 'b-2111-2130', hora: '21:30', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Uber na esquina da Hughey com a Pine',
-        descricao: 'Zona oficial de rideshare da arena. Hotel por volta das 22h15',
+        titulo: 'Uber para o Red Lobster',
+        descricao: 'Da esquina da Hughey com a Pine, ~31 min. Chegam por volta das 22h05',
         contexto:
           'A zona de Uber e Lyft do Kia Center é a esquina da Hughey Ave com a Pine St, a uma ' +
           'caminhada curta da arena. Marquem o ponto ali antes de chamar.\n\n' +
+          'O DESTINO NÃO É O HOTEL, é o Red Lobster da 5690 W Irlo Bronson — ele fica 1,9 km ' +
+          'antes, na mesma 192, e fecha às 23h. Indo direto, vocês ganham os dez minutos que ' +
+          'passar no hotel custaria.\n\n' +
           'A tarifa dinâmica logo depois do apito final pode triplicar. Se estiver alta, vale ' +
-          'o plano C2.\n\n' +
-          'AMANHÃ É SEAWORLD: alarme às 6h45, e a mochila já está pronta. Durmam assim que ' +
-          'chegarem.',
-        acesso: [], duracaoMin: 45 },
+          'o plano C2.',
+        endereco: '5690 W Irlo Bronson Memorial Hwy', localId: 'red-lobster',
+        acesso: [], duracaoMin: 35 },
+
+      { id: 'b-2111-2205', hora: '22:05', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Jantar — Red Lobster',
+        descricao: 'O jantar de verdade da noite. No sábado, até as 23h',
+        contexto:
+          'O Chick-fil-A das 17h35 foi para aguentar o jogo; o jantar é este. No sábado a casa ' +
+          'vai até as 23h, então vocês têm quase uma hora — peçam logo, sem estudar o cardápio ' +
+          'na mesa.\n\n' +
+          'Ultimate Feast US$ 32,99, pratos simples a partir de uns US$ 20, e os Cheddar Bay ' +
+          'Biscuits vêm de cortesia. É mesa com garçom: 18 a 20% de gorjeta.\n\n' +
+          'SE O JOGO ESTICAR e vocês saírem depois das 22h20, não vale a corrida: o Miller’s ' +
+          'Ale House, na 8123 W Irlo Bronson, tem mesa com garçom até as 2h.\n\n' +
+          'DO RESTAURANTE AO HOTEL são 1,9 km — três minutos de Uber, US$ 7 a 10. O carro de ' +
+          'vocês passou o dia no estacionamento do hotel.\n\n' +
+          'AMANHÃ É SEAWORLD: alarme às 6h45, e a mochila já está pronta.',
+        restauranteId: 'r-red-lobster-2111', endereco: '5690 W Irlo Bronson Memorial Hwy',
+        localId: 'red-lobster', acesso: [], duracaoMin: 55, pesquisa: '2026-09-11' },
     ],
     naoPerca: [
       { nome: 'Central Florida Railroad Museum', quando: 'hoje', custo: 'grátis',
@@ -7207,6 +7232,15 @@ window.ROTEIRO = {
             'antigos. Hambúrgueres, comida americana e cerveja artesanal. Segunda a sábado, ' +
             'das 11h às 22h. A conta já vem com 20% de taxa de serviço, no lugar da gorjeta.' },
 
+    { id: 'r-shake-shack', nome: 'Shake Shack', data: '2026-11-12', hora: '20:30',
+      refeicao: 'jantar', local: 'ICON Park · 8359 International Dr',
+      alternativas: ['Yard House ou Tin Roof, os dois também dentro do ICON Park, com mesa e garçom'],
+      precisaReserva: false, janelaAbre: null, janelaHora: null,
+      canal: 'Balcão ou totem, sem reserva', blocoId: 'b-1211-2000',
+      nota: 'Dentro do ICON Park, a 200 m do Madame Tussauds. ShackBurger simples uns US$ 7 e ' +
+            'duplo US$ 10,29; com fritas e shake, US$ 30 a 40 no casal. Na quinta vai até as ' +
+            '23h30, pelo site do ICON Park. Balcão com pager: não leva gorjeta.' },
+
     { id: 'r-satuli', nome: 'Satu’li Canteen', data: '2026-11-13', hora: '12:30',
       refeicao: 'almoco', local: 'Animal Kingdom · Pandora', alternativas: ['Flame Tree Barbecue, na Discovery Island', 'Harambe Market, na África'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
@@ -7367,19 +7401,20 @@ window.ROTEIRO = {
 
     { id: 'r-cilantrillo', nome: 'El Cilantrillo', data: '2026-11-20', hora: '12:45',
       refeicao: 'almoco', local: 'Old Town Kissimmee',
-      alternativas: ['World Food Trucks, trocando com o jantar se houver chuva prevista à noite'],
+      alternativas: ['World Food Trucks, 5811 W Irlo Bronson, aberto desde as 11h'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Chegar direto — aceita reserva pelo Yelp ou +1 407-204-9685', blocoId: 'b-2011-1230',
       nota: 'Porto-riquenho de mesa, dentro do Old Town: mofongo, pernil, pargo frito. Pratos ' +
             'da rede perto de US$ 20. Na sexta, das 11h à meia-noite.' },
 
-    { id: 'r-world-food-trucks', nome: 'World Food Trucks', data: '2026-11-20', hora: '18:30',
-      refeicao: 'jantar', local: 'W Irlo Bronson, a 300 m do Old Town',
-      alternativas: ['El Cilantrillo, trocando com o almoço se houver chuva prevista à noite'],
+    { id: 'r-red-lobster', nome: 'Red Lobster', data: '2026-11-20', hora: '18:30',
+      refeicao: 'jantar', local: 'US-192 · 5690 W Irlo Bronson, ao lado do Old Town',
+      alternativas: ['World Food Trucks, 5811 W Irlo Bronson, aberto das 11h às 2h'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Chegar direto', blocoId: 'b-2011-1830',
-      nota: 'Mais de 100 food trucks, das 11h às 2h todos os dias. Estacionamento grátis. ' +
-            'Balcão: não leva gorjeta.' },
+      canal: 'Chegar direto, ou Priority Seating pelo OpenTable', blocoId: 'b-2011-1830',
+      nota: 'Mesa com garçom a três minutos do hotel. Ultimate Feast US$ 32,99, pratos simples ' +
+            'a partir de uns US$ 20 e os Cheddar Bay Biscuits de cortesia: US$ 50 a 70 no ' +
+            'casal. Na sexta, das 11h às 23h.' },
 
     { id: 'r-plant-street-market', nome: 'Plant Street Market', data: '2026-11-21', hora: '11:45',
       refeicao: 'almoco', local: 'Winter Garden · 426 W Plant St',
@@ -7389,15 +7424,23 @@ window.ROTEIRO = {
       nota: 'Mercado gastronômico com 17 balcões — churrasco, ostras, empanadas, pizza a ' +
             'carvão, ceviche — e a cervejaria Crooked Can. Balcão: não leva gorjeta.' },
 
-    { id: 'r-underground', nome: 'Underground Public House', data: '2026-11-21', hora: '17:20',
-      refeicao: 'jantar', local: 'Centro de Orlando · 19 S Orange Ave',
-      alternativas: ['Harp & Celt, 25 S Magnolia Ave — pub irlandês, reserva só por telefone'],
-      precisaReserva: true, janelaAbre: null, janelaHora: null,
-      canal: 'OpenTable, pelo site do restaurante', blocoId: 'b-2111-1720',
-      nota: 'Gastropub britânico-americano com mesa e garçom, a 9 minutos a pé do Kia Center. ' +
-            'Fish and chips US$ 20, shepherd’s pie US$ 18, bangers and mash US$ 16 — e versão ' +
-            'vegana de cada prato. Noite de jogo no centro num sábado: reservem, e avisem na ' +
-            'chegada que vocês têm hora.' },
+    { id: 'r-chickfila', nome: 'Chick-fil-A', data: '2026-11-21', hora: '17:35',
+      refeicao: 'jantar', local: 'Orlando · 2885 S Orange Ave',
+      alternativas: ['Comer dentro da arena: o Kia Center tem o Orlando Table, com balcões de restaurantes locais'],
+      precisaReserva: false, janelaAbre: null, janelaHora: null,
+      canal: 'Balcão ou drive-thru, sem reserva', blocoId: 'b-2111-1735',
+      nota: 'A rede clássica mais perto do Kia Center: 7 km, oito minutos de carro. Combo de ' +
+            'sanduíche com waffle fries e bebida por uns US$ 11 por pessoa. Sábado das 6h às ' +
+            '22h; fecha aos domingos. Balcão: não leva gorjeta.' },
+
+    { id: 'r-red-lobster-2111', nome: 'Red Lobster', data: '2026-11-21', hora: '22:05',
+      refeicao: 'jantar', local: 'US-192 · 5690 W Irlo Bronson, ao lado do Old Town',
+      alternativas: ['Miller’s Ale House, 8123 W Irlo Bronson, mesa com garçom até as 2h'],
+      precisaReserva: false, janelaAbre: null, janelaHora: null,
+      canal: 'Chegar direto, ou Priority Seating pelo OpenTable', blocoId: 'b-2111-2205',
+      nota: 'O jantar de verdade da noite, depois do jogo. No sábado ele vai até as 23h: ' +
+            'saindo da arena às 21h30, vocês chegam por volta das 22h05 e têm quase uma hora. ' +
+            'Se o jogo esticar, o Miller’s Ale House fica aberto até as 2h.' },
 
     { id: 'r-zambia', nome: 'Zambia Smokehouse', data: '2026-11-24', hora: '13:20',
       refeicao: 'almoco', local: 'Busch Gardens Tampa · Stanleyville', alternativas: [],
@@ -7596,18 +7639,6 @@ window.ROTEIRO = {
         'Avisem na chegada que vocês têm hora.\n\n' +
         'Alternativa no mesmo bairro, se algo cair: The Boheme, no Grand Bohemian.',
       restauranteIds: ['r-kres'] },
-
-    { id: 'ck-underground', dataAlvo: '2026-09-11', validaAte: '2026-11-21', dataEstimada: true,
-      motivoData: 'O OpenTable não abre a data toda de uma vez: tentem já e, se 21/11 ainda não aparecer, de novo em 01/10',
-      hora: null, fuso: null, janelaReserva: false, critico: false,
-      texto: 'Reservar o Underground Public House para as 17h20 de 21/11 (centro de Orlando), pelo OpenTable',
-      nota:
-        'Noite de jogo do Solar Bears no centro, num sábado. O jantar tem 70 minutos antes da ' +
-        'caminhada até a arena: chegar sem reserva e pegar espera acaba com ele.\n\n' +
-        'A reserva é pelo OpenTable, pelo botão do site do restaurante.\n\n' +
-        'Alternativa, se não abrir mesa: o Harp & Celt, 25 S Magnolia Ave, pub irlandês a um ' +
-        'quarteirão — mas lá a reserva é só por telefone, +1 407-481-2928.',
-      restauranteIds: ['r-underground'] },
 
     { id: 'ck-mythos', dataAlvo: '2026-09-11', dataEstimada: false, hora: null, fuso: null,
       janelaReserva: false, critico: true, feitoPadrao: true,
@@ -8074,6 +8105,15 @@ window.ROTEIRO = {
       nota: 'Mais de 100 food trucks, das 11h às 2h todos os dias, com estacionamento grátis. A ' +
             'resposta para as noites que terminam tarde.' },
 
+    { id: 'red-lobster', nome: 'Red Lobster', tipo: 'restaurante',
+      lat: 28.3320798, lng: -81.5131347, verificado: true, fonteCoord: 'osm',
+      endereco: '5690 W Irlo Bronson Memorial Hwy, Kissimmee FL 34746',
+      doHotel: { tempoMin: 3, tempoFonte: 'estimado',
+                 uberUSD: { min: 7, max: 10 }, uberFonte: 'estimado' },
+      nota: 'Mesa com garçom a 1,9 km do hotel, ao lado do Old Town. Jantar do dia 20 e, na ' +
+            'volta do hóquei no dia 21, a última mesa aberta perto do hotel: sexta e sábado ' +
+            'até as 23h, nos outros dias até as 22h.' },
+
     { id: 'publix-vineland', nome: 'Publix — Sunrise City Plaza', tipo: 'compras',
       lat: 28.3462381, lng: -81.4832862, verificado: true, fonteCoord: 'osm',
       endereco: '3221 Vineland Rd, Kissimmee FL 34746',
@@ -8453,14 +8493,12 @@ window.ROTEIRO = {
         'grupos grandes às vezes têm gratuity incluída — confira antes de somar duas vezes.\n\n' +
         'Onde NÃO se dá gorjeta: balcão e mobile order. Ou seja, Columbia Harbour House, ' +
         'Casey’s, Satu’li Canteen, Three Broomsticks, Docking Bay 7, as barracas do Food & ' +
-        'Wine, Leaky Cauldron, Toadstool Cafe, World Food Trucks, Plant Street Market, Sofrito ' +
-        'e os restaurantes do plano de refeição do SeaWorld e do Busch Gardens, inclusive o ' +
-        'Dragon Fire.\n\n' +
-        'Onde se dá: The Boathouse, Yard House ou Tin Roof, Nomad Lounge, Sanaa, Columbia, ' +
-        'Oga’s, Sci-Fi Dine-In, Lombard’s, Cheesecake Factory, Kres, Atlantic, IHOP, El ' +
-        'Cilantrillo, Underground Public House, Confisco Grille, Mythos e Homecomin’ — e o ' +
-        'Uber (opcional, ' +
-        'mas comum).\n\n' +
+        'Wine, Leaky Cauldron, Toadstool Cafe, Shake Shack, Chick-fil-A, World Food Trucks, ' +
+        'Plant Street Market, Sofrito e os restaurantes do plano de refeição do SeaWorld e do ' +
+        'Busch Gardens, inclusive o Dragon Fire.\n\n' +
+        'Onde se dá: The Boathouse, Nomad Lounge, Sanaa, Columbia, Oga’s, Sci-Fi Dine-In, ' +
+        'Lombard’s, Cheesecake Factory, Kres, Atlantic, IHOP, El Cilantrillo, Red Lobster, ' +
+        'Confisco Grille, Mythos e Homecomin’ — e o Uber (opcional, mas comum).\n\n' +
         'O FORD’S GARAGE, NO DIA 12, JÁ COBRA 20% DE TAXA DE SERVIÇO NA CONTA, no lugar da ' +
         'gorjeta: não somem outra por cima.',
       pesquisa: '2026-09-11',
@@ -8600,12 +8638,20 @@ window.ROTEIRO = {
         'dia 10 traz o jantar para ele: arroz pronto com atum ou frango em sachê, ou sopa. ' +
         'Três minutos, sem sair do hotel.\n\n' +
         'SE FOR PARA SAIR, na própria 192:\n' +
+        'Red Lobster, 5690 W Irlo Bronson — mesa com garçom a 1,9 km do hotel, três minutos ' +
+        'de carro. Até as 22h de domingo a quinta e até as 23h na sexta e no sábado\n' +
+        'Chick-fil-A, 6050 W Irlo Bronson — 1,4 km, uns 19 minutos a pé, até as 23h. Fecha ' +
+        'aos domingos\n' +
+        'Raising Cane’s, 8170 W Irlo Bronson — frango frito até as 4h da manhã, todos os ' +
+        'dias. São 11 km: só nos dias com carro, 20 a 25/11\n' +
         'World Food Trucks, 5811 W Irlo Bronson — mais de 100 food trucks, das 11h às 2h ' +
         'todos os dias\n' +
         'Miller’s Ale House, 8123 W Irlo Bronson — mesa com garçom, das 11h às 2h\n' +
         'Perkins, 5170 W Irlo Bronson — mesa com garçom, até a meia-noite\n' +
         'Walgreens, 5935 W Irlo Bronson — farmácia 24 horas, para o básico\n\n' +
-        'O World Food Trucks está nos Locais deste Guia, com a rota do hotel.',
+        'NAS NOITES SEM CARRO — 11, 18 e 19 — valem o quarto, o Chick-fil-A a pé e o Walgreens; ' +
+        'o resto pede Uber. O Red Lobster e o World Food Trucks estão nos Locais deste Guia, ' +
+        'com a rota do hotel.',
       pesquisa: '2026-09-11',
     },
   ],
