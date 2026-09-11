@@ -431,10 +431,6 @@ window.ROTEIRO = {
             texto: 'Antiácido',
             marca: 'Tums · Pepto-Bismol mastigável', alternativaBarata: 'Equate',
             motivo: 'A porção americana e o horário de refeição fora do normal.' },
-          { id: 'repelente', secao: 'Farmácia', essencial: false,
-            texto: 'Repelente',
-            marca: 'OFF! Deep Woods', alternativaBarata: null,
-            motivo: 'Novembro tem pouco mosquito. É pelo aerobarco do dia 20, num pântano.' },
           { id: 'lenco', secao: 'Farmácia', essencial: false,
             texto: 'Lenço umedecido antibacteriano',
             marca: 'Wet Ones Antibacterial', alternativaBarata: null,
@@ -534,7 +530,8 @@ window.ROTEIRO = {
             texto: 'Sabão de lavanderia + moedas de 25 centavos',
             marca: 'Tide Pods, embalagem pequena', alternativaBarata: null,
             motivo: 'O Travelodge tem lavanderia de moeda, e são 16 dias. A moeda de 25 ' +
-                    'centavos (quarter) é a que a máquina usa.' },
+                    'centavos (quarter) é a que a máquina usa. A segunda rodada tem bloco na ' +
+                    'manhã livre do dia 20.' },
           { id: 'ziploc', secao: 'Casa', essencial: false,
             texto: 'Sacos Ziploc grandes',
             marca: 'Ziploc, tamanho gallon', alternativaBarata: 'Great Value',
@@ -4433,8 +4430,8 @@ window.ROTEIRO = {
       'Admission na véspera: ela já mudou três vezes em dezoito meses.',
       'Hoje não tem carro — ele só é retirado amanhã. É Uber na ida e na volta, e o ponto ' +
       'de embarque do Epic é próprio, a cinco minutos a pé da entrada.',
-      'É o único dia de Epic da viagem. O segundo dia do ingresso continua pago e válido: ' +
-      'se hoje der muito errado, reclamar o dia 25 custa a noite do Disney Springs.',
+      'É o único dia de Epic da viagem. Se hoje der muito errado, a manhã livre de amanhã é o ' +
+      'lugar mais barato para usar o segundo dia do ingresso — se ele permitir.',
     ],
     notas: [
       { tipo: 'alerta', texto:
@@ -4479,7 +4476,8 @@ window.ROTEIRO = {
         pesquisa: '2026-09-10' },
 
       { tipo: 'info', texto:
-        'SEM CARRO HOJE. O carro alugado só é retirado amanhã, dia 20, às 15h30.\n\n' +
+        'SEM CARRO HOJE. O carro alugado só é retirado amanhã, dia 20, às 15h, na Avis do Old ' +
+        'Town.\n\n' +
         'O Epic não usa o estacionamento da Universal: o ponto de Uber é próprio, na 1222 Epic ' +
         'Blvd, a uns cinco minutos a pé da entrada. É por isso que dá para sair às 7h15 e não ' +
         'às 6h45 — a caminhada longa do estacionamento, que o roteiro antigo contava, não ' +
@@ -4553,7 +4551,7 @@ window.ROTEIRO = {
         titulo: 'Sair do hotel — Uber',
         descricao: '~30 min, US$ 25–38. O carro só chega amanhã',
         contexto:
-          'Hoje é Uber: o carro alugado só é retirado amanhã às 15h30.\n\n' +
+          'Hoje é Uber: o carro alugado só é retirado amanhã às 15h, na Avis do Old Town.\n\n' +
           'O DESTINO NO APP É O PONTO DE EMBARQUE DO EPIC, 1222 Epic Blvd — não é o ' +
           'estacionamento da Universal, que fica em outro lugar. De lá são uns cinco minutos a ' +
           'pé até a entrada.',
@@ -4787,7 +4785,7 @@ window.ROTEIRO = {
           'parque no seu melhor, e vocês passam por ele de qualquer jeito.\n\n' +
           'A tarifa dinâmica sobe no fechamento. Se estiver absurda, esperem dez minutos no ' +
           'Celestial Park antes de chamar.\n\n' +
-          'Amanhã o dia 20 começa às 8h30, dentro de Kissimmee.',
+          'Amanhã a manhã é livre, sem alarme.',
         localId: 'epic-universe', acesso: [], duracaoMin: 45 },
     ],
     naoPerca: [
@@ -4814,16 +4812,16 @@ window.ROTEIRO = {
     ],
     prepararAmanha: {
       paraODia: '2026-11-20',
-      titulo: 'Airboat, carro e Old Town · dia inteiro dentro de Kissimmee',
-      aviso: 'Amanhã não tem parque, e o dia começa às 8h30. É também o dia em que o carro ' +
-             'chega — e a retirada é a tarefa mais crítica dele.',
+      titulo: 'Carro e Old Town · manhã livre',
+      aviso: 'Amanhã não tem alarme nem parque. O único horário marcado é a retirada do carro, ' +
+             'às 15h, e ela é a tarefa crítica do dia.',
       itens: [
         { texto: 'Separar os quatro documentos da retirada do carro', critico: true,
           motivo: 'Carteira de motorista, PID, passaporte e cartão de CRÉDITO internacional, ' +
-                  'todos em nome do condutor. A retirada é às 15h30, e sem um deles não sai ' +
-                  'carro.' },
-        { texto: 'Conferir a reserva do Boggy Creek Airboat', critico: true,
-          motivo: 'É a primeira coisa do dia. Número da reserva à mão, não no e-mail.' },
+                  'todos em nome do condutor. A retirada é às 15h, na Avis do Old Town, e sem ' +
+                  'um deles não sai carro.' },
+        { texto: 'Separar a roupa suja da semana', critico: false,
+          motivo: 'Amanhã às 10h é a segunda rodada de lavanderia, com a roupa dos dias 15 a 20.' },
         { texto: 'Guardar as compras e esvaziar a mochila do parque', critico: false,
           motivo: 'Amanhã é dia de cidade pequena e de rua. A mochila de parque fica.' },
         { texto: 'Celular e power bank carregando', critico: false,
@@ -4838,8 +4836,8 @@ window.ROTEIRO = {
                 'Universe e as duas maiores filas no fim, o dia não precisa dele para caber.',
         alternativa: 'Duas saídas, nesta ordem. Express Pass Now dentro do parque, US$ 20 a 30 ' +
                      'por atração, para resolver uma fila específica. E o segundo dia do ' +
-                     'ingresso, que continua pago e válido: reclamar o dia 25 custa a noite do ' +
-                     'Disney Springs e nada mais.',
+                     'ingresso, se ele permitir: a manhã livre do dia 20 não tira nada do ' +
+                     'roteiro.',
       },
       custoEstimadoCasal: { min: 0, max: 0, moeda: 'USD' },
       extras: [
@@ -4882,106 +4880,274 @@ window.ROTEIRO = {
     },
   },
 
-  /* ===== 20/11 · SEXTA · AIRBOAT, CARRO E OLD TOWN ====================== */
+  /* ===== 20/11 · SEXTA · CARRO E OLD TOWN ================================ */
   {
     id: 'd-2026-11-20',
     data: '2026-11-20',
     diaSemana: 'sexta',
     emoji: '🚗',
-    titulo: 'Airboat, carro e Old Town',
-    subtitulo: 'Dia inteiro dentro de Kissimmee',
+    titulo: 'Carro e Old Town',
+    subtitulo: 'Manhã livre · muscle cars à noite',
     tipo: 'livre',
     operadora: null,
     parqueId: null,
     custoZero: false,
+    fechado: true,
+    revisadoEm: '2026-09-11',
     referencia: null,
-    resumo: 'O dia mais barato da viagem em deslocamento. Tudo acontece dentro de Kissimmee.',
-    avisos: [],
-    alternativa: {
-      titulo: 'Se o aerobarco não empolgar',
-      texto:
-        'Fun Spot America fica a 10 min, tem duas montanhas-russas de madeira e kart de vários ' +
-        'andares. Cobra por atração, sem ingresso obrigatório.',
-    },
+    resumo:
+      'O único respiro entre o Epic e cinco dias pesados seguidos. A manhã é livre de ' +
+      'verdade, o carro chega às 15h — a tarefa crítica do dia — e a noite é o desfile de ' +
+      'muscle cars do Old Town, a três minutos do hotel.',
+    avisos: [
+      'O ÚNICO HORÁRIO QUE NÃO PODE FALHAR É A RETIRADA DO CARRO, ÀS 15H. Sem carro, o dia 21 ' +
+      'em Winter Garden cai: o Farmers Market abre às 8h e só funciona aos sábados.',
+      'No balcão da Avis, recusem o pacote de pedágio e-Toll Unlimited. Ele cobra de US$ 11 a ' +
+      '26 por dia de aluguel, mesmo nos dias sem pedágio nenhum.',
+    ],
+    notas: [
+      { tipo: 'info', texto:
+        'A AVIS FICA DENTRO DO OLD TOWN, nos fundos, em frente à montanha-russa — suíte 434. ' +
+        'Abre das 7h às 19h todos os dias, inclusive sábado, e fica a três minutos do hotel.\n\n' +
+        'O ALUGUEL É CONTADO EM PERÍODOS DE 24 HORAS. Retirando às 15h de hoje e devolvendo às ' +
+        '15h do dia 25, são cinco diárias certas. A tolerância na devolução é de 29 minutos; ' +
+        'passou disso, a Avis cobra fração de diária, e com 90 minutos de atraso cobra a ' +
+        'diária inteira.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'atencao', texto:
+        'PEDÁGIO: RECUSEM O E-TOLL UNLIMITED. O pacote cobra de US$ 11 a 26 por dia de ' +
+        'aluguel, em todos os dias, com ou sem pedágio. Sem ele, a Avis cobra cada pedágio ' +
+        'pela placa, mais uma taxa de US$ 6,95 só nos dias em que houve pedágio.\n\n' +
+        'A estrada pedagiada que o roteiro provavelmente usa é a SR-429, para Winter Garden, ' +
+        'amanhã — poucos dólares. SeaWorld, Islands, Tampa e o centro de Orlando ficam pela ' +
+        'I-4, que é grátis fora das faixas expressas.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'O DESFILE DE SEXTA É O DOS MUSCLE CARS: carros de 1964 em diante e hot rods, expostos ' +
+        'desde as 15h e desfilando às 20h30. No sábado existe outro, dos clássicos anteriores ' +
+        'a 1985, também às 20h30 — mas amanhã vocês estão no hóquei. Os dois são grátis.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'A MANHÃ LIVRE TAMBÉM É A REDE DE SEGURANÇA DO EPIC. Se ontem der muito errado — o ' +
+        'Mine-Cart parado a noite inteira, chuva —, esta manhã é o lugar mais barato para usar ' +
+        'o segundo dia do ingresso, porque não tira nada do roteiro. Só vale se o ingresso ' +
+        'permitir: alguns ingressos de dois dias da Universal têm um único dia de Epic. É ' +
+        'pergunta para a agência, na conferência dos ingressos da Universal.',
+        pesquisa: '2026-09-11' },
+    ],
+    planos: [
+      { letra: 'A', titulo: 'O dia como está escrito',
+        gatilho: 'O Epic de ontem correu bem e o carro está reservado para as 15h.',
+        passos: [
+          'Dormir sem alarme. Café no quarto.',
+          'Lavanderia às 10h: a roupa dos dias 15 a 20.',
+          'Almoço sem compromisso e carro às 15h, na Avis do Old Town.',
+          'Descanso no hotel e, às 17h20, de volta ao Old Town, já de carro.',
+          'Jantar no Sakeba, lugar na calçada às 20h10 e desfile às 20h30.',
+        ] },
+      { letra: 'B', titulo: 'O Epic de ontem deu errado',
+        gatilho: 'Uma atração grande ficou de fora ontem — o Mine-Cart parado, chuva — e a ' +
+                 'agência confirmou que o segundo dia do ingresso vale hoje.',
+        passos: [
+          'Uber às 8h15 para o ponto de embarque do Epic, na 1222 Epic Blvd.',
+          'Só o que ficou de fora. Saída às 13h30, sem esticar.',
+          'Uber direto para a Avis do Old Town: a retirada das 15h não muda.',
+          'A lavanderia passa para as 15h30, no lugar do descanso.',
+        ] },
+      { letra: 'B2', titulo: 'A Avis não tem o carro',
+        gatilho: 'Fila no balcão ou problema com a reserva às 15h.',
+        passos: [
+          'A filial fica aberta até as 19h: há quatro horas de margem, e a noite é ali mesmo.',
+          'Liguem para a filial, +1 321-219-7041, e resolvam antes do jantar.',
+          'Se às 16h ainda não houver solução, a Hertz de 7471 W Irlo Bronson é a próxima — ' +
+          'e ela fecha às 17h.',
+          'O que não pode acontecer é terminar o dia sem carro: amanhã a saída é 7h45.',
+        ] },
+      { letra: 'C', titulo: 'Chuva forte à noite',
+        gatilho: 'Chove pesado no fim da tarde.',
+        passos: [
+          'O desfile é ao ar livre, com carro de coleção. Confiram a página de eventos do Old ' +
+          'Town antes de sair do hotel.',
+          'O jantar no Sakeba fica: é restaurante de mesa.',
+          'Se o desfile não sair, a noite termina no jantar. Amanhã a saída é 7h45.',
+        ] },
+    ],
     blocos: [
-      { id: 'b-2011-0830', hora: '08:30', ancora: 'fixo', tipo: 'atracao',
-        titulo: 'Boggy Creek Airboat Adventures',
-        descricao:
-          '~20 min do hotel. Passeio de aerobarco pelas nascentes dos Everglades, com jacarés ' +
-          'selvagens, águias e aves. Reservem online. Levem boné e óculos de sol — o vento é forte',
+      { id: 'b-2011-0800', hora: '08:00', ancora: 'fixo', tipo: 'livre',
+        titulo: 'Manhã livre — sem alarme',
+        descricao: 'Café no quarto: cafeteira e micro-ondas são do quarto',
         contexto:
-          'Aerobarco é o barco de hélice aérea que anda em água rasa e capim. É barulhento — ' +
-          'eles dão protetor auricular. Os jacarés são selvagens, não é cativeiro, então a ' +
-          'quantidade varia com o clima: dia frio, menos jacaré na superfície.',
-        endereco: '2001 E Southport Rd', localId: 'boggy-creek', acesso: ['reserva'] },
+          'O único respiro entre o Epic de ontem e cinco dias seguidos pesados: Winter Garden ' +
+          'com hóquei, SeaWorld, Islands, Busch Gardens e o último dia de compras. Não é para ' +
+          'encher.\n\n' +
+          'A lista do Walmart do dia 10 tem o café da manhã para o quarto.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 120 },
 
-      { id: 'b-2011-0900', hora: '09:00', ancora: 'fixo', tipo: 'atracao',
-        titulo: 'Passeio de 30 min ou de 1 hora',
-        descricao: 'No local: jardim de borboletas, exposição de jacarés, exposição indígena',
-        localId: 'boggy-creek', acesso: [] },
-
-      { id: 'b-2011-1100', hora: '11:00', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Kissimmee Lakefront Park',
-        descricao: 'Lake Tohopekaliga. Grátis. Deck sobre o lago, ciclovia, ótimo para fotos',
-        localId: 'lakefront-park', acesso: [] },
+      { id: 'b-2011-1000', hora: '10:00', ancora: 'fixo', tipo: 'tarefa',
+        titulo: 'Lavanderia — segunda rodada',
+        descricao: 'Roupa dos dias 15 a 20. Sabão e moedas de 25 centavos vêm da lista do Walmart',
+        contexto:
+          'O Travelodge tem lavanderia de moeda, segundo os sites de reserva. Lavar e secar ' +
+          'leva perto de duas horas — é estimativa, não medida.\n\n' +
+          'É a última rodada antes da volta: o que sair limpo daqui cobre os dias 21 a 26.\n\n' +
+          'Se a máquina do hotel não funcionar, procurem uma lavanderia self-service na 192.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 150 },
 
       { id: 'b-2011-1230', hora: '12:30', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Almoço na 192',
-        descricao: 'Black Angus Steakhouse, Miller’s Ale House, ou um dos brasileiros da região',
-        acesso: [] },
-
-      { id: 'b-2011-1400', hora: '14:00', ancora: 'fixo', tipo: 'vazio',
-        titulo: 'VAZIO PROPOSITAL',
-        descricao: 'Descanso no hotel',
+        titulo: 'Almoço sem compromisso',
+        descricao: 'Comida do quarto, ou o Old Town, a três minutos',
         contexto:
-          'Não preencham. A partir de amanhã são quatro dias seguidos pesados: Winter Garden ' +
-          'com hóquei à noite, SeaWorld, Islands of Adventure, e Busch Gardens com 3h de ' +
-          'carro — antes do último dia de compras, que termina tarde no Disney Springs.',
-        acesso: [] },
+          'Sem carro até as 15h, o que está perto resolve: a comida do Walmart no micro-ondas ' +
+          'do quarto, ou um Uber curto até o Old Town, onde o Southern Breeze e o World Food ' +
+          'Trucks abrem às 11h. Almoçando lá, dá para emendar direto na retirada do carro.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 150 },
 
-      { id: 'b-2011-1530', hora: '15:30', ancora: 'fixo', tipo: 'tarefa',
-        titulo: 'Retirar o carro alugado',
-        descricao:
-          'Filial de bairro na 192. Peguem hoje, não amanhã — filiais de bairro fecham cedo ' +
-          'no sábado',
+      { id: 'b-2011-1530', hora: '15:00', ancora: 'fixo', tipo: 'tarefa',
+        titulo: 'Retirar o carro — Avis do Old Town',
+        descricao: 'Suíte 434, nos fundos do Old Town. Recusem o e-Toll Unlimited',
         contexto:
-          'Essa é a tarefa mais crítica do dia. Se a filial fechar antes de vocês chegarem, o ' +
-          'dia 21 em Winter Garden cai — o Farmers Market abre às 8h e não dá para ir de Uber ' +
-          'a esse preço.\n\n' +
+          'A TAREFA CRÍTICA DO DIA. Sem carro, o dia 21 em Winter Garden cai — o Farmers Market ' +
+          'abre às 8h e não dá para ir de Uber a esse preço.\n\n' +
+          'ONDE: dentro do Old Town, nos fundos, em frente à montanha-russa. Três minutos de ' +
+          'Uber do hotel. Aberta das 7h às 19h, telefone +1 321-219-7041.\n\n' +
           'QUATRO DOCUMENTOS, todos em nome do condutor: carteira de motorista, PID ' +
-          '(Permissão Internacional para Dirigir, já emitida), passaporte e cartão de ' +
-          'crédito internacional. O cartão precisa ser de crédito — débito costuma não ser ' +
-          'aceito para a caução.\n\n' +
-          'A devolução é no dia 25, na mesma filial.',
-        acesso: [], critico: true },
+          '(Permissão Internacional para Dirigir, já emitida), passaporte e cartão de CRÉDITO ' +
+          'internacional. Débito costuma não ser aceito para a caução.\n\n' +
+          'NO BALCÃO: recusem o e-Toll Unlimited e fotografem o carro por fora antes de sair.\n\n' +
+          'A DEVOLUÇÃO é no dia 25, às 15h, nesta mesma filial e dentro do horário dela.',
+        endereco: '5770 W Irlo Bronson Memorial Hwy, Suite 434', localId: 'old-town',
+        acesso: [], critico: true, duracaoMin: 30, pesquisa: '2026-09-11' },
 
-      { id: 'b-2011-1630', hora: '16:30', ancora: 'fixo', tipo: 'livre',
+      { id: 'b-2011-1400', hora: '15:30', ancora: 'fixo', tipo: 'vazio',
+        titulo: 'VAZIO PROPOSITAL',
+        descricao: 'Descanso no hotel, já com o carro',
+        contexto:
+          'Não preencham. A partir de amanhã são cinco dias seguidos pesados: Winter Garden com ' +
+          'hóquei à noite, SeaWorld, Islands of Adventure, Busch Gardens com 3h de carro e o ' +
+          'último dia de compras, que termina tarde no Disney Springs.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 105 },
+
+      { id: 'b-2011-1630', hora: '17:20', ancora: 'fixo', tipo: 'livre',
         titulo: 'Old Town Kissimmee',
-        descricao:
-          'Entrada e estacionamento gratuitos. Muscle Car Show na Trophy Row desde as 15h — ' +
-          'carros de 1964 em diante',
-        endereco: '5770 W Irlo Bronson Memorial Hwy', localId: 'old-town', acesso: [] },
+        descricao: 'Entrada e estacionamento grátis. Muscle cars expostos desde as 15h',
+        contexto:
+          'Rua de tijolinho com lojas, bares e brinquedos, a três minutos do hotel. Toda sexta ' +
+          'a Trophy Row vira exposição de muscle cars de 1964 em diante e hot rods, e às 20h30 ' +
+          'eles desfilam pela rua principal.\n\n' +
+          'O pôr do sol é por volta das 17h30: vocês chegam na luz baixa e veem as luzes ' +
+          'acendendo.\n\n' +
+          'DECORAÇÃO DE NATAL: o Old Town monta árvore e luzes a partir de meados de novembro. ' +
+          'A data exata do acendimento não saiu.\n\n' +
+          'Ao lado fica o Fun Spot, com a Mine Blower, montanha-russa de madeira com inversão, ' +
+          'paga por brinquedo. Não é bloco: é se sobrar tempo antes do jantar.',
+        endereco: '5770 W Irlo Bronson Memorial Hwy', localId: 'old-town',
+        acesso: [], duracaoMin: 70, pesquisa: '2026-09-11' },
 
       { id: 'b-2011-1830', hora: '18:30', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar no Old Town',
-        descricao: 'Flippers Pizzeria, Hamburger Mary’s, A&W (root beer float)',
-        localId: 'old-town', acesso: [] },
+        titulo: 'Jantar — Sakeba Asian Pub & Grill',
+        descricao: 'Sushi e grelhados asiáticos, dentro do Old Town. Mesa com garçom',
+        contexto:
+          'Asiático de mesa no meio do Old Town: sushi, teriyaki, pratos tailandeses e coreanos ' +
+          'e um bar de saquê. Nota 4,6 no Google, e na sexta fica aberto até 1h30.\n\n' +
+          'ALTERNATIVAS SEM FAST FOOD: El Cilantrillo, comida porto-riquenha, também no Old ' +
+          'Town; ou o World Food Trucks, colado nele, com mais de cem food trucks.\n\n' +
+          'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
+        restauranteId: 'r-sakeba', localId: 'old-town', acesso: [], duracaoMin: 90,
+        pesquisa: '2026-09-11' },
+
+      { id: 'b-2011-2010', hora: '20:10', ancora: 'fixo', tipo: 'espera',
+        titulo: 'Lugar na calçada',
+        descricao: 'Vinte minutos antes do desfile',
+        contexto:
+          'A calçada da rua principal enche perto das 20h30. Escolham o ponto com calma ' +
+          'enquanto ainda há espaço.',
+        localId: 'old-town', acesso: [], duracaoMin: 20 },
 
       { id: 'b-2011-2030', hora: '20:30', ancora: 'fixo', tipo: 'show',
-        titulo: 'Friday Night Cruise',
-        descricao: 'Peguem lugar na calçada 20 min antes',
+        titulo: 'Muscle Car Cruise',
+        descricao: 'Desfile dos muscle cars pela rua principal. Grátis',
         contexto:
-          'Desfile semanal de centenas de carros clássicos americanos pela rua principal do ' +
-          'Old Town, toda sexta. É gratuito e é a coisa mais americana da viagem inteira. ' +
-          'Só acontece às sextas — por isso está neste dia e não em outro.',
-        localId: 'old-town', acesso: [] },
+          'Toda sexta, os muscle cars expostos na Trophy Row desde a tarde desfilam pela rua ' +
+          'principal do Old Town — carros de 1964 em diante e hot rods. É gratuito, é semanal e ' +
+          'é a coisa mais americana da viagem.\n\n' +
+          'No sábado existe o desfile dos clássicos anteriores a 1985, na mesma hora, mas amanhã ' +
+          'é o hóquei.',
+        localId: 'old-town', acesso: [], duracaoMin: 45, pesquisa: '2026-09-11' },
 
-      { id: 'b-2011-2200', hora: '22:00', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Voltar', descricao: '', acesso: [] },
+      { id: 'b-2011-2200', hora: '21:15', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voltar',
+        descricao: 'Três minutos de carro. Amanhã a saída é 7h45',
+        contexto:
+          'O dia 21 começa cedo: Farmers Market de Winter Garden às 8h e hóquei à noite. Durmam.',
+        acesso: [], duracaoMin: 15 },
     ],
-    renuncias: null, ficha: null,
+    naoPerca: [
+      { nome: 'Muscle Car Cruise', quando: 'hoje', custo: 'grátis',
+        motivo: 'Desfile semanal de muscle cars pela rua principal do Old Town, às 20h30.',
+        pesquisa: '2026-09-11' },
+      { nome: 'A decoração de Natal do Old Town', quando: 'hoje',
+        condicao: 'montada a partir de meados de novembro', custo: 'grátis',
+        motivo: 'Árvore e luzes na rua de tijolinho. A data do acendimento ainda não saiu.',
+        pesquisa: '2026-09-11' },
+      { nome: 'Mine Blower, no Fun Spot', quando: 'se sobrar tempo', custo: 'pago por brinquedo',
+        motivo: 'Montanha-russa de madeira com inversão, ao lado do Old Town. A entrada no Fun ' +
+                'Spot é grátis; cada brinquedo é pago à parte.',
+        pesquisa: '2026-09-11' },
+      { nome: 'Boggy Creek Airboat Adventures', quando: 'descartado', custo: 'US$ 108 a 122 no casal',
+        motivo: 'DESCARTADO em 11/09. Passeio de aerobarco de uma hora, a 38 minutos do hotel. ' +
+                'Não é objetivo da viagem, novembro é a pior época para ver bicho de manhã, e ' +
+                'ele obrigaria a pegar o carro cedo, com uma diária a mais. A manhã livre rende ' +
+                'mais.',
+        pesquisa: '2026-09-11' },
+    ],
+    prepararAmanha: {
+      paraODia: '2026-11-21',
+      titulo: 'Winter Garden e Solar Bears · saída 7h45',
+      aviso: 'Amanhã é o primeiro dia de carro de verdade: estrada até Winter Garden de manhã e ' +
+             'centro de Orlando à noite, numa arena que não aceita bolsa.',
+      itens: [
+        { texto: 'Alarme para 6h45 nos dois celulares', critico: true,
+          motivo: 'Saída 7h45. O Farmers Market de Winter Garden vai das 8h às 13h e só funciona ' +
+                  'aos sábados.' },
+        { texto: 'A mochila do dia vai no porta-malas, fora de vista', critico: true,
+          motivo: 'O Kia Center não aceita bolsa — só uma clutch de 11 × 16 cm. O que vocês ' +
+                  'levarem para Winter Garden fica no carro, no porta-malas, quando estacionarem ' +
+                  'no centro à noite.' },
+        { texto: 'Ingresso do Solar Bears nos dois celulares', critico: true,
+          motivo: 'Jogo às 19h no Kia Center.' },
+        { texto: 'Se o GPS escolher a SR-429, deixem', critico: false,
+          motivo: 'É pedágio pela placa, porque o e-Toll foi recusado: poucos dólares mais a taxa ' +
+                  'de US$ 6,95 do dia.' },
+      ],
+    },
+    ficha: {
+      multiPass: null, singlePass: null, expressPass: null,
+      custoEstimadoCasal: { min: 0, max: 0, moeda: 'USD' },
+      extras: [
+        { nome: 'e-Toll Unlimited da Avis — recusar',
+          custo: { min: 0, max: 0, moeda: 'USD' },
+          texto: 'O pacote cobra de US$ 11 a 26 por dia de aluguel, todos os dias, e vai até US$ 55 ' +
+                 'a 130 por semana. Sem ele, cada pedágio sai pela placa, mais US$ 6,95 só nos ' +
+                 'dias em que houve pedágio.' },
+        { nome: 'Mine Blower, no Fun Spot',
+          custo: { min: 0, max: 40, moeda: 'USD' },
+          texto: 'Opcional. Cada brinquedo do Fun Spot custa de US$ 3 a 40; o passe do dia é ' +
+                 'US$ 59,95. A entrada é grátis.' },
+      ],
+    },
+    renuncias: {
+      gerais: [
+        { nome: 'Kissimmee Lakefront Park',
+          motivo: 'Estava no dia por causa do aerobarco. Sem carro de manhã, seriam 16 minutos ' +
+                  'de Uber em cada sentido para ver um lago.' },
+      ],
+      idioma: null,
+      fechado: [],
+    },
   },
-
   /* ===== 21/11 · SÁBADO · WINTER GARDEN E SOLAR BEARS ================== */
   {
     id: 'd-2026-11-21',
@@ -5917,6 +6083,14 @@ window.ROTEIRO = {
       nota: 'Reserva obrigatória, confirmada em 10/09. Às 17h de propósito: o jantar cedo ' +
             'libera as três últimas horas para o Ministry e o Mine-Cart. Pratos de US$ 35 a 48.' },
 
+    { id: 'r-sakeba', nome: 'Sakeba Asian Pub & Grill', data: '2026-11-20', hora: '18:30',
+      refeicao: 'jantar', local: 'Old Town Kissimmee',
+      alternativas: ['El Cilantrillo (Old Town)', 'World Food Trucks'],
+      precisaReserva: false, janelaAbre: null, janelaHora: null,
+      canal: 'Chegar direto', blocoId: 'b-2011-1830',
+      nota: 'Sushi e grelhados asiáticos, mesa com garçom. Nota 4,6 no Google; na sexta abre ' +
+            'das 13h à 1h30.' },
+
     { id: 'r-zambia', nome: 'Zambia Smokehouse', data: '2026-11-24', hora: '12:45',
       refeicao: 'almoco', local: 'Busch Gardens Tampa', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
@@ -5998,18 +6172,20 @@ window.ROTEIRO = {
 
     { id: 'ck-carro', dataAlvo: '2026-10-06', dataEstimada: true, motivoData: 'Preço de locadora sobe perto da data', hora: null, fuso: null,
       janelaReserva: false, critico: true,
-      texto: 'Reservar o carro para 20 a 25/11, em filial de bairro na 192',
+      texto: 'Reservar o carro na Avis do Old Town: retirada 20/11 às 15h, devolução 25/11 às 15h',
+      nota:
+        'A Avis fica dentro do Old Town (5770 W Irlo Bronson, suíte 434), a três minutos do ' +
+        'hotel, aberta das 7h às 19h todos os dias. Reservem das 15h às 15h: o aluguel é ' +
+        'contado em períodos de 24 horas, e assim são cinco diárias certas.\n\n' +
+        'Na reserva e no balcão, RECUSEM o e-Toll Unlimited: ele cobra de US$ 11 a 26 por dia ' +
+        'de aluguel, com ou sem pedágio.',
+      pesquisa: '2026-09-11',
       restauranteIds: [] },
 
     { id: 'ck-columbia', dataAlvo: '2026-10-15', dataEstimada: true, motivoData: '30 dias antes do almoço de 14/11', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Reservar o Columbia Restaurant para o almoço de 14/11 (Celebration)',
       restauranteIds: ['r-columbia'] },
-
-    { id: 'ck-boggy', dataAlvo: '2026-10-21', dataEstimada: true, motivoData: '30 dias antes do passeio de 20/11', hora: null, fuso: null,
-      janelaReserva: false, critico: false,
-      texto: 'Reservar o Boggy Creek Airboat online para 20/11',
-      restauranteIds: [] },
 
     /* --- prazo médio (outubro) --- */
     { id: 'ck-ing-disney', dataAlvo: '2026-10-01', dataEstimada: true,
@@ -6511,23 +6687,13 @@ window.ROTEIRO = {
       doHotel: { tempoMin: 10, tempoFonte: 'documento',
                  uberUSD: { min: 10, max: 15 }, uberFonte: 'documento' } },
 
-    { id: 'boggy-creek', nome: 'Boggy Creek Airboat Adventures', tipo: 'atracao',
-      lat: 28.1394935, lng: -81.3622451, verificado: true, fonteCoord: 'osm', endereco: '2001 E Southport Rd',
-      doHotel: { tempoMin: 20, tempoFonte: 'documento',
-                 uberUSD: { min: 18, max: 28 }, uberFonte: 'estimado' } },
-
-    { id: 'lakefront-park', nome: 'Kissimmee Lakefront Park', tipo: 'livre',
-      lat: 28.2891459, lng: -81.4068058, verificado: true, fonteCoord: 'osm', endereco: 'Lake Tohopekaliga',
-      doHotel: { tempoMin: 15, tempoFonte: 'estimado',
-                 uberUSD: { min: 12, max: 20 }, uberFonte: 'estimado' },
-      nota: 'Grátis.' },
-
     { id: 'old-town', nome: 'Old Town Kissimmee', tipo: 'livre',
       lat: 28.33161, lng: -81.515838, verificado: true, fonteCoord: 'wikipedia',
       endereco: '5770 W Irlo Bronson Memorial Hwy',
-      doHotel: { tempoMin: 10, tempoFonte: 'estimado',
-                 uberUSD: { min: 10, max: 15 }, uberFonte: 'estimado' },
-      nota: 'Entrada e estacionamento gratuitos.' },
+      doHotel: { tempoMin: 3, tempoFonte: 'estimado',
+                 uberUSD: { min: 7, max: 10 }, uberFonte: 'estimado' },
+      nota: 'Entrada e estacionamento gratuitos. A Avis do dia 20 fica aqui dentro, na suíte ' +
+            '434, das 7h às 19h.' },
 
     { id: 'winter-garden', nome: 'Winter Garden — Downtown Pavilion', tipo: 'livre',
       lat: 28.5647018, lng: -81.5877242, verificado: true, fonteCoord: 'osm', endereco: '104 S. Lakeview Ave',
@@ -6932,7 +7098,7 @@ window.ROTEIRO = {
       momento: 'antes-de-viajar',
       titulo: 'Os blocos VAZIO PROPOSITAL não são falha de planejamento',
       corpo:
-        'Existem quatro blocos assim no roteiro: 12/11 às 14h30, 14/11 às 9h, 20/11 às 14h e ' +
+        'Existem quatro blocos assim no roteiro: 12/11 às 14h30, 14/11 às 9h, 20/11 às 15h30 e ' +
         '21/11 às 15h.\n\n' +
         'Eles estão ali porque a segunda metade da viagem é mais pesada que a primeira: ' +
         '19/11 Epic, 21/11 Winter Garden e hóquei, 22/11 SeaWorld, 23/11 Islands e 24/11 ' +

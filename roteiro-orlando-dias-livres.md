@@ -160,26 +160,30 @@ O **show de luz e música da fonte** do Lake Eola é às 20h e às 21h30 — voc
 
 ---
 
-# 🚗 20/11 (sexta) — Airboat, retirada do carro e Old Town
+# 🚗 20/11 (sexta) — Carro e Old Town
 
-Dia inteiro dentro de Kissimmee. O mais barato da viagem em deslocamento.
+O único respiro entre o Epic e cinco dias pesados seguidos. Manhã livre, carro às 15h — a tarefa crítica do dia — e o desfile de muscle cars do Old Town à noite, a três minutos do hotel.
 
 | Hora | O quê | Notas |
 |---|---|---|
-| **8h30** | **Boggy Creek Airboat Adventures** — 2001 E Southport Rd | ~20 min do hotel. Passeio de aerobarco pelas nascentes dos Everglades, com jacarés selvagens, águias e aves |
-| | Passeio de 30 min ou de 1 hora | Reservem online. Levem boné e óculos de sol — o vento é forte |
-| | No local: jardim de borboletas, exposição de jacarés, exposição indígena | |
-| **11h00** | **Kissimmee Lakefront Park** — Lake Tohopekaliga | Grátis. Deck sobre o lago, ciclovia, ótimo para fotos |
-| **12h30** | **Almoço na 192** | *Black Angus Steakhouse*, *Miller's Ale House*, ou um dos brasileiros da região |
-| **14h00** | **VAZIO PROPOSITAL** — descanso no hotel | |
-| **15h30** | **Retirar o carro alugado** | Filial de bairro na 192. **Peguem hoje, não amanhã** — filiais de bairro fecham cedo no sábado |
-| **16h30** | **Old Town Kissimmee** — 5770 W Irlo Bronson Memorial Hwy | Entrada e estacionamento gratuitos |
-| | Muscle Car Show na Trophy Row desde as 15h | Carros de 1964 em diante |
-| **18h30** | **Jantar no Old Town** | *Flippers Pizzeria*, *Hamburger Mary's*, *A&W* (root beer float) |
-| **20h30** | **Friday Night Cruise** | Peguem lugar na calçada 20 min antes |
-| **22h00** | Voltar | |
+| **8h00** | **Manhã livre** — sem alarme | Café no quarto |
+| **10h00** | **Lavanderia** — segunda rodada | Roupa dos dias 15 a 20. Sabão e moedas da lista do Walmart |
+| **12h30** | Almoço sem compromisso | Comida do quarto, ou o Old Town a três minutos |
+| **15h00** | **Retirar o carro — Avis do Old Town** | Suíte 434, das 7h às 19h. **Recusem o e-Toll Unlimited** |
+| **15h30** | **VAZIO PROPOSITAL** — descanso no hotel | |
+| **17h20** | **Old Town Kissimmee** — 5770 W Irlo Bronson Memorial Hwy | Muscle cars expostos desde as 15h. Pôr do sol por volta das 17h30 |
+| **18h30** | **Jantar — Sakeba Asian Pub & Grill** | Sushi e grelhados asiáticos, mesa com garçom |
+| **20h10** | Lugar na calçada | |
+| **20h30** | **Muscle Car Cruise** | Grátis, toda sexta |
+| **21h15** | Voltar | Três minutos. Amanhã a saída é 7h45 |
 
-**Alternativa se o aerobarco não empolgar:** *Fun Spot America* fica a 10 min, tem duas montanhas-russas de madeira e kart de vários andares. Cobra por atração, sem ingresso obrigatório.
+**O carro:** a Avis fica dentro do Old Town e conta o aluguel em períodos de 24 horas — retirando às 15h de hoje e devolvendo às 15h do dia 25, são cinco diárias certas. **Pedágio:** o e-Toll Unlimited cobra de US$ 11 a 26 por dia de aluguel, com ou sem pedágio; sem ele, paga-se cada pedágio pela placa, mais US$ 6,95 só nos dias em que houve pedágio.
+
+**O desfile:** o de sexta é o dos muscle cars (1964 em diante). No sábado há outro, dos clássicos anteriores a 1985, também às 20h30 — mas no sábado vocês estão no hóquei.
+
+**Rede de segurança do Epic:** se o dia 19 der muito errado, esta manhã é o lugar mais barato para usar o segundo dia do ingresso — se o ingresso permitir.
+
+**Descartado:** o aerobarco do Boggy Creek — US$ 108 a 122 no casal, 38 minutos de estrada, e novembro é a pior época para ver bicho de manhã.
 
 ---
 
@@ -253,7 +257,7 @@ Thanksgiving. Um dos dias mais tranquilos do ano para voar — o caos é na ter�
 | 12/11 | outlet, noite vazia após o cancelamento da festa | outlet na I-Drive + ICON Park à noite |
 | 14/11 | Celebration + CityWalk | manhã livre proposital + Celebration + CityWalk + Islands |
 | 18/11 | compras + NBA | compras + barco-cisne no Lake Eola ao pôr do sol + jantar no Kres + NBA |
-| 20/11 | Old Town à tarde | aerobarco pela manhã + lago + carro + Old Town |
+| 20/11 | Old Town à tarde | manhã livre + lavanderia + carro + muscle cars no Old Town |
 | 21/11 | Winter Garden, tarde vazia | Winter Garden + Solar Bears no Kia Center à noite |
 
-**Custos novos a somar no orçamento:** aerobarco (~US$ 32/pessoa), atrações do ICON Park (combo de duas a partir de US$ 39/pessoa), aluguel de bicicleta em Winter Garden (opcional). Lake Eola, Kissimmee Lakefront e Old Town são gratuitos, e o Christmas Tree Stroll também será, no dia em que a segunda ida ao Disney Springs for remarcada.
+**Custos novos a somar no orçamento:** atrações do ICON Park (combo de duas a partir de US$ 39/pessoa), aluguel de bicicleta em Winter Garden (opcional). Lake Eola, Old Town e o Christmas Tree Stroll do dia 25 são gratuitos.
