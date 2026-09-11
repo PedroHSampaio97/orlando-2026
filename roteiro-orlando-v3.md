@@ -552,29 +552,42 @@ Grinchmas (visto no dia 14), Flight of the Hippogriff (34 min de fila para um mi
 
 # 🎢 24/11 (terça) — BUSCH GARDENS TAMPA
 
-O melhor conjunto de montanhas-russas da Flórida. **Só de carro.** 1h30 de cada lado.
+Só de carro, 1h25 de cada lado. Cinco montanhas-russas e a torre de queda até o meio da tarde, o trem pela planície dos animais e o Natal à noite, com mais duas voltas no escuro antes da estrada. O dia mais pesado fisicamente da viagem.
 
-| Hora | O quê |
-|---|---|
-| **7h00** | Sair. I-4 sentido oeste antes das 8h |
-| **9h30** | Chegada |
-| **10h00** | **Iron Gwazi** — híbrida, queda de 91°. Uma das melhores do mundo |
-| **10h45** | **SheiKra** — queda vertical de 60 m, com pausa na beirada |
-| **11h25** | **Montu** — invertida, clássica dos anos 90 |
-| **12h05** | **Kumba** — 7 inversões, a mais barulhenta |
-| **12h45** | **Almoço — Zambia Smokehouse** — plano de refeição incluso |
-| **13h45** | **Cheetah Hunt** — três lançamentos, percurso longo |
-| **14h25** | **Tigris** — lançamento para frente e para trás |
-| **15h05** | **Phoenix Rising** — a mais nova do parque |
-| **15h40** | **Falcon's Fury** — queda livre de 100 m, virado de cara para baixo |
-| **16h15** | **Serengeti Plain** — girafas, rinocerontes, zebras. Safári de verdade |
-| **17h15** | **Christmas Town** — parque iluminado, shows natalinos |
-| **20h30** | Sair |
+| Hora | O quê | Onde |
+|---|---|---|
+| **7h00** | Café da manhã do hotel | |
+| **7h30** | Estrada para Tampa — 1h25, 109 km. Estacionamento US$ 32 + imposto | |
+| **9h15** | Portão — 45 min antes | |
+| **10h00** | **Iron Gwazi** — rope drop. 63 m, queda de 91°, 122 km/h | Morocco |
+| **10h45** | **Cheetah Hunt** — a maior fila média do parque | Edge of Africa |
+| **11h35** | **Montu** — invertida, sete inversões | Egypt |
+| **12h20** | **Falcon's Fury** — torre de 102 m, cai olhando o chão | Pantopia |
+| **12h45** | **SheiKra** — para na beirada e cai a 90° | Stanleyville |
+| **13h20** | **Almoço — Zambia Smokehouse** — plano de refeição | Stanleyville |
+| **14h20** | **Tigris** — três lançamentos, 100 km/h | Stanleyville |
+| **14h55** | Serengeti Express — o trem pela planície dos animais | Stanleyville |
+| **15h40** | Pausa e lanche — plano de refeição | Stanleyville |
+| **16h20** | **Christmas on Ice** — horário a confirmar | Morocco |
+| **17h20** | **Jantar — Dragon Fire Grill & Pub** — mesa com garçom, plano de refeição | Pantopia |
+| **18h25** | **Show de luzes no Serengeti** e o parque aceso | Pantopia |
+| **19h10** | **Cheetah Hunt à noite** | Edge of Africa |
+| **19h55** | Iron Gwazi à noite — opcional | Morocco |
+| **20h30** | Estrada de volta — hotel por volta das 22h15 | |
+
+**As filas são curtas:** a média de 2026 vai de 33 minutos no Cheetah Hunt a 10 na SheiKra. Sem Quick Queue.
+
+**Nada solto:** nove atrações proíbem objeto solto, e o armário avulso custa US$ 4 pelas primeiras duas horas. Levem o mínimo; o resto fica no carro.
+
+**Horário:** o de 24/11 ainda não saiu. A referência é 10h. No Natal de 2025 o parque ia até 22h na maioria dos dias, com alguns dias de semana fechando às 20h — nesse caso, a Iron Gwazi noturna sai.
+
+**Christmas Town:** datas selecionadas de 13/11 a 04/01. Se 24/11 não estiver na lista, saem o show no gelo e as luzes, e a estrada de volta sobe para 19h30.
 
 ### Renúncias
-Scorpion, Sand Serpent, Congo River Rapids e Stanley Falls (molham, e vocês têm 1h30 de carro na volta).
+Cobra's Curse e Phoenix Rising (montanhas-russas de família), Serengeti Flyer, Congo River Rapids (molha), Serengeti Safari (pago à parte; o trem atravessa a mesma planície) e as áreas infantis.
 
-**Opcional pago:** o *Serengeti Safari*, tour de caminhão que permite alimentar girafas. Vale se sobrar orçamento.
+### Fechados
+Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (2025), Scorpion (2024) e Sand Serpent (2023, virou a Phoenix Rising).
 
 ---
 

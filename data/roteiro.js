@@ -6142,7 +6142,7 @@ window.ROTEIRO = {
         descricao: 'Uns 20 min a pé até o carro. Hotel por volta das 21h30',
         contexto:
           'A volta até o estacionamento é o mesmo caminho da manhã, pelo CityWalk.\n\n' +
-          'AMANHÃ É BUSCH GARDENS, EM TAMPA: saída às 7h, alarme às 6h. Deixem a mochila ' +
+          'AMANHÃ É BUSCH GARDENS, EM TAMPA: estrada às 7h30, alarme às 6h30. Deixem a mochila ' +
           'pronta antes de dormir.',
         acesso: [], duracaoMin: 60 },
     ],
@@ -6161,12 +6161,13 @@ window.ROTEIRO = {
     ],
     prepararAmanha: {
       paraODia: '2026-11-24',
-      titulo: 'Busch Gardens Tampa · saída 7h',
-      aviso: 'Amanhã é o dia mais pesado fisicamente da viagem, com 1h30 de estrada para cada ' +
+      titulo: 'Busch Gardens Tampa · saída 7h30',
+      aviso: 'Amanhã é o dia mais pesado fisicamente da viagem, com 1h25 de estrada para cada ' +
              'lado. Vocês chegam do Islands por volta das 21h30: durmam cedo.',
       itens: [
-        { texto: 'Alarme para 6h nos dois celulares', critico: true,
-          motivo: 'Saída às 7h, antes do rush da I-4 sentido Tampa.' },
+        { texto: 'Alarme para 6h30 nos dois celulares', critico: true,
+          motivo: 'Café do hotel às 7h e estrada às 7h30, para chegar ao portão 45 minutos ' +
+                  'antes da abertura.' },
         { texto: 'Conferir o horário de abertura do Busch Gardens', critico: true,
           motivo: 'Amanhã assume abertura às 10h, ainda sem confirmação. Se for outro horário, ' +
                   'a saída muda junto.' },
@@ -6217,152 +6218,340 @@ window.ROTEIRO = {
     operadora: 'busch',
     parqueId: 'busch-gardens',
     custoZero: false,
-    // ATENÇÃO: referência 10h, não 9h. Ver nota abaixo.
+    fechado: true,
+    revisadoEm: '2026-09-11',
     referencia: { rotulo: 'Abertura do parque', padrao: '10:00', confirmado: false },
     resumo:
-      'Só de carro, 1h30 de cada lado. Oito montanhas-russas na sequência, safári de verdade ' +
-      'à tarde e o parque iluminado à noite. O dia mais pesado fisicamente da viagem.',
+      'Só de carro, 1h25 de cada lado. Cinco montanhas-russas e a torre de queda até o meio ' +
+      'da tarde, o trem pela planície dos animais e o Natal à noite, com mais duas voltas no ' +
+      'escuro antes da estrada. O dia mais pesado fisicamente da viagem.',
     avisos: [
-      'Plano de refeição incluso — o mesmo do SeaWorld, do Promo Park.',
+      'OBJETO SOLTO É PROIBIDO EM NOVE ATRAÇÕES, entre elas todas as montanhas-russas do dia. ' +
+      'O armário avulso custa US$ 4 pelas primeiras duas horas. Levem o mínimo: o resto fica ' +
+      'no carro.',
+      'Vocês chegam ao hotel por volta das 22h15, e amanhã o carro volta à Avis às 15h.',
     ],
     notas: [
       { tipo: 'atencao', texto:
-        'O BUSCH GARDENS ABRE ÀS 10H em novembro, não às 9h. A referência do dia já está em ' +
-        '10h, o que deixa a chegada das 9h30 apenas 30 minutos antes. Como vocês querem ' +
-        'entrar sempre na abertura, considerem antecipar a chegada para 9h15 e a saída do ' +
-        'hotel para 6h45.',
-        pesquisa: '2026-09-08', verificado: false },
-      { tipo: 'atencao', texto:
-        'O Christmas Town roda em DATAS SELECIONADAS entre 13/11 e 04/01. 24/11 é terça, na ' +
-        'semana de Ação de Graças — provável que esteja aberto, mas confirmem: o bloco das ' +
-        '17h15 e a saída às 20h30 dependem disso.', pesquisa: '2026-09-08' },
+        'O HORÁRIO DE 24/11 AINDA NÃO SAIU. A referência está em 10h, a abertura de novembro. ' +
+        'No Natal de 2025 o parque ficou aberto das 10h às 22h na maioria dos dias, com alguns ' +
+        'dias de semana fechando às 20h — e 24/11 é uma terça. Se fechar às 20h, vale o plano ' +
+        'B2.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'CHRISTMAS TOWN: datas selecionadas de 13/11/2026 a 04/01/2027, incluso no ingresso. ' +
+        'Em 2025 teve Christmas on Ice no Moroccan Palace, show de luzes no Serengeti e um show ' +
+        'de drones, o Holiday Skies Spectacular. Os horários do dia só saem perto da data, e a ' +
+        'confirmação de que 24/11 está na lista está no checklist.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'AS FILAS DO BUSCH SÃO CURTAS. A média de 2026 vai de 33 minutos no Cheetah Hunt a 10 ' +
+        'na SheiKra — por isso não há Quick Queue. A previsão de lotação para 24/11 é de 66%, ' +
+        'alta para uma terça, por ser semana de Thanksgiving.\n\n' +
+        'O QUE FECHOU: o Kumba parou em 02/08/2026, e o Kumba’s Revenge, que vai no lugar, não ' +
+        'tem data. A Stanley Falls fechou em setembro de 2025 e a Scorpion em 2024.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'O PLANO DE REFEIÇÃO é o mesmo do SeaWorld: uma refeição a cada 90 minutos — prato, ' +
+        'acompanhamento ou sobremesa e refrigerante. Vale no Zagora Café, Zambia Smokehouse, ' +
+        'Dragon Fire Grill & Pub, Oasis Pizza, BG Cuban Café, SheiKra Eats, Tot Topia e ' +
+        'Twisted Tails Pretzels.\n\n' +
+        'ESTACIONAMENTO: US$ 32 mais imposto, do outro lado da McKinley Drive. Até o portão são ' +
+        'uns 800 metros, 10 a 15 minutos a pé pelo túnel; o bondinho grátis pode não rodar em ' +
+        'dia de semana.',
+        pesquisa: '2026-09-11' },
+    ],
+    planos: [
+      { letra: 'A', titulo: 'O dia como está escrito',
+        gatilho: 'O parque abre às 10h, fecha depois das 20h30 e 24/11 tem Christmas Town.',
+        passos: [
+          'Café do hotel às 7h, estrada às 7h30 e portão às 9h15.',
+          'Iron Gwazi, Cheetah Hunt e Montu de manhã; Falcon’s Fury e SheiKra antes do almoço.',
+          'Almoço no Zambia Smokehouse, Tigris, o trem pelo Serengeti e um lanche.',
+          'Christmas on Ice, jantar no Dragon Fire e o show de luzes no Serengeti.',
+          'Cheetah Hunt e Iron Gwazi à noite, e estrada às 20h30.',
+        ] },
+      { letra: 'B', titulo: '24/11 não tem Christmas Town',
+        gatilho: 'O calendário oficial não inclui 24/11.',
+        passos: [
+          'O show no gelo e as luzes saem. O jantar no Dragon Fire fica.',
+          'Façam o Cheetah Hunt e a Iron Gwazi logo depois do jantar e peguem a estrada por ' +
+          'volta das 19h30.',
+        ] },
+      { letra: 'B2', titulo: 'O parque fecha às 20h',
+        gatilho: 'O horário oficial sai com fechamento às 20h.',
+        passos: [
+          'A Iron Gwazi noturna sai.',
+          'O Cheetah Hunt às 19h10 continua: entrem na fila antes do fechamento.',
+        ] },
+      { letra: 'C', titulo: 'Tempestade com raio',
+        gatilho: 'As montanhas-russas param por causa de raio.',
+        passos: [
+          'Enquanto estiverem paradas, fiquem no coberto: o Moroccan Palace, do show no gelo, e ' +
+          'os restaurantes.',
+        ] },
+      { letra: 'C2', titulo: 'Cansaço',
+        gatilho: 'O corpo pediu para ir embora mais cedo.',
+        passos: [
+          'As duas voltas noturnas caem primeiro. Estrada logo depois do jantar.',
+          'São 1h25 de volta: quem dirige precisa estar inteiro.',
+        ] },
     ],
     blocos: [
-      { id: 'b-2411-0700', hora: '07:00', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Sair',
-        descricao: 'I-4 sentido oeste antes das 8h',
+      { id: 'b-2411-0700', hora: '07:00', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Café da manhã do hotel',
+        descricao: 'Rápido: a estrada é às 7h30',
         contexto:
-          'A dica de sair antes das 8h é sobre o rush de Orlando na I-4, que é notoriamente ' +
-          'congestionada. Depois das 8h, 1h30 vira facilmente 2h15.',
-        localId: 'busch-gardens', acesso: [] },
+          'O café do hotel abre às 7h, segundo os sites de reserva, e dá tempo de comer antes ' +
+          'de uma estrada de 1h25. Se ainda estiver fechado, as barrinhas da lista do Walmart ' +
+          'seguram até o parque.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 25 },
 
-      { id: 'b-2411-0930', hora: '09:30', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Chegada', descricao: '', localId: 'busch-gardens', acesso: [] },
+      { id: 'b-2411-0730', hora: '07:30', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Estrada para Tampa',
+        descricao: '1h25, 109 km pela I-4. Estacionamento US$ 32 + imposto',
+        contexto:
+          'São 109 km até o Busch Gardens, 1h25 sem trânsito. O bloco tem 1h45 porque inclui ' +
+          'estacionar e chegar ao portão.\n\n' +
+          'O ESTACIONAMENTO fica do outro lado da McKinley Drive, a uns 800 metros do portão: ' +
+          '10 a 15 minutos a pé, pelo túnel. O bondinho grátis pode não rodar em dia de semana. ' +
+          'Custa US$ 32 mais imposto.',
+        localId: 'busch-gardens', acesso: [], duracaoMin: 105, pesquisa: '2026-09-11' },
+
+      { id: 'b-2411-0915', hora: '09:15', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Portão',
+        descricao: '45 min antes. A Iron Gwazi fica logo depois da entrada',
+        contexto:
+          'A entrada é pelo Morocco, e a Iron Gwazi fica a poucos passos. Detector de metal na ' +
+          'entrada.\n\n' +
+          'MOCHILA MÍNIMA: objeto solto é proibido nas montanhas-russas, e cada armário avulso ' +
+          'custa US$ 4 pelas primeiras duas horas.',
+        localId: 'busch-gardens', acesso: [], duracaoMin: 45, pesquisa: '2026-09-11' },
 
       { id: 'b-2411-1000', hora: '10:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Iron Gwazi',
-        descricao: 'Híbrida, queda de 91°. Uma das melhores do mundo',
+        descricao: 'Rope drop. Híbrida de 63 m, queda de 91°, 122 km/h',
         contexto:
-          'Estrutura de madeira com trilho de aço, queda de 91° — mais que vertical — e três ' +
-          'inversões. Aparece consistentemente no topo das listas mundiais. É a mais intensa ' +
-          'do dia e por isso está primeiro.',
-        acesso: ['rope-drop', 'standby'] },
+          'Montanha-russa híbrida — estrutura de madeira com trilho de aço — com 63 metros, ' +
+          'queda de 91°, mais que vertical, 122 km/h e duas inversões. É a híbrida mais alta da ' +
+          'América do Norte.\n\n' +
+          'POR QUE PRIMEIRO: fica na entrada e é a que mais disputa o rope drop. A fila média de ' +
+          '2026 é de 23 minutos, com pico de 46.\n\n' +
+          'Nada solto: armário obrigatório.',
+        areaParque: 'Morocco', acesso: ['rope-drop', 'standby'], duracaoMin: 40,
+        pesquisa: '2026-09-11' },
 
       { id: 'b-2411-1045', hora: '10:45', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'SheiKra',
-        descricao: 'Queda vertical de 60 m, com pausa na beirada',
-        contexto:
-          'Dive coaster: o trem para na beirada por três segundos, pendurado a 60 metros, e ' +
-          'depois cai na vertical. A pausa é a parte que assusta.',
-        acesso: ['standby'] },
-
-      { id: 'b-2411-1125', hora: '11:25', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Montu',
-        descricao: 'Invertida, clássica dos anos 90',
-        contexto:
-          'Invertida com pés soltos, sete inversões. De 1996 e ainda considerada uma das ' +
-          'melhores invertidas já construídas.',
-        acesso: ['standby'] },
-
-      { id: 'b-2411-1205', hora: '12:05', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Kumba',
-        descricao: '7 inversões, a mais barulhenta',
-        contexto:
-          'Clássica de 1993, com um loop que passa em volta do próprio trilho. O barulho é ' +
-          'marca registrada — dá para ouvir do outro lado do parque.',
-        acesso: ['standby'] },
-
-      { id: 'b-2411-1245', hora: '12:45', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Almoço — Zambia Smokehouse',
-        descricao: 'Plano de refeição incluso',
-        contexto:
-          'Barbecue de balcão com vista para o Sheikra. Costelinha e frango defumado. É o ' +
-          'melhor do parque e está coberto pelo plano.',
-        restauranteId: 'r-zambia', acesso: [] },
-
-      { id: 'b-2411-1345', hora: '13:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Cheetah Hunt',
-        descricao: 'Três lançamentos, percurso longo',
+        descricao: 'Três lançamentos e 1,3 km de percurso. A maior fila média do parque',
         contexto:
-          'Percurso muito longo que sai do parque e volta, rente ao chão, com três lançamentos. ' +
-          'Não é assustadora — é a mais "passeio" das grandes daqui.',
-        acesso: ['standby'] },
+          'Três lançamentos seguidos, até 97 km/h, num percurso de 1,3 km com uma inversão.\n\n' +
+          'É a maior fila média do Busch em 2026: 33 minutos, com pico de 56. Por isso vem logo ' +
+          'depois da Iron Gwazi, a dois minutos a pé.\n\n' +
+          'Nada solto: armário obrigatório.',
+        areaParque: 'Edge of Africa', acesso: ['standby'], duracaoMin: 45, pesquisa: '2026-09-11' },
 
-      { id: 'b-2411-1425', hora: '14:25', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Tigris',
-        descricao: 'Lançamento para frente e para trás',
-        contexto: 'Coaster de lançamento triplo, curta e intensa, com uma queda invertida.',
-        acesso: ['standby'] },
-
-      { id: 'b-2411-1505', hora: '15:05', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Phoenix Rising',
-        descricao: 'A mais nova do parque',
+      { id: 'b-2411-1135', hora: '11:35', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Montu',
+        descricao: 'Invertida, pés soltos, sete inversões. Clássica de 1996',
         contexto:
-          'Coaster familiar suspensa, aberta recentemente. Menos intensa que as clássicas, boa ' +
-          'para descansar entre as pesadas.',
-        acesso: ['standby'] },
+          'Montanha-russa invertida: vocês vão pendurados, com os pés soltos. 46 metros, 97 km/h ' +
+          'e sete inversões em uns três minutos. Quando abriu, em 1996, era a invertida mais alta ' +
+          'e rápida do mundo.\n\n' +
+          'Fila média de 12 minutos. Nada solto: armário obrigatório.',
+        areaParque: 'Egypt', acesso: ['standby'], duracaoMin: 30, pesquisa: '2026-09-11' },
 
-      { id: 'b-2411-1540', hora: '15:40', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2411-1220', hora: '12:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Falcon’s Fury',
-        descricao: 'Queda livre de 100 m, virado de cara para baixo',
+        descricao: 'Torre de 102 m. No topo, o assento inclina e vocês caem olhando o chão',
         contexto:
-          'Torre de queda que, no topo, inclina os assentos 90° para frente — vocês caem ' +
-          'olhando direto para o chão. É a queda mais assustadora da Flórida.',
-        acesso: ['standby'] },
+          'Torre de queda de 102 metros. No topo, os assentos inclinam 90° para a frente e vocês ' +
+          'caem de cara para o chão — cerca de cinco segundos de queda livre, a 97 km/h.\n\n' +
+          'São onze minutos a pé do Montu, passando pela Nairobi. Fila média de 7 minutos. Nada ' +
+          'solto: armário obrigatório.',
+        areaParque: 'Pantopia', acesso: ['standby'], duracaoMin: 20, pesquisa: '2026-09-11' },
 
-      { id: 'b-2411-1615', hora: '16:15', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Serengeti Plain',
-        descricao: 'Girafas, rinocerontes, zebras. Safári de verdade',
+      { id: 'b-2411-1245', hora: '12:45', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'SheiKra',
+        descricao: 'Para quatro segundos na beirada e cai a 90°',
         contexto:
-          'Planície de 26 hectares com animais soltos, atravessada por trem ou teleférico. ' +
-          'Diferente do Kilimanjaro da Disney, aqui o cenário é mais simples e os animais mais ' +
-          'próximos.',
-        acesso: [] },
+          'Dive coaster: o trem para na beirada, pendurado a 61 metros, por uns quatro segundos, ' +
+          'e cai na vertical. Depois vêm um loop, uma segunda queda a 90° para dentro de um túnel ' +
+          'e uma passagem rente à água que levanta um paredão de spray.\n\n' +
+          'Fila média de 10 minutos. Nada solto: armário obrigatório.',
+        areaParque: 'Stanleyville', acesso: ['standby'], duracaoMin: 30, pesquisa: '2026-09-11' },
 
-      { id: 'b-2411-1715', hora: '17:15', ancora: 'fixo', tipo: 'show',
-        titulo: 'Christmas Town',
-        descricao: 'Parque iluminado, shows natalinos',
+      { id: 'b-2411-1320', hora: '13:20', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Almoço — Zambia Smokehouse',
+        descricao: 'Churrasco, ao lado do SheiKra. Plano de refeição',
         contexto:
-          'O parque inteiro se transforma com milhões de luzes, shows e vilarejo do Papai Noel. ' +
-          'Roda em datas selecionadas — confirmem que 24/11 está incluído.',
-        acesso: [], confirmarHorario: true },
+          'Churrasco com a grelha à vista: costela, brisket e frango defumado. Fica em ' +
+          'Stanleyville, ao lado do SheiKra.\n\n' +
+          'PLANO DE REFEIÇÃO: um prato, um acompanhamento ou sobremesa e um refrigerante. A ' +
+          'próxima refeição do plano só libera 90 minutos depois.',
+        restauranteId: 'r-zambia', areaParque: 'Stanleyville', acesso: [], duracaoMin: 55,
+        pesquisa: '2026-09-11' },
+
+      { id: 'b-2411-1420', hora: '14:20', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Tigris',
+        descricao: 'Três lançamentos, para frente e para trás, até 100 km/h',
+        contexto:
+          'Montanha-russa de lançamento que vai e volta: três lançamentos, 46 metros e 100 km/h, ' +
+          'com um giro de cabeça para baixo. Curta e intensa.\n\n' +
+          'Fila média de 18 minutos. Nada solto: armário obrigatório.',
+        areaParque: 'Stanleyville', acesso: ['standby'], duracaoMin: 30, pesquisa: '2026-09-11' },
+
+      { id: 'b-2411-1455', hora: '14:55', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Serengeti Express',
+        descricao: 'O trem dá a volta de 3,5 km pela planície dos animais',
+        contexto:
+          'Trem que dá a volta pelo parque e atravessa a planície do Serengeti, com girafas, ' +
+          'zebras, antílopes e avestruzes soltos. Estações em Stanleyville, Congo e Nairobi.\n\n' +
+          'É a parte dos animais do dia, sentados — e a pausa das pernas antes da noite. A ' +
+          'duração da volta não é publicada: o bloco assume uns 40 minutos com a espera.',
+        areaParque: 'Stanleyville', acesso: ['standby'], duracaoMin: 40, pesquisa: '2026-09-11' },
+
+      { id: 'b-2411-1540', hora: '15:40', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Pausa e lanche',
+        descricao: 'Segunda refeição do plano, em Stanleyville',
+        contexto:
+          'Os 90 minutos do almoço já passaram: o lanche entra no plano. O SheiKra Eats e o ' +
+          'Zambia ficam aqui.\n\n' +
+          'É a última parada antes da noite, que termina com a estrada de volta.',
+        areaParque: 'Stanleyville', acesso: [], duracaoMin: 25, pesquisa: '2026-09-11' },
+
+      { id: 'b-2411-1620', hora: '16:20', ancora: 'fixo', tipo: 'show',
+        titulo: 'Christmas on Ice',
+        descricao: 'Show de patinação de 30 min no Moroccan Palace. Cheguem cedo',
+        contexto:
+          'Patinação no gelo com músicas de Natal, no teatro do Morocco, perto da entrada. ' +
+          'Cerca de 30 minutos.\n\n' +
+          'HORÁRIO A CONFIRMAR: em 2025 havia várias sessões por dia, a primeira por volta das ' +
+          '14h. O teatro enche, e a recomendação é chegar bem antes — o bloco reserva 45 minutos ' +
+          'por isso.\n\n' +
+          'De Stanleyville até aqui são 14 minutos a pé, passando pela Sesame Street e pela Bird ' +
+          'Gardens.',
+        areaParque: 'Morocco', acesso: [], confirmarHorario: true, duracaoMin: 45,
+        pesquisa: '2026-09-11' },
+
+      { id: 'b-2411-1720', hora: '17:20', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Jantar — Dragon Fire Grill & Pub',
+        descricao: 'Mesa com garçom, e dentro do plano de refeição',
+        contexto:
+          'Restaurante com mesa e bar, com comida de pub e cardápio variado. É o único com mesa ' +
+          'entre os do plano de refeição — a terceira refeição do dia.\n\n' +
+          'Fica em Pantopia, a nove minutos do Moroccan Palace e ao lado da planície do ' +
+          'Serengeti, onde são as luzes depois.\n\n' +
+          'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
+        restauranteId: 'r-dragonfire', areaParque: 'Pantopia', acesso: [], duracaoMin: 60,
+        pesquisa: '2026-09-11' },
+
+      { id: 'b-2411-1825', hora: '18:25', ancora: 'fixo', tipo: 'show',
+        titulo: 'Show de luzes no Serengeti e o parque aceso',
+        descricao: 'Luzes coreografadas na planície, com "Carol of the Bells"',
+        contexto:
+          'Dezenas de milhares de luzes de Natal coreografadas sobre a planície do Serengeti, ' +
+          'com uma versão de "Carol of the Bells". Estreou no Natal de 2025.\n\n' +
+          'HORÁRIO A CONFIRMAR, e o do show de drones também — o Holiday Skies Spectacular, de ' +
+          '2025, com centenas de drones. Os dois são depois que escurece, e o pôr do sol é por ' +
+          'volta das 17h30.',
+        areaParque: 'Pantopia', acesso: [], confirmarHorario: true, duracaoMin: 35,
+        pesquisa: '2026-09-11' },
+
+      { id: 'b-2411-1910', hora: '19:10', ancora: 'fixo', tipo: 'atracao',
+        titulo: 'Cheetah Hunt à noite',
+        descricao: 'A segunda volta, no escuro',
+        contexto:
+          'A mesma montanha-russa da manhã, agora no escuro — é a volta noturna mais elogiada do ' +
+          'parque. Fica perto da saída.\n\n' +
+          'Nada solto: armário obrigatório.',
+        areaParque: 'Edge of Africa', acesso: ['standby'], duracaoMin: 40, pesquisa: '2026-09-11' },
+
+      { id: 'b-2411-1955', hora: '19:55', ancora: 'fixo', tipo: 'atracao',
+        titulo: 'Iron Gwazi à noite',
+        descricao: 'Opcional. Ao lado da saída',
+        contexto:
+          'A última volta do dia, a dois minutos do Cheetah Hunt e colada na saída. Se o parque ' +
+          'fechar às 20h, ela sai — é o plano B2.',
+        areaParque: 'Morocco', acesso: ['standby'], opcional: true, duracaoMin: 30,
+        pesquisa: '2026-09-11' },
 
       { id: 'b-2411-2030', hora: '20:30', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Sair',
-        descricao: '1h30 de volta',
+        titulo: 'Estrada de volta',
+        descricao: '1h25 até o hotel. Chegada por volta das 22h15',
         contexto:
-          'Saindo às 20h30, vocês chegam ao hotel por volta das 22h. Amanhã é dia de compras ' +
-          'de manhã e Epic à tarde — dá para dormir.',
-        acesso: [] },
+          'Uns 15 minutos até o carro e 1h25 de estrada. Quem dirige precisa estar inteiro: se o ' +
+          'cansaço bater, parem.\n\n' +
+          'Chegando tarde e com fome, vale a dica "Onde comer quando a noite acaba tarde".\n\n' +
+          'AMANHÃ É O ÚLTIMO DIA INTEIRO: compras, o carro volta à Avis às 15h e a noite é no ' +
+          'Disney Springs.',
+        acesso: [], duracaoMin: 105 },
     ],
+    naoPerca: [
+      { nome: 'Show de luzes no Serengeti', quando: 'hoje', custo: 'incluso',
+        motivo: 'Luzes de Natal coreografadas sobre a planície dos animais, depois que escurece.',
+        pesquisa: '2026-09-11' },
+      { nome: 'Holiday Skies Spectacular', quando: 'hoje', condicao: 'se houver no dia',
+        custo: 'incluso',
+        motivo: 'Show de drones com músicas de Natal, que estreou no Natal de 2025.',
+        pesquisa: '2026-09-11' },
+      { nome: 'As duas voltas noturnas', quando: 'hoje', custo: 'incluso',
+        motivo: 'Cheetah Hunt e Iron Gwazi no escuro, as duas perto da saída.',
+        pesquisa: '2026-09-11' },
+    ],
+    prepararAmanha: {
+      paraODia: '2026-11-25',
+      titulo: 'Compras, devolução do carro e Disney Springs',
+      aviso: 'O último dia inteiro. O único horário que não pode falhar é a devolução do carro, ' +
+             'às 15h, na mesma Avis do Old Town.',
+      itens: [
+        { texto: 'Tanque cheio antes das 15h', critico: true,
+          motivo: 'O carro volta à Avis com o tanque cheio. A tolerância na devolução é de 29 ' +
+                  'minutos; passou disso, a Avis cobra fração de diária.' },
+        { texto: 'Malas amanhã às 14h, antes da devolução', critico: false,
+          motivo: 'O que não couber ainda dá para resolver enquanto o carro está com vocês.' },
+      ],
+    },
     ficha: {
       multiPass: null, singlePass: null, expressPass: null,
-      custoEstimadoCasal: { min: 0, max: 0, moeda: 'USD' },
+      custoEstimadoCasal: { min: 32, max: 59, moeda: 'USD' },
       extras: [
-        { nome: 'Plano de refeição', texto: 'Incluso no Promo Park.' },
-        { nome: 'Serengeti Safari (opcional pago)',
-          texto:
-            'Tour de caminhão que permite alimentar girafas. Vale se sobrar orçamento.' },
+        { nome: 'Estacionamento geral',
+          custo: { min: 32, max: 35, moeda: 'USD' },
+          texto: 'US$ 32 mais imposto, do outro lado da rua do parque.' },
+        { nome: 'Armários das montanhas-russas',
+          custo: { min: 0, max: 24, moeda: 'USD' },
+          texto: 'US$ 4 pelas primeiras duas horas, em cada atração que proíbe objeto solto. Sem ' +
+                 'bolsa, custa zero: o que não couber no bolso fica no carro.' },
+        { nome: 'Plano de refeição',
+          texto: 'Incluso no ingresso: uma refeição a cada 90 minutos. O dia usa três.' },
+        { nome: 'Quick Queue — não',
+          custo: { min: 0, max: 0, moeda: 'USD' },
+          texto: 'A maior fila média do parque em 2026 é de 33 minutos, no Cheetah Hunt.' },
       ],
     },
     renuncias: {
       gerais: [
-        { nome: 'Scorpion' }, { nome: 'Sand Serpent' },
-        { nome: 'Congo River Rapids' },
-        { nome: 'Stanley Falls',
-          motivo: 'Molham, e vocês têm 1h30 de carro na volta' },
+        { nome: 'Cobra’s Curse',
+          motivo: 'Montanha-russa giratória de família, com 30 minutos de fila média.' },
+        { nome: 'Phoenix Rising', motivo: 'Montanha-russa de família.' },
+        { nome: 'Serengeti Flyer', motivo: 'Balanço gigante. O dia já tem a Falcon’s Fury.' },
+        { nome: 'Congo River Rapids', motivo: 'Molha, e a volta é de 1h25 de carro.' },
+        { nome: 'Serengeti Safari',
+          motivo: 'Passeio pago à parte, de 30 minutos, com girafas. O trem atravessa a mesma ' +
+                  'planície.' },
+        { nome: 'Sesame Street Safari of Fun e Wild Oasis', motivo: 'Áreas infantis.' },
       ],
-      idioma: null, fechado: [],
+      idioma: null,
+      fechado: [
+        'Kumba — fechou em 02/08/2026. O Kumba’s Revenge, que vai no lugar, ainda não tem data.',
+        'Stanley Falls — fechou em 07/09/2025 e foi demolida.',
+        'Scorpion — fechou em 08/09/2024.',
+        'Sand Serpent — fechou em 2023 e deu lugar à Phoenix Rising.',
+      ],
     },
   },
 
@@ -6739,11 +6928,17 @@ window.ROTEIRO = {
       nota: 'Pub irlandês com mesa e garçom, a 11 minutos a pé do Kia Center. Noite de jogo ' +
             'no centro num sábado: reservem, e avisem na chegada que vocês têm hora.' },
 
-    { id: 'r-zambia', nome: 'Zambia Smokehouse', data: '2026-11-24', hora: '12:45',
-      refeicao: 'almoco', local: 'Busch Gardens Tampa', alternativas: [],
+    { id: 'r-zambia', nome: 'Zambia Smokehouse', data: '2026-11-24', hora: '13:20',
+      refeicao: 'almoco', local: 'Busch Gardens Tampa · Stanleyville', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: null, blocoId: 'b-2411-1245',
-      nota: 'Coberto pelo plano de refeição do Promo Park.' },
+      canal: 'Plano de refeição (All-Day Dining Deal)', blocoId: 'b-2411-1320',
+      nota: 'Churrasco: costela, brisket e frango defumado. Coberto pelo plano de refeição.' },
+
+    { id: 'r-dragonfire', nome: 'Dragon Fire Grill & Pub', data: '2026-11-24', hora: '17:20',
+      refeicao: 'jantar', local: 'Busch Gardens Tampa · Pantopia', alternativas: [],
+      precisaReserva: false, janelaAbre: null, janelaHora: null,
+      canal: 'Plano de refeição (All-Day Dining Deal)', blocoId: 'b-2411-1720',
+      nota: 'Mesa com garçom e bar, dentro do plano de refeição.' },
   ],
 
   /* ---------------------------------------------------------------------------
@@ -7295,9 +7490,9 @@ window.ROTEIRO = {
 
     { id: 'busch-gardens', nome: 'Busch Gardens Tampa Bay', tipo: 'parque',
       lat: 28.0375, lng: -82.4225, verificado: true, fonteCoord: 'wikipedia', endereco: null,
-      doHotel: { tempoMin: 90, tempoFonte: 'documento',
+      doHotel: { tempoMin: 85, tempoFonte: 'estimado',
                  uberUSD: null, uberFonte: null },
-      nota: 'Só de carro. 1h30 de cada lado. Uber não é opção viável aqui.' },
+      nota: 'Só de carro: 109 km, 1h25 sem trânsito. Estacionamento US$ 32 mais imposto.' },
 
     { id: 'premium-outlets', nome: 'Orlando International Premium Outlets', tipo: 'compras',
       lat: 28.4750673, lng: -81.4514825, verificado: true, fonteCoord: 'osm', endereco: '4951 International Dr',
@@ -7560,6 +7755,31 @@ window.ROTEIRO = {
         ['Orca Encounter', 'Sea of Power', 4],
       ],
     },
+
+    'busch-gardens': {
+      forma: 'Um anel pelo parque, com a entrada no Morocco, ao sul, e a Iron Gwazi logo ali. ' +
+             'A leste ficam Edge of Africa e Egypt, com Cheetah Hunt e Montu; no meio, Nairobi e ' +
+             'Pantopia; a oeste, Congo, Jungala e Stanleyville. A planície do Serengeti fica a ' +
+             'leste do anel, e o trem dá a volta nela.',
+      margem: 'Somem 50% em dia cheio. E ATENÇÃO: não há tempos publicados para conferir. ' +
+              'Estes saem das coordenadas do OpenStreetMap, com 30% de desvio sobre a linha ' +
+              'reta e passo de 75 metros por minuto. A volta inteira dá uns 32 minutos. O trem ' +
+              'e o teleférico cortam caminho, mas não entram no grafo.',
+      arestas: [
+        ['Morocco', 'Edge of Africa', 2],
+        ['Edge of Africa', 'Egypt', 3],
+        ['Edge of Africa', 'Nairobi', 3],
+        ['Morocco', 'Nairobi', 4],
+        ['Nairobi', 'Pantopia', 5],
+        ['Pantopia', 'Congo', 3],
+        ['Congo', 'Jungala', 2],
+        ['Jungala', 'Stanleyville', 3],
+        ['Pantopia', 'Stanleyville', 4],
+        ['Stanleyville', 'Sesame Street', 5],
+        ['Sesame Street', 'Bird Gardens', 3],
+        ['Bird Gardens', 'Morocco', 6],
+      ],
+    },
   },
 
   contatos: [
@@ -7671,7 +7891,7 @@ window.ROTEIRO = {
         'Fyre Drill (19/11) — o guia oficial diz "possivelmente encharca". Opcional, às 15h45\n' +
         '\n' +
         'Já foram cortadas do roteiro por molharem demais: Infinity Falls (SeaWorld), ' +
-        'Popeye e Dudley Do-Right (Islands), Congo River Rapids e Stanley Falls (Busch).\n\n' +
+        'Popeye e Dudley Do-Right (Islands) e Congo River Rapids (Busch).\n\n' +
         'Capa de chuva descartável custa ~US$ 1 no Walmart do dia 10 e ~US$ 10 dentro do parque.',
     },
     {
