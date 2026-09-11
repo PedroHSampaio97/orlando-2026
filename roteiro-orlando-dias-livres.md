@@ -37,7 +37,7 @@ Os blocos marcados como **VAZIO PROPOSITAL** não são falha de planejamento. Re
 
 # 🛍️ 12/11 (quinta) — Outlet e ICON Park
 
-Este dia perdeu a festa de Natal do Magic Kingdom. Reorganizei a geografia para o dia inteiro rodar no eixo da International Drive, economizando Uber.
+O dia inteiro roda no eixo da International Drive, economizando Uber.
 
 | Hora | O quê | Notas |
 |---|---|---|
@@ -45,12 +45,12 @@ Este dia perdeu a festa de Natal do Magic Kingdom. Reorganizei a geografia para 
 | **9h30** | Sair para o outlet | Uber, ~25 min, US$ 20–30. O Character Warehouse abre 10h |
 | **10h00** | **Orlando International Premium Outlets** — 4951 International Dr | ~25 min. O cupom do balcão custa US$ 10; o gratuito é o Savings Passport do Simon VIP Club, cadastrado antes de viajar |
 | | ↳ **Disney’s Character Warehouse**, dentro do mesmo outlet | Outlet oficial da Disney. Sobra de estoque e item descontinuado das lojas dos parques. Abre 10h de seg a sáb |
-| **13h00** | **Almoço no próprio outlet** | Sair da I-Drive para comer custa dois Ubers e uma hora |
-| **14h30** | **VAZIO PROPOSITAL** — voltar ao hotel, piscina, dormir | Vocês vêm de Magic Kingdom até 21h no dia anterior |
-| **17h05** | Sair para o ICON Park | Uber, ~25 min, US$ 20–30. O pôr do sol é 17h31 |
+| **13h00** | **Almoço — Ford's Garage**, dentro do outlet | Mesa com garçom. Sair da I-Drive para comer custaria dois Ubers e uma hora |
+| **14h30** | **VAZIO PROPOSITAL** — voltar ao hotel, piscina, dormir | Vocês vêm de Magic Kingdom até 22h no dia anterior |
+| **17h05** | Sair para o ICON Park | Uber, ~25 min, US$ 20–30. O pôr do sol é 17h33 |
 | **17h30** | **ICON Park** — 8375 International Dr | Entrada da área é livre; cada atração é paga |
-| **18h00** | **Museum of Illusions** — US$ 26,99 | A roda-gigante entrou em manutenção e não tem data de volta. Combo de duas atrações a partir de US$ 39/pessoa |
-| **19h15** | **Madame Tussauds** | Opcional — é ele que fecha o combo de duas atrações |
+| **18h00** | **Museum of Illusions** — US$ 26,99 online | A roda-gigante está em manutenção, sem data de volta, e os combos do ICON Park dependem dela |
+| **19h15** | **Madame Tussauds** | Opcional. A partir de US$ 29 online |
 | **20h30** | **Jantar — Yard House ou Tin Roof** | Os dois ficam **dentro** do ICON Park. São 20h30 porque o Tussauds termina 20h15 |
 | **21h30** | Voltar ao hotel | Uber, ~25 min, US$ 20–30. Amanhã sai às 6h30 |
 
@@ -62,7 +62,7 @@ Este dia perdeu a festa de Natal do Magic Kingdom. Reorganizei a geografia para 
 
 ---
 
-# 🏘️ 14/11 (sábado) — Celebration, CityWalk e Islands à noite
+# 🏘️ 14/11 (sábado) — Celebration e Islands à noite
 
 > **A neve de Celebration não acontece nas datas de vocês.** O *Now Snowing* — neve de
 > sabão na Market Street às 18h, 19h, 20h e 21h — roda de **28/11 a 31/12**, e vocês
@@ -87,7 +87,7 @@ Sábado. O objetivo do dia é ficar longe de parque cheio e chegar inteiro na se
 | **17h30** | **GRINCHMAS WHO-LIDAY SPECTACULAR** | O motivo de vocês virem hoje |
 | **18h10** | Hogsmeade decorada · cerveja amanteigada *frozen* | Carrinho externo. E é o melhor momento de compra da semana |
 | **18h40** | **The Magic of Christmas at Hogwarts Castle** | Repete a cada 20 min até fechar |
-| **19h15** | **Flight of the Hippogriff**, ou mais Hogsmeade | Opcional. Vocês repetem no dia 23 |
+| **19h15** | **Flight of the Hippogriff**, ou mais Hogsmeade | Opcional. Ele não volta em outro dia |
 | **20h00** | **Jantar — Three Broomsticks** | Dentro da Hogsmeade decorada |
 | **21h30** | Voltar ao hotel | Uber, ~30 min, US$ 28–40. Amanhã sai às 7h |
 
@@ -140,7 +140,7 @@ Se chegarem com sacola, existem os armários **Binbox**, do lado de fora, perto 
 
 ### Por que a volta ao hotel existe
 
-Millenia → Lake Eola são **8 minutos**. O hotel é a 25–30 min dos dois. A ida ao hotel custa quase uma hora de carro e duas corridas — para terminar a oito minutos de onde vocês já estavam.
+Millenia → Lake Eola são **uns 13 minutos** sem trânsito. O hotel é a 25–30 min dos dois. A ida ao hotel custa quase uma hora de carro e duas corridas — para terminar a treze minutos de onde vocês já estavam.
 
 Ela fica **pelo motivo da bolsa, não por geografia**. Se as compras couberem numa sacola só, pulem: Millenia → centro direto, e a sacola vai para um Binbox. Aí o jantar deixa de ser apertado e dá para sentar às 17h30.
 
@@ -148,11 +148,9 @@ Ela fica **pelo motivo da bolsa, não por geografia**. Se as compras couberem nu
 
 A **Macy's dá 11% para visitante estrangeiro** — passaporte no balcão de atendimento ao cliente, **antes de comprar**. Não se aplica depois da compra feita. Não confundir com o cupom do outlet do dia 12, que é o Simon VIP Club.
 
-### O jantar tem 65 minutos e é uma churrascaria
+### O jantar tem 65 minutos numa steakhouse
 
-É apertado. O Kres fica no mesmo quarteirão da arena e lida com noite de jogo toda semana — avisem na chegada que vocês têm hora. Se atrasar, comam leve e completem lá dentro. **Reservem**: é noite de NBA no centro. Está no checklist para 19/10.
-
-*O **Ace Cafe Orlando**, que estava no roteiro antigo, fechou em 2023 e o terreno virou obra. A alternativa é o **The Boheme**, no Grand Bohemian.*
+É apertado. O Kres fica a cinco minutos a pé da arena e lida com noite de jogo toda semana — avisem na chegada que vocês têm hora. Se atrasar, comam leve e completem lá dentro. **Reservem**: é noite de NBA no centro. Está nas pendências.
 
 ### O que não dá para fazer hoje
 

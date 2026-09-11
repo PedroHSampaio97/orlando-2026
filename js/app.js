@@ -904,6 +904,7 @@
       if (b.fila.pico && b.fila.pico > b.fila.min) {
         f.appendChild(el('span', 'ct-fila-pico', 'no pico, ' + b.fila.pico));
       }
+      if (b.fila.media) f.appendChild(el('span', 'ct-fila-pico', 'média ' + b.fila.media));
       if (b.fila.estimado) f.appendChild(el('span', 'ct-fila-est', 'estimado'));
       card.appendChild(f);
     }

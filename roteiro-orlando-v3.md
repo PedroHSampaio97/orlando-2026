@@ -41,9 +41,9 @@ No Islands, o Hagrid's saiu do Express em julho de 2026 — vocês pagariam e ai
 
 **Multi Pass:** lista alta → **Peter Pan's Flight** · lista baixa → **Mansão Mal-Assombrada** e **Buzz Lightyear**
 *Rolando: Space Mountain, reservado às 11h de pé na saída da Mansão.*
-**Single Pass:** **nenhum.** Os dois viraram plano B pago — ver a nota no fim desta seção.
+**Single Pass:** **nenhum.** Os dois ficam como plano B pago — ver a nota no fim desta seção.
 
-> **Atenção:** a **Tiana's Bayou Adventure estará fechada** para reforma — entrou em 02/11, com volta prevista só para dezembro. Com ela fora, o alvo da Frontierland na abertura é o **Big Thunder Mountain**.
+> **Atenção:** a **Tiana's Bayou Adventure estará fechada** para reforma — entra em 02/11, com volta prevista para dezembro. Com ela fora, o alvo da Frontierland na abertura é o **Big Thunder Mountain**.
 
 > **NÃO CORRAM PARA O TRON NA ABERTURA.** Ele não entra no Early Entry, mas os hóspedes dos hotéis Disney já estão dentro do parque há meia hora quando ele abre, e disparam para lá. Quem vem de fora chega atrás e pega **90 minutos ou mais**. A recomendação para quem está fora é começar pela **Frontierland ou Adventureland**, que ficam vazias justamente porque o Early Entry não as inclui.
 
@@ -76,16 +76,6 @@ No Islands, o Hagrid's saiu do Express em julho de 2026 — vocês pagariam e ai
 | **21h25** | TRON de novo, se tiverem pique | Opcional. É também o plano B da fila das 15h30 |
 | **22h00** | Sair — **pelo ferry**, não pelo monotrilho | |
 
-> **O Zootopia saiu.** Trinta minutos num show que a própria crítica chama de frenético e
-> esquecível, num dia em que a única montanha-russa do parque estava sendo feita uma vez
-> só. Os minutos foram para a caminhada — que agora está contada bloco a bloco — e para
-> devolver o **Expedition Everest** ao plano principal.
-
-> **O bloco das 15h45 tem dois propósitos.** Se o dia estiver no horário, é a segunda
-> volta no Everest, com a fila curta do fim de tarde. Se estiver atrasado, é a margem que
-> protege o safári do entardecer e a fila do Flight of Passage — os dois blocos
-> insubstituíveis do dia. É por isso que ele é opcional.
-
 ### Por que o dia está nesta ordem — a fila típica de cada uma
 
 | Atração | Quando vocês fazem | Fila aí | No pico |
@@ -110,7 +100,7 @@ ou com dois Single Pass.*
 
 > **As duas escolhas contraintuitivas do dia.** A primeira é começar pela Frontierland em vez de correr para o TRON — sem Early Entry, correr é chegar atrás. A segunda é assistir ao desfile na **Liberty Square**: ele começa na Frontierland, desce a Liberty Square, contorna o hub e só então vai para a Main Street. Quem vê no começo da rota assiste ao mesmo desfile e fica livre quinze minutos antes — que é exatamente o tempo de atravessar por Fantasyland e chegar ao TRON enquanto vinte mil pessoas continuam paradas na Main Street esperando ele chegar.
 
-> **Por que o dia vai até as 22h.** Os fogos são às 20h e o parque fecha às 22h. A multidão vai embora às 20h25 e sobram **duas horas de fila curta** — é nelas que cabem o Seven Dwarfs (média de 80 minutos o dia inteiro) e a segunda chance do TRON. Dá para esticar porque o dia 12 é o único da primeira semana sem alarme.
+> **Por que o dia vai até as 22h.** Os fogos são às 20h e o parque fecha às 22h. A multidão vai embora às 20h25 e sobram **duas horas de fila curta** — é nelas que cabem o Seven Dwarfs (média de 80 minutos o dia inteiro) e a segunda chance do TRON. Dá para esticar porque o dia 12 não tem alarme.
 
 > **Monotrilho na ida, ferry na volta.** Depois dos fogos e no fechamento, a fila do monotrilho passa de 20 a 30 minutos porque todo mundo vai por padrão para ela. No fechamento a Disney opera os três barcos, cada um leva centenas de pessoas de uma vez, e a fila some em bloco.
 
@@ -118,7 +108,7 @@ ou com dois Single Pass.*
 
 > **O desfile corta o parque ao meio** enquanto passa — e é por isso que a travessia das 15h12 vai por Fantasyland, por trás da rota, e nunca pelo hub.
 
-> **Single Pass como plano B, não como compra.** Os dois do Magic Kingdom saíram da lista de 08/11. O TRON tem duas janelas de graça (15h30 e 21h25) e o Seven Dwarfs tem uma (20h30). Se alguma falhar, o passe se compra **na hora, pelo app, de pé na frente da atração** — que é mais barato que comprar antes e não precisar. No pior caso, com os dois comprados, o dia sobe para uns US$ 145 no casal em vez dos US$ 40–70 do plano.
+> **Single Pass como plano B, não como compra.** Nenhum dos dois do Magic Kingdom entra na compra de 08/11. O TRON tem duas janelas de graça (15h30 e 21h25) e o Seven Dwarfs tem uma (20h30). Se alguma falhar, o passe se compra **na hora, pelo app, de pé na frente da atração** — que é mais barato que comprar antes e não precisar. No pior caso, com os dois comprados, o dia sobe para uns US$ 145 no casal em vez dos US$ 40–70 do plano.
 
 
 ### Renúncias — não vão render para vocês
@@ -133,7 +123,7 @@ Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's
 # 🦁 13/11 (sexta) — ANIMAL KINGDOM
 
 **Sem Multi Pass.** Chegando na abertura pelo lado certo, a manhã inteira sai no standby.
-**Single Pass:** **nenhum.** O Flight of Passage virou plano B pago — ver a nota no fim.
+**Single Pass:** **nenhum.** O Flight of Passage fica como plano B pago — ver a nota no fim.
 
 > **O parque estimado abre às 8h e fecha às 18h.** Em novembro o Animal Kingdom costuma operar nesse horário, e só a semana do Thanksgiving estica. Por isso a saída do hotel é **6h30**. O horário oficial sai por volta de 14/09 — confiram e ajustem a referência no app.
 
@@ -183,13 +173,15 @@ Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's
 
 ### Os três hacks do dia
 
-> **1. O safári duas vezes.** É a única atração do parque em que repetir dá conteúdo diferente. De manhã não há fila e os animais estão ativos com o frio. No fim da tarde os **leões acordam** — são noturnos e dormem o dia inteiro — e a Disney instalou iluminação no percurso para o safári rodar depois do pôr do sol. **Atenção: o safári fecha 30 a 60 minutos antes do parque.** Confiram o horário dele na parada das 15h45.
+> **1. O safári duas vezes.** É a única atração do parque em que repetir dá conteúdo diferente. De manhã não há fila e os animais estão ativos com o frio. No fim da tarde os **leões acordam** — são noturnos e dormem o dia inteiro — e a Disney instalou iluminação no percurso para o safári rodar depois do pôr do sol. **Atenção: o safári fecha 30 a 60 minutos antes do parque.** Confiram o horário dele na parada das 15h25.
 
-> **2. A fila do Flight of Passage no último minuto.** É política da Disney: quem está na fila no horário de fechamento anda, mesmo embarcando depois. A fila cai de 100–180 minutos no pico para 40–65 depois das 17h. Entrando às 17h45, vocês pagam a menor fila do dia pela melhor atração do complexo — e saem andando por uma Pandora **escura, acesa e vazia**, porque o parque já fechou e todo mundo foi embora. É isso que o plano antigo entregava em quinze minutos de meia-luz.
+> **2. A fila do Flight of Passage no último minuto.** É política da Disney: quem está na fila no horário de fechamento anda, mesmo embarcando depois. A fila cai de 100–180 minutos no pico para 40–65 depois das 17h. Entrando às 17h45, vocês pagam a menor fila do dia pela melhor atração do complexo — e saem andando por uma Pandora **escura, acesa e vazia**, porque o parque já fechou e todo mundo foi embora.
 
 > **3. O Tree of Life Awakenings entra de graça.** Projeção de animais no tronco da Árvore da Vida, a cada dez minutos depois que escurece, até o fechamento — e costuma continuar um pouco depois. Só acontece em noites de outono e inverno, e novembro está dentro. Vocês passam por baixo dela na saída, exatamente nessa janela.
 
-> **Single Pass como plano B, não como compra.** O Flight of Passage saiu da lista de 10/11. Só vale comprar se o parque fechar cedo demais para o plano caber, ou se vocês decidirem que não querem 50 minutos de fila no fim de um dia de dez horas — e a compra seria às 7h ET durante a conexão em Bogotá, o pior momento da viagem para depender de internet. O dia custa **US$ 0–40** no casal em vez dos US$ 36–40 fixos de antes.
+> **Single Pass como plano B, não como compra.** O Flight of Passage não entra em compra antecipada. Só vale comprar se o parque fechar cedo demais para o plano caber, ou se vocês decidirem que não querem 50 minutos de fila no fim de um dia de dez horas — e aí ele se compra **na hora, pelo app, dentro do parque**, se ainda houver janela de retorno. O dia custa **US$ 0–40** no casal.
+
+> **O bloco das 15h45 tem dois propósitos.** Se o dia estiver no horário, é a segunda volta no Everest, com a fila curta do fim de tarde. Se estiver atrasado, é a margem que protege o safári do entardecer e a fila do Flight of Passage — os dois blocos insubstituíveis do dia. É por isso que ele é opcional.
 
 
 ### Renúncias
@@ -204,9 +196,6 @@ Feathered Friends in Flight, Bluey's Wild World, Wildlife Express Train, Rafiki'
 O dia 14 é majoritariamente dia livre — Celebration de manhã, e a noite no Islands é
 entrada extra. Ele está descrito por inteiro em **`roteiro-orlando-dias-livres.md`**,
 com a manhã e a noite juntas.
-
-*(Estava duplicado nos dois arquivos e eles divergiram: este aqui descrevia a noite
-antiga, com jantar no Toothsome e Grinchmas às 18h45. Um dia, um lugar.)*
 
 ---
 
@@ -344,7 +333,7 @@ Journey Into Imagination, Awesome Planet, Turtle Talk with Crush, Disney & Pixar
 
 O parque de rua, não de castelo: quarteirões de Nova York e São Francisco montados como cenário de cinema, com o Beco Diagonal escondido no fundo.
 
-**Este é o único dia da viagem em que o rope drop já estava certo.** Nos cinco parques da Disney ele caía dentro da multidão do Early Entry. Aqui não cai: o Early Park Admission da Universal é só para hóspede de hotel e alterna entre o Beco Diagonal e Hogsmeade — e a maioria usa em Hogsmeade, no Islands, o que deixa a primeira hora daqui mole.
+**O rope drop no Gringotts funciona.** Nos quatro dias de Disney o Early Entry enche as atrações da abertura antes de vocês entrarem. Aqui não: o Early Park Admission da Universal é só para hóspede de hotel e alterna entre o Beco Diagonal e Hogsmeade — e a maioria usa em Hogsmeade, no Islands, o que deixa a primeira hora daqui mole.
 
 | Hora | O quê | Como |
 |---|---|---|
@@ -352,8 +341,8 @@ O parque de rua, não de castelo: quarteirões de Nova York e São Francisco mon
 | **8h30** | Portão | Meia hora antes. **Não parem na Production Central** — ela entope no rope drop |
 | **9h00** | **Escape from Gringotts** | Rope drop. Locker obrigatório |
 | **9h50** | **Transformers: The Ride 3D** | Walk-on na 1ª hora, 30 min na 2ª. A janela fecha às 11h |
-| **10h30** | **Revenge of the Mummy** | Detector de metal, nada nos bolsos |
-| **11h10** | **Despicable Me Minion Mayhem** | A 3ª maior fila do parque — estava faltando no roteiro |
+| **10h30** | **Revenge of the Mummy** | Locker obrigatório, sem detector de metal |
+| **11h10** | **Despicable Me Minion Mayhem** | A 3ª maior fila do parque |
 | **11h45** | **Villain-Con Minion Blast** | Mesma land, sem caminhada |
 | **12h25** | **Beco Diagonal** | Ollivanders, o dragão do Gringotts, Knockturn Alley |
 | **13h15** | **Almoço — Leaky Cauldron** | Balcão. Mobile order pelo app da Universal |
@@ -388,7 +377,7 @@ A temporada de Natal da Universal vai de **14/11 a 03/01**. Vocês pegaram a pri
 
 Nenhuma delas é escolha de vocês:
 
-- **Hollywood Rip Ride Rockit** — fechou em 2025 para dar lugar ao *Fast & Furious: Hollywood Drift*. **Cuidado com a notícia:** o Hollywood Drift abriu em 16/09/2026 na **Califórnia**; a versão da Flórida só chega em **2027**. Nada ocupa o lugar dele.
+- **Hollywood Rip Ride Rockit** — fechou em 2025 para dar lugar ao *Fast & Furious: Hollywood Drift*. **Cuidado com a notícia:** o Hollywood Drift abre em 16/09/2026 na **Califórnia**; a versão da Flórida só chega em **2027**. Nada ocupa o lugar dele.
 - **Fast & Furious: Supercharged** — fechou em **17/08/2026**. Com ele foi a única atração da San Francisco, que virou área de passagem.
 - **Woody Woodpecker's Nuthouse Coaster** — fechou em 16/01/2023 com o resto da KidZone, que virou DreamWorks Land.
 
@@ -400,7 +389,7 @@ Race Through New York (Jimmy Fallon), Kang & Kodos, DreamWorks Land (infantil), 
 
 ### Lockers
 
-Três atrações de hoje exigem guardar tudo: **Gringotts, Mummy e Men in Black**. O Mummy tem **detector de metal** — nem chave nem celular no bolso. O locker padrão é grátis pelo tempo da fila mais a atração; cada uso come 10 a 15 minutos que a duração dos blocos não conta.
+Três atrações de hoje exigem guardar tudo: **Gringotts, Mummy e Men in Black**. Nenhuma tem detector de metal — ele só existe no Hulk, no VelociCoaster e no Stardust Racers. O locker padrão é grátis pelo tempo da fila mais a atração, e o grande é pago, de US$ 3 a 6 conforme a fonte; cada uso come 10 a 15 minutos que a duração dos blocos não conta.
 
 ---
 
@@ -429,7 +418,7 @@ O parque mais concorrido de Orlando, **no dia mais vazio da segunda metade da vi
 | **20h00** | **Mine-Cart Madness** | Na última hora cai para 20–30 min. Quem está na fila no fechamento anda |
 | **21h00** | Sair — Uber | Pelo Celestial Park iluminado |
 
-### O rope drop mudou de lugar
+### O rope drop é na Dark Universe
 
 Durante o **Early Park Admission** o Celestial Park fica aberto para todo mundo, e a checagem de hóspede de hotel é feita **na porta de cada land**. Desde fevereiro de 2026 (conferido de novo em 16/06/2026) participam **Ministry of Magic, Super Nintendo World e Isle of Berk** — a Dark Universe saiu.
 
@@ -450,9 +439,9 @@ Ou seja: às 9h os hóspedes de hotel já estão há uma hora no Battle at the M
 
 É isso que obriga o **jantar às 17h**: as três últimas horas são das duas maiores filas. O Atlantic está **reservado** para as 17h, duas pessoas. A Universal pede chegada 5 minutos antes e **segura a mesa só por 15 minutos** — a pausa das 16h15 termina às 16h55 no próprio Celestial Park, exatamente a folga pedida. Remarcar ou cancelar: app da Universal ou **+1 407-224-3663**. Se perderem a mesa, o **Mead Hall** (Isle of Berk) não aceita reserva e entra no lugar.
 
-### O que o guia oficial da Universal corrige
+### O guia oficial da Universal
 
-Locker obrigatório só em **três**: Stardust Racers, Monsters Unchained e Hiccup's. Detector de metal só no **Stardust**. Curse, Hiccup's e Mine-Cart são montanhas-russas de alta velocidade, não "familiares". O Stardust tem uns **40 m** (133 pés) — o roteiro antigo dizia 133 metros. E o Monsters Unchained é uma das **menores** filas do parque, não uma das maiores.
+Locker obrigatório só em **três**: Stardust Racers, Monsters Unchained e Hiccup's. Detector de metal só no **Stardust**. Curse, Hiccup's e Mine-Cart são montanhas-russas de alta velocidade. O Stardust tem uns **40 m** (133 pés). E o Monsters Unchained é uma das **menores** filas do parque.
 
 ### Natal no Epic
 
@@ -461,7 +450,7 @@ A Super Nintendo World ganha decoração **pela primeira vez**, Berk faz o **Sno
 ### Planos
 
 - **B — a Dark Universe voltou para o EPA.** Battle at the Ministry às 9h; Monsters e Curse às 18h20.
-- **B2 — o parque não fecha às 21h.** Ministry, Mine-Cart e saída acompanham o fechamento. O jantar fica.
+- **B2 — o parque não fecha às 21h.** Ministry, Mine-Cart e saída acompanham o fechamento. Às 22h, o jantar das 17h fica; às 20h, o Ministry sobe para 17h20 e o Atlantic é remarcado para perto das 15h45.
 - **C — Mine-Cart parado às 20h.** Ele quebra com frequência. Se voltar antes das 21h, entrem na fila antes de fechar.
 - **C2 — chuva ou frio.** Fyre Drill cai. Monsters, Ministry, Toadstool e Atlantic são cobertos.
 

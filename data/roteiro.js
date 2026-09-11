@@ -218,15 +218,15 @@ window.ROTEIRO = {
         titulo: 'O imposto de tempo que o cronograma não previa',
         texto:
           'Várias atrações exigem guardar tudo em locker antes de embarcar — inclusive o ' +
-          'celular — com detector de metal na entrada. Isso custa 10 a 15 minutos por atração ' +
-          'que o roteiro de ~45 min por atração não contabilizou. O locker padrão é gratuito ' +
-          'pelo tempo da fila mais a duração da atração; o grande custa US$ 2 a 3.\n\n' +
-          'Detector de metal, nada nos bolsos: Hulk, VelociCoaster, Stardust Racers e ' +
-          'Revenge of the Mummy.\n\n' +
-          'Locker obrigatório com mais tolerância: Hagrid’s, Forbidden Journey, Gringotts, ' +
-          'Men in Black, Monsters Unchained e Hiccup’s Wing Gliders.\n\n' +
+          'celular —, e três delas têm detector de metal na entrada. Isso custa 10 a 15 ' +
+          'minutos por atração, que a duração dos blocos não conta. O locker padrão é ' +
+          'gratuito pelo tempo da fila mais a duração da atração; o grande é pago, de US$ 3 a ' +
+          '6 conforme a fonte.\n\n' +
+          'Detector de metal, nada nos bolsos: Hulk, VelociCoaster e Stardust Racers.\n\n' +
+          'Locker obrigatório, sem detector: Revenge of the Mummy, Hagrid’s, Forbidden ' +
+          'Journey, Gringotts, Men in Black, Monsters Unchained e Hiccup’s Wing Gliders.\n\n' +
           'Pochete de três pontos presa na cintura costuma ser liberada no Hagrid’s, a ' +
-          'critério do funcionário. Nos quatro do detector de metal, não adianta tentar.',
+          'critério do funcionário. Nos três do detector de metal, não adianta tentar.',
         pesquisa: '2026-09-08',
         fonte: 'orlandoinformer.com/universal/rental-ride-lockers',
       },
@@ -321,7 +321,7 @@ window.ROTEIRO = {
           'Uber para o hotel, deixar malas, check-in se já liberou.',
           'Walmart com calma — a lista completa, 45 min. Fica a 4 min do hotel.',
           'Comer alguma coisa ao voltar — vocês não comem desde o avião.',
-          'Disney Springs às 17h15, com 1h45 antes do jantar.',
+          'Disney Springs às 17h20, com 1h40 antes do jantar.',
           'The Boathouse 19h. Voltar 21h.',
         ],
       },
@@ -330,12 +330,13 @@ window.ROTEIRO = {
         titulo: 'Imigração demorou',
         gatilho: 'Vocês saem do Terminal C entre 14h15 e 16h00.',
         passos: [
-          'Corta o Walmart para o essencial: água, protetor solar, ibuprofeno e barrinhas. ' +
-          '20 minutos, sem passear pelos corredores. A volta ao hotel continua ' +
-          'obrigatória, senão vocês carregam o fardo a noite inteira — mas agora são só ' +
-          '8 minutos de carro no total, então cabe mesmo com o dia atrasado.',
-          'O resto da lista vai para o dia 12, que é dia de outlet na I-Drive e comporta ' +
-          'uma parada de mercado sem custo nenhum de roteiro.',
+          'Corta o Walmart para os sete essenciais do bloco: água, protetor solar, capa de ' +
+          'chuva, curativo de bolha, power bank, ibuprofeno e barrinhas. 20 minutos, sem ' +
+          'passear pelos corredores. A volta ao hotel continua obrigatória, senão vocês ' +
+          'carregam o fardo a noite inteira — e são só 8 minutos de carro no total, então ' +
+          'cabe mesmo com o dia atrasado.',
+          'O resto da lista fica para o dia 12: o Walmart está a 4 minutos do hotel, na ' +
+          'volta do outlet.',
           'Disney Springs direto, mesmo que chegue só 18h. Uma hora lá dentro já dá o ' +
           'World of Disney e a beira da água.',
           'O jantar das 19h não se mexe. É a única hora marcada do dia.',
@@ -366,13 +367,16 @@ window.ROTEIRO = {
           'PRIMEIRA COISA: cancelem o The Boathouse assim que souberem — +1 407-939-3463, ' +
           'ou pelo My Disney Experience. Com menos de 2 horas de antecedência a Disney ' +
           'cobra a taxa de não comparecimento no cartão. Os telefones estão no Guia.',
-          'Esqueçam o Disney Springs hoje. Vocês voltam mais adiante na viagem e, ' +
-          'honestamente, a volta é melhor: tem o Christmas Tree Stroll e a decoração de ' +
-          'Natal, que hoje ainda não existe.',
-          'Uber direto para o hotel. Jantem na 192 mesmo — Black Angus, Miller’s Ale ' +
-          'House, ou qualquer coisa aberta perto.',
-          'Walmart passa para o dia 12. Durmam. O dia 11 é Magic Kingdom com saída às 6h45 ' +
-          'e é ele que vocês não podem estragar.',
+          'Esqueçam o Disney Springs hoje. Vocês voltam na noite de 25/11, e a volta é ' +
+          'melhor: tem o Christmas Tree Stroll e a decoração de Natal, que hoje ainda não ' +
+          'existe.',
+          'Uber para o hotel. Jantem na 192 mesmo — Black Angus ou Miller’s Ale House, os ' +
+          'dois de mesa.',
+          'Os sete essenciais do Walmart não esperam: o dia 11 sai às 6h45 contando com ' +
+          'água, protetor, capa, power bank e barrinhas. O Walmart fica a 4 minutos do hotel ' +
+          'e o Publix ao lado abre até as 23h. O resto da lista fica para o dia 12.',
+          'Depois, durmam. O dia 11 é Magic Kingdom com saída às 6h45 e é ele que vocês não ' +
+          'podem estragar.',
         ],
       },
     ],
@@ -583,13 +587,12 @@ window.ROTEIRO = {
                 'pegam a luz do fim de tarde e depois a iluminação acendendo.' },
       { nome: 'Gideon’s Bakehouse', quando: 'hoje', condicao: 'se a fila deixar',
         custo: '~US$ 6 o cookie',
-        motivo: 'Cookie de meio quilo, fama justificada. A fila é longa e costuma ter espera ' +
+        motivo: 'Cookie de meia libra, uns 225 g, e a fama é justificada. A fila é longa e costuma ter espera ' +
                 'virtual pelo app — entrem na lista assim que chegarem e passeiem enquanto isso.',
         pesquisa: '2026-09-08' },
       { nome: 'Amphicar Tour', quando: 'descartado', custo: 'US$ 125 por carro',
-        motivo: 'DESCARTADO em 08/09 por preço. Um carro dos anos 60 que entra no lago com ' +
-                'vocês dentro, 20 minutos. Fica registrado aqui só para não ser reproposto: ' +
-                'US$ 62 por cabeça por 20 minutos não passa no teste.',
+        motivo: 'Fica de fora pelo preço. Um carro dos anos 60 que entra no lago com vocês ' +
+                'dentro, 20 minutos: US$ 62 por cabeça por 20 minutos não passa no teste.',
         pesquisa: '2026-09-08' },
       { nome: 'Aerophile — balão cativo', quando: 'na volta', custo: '~US$ 25',
         motivo: 'Sobe 120 m preso por cabo, 8 minutos, vista de até 16 km. Não voa com vento ' +
@@ -597,9 +600,9 @@ window.ROTEIRO = {
         pesquisa: '2026-09-08' },
       { nome: 'Christmas Tree Stroll', quando: 'na volta', condicao: 'só existe a partir de 13/11',
         custo: 'grátis',
-        motivo: 'A decoração de Natal do Disney Springs começa em 13/11. Hoje não existe. ' +
-                'É exatamente por isso que existe uma segunda ida ao Disney Springs — a ' +
-                'noite dela ainda está para ser escolhida.' },
+        motivo: 'A decoração de Natal do Disney Springs começa em 13/11. Hoje não existe — ' +
+                'e é por isso que vocês voltam ao Disney Springs na noite de 25/11, a última ' +
+                'da viagem.' },
     ],
 
     /* ---------------------------------------------------------------------
@@ -779,8 +782,7 @@ window.ROTEIRO = {
           'Esta volta existe por um motivo só: ninguém anda pelo Disney Springs com uma ' +
           'caixa de 24 garrafas. Guardem tudo, separem só o que vai para o dia 11 — duas ' +
           'garrafas, protetor solar e barrinhas na mochila — e saiam de novo.\n\n' +
-          'Com o Walmart certo, essa ida e volta custa ~US$ 16 no total e come 8 minutos ' +
-          'de carro. Sobra meia hora a mais no Disney Springs.',
+          'Essa ida e volta custa ~US$ 16 no total e come 8 minutos de carro.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 5 },
 
       { id: 'b-1011-1625', hora: '16:30', ancora: 'referencia', tipo: 'refeicao',
@@ -789,7 +791,7 @@ window.ROTEIRO = {
         contexto:
           'Vocês pousam 12h35 e só sentam para jantar às 19h. Descontando a refeição do ' +
           'avião, são seis a oito horas sem comer, num dia em que já estão sem dormir.\n\n' +
-          'Não é refeição — é não chegar no Disney Springs irritado às 17h15 com o jantar ' +
+          'Não é refeição — é não chegar no Disney Springs irritado às 17h20 com o jantar ' +
           'ainda a duas horas de distância. Barrinha, fruta, o que for, do que acabou de ' +
           'sair da sacola. Comam enquanto guardam as compras.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 20 },
@@ -826,8 +828,8 @@ window.ROTEIRO = {
         descricao: 'Uber, ~20 min, US$ 15–25. Amanhã sai às 6h45',
         contexto:
           'Não estiquem. O dia 11 começa às 6h45 e é o dia mais denso da primeira semana. ' +
-          'Nada aqui justifica atrasar a volta — vocês revisitam o Disney Springs no dia ' +
-          '21, decorado de Natal e sem parque no dia seguinte.',
+          'Nada aqui justifica atrasar a volta — vocês revisitam o Disney Springs na noite ' +
+          'de 25/11, decorado de Natal.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 45 },
     ],
     renuncias: null,
@@ -871,11 +873,11 @@ window.ROTEIRO = {
 
     notas: [
       { tipo: 'atencao', texto:
-        'A TIANA’S BAYOU ADVENTURE ESTARÁ FECHADA. Entrou em reforma em 02/11 e a Disney ' +
-        'não anunciou data de volta — o site indica dezembro. Critter Co-Op e Tiana’s ' +
-        'Bayou General fecham junto. Com ela fora, o alvo da Frontierland na abertura é o ' +
+        'A TIANA’S BAYOU ADVENTURE ESTARÁ FECHADA. Entra em reforma em 02/11, com volta ' +
+        'prevista para dezembro, sem dia marcado. A Tiana’s Bayou General fecha junto; a ' +
+        'Critter Co-Op fica aberta. Com ela fora, o alvo da Frontierland na abertura é o ' +
         'Big Thunder Mountain.',
-        pesquisa: '2026-09-09' },
+        pesquisa: '2026-09-11' },
 
       { tipo: 'bom', texto:
         'VOCÊS FAZEM TRÊS LISTA ALTA GASTANDO UMA. Big Thunder e Jungle Cruise saem no ' +
@@ -890,8 +892,8 @@ window.ROTEIRO = {
         'Ever After passa para 20h — mas o parque segue aberto até as 22h. Isso resolve de ' +
         'graça o problema da saída em massa: as vinte mil pessoas vão embora às 20h25 e ' +
         'sobram DUAS HORAS de parque com fila curta. É nelas que entram o Seven Dwarfs e a ' +
-        'segunda chance do TRON. Hoje vocês ficam até as 22h — dá, porque amanhã é o único ' +
-        'dia da primeira semana sem alarme.',
+        'segunda chance do TRON. Hoje vocês ficam até as 22h — dá, porque amanhã não tem ' +
+        'alarme.',
         pesquisa: '2026-09-09' },
 
       { tipo: 'atencao', texto:
@@ -1016,15 +1018,15 @@ window.ROTEIRO = {
 
       { nome: 'Single Pass do Seven Dwarfs', quando: 'decidir', custo: 'US$ 15–20 por pessoa',
         motivo: 'PLANO B PAGO, mesma lógica. A fila dele é a mais persistente do parque, ' +
-                'média de 80 minutos, e cede em duas horas do dia: o rope drop e a última ' +
-                'hora. Vocês gastaram o rope drop na Frontierland de propósito, então a ' +
-                'aposta é a última hora, às 20h30. Se por algum motivo vocês não puderem ' +
+                'média de 80 minutos, e cede em dois momentos do dia: o rope drop e depois ' +
+                'dos fogos. Vocês gastaram o rope drop na Frontierland de propósito, então a ' +
+                'aposta é depois dos fogos, às 20h30. Se por algum motivo vocês não puderem ' +
                 'ficar até tarde, aí o passe se justifica.',
         pesquisa: '2026-09-10' },
 
       { nome: 'Tiana’s Bayou Adventure', quando: 'fechada', custo: '—',
-        motivo: 'Em reforma desde 02/11, sem data de volta. Não é escolha de vocês — está ' +
-                'fechada. Fica registrado para ninguém procurar.' },
+        motivo: 'Em reforma a partir de 02/11, com volta prevista para dezembro. Não é ' +
+                'escolha de vocês — está fechada.' },
     ],
 
     /* --------------------------------------------------------------------- */
@@ -1210,8 +1212,8 @@ window.ROTEIRO = {
           'Os próximos noventa minutos são o miolo tático do dia: desfile, travessia do ' +
           'parque e a fila do TRON. Vão para eles com a garrafa cheia e sem fila de ' +
           'banheiro pendurada.\n\n' +
-          'COMAM ALGUMA COISA DA MOCHILA AGORA. O almoço foi 12h45 e o jantar é 17h55 — ' +
-          'são cinco horas, com o desfile e a fila do TRON no meio. Barrinha, fruta, o ' +
+          'COMAM ALGUMA COISA DA MOCHILA AGORA. O almoço foi 11h50 e o jantar é 17h55 — ' +
+          'são seis horas, com o desfile e a fila do TRON no meio. Barrinha, fruta, o ' +
           'que tiver.\n\n' +
           'É também a hora de ligar o power bank, se o celular estiver abaixo de 40%.',
         areaParque: 'Fantasyland', acesso: [], duracaoMin: 12 },
@@ -1342,13 +1344,13 @@ window.ROTEIRO = {
 
       { id: 'b-1111-1045', hora: '20:30', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Seven Dwarfs Mine Train',
-        descricao: 'A última hora. É quando ele fica barato',
+        descricao: 'Depois dos fogos. É quando ele fica barato',
         contexto:
           'Montanha-russa familiar cujos carrinhos balançam lateralmente nas curvas. Suave, ' +
           'curta, com uma cena final de animatrônicos muito boa.\n\n' +
           'É a fila mais persistente do parque: média de 80 minutos o dia inteiro. As duas ' +
-          'únicas horas em que ela cede são o rope drop e a ÚLTIMA HORA antes de fechar — e ' +
-          'vocês gastaram o rope drop na Frontierland, de propósito. É agora.\n\n' +
+          'únicas janelas em que ela cede são o rope drop e DEPOIS DOS FOGOS, quando o parque ' +
+          'esvazia — e vocês gastaram o rope drop na Frontierland, de propósito. É agora.\n\n' +
           'A maior parte das vinte mil pessoas vai embora logo depois dos fogos, às 20h25, e ' +
           'as filas despencam. É por isso que hoje vocês ficam até o fim.',
         areaParque: 'Fantasyland', acesso: ['standby'], critico: true, duracaoMin: 51,
@@ -1363,7 +1365,7 @@ window.ROTEIRO = {
           '15h30 tenha estourado. Se vocês já andaram nele à tarde, esta é a repetição — e ' +
           'de noite, iluminado, ele é outro passeio.\n\n' +
           'Se o corpo não pedir, cortem sem culpa. Vocês estão no segundo dia de viagem e ' +
-          'amanhã é o único dia sem alarme da primeira semana.',
+          'amanhã não tem alarme.',
         areaParque: 'Tomorrowland', acesso: ['standby'], locker: true, opcional: true,
         duracaoMin: 35,
         fila: { min: 35, quando: 'na última hora', pico: 90, estimado: true, fonte: '2026-09-10' } },
@@ -1398,15 +1400,15 @@ window.ROTEIRO = {
           'primeira reserva que abre a próxima e derruba a restrição de lista.\n\n' +
           'Lista alta hoje: Jungle Cruise, Peter Pan, Space Mountain e Big Thunder. Vocês ' +
           'fazem TRÊS delas gastando UMA — Big Thunder e Jungle saem no standby antes das ' +
-          '11h, porque a Frontierland e a Adventureland ficam vazias na abertura. A Tiana’s ' +
-          'saiu da lista porque está fechada.',
+          '11h, porque a Frontierland e a Adventureland ficam vazias na abertura. A Tiana’s, ' +
+          'também da lista alta, está fechada.',
       },
       singlePass: {
         itens: [],
         opcionais: ['TRON Lightcycle / Run', 'Seven Dwarfs Mine Train'],
         nota:
-          'NÃO COMPREM NADA EM 08/11. Os dois Single Pass do Magic Kingdom viraram plano B ' +
-          'pago, e o roteiro foi desenhado para não precisar deles.\n\n' +
+          'NÃO COMPREM NADA EM 08/11. Os dois Single Pass do Magic Kingdom ficam como plano ' +
+          'B pago, e o roteiro foi desenhado para não precisar deles.\n\n' +
           'O TRON tem duas janelas de graça: 15h30, na hora do desfile, e 21h25, na última ' +
           'hora. O Seven Dwarfs tem uma: 20h30, depois dos fogos. Se alguma falhar, o passe ' +
           'se compra na hora pelo app, de pé na frente da atração — que é mais barato que ' +
@@ -1450,8 +1452,8 @@ window.ROTEIRO = {
         'Carousel of Progress — fechou em 06/07/2026 para uma reforma que troca as quatro ' +
         'cenas e põe um animatrônico do Walt abrindo o show. Volta só no fim da primavera ' +
         'de 2027, sem data anunciada',
-        'Tiana’s Bayou Adventure — em reforma desde 02/11, volta prevista para dezembro',
-        'Critter Co-Op e Tiana’s Bayou General — fecham junto com a atração',
+        'Tiana’s Bayou Adventure — em reforma a partir de 02/11, volta prevista para dezembro',
+        'Tiana’s Bayou General — fecha junto com a atração; a Critter Co-Op fica aberta',
       ],
     },
   },
@@ -1475,8 +1477,7 @@ window.ROTEIRO = {
     referencia: null,
 
     resumo:
-      'Este dia perdeu a festa de Natal do Magic Kingdom, e a geografia foi reorganizada ' +
-      'para tudo rodar no eixo da International Drive. Ele é leve de propósito: vocês vêm ' +
+      'O dia inteiro roda no eixo da International Drive. Ele é leve de propósito: vocês vêm ' +
       'do Magic Kingdom até as 22h e entram numa sequência pesada a partir de amanhã. O ' +
       'bloco vazio da tarde não é folga, é manutenção.',
 
@@ -1484,7 +1485,7 @@ window.ROTEIRO = {
       'COMPRA ÀS 7H ET HOJE, se ela não saiu em 08/11: o Multi Pass do dia 15 e o Single ' +
       'Pass do Rise of the Resistance. Com ingresso de datas fixas, os dois saíram em ' +
       '08/11 — confiram no app e voltem a dormir. Está nas pendências.',
-      'Fora isso, nada hoje depende de acordar cedo. É o único dia assim da primeira semana.',
+      'Fora isso, nada hoje depende de acordar cedo — como no dia 14.',
     ],
 
     notas: [
@@ -1515,11 +1516,10 @@ window.ROTEIRO = {
         gatilho: 'Vocês acordaram bem e a roda continua fechada.',
         passos: [
           'Outlet de manhã com calma, começando pelo Character Warehouse, que abre 10h.',
-          'Almoço no próprio outlet, sem sair do lugar.',
+          'Almoço no Ford’s Garage, dentro do próprio outlet, sem Uber.',
           'Tarde inteira no hotel. Não preencham esse bloco.',
           'ICON Park a partir das 17h30, pegando o pôr do sol na promenade.',
-          'Museum of Illusions, e o Madame Tussauds só se estiverem com pique — é ele que ' +
-          'fecha o combo de duas atrações.',
+          'Museum of Illusions, e o Madame Tussauds só se estiverem com pique.',
           'Jantar no Yard House ou no Tin Roof, os dois dentro do próprio ICON Park.',
         ],
       },
@@ -1545,7 +1545,8 @@ window.ROTEIRO = {
           'Este é o ÚNICO dia da viagem em que nada é insubstituível. Não há ingresso, não ' +
           'há reserva, não há hora marcada.',
           'O que vocês estão protegendo é o dia 13, que sai às 6h30 e abre a sequência mais ' +
-          'pesada da viagem: Animal Kingdom, Islands, SeaWorld, Epic e Busch Gardens.',
+          'pesada da viagem: Animal Kingdom, Hollywood Studios, Epcot e Universal Studios, ' +
+          'de 13 a 17.',
         ],
       },
     ],
@@ -1559,7 +1560,7 @@ window.ROTEIRO = {
                 'sábado — a mesma hora em que vocês chegam.' },
 
       { nome: 'Pôr do sol na promenade do ICON Park', quando: 'hoje', custo: 'grátis',
-        motivo: 'O sol se põe às 17h31 e vocês chegam 17h30. A área do ICON Park é aberta, ' +
+        motivo: 'O sol se põe às 17h33 e vocês chegam 17h30. A área do ICON Park é aberta, ' +
                 'sem ingresso e sem catraca — só as atrações são pagas. É o melhor momento ' +
                 'do lugar e não custa nada.' },
 
@@ -1568,16 +1569,16 @@ window.ROTEIRO = {
                 'e rende foto, que é exatamente o que serve num dia de descanso. Cerca de ' +
                 'uma hora.', pesquisa: '2026-09-10' },
 
-      { nome: 'Madame Tussauds', quando: 'decidir', custo: 'US$ 33,99 por pessoa',
-        motivo: 'Museu de cera com mais de 90 figuras. É o que fecha o COMBO DE DUAS ' +
-                'ATRAÇÕES, a partir de US$ 39 por pessoa — contra US$ 61 comprando as duas ' +
-                'separadas, ou seja ~US$ 44 de economia no casal. Se vocês já sabem que vão ' +
-                'fazer duas, comprem o combo de saída.', pesquisa: '2026-09-10' },
+      { nome: 'Madame Tussauds', quando: 'decidir', custo: 'a partir de US$ 29 por pessoa, online',
+        motivo: 'Museu de cera com mais de 90 figuras. Comprado online sai a partir de US$ 29 ' +
+                'por pessoa, e o preço sobe no dia da visita. Não existe combo com o Museum ' +
+                'of Illusions: os combos do ICON Park exigem a roda, que está fechada.',
+        pesquisa: '2026-09-11' },
 
       { nome: 'SEA LIFE Orlando Aquarium', quando: 'decidir', custo: 'US$ 33,99 por pessoa',
-        motivo: 'Terceira opção, se quiserem o combo de três atrações a partir de US$ 49 por ' +
-                'pessoa. Túnel de acrílico de 360°. Vocês já veem tanque de tubarão no ' +
-                'SeaWorld no dia 22 — decidam se vale repetir o tema.', pesquisa: '2026-09-10' },
+        motivo: 'Terceira opção, avulsa — os combos do ICON Park exigem a roda, que está ' +
+                'fechada. Túnel de acrílico de 360°. Vocês já veem tanque de tubarão no ' +
+                'SeaWorld no dia 22 — decidam se vale repetir o tema.', pesquisa: '2026-09-11' },
 
       { nome: 'The Wheel / Orlando Eye', quando: 'fechada', custo: 'a confirmar',
         motivo: 'Fechada para manutenção anual desde o fim de junho, sem data de reabertura ' +
@@ -1585,11 +1586,10 @@ window.ROTEIRO = {
                 'da noite — é o plano B. Conferir em outubro.', pesquisa: '2026-09-10' },
 
       { nome: 'Resort hopping nos hotéis Disney', quando: 'descartado', custo: '—',
-        motivo: 'DESCARTADO em 10/09. Desde junho de 2026 os resorts exigem reserva de ' +
+        motivo: 'Fica de fora porque, desde junho de 2026, os resorts exigem reserva de ' +
                 'hotel ou de restaurante para o carro do rideshare passar pela guarita, e o ' +
-                'transporte saindo do Disney Springs também checa. Seria possível com um ' +
-                'jantar reservado num resort do monotrilho, mas isso exigiria reserva com ' +
-                '60 dias — 13/09.', pesquisa: '2026-09-10' },
+                'transporte saindo do Disney Springs também checa. Só daria com um jantar ' +
+                'reservado num resort do monotrilho.', pesquisa: '2026-09-10' },
     ],
 
     /* --------------------------------------------------------------------- */
@@ -1616,8 +1616,8 @@ window.ROTEIRO = {
                   'de 40 a 65 minutos do fim da tarde em vez dos 100 a 180 do pico. Só ' +
                   'vale comprar se o fechamento não deixar o plano caber, ou se vocês ' +
                   'decidirem que não querem 50 minutos de fila no fim de dez horas de ' +
-                  'parque. Se decidirem comprar, a janela já passou em 10/11 — dá para ' +
-                  'comprar na hora pelo app, dentro do parque.' },
+                  'parque. Se decidirem comprar, é na hora, pelo app, dentro do parque — se ' +
+                  'ainda houver janela de retorno.' },
 
         { texto: 'Reserva do Sanaa: número de confirmação à mão', critico: false,
           motivo: 'Jantar às 19h45, e o Animal Kingdom Lodge é OUTRO endereço, não é dentro ' +
@@ -1666,8 +1666,8 @@ window.ROTEIRO = {
         titulo: 'Café da manhã no hotel',
         descricao: 'Incluso. Sem alarme',
         contexto:
-          'É o único dia da primeira semana em que dá tempo de tomar o café do hotel com ' +
-          'calma — nos dias de parque vocês saem antes de ele abrir. Aproveitem, e sem ' +
+          'Com o dia 14, é um dos dois dias da primeira semana com tempo para o café do ' +
+          'hotel com calma — nos dias de parque vocês saem antes de ele abrir. Aproveitem, e sem ' +
           'despertador: nada hoje depende de acordar cedo.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 60 },
 
@@ -1704,12 +1704,17 @@ window.ROTEIRO = {
         pesquisa: '2026-09-09', duracaoMin: 170 },
 
       { id: 'b-1211-1300', hora: '13:00', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Almoço no outlet',
-        descricao: 'Sem sair do lugar',
+        titulo: 'Almoço — Ford’s Garage',
+        descricao: 'Mesa com garçom, dentro do próprio outlet',
         contexto:
-          'Comam no próprio outlet. Sair da I-Drive para almoçar custa dois Ubers e uma ' +
-          'hora, num dia cujo objetivo é descansar.',
-        localId: 'premium-outlets', acesso: [], pesquisa: '2026-09-10', duracaoMin: 90 },
+          'Salão de oficina dos anos 1920, com Fords antigos, hambúrgueres, comida americana ' +
+          'e cerveja artesanal na torneira. Fica dentro do outlet: sair da I-Drive para ' +
+          'almoçar custaria dois Ubers e uma hora, num dia cujo objetivo é descansar.\n\n' +
+          'A CONTA JÁ VEM COM 20% DE TAXA DE SERVIÇO, no lugar da gorjeta — não somem outra ' +
+          'por cima. O preço da etiqueta não inclui o imposto. Dá para reservar ou entrar na ' +
+          'fila de espera pelo site do restaurante.',
+        restauranteId: 'r-fords-garage', localId: 'premium-outlets', acesso: [],
+        pesquisa: '2026-09-11', duracaoMin: 90 },
 
       { id: 'b-1211-1430', hora: '14:30', ancora: 'fixo', tipo: 'vazio',
         titulo: 'VAZIO PROPOSITAL',
@@ -1717,8 +1722,8 @@ window.ROTEIRO = {
         contexto:
           'Não preencham. Vocês vêm de um Magic Kingdom que terminou perto das 22h e amanhã ' +
           'começa ' +
-          'a sequência mais pesada da viagem: Animal Kingdom, Islands of Adventure, ' +
-          'SeaWorld, Epic Universe e Busch Gardens com três horas de carro.\n\n' +
+          'a sequência mais pesada da viagem: Animal Kingdom, Hollywood Studios, Epcot e ' +
+          'Universal Studios, de 13 a 17.\n\n' +
           'Este bloco não é folga. É o que faz o resto funcionar.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 155 },
 
@@ -1726,13 +1731,13 @@ window.ROTEIRO = {
         titulo: 'Sair para o ICON Park',
         descricao: 'Uber, ~25 min, US$ 20–30',
         contexto:
-          'O pôr do sol é às 17h31 e é o melhor momento do lugar. Para chegar nele, a ' +
+          'O pôr do sol é às 17h33 e é o melhor momento do lugar. Para chegar nele, a ' +
           'saída é 17h05 — não 17h30.',
         localId: 'icon-park', acesso: [], duracaoMin: 25 },
 
       { id: 'b-1211-1730', hora: '17:30', ancora: 'fixo', tipo: 'livre',
         titulo: 'ICON Park — promenade ao pôr do sol',
-        descricao: 'Área aberta, sem ingresso. Pôr do sol às 17h31',
+        descricao: 'Área aberta, sem ingresso. Pôr do sol às 17h33',
         contexto:
           'Complexo aberto na I-Drive: entrar não custa nada, só as atrações são pagas. ' +
           'Vocês chegam exatamente na hora do pôr do sol, que é o melhor momento do lugar.\n\n' +
@@ -1746,20 +1751,19 @@ window.ROTEIRO = {
         contexto:
           'Salas de ilusão de óptica, quarto invertido, sala de Ames. É participativo e ' +
           'rende foto — exatamente o que serve num dia de descanso, sem fila e sem correr.\n\n' +
-          'Se forem fazer também o Madame Tussauds, comprem o COMBO DE DUAS ATRAÇÕES na ' +
-          'entrada: a partir de US$ 39 por pessoa, contra US$ 61 separadas.',
-        localId: 'icon-park', acesso: [], duracaoMin: 60, pesquisa: '2026-09-10' },
+          'Comprem online antes: US$ 26,99 por pessoa. Não existe combo com o Madame ' +
+          'Tussauds.',
+        localId: 'icon-park', acesso: [], duracaoMin: 60, pesquisa: '2026-09-11' },
 
       { id: 'b-1211-1915', hora: '19:15', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Madame Tussauds',
-        descricao: 'US$ 33,99 avulso. Opcional — é o que fecha o combo',
+        descricao: 'A partir de US$ 29 online. Opcional',
         contexto:
           'Museu de cera com mais de 90 figuras. Só façam se estiverem com pique: o valor ' +
           'do dia está no descanso, não em encaixar mais uma atração.\n\n' +
-          'Mas se fizerem as duas, o combo derruba o preço de US$ 61 para ~US$ 39 por ' +
-          'pessoa — cerca de US$ 44 de economia no casal.',
+          'Online sai a partir de US$ 29 por pessoa; no dia da visita o preço sobe.',
         localId: 'icon-park', acesso: [], opcional: true, duracaoMin: 60,
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-11' },
 
       { id: 'b-1211-2000', hora: '20:30', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Yard House ou Tin Roof',
@@ -1779,7 +1783,7 @@ window.ROTEIRO = {
         descricao: 'Uber, ~25 min, US$ 20–30. Amanhã sai às 6h30',
         contexto:
           'Não estiquem. O dia 13 é Animal Kingdom com saída às 6h30 — uma hora mais cedo ' +
-          'do que estava, porque o parque deve abrir às 8h — e abre a sequência ' +
+          'que nos outros dias de parque, porque ele deve abrir às 8h — e abre a sequência ' +
           'pesada da viagem.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 30 },
     ],
@@ -1872,7 +1876,7 @@ window.ROTEIRO = {
       {
         letra: 'B',
         titulo: 'O safári fecha cedo demais',
-        gatilho: 'Na parada das 15h45 vocês descobrem que o último caminhão sai antes das 16h30.',
+        gatilho: 'Na parada das 15h25 vocês descobrem que o último caminhão sai antes das 16h30.',
         passos: [
           'VÃO AGORA. Larguem o resto e peguem o safári enquanto ele ainda roda — é o bloco ' +
           'mais insubstituível da tarde.',
@@ -1894,10 +1898,9 @@ window.ROTEIRO = {
           'FECHOU MAIS TARDE (19h ou 20h): o dia respira, MAS CUIDADO COM O SANAA. A mesa é ' +
           'às 19h45 e a Disney cobra taxa de não comparecimento, com cancelamento exigido ' +
           'com 2 horas de antecedência (+1 407-939-3463).\n\n' +
-          'Com fechamento às 19h: empurrem o safári para as 17h30 e entrem na fila do ' +
-          'Flight of Passage às 18h45. Vocês saem por volta das 19h30 e o jantar continua ' +
-          'de pé, apertado.\n\n' +
-          'Com fechamento às 20h: NÃO dá para fazer as duas coisas. Ou vocês remarcam o ' +
+          'Com fechamento às 19h ou às 20h, NÃO dá para fazer as duas coisas: a fila do ' +
+          'Flight of Passage no último minuto termina depois das 19h30, e ainda são 25 ' +
+          'minutos saindo de Pandora e 25 de Uber até a mesa das 19h45. Ou vocês remarcam o ' +
           'Sanaa para as 21h logo de manhã, pelo My Disney Experience, ou mantêm a fila do ' +
           'Flight of Passage às 17h45 como está no plano A e usam a folga que sobrou para ' +
           'o Everest. A segunda opção é a segura.',
@@ -1962,21 +1965,19 @@ window.ROTEIRO = {
                 '40–65 minutos do fim da tarde em vez dos 100–180 do pico. Só vale comprar ' +
                 'se o parque fechar cedo demais para o plano caber, ou se vocês decidirem ' +
                 'que não querem encarar 50 minutos de fila no fim de um dia de dez horas. ' +
-                'A compra seria às 7h ET de 10/11, durante a conexão em Bogotá.',
+                'A compra é na hora, pelo app, dentro do parque — se ainda houver janela.',
         pesquisa: '2026-09-10' },
 
       { nome: 'Starlight Safari', quando: 'descartado',
         custo: 'US$ 75 a 89 por pessoa · US$ 150 a 178 no casal',
         motivo:
-          'DESCARTADO em 10/09, e a decisão é fácil de defender. Safári noturno na ' +
-          'savana do Animal Kingdom Lodge, 1h30, com óculos de visão noturna, saindo ' +
-          'às 20h30 e às 22h. Não exige estar hospedado lá, e o encaixe era bom: ' +
-          'vocês já estarão no Lodge para o Sanaa.\n\n' +
-          'Dois motivos derrubaram. O preço — US$ 150 a 178 no casal, e vocês já ' +
-          'descartaram o Amphicar a US$ 62 por cabeça, então a régua é a mesma. E o ' +
-          'fato de que SERIA O TERCEIRO SAFÁRI DO MESMO DIA: o roteiro já faz o ' +
-          'Kilimanjaro de manhã e de novo ao entardecer, quando os leões acordam.\n\n' +
-          'Fica registrado para não ser reproposto.',
+          'Safári noturno na savana do Animal Kingdom Lodge, 1h30, com óculos de visão ' +
+          'noturna, saindo às 20h30 e às 22h. Não exige hospedagem, e vocês já estarão no ' +
+          'Lodge para o Sanaa.\n\n' +
+          'Fica de fora por dois motivos. O preço — US$ 150 a 178 no casal, a mesma régua ' +
+          'que deixa o Amphicar de fora a US$ 62 por cabeça. E SERIA O TERCEIRO SAFÁRI DO ' +
+          'MESMO DIA: o roteiro já faz o Kilimanjaro de manhã e de novo ao entardecer, ' +
+          'quando os leões acordam.',
         pesquisa: '2026-09-09' },
     ],
 
@@ -2001,8 +2002,8 @@ window.ROTEIRO = {
         { texto: 'Celular e power bank na tomada',
           motivo: 'Rotina de toda véspera.' },
         { texto: 'Se fizeram o Kali, pendurar a roupa molhada para secar',
-          motivo: 'Não deixem no chão da mala. Amanhã à noite chove com frequência em ' +
-                  'novembro e vocês vão querer a capa seca.' },
+          motivo: 'Não deixem no chão da mala: roupa e capa guardadas molhadas continuam ' +
+                  'úmidas por dias.' },
       ],
     },
 
@@ -2131,8 +2132,8 @@ window.ROTEIRO = {
           'consistentemente eleito o melhor quick service do Walt Disney World.\n\n' +
           'Usem mobile order pelo app: a fila do balcão aqui é longa e a do mobile order não ' +
           'existe. Peçam durante o Festival of the Lion King, sentados.\n\n' +
-          'São dez minutos de caminhada da África até Pandora, e eles estão dentro da hora ' +
-          'e quinze deste bloco — não é tempo de mesa, é tempo de chegar.\n\n' +
+          'São dez minutos de caminhada da África até Pandora, e o app soma essa caminhada ' +
+          'aos 65 minutos deste bloco — não é tempo de mesa, é tempo de chegar.\n\n' +
           'É a primeira vez que vocês pisam em Pandora hoje, e é de dia. Olhem as montanhas ' +
           'flutuantes agora, porque à noite o lugar é outro — e vocês voltam.',
         restauranteId: 'r-satuli', areaParque: 'Pandora', acesso: [], duracaoMin: 65 },
@@ -2303,24 +2304,25 @@ window.ROTEIRO = {
       multiPass: {
         usar: false, opcional: false, listaAlta: [], listaBaixa: [], planoB: null,
         nota:
-          'Sem Multi Pass, e agora com mais razão que antes. O parque encolheu com o fim ' +
-          'da DinoLand, e chegando na abertura pelo lado certo — África e Ásia, onde o ' +
-          'Early Entry não vai — vocês resolvem a manhã inteira no standby, quase sem fila.',
+          'Sem Multi Pass. O parque ficou menor sem a DinoLand, e chegando na abertura pelo ' +
+          'lado certo — África e Ásia, longe de Pandora, para onde vai quase todo o Early ' +
+          'Entry — vocês resolvem a manhã inteira no standby, quase sem fila.',
       },
       singlePass: {
         itens: [],
         opcionais: ['Avatar Flight of Passage'],
         nota:
-          'NÃO COMPREM EM 10/11. O Flight of Passage virou plano B pago: o dia foi montado ' +
+          'NÃO COMPREM EM 10/11. O Flight of Passage fica como plano B pago: o dia foi montado ' +
           'para pegar a fila de 40 a 65 minutos do fim da tarde em vez dos 100 a 180 do ' +
           'pico, e para sair de Pandora no escuro em vez de na fila.\n\n' +
           'A compra só se justifica se o parque fechar cedo demais para o plano caber, ou ' +
           'se vocês decidirem que não querem 50 minutos de fila no fim de um dia de dez ' +
           'horas.\n\n' +
           'E NÃO PRECISA DECIDIR EM BOGOTÁ. Como o TRON no dia 11, o Single Pass do Flight ' +
-          'of Passage se compra NA HORA, pelo app, de pé dentro do parque. É por isso que ' +
-          'ele é plano B e não compra antecipada: vocês decidem às 17h30, olhando a fila, ' +
-          'e não às 7h da manhã de 10/11 no meio de uma conexão.',
+          'of Passage se compra NA HORA, pelo app, de pé dentro do parque — se ainda houver ' +
+          'janela de retorno. É por isso que ele é plano B e não compra antecipada: vocês ' +
+          'decidem às 17h30, olhando a fila, e não às 7h da manhã de 10/11 no meio de uma ' +
+          'conexão.',
       },
       expressPass: null,
       custoEstimadoCasal: { min: 0, max: 40, moeda: 'USD' },
@@ -2355,7 +2357,7 @@ window.ROTEIRO = {
     diaSemana: 'sábado',
     emoji: '🎄',
     titulo: 'Celebration e Islands à noite',
-    subtitulo: 'Entrada extra no Islands · custo zero',
+    subtitulo: 'Entrada extra no Islands, sem custo de ingresso',
     tipo: 'livre',
     operadora: 'universal',
     parqueId: 'islands-of-adventure',
@@ -2376,14 +2378,14 @@ window.ROTEIRO = {
       'Sábado, e sábado é o pior dia para parque. A manhã é Celebration a pé e a tarde é ' +
       'hotel. À noite vocês entram no Islands pela primeira noite da temporada de Natal — ' +
       'mas com um alvo só: o Grinchmas. O resto da Hogsmeade decorada vocês reveem no dia 23, ' +
-      'numa segunda-feira, com menos gente.',
+      'numa segunda-feira.',
 
     avisos: [
       'O GRINCHMAS É O ÚNICO COMPROMISSO DE RELÓGIO DA NOITE. Plateia por ordem de chegada, ' +
       'sem Express Pass, e a grade típica termina às 18h30. O roteiro mira a sessão das ' +
       '17h30 para ter a das 18h30 como plano B.',
       'Não tentem atração grande hoje. Hagrid’s, VelociCoaster e Forbidden Journey são do ' +
-      'dia 23, e hoje o parque está no pico do ano.',
+      'dia 23, e hoje é o sábado de estreia da temporada de Natal.',
     ],
 
     notas: [
@@ -2487,7 +2489,7 @@ window.ROTEIRO = {
         pesquisa: '2026-09-10' },
 
       { nome: 'Toothsome Chocolate Emporium', quando: 'descartado', custo: '~US$ 60 no casal',
-        motivo: 'DESCARTADO em 10/09 pela espera. Restaurante steampunk no CityWalk, famoso ' +
+        motivo: 'Fica de fora pela espera. Restaurante steampunk no CityWalk, famoso ' +
                 'pelos milkshakes exagerados. Não aceita reserva e a espera passa de uma hora ' +
                 'em fim de semana — num sábado de abertura de temporada, depois de um dia ' +
                 'inteiro, é esperar em pé. O Three Broomsticks entrega jantar dentro da ' +
@@ -2662,17 +2664,17 @@ window.ROTEIRO = {
           'melhor visão porque a plateia vai rareando. Ou seja: não é para correr. Se ' +
           'perderem uma, a próxima vem.\n\n' +
           'HORÁRIO FIXO — as sessões começam quando escurece, não quando o Grinchmas acaba. ' +
-          'Com o pôr do sol às 17h28, a primeira deve cair entre 18h e 19h15. Confiram no app.',
+          'Com o pôr do sol às 17h32, a primeira deve cair entre 18h e 19h15. Confiram no app.',
         areaParque: 'Hogsmeade', acesso: [], duracaoMin: 35,
         confirmarHorario: true, pesquisa: '2026-09-10' },
 
       { id: 'b-1411-1950', hora: '19:15', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Flight of the Hippogriff — ou mais Hogsmeade',
-        descricao: 'Opcional. Vocês repetem esta atração no dia 23',
+        descricao: 'Opcional. Ele não volta em outro dia',
         contexto:
           'Montanha-russa infantil de 1 minuto. Vale pela vista do castelo de Hogwarts e da ' +
           'cabana do Hagrid, iluminados.\n\n' +
-          'VOCÊS ANDAM NELA DE NOVO NO DIA 19, às 17h50. Hoje é bônus, não meta.\n\n' +
+          'ELE NÃO VOLTA EM OUTRO DIA: se quiserem andar, é hoje. Mas é bônus, não meta.\n\n' +
           'O texto da noite diz para andar devagar e olhar, e este bloco existe para ser ' +
           'gasto do jeito que vocês quiserem: se a fila estiver abaixo de 20 minutos, ' +
           'andem; se não, fiquem no pátio vendo a projeção outra vez — ela repete a cada ' +
@@ -2690,7 +2692,7 @@ window.ROTEIRO = {
           'dividir.\n\n' +
           'A ESCOLHA FOI DELIBERADA. O Toothsome, no CityWalk, não aceita reserva e a espera ' +
           'passa de uma hora em fim de semana — num sábado de abertura de temporada, depois ' +
-          'de um dia inteiro, é esperar em pé no estacionamento social. Aqui vocês comem ' +
+          'de um dia inteiro, é esperar em pé no CityWalk. Aqui vocês comem ' +
           'dentro da decoração que vieram ver.\n\n' +
           'É balcão: não leva gorjeta.',
         restauranteId: 'r-broomsticks-14', areaParque: 'Hogsmeade', acesso: [],
@@ -3704,7 +3706,7 @@ window.ROTEIRO = {
     diaSemana: 'terça',
     emoji: '🎥',
     titulo: 'Universal Studios Florida',
-    subtitulo: 'O primeiro dia fora da Disney · e o rope drop que estava certo',
+    subtitulo: 'O primeiro dia fora da Disney · rope drop no Gringotts',
     tipo: 'parque',
     operadora: 'universal',
     parqueId: 'universal-studios',
@@ -3714,9 +3716,8 @@ window.ROTEIRO = {
     referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: false },
     resumo:
       'O parque de rua, não de castelo: quarteirões de Nova York e São Francisco montados ' +
-      'como cenário de cinema, com o Beco Diagonal escondido no fundo. Este é o único dia ' +
-      'da viagem em que o rope drop do roteiro já estava certo — e ele resolve a maior fila ' +
-      'do parque antes das 10h.',
+      'como cenário de cinema, com o Beco Diagonal escondido no fundo. O rope drop no ' +
+      'Gringotts resolve a maior fila do parque antes das 10h.',
     avisos: [
       'A HORA DO DESFILE É PROPOSTA, NÃO CONFIRMAÇÃO. O roteiro assume 17h30, mas em anos ' +
       'anteriores ele rodou tanto às 17h30 quanto às 19h30. São duas horas de diferença no ' +
@@ -3728,10 +3729,9 @@ window.ROTEIRO = {
     ],
     notas: [
       { tipo: 'info', texto:
-        'O ROPE DROP NO GRINGOTTS ESTÁ CERTO, e é a primeira vez na viagem que eu confiro ' +
-        'isso e não acho erro.\n\n' +
-        'Nos cinco parques da Disney o rope drop caía sempre dentro da multidão do Early ' +
-        'Entry. Aqui não cai: o Early Park Admission da Universal é só para hóspede de hotel ' +
+        'O ROPE DROP NO GRINGOTTS FUNCIONA.\n\n' +
+        'Nos quatro dias de Disney o Early Entry enche as atrações da abertura antes de ' +
+        'vocês entrarem. Aqui não: o Early Park Admission da Universal é só para hóspede de hotel ' +
         'e alterna entre o Beco Diagonal e Hogsmeade — e a maioria usa em Hogsmeade, no ' +
         'Islands, o que deixa a primeira hora daqui mole.\n\n' +
         'Os números: o Gringotts faz ~15 minutos na primeira hora depois da abertura, 29 às ' +
@@ -3740,10 +3740,10 @@ window.ROTEIRO = {
         pesquisa: '2026-09-10' },
 
       { tipo: 'alerta', texto:
-        'TRÊS ATRAÇÕES QUE O ROTEIRO CITAVA NÃO EXISTEM MAIS. Nenhuma delas é escolha de ' +
-        'vocês — todas fecharam, e ficam registradas em "fechado" com data:\n\n' +
+        'TRÊS ATRAÇÕES DO PARQUE NÃO EXISTEM MAIS. Nenhuma delas é escolha de vocês — ' +
+        'todas fecharam, e ficam em "fechado" com data:\n\n' +
         'HOLLYWOOD RIP RIDE ROCKIT — fechou em 2025 para dar lugar ao Fast & Furious: ' +
-        'Hollywood Drift. CUIDADO COM A NOTÍCIA: o Hollywood Drift abriu em 16/09/2026, mas ' +
+        'Hollywood Drift. CUIDADO COM A NOTÍCIA: o Hollywood Drift abre em 16/09/2026, mas ' +
         'em Universal Studios Hollywood, na Califórnia. A versão da Flórida só chega em ' +
         '2027. Nada ocupa o lugar dele na viagem de vocês.\n\n' +
         'FAST & FURIOUS: SUPERCHARGED — fechou em 17/08/2026, último dia de operação em 16/08.\n\n' +
@@ -3782,13 +3782,14 @@ window.ROTEIRO = {
           'A tarde é a metade de baixo do anel: Men in Black, Simpsons, E.T. e o Bourne.',
           'Desfile, jantar, e o Beco à noite para fechar.',
         ] },
-      { letra: 'B', titulo: 'O desfile é às 17h30 — e provavelmente é',
-        gatilho: 'Vocês conferem no app e a sessão é 17h30, não 19h30.',
+      { letra: 'B', titulo: 'O desfile é às 17h30 ou às 19h30',
+        gatilho: 'Vocês conferem no app a hora do desfile.',
         passos: [
-          'É o cenário que o roteiro já assume. Não muda nada.',
-          'O Bourne termina 17h20 e vocês pegam lugar direto, sem intervalo.',
-          'Se a sessão for 19h30, o jantar sobe para 17h45 e o Beco à noite vem antes do ' +
-          'desfile, não depois — e o dia termina no desfile.',
+          'Às 17h30 é o cenário que o roteiro assume. Não muda nada.',
+          'O Bourne termina 17h20 e vocês vão direto para o lugar do desfile, na própria ' +
+          'Hollywood.',
+          'Se a sessão for 19h30, remarquem o Lombard’s para 17h45 pelo app da Universal, e ' +
+          'o Beco à noite vem antes do desfile, não depois — e o dia termina no desfile.',
         ] },
       { letra: 'B2', titulo: 'O parque fecha às 19h',
         gatilho: 'O horário oficial sai e o fechamento é 19h, não 21h ou 22h.',
@@ -3838,12 +3839,12 @@ window.ROTEIRO = {
           'deixa vocês percorrerem isso sem aperto.\n\n' +
           'POR QUE AGORA E NÃO DEPOIS: 15 minutos na primeira hora contra 83 às 15h, com pico ' +
           'de 190. Não existe segunda chance barata neste dia — a outra janela é depois das ' +
-          '21h, e vocês vão estar jantando.\n\n' +
+          '21h, e às 21h vocês já estão saindo do parque.\n\n' +
           'LOCKER OBRIGATÓRIO. Deixem os bolsos vazios antes de entrar na fila.',
         areaParque: 'Diagon Alley', acesso: ['rope-drop', 'standby'], acessoAlt: 'single-rider',
         acessoAltNota: 'Não na primeira vez: single rider pula o saguão dos duendes e os dois pré-shows.',
-        critico: true, duracaoMin: 40,
-        fila: { min: 15, quando: 'na primeira hora', pico: 190, estimado: 57, fonte: '2026-09-10' },
+        critico: true, locker: true, duracaoMin: 40,
+        fila: { min: 15, quando: 'na primeira hora', pico: 190, media: 57, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
       { id: 'b-1711-0950', hora: '09:50', ancora: 'referencia', tipo: 'atracao',
@@ -3857,35 +3858,37 @@ window.ROTEIRO = {
           'hora, e chega a 120 no pico. Fazer ele agora custa meia hora; fazer ao meio-dia ' +
           'custa o dobro.',
         areaParque: 'Production Central', acesso: ['standby'], acessoAlt: 'single-rider', duracaoMin: 35,
-        fila: { min: 30, quando: 'na segunda hora', pico: 120, estimado: 33, fonte: '2026-09-10' },
+        fila: { min: 30, quando: 'na segunda hora', pico: 120, media: 33, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
       { id: 'b-1711-1030', hora: '10:30', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Revenge of the Mummy',
-        descricao: 'Coaster no escuro com lançamento. Detector de metal na entrada',
+        descricao: 'Coaster no escuro com lançamento. Locker obrigatório',
         contexto:
           'Montanha-russa fechada com lançamento, fogo de verdade e uma parada no escuro total ' +
           'no meio. Curta e muito bem feita — é consenso como a melhor montanha-russa deste ' +
           'parque.\n\n' +
           'A FILA DELE DISTRIBUI IGUAL O DIA INTEIRO, com média de 44 minutos: não existe hora ' +
           'boa nem hora ruim, e por isso ele fica aqui, entre duas atrações que têm hora certa.\n\n' +
-          'DETECTOR DE METAL: nada nos bolsos, nem chave nem celular. Locker obrigatório.',
-        areaParque: 'New York', acesso: ['standby'], acessoAlt: 'single-rider', duracaoMin: 35,
-        fila: { min: 30, quando: 'de manhã', pico: 120, estimado: 44, fonte: '2026-09-10' },
+          'LOCKER OBRIGATÓRIO: nada solto no carrinho, nem chave nem celular. Não tem detector ' +
+          'de metal — ele só existe no Hulk, no VelociCoaster e no Stardust Racers.',
+        areaParque: 'New York', acesso: ['standby'], acessoAlt: 'single-rider', locker: true,
+        duracaoMin: 35,
+        fila: { min: 30, quando: 'de manhã', pico: 120, media: 44, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
       { id: 'b-1711-1110', hora: '11:10', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Despicable Me Minion Mayhem',
-        descricao: 'A terceira maior fila do parque, e ela estava fora do roteiro',
+        descricao: 'A terceira maior fila do parque',
         contexto:
           'Simulador com telas, em que vocês viram Minions. É bobo de propósito e funciona ' +
           'muito bem — não depende de inglês e é dos poucos que arranca risada de todo mundo.\n\n' +
-          'Ele faz 35 minutos de média, atrás só do Gringotts e do Mummy, e estava faltando no ' +
-          'roteiro. Está aqui porque a Minion Land já era parada do dia por causa do ' +
-          'Villain-Con, no bloco seguinte: são duas atrações na mesma área, sem caminhada ' +
+          'Ele faz 35 minutos de média, atrás só do Gringotts e do Mummy. Fica aqui porque a ' +
+          'Minion Land é parada do dia por causa do Villain-Con, no bloco seguinte: são duas ' +
+          'atrações na mesma área, sem caminhada ' +
           'entre elas.',
         areaParque: 'Minion Land', acesso: [], duracaoMin: 35,
-        fila: { min: 25, quando: 'antes do almoço', pico: 75, estimado: 35, fonte: '2026-09-10' },
+        fila: { min: 25, quando: 'antes do almoço', pico: 75, media: 35, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
       { id: 'b-1711-1145', hora: '11:45', ancora: 'referencia', tipo: 'atracao',
@@ -3907,7 +3910,7 @@ window.ROTEIRO = {
           'fachada da estação. O dragão em cima do Gringotts cospe fogo de tempos em tempos — ' +
           'dá para ouvir ele carregando antes.\n\n' +
           'OLLIVANDERS: a cerimônia da varinha, em que a varinha escolhe o bruxo. A daqui é a ' +
-          'versão maior, com mais salas que a de Hogsmeade que vocês fazem no dia 23. É de ' +
+          'versão maior, com mais salas que a de Hogsmeade, sugerida no dia 14. É de ' +
           'graça assistir; a varinha custa à parte.\n\n' +
           'É AGORA E NÃO À NOITE que dá para ver as vitrines com calma — o Beco à noite, no ' +
           'fim do dia, é para a luz, não para as lojas.',
@@ -3935,9 +3938,10 @@ window.ROTEIRO = {
           'graça.\n\n' +
           'A tarde é a hora dele — 22 minutos de média — e ele fica no World Expo, que é o ' +
           'canto do parque que vocês só passam uma vez.\n\n' +
-          'LOCKER OBRIGATÓRIO, mas com mais tolerância que o Mummy.',
-        areaParque: 'World Expo', acesso: ['standby'], acessoAlt: 'single-rider', duracaoMin: 40,
-        fila: { min: 20, quando: 'à tarde', pico: 60, estimado: 22, fonte: '2026-09-10' },
+          'LOCKER OBRIGATÓRIO.',
+        areaParque: 'World Expo', acesso: ['standby'], acessoAlt: 'single-rider', locker: true,
+        duracaoMin: 40,
+        fila: { min: 20, quando: 'à tarde', pico: 60, media: 22, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
       { id: 'b-1711-1500', hora: '15:00', ancora: 'referencia', tipo: 'atracao',
@@ -3951,7 +3955,7 @@ window.ROTEIRO = {
           'Kwik-E-Mart, a Duff. Vale andar cinco minutos por ela mesmo sem entrar em nada, e ' +
           'esses minutos estão dentro deste bloco.',
         areaParque: 'Springfield', acesso: [], duracaoMin: 40,
-        fila: { min: 20, quando: 'à tarde', pico: 55, estimado: 22, fonte: '2026-09-10' },
+        fila: { min: 20, quando: 'à tarde', pico: 55, media: 22, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
       { id: 'b-1711-1550', hora: '15:50', ancora: 'referencia', tipo: 'atracao',
@@ -3967,10 +3971,10 @@ window.ROTEIRO = {
           'ELE FICA NA HOLLYWOOD, não na DreamWorks Land. Quando a KidZone virou DreamWorks em ' +
           '2024 puseram um arco separando os dois, e a entrada do E.T. ficou do lado de fora.',
         areaParque: 'Hollywood', acesso: [], duracaoMin: 35, opcional: true,
-        fila: { min: 25, quando: 'no fim da tarde', pico: 70, estimado: 28, fonte: '2026-09-10' },
+        fila: { min: 25, quando: 'no fim da tarde', pico: 70, media: 28, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
-      { id: 'b-1711-1630', hora: '16:30', ancora: 'referencia', tipo: 'show',
+      { id: 'b-1711-1630', hora: '16:30', ancora: 'fixo', tipo: 'show',
         titulo: 'The Bourne Stuntacular',
         descricao: 'O melhor show de Orlando. Puramente visual',
         contexto:
@@ -3995,7 +3999,8 @@ window.ROTEIRO = {
           'desfile rodou tanto às 17h30 quanto às 19h30, e são duas horas de diferença. ' +
           'CONFIRAM NO APP DA UNIVERSAL e mexam daqui para a frente — este bloco, o jantar e o ' +
           'Beco à noite andam juntos.\n\n' +
-          'Peguem lugar 20 minutos antes, na Hollywood, perto do Mel’s. É onde o desfile ' +
+          'Peguem lugar assim que o Bourne acabar, por volta das 17h20, na Hollywood, perto ' +
+          'do Mel’s. É onde o desfile ' +
           'passa mais devagar e onde dá para sair rápido no fim.',
         areaParque: 'Hollywood', acesso: [], duracaoMin: 60, confirmarHorario: true, critico: true,
         pesquisa: '2026-09-10' },
@@ -4032,15 +4037,15 @@ window.ROTEIRO = {
         titulo: 'Voltar ao hotel',
         descricao: 'Uber. Andem até o CityWalk antes de chamar',
         contexto:
-          'Mesma regra do Kia Center: a tarifa dinâmica na porta do parque logo depois do ' +
-          'fechamento é brutal. O CityWalk fica no caminho e tem ponto próprio.\n\n' +
+          'A tarifa dinâmica na porta do parque logo depois do fechamento é brutal. O ' +
+          'CityWalk fica no caminho e tem ponto próprio.\n\n' +
           'Amanhã não tem parque e não tem alarme: o dia 18 começa às 9h.',
         acesso: [], duracaoMin: 45 },
     ],
     naoPerca: [
       { nome: 'A cerimônia da varinha no Ollivanders', quando: 'hoje', custo: 'grátis assistir',
         motivo: 'A varinha escolhe uma pessoa da plateia. A daqui é a versão maior, com mais ' +
-                'salas que a de Hogsmeade do dia 23 — se for para ver uma, é esta.' },
+                'salas que a de Hogsmeade — se for para ver uma, é esta.' },
       { nome: 'O dragão do Gringotts cuspindo fogo', quando: 'hoje', custo: 'grátis',
         motivo: 'A cada dez ou quinze minutos, e dá para ouvir ele carregando antes. De noite ' +
                 'é bem melhor: o calor chega na calçada.' },
@@ -4063,10 +4068,10 @@ window.ROTEIRO = {
         { texto: 'Ingresso do jogo do Orlando Magic à mão nos dois celulares', critico: true,
           motivo: 'Jogo às 19h no Kia Center. Confiram o horário: a NBA remarca por TV, e ' +
                   'isso muda perto da data.' },
-        { texto: 'Mochila PEQUENA para amanhã — o Kia Center não aceita mochila', critico: true,
-          motivo: 'A arena NÃO aceita bolsa: só uma clutch de 11 × 16 × 2,5 cm, menor que a ' +
-                  'maioria das carteiras. Se saírem de casa com a mochila do parque, vão ter ' +
-                  'que pagar armário Binbox na Church St.' },
+        { texto: 'Para a arena amanhã, só bolso ou clutch', critico: true,
+          motivo: 'O Kia Center NÃO aceita bolsa: só uma clutch de 11 × 16 × 2,5 cm, menor que ' +
+                  'a maioria das carteiras. A mochila e as sacolas do shopping ficam no hotel ' +
+                  'na volta das 14h15 — ou vão para um armário Binbox na Church St.' },
         { texto: 'Guardar as compras de hoje e esvaziar a mochila', critico: false,
           motivo: 'Sair com a mochila cheia do dia anterior é começar errado.' },
         { texto: 'Conferir a abertura e o fechamento do Epic no dia 19, no app da Universal',
@@ -4083,18 +4088,20 @@ window.ROTEIRO = {
         usar: false,
         motivo: 'Decisão fechada: sem Express Pass em nenhum dia da Universal. Aqui ele seria ' +
                 'ainda menos justificável — o rope drop resolve a única fila que importa.',
-        alternativa: 'Express Pass Now dentro do parque (US$ 20–30, uma atração) se um dia virar.',
+        alternativa: 'Universal Express Now, comprado no app dentro do parque: US$ 20 a 25 por ' +
+                     'pessoa e por atração, com a lista mudando ao longo do dia.',
       },
       custoEstimadoCasal: { min: 0, max: 0, moeda: 'USD' },
       extras: [
         { nome: 'Lockers obrigatórios',
-          custo: { min: 0, max: 6, moeda: 'USD' },
+          custo: { min: 0, max: 18, moeda: 'USD' },
           texto:
             'Três atrações de hoje exigem guardar tudo antes de embarcar: Gringotts, Revenge ' +
-            'of the Mummy e Men in Black. O Mummy tem DETECTOR DE METAL — nada nos bolsos, ' +
-            'nem chave nem celular.\n\n' +
+            'of the Mummy e Men in Black. Nenhuma tem detector de metal — ele só existe no ' +
+            'Hulk, no VelociCoaster e no Stardust Racers.\n\n' +
             'O locker padrão é gratuito pelo tempo da fila mais a duração da atração; o grande ' +
-            'custa US$ 2 a 3. Cada uso come 10 a 15 minutos que a duração dos blocos não ' +
+            'é pago, de US$ 3 a 6 conforme a fonte. Cada uso come 10 a 15 minutos que a ' +
+            'duração dos blocos não ' +
             'conta — e são três hoje. Levem o mínimo possível nos bolsos.' },
         { nome: 'Varinha do Ollivanders',
           custo: { min: 60, max: 75, moeda: 'USD' },
@@ -4123,7 +4130,7 @@ window.ROTEIRO = {
       },
       fechado: [
         'Hollywood Rip Ride Rockit — fechou em 2025 para dar lugar ao Fast & Furious: ' +
-        'Hollywood Drift. ATENÇÃO: o Hollywood Drift abriu em 16/09/2026 na CALIFÓRNIA; a ' +
+        'Hollywood Drift. ATENÇÃO: o Hollywood Drift abre em 16/09/2026 na CALIFÓRNIA; a ' +
         'versão da Flórida só chega em 2027. Nada ocupa o lugar dele durante a viagem.',
         'Fast & Furious: Supercharged — fechou em 17/08/2026, último dia de operação em 16/08. ' +
         'Com ele foi embora a única atração da San Francisco, que virou área de passagem.',
@@ -4193,15 +4200,15 @@ window.ROTEIRO = {
         pesquisa: '2026-09-10' },
 
       { tipo: 'info', texto:
-        'O MILLENIA É A 8 MINUTOS DO LAKE EOLA — 6,3 milhas. O hotel é a 25 ou 30 minutos ' +
-        'dos dois. Ou seja: a ida ao hotel no meio da tarde custa quase uma hora de carro e ' +
-        'duas corridas, para terminar a oito minutos de onde vocês já estavam.\n\n' +
+        'O MILLENIA FICA A UNS 13 MINUTOS DO LAKE EOLA SEM TRÂNSITO — 11 km. O hotel é a 25 ' +
+        'ou 30 minutos dos dois. Ou seja: a ida ao hotel no meio da tarde custa quase uma ' +
+        'hora de carro e duas corridas, para terminar a treze minutos de onde vocês já estavam.\n\n' +
         'Ela continua no roteiro pelo motivo da bolsa, não por geografia. Se as compras ' +
         'couberem numa sacola, o plano B é melhor.',
         pesquisa: '2026-09-10' },
 
       { tipo: 'info', texto:
-        'O JANTAR TEM 65 MINUTOS E É UMA CHURRASCARIA. É apertado e não adianta fingir que ' +
+        'O JANTAR TEM 65 MINUTOS NUMA STEAKHOUSE. É apertado e não adianta fingir que ' +
         'não é. O Kres fica na 17 W Church St, cinco minutos a pé da arena, e restaurante ' +
         'colado em ginásio sabe o que é noite de jogo: avisem na chegada que vocês têm hora.\n\n' +
         'Se atrasar, comam leve e completem lá dentro — a arena vende comida, cara, e o ' +
@@ -4221,7 +4228,7 @@ window.ROTEIRO = {
       { letra: 'B', titulo: 'Vocês compraram pouco',
         gatilho: 'Cabe tudo numa sacola só, ou vocês não compraram nada.',
         passos: [
-          'PULEM A VOLTA AO HOTEL. Millenia → centro são 8 minutos.',
+          'PULEM A VOLTA AO HOTEL. Millenia → centro são uns 13 minutos sem trânsito.',
           'Ganham duas horas no Lake Eola: dá para andar a volta inteira de 1,4 km em torno ' +
           'do lago, e ainda tomar alguma coisa no Relax Grill.',
           'A sacola vai para um armário Binbox na Church St. antes de entrar na arena.',
@@ -4337,12 +4344,12 @@ window.ROTEIRO = {
         titulo: 'Jantar — Kres Chophouse',
         descricao: '17 W Church St. Cinco minutos a pé da arena. Avisem que têm hora',
         contexto:
-          'Churrascaria americana no centro histórico, na Church Street: carnes, frutos do ' +
+          'Steakhouse no centro histórico, na Church Street: carnes, frutos do ' +
           'mar e opções vegetarianas com toque mediterrâneo. Segunda a sexta serve das 11h30 ' +
           'às 23h30.\n\n' +
-          'A LOCALIZAÇÃO É O QUE FAZ ELE GANHAR: fica no mesmo quarteirão do Kia Center e dos ' +
-          'armários Binbox. Do prato à catraca são cinco minutos a pé.\n\n' +
-          'SÃO 65 MINUTOS E É POUCO PARA UMA CHURRASCARIA. Avisem na chegada que vocês têm ' +
+          'A LOCALIZAÇÃO É O QUE FAZ ELE GANHAR: do prato à catraca do Kia Center são cinco ' +
+          'minutos a pé, e os armários Binbox ficam no caminho.\n\n' +
+          'SÃO 65 MINUTOS E É POUCO PARA UMA STEAKHOUSE. Avisem na chegada que vocês têm ' +
           'jogo às 19h — restaurante colado em arena lida com isso toda semana. Se atrasar, ' +
           'comam leve e completem lá dentro.\n\n' +
           'RESERVA RECOMENDADA: é noite de jogo da NBA no centro, e o restaurante enche por ' +
@@ -4460,7 +4467,7 @@ window.ROTEIRO = {
       idioma: null,
       fechado: [
         'Ace Cafe Orlando — fechou em maio de 2023, depois de seis anos, e o terreno foi ' +
-        'vendido para virar um prédio alto. Estava no roteiro como opção de jantar.',
+        'vendido para virar um prédio alto.',
       ],
     },
   },
@@ -4498,8 +4505,7 @@ window.ROTEIRO = {
     ],
     notas: [
       { tipo: 'alerta', texto:
-        'O ROPE DROP MUDOU DE LUGAR, e é a quinta vez na viagem que ele estava dentro da ' +
-        'multidão do Early Entry.\n\n' +
+        'O ROPE DROP É NA DARK UNIVERSE, longe da multidão do Early Park Admission.\n\n' +
         'O MECANISMO, confirmado em fevereiro de 2026: durante o Early Park Admission o ' +
         'Celestial Park fica aberto para TODO MUNDO, e a checagem de hóspede de hotel é feita ' +
         'na porta de cada land. Vocês entram no parque cedo, mas não passam dos portais que ' +
@@ -4507,8 +4513,8 @@ window.ROTEIRO = {
         'QUEM PARTICIPA: desde fevereiro de 2026, conferido de novo em 16/06/2026, são a ' +
         'Ministry of Magic, a Super Nintendo World e a Isle of Berk. O Stardust Racers e o ' +
         'Carrossel saíram, e a Dark Universe também.\n\n' +
-        'Por isso o dia começa no Monsters Unchained. O bloco das 9h antigo, no Battle at the ' +
-        'Ministry, era exatamente a fila de quem entrou uma hora antes.\n\n' +
+        'Por isso o dia começa no Monsters Unchained: às 9h, o Battle at the Ministry já tem ' +
+        'a fila de quem entrou uma hora antes.\n\n' +
         'A LISTA JÁ MUDOU PELO MENOS TRÊS VEZES EM DEZOITO MESES. Se em novembro a Dark ' +
         'Universe voltar para o EPA, vale o plano B: os dois blocos trocam de lugar.',
         pesquisa: '2026-09-10' },
@@ -4521,21 +4527,18 @@ window.ROTEIRO = {
         'BATTLE AT THE MINISTRY: 76 a 109 minutos de média. Nas últimas duas ou três horas ' +
         'cai para 45 a 75, e na última hora a mediana cai 74%.\n\n' +
         'As duas cabem no fim, uma depois da outra — e é isso que obriga o jantar às 17h.\n\n' +
-        'E UMA CORREÇÃO: o roteiro antigo dizia que as três de maior demanda eram Ministry, ' +
-        'Monsters Unchained e Stardust. O Monsters é uma das MENORES filas do parque, 13 a 15 ' +
-        'minutos. As três maiores são Mine-Cart, Ministry e Mario Kart.',
+        'AS TRÊS MAIORES FILAS são Mine-Cart, Ministry e Mario Kart. O Monsters Unchained é ' +
+        'uma das MENORES, 13 a 15 minutos.',
         pesquisa: '2026-09-10' },
 
       { tipo: 'info', texto:
-        'O GUIA OFICIAL DE SEGURANÇA DA UNIVERSAL, vigente desde 04/10/2025, corrige o que o ' +
-        'roteiro dizia das atrações.\n\n' +
+        'O GUIA OFICIAL DE SEGURANÇA DA UNIVERSAL, vigente desde 04/10/2025:\n\n' +
         'LOCKER OBRIGATÓRIO em só três: Stardust Racers, Monsters Unchained e Hiccup’s Wing ' +
         'Gliders. DETECTOR DE METAL só no Stardust.\n\n' +
         'Mine-Cart e Curse of the Werewolf pedem para prender tudo que estiver solto. No ' +
         'Dragon Racer’s Rally há compartimento no próprio brinquedo.\n\n' +
-        'E três descrições estavam amenas demais: Curse, Hiccup’s e Mine-Cart são montanhas-' +
-        'russas de alta velocidade, não "familiares"; e no Dragon Racer’s Rally é você quem ' +
-        'controla a inclinação e as inversões.',
+        'Curse, Hiccup’s e Mine-Cart são montanhas-russas de alta velocidade; no Dragon ' +
+        'Racer’s Rally é você quem controla a inclinação e as inversões.',
         pesquisa: '2026-09-10' },
 
       { tipo: 'info', texto:
@@ -4543,8 +4546,7 @@ window.ROTEIRO = {
         'Town.\n\n' +
         'O Epic não usa o estacionamento da Universal: o ponto de Uber é próprio, na 1222 Epic ' +
         'Blvd, a uns cinco minutos a pé da entrada. É por isso que dá para sair às 7h15 e não ' +
-        'às 6h45 — a caminhada longa do estacionamento, que o roteiro antigo contava, não ' +
-        'existe para quem chega de Uber.',
+        'às 6h45 — a caminhada longa do estacionamento não existe para quem chega de Uber.',
         pesquisa: '2026-09-10' },
 
       { tipo: 'info', texto:
@@ -4557,11 +4559,9 @@ window.ROTEIRO = {
         pesquisa: '2026-09-10' },
 
       { tipo: 'info', texto:
-        'POR QUE ESTE DIA É 19/11 E NÃO 23/11. O parque estava marcado para a segunda-feira da ' +
-        'semana de Thanksgiving, dentro do bloqueio de 23 a 27/11. A quinta 19/11 é apontada ' +
-        'como um dos dois dias mais vazios de toda a segunda metade de novembro, e o Islands ' +
-        'foi para 23/11 no lugar.\n\n' +
-        'O CUSTO DA TROCA: hoje vocês acordam no dia seguinte ao jogo da NBA.',
+        'POR QUE 19/11. A quinta 19/11 é apontada como um dos dois dias mais vazios de toda a ' +
+        'segunda metade de novembro, fora da semana de Thanksgiving, de 23 a 27/11.\n\n' +
+        'O CUSTO: hoje vocês acordam no dia seguinte ao jogo da NBA.',
         pesquisa: '2026-09-10' },
     ],
     planos: [
@@ -4589,9 +4589,11 @@ window.ROTEIRO = {
         passos: [
           'O Ministry, o Mine-Cart e a saída acompanham o fechamento: o Mine-Cart é sempre a ' +
           'última hora e o Ministry começa 1h40 antes dela.',
-          'O jantar NÃO muda: a reserva tem hora.',
-          'Com fechamento às 20h, o Ministry sobe para 16h20 e o jantar vai para depois dele — ' +
-          'remarquem a reserva para as 18h.',
+          'FECHAMENTO ÀS 22H: o jantar das 17h fica; o Ministry vai para 19h20, o Mine-Cart ' +
+          'para 21h e a saída para 22h.',
+          'FECHAMENTO ÀS 20H: o Ministry sobe para 17h20 e o Mine-Cart para 19h, e o jantar das ' +
+          '17h bate no Ministry. Remarquem o Atlantic para perto das 15h45, pelo app da ' +
+          'Universal; sem mesa, o Mead Hall, em Berk, não pede reserva.',
         ] },
       { letra: 'C', titulo: 'O Mine-Cart parou às 20h',
         gatilho: 'Vocês chegam na Super Nintendo World e ele está fora do ar.',
@@ -4649,7 +4651,7 @@ window.ROTEIRO = {
           'LOCKER OBRIGATÓRIO. Bolsos vazios antes de entrar na fila.',
         areaParque: 'Dark Universe', acesso: ['rope-drop', 'standby'], acessoAlt: 'single-rider',
         locker: 'obrigatorio', critico: true, duracaoMin: 35,
-        fila: { min: 10, quando: 'na abertura', pico: 45, estimado: 14, fonte: '2026-09-10' },
+        fila: { min: 10, quando: 'na abertura', pico: 45, media: 14, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
       { id: 'b-1911-0940', hora: '09:40', ancora: 'referencia', tipo: 'atracao',
@@ -4663,7 +4665,7 @@ window.ROTEIRO = {
           'depois da abertura, ela ainda não montou.\n\n' +
           'Sem locker obrigatório, mas prendam tudo que estiver solto.',
         areaParque: 'Dark Universe', acesso: ['standby'], acessoAlt: 'single-rider', duracaoMin: 35,
-        fila: { min: 20, quando: 'logo depois da abertura', pico: 75, estimado: 46, fonte: '2026-09-10' },
+        fila: { min: 20, quando: 'logo depois da abertura', pico: 75, media: 46, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
       { id: 'b-1911-1020', hora: '10:20', ancora: 'referencia', tipo: 'atracao',
@@ -4679,7 +4681,7 @@ window.ROTEIRO = {
           'zero às 9h, e no meio da manhã costuma estar baixa.',
         areaParque: 'Celestial Park', acesso: ['standby'], acessoAlt: 'single-rider', locker: 'detector',
         duracaoMin: 40,
-        fila: { min: 20, quando: 'no meio da manhã', pico: 105, estimado: 25, fonte: '2026-09-10' },
+        fila: { min: 20, quando: 'no meio da manhã', pico: 105, media: 25, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
       { id: 'b-1911-1105', hora: '11:05', ancora: 'referencia', tipo: 'atracao',
@@ -4697,7 +4699,7 @@ window.ROTEIRO = {
           'E reparem na decoração: é o primeiro Natal da Super Nintendo World.',
         areaParque: 'Super Nintendo World', acesso: ['standby'], acessoAlt: 'single-rider',
         critico: true, duracaoMin: 70,
-        fila: { min: 60, quando: 'entre 11h e 12h', pico: 170, estimado: 72, fonte: '2026-09-10' },
+        fila: { min: 60, quando: 'entre 11h e 12h', pico: 170, media: 72, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
       { id: 'b-1911-1215', hora: '12:15', ancora: 'referencia', tipo: 'atracao',
@@ -4710,7 +4712,7 @@ window.ROTEIRO = {
           'O meio do dia é a hora mais baixa das filas médias: quando as grandes estão no pico, ' +
           'as pequenas esvaziam.',
         areaParque: 'Super Nintendo World', acesso: ['standby'], duracaoMin: 40,
-        fila: { min: 20, quando: 'no meio do dia', pico: 95, estimado: 34, fonte: '2026-09-10' },
+        fila: { min: 20, quando: 'no meio do dia', pico: 95, media: 34, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
       { id: 'b-1911-1300', hora: '13:00', ancora: 'referencia', tipo: 'refeicao',
@@ -4734,15 +4736,15 @@ window.ROTEIRO = {
         descricao: 'Isle of Berk. Lançamento de alta velocidade, com trecho de ré. Locker',
         contexto:
           'Montanha-russa de lançamento no mundo de Como Treinar o Seu Dragão, com aceleração ' +
-          'forte, subidas, quedas e um trecho de ré. Não é suave — o roteiro antigo dizia que ' +
-          'era. A vila viking em volta é das mais bonitas do parque, e hoje está no Snoggletog, ' +
+          'forte, subidas, quedas e um trecho de ré. Não é suave. A vila viking em volta é das ' +
+          'mais bonitas do parque, e hoje está no Snoggletog, ' +
           'o Natal de Berk.\n\n' +
           'A fila dela piora no fim da tarde, por volta das 17h. No começo da tarde ainda está ' +
           'no meio do caminho.\n\n' +
           'LOCKER OBRIGATÓRIO.',
         areaParque: 'Isle of Berk', acesso: ['standby'], acessoAlt: 'single-rider', locker: 'obrigatorio',
         duracaoMin: 45,
-        fila: { min: 30, quando: 'no começo da tarde', pico: 120, estimado: 38, fonte: '2026-09-10' },
+        fila: { min: 30, quando: 'no começo da tarde', pico: 120, media: 38, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
       { id: 'b-1911-1500', hora: '15:00', ancora: 'referencia', tipo: 'atracao',
@@ -4750,11 +4752,11 @@ window.ROTEIRO = {
         descricao: 'Você controla a inclinação — e as inversões',
         contexto:
           'Braços que erguem o carrinho no alto e giram, e é você quem controla quanto ele ' +
-          'inclina — dá para virar de cabeça para baixo ou não. Não é "leve", como o roteiro ' +
-          'antigo dizia: a intensidade é escolha de quem está sentado.\n\n' +
+          'inclina — dá para virar de cabeça para baixo ou não. A intensidade é escolha de quem ' +
+          'está sentado.\n\n' +
           'Há compartimento no próprio brinquedo para guardar o que estiver solto.',
         areaParque: 'Isle of Berk', acesso: ['standby'], duracaoMin: 40,
-        fila: { min: 25, quando: 'à tarde', pico: 100, estimado: 37, fonte: '2026-09-10' },
+        fila: { min: 25, quando: 'à tarde', pico: 100, media: 37, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
       { id: 'b-1911-1545', hora: '15:45', ancora: 'referencia', tipo: 'atracao',
@@ -4764,13 +4766,13 @@ window.ROTEIRO = {
           'Barcos giratórios em que vocês operam canhões de água contra os outros barcos — e ' +
           'levam água de volta, inclusive de jatos que disparam sem aviso. O guia oficial da ' +
           'Universal é direto: os passageiros vão se molhar, possivelmente encharcar.\n\n' +
-          'MESMO CRITÉRIO DO KALI RIVER RAPIDS NO DIA 13: se a tarde estiver fria, pulem sem ' +
-          'culpa. Ele saiu das 17h40, já escurecendo e antes do jantar, para cá, com o sol ' +
-          'ainda alto.\n\n' +
+          'O CRITÉRIO É O MESMO DO KALI RIVER RAPIDS NO DIA 13 — a temperatura: se a tarde ' +
+          'estiver fria, pulem sem culpa. Ele fica às 15h45 de propósito, com o sol ainda ' +
+          'alto.\n\n' +
           'Se fizerem: capa de chuva vestida e celular no Ziploc.',
         areaParque: 'Isle of Berk', acesso: ['standby'], molha: true, opcional: true,
         duracaoMin: 25,
-        fila: { min: 10, quando: 'qualquer hora', pico: 65, estimado: 13, fonte: '2026-09-10' },
+        fila: { min: 10, quando: 'qualquer hora', pico: 65, media: 13, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
       { id: 'b-1911-1615', hora: '16:15', ancora: 'referencia', tipo: 'livre',
@@ -4822,7 +4824,7 @@ window.ROTEIRO = {
           'HORA A CONFIRMAR: este bloco segue o fechamento do parque. O roteiro assume 21h.',
         areaParque: 'Ministry of Magic', acesso: ['standby'], acessoAlt: 'single-rider', critico: true,
         confirmarHorario: true, duracaoMin: 90,
-        fila: { min: 45, quando: 'nas últimas 2–3 horas', pico: 185, estimado: 76, fonte: '2026-09-10' },
+        fila: { min: 45, quando: 'nas últimas 2–3 horas', pico: 185, media: 76, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
       { id: 'b-1911-2000', hora: '20:00', ancora: 'fixo', tipo: 'atracao',
@@ -4840,7 +4842,7 @@ window.ROTEIRO = {
           'Sem locker obrigatório, mas prendam tudo que estiver solto.',
         areaParque: 'Super Nintendo World', acesso: ['standby'], acessoAlt: 'single-rider',
         critico: true, confirmarHorario: true, duracaoMin: 50,
-        fila: { min: 20, quando: 'na última hora', pico: 205, estimado: 113, fonte: '2026-09-10' },
+        fila: { min: 20, quando: 'na última hora', pico: 205, media: 113, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
       { id: 'b-1911-2100', hora: '21:00', ancora: 'fixo', tipo: 'deslocamento',
@@ -4889,7 +4891,7 @@ window.ROTEIRO = {
         { texto: 'Separar a roupa suja da semana', critico: false,
           motivo: 'Amanhã às 10h é a segunda rodada de lavanderia, com a roupa dos dias 15 a 20.' },
         { texto: 'Guardar as compras e esvaziar a mochila do parque', critico: false,
-          motivo: 'Amanhã é dia de cidade pequena e de rua. A mochila de parque fica.' },
+          motivo: 'Amanhã é dia de Old Town e de carro. A mochila de parque fica.' },
         { texto: 'Celular e power bank carregando', critico: false,
           motivo: 'Hoje foram catorze horas de parque com o app aberto o tempo todo.' },
       ],
@@ -4910,11 +4912,11 @@ window.ROTEIRO = {
       custoEstimadoCasal: { min: 0, max: 0, moeda: 'USD' },
       extras: [
         { nome: 'Lockers — só três atrações hoje',
-          custo: { min: 0, max: 3, moeda: 'USD' },
+          custo: { min: 0, max: 18, moeda: 'USD' },
           texto: 'Locker obrigatório só no Stardust Racers, no Monsters Unchained e no ' +
                  'Hiccup’s Wing Gliders, e detector de metal só no Stardust — pelo guia ' +
                  'oficial da Universal. O locker comum é grátis pelo tempo da fila mais a ' +
-                 'atração; o grande custa US$ 3, e passar do tempo custa US$ 3 a cada meia hora.' },
+                 'atração; o grande é pago, de US$ 3 a 6 conforme a fonte.' },
         { nome: 'Power-Up Band',
           custo: { min: 40, max: 40, moeda: 'USD' },
           texto: 'Comprem se quiserem jogar os desafios interativos da Super Nintendo World. ' +
@@ -4941,8 +4943,7 @@ window.ROTEIRO = {
           'andando.\n\n' +
           'ESTES DOIS, mais as áreas de brincar acima, SÃO A DIFERENÇA INTEIRA entre um dia e ' +
           'dois no Epic Universe. O parque tem 11 atrações de brinquedo, 2 shows e 2 áreas de ' +
-          'brincar — e as 11 de brinquedo estão todas neste dia. Foi por isso que o segundo ' +
-          'turno pôde virar a despedida no Disney Springs.',
+          'brincar — e as 11 de brinquedo estão todas neste dia.',
       },
       fechado: [],
     },
@@ -7124,6 +7125,15 @@ window.ROTEIRO = {
             'ao ar livre. Usem mobile order e comam nas mesas de fora, de frente para o ' +
             'piano — comer dentro perde o motivo da escolha.' },
 
+    { id: 'r-fords-garage', nome: 'Ford’s Garage', data: '2026-11-12', hora: '13:00',
+      refeicao: 'almoco', local: 'Orlando International Premium Outlets · 4971 International Dr',
+      alternativas: [],
+      precisaReserva: false, janelaAbre: null, janelaHora: null,
+      canal: 'Site do restaurante: reserva ou fila de espera', blocoId: 'b-1211-1300',
+      nota: 'Mesa com garçom dentro do outlet, num salão de oficina dos anos 1920 com Fords ' +
+            'antigos. Hambúrgueres, comida americana e cerveja artesanal. Segunda a sábado, ' +
+            'das 11h às 22h. A conta já vem com 20% de taxa de serviço, no lugar da gorjeta.' },
+
     { id: 'r-satuli', nome: 'Satu’li Canteen', data: '2026-11-13', hora: '12:30',
       refeicao: 'almoco', local: 'Animal Kingdom · Pandora', alternativas: ['Flame Tree Barbecue, na Discovery Island', 'Harambe Market, na \u00c1frica'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
@@ -7158,8 +7168,7 @@ window.ROTEIRO = {
                      'passa de uma hora'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Balcão, sem reserva', blocoId: 'b-1411-2100',
-      nota: 'Balcão dentro da Hogsmeade decorada — não leva gorjeta. Vocês voltam a comer ' +
-            'aqui no almoço do dia 23; se quiserem variar, é o dia 23 que muda.' },
+      nota: 'Balcão dentro da Hogsmeade decorada — não leva gorjeta.' },
 
     { id: 'r-docking-bay', nome: 'Docking Bay 7', data: '2026-11-15', hora: '12:20',
       refeicao: 'almoco', local: 'Hollywood Studios · Galaxy’s Edge',
@@ -7216,7 +7225,7 @@ window.ROTEIRO = {
       alternativas: ['The Boheme (Grand Bohemian)'],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
       canal: 'OpenTable / site do restaurante', blocoId: 'b-1811-1745',
-      nota: 'Churrascaria no mesmo quarteirão do Kia Center — do prato à catraca são cinco ' +
+      nota: 'Steakhouse no centro de Orlando — do prato à catraca do Kia Center são cinco ' +
             'minutos a pé. Noite de jogo da NBA enche o centro: reservem. Avisem na chegada ' +
             'que vocês têm hora.' },
 
@@ -7697,12 +7706,13 @@ window.ROTEIRO = {
         'é a data em que a compra antecipada seria possível — às 7h ET, no meio da conexão ' +
         'em Bogotá, que é o pior momento da viagem para depender de internet.\n\n' +
         'E não precisa. O Single Pass do Flight of Passage se compra NA HORA, pelo app, de ' +
-        'pé dentro do Animal Kingdom. A decisão é das 17h30 do dia 13, olhando a fila — ' +
-        'não das 7h de hoje, olhando um portão de embarque.\n\n' +
-        'O plano do dia 13 é fazer a atração no fim do dia, quando a fila cai para 40 a 55 ' +
-        'minutos contra 90 a 120 o resto do tempo. Comprem só se o parque fechar cedo ' +
-        'demais para esse plano caber, ou se 40 minutos de fila no fim de dez horas de ' +
-        'parque for demais no dia.',
+        'pé dentro do Animal Kingdom, se ainda houver janela de retorno. A decisão é das ' +
+        '17h30 do dia 13, olhando a fila — não das 7h de hoje, olhando um portão de ' +
+        'embarque.\n\n' +
+        'O plano do dia 13 é fazer a atração no fim do dia, quando a fila cai para 40 a 65 ' +
+        'minutos contra 100 a 180 no pico. Comprem só se o parque fechar cedo demais para ' +
+        'esse plano caber, ou se 50 minutos de fila no fim de dez horas de parque for ' +
+        'demais no dia.',
       restauranteIds: [] },
 
     { id: 'ck-ll-1211', dataAlvo: '2026-11-12', hora: '07:00', fuso: 'ET',
@@ -8125,9 +8135,9 @@ window.ROTEIRO = {
         texto:
           'ENQUANTO O DESFILE PASSA, O PARQUE FICA CORTADO AO MEIO. A rota vai da ' +
           'Frontierland pela Liberty Square, contorna o hub e desce a Main Street — ' +
-          'e ninguém atravessa essa linha até acabar. Se vocês estiverem do lado ' +
-          'oeste (Frontierland, Liberty Square, Adventureland), fiquem lá: a próxima ' +
-          'atração do roteiro é a Jungle Cruise, que é do mesmo lado, de propósito.',
+          'e ninguém atravessa essa linha até acabar. Vocês assistem da Liberty Square ' +
+          'e saem por trás da rota, pela Fantasyland, para a Tomorrowland — nunca ' +
+          'pelo hub. É assim que o TRON das 15h30 fica de pé.',
         pesquisa: '2026-09-09',
       },
     },
