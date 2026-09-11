@@ -5050,8 +5050,8 @@ window.ROTEIRO = {
           'Lavanderia às 10h, a única rodada da viagem.',
           'Almoço no El Cilantrillo, dentro do Old Town, e uma volta por lá até o carro.',
           'Carro às 15h na Avis do Old Town e descanso no hotel.',
-          'Às 17h20, de volta ao Old Town, já de carro. Jantar no Red Lobster às 18h30, lugar ' +
-          'na calçada às 20h10 e desfile às 20h30.',
+          'Às 17h20, de volta ao Old Town, já de carro. Jantar no World Food Trucks, lugar na ' +
+          'calçada às 20h10 e desfile às 20h30.',
         ] },
       { letra: 'B', titulo: 'O Epic de ontem deu errado',
         gatilho: 'Uma atração grande ficou de fora ontem — o Mine-Cart parado, chuva — e a ' +
@@ -5075,8 +5075,9 @@ window.ROTEIRO = {
       { letra: 'C', titulo: 'Chuva à noite',
         gatilho: 'A previsão do meio-dia dá chuva para o fim da tarde ou a noite.',
         passos: [
-          'As refeições não mudam: o El Cilantrillo e o Red Lobster são os dois salão fechado, ' +
-          'e o Red Lobster fica a três minutos de carro do hotel.',
+          'Invertam as refeições: World Food Trucks no almoço, El Cilantrillo no jantar. Os ' +
+          'trucks são ao ar livre, e o site não diz se há área coberta; o El Cilantrillo é ' +
+          'salão fechado, aberto até a meia-noite na sexta.',
           'O desfile é ao ar livre, com carro de coleção. Confiram a página de eventos do Old ' +
           'Town antes de sair do hotel.',
           'Se o desfile não sair, a noite termina no jantar. Amanhã a saída é 8h.',
@@ -5176,21 +5177,19 @@ window.ROTEIRO = {
         acesso: [], duracaoMin: 70, pesquisa: '2026-09-11' },
 
       { id: 'b-2011-1830', hora: '18:30', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — Red Lobster',
-        descricao: 'Na mesma 192, ao lado do Old Town. Na sexta, até as 23h',
+        titulo: 'Jantar — World Food Trucks',
+        descricao: 'Mais de 100 food trucks, a 300 m do Old Town. Estacionamento grátis',
         contexto:
-          'Mesa com garçom na 5690 W Irlo Bronson, a 1,9 km do hotel — três minutos de carro — ' +
-          'e praticamente ao lado do Old Town, onde vocês já estão.\n\n' +
-          'O Ultimate Feast sai por US$ 32,99, com cauda de lagosta, snow crab e camarão; ' +
-          'pratos simples começam perto de US$ 20, e os Cheddar Bay Biscuits vêm de cortesia. ' +
-          'Contem US$ 50 a 70 no casal, já com a gorjeta.\n\n' +
-          'Na sexta ele vai das 11h às 23h. A rede trabalha sobretudo com lista de espera, mas ' +
-          'esta unidade tem Priority Seating no OpenTable: se quiserem garantir a mesa, ponham ' +
-          'o nome antes de sair do hotel.\n\n' +
-          'ÀS 20H10 VOCÊS VOLTAM ao Old Town para pegar lugar na calçada — são poucos minutos ' +
-          'de carro e o estacionamento de lá é grátis.\n\n' +
-          'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
-        endereco: '5690 W Irlo Bronson Memorial Hwy', restauranteId: 'r-red-lobster',
+          'Um estacionamento com mais de cem food trucks: mexicano, venezuelano, colombiano, ' +
+          'cubano, porto-riquenho, brasileiro, coreano, japonês, italiano, caribenho. Cada um ' +
+          'escolhe o seu — e é à noite, com tudo aceso, que o lugar faz sentido.\n\n' +
+          'FICA NA PRÓPRIA 192, a uns 300 metros do Old Town. Vão de carro: são poucos ' +
+          'minutos, o estacionamento é grátis, e às 20h10 vocês voltam para pegar lugar na ' +
+          'calçada.\n\n' +
+          'Aberto das 11h às 2h, todos os dias. O site não diz se há área coberta: com chuva ' +
+          'prevista, vale o plano C.\n\n' +
+          'Food truck é balcão: não leva gorjeta.',
+        endereco: '5811 W Irlo Bronson Memorial Hwy', restauranteId: 'r-world-food-trucks',
         localId: 'world-food-trucks', acesso: [], duracaoMin: 90, pesquisa: '2026-09-11' },
 
       { id: 'b-2011-2010', hora: '20:10', ancora: 'fixo', tipo: 'espera',
@@ -5542,7 +5541,7 @@ window.ROTEIRO = {
           'DO RESTAURANTE AO HOTEL são 1,9 km — três minutos de Uber, US$ 7 a 10. O carro de ' +
           'vocês passou o dia no estacionamento do hotel.\n\n' +
           'AMANHÃ É SEAWORLD: alarme às 6h45, e a mochila já está pronta.',
-        restauranteId: 'r-red-lobster-2111', endereco: '5690 W Irlo Bronson Memorial Hwy',
+        restauranteId: 'r-red-lobster', endereco: '5690 W Irlo Bronson Memorial Hwy',
         localId: 'red-lobster', acesso: [], duracaoMin: 55, pesquisa: '2026-09-11' },
     ],
     naoPerca: [
@@ -7401,20 +7400,19 @@ window.ROTEIRO = {
 
     { id: 'r-cilantrillo', nome: 'El Cilantrillo', data: '2026-11-20', hora: '12:45',
       refeicao: 'almoco', local: 'Old Town Kissimmee',
-      alternativas: ['World Food Trucks, 5811 W Irlo Bronson, aberto desde as 11h'],
+      alternativas: ['World Food Trucks, trocando com o jantar se houver chuva prevista à noite'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Chegar direto — aceita reserva pelo Yelp ou +1 407-204-9685', blocoId: 'b-2011-1230',
       nota: 'Porto-riquenho de mesa, dentro do Old Town: mofongo, pernil, pargo frito. Pratos ' +
             'da rede perto de US$ 20. Na sexta, das 11h à meia-noite.' },
 
-    { id: 'r-red-lobster', nome: 'Red Lobster', data: '2026-11-20', hora: '18:30',
-      refeicao: 'jantar', local: 'US-192 · 5690 W Irlo Bronson, ao lado do Old Town',
-      alternativas: ['World Food Trucks, 5811 W Irlo Bronson, aberto das 11h às 2h'],
+    { id: 'r-world-food-trucks', nome: 'World Food Trucks', data: '2026-11-20', hora: '18:30',
+      refeicao: 'jantar', local: 'W Irlo Bronson, a 300 m do Old Town',
+      alternativas: ['El Cilantrillo, trocando com o almoço se houver chuva prevista à noite'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Chegar direto, ou Priority Seating pelo OpenTable', blocoId: 'b-2011-1830',
-      nota: 'Mesa com garçom a três minutos do hotel. Ultimate Feast US$ 32,99, pratos simples ' +
-            'a partir de uns US$ 20 e os Cheddar Bay Biscuits de cortesia: US$ 50 a 70 no ' +
-            'casal. Na sexta, das 11h às 23h.' },
+      canal: 'Chegar direto', blocoId: 'b-2011-1830',
+      nota: 'Mais de 100 food trucks, das 11h às 2h todos os dias. Estacionamento grátis. ' +
+            'Balcão: não leva gorjeta.' },
 
     { id: 'r-plant-street-market', nome: 'Plant Street Market', data: '2026-11-21', hora: '11:45',
       refeicao: 'almoco', local: 'Winter Garden · 426 W Plant St',
@@ -7433,7 +7431,7 @@ window.ROTEIRO = {
             'sanduíche com waffle fries e bebida por uns US$ 11 por pessoa. Sábado das 6h às ' +
             '22h; fecha aos domingos. Balcão: não leva gorjeta.' },
 
-    { id: 'r-red-lobster-2111', nome: 'Red Lobster', data: '2026-11-21', hora: '22:05',
+    { id: 'r-red-lobster', nome: 'Red Lobster', data: '2026-11-21', hora: '22:05',
       refeicao: 'jantar', local: 'US-192 · 5690 W Irlo Bronson, ao lado do Old Town',
       alternativas: ['Miller’s Ale House, 8123 W Irlo Bronson, mesa com garçom até as 2h'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
@@ -8110,9 +8108,9 @@ window.ROTEIRO = {
       endereco: '5690 W Irlo Bronson Memorial Hwy, Kissimmee FL 34746',
       doHotel: { tempoMin: 3, tempoFonte: 'estimado',
                  uberUSD: { min: 7, max: 10 }, uberFonte: 'estimado' },
-      nota: 'Mesa com garçom a 1,9 km do hotel, ao lado do Old Town. Jantar do dia 20 e, na ' +
-            'volta do hóquei no dia 21, a última mesa aberta perto do hotel: sexta e sábado ' +
-            'até as 23h, nos outros dias até as 22h.' },
+      nota: 'Mesa com garçom a 1,9 km do hotel, ao lado do Old Town. É o jantar da volta do ' +
+            'hóquei, no dia 21, e a última mesa aberta perto do hotel: sexta e sábado até as ' +
+            '23h, nos outros dias até as 22h.' },
 
     { id: 'publix-vineland', nome: 'Publix — Sunrise City Plaza', tipo: 'compras',
       lat: 28.3462381, lng: -81.4832862, verificado: true, fonteCoord: 'osm',

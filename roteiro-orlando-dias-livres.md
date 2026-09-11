@@ -174,7 +174,7 @@ O único respiro entre o Epic e cinco dias pesados seguidos. Café sem pressa no
 | **15h00** | **Retirar o carro — Avis do Old Town** | Suíte 434, das 7h às 19h. **Recusem o e-Toll Unlimited** |
 | **15h30** | **VAZIO PROPOSITAL** — descanso no hotel | |
 | **17h20** | **Old Town Kissimmee** — 5770 W Irlo Bronson Memorial Hwy | Muscle cars expostos desde as 15h. Pôr do sol por volta das 17h30 |
-| **18h30** | **Jantar — Red Lobster**, 5690 W Irlo Bronson | Mesa com garçom ao lado do Old Town, a 3 min do hotel. Sexta até as 23h |
+| **18h30** | **Jantar — World Food Trucks**, 5811 W Irlo Bronson | Mais de 100 food trucks, a 300 m do Old Town. Estacionamento grátis |
 | **20h10** | Lugar na calçada | |
 | **20h30** | **Muscle Car Cruise** | Grátis, toda sexta |
 | **21h15** | Voltar | Três minutos. Amanhã a saída é 8h |
@@ -183,7 +183,7 @@ O único respiro entre o Epic e cinco dias pesados seguidos. Café sem pressa no
 
 **O desfile:** o de sexta é o dos muscle cars (1964 em diante). No sábado há outro, dos clássicos anteriores a 1985, também às 20h30 — mas no sábado vocês estão no hóquei.
 
-**As refeições:** dia sem pressa é refeição fora. O IHOP é o café americano de diner; o do hotel é continental e vai até as 10h, segundo os sites de reserva. O jantar é no Red Lobster, a três minutos de carro do hotel e ao lado do Old Town: Ultimate Feast US$ 32,99, pratos simples a partir de uns US$ 20 e os Cheddar Bay Biscuits de cortesia, US$ 50 a 70 no casal. **Com chuva, nada muda** — El Cilantrillo e Red Lobster são os dois salão fechado. O World Food Trucks, na 5811, fica como a opção de rua, aberto das 11h às 2h.
+**As refeições:** dia sem pressa é refeição fora. O IHOP é o café americano de diner; o do hotel é continental e vai até as 10h, segundo os sites de reserva. O World Food Trucks abre das 11h às 2h, e é à noite, com tudo aceso, que ele faz sentido. **Com chuva prevista para a noite, invertam:** food trucks no almoço e El Cilantrillo — salão fechado, aberto até a meia-noite na sexta — no jantar.
 
 **Rede de segurança do Epic:** se o dia 19 der muito errado, esta manhã é o lugar mais barato para voltar ao Epic — se o ingresso tiver um dia sobrando com Epic, o que ainda depende da agência.
 
