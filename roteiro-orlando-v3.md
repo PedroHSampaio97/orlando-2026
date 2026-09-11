@@ -3,7 +3,7 @@
 
 **Base:** Travelodge by Wyndham, Kissimmee (US-192) · **Chegada:** 10/11, ~12h · **Saída:** 26/11, ~12h
 **Perfil:** casal, sem crianças. Prioridade: clássicos + montanhas-russas fortes.
-**Decisões fechadas:** troca dos dias 21/22/23 confirmada · sem Mickey's Very Merry Christmas Party · sem Express Pass na Universal · carro alugado de 20 a 25/11, **devolvido no dia 25** · PID já emitida · **o segundo dia no Epic saiu do roteiro** e virou a despedida no Disney Springs
+**Decisões fechadas:** troca dos dias 21/22/23 confirmada · sem Mickey's Very Merry Christmas Party · sem Express Pass na Universal · carro alugado de 20 a 25/11, **devolvido no dia 25** · PID já emitida · **o Epic Universe é um dia só, 19/11**, e a última noite é no Disney Springs
 
 > **Aviso sobre horários:** os horários oficiais dos parques só saem perto da data. Os relógios abaixo assumem abertura às 9h, com duas exceções: **o Animal Kingdom abre às 8h (13/11)** e o **Busch Gardens (24/11) às 10h**. O **SeaWorld (22/11)** também está em 9h, pela previsão do Queue-Times. Confiram no app em novembro e desloquem o bloco inteiro se mudar — mas atenção: as retas finais dos dias 11, 13 e 22 são fixas de propósito, porque seguem o desfile, o pôr do sol e o show das orcas, não a abertura.
 
@@ -593,7 +593,7 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 
 # 🛒 25/11 (quarta) — Compras e Disney Springs no Natal
 
-*Deixou de ser dia de parque: o segundo turno no Epic saiu e a noite virou a despedida no Disney Springs. O dia está detalhado no `roteiro-orlando-dias-livres.md`.*
+*O dia está detalhado no `roteiro-orlando-dias-livres.md`: compras de manhã, devolução do carro às 15h e a noite de Natal no Disney Springs, com jantar no Homecomin' — reserva a partir de 26/09, às 6h ET.*
 
 ---
 

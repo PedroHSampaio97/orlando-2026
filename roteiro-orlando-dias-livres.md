@@ -224,27 +224,33 @@ Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de 
 
 # 🛒 25/11 (quarta) — Compras e Disney Springs no Natal
 
-A última noite. De manhã, compras de Black Friday; à noite, a volta ao Disney Springs prometida desde o dia 10 — quando vocês estiveram lá antes de 13/11 e a decoração de Natal ainda não existia.
+A última noite. De manhã, o outlet do Vineland, Marshalls, Ross e Walgreens. O carro volta à Avis às 15h e as malas fecham no hotel. À noite, o Disney Springs de Natal: árvores, neve na praça, jantar no Homecomin' e o World of Disney com calma.
 
-| Hora | O quê |
-|---|---|
-| **9h00** | **Best Buy** (Millenia ou I-Drive) — promoções de Black Friday já começam nesta semana |
-| **11h00** | Outlet, *Ross*, *Marshalls*, *Walgreens* (vitaminas e cosméticos compensam muito) |
-| **13h00** | Almoço |
-| **14h00** | **Arrumar as malas** — pesem tudo, 23 kg por mala. Antes de devolver o carro: o que não couber ainda dá para trocar numa loja da 192 |
-| **15h00** | **Devolver o carro** com o tanque cheio — mesma filial da 192. **A partir daqui a noite é de Uber** |
-| **18h00** | **Disney Springs** — de Uber, ~20 min, US$ 15–25 |
-| **18h30** | **Christmas Tree Stroll** — gratuito. Árvores gigantes temáticas. Peguem o mapa do circuito |
-| **19h30** | Decoração de Natal, música ao vivo, encontro com o Papai Noel |
-| **20h00** | **Jantar de despedida — Homecomin'** ou **Polite Pig** |
-| **21h30** | **World of Disney com calma** — a última compra da viagem. Fecha às 23h |
-| **22h30** | Voltar |
+| Hora | O quê | Notas |
+|---|---|---|
+| **9h00** | Café da manhã do hotel | Sem pressa: a volta de Tampa foi às 22h15 |
+| **10h00** | De carro para o Vineland | ~15 min |
+| **10h15** | **Orlando Vineland Premium Outlets** — 8200 Vineland Ave | Abre às 10h. Horário estendido na semana da Black Friday |
+| **11h50** | **Marshalls** — Vineland Pointe, 7655 Lake St | Ao lado do outlet |
+| **12h35** | Almoço — **Sofrito Latin Cafe**, 8607 Palm Pkwy | Cozinha latina de balcão, US$ 3–15 |
+| **13h35** | **Ross** — 3231 Vineland Rd | Ao lado do Walmart do dia 10 |
+| **14h15** | **Walgreens** (5935 W Irlo Bronson) e **posto** (7-Eleven, 5880 W Irlo Bronson) | Vitaminas e cosméticos. No posto, paguem dentro da loja |
+| **15h00** | **Devolver o carro — Avis do Old Town** | Tanque cheio. Tolerância de 29 min |
+| **15h15** | Uber até o hotel · **malas** | Pesem tudo: 23 kg por mala |
+| **16h15** | **VAZIO PROPOSITAL** — descanso | |
+| **17h45** | Uber para o Disney Springs | ~20 min, US$ 15–25. Desembarque no West Side ou no Marketplace |
+| **18h10** | **Christmas Tree Stroll** | Mapa e cartela de adesivos. Neve na árvore do Town Center a cada meia hora depois do pôr do sol |
+| **19h30** | **Jantar de despedida — Homecomin'** | Frango frito a US$ 34. **Reserva abre em 26/09, às 6h ET** |
+| **20h50** | **World of Disney** · Papai Noel, se der | As lojas fecham às 23h |
+| **22h00** | Uber de volta | Hotel por volta das 22h30 |
 
-**O que isso custou:** o segundo turno no Epic Universe. O ingresso continua cobrindo dois dias — o que a viagem não tem mais é a segunda visita agendada. Se o dia 19 der errado, reclamar este dia custa esta noite e nada mais.
+**A reserva do Homecomin':** restaurante do Disney Springs abre a reserva 60 dias antes, às 6h de Orlando — 7h em Brasília. Para 25/11, isso é **26/09**. Sem mesa, o Polite Pig é churrasco de balcão, no mesmo lugar.
 
-**Duas corridas de Uber:** o estacionamento do Disney Springs é gratuito e vocês não vão usá-lo, porque o carro volta para a locadora às 15h.
+**O carro:** retirado às 15h do dia 20, fecha cinco diárias certas às 15h de hoje. A Avis tolera 29 minutos; depois disso cobra fração de diária.
 
-**Alternativa:** se quiserem jantar sentados de verdade, a despedida pode sair do Disney Springs — *Christner's Prime Steak*, *Capital Grille* (Millenia) ou *Bull & Bear* (Waldorf Astoria). Mas aí é Uber a mais, e as árvores ficam para trás.
+**Se o Oakley não saiu no dia 18:** Best Buy do Millenia às 10h, no lugar do outlet, com a retirada reservada no app antes de sair.
+
+**Natal no Disney Springs:** de 13/11 a 06/01, sem ingresso — árvores temáticas, neve toda noite, música ao vivo e Papai Noel (em 2025, com fila virtual no app da Disney).
 
 ---
 

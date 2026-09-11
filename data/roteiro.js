@@ -174,12 +174,11 @@ window.ROTEIRO = {
           'No Islands, o Hagrid’s saiu do Express em julho de 2026 — vocês pagariam e ainda ' +
           'enfrentariam a fila que incomoda. No Epic, o ingresso cobre dois dias e custa ' +
           'zero a mais; o Express custa US$ 600 no casal por um.\n\n' +
-          'ATENÇÃO: o segundo dia de Epic saiu do roteiro em 10/09, quando a noite de 25/11 ' +
-          'virou a despedida no Disney Springs. O ingresso continua com os dois dias — o que ' +
-          'a viagem não tem mais é a segunda visita agendada.',
+          'O ingresso cobre dois dias de Epic, e o roteiro usa um: 19/11. Se esse dia der ' +
+          'muito errado, a manhã livre do dia 20 é o lugar de usar o segundo — se o ingresso ' +
+          'permitir.',
         alternativa:
-          'Se algum dia específico ficar insuportável, existe o Express Pass Now dentro do ' +
-          'parque — US$ 20 a 30, uma atração.',
+          'Nas filas longas, single rider a partir de 45 minutos, onde houver.',
       },
       singleRider: {
         titulo: 'Single rider — quando a fila passar de 45 minutos',
@@ -6511,8 +6510,8 @@ window.ROTEIRO = {
         { texto: 'Tanque cheio antes das 15h', critico: true,
           motivo: 'O carro volta à Avis com o tanque cheio. A tolerância na devolução é de 29 ' +
                   'minutos; passou disso, a Avis cobra fração de diária.' },
-        { texto: 'Malas amanhã às 14h, antes da devolução', critico: false,
-          motivo: 'O que não couber ainda dá para resolver enquanto o carro está com vocês.' },
+        { texto: 'Malas amanhã às 15h15, depois da devolução do carro', critico: false,
+          motivo: 'Com todas as compras do dia dentro. Só o World of Disney, à noite, vai por cima.' },
       ],
     },
     ficha: {
@@ -6562,120 +6561,271 @@ window.ROTEIRO = {
     diaSemana: 'quarta',
     emoji: '🛒',
     titulo: 'Compras e Disney Springs no Natal',
-    subtitulo: 'A última noite, e a decoração que não existia no dia 10',
+    subtitulo: 'A última noite, com a decoração que não existia no dia 10',
     tipo: 'livre',
     operadora: null,
     parqueId: null,
     custoZero: false,
+    fechado: true,
+    revisadoEm: '2026-09-11',
     referencia: null,
     resumo:
-      'De manhã, compras de Black Friday. À noite, a volta ao Disney Springs que estava ' +
-      'prometida desde o dia 10 — quando vocês estiveram lá antes de 13/11 e a decoração de ' +
-      'Natal ainda não existia. É de graça e é literalmente outro lugar.',
+      'De manhã, o outlet do Vineland, Marshalls, Ross e Walgreens. O carro volta à Avis às ' +
+      '15h e as malas fecham no hotel. À noite, o Disney Springs de Natal: árvores, neve na ' +
+      'praça, jantar no Homecomin’ e o World of Disney com calma.',
     avisos: [
-      'O segundo turno no Epic Universe saiu daqui para abrir esta noite. O ingresso ' +
-      'continua cobrindo dois dias — o que não acontece é a viagem ter um segundo dia lá.',
+      'O ÚNICO HORÁRIO QUE NÃO PODE FALHAR É A DEVOLUÇÃO DO CARRO, ÀS 15H, com o tanque cheio. ' +
+      'A Avis tolera 29 minutos; depois disso cobra fração de diária.',
+      'A RESERVA DO HOMECOMIN’ ABRE EM 26/09, às 6h de Orlando — 7h em Brasília. É o jantar de ' +
+      'despedida, na véspera de Thanksgiving, e está no checklist.',
     ],
-    alternativa: {
-      titulo: 'Se quiserem jantar sentados de verdade',
-      texto:
-        'O jantar da despedida pode sair do Disney Springs: Christner’s Prime Steak, ' +
-        'Capital Grille (Millenia) ou Bull & Bear (Waldorf Astoria). Mas aí é Uber a mais, ' +
-        'e as árvores de Natal ficam para trás.',
-    },
+    notas: [
+      { tipo: 'info', texto:
+        'O NATAL DO DISNEY SPRINGS vai de 13/11/2026 a 06/01/2027, sem ingresso: Christmas Tree ' +
+        'Stroll, neve artificial toda noite, música ao vivo e Papai Noel.\n\n' +
+        'Em 2025, a neve caía na árvore do Town Center a cada meia hora depois do pôr do sol, e ' +
+        'o Papai Noel recebia visitas no Santa’s Marketplace das 11h às 23h, com fila virtual no ' +
+        'app da Disney. Os detalhes de 2026 saem perto da data.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'AS COMPRAS DO DIA SÃO AS DA LISTA: vitaminas e cosméticos na Walgreens, e o garimpo do ' +
+        'Ross e do Marshalls. O outlet do Vineland fica ao lado do Marshalls, com horário ' +
+        'estendido na semana da Black Friday.\n\n' +
+        'A BLACK FRIDAY cai em 27/11, dois dias depois da volta — mas as promoções da semana ' +
+        'começam antes.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'DEPOIS DAS 15H A NOITE É DE UBER: 3 minutos da Avis ao hotel e uns 20 do hotel ao ' +
+        'Disney Springs, de US$ 15 a 25 cada corrida. O embarque e o desembarque são no West ' +
+        'Side, perto do Cirque du Soleil, ou no Marketplace.',
+        pesquisa: '2026-09-11' },
+    ],
+    planos: [
+      { letra: 'A', titulo: 'O dia como está escrito',
+        gatilho: 'O Oakley já foi comprado no dia 18 e a reserva do Homecomin’ saiu.',
+        passos: [
+          'Café do hotel às 9h, outlet do Vineland às 10h15 e o Marshalls ao lado.',
+          'Almoço no Sofrito, Ross na Vineland Rd, e Walgreens e posto antes da Avis.',
+          'Carro devolvido às 15h, malas no hotel e descanso.',
+          'Uber às 17h45: Christmas Tree Stroll, Homecomin’ às 19h30 e World of Disney.',
+        ] },
+      { letra: 'B', titulo: 'O Oakley não saiu no dia 18',
+        gatilho: 'Os óculos ficaram para hoje.',
+        passos: [
+          'Reservem a retirada no app do Best Buy antes de sair do hotel.',
+          'Best Buy do Millenia às 10h, no lugar do outlet: uns 30 minutos de carro.',
+          'Do Millenia, sigam para o Marshalls do Vineland. O resto do dia não muda.',
+        ] },
+      { letra: 'B2', titulo: 'Sem mesa no Homecomin’',
+        gatilho: 'A reserva não saiu, ou a espera passa de uma hora.',
+        passos: [
+          'O Polite Pig é churrasco de balcão, no próprio Disney Springs, sem reserva.',
+          'O resto da noite não muda.',
+        ] },
+      { letra: 'C', titulo: 'Atraso na devolução do carro',
+        gatilho: 'As compras atrasaram e 15h não vai dar.',
+        passos: [
+          'A Avis tolera 29 minutos. Depois disso cobra fração de diária, e com 90 minutos a ' +
+          'diária inteira.',
+          'A loja fica aberta até as 19h. Liguem para +1 321-219-7041 se for passar das 15h30.',
+          'O Ross é o primeiro a cair.',
+        ] },
+      { letra: 'C2', titulo: 'Chuva à noite',
+        gatilho: 'Chove no Disney Springs.',
+        passos: [
+          'Lojas e restaurantes são cobertos; as árvores e a neve na praça, não.',
+          'Invertam: World of Disney antes do jantar, e as árvores depois, se a chuva parar.',
+        ] },
+    ],
     blocos: [
-      { id: 'b-2511-0900', hora: '09:00', ancora: 'fixo', tipo: 'compras',
-        titulo: 'Best Buy (Millenia ou I-Drive)',
-        descricao: 'Promoções de Black Friday já começam nesta semana',
+      { id: 'b-2511-0900', hora: '09:00', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Café da manhã do hotel',
+        descricao: 'Sem pressa: a volta de Tampa foi às 22h15',
         contexto:
-          'A Black Friday de 2026 cai em 27/11, dois dias depois de vocês irem embora — mas as ' +
-          'promoções começam na semana anterior. Eletrônico é onde a diferença de preço para o ' +
-          'Brasil é maior.',
-        localId: 'best-buy', acesso: [] },
+          'O outlet só abre às 10h. O café do hotel vai até as 10h, segundo os sites de ' +
+          'reserva.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 45 },
 
-      { id: 'b-2511-1100', hora: '11:00', ancora: 'fixo', tipo: 'compras',
-        titulo: 'Outlet, Ross, Marshalls, Walgreens',
-        descricao: 'Vitaminas e cosméticos compensam muito',
+      { id: 'b-2511-1000', hora: '10:00', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'De carro para o Vineland',
+        descricao: 'Uns 15 minutos até o outlet',
         contexto:
-          'Ross e Marshalls são lojas de ponta de estoque com preços bem abaixo do outlet, mas ' +
-          'sem organização — é garimpo. Walgreens é farmácia: vitaminas, cosméticos e ' +
-          'suplementos com preço muito abaixo do Brasil.',
-        acesso: [] },
+          'O Orlando Vineland Premium Outlets fica na 8200 Vineland Ave, uns 6 km ao norte do ' +
+          'hotel em linha reta. O tempo de estrada é estimativa.',
+        localId: 'vineland-outlets', acesso: [], duracaoMin: 15 },
 
-      { id: 'b-2511-1300', hora: '13:00', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Almoço', descricao: '', acesso: [] },
-
-      { id: 'b-2511-1400', hora: '14:00', ancora: 'fixo', tipo: 'tarefa',
-        titulo: 'Arrumar as malas',
-        descricao: 'Pesem tudo, 23 kg por mala',
+      { id: 'b-2511-1015', hora: '10:15', ancora: 'fixo', tipo: 'compras',
+        titulo: 'Orlando Vineland Premium Outlets',
+        descricao: 'Abre às 10h. Horário estendido na semana da Black Friday',
         contexto:
-          'Façam isso hoje, não amanhã de manhã. Excesso de bagagem no balcão custa caro, e ' +
-          'amanhã cedo vocês não vão querer descobrir isso.\n\n' +
-          'E façam AGORA, antes de devolver o carro: o que não couber ainda dá para levar ' +
-          'de carro a uma loja da 192 e trocar.',
-        acesso: [], critico: true },
+          'O outlet do lado da Disney — o do dia 12 foi o da International Drive. Horário ' +
+          'estendido na semana da Black Friday, e as promoções da semana começam antes dela.',
+        endereco: '8200 Vineland Ave', localId: 'vineland-outlets', acesso: [], duracaoMin: 90,
+        pesquisa: '2026-09-11' },
+
+      { id: 'b-2511-1150', hora: '11:50', ancora: 'fixo', tipo: 'compras',
+        titulo: 'Marshalls — Vineland Pointe',
+        descricao: 'Ao lado do outlet. Garimpo',
+        contexto:
+          'Loja de ponta de estoque: marca com desconto e nenhuma organização — é garimpo. Fica ' +
+          'no Vineland Pointe, na 7655 Lake St, colado no outlet.',
+        endereco: '7655 Lake St', localId: 'vineland-outlets', acesso: [], duracaoMin: 40,
+        pesquisa: '2026-09-11' },
+
+      { id: 'b-2511-1235', hora: '12:35', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Almoço — Sofrito Latin Cafe',
+        descricao: 'Cozinha latina de balcão, na Palm Pkwy. Leve: o jantar é o Homecomin’',
+        contexto:
+          'Frango assado ao estilo peruano, pernil cubano, empanadas venezuelanas, colombianas e ' +
+          'argentinas, sanduíche cubano. Faixa de preço de US$ 3 a 15.\n\n' +
+          'É balcão: pede no caixa e senta. Não leva gorjeta.',
+        endereco: '8607 Palm Pkwy', restauranteId: 'r-sofrito', localId: 'vineland-outlets',
+        acesso: [], duracaoMin: 45, pesquisa: '2026-09-11' },
+
+      { id: 'b-2511-1335', hora: '13:35', ancora: 'fixo', tipo: 'compras',
+        titulo: 'Ross — Vineland Rd',
+        descricao: 'Ao lado do Walmart do dia 10, a 1,5 km do hotel',
+        contexto:
+          'Ponta de estoque de roupa, casa e beleza, na 3231 Vineland Rd — o mesmo centro do ' +
+          'Walmart e do Publix do dia 10.',
+        endereco: '3231 Vineland Rd', localId: 'walmart-vineland', acesso: [], duracaoMin: 35,
+        pesquisa: '2026-09-11' },
+
+      { id: 'b-2511-1415', hora: '14:15', ancora: 'fixo', tipo: 'tarefa',
+        titulo: 'Walgreens e posto, antes da Avis',
+        descricao: 'Vitaminas e cosméticos. No posto, paguem dentro da loja',
+        contexto:
+          'A WALGREENS da 5935 W Irlo Bronson abre 24 horas: vitaminas, cosméticos e ' +
+          'suplementos, que é o que mais compensa.\n\n' +
+          'O POSTO: o 7-Eleven da 5880 W Irlo Bronson fica a uns 450 metros da Avis. A bomba ' +
+          'pede o ZIP code do cartão, e cartão brasileiro não tem — paguem no caixa, dizendo o ' +
+          'número da bomba, e peçam para encher. O carro volta com o tanque cheio.',
+        endereco: '5935 W Irlo Bronson Memorial Hwy', localId: 'old-town', acesso: [],
+        critico: true, duracaoMin: 40, pesquisa: '2026-09-11' },
 
       { id: 'b-2511-1500', hora: '15:00', ancora: 'fixo', tipo: 'tarefa',
-        titulo: 'Devolver o carro com o tanque cheio',
-        descricao: 'Mesma filial da 192 onde vocês pegaram. A locadora cobra caro por litro',
+        titulo: 'Devolver o carro — Avis do Old Town',
+        descricao: 'Tanque cheio. Tolerância de 29 minutos',
         contexto:
-          'DEVOLUÇÃO HOJE, NÃO AMANHÃ — decisão tomada para o dia da volta ser só café da ' +
-          'manhã e aeroporto. Filial de bairro fecha cedo, então não dá para deixar para ' +
-          'depois do parque.\n\n' +
-          'Abasteçam num posto da 192 antes de chegar, e guardem o comprovante.\n\n' +
-          'A PARTIR DAQUI A NOITE É DE UBER. O trecho até o Epic e a volta saem do bolso ' +
-          'que o estacionamento gratuito vinha cobrindo — contem com isso.',
-        acesso: [], critico: true },
+          'A TAREFA CRÍTICA DO DIA. A mesma Avis da retirada, na suíte 434, nos fundos do Old ' +
+          'Town, aberta das 7h às 19h. Retirado às 15h do dia 20, o carro fecha cinco diárias ' +
+          'certas às 15h de hoje; a tolerância é de 29 minutos.\n\n' +
+          'Fotografem o carro por fora e o painel com o combustível, e guardem o comprovante do ' +
+          'posto.\n\n' +
+          'O PEDÁGIO da SR-429, do dia 21, é cobrado pela placa e chega depois, no cartão.',
+        endereco: '5770 W Irlo Bronson Memorial Hwy, Suite 434', localId: 'old-town',
+        acesso: [], critico: true, duracaoMin: 15, pesquisa: '2026-09-11' },
 
-      { id: 'b-2511-1800', hora: '18:00', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Disney Springs',
-        descricao: 'De Uber, ~20 min, US$ 15–25. O carro já foi devolvido às 15h',
+      { id: 'b-2511-1515', hora: '15:15', ancora: 'fixo', tipo: 'tarefa',
+        titulo: 'Uber até o hotel · malas',
+        descricao: 'Três minutos de Uber. Pesem tudo: 23 kg por mala',
         contexto:
-          'O estacionamento do Disney Springs é gratuito e vocês não vão usá-lo: o carro voltou para a locadora hoje à tarde, para o dia da volta ser só café e aeroporto. São duas corridas de Uber que essa decisão custa.',
-        localId: 'disney-springs', acesso: [] },
+          'Com todas as compras do dia dentro, as malas fecham agora. Excesso de bagagem no ' +
+          'balcão do aeroporto custa caro, e amanhã cedo não é hora de descobrir.\n\n' +
+          'O que entrar no World of Disney à noite vai por cima — deixem espaço.',
+        localId: 'hotel-travelodge', acesso: [], critico: true, duracaoMin: 60 },
 
-      { id: 'b-2511-1830', hora: '18:30', ancora: 'fixo', tipo: 'livre',
+      { id: 'b-2511-1615', hora: '16:15', ancora: 'fixo', tipo: 'vazio',
+        titulo: 'VAZIO PROPOSITAL',
+        descricao: 'Descanso antes da última noite',
+        contexto: 'Não preencham. A noite vai até as 22h30, e amanhã é o dia da volta.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 90 },
+
+      { id: 'b-2511-1745', hora: '17:45', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Uber para o Disney Springs',
+        descricao: '~20 min, US$ 15–25. Desembarque no West Side ou no Marketplace',
+        contexto:
+          'O carro já foi devolvido: a noite é de Uber. Os pontos de embarque e desembarque ' +
+          'ficam no West Side, perto do Cirque du Soleil, e no Marketplace.',
+        localId: 'disney-springs', acesso: [], duracaoMin: 25, pesquisa: '2026-09-11' },
+
+      { id: 'b-2511-1810', hora: '18:10', ancora: 'fixo', tipo: 'livre',
         titulo: 'Christmas Tree Stroll',
-        descricao:
-          'Gratuito. Árvores gigantes temáticas — Mansão Mal-Assombrada, Piratas, ' +
-          'A Princesa e o Sapo, O Estranho Mundo de Jack. Peguem o mapa do circuito',
+        descricao: 'Árvores de Natal temáticas pelo Disney Springs. Peguem o mapa',
         contexto:
-          'Circuito de árvores de Natal gigantes espalhadas por Disney Springs, cada uma ' +
-          'decorada com o tema de um filme ou atração. O mapa é distribuído nos quiosques e ' +
-          'transforma o passeio numa caça ao tesouro.',
-        localId: 'disney-springs', acesso: [] },
+          'Árvores de Natal decoradas com temas da Disney, da Pixar e de Star Wars, espalhadas ' +
+          'pelo Disney Springs. De graça, sem ingresso.\n\n' +
+          'Em 2025 dava para pegar um mapa e uma cartela de adesivos, que viravam um botton no ' +
+          'fim do circuito.\n\n' +
+          'A NEVE: em 2025, caía na árvore do Town Center a cada meia hora depois do pôr do sol, ' +
+          'que é por volta das 17h30. Passem pela praça numa dessas meias horas.',
+        localId: 'disney-springs', acesso: [], duracaoMin: 75, pesquisa: '2026-09-11' },
 
-      { id: 'b-2511-1930', hora: '19:30', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Decoração de Natal, música ao vivo, encontro com o Papai Noel',
-        descricao: '', localId: 'disney-springs', acesso: [] },
-
-      { id: 'b-2511-2000', hora: '20:00', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — Homecomin’ ou Polite Pig',
-        descricao: 'O jantar de despedida. É o que vocês não comeram no dia 10',
+      { id: 'b-2511-1930', hora: '19:30', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Jantar — Homecomin’',
+        descricao: 'O jantar de despedida. O frango frito famoso custa US$ 34',
         contexto:
-          'Homecomin’ é comida caseira da Flórida, famoso pelo frango frito — é o mais ' +
-          'concorrido de Disney Springs e costuma ter 1h de espera sem reserva. Polite Pig é ' +
-          'barbecue de balcão, sem espera.',
-        restauranteId: 'r-homecomin', localId: 'disney-springs', acesso: [] },
+          'Cozinha do sul dos Estados Unidos, do chef Art Smith: o frango frito que deu fama à ' +
+          'casa, biscuits e tomate verde frito. Pratos de US$ 16 a 42.\n\n' +
+          'RESERVA: abre 60 dias antes, em 26/09, às 6h de Orlando — 7h em Brasília. Pelo My ' +
+          'Disney Experience ou pelo +1 407-560-0100. Está no checklist.\n\n' +
+          'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
+        restauranteId: 'r-homecomin', localId: 'disney-springs', acesso: ['reserva'],
+        duracaoMin: 75, pesquisa: '2026-09-11' },
 
-      { id: 'b-2511-2130', hora: '21:30', ancora: 'fixo', tipo: 'compras',
-        titulo: 'World of Disney, com calma',
-        descricao: 'A última compra da viagem. Fecha às 23h',
+      { id: 'b-2511-2050', hora: '20:50', ancora: 'fixo', tipo: 'compras',
+        titulo: 'World of Disney · Papai Noel, se der',
+        descricao: 'A última compra da viagem. As lojas fecham às 23h',
         contexto:
-          'No dia 10 vocês tiveram 1h30 no Disney Springs inteiro. É a maior loja Disney do mundo e os fundos dela têm o que quase nenhum turista acha.\n\n' +
-          'AS MALAS JÁ FORAM PESADAS ÀS 14H. O que entrar aqui entra por cima — comprem sabendo disso, ou deixem espaço de manhã.',
-        localId: 'disney-springs', acesso: [] },
+          'A maior loja Disney da viagem, com calma. As lojas do Disney Springs fecham às 23h de ' +
+          'domingo a quinta.\n\n' +
+          'PAPAI NOEL: em 2025 ficava no Santa’s Marketplace, das 11h às 23h, com fila virtual no ' +
+          'app da Disney. Se a fila abrir, dá para encaixar.\n\n' +
+          'AS MALAS JÁ FECHARAM: o que entrar aqui vai por cima.',
+        localId: 'disney-springs', acesso: [], duracaoMin: 60, pesquisa: '2026-09-11' },
 
-      { id: 'b-2511-2230', hora: '22:30', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Voltar', descricao: 'De Uber', acesso: [] },
+      { id: 'b-2511-2200', hora: '22:00', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Uber de volta',
+        descricao: 'Hotel por volta das 22h30',
+        contexto: 'AMANHÃ É A VOLTA: café do hotel, Uber às 9h e aeroporto.',
+        acesso: [], duracaoMin: 30 },
     ],
-    ficha: {
-      multiPass: null, singlePass: null,
-      expressPass: null,
-      custoEstimadoCasal: { min: 60, max: 130, moeda: 'USD' },
-      extras: [],
+    naoPerca: [
+      { nome: 'A neve na árvore do Town Center', quando: 'hoje', custo: 'grátis',
+        motivo: 'Em 2025, caía a cada meia hora depois do pôr do sol.',
+        pesquisa: '2026-09-11' },
+      { nome: 'Christmas Tree Stroll', quando: 'hoje', custo: 'grátis',
+        motivo: 'Árvores temáticas pelo Disney Springs, com mapa e botton no fim.',
+        pesquisa: '2026-09-11' },
+    ],
+    prepararAmanha: {
+      paraODia: '2026-11-26',
+      titulo: 'Volta · Uber às 9h',
+      aviso: 'É Thanksgiving: restaurantes fechados no feriado. O dia é café do hotel e aeroporto.',
+      itens: [
+        { texto: 'Check-in online e cartão de embarque nos dois celulares', critico: true,
+          motivo: 'Voo internacional, com três horas de antecedência. Com o check-in feito, no ' +
+                  'aeroporto é só despachar as malas.' },
+        { texto: 'Passaportes na mochila de mão', critico: true,
+          motivo: 'É o único item que, se faltar, não tem solução no dia.' },
+        { texto: 'Malas fechadas e pesadas', critico: true,
+          motivo: '23 kg por mala. O que entrou no World of Disney foi por cima.' },
+        { texto: 'Alarme para 7h nos dois celulares', critico: true,
+          motivo: 'Café do hotel às 7h30 e Uber às 9h.' },
+      ],
     },
-    renuncias: null,
+    ficha: {
+      multiPass: null, singlePass: null, expressPass: null,
+      custoEstimadoCasal: { min: 37, max: 60, moeda: 'USD' },
+      extras: [
+        { nome: 'Uber da noite',
+          custo: { min: 37, max: 60, moeda: 'USD' },
+          texto: 'Três minutos da Avis ao hotel, e ida e volta ao Disney Springs, de US$ 15 a 25 ' +
+                 'cada perna.' },
+        { nome: 'Gasolina para devolver com o tanque cheio',
+          texto: 'No 7-Eleven da 5880 W Irlo Bronson, pagando dentro da loja.' },
+      ],
+    },
+    renuncias: {
+      gerais: [
+        { nome: 'Best Buy', motivo: 'O Oakley é do dia 18. O Best Buy só entra no plano B.' },
+        { nome: 'Black Friday', motivo: 'Cai em 27/11, dois dias depois da volta.' },
+      ],
+      idioma: null,
+      fechado: [],
+    },
   },
 
   /* ===== 26/11 · QUINTA · VOLTA ========================================= */
@@ -6855,13 +7005,20 @@ window.ROTEIRO = {
       nota: 'Dez vezes eleito o melhor restaurante de parque temático. Pratos de US$ 26 a 42. ' +
             'Fecha em 2027, com a demolição da Lost Continent.' },
 
-    { id: 'r-homecomin', nome: 'Homecomin’', data: '2026-11-25', hora: '20:00',
+    { id: 'r-sofrito', nome: 'Sofrito Latin Cafe', data: '2026-11-25', hora: '12:35',
+      refeicao: 'almoco', local: 'Lake Buena Vista · 8607 Palm Pkwy', alternativas: [],
+      precisaReserva: false, janelaAbre: null, janelaHora: null,
+      canal: 'Balcão, sem reserva', blocoId: 'b-2511-1235',
+      nota: 'Cozinha latina: frango assado, pernil, empanadas, sanduíche cubano. Faixa de US$ ' +
+            '3 a 15. Balcão: não leva gorjeta.' },
+
+    { id: 'r-homecomin', nome: 'Homecomin’', data: '2026-11-25', hora: '19:30',
       refeicao: 'jantar', local: 'Disney Springs · Town Center',
-      alternativas: ['Polite Pig'],
-      precisaReserva: true, janelaAbre: null, janelaHora: null,
-      canal: 'Site do restaurante / OpenTable', blocoId: 'b-2511-2000',
-      nota: 'Frango frito. O mais concorrido de Disney Springs — 1h de espera sem reserva. ' +
-            'Polite Pig é a alternativa de balcão, sem espera. É o jantar de despedida.' },
+      alternativas: ['Polite Pig — churrasco de balcão, sem reserva'],
+      precisaReserva: true, janelaAbre: '2026-09-26', janelaHora: '06:00 ET',
+      canal: 'My Disney Experience, ou +1 407-560-0100', blocoId: 'b-2511-1930',
+      nota: 'Cozinha do sul, do chef Art Smith: frango frito a US$ 34, pratos de US$ 16 a 42. ' +
+            'A reserva abre 60 dias antes, em 26/09, às 6h ET. É o jantar de despedida.' },
 
     { id: 'r-voyagers', nome: 'Voyager’s Smokehouse', data: '2026-11-22', hora: '12:55',
       refeicao: 'almoco', local: 'SeaWorld · Waterfront', alternativas: [],
@@ -7092,12 +7249,11 @@ window.ROTEIRO = {
       hora: null, fuso: null, janelaReserva: false, critico: false,
       texto: 'Ingressos Universal aparecendo no app — nos DOIS perfis',
       nota:
-        'Cobre os dias 14, 17, 19 e 23 — o dia 25 saiu quando o segundo turno no Epic virou ' +
-        'a despedida no Disney Springs. Confiram especificamente que é PARK-TO-PARK e que o ' +
+        'Cobre os dias 14, 17, 19 e 23. Confiram especificamente que é PARK-TO-PARK e que o ' +
         'Epic Universe está incluído: o Hogwarts Express do dia 23 só funciona com ' +
         'park-to-park, e o Epic é ingresso à parte em muitas combinações.\n\n' +
-        'E confiram se a troca de datas do Epic (era 23/11, virou 19/11) precisa de algum ' +
-        'ajuste: alguns ingressos da Universal são date-based.\n\n' +
+        'E confiram que o dia do Epic no ingresso é 19/11: alguns ingressos da Universal são ' +
+        'date-based.\n\n' +
         'Riscar só quando aparecer no app da Bianca também.',
       restauranteIds: [] },
 
@@ -7143,16 +7299,15 @@ window.ROTEIRO = {
       texto: 'Reservar o Mythos para as 19h10 de 23/11 (Islands of Adventure)',
       restauranteIds: ['r-mythos'] },
 
-    { id: 'ck-homecomin', dataAlvo: '2026-10-26', dataEstimada: true,
-      motivoData: '30 dias antes do jantar de 25/11',
-      hora: null, fuso: null, janelaReserva: false, critico: false,
-      texto: 'Reservar o Homecomin\u2019 para o jantar de 25/11 (Disney Springs)',
+    { id: 'ck-homecomin', dataAlvo: '2026-09-26', dataEstimada: false,
+      hora: '06:00', fuso: 'ET', janelaReserva: true, critico: true,
+      texto: 'Reservar o Homecomin’ para as 19h30 de 25/11 — a janela de 60 dias abre às 6h ET',
       nota:
-        'É o restaurante mais concorrido de Disney Springs e passa de uma hora de ' +
-        'espera sem reserva. É o jantar de despedida da viagem, na última noite — não ' +
-        'é o dia de arriscar uma hora em pé.\n\n' +
-        'Se não conseguirem, o Polite Pig é a alternativa de balcão, sem espera, no ' +
-        'mesmo lugar.',
+        'Restaurante do Disney Springs reserva com 60 dias de antecedência, às 6h de Orlando — ' +
+        '7h em Brasília. Para 25/11, a janela abre em 26/09.\n\n' +
+        'É o restaurante mais concorrido do Disney Springs, na véspera de Thanksgiving, e o ' +
+        'jantar de despedida da viagem. Pelo My Disney Experience ou pelo +1 407-560-0100.\n\n' +
+        'Sem mesa, o Polite Pig é churrasco de balcão, no mesmo Disney Springs.',
       restauranteIds: ['r-homecomin'] },
 
     { id: 'ck-atlantic', dataAlvo: '2026-09-11', dataEstimada: false,
@@ -7457,7 +7612,8 @@ window.ROTEIRO = {
       lat: 28.3702539, lng: -81.5209851, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 20, tempoFonte: 'documento',
                  uberUSD: { min: 15, max: 25 }, uberFonte: 'estimado' },
-      nota: 'Estacionamento gratuito. Na segunda ida vocês já estarão de carro.' },
+      nota: 'Estacionamento gratuito, mas na segunda ida, em 25/11, o carro já foi devolvido: ' +
+            'é de Uber. Embarque e desembarque no West Side ou no Marketplace.' },
 
     { id: 'universal-studios', nome: 'Universal Studios Florida', tipo: 'parque',
       lat: 28.4752, lng: -81.467, verificado: true, fonteCoord: 'wikipedia', endereco: null,
@@ -7501,6 +7657,14 @@ window.ROTEIRO = {
       nota: 'O cupom do balcão custa US$ 10. O grátis é o Savings Passport do Simon ' +
             'VIP Club, cadastrado antes de viajar.' },
 
+    { id: 'vineland-outlets', nome: 'Orlando Vineland Premium Outlets', tipo: 'compras',
+      lat: 28.386771, lng: -81.4926951, verificado: true, fonteCoord: 'osm',
+      endereco: '8200 Vineland Ave, Orlando FL 32821',
+      doHotel: { tempoMin: 15, tempoFonte: 'estimado',
+                 uberUSD: null, uberFonte: null },
+      nota: 'Abre às 10h, com horário estendido na semana da Black Friday. O Marshalls do ' +
+            'Vineland Pointe fica ao lado.' },
+
     { id: 'icon-park', nome: 'ICON Park', tipo: 'compras',
       lat: 28.4432, lng: -81.4693, verificado: true, fonteCoord: 'wikipedia', endereco: '8375 International Dr',
       doHotel: { tempoMin: 25, tempoFonte: 'estimado',
@@ -7511,10 +7675,11 @@ window.ROTEIRO = {
       doHotel: { tempoMin: 30, tempoFonte: 'documento',
                  uberUSD: { min: 28, max: 40 }, uberFonte: 'estimado' } },
 
-    { id: 'best-buy', nome: 'Best Buy (Millenia ou I-Drive)', tipo: 'compras',
-      lat: 28.4830, lng: -81.4290, verificado: false, fonteCoord: null, precisaColar: 'São duas lojas possíveis, Millenia e I-Drive. Escolham uma e colem a coordenada.', endereco: null,
+    { id: 'best-buy', nome: 'Best Buy — Millenia', tipo: 'compras',
+      lat: 28.4914395, lng: -81.431323, verificado: true, fonteCoord: 'osm', endereco: '4155 Millenia Blvd',
       doHotel: { tempoMin: 30, tempoFonte: 'estimado',
-                 uberUSD: { min: 28, max: 40 }, uberFonte: 'estimado' } },
+                 uberUSD: { min: 28, max: 40 }, uberFonte: 'estimado' },
+      nota: 'Plano B do dia 25, só se o Oakley não sair no dia 18. Abre às 10h.' },
 
     { id: 'lake-eola', nome: 'Lake Eola Park', tipo: 'livre',
       lat: 28.54361111, lng: -81.37277778, verificado: true, fonteCoord: 'wikipedia', endereco: null,
