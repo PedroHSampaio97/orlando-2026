@@ -6779,7 +6779,7 @@ window.ROTEIRO = {
       { id: 'b-2511-2200', hora: '22:00', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Uber de volta',
         descricao: 'Hotel por volta das 22h30',
-        contexto: 'AMANHÃ É A VOLTA: café do hotel, Uber às 9h e aeroporto.',
+        contexto: 'AMANHÃ É A VOLTA: café do hotel às 8h30, Uber às 10h25 e voo às 14h10.',
         acesso: [], duracaoMin: 30 },
     ],
     naoPerca: [
@@ -6792,7 +6792,7 @@ window.ROTEIRO = {
     ],
     prepararAmanha: {
       paraODia: '2026-11-26',
-      titulo: 'Volta · Uber às 9h',
+      titulo: 'Volta · voo às 14h10',
       aviso: 'É Thanksgiving: restaurantes fechados no feriado. O dia é café do hotel e aeroporto.',
       itens: [
         { texto: 'Check-in online e cartão de embarque nos dois celulares', critico: true,
@@ -6802,8 +6802,8 @@ window.ROTEIRO = {
           motivo: 'É o único item que, se faltar, não tem solução no dia.' },
         { texto: 'Malas fechadas e pesadas', critico: true,
           motivo: '23 kg por mala. O que entrou no World of Disney foi por cima.' },
-        { texto: 'Alarme para 7h nos dois celulares', critico: true,
-          motivo: 'Café do hotel às 7h30 e Uber às 9h.' },
+        { texto: 'Alarme para 8h nos dois celulares', critico: true,
+          motivo: 'Café do hotel às 8h30, check-out e Uber às 10h25. O voo sai às 14h10.' },
       ],
     },
     ficha: {
@@ -6835,39 +6835,190 @@ window.ROTEIRO = {
     diaSemana: 'quinta',
     emoji: '✈️',
     titulo: 'Volta',
-    subtitulo: 'Thanksgiving',
+    subtitulo: 'Thanksgiving · MCO → Bogotá → Rio',
     tipo: 'logistica',
     operadora: null,
     parqueId: null,
     custoZero: false,
-    referencia: null,
+    fechado: true,
+    revisadoEm: '2026-09-11',
+    referencia: { rotulo: 'Decolagem de Orlando', padrao: '14:10', confirmado: true },
     resumo:
-      'Thanksgiving. Um dos dias mais tranquilos do ano para voar — o caos é na terça e quarta ' +
-      'anteriores e no domingo seguinte.',
+      'Manhã sem pressa, aeroporto três horas antes e a volta pela mesma rota da ida: ' +
+      'Orlando às 14h10, conexão de 3h10 em Bogotá e chegada ao Rio às 5h55 de 27/11.',
     avisos: [
-      'Restaurantes fechados no feriado. Comam no aeroporto ou levem algo do hotel.',
+      'POWER BANK E BATERIA DE LÍTIO SÓ NA BAGAGEM DE MÃO — na despachada é proibido. Se a ' +
+      'mala de mão for despachada no portão, tirem as baterias antes.',
+      'É Thanksgiving: o aeroporto funciona, mas o feriado mexe no horário dos restaurantes. ' +
+      'Confiram no Terminal C o que está aberto antes de contar com o almoço.',
+    ],
+    notas: [
+      { tipo: 'info', texto:
+        'OS VOOS: Orlando 14h10 → Bogotá 18h15, conexão de 3h10, e Bogotá 21h25 → Rio 5h55 ' +
+        'de 27/11. Em novembro, Bogotá e Orlando estão no mesmo fuso; o Rio está duas horas ' +
+        'à frente, e o pouso das 5h55 já é no horário de Brasília.\n\n' +
+        'A referência do dia é a decolagem de Orlando: se o voo mudar de horário, a manhã ' +
+        'inteira desloca junto.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'NÃO HÁ IMIGRAÇÃO NA SAÍDA DOS ESTADOS UNIDOS. É a companhia aérea que confere o ' +
+        'passaporte no check-in e manda os dados do voo para o governo americano. O embarque ' +
+        'pode ter reconhecimento facial no portão. O que existe no aeroporto é o raio-x da TSA.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'atencao', texto:
+        'RECEITA FEDERAL NA CHEGADA AO RIO: a cota é de US$ 1.000 por pessoa, individual e ' +
+        'intransferível — a dos dois não se soma. O free shop do desembarque no Brasil tem ' +
+        'mais US$ 1.000 por pessoa. O que passar da cota é declarado pela e-DBV e tributado.\n\n' +
+        'Não entram na conta os bens de uso pessoal já usados: roupa usada, celular e relógio ' +
+        'de uso próprio. E o duty-free de Orlando conta na cota do exterior — a cota extra é ' +
+        'só a do free shop na chegada.',
+        pesquisa: '2026-09-11' },
+    ],
+    planos: [
+      { letra: 'A', titulo: 'O dia como está escrito',
+        gatilho: 'O voo de Orlando sai às 14h10.',
+        passos: [
+          'Café do hotel às 8h30, malas conferidas e check-out.',
+          'Uber às 10h25, check-in da Avianca às 11h10 e raio-x pelo MCO Reserve.',
+          'Almoço no Terminal C e portão às 13h25.',
+          'Conexão de 3h10 em Bogotá e pouso no Rio às 5h55.',
+        ] },
+      { letra: 'B', titulo: 'Atraso no voo de Orlando',
+        gatilho: 'O app da Avianca mostra o voo de Orlando atrasado.',
+        passos: [
+          'A conexão em Bogotá tem 3h10, e a imigração colombiana leva de 20 a 45 minutos: ' +
+          'até umas duas horas de atraso ainda cabe.',
+          'Se a conexão cair, a remarcação é no balcão da Avianca em Bogotá. O bilhete em PDF, ' +
+          'salvo offline, tem o localizador.',
+        ] },
+      { letra: 'C', titulo: 'Uber demorando no feriado',
+        gatilho: 'Às 10h25 não aparece motorista.',
+        passos: [
+          'Peçam a corrida às 10h15, não às 10h25.',
+          'Se não aparecer em 10 minutos, tentem o Lyft. A recepção do hotel também chama táxi.',
+        ] },
     ],
     blocos: [
-      { id: 'b-2611-0730', hora: '07:30', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Café no hotel, últimas conferências', descricao: '', acesso: [] },
+      { id: 'b-2611-0830', hora: '08:30', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Café da manhã do hotel',
+        descricao: 'Sem pressa: o voo é às 14h10',
+        contexto:
+          'O café do hotel vai das 7h às 10h, segundo os sites de reserva. É o último café ' +
+          'da viagem, e sem alarme cedo.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 45 },
 
-      { id: 'b-2611-0900', hora: '09:00', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Uber para o MCO', descricao: '~30 min, US$ 35–45',
-        localId: 'mco', acesso: [] },
+      { id: 'b-2611-0920', hora: '09:20', ancora: 'referencia', tipo: 'tarefa',
+        titulo: 'Últimas conferências e check-out',
+        descricao: 'Passaportes e baterias na mão. Check-out até as 11h',
+        contexto:
+          'ANTES DE FECHAR O QUARTO: passaportes na mochila de mão; power banks e baterias de ' +
+          'lítio na mão, nunca na mala despachada; malas pesadas, 23 kg cada; cabos e ' +
+          'carregadores tirados das tomadas; cofre do quarto aberto e vazio.\n\n' +
+          'O check-out do Travelodge é até as 11h.',
+        localId: 'hotel-travelodge', acesso: [], critico: true, duracaoMin: 60,
+        pesquisa: '2026-09-11' },
 
-      { id: 'b-2611-0930', hora: '09:30', ancora: 'fixo', tipo: 'tarefa',
-        titulo: 'Check-in e imigração',
-        descricao: 'Três horas de antecedência para voo internacional',
-        localId: 'mco', acesso: [] },
+      { id: 'b-2611-1025', hora: '10:25', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Uber para o MCO',
+        descricao: '~30 min, US$ 35–45. Destino: Terminal C',
+        contexto:
+          'Uns 30 minutos até o aeroporto; o bloco tem 45 porque é feriado e o motorista pode ' +
+          'demorar. No app, o destino é o Terminal C, das partidas internacionais da Avianca.',
+        localId: 'mco', acesso: [], duracaoMin: 45, pesquisa: '2026-09-11' },
 
-      { id: 'b-2611-1030', hora: '10:30', ancora: 'fixo', tipo: 'compras',
-        titulo: 'Duty-free no Terminal C',
-        descricao: 'Se sobrar espaço na mala', localId: 'mco', acesso: [] },
+      { id: 'b-2611-1110', hora: '11:10', ancora: 'referencia', tipo: 'tarefa',
+        titulo: 'Check-in e despacho — Avianca, Terminal C',
+        descricao: 'Três horas antes, como a Avianca recomenda',
+        contexto:
+          'A Avianca pede chegada três horas antes em voo internacional, e o balcão fecha de 45 ' +
+          'a 60 minutos antes da decolagem. Com o check-in online feito na véspera, aqui é só ' +
+          'despachar as malas e conferir os passaportes.',
+        localId: 'mco', acesso: [], critico: true, duracaoMin: 45, pesquisa: '2026-09-11' },
 
-      { id: 'b-2611-1200', hora: '12:00', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Decolagem', descricao: '', localId: 'mco', acesso: [], horaAprox: true },
+      { id: 'b-2611-1155', hora: '11:55', ancora: 'referencia', tipo: 'espera',
+        titulo: 'Raio-x da TSA pelo MCO Reserve',
+        descricao: 'A faixa reservada no checklist, logo depois do check-in',
+        contexto:
+          'Na fila do MCO Reserve, escaneiem o QR code da reserva e sigam para o raio-x normal ' +
+          'da TSA, com o cartão de embarque e o passaporte na mão.\n\n' +
+          'Não há imigração na saída dos Estados Unidos: depois do raio-x, é o portão.',
+        localId: 'mco', acesso: [], duracaoMin: 30, pesquisa: '2026-09-11' },
+
+      { id: 'b-2611-1225', hora: '12:25', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Almoço no Terminal C',
+        descricao: 'Tudo fica depois do raio-x. O Summer House tem mesa',
+        contexto:
+          'No Terminal C, restaurantes e lojas ficam todos depois do raio-x. O Summer House é ' +
+          'o de mesa com garçom, e o segundo andar é o mais tranquilo.\n\n' +
+          'É Thanksgiving: confiram o que está aberto. Se o Summer House estiver fechado, ' +
+          'qualquer balcão do Palm Court resolve antes de um voo de quatro horas.',
+        localId: 'mco', acesso: [], duracaoMin: 55, pesquisa: '2026-09-11' },
+
+      { id: 'b-2611-1325', hora: '13:25', ancora: 'referencia', tipo: 'espera',
+        titulo: 'Portão',
+        descricao: 'As lojas da Disney, Universal e SeaWorld ficam no Palm Court',
+        contexto:
+          'Se sobrar tempo, as lojas oficiais dos parques ficam no Palm Court, depois do ' +
+          'raio-x. Lembrem que o que for comprado aqui entra na cota de US$ 1.000.\n\n' +
+          'O embarque pode ter reconhecimento facial no portão.',
+        localId: 'mco', acesso: [], duracaoMin: 40, pesquisa: '2026-09-11' },
+
+      { id: 'b-2611-1410', hora: '14:10', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Voo Orlando → Bogotá',
+        descricao: 'Decolagem 14h10 · pouso 18h15 em Bogotá',
+        fuso: 'Orlando',
+        contexto:
+          'Cerca de 4 horas de voo. Em novembro Bogotá está no mesmo fuso de Orlando: o ' +
+          'relógio não muda na chegada.',
+        localId: 'mco', acesso: [], critico: true, duracaoMin: 245 },
+
+      { id: 'b-2611-1815', hora: '18:15', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Conexão em Bogotá — El Dorado',
+        descricao: '3h10 de conexão. Imigração colombiana leva de 20 a 45 min',
+        fuso: 'Bogotá',
+        contexto:
+          'Mesmo em trânsito, a Colômbia faz passar pela imigração, como na ida. Vão direto, ' +
+          'sem parar em loja: a fila é o único risco real. Depois dela sobram umas duas horas ' +
+          'e meia, e dá para jantar com calma antes de uma noite inteira de voo.',
+        acesso: [], critico: true, duracaoMin: 190, pesquisa: '2026-09-11' },
+
+      { id: 'b-2611-2125', hora: '21:25', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voo Bogotá → Rio',
+        descricao: 'Decolagem 21h25 · pouso 5h55 de 27/11 no Rio, horário de Brasília',
+        fuso: 'Bogotá',
+        contexto:
+          'Cerca de 6h30 de voo, à noite. Durmam o que der.\n\n' +
+          'NA CHEGADA AO RIO: o free shop do desembarque tem uma cota extra de US$ 1.000 por ' +
+          'pessoa. Se as compras da viagem passaram da cota de US$ 1.000 de cada um, a e-DBV é ' +
+          'o caminho para declarar.',
+        acesso: [], duracaoMin: 390, pesquisa: '2026-09-11' },
     ],
-    renuncias: null, ficha: null,
+    naoPerca: [
+      { nome: 'Free shop na chegada ao Rio', quando: 'na chegada', custo: 'cota extra de US$ 1.000 por pessoa',
+        motivo: 'É uma cota à parte da de US$ 1.000 das compras no exterior, e só vale no ' +
+                'free shop do desembarque no Brasil.',
+        pesquisa: '2026-09-11' },
+    ],
+    ficha: {
+      multiPass: null, singlePass: null, expressPass: null,
+      custoEstimadoCasal: { min: 35, max: 45, moeda: 'USD' },
+      extras: [
+        { nome: 'Uber até o MCO',
+          custo: { min: 35, max: 45, moeda: 'USD' },
+          texto: 'Uns 30 minutos do hotel ao Terminal C.' },
+      ],
+    },
+    renuncias: {
+      gerais: [
+        { nome: 'Duty-free do MCO',
+          motivo: 'Entra na cota de US$ 1.000 das compras no exterior. A cota extra é a do ' +
+                  'free shop na chegada ao Brasil.' },
+      ],
+      idioma: null,
+      fechado: [],
+    },
   },
 
   ],
@@ -7425,7 +7576,8 @@ window.ROTEIRO = {
         'horário numa fila dedicada do raio-x da TSA, sem precisar de TSA PreCheck nem ' +
         'CLEAR. Uma reserva cobre até 10 pessoas, então é uma só para os dois.\n\n' +
         'O Terminal C opera das 5h às 19h, para voos que decolam entre 6h30 e 22h30 — a ' +
-        'decolagem de vocês é ~12h, então cabe. Reservem a faixa de 9h30 às 10h.\n\n' +
+        'decolagem de vocês é às 14h10, então cabe. Reservem a faixa mais perto das 11h55, ' +
+        'logo depois do check-in.\n\n' +
         'ATENÇÃO AO QUE ISSO NÃO É: o MCO Reserve é para a SAÍDA, no raio-x da TSA. Não ' +
         'tem nada a ver com a fila da imigração na chegada, em 10/11 — para aquela não ' +
         'existe atalho disponível a vocês. O Mobile Passport Control, que seria o ' +

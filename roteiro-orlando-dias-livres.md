@@ -256,16 +256,26 @@ A última noite. De manhã, o outlet do Vineland, Marshalls, Ross e Walgreens. O
 
 # ✈️ 26/11 (quinta) — Volta
 
-Thanksgiving. Um dos dias mais tranquilos do ano para voar — o caos é na terça e quarta anteriores e no domingo seguinte.
+Thanksgiving. Manhã sem pressa, aeroporto três horas antes e a volta pela mesma rota da ida: Orlando às 14h10, conexão de 3h10 em Bogotá e chegada ao Rio às 5h55 de 27/11.
 
 | Hora | O quê | Notas |
 |---|---|---|
-| **7h30** | Café no hotel, últimas conferências | |
-| **9h00** | Uber para o MCO | ~30 min, US$ 35–45. **O carro já foi devolvido ontem** |
-| **9h30** | Check-in e imigração | Três horas de antecedência para voo internacional |
-| | **Restaurantes fechados no feriado** | Comam no aeroporto ou levem algo do hotel |
-| | Duty-free no Terminal C | Se sobrar espaço na mala |
-| **~12h** | Decolagem | |
+| **8h30** | Café da manhã do hotel | Sem pressa |
+| **9h20** | Últimas conferências e check-out | Passaportes e power banks na mão. Check-out até as 11h |
+| **10h25** | Uber para o MCO | ~30 min, US$ 35–45. Destino: Terminal C |
+| **11h10** | **Check-in e despacho — Avianca, Terminal C** | Três horas antes. O balcão fecha 45 a 60 min antes do voo |
+| **11h55** | **Raio-x da TSA pelo MCO Reserve** | Não há imigração na saída dos EUA |
+| **12h25** | Almoço no Terminal C | Tudo fica depois do raio-x. Feriado: confiram o que abre |
+| **13h25** | Portão | |
+| **14h10** | **Voo Orlando → Bogotá** | Pouso às 18h15 — Bogotá e Orlando no mesmo fuso em novembro |
+| **18h15** | **Conexão em Bogotá** — 3h10 | A imigração colombiana passa até em trânsito: vão direto |
+| **21h25** | **Voo Bogotá → Rio** | Pouso às 5h55 de 27/11, horário de Brasília |
+
+**Não há imigração na saída dos Estados Unidos:** a companhia aérea confere o passaporte e manda os dados ao governo americano. O embarque pode ter reconhecimento facial no portão.
+
+**Power bank e bateria de lítio:** só na bagagem de mão, nunca na despachada.
+
+**Receita Federal na chegada:** US$ 1.000 por pessoa, individual — a dos dois não se soma. O free shop do desembarque no Brasil tem mais US$ 1.000 por pessoa. O que passar é declarado pela e-DBV. Roupa usada e celular ou relógio de uso próprio não entram na conta, e o duty-free de Orlando conta na cota do exterior.
 
 ---
 

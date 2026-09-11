@@ -1,7 +1,7 @@
 # Roteiro Orlando — 10 a 26 de novembro de 2026
 ### Versão 3 — com mapa de atrações, percurso e uso dos passes
 
-**Base:** Travelodge by Wyndham, Kissimmee (US-192) · **Chegada:** 10/11, ~12h · **Saída:** 26/11, ~12h
+**Base:** Travelodge by Wyndham, Kissimmee (US-192) · **Chegada:** 10/11, 12h35 no MCO · **Saída:** 26/11, 14h10 do MCO
 **Perfil:** casal, sem crianças. Prioridade: clássicos + montanhas-russas fortes.
 **Decisões fechadas:** troca dos dias 21/22/23 confirmada · sem Mickey's Very Merry Christmas Party · sem Express Pass na Universal · carro alugado de 20 a 25/11, **devolvido no dia 25** · PID já emitida · **o Epic Universe é um dia só, 19/11**, e a última noite é no Disney Springs
 
@@ -625,7 +625,7 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 **Prazo médio (outubro):**
 - [ ] Decidir sobre a Power-Up Band do Epic Universe
 
-- [ ] **Até 19/11 — reservar o MCO Reserve para a volta de 26/11.** É grátis, reserva-se até 7 dias antes, e garante uma faixa de horário no raio-x da TSA sem fila. Terminal C opera das 5h às 19h para voos entre 6h30 e 22h30, e a decolagem de vocês é ~12h. Uma reserva cobre os dois.
+- [ ] **Até 19/11 — reservar o MCO Reserve para a volta de 26/11.** É grátis, reserva-se até 7 dias antes, e garante uma faixa de horário no raio-x da TSA sem fila. Terminal C opera das 5h às 19h para voos entre 6h30 e 22h30, e a decolagem de vocês é às 14h10. Uma reserva cobre os dois.
 - [ ] Conferir **antes de embarcar** que o app do roteiro diz "Pronto para usar sem internet" em Ajustes
 
 **Na semana da viagem (a primeira delas ainda no Brasil):**
