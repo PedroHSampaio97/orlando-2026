@@ -388,15 +388,35 @@
     alvo.innerHTML = '';
     const avisos = [];
 
-    const ultimo = E.ultimoExport ? E.ultimoExport() : null;
-    if (!ultimo) {
-      avisos.push('Vocês nunca exportaram. Tudo o que foi marcado existe só neste ' +
-                  'aparelho: se ele sumir, some junto.');
+    // Com a conta ligada, a cobrança muda de assunto: o backup é automático e o
+    // que importa é saber se ele está mesmo acontecendo.
+    const s = (window.Sync && Sync.resumo) ? Sync.resumo() : null;
+    if (s && s.conectado) {
+      if (s.erro) {
+        avisos.push('A última sincronização falhou: ' + s.erro + ' O que está marcado ' +
+                    'continua guardado neste aparelho.');
+      } else if (s.pendente && !s.online) {
+        avisos.push('Sem internet agora. O que vocês marcarem sobe sozinho quando a ' +
+                    'rede voltar.');
+      } else if (s.ultimo) {
+        const dias = diasEntre(s.ultimo.slice(0, 10), hojeISO());
+        if (dias >= 2) {
+          avisos.push('Os dois celulares não se falam há ' + dias + ' dias. Abram os ' +
+                      'ajustes e toquem em Sincronizar agora.');
+        }
+      }
     } else {
-      const dias = diasEntre(ultimo.slice(0, 10), hojeISO());
-      if (dias >= 3) {
-        avisos.push('Última exportação há ' + dias + ' dias. Exportem e mandem para o ' +
-                    'outro celular — é assim que os dois roteiros voltam a bater.');
+      const ultimo = E.ultimoExport ? E.ultimoExport() : null;
+      if (!ultimo) {
+        avisos.push('Tudo o que foi marcado existe só neste aparelho: se ele sumir, some ' +
+                    'junto. Entrem na conta da viagem e os dois celulares passam a se ' +
+                    'acertar sozinhos.');
+      } else {
+        const dias = diasEntre(ultimo.slice(0, 10), hojeISO());
+        if (dias >= 3) {
+          avisos.push('Última exportação há ' + dias + ' dias. Entrem na conta da viagem, ' +
+                      'ou exportem e mandem para o outro celular.');
+        }
       }
     }
 

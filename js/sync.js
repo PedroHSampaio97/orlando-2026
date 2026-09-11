@@ -25,6 +25,10 @@ window.Sync = (function () {
   const CHAVE_PUB = 'sb_publishable_zHIOL4s2V2cUJlZ-Tuwpeg_5H5O6LjI';
   const CHAVE_SESSAO = 'orlando2026:sessao';
   const CHAVE_ULTIMO = 'orlando2026:ultimo-sync';
+  // Sobrevive a fechar o app: marcação feita no parque, sem sinal, continua
+  // cobrando envio quando a rede voltar.
+  const CHAVE_PENDENTE = 'orlando2026:sync-pendente';
+  const ESPERA_ENVIO = 4000;
 
   // O que NUNCA sobe. Decisão de 11/09: telefone e apólice do seguro ficam no
   // aparelho, cruzando só pelo exportar/importar.
@@ -36,6 +40,9 @@ window.Sync = (function () {
   let sessao = null;     // { access_token, refresh_token, expira_em, email }
   let ocupado = false;
   let ultimoErro = null;
+  let aplicandoRemoto = false;    // merge vindo do servidor não conta como edição local
+  let timerEnvio = null;
+  let chegouCoisaNova = false;    // mudou algo debaixo de uma tela já pintada
 
   /* ---------------------------------------------------------------------------
      Sessão — guardada só neste aparelho.
@@ -58,6 +65,16 @@ window.Sync = (function () {
   function ultimoSync() {
     try { return localStorage.getItem(CHAVE_ULTIMO); } catch (e) { return null; }
   }
+  function haPendente() {
+    try { return localStorage.getItem(CHAVE_PENDENTE) === '1'; } catch (e) { return false; }
+  }
+  function marcarPendente(v) {
+    try {
+      if (v) localStorage.setItem(CHAVE_PENDENTE, '1');
+      else localStorage.removeItem(CHAVE_PENDENTE);
+    } catch (e) {}
+  }
+  const temRede = () => navigator.onLine !== false;
 
   /* ---------------------------------------------------------------------------
      Chamadas
@@ -187,30 +204,70 @@ window.Sync = (function () {
       });
     }).then(function (linhas) {
       let aplicados = 0, deOutros = 0;
-      (linhas || []).forEach(function (l) {
-        if (!l || l.dispositivo === meu || !l.estado) return;
-        deOutros++;
-        const r = E.importar(JSON.stringify(l.estado), 'mesclar');
-        aplicados += (r && r.aplicados > 0) ? r.aplicados : 0;
-      });
+      // O merge grava, e gravar avisa os ouvintes. Sem esta trava, o que chega
+      // do outro celular seria tratado como edição nossa e voltaria para o
+      // servidor num vaivém sem fim.
+      aplicandoRemoto = true;
+      try {
+        (linhas || []).forEach(function (l) {
+          if (!l || l.dispositivo === meu || !l.estado) return;
+          deOutros++;
+          const r = E.importar(JSON.stringify(l.estado), 'mesclar');
+          aplicados += (r && r.aplicados > 0) ? r.aplicados : 0;
+        });
+      } finally {
+        setTimeout(function () { aplicandoRemoto = false; }, 0);
+      }
       return { aparelhos: deOutros, aplicados: aplicados };
     });
   }
 
-  function sincronizar() {
+  function sincronizar(silencioso) {
     if (ocupado) return Promise.resolve(null);
+    if (!temRede()) {
+      ultimoErro = silencioso ? null : 'Sem internet agora. O que está marcado continua aqui e sobe sozinho quando a rede voltar.';
+      pintar();
+      return silencioso ? Promise.resolve(null) : Promise.reject(new Error(ultimoErro));
+    }
     ocupado = true; ultimoErro = null; pintar();
     return enviar()
       .then(buscar)
       .then(function (r) {
         try { localStorage.setItem(CHAVE_ULTIMO, new Date().toISOString()); } catch (e) {}
-        ocupado = false; pintar();
+        marcarPendente(false);
+        ocupado = false;
+        if (r && r.aplicados > 0) {
+          chegouCoisaNova = true;
+          if (window.AppNav && AppNav.repintarHome) AppNav.repintarHome();
+        }
+        pintar();
         return r;
       })
       .catch(function (e) {
         ocupado = false; ultimoErro = e.message; pintar();
+        if (silencioso) return null;
         throw e;
       });
+  }
+
+  // Toda escrita local agenda um envio. O debounce existe porque marcar cinco
+  // blocos seguidos são cinco gravações e tem de ser um envio só.
+  function agendarEnvio() {
+    marcarPendente(true);
+    if (!conectado()) { pintar(); return; }
+    if (timerEnvio) clearTimeout(timerEnvio);
+    timerEnvio = setTimeout(function () {
+      timerEnvio = null;
+      sincronizar(true);
+    }, ESPERA_ENVIO);
+    pintar();
+  }
+
+  function resumo() {
+    return {
+      conectado: conectado(), pendente: haPendente(), ultimo: ultimoSync(),
+      erro: ultimoErro, online: temRede(), novidade: chegouCoisaNova,
+    };
   }
 
   /* ---------------------------------------------------------------------------
@@ -254,13 +311,24 @@ window.Sync = (function () {
       estado.className = 'aviso info';
       estado.innerHTML = '<strong>Sincronizando…</strong>';
       estado.appendChild(document.createTextNode('Enviando este aparelho e buscando o outro.'));
+    } else if (conectado() && !temRede()) {
+      estado.className = 'aviso';
+      estado.innerHTML = '<strong>Sem internet</strong>';
+      estado.appendChild(document.createTextNode(
+        'O app está guardando tudo aqui e sobe sozinho quando a rede voltar.'));
     } else if (conectado()) {
       const q = horaCurta(ultimoSync());
       estado.className = 'aviso bom';
-      estado.innerHTML = '<strong>Conectado</strong>';
+      estado.innerHTML = '<strong>' + (haPendente() ? 'Conectado · falta enviar' : 'Conectado') + '</strong>';
       estado.appendChild(document.createTextNode(
         (sessao.email ? sessao.email + '. ' : '') +
-        (q ? 'Última sincronização ' + q + '.' : 'Ainda não sincronizou neste aparelho.')));
+        (haPendente()
+          ? 'Há mudanças deste aparelho ainda não enviadas; elas sobem em instantes.'
+          : (q ? 'Última sincronização ' + q + '.' : 'Ainda não sincronizou neste aparelho.'))));
+      if (chegouCoisaNova) {
+        estado.appendChild(document.createTextNode(
+          ' Chegou coisa nova do outro celular: recarregue para ver na tela do dia.'));
+      }
     } else {
       estado.className = 'aviso';
       estado.innerHTML = '<strong>Fora da conta</strong>';
@@ -346,13 +414,36 @@ window.Sync = (function () {
   function ligar() {
     lerSessao();
     pintar();
+
+    if (E.aoSalvar) {
+      E.aoSalvar(function () { if (!aplicandoRemoto) agendarEnvio(); });
+    }
+
+    // Rede voltou: sobe o que ficou para trás. Rede caiu: só muda o aviso.
+    window.addEventListener('online', function () {
+      if (conectado()) sincronizar(true); else pintar();
+    });
+    window.addEventListener('offline', pintar);
+
+    // Voltar para o app conta como abrir: é quando o outro celular pode ter
+    // marcado coisa enquanto este estava no bolso.
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'visible' && conectado() && temRede()) {
+        sincronizar(true);
+      }
+    });
+
+    // No arranque, sem competir com a primeira pintura.
+    if (conectado() && temRede()) {
+      setTimeout(function () { sincronizar(true); }, 1200);
+    }
   }
 
   return {
     ligar: ligar, pintar: pintar,
     entrar: entrar, sair: sair, renovar: renovar,
     sincronizar: sincronizar, enviar: enviar, buscar: buscar,
-    conectado: conectado, ultimoSync: ultimoSync,
+    conectado: conectado, ultimoSync: ultimoSync, resumo: resumo,
     cargaLocal: cargaLocal,   // o teste confere que `pessoais` não está aqui
   };
 })();

@@ -46,6 +46,11 @@ window.Estado = (function () {
     return dados;
   }
 
+  // Quem sincroniza precisa saber que algo mudou aqui. O aviso sai DEPOIS da
+  // gravação, para o que subir ser exatamente o que está no disco.
+  const ouvintes = [];
+  function aoSalvar(fn) { if (typeof fn === 'function') ouvintes.push(fn); }
+
   let pendente = null;
   function salvar() {
     dados.atualizadoEm = new Date().toISOString();
@@ -58,6 +63,7 @@ window.Estado = (function () {
       } catch (e) {
         console.warn('[estado] não consegui gravar:', e.message);
       }
+      ouvintes.forEach(function (f) { try { f(); } catch (e) {} });
     }, 0);
   }
 
@@ -251,7 +257,7 @@ window.Estado = (function () {
     coordLocal: coordLocal, definirCoordLocal: definirCoordLocal,
     pessoal: pessoal, definirPessoal: definirPessoal,
     exportar: exportar, ultimoExport: ultimoExport,
-    importar: importar, limpar: limpar,
+    importar: importar, limpar: limpar, aoSalvar: aoSalvar,
     bruto: function () { return dados; },
   };
 })();
