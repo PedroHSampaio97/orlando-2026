@@ -174,10 +174,12 @@
     const raiz = $('#topo');
     raiz.setAttribute('data-op', dia ? chaveOp(dia) : 'logistica');
     const m = document.querySelector('meta[name="theme-color"]');
-    if (m) m.setAttribute('content', dia ? corOp(dia) : '#0E4C5E');
+    // A barra do sistema acompanha o topo, e o topo muda de cor com o tema.
+    if (m) m.setAttribute('content', corOp(dia || { tipo: 'logistica' }));
   }
 
   function mostrarTela(nome) {
+    if (fecharEditor) fecharEditor();
     TELAS.forEach(function (t) {
       const alvo = $('#tela-' + t);
       if (alvo) alvo.classList.toggle('oculto', t !== nome);
@@ -218,7 +220,9 @@
   function pendenciasAbertas() {
     const hoje = hojeISO();
     return R.checklist
-      .filter((c) => !E.checkFeito(c.id))
+      // Passada a validade, a pendência não cobra mais: vai para o grupo próprio
+      // na aba Pendências e sai da Home e do selo.
+      .filter((c) => !E.checkFeito(c.id) && !(c.validaAte && c.validaAte < hoje))
       .map(function (c) {
         const data = E.dataChecklist(c.id) || c.dataAlvo;
         return { c: c, data: data, faltam: diasEntre(hoje, data) };
@@ -263,25 +267,32 @@
       /* durante a viagem: o dia de hoje */
       card.setAttribute('data-op', chaveOp(dHoje));
       const total = contaveis(dHoje).length, feitos = contarFeitos(dHoje);
-      const prox = blocosDoDia(dHoje)
-        .find((b) => b.min >= agoraMin() && !E.feito(b.dados.id));
+      const m = momentosDoDia(dHoje);
 
       const rot = el('div', 'acao-rot');
       rot.appendChild(document.createTextNode('hoje · ' + dHoje.emoji + ' ' + dHoje.titulo));
       card.appendChild(rot);
 
-      if (prox) {
-        const falta = prox.min - agoraMin();
-        card.appendChild(el('div', 'acao-prazo', prox.hora));
-        card.appendChild(el('div', 'acao-titulo', prox.dados.titulo));
-        card.appendChild(el('div', 'acao-meta',
-          falta <= 0 ? 'agora' :
-          falta < 60 ? 'em ' + falta + ' min' :
-          'em ' + Math.floor(falta / 60) + 'h' +
-            (falta % 60 ? String(falta % 60).padStart(2, '0') : '')));
-      } else {
+      // Durante a viagem o cartão responde três perguntas: o que é agora, o que
+      // vem depois e qual é a próxima mesa com hora marcada.
+      if (m.emCurso) {
+        card.appendChild(el('div', 'acao-agora', 'Agora · ' + m.emCurso.dados.titulo + ' · até ' +
+          paraHora(m.emCurso.min + (m.emCurso.dados.duracaoMin || 0))));
+      }
+      if (m.aSeguir) {
+        const falta = m.aSeguir.min - agoraMin();
+        card.appendChild(el('div', 'acao-prazo', m.aSeguir.hora));
+        card.appendChild(el('div', 'acao-titulo', 'A seguir · ' + m.aSeguir.dados.titulo));
+        card.appendChild(el('div', 'acao-meta', falta <= 0 ? 'agora' : 'em ' + intervaloTexto(falta)));
+      } else if (!m.emCurso) {
         card.appendChild(el('div', 'acao-prazo', feitos + '/' + total));
         card.appendChild(el('div', 'acao-titulo', 'Nada mais marcado para hoje'));
+      }
+      const res = proximaReserva();
+      if (res) {
+        card.appendChild(el('div', 'acao-reserva', 'Próxima reserva · ' +
+          (res.r.data === hojeISO() ? 'hoje' : ddmm(res.r.data)) + ' às ' + res.r.hora + ' · ' +
+          res.r.nome + (res.conf ? ' · confirmação ' + res.conf : '')));
       }
       const prog = el('div', 'acao-prog');
       prog.appendChild(el('i')).style.width = (total ? (feitos / total) * 100 : 0) + '%';
@@ -359,7 +370,8 @@
     const alvo = $('#home-pendencias');
     alvo.innerHTML = '';
     const hoje = hojeISO();
-    const lista = pendenciasAbertas().slice(0, 4);
+    // Antes da viagem a primeira já está no cartão de cima: a lista começa na seguinte.
+    const lista = diaDeHoje() ? pendenciasAbertas().slice(0, 4) : pendenciasAbertas().slice(1, 5);
     $('#rot-pendencias').classList.toggle('oculto', !lista.length);
     if (!lista.length) return;
 
@@ -456,9 +468,13 @@
       b.addEventListener('click', function () { irParaDia(dia); });
       nav.appendChild(b);
       if (dia.id === diaAtual.id) {
-        setTimeout(function () {
-          b.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
-        }, 0);
+        b.setAttribute('aria-current', 'date');
+        // Só a régua rola, e só na horizontal. O scrollIntoView puxava a página
+        // de volta ao topo um instante depois de o app rolar até o agora.
+        requestAnimationFrame(function () {
+          const nr = nav.getBoundingClientRect(), br = b.getBoundingClientRect();
+          nav.scrollLeft += (br.left - nr.left) - (nr.width - br.width) / 2;
+        });
       }
     });
   }
@@ -556,7 +572,10 @@
 
     const inp = $('#inp-referencia');
     const editada = refEditada(dia);
-    $('#lbl-referencia').textContent = dia.referencia.rotulo;
+    const tipoRef = tipoReferencia(dia.referencia.rotulo);
+    // Parque, voo, jogo e sessão têm horário oficial; saída e chegada são a hora real de vocês.
+    $('#lbl-referencia').textContent = (tipoRef === 'saida' || tipoRef === 'chegada'
+      ? 'Hora real — ' : 'Horário oficial — ') + dia.referencia.rotulo;
     inp.value = refDoDia(dia);
     inp.classList.toggle('editado', editada);
     $('#btn-ref-reset').disabled = !editada;
@@ -571,11 +590,35 @@
           (abs % 60 ? String(abs % 60).padStart(2, '0') : '') : abs + ' min') + '.';
       ajuda.classList.add('ativa');
     } else {
-      ajuda.textContent = 'Premissa do documento. Ajuste quando saírem os horários oficiais — ' +
-        'os blocos ancorados deslocam junto, os de horário fixo não.';
+      ajuda.textContent = AJUDA_REFERENCIA[tipoRef];
       ajuda.classList.remove('ativa');
     }
   }
+
+  // A ajuda muda com o que a referência é: abertura de parque se confere no site,
+  // voo no app da companhia, jogo na liga.
+  function tipoReferencia(rotulo) {
+    if (/Terminal/i.test(rotulo)) return 'chegada';
+    if (/Decolagem|voo/i.test(rotulo)) return 'voo';
+    if (/Abertura/i.test(rotulo)) return 'parque';
+    if (/jogo/i.test(rotulo)) return 'jogo';
+    if (/Sessão/i.test(rotulo)) return 'sessao';
+    if (/Saída/i.test(rotulo)) return 'saida';
+    return 'outro';
+  }
+  const AJUDA_REFERENCIA = {
+    chegada: 'Mudem na hora em que saírem do Terminal C, com as malas. A tarde desloca ' +
+             'junto; o jantar reservado fica.',
+    voo: 'Mudem se a companhia aérea remarcar o voo. A manhã inteira desloca junto.',
+    parque: 'Mudem quando o parque publicar o horário oficial. Os blocos ancorados deslocam ' +
+            'junto; desfile, show, reserva e pôr do sol ficam.',
+    jogo: 'Mudem se a liga remarcar o jogo. O Uber, o jantar e a caminhada deslocam junto.',
+    sessao: 'Mudem se a sessão confirmada no app for outra. A noite desloca até a Hogsmeade ' +
+            'decorada; o castelo, o jantar e a volta ficam.',
+    saida: 'Saíram mais tarde? Mudem aqui. Os blocos até o primeiro compromisso de hora ' +
+           'marcada deslocam junto.',
+    outro: 'Os blocos ancorados deslocam junto; os de horário fixo, não.',
+  };
 
   /* As pendencias com hora marcada viviam so na aba Pendencias, e o badge de
      la so contava atraso. Resultado: a compra do Lightning Lane das 7h ET
@@ -585,10 +628,8 @@
     const alvo = $('#vence-hoje');
     alvo.innerHTML = '';
     if (dia.data !== hojeISO()) return;
-    const hoje = (R.checklist || []).filter(function (c) {
-      const data = E.dataChecklist(c.id) || c.dataAlvo;
-      return data === dia.data && !E.checkFeito(c.id);
-    });
+    // As de hora marcada vão para a faixa junto do agora, com contagem.
+    const hoje = pendenciasDoDia(dia).filter((c) => !c.hora);
     if (!hoje.length) return;
     const cx = el('div', 'vence');
     cx.appendChild(el('div', 'vence-rot',
@@ -605,24 +646,118 @@
     alvo.appendChild(cx);
   }
 
+  function pendenciasDoDia(dia) {
+    return (R.checklist || []).filter(function (c) {
+      const data = E.dataChecklist(c.id) || c.dataAlvo;
+      return data === dia.data && !E.checkFeito(c.id);
+    });
+  }
+
+  // Instante absoluto de uma hora de Orlando. Na véspera o celular ainda está no
+  // fuso do Brasil; na viagem, no de Orlando. A pendência das 7h ET não muda.
+  function instanteET(dataISO, hora) {
+    const d = dataISO.split('-').map(Number), h = hora.split(':').map(Number);
+    const palpite = Date.UTC(d[0], d[1] - 1, d[2], h[0], h[1]);
+    const fmt = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York',
+      hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit' });
+    const deslocamento = function (t) {
+      const p = {};
+      fmt.formatToParts(new Date(t)).forEach(function (x) { p[x.type] = x.value; });
+      return Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour, +p.minute) - t;
+    };
+    return palpite - deslocamento(palpite - deslocamento(palpite));
+  }
+  function minutosAte(dataISO, hora, fuso) {
+    const alvo = fuso === 'ET' ? instanteET(dataISO, hora)
+      : new Date(dataISO + 'T' + hora + ':00').getTime();
+    return Math.round((alvo - Date.now()) / 60000);
+  }
+
+  /* A pendência de hora marcada fica junto do agora, com contagem e o check. No
+     alto da tela, acima de sete avisos, a compra das 7h ET passava sem ninguém ver. */
+  function faixaVence(dia) {
+    const comHora = pendenciasDoDia(dia).filter((c) => c.hora);
+    if (!comHora.length) return null;
+    const li = el('li', 'vence-faixa');
+    comHora.forEach(function (c) {
+      const item = el('div', 'vf-item' + (c.critico ? ' vf-critico' : ''));
+      const topo = el('div', 'vf-topo');
+      const quando = c.hora + (c.fuso ? ' ' + c.fuso : '');
+      const falta = minutosAte(dia.data, c.hora, c.fuso);
+      topo.appendChild(el('span', 'vf-hora', quando));
+      topo.appendChild(el('span', 'vf-conta' + (falta < 0 ? ' vf-venceu' : ''),
+        falta < 0 ? 'venceu às ' + quando : falta === 0 ? 'agora' : 'em ' + intervaloTexto(falta)));
+      const chk = el('button', 'bl-check');
+      chk.setAttribute('aria-pressed', 'false');
+      chk.setAttribute('aria-label', 'Concluir: ' + c.texto);
+      chk.appendChild(svg('M4 12l6 6L20 6'));
+      chk.addEventListener('click', function () {
+        E.marcarChecklist(c.id, true);
+        if (window.Fase3) Fase3.pintarPendencias();
+        item.remove();
+        if (!li.querySelector('.vf-item')) li.remove();
+      });
+      topo.appendChild(chk);
+      item.appendChild(topo);
+      item.appendChild(el('div', 'vf-texto', c.texto));
+      if (c.nota) {
+        const det = el('details', 'vf-nota');
+        det.dataset.chave = 'vence:' + c.id;
+        det.appendChild(el('summary', null, 'Ver o que fazer'));
+        det.appendChild(el('div', 'vf-nota-corpo', c.nota));
+        item.appendChild(det);
+      }
+      li.appendChild(item);
+    });
+    return li;
+  }
+
+  // Primeira frase de um aviso: o que se lê de passagem. O resto fica no acordeão.
+  function primeiraFrase(t) {
+    const par = String(t).split('\n')[0];
+    const m = par.match(/^.*?[.!?](?=\s|$)/);
+    let f = (m ? m[0] : par).trim();
+    if (f.length > 180) f = f.slice(0, 177).replace(/\s+\S*$/, '') + '…';
+    return f;
+  }
+
   function pintarAvisos(dia) {
     const alvo = $('#avisos-dia');
     alvo.innerHTML = '';
-    (dia.avisos || []).forEach(function (t) {
-      alvo.appendChild(el('div', 'aviso', t));
-    });
+    const itens = [];
+    (dia.avisos || []).forEach((t) => itens.push({ texto: t, resolver: true }));
     (dia.notas || []).forEach(function (n) {
       // alerta e atencao pedem a mesma cor: as duas sao coisa a resolver, nao boa noticia
-      const resolver = n.tipo === 'atencao' || n.tipo === 'alerta';
-      const d = el('div', 'aviso ' + (resolver ? '' : 'bom'));
-      d.textContent = n.texto;
-      if (n.pesquisa) {
-        d.appendChild(el('span', 'marca-pesquisa',
-          'verificado na web em ' + n.pesquisa.split('-').reverse().join('/')));
-      }
-      alvo.appendChild(d);
+      itens.push({ texto: n.texto, resolver: n.tipo === 'atencao' || n.tipo === 'alerta',
+                   pesquisa: n.pesquisa });
     });
-    if (dia.notaCusto) alvo.appendChild(el('div', 'aviso bom', dia.notaCusto));
+    if (dia.notaCusto) itens.push({ texto: dia.notaCusto, resolver: false });
+
+    if (itens.length) {
+      // À vista, só a primeira frase do que é para resolver. Os oito avisos do dia
+      // 11 abertos empurravam a linha do tempo para fora da primeira tela.
+      const urgentes = itens.filter((i) => i.resolver);
+      if (urgentes.length) {
+        const res = el('ul', 'avisos-resumo');
+        urgentes.forEach((i) => res.appendChild(el('li', null, primeiraFrase(i.texto))));
+        alvo.appendChild(res);
+      }
+      const det = el('details', 'acordeao avisos-todos');
+      det.appendChild(el('summary', null, 'Avisos e notas do dia · ' + itens.length));
+      const corpo = el('div', 'acordeao-corpo');
+      itens.forEach(function (i) {
+        const d = el('div', 'aviso ' + (i.resolver ? '' : 'bom'));
+        d.textContent = i.texto;
+        if (i.pesquisa) {
+          d.appendChild(el('span', 'marca-pesquisa',
+            'verificado na web em ' + i.pesquisa.split('-').reverse().join('/')));
+        }
+        corpo.appendChild(d);
+      });
+      det.appendChild(corpo);
+      alvo.appendChild(det);
+    }
 
     // A dica mora uma vez so, em R.dicas. Quando e de dia especifico, aparece aqui
     // e tambem no indice da aba Guia — mesmo objeto, dois lugares.
@@ -686,26 +821,40 @@
 
   function pintarLinhaTempo(dia) {
     const ol = $('#linha-tempo');
+    // Repintar não pode fechar o "Detalhes" aberto nem a nota da faixa do que vence.
+    const abertos = new Set([].map.call(ol.querySelectorAll('details[open][data-chave]'),
+      (d) => d.dataset.chave));
     ol.innerHTML = '';
+    const ehHoje = dia.data === hojeISO();
+    const agora = agoraMin();
     let lista = blocosDoDia(dia);
     if (soFalta) lista = lista.filter((b) => !E.feito(b.dados.id));
 
+    // O ponto do agora: o que vence com hora marcada, a linha e o ajuste de atraso.
+    const pontoAgora = function () {
+      const f = faixaVence(dia);
+      if (f) ol.appendChild(f);
+      ol.appendChild(linhaAgora(agora));
+      const a = linhaAtraso(dia);
+      if (a) ol.appendChild(a);
+    };
+
     if (!lista.length) {
+      if (ehHoje) pontoAgora();
       const v = el('li', 'vazio-lista');
       v.appendChild(svg('M9 11l2.5 2.5L16 9|M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18z'));
       v.appendChild(el('p', null, 'Tudo feito neste dia.'));
       ol.appendChild(v);
+      reabrir(ol, abertos);
       return;
     }
 
-    const ehHoje = dia.data === hojeISO();
-    const agora = agoraMin();
     let agoraPosto = false;
 
     lista.forEach(function (item, i) {
       // linha do agora antes do primeiro bloco que ainda não passou
       if (ehHoje && !agoraPosto && item.min > agora) {
-        ol.appendChild(linhaAgora(agora));
+        pontoAgora();
         agoraPosto = true;
       }
       ol.appendChild(paradaEl(item, dia));
@@ -740,36 +889,86 @@
       if (conector.children.length) ol.appendChild(conector);
     });
 
-    if (ehHoje && !agoraPosto) ol.appendChild(linhaAgora(agora));
+    if (ehHoje && !agoraPosto) pontoAgora();
+    reabrir(ol, abertos);
+    marcarMomentos(dia);
+  }
+
+  function reabrir(raiz, abertos) {
+    raiz.querySelectorAll('details[data-chave]').forEach(function (d) {
+      if (abertos.has(d.dataset.chave)) d.open = true;
+    });
   }
 
   /* Editor de hora de um bloco. Vale para os blocos com hora oficial que so sai
      perto da data — desfile, fogos, shows. Nao mexe na referencia do dia. */
+  let fecharEditor = null;
   function abrirEditorHora(b, dia) {
-    const antigo = document.querySelector('.editor-hora');
-    if (antigo) antigo.remove();
+    if (fecharEditor) fecharEditor();
     const cx = el('div', 'editor-hora');
+    cx.setAttribute('role', 'dialog');
+    cx.setAttribute('aria-label', 'Horário oficial de ' + b.titulo);
     cx.appendChild(el('div', 'editor-rot',
       'Qual é o horário oficial de "' + b.titulo + '"?'));
+    const confirmado = E.horaBloco(b.id);
+    cx.appendChild(el('div', 'editor-previsto', 'Previsto no roteiro: ' + b.hora +
+      (confirmado ? ' · confirmado: ' + confirmado : '')));
+    // Campo vazio, com a previsão só de exemplo: vir preenchido com 20:00 fazia
+    // "Salvar" confirmar a previsão como se fosse o horário oficial.
     const inp = document.createElement('input');
-    inp.type = 'time';
+    inp.type = 'text';
+    inp.inputMode = 'numeric';
+    inp.autocomplete = 'off';
+    inp.maxLength = 5;
     inp.className = 'editor-campo';
-    inp.value = E.horaBloco(b.id) || b.hora;
+    inp.placeholder = b.hora;
+    inp.setAttribute('aria-label', 'Horário oficial, no formato HH:MM');
     cx.appendChild(inp);
     const linha = el('div', 'editor-botoes');
-    const salvar = el('button', 'editor-ok', 'Salvar');
+    const salvar = el('button', 'editor-ok', 'Confirmar horário');
+    salvar.disabled = true;
+    const valido = (v) => /^([01]\d|2[0-3]):[0-5]\d$/.test(v);
+    inp.addEventListener('input', function () {
+      let v = inp.value.replace(/[^\d]/g, '').slice(0, 4);
+      if (v.length >= 3) v = v.slice(0, 2) + ':' + v.slice(2);
+      inp.value = v;
+      salvar.disabled = !valido(v);
+      salvar.textContent = valido(v) ? 'Confirmar ' + v + ' como oficial' : 'Confirmar horário';
+    });
+    inp.addEventListener('keydown', function (e) { if (e.key === 'Enter') salvar.click(); });
     salvar.addEventListener('click', function () {
-      if (inp.value) E.definirHoraBloco(b.id, inp.value);
-      cx.remove(); pintarLinhaTempo(dia);
+      if (!valido(inp.value)) return;
+      E.definirHoraBloco(b.id, inp.value);
+      fechar(); pintarLinhaTempo(dia);
     });
-    const limpar = el('button', 'editor-limpar', 'Voltar ao previsto');
-    limpar.addEventListener('click', function () {
-      E.definirHoraBloco(b.id, null);
-      cx.remove(); pintarLinhaTempo(dia);
-    });
-    linha.appendChild(salvar); linha.appendChild(limpar);
+    const cancelar = el('button', 'editor-limpar', 'Cancelar');
+    cancelar.addEventListener('click', function () { fechar(); });
+    linha.appendChild(salvar); linha.appendChild(cancelar);
     cx.appendChild(linha);
+    if (confirmado) {
+      const voltar = el('button', 'editor-voltar', 'Voltar ao previsto (' + b.hora + ')');
+      voltar.addEventListener('click', function () {
+        E.definirHoraBloco(b.id, null);
+        fechar(); pintarLinhaTempo(dia);
+      });
+      cx.appendChild(voltar);
+    }
     document.body.appendChild(cx);
+
+    const fora = function (e) { if (!cx.contains(e.target)) fechar(); };
+    const tecla = function (e) { if (e.key === 'Escape') fechar(); };
+    function fechar() {
+      cx.remove();
+      document.removeEventListener('pointerdown', fora, true);
+      document.removeEventListener('keydown', tecla);
+      fecharEditor = null;
+    }
+    fecharEditor = fechar;
+    // No tick seguinte: o toque que abriu o editor não pode ser o que fecha.
+    setTimeout(function () {
+      document.addEventListener('pointerdown', fora, true);
+      document.addEventListener('keydown', tecla);
+    }, 0);
     inp.focus();
   }
 
@@ -824,10 +1023,93 @@
     return li;
   }
 
+  // O bloco em andamento e o próximo que ainda não foi feito.
+  function momentosDoDia(dia) {
+    const agora = agoraMin();
+    const lista = blocosDoDia(dia).filter((it) => !E.feito(it.dados.id));
+    return {
+      emCurso: lista.find((it) => it.min <= agora && agora < it.min + (it.dados.duracaoMin || 0)) || null,
+      aSeguir: lista.find((it) => it.min > agora) || null,
+    };
+  }
+
+  // Marca "agora" e "a seguir" nos cartões já pintados, sem repintar a lista.
+  function marcarMomentos(dia) {
+    const ol = $('#linha-tempo');
+    ol.querySelectorAll('.parada').forEach(function (li) {
+      li.classList.remove('pa-em-curso', 'pa-a-seguir');
+      const r = li.querySelector('.ct-momento');
+      if (r) r.remove();
+    });
+    if (dia.data !== hojeISO()) return;
+    const m = momentosDoDia(dia);
+    [[m.emCurso, 'pa-em-curso', 'agora'], [m.aSeguir, 'pa-a-seguir', 'a seguir']].forEach(function (x) {
+      if (!x[0]) return;
+      const li = ol.querySelector('.parada[data-bloco="' + x[0].dados.id + '"]');
+      if (!li) return;
+      li.classList.add(x[1]);
+      const cab = li.querySelector('.cartao-cabeca');
+      cab.insertBefore(el('span', 'ct-momento', x[2]), cab.querySelector('.ct-check'));
+    });
+  }
+
+  /* Atrasados? A referência anda de quinze em quinze minutos, ali mesmo junto do
+     agora — antes, era preciso subir até o topo do dia e digitar a hora. */
+  function linhaAtraso(dia) {
+    if (!dia.referencia) return null;
+    const li = el('li', 'atraso');
+    li.appendChild(el('span', 'atraso-rot', 'Atrasados?'));
+    const botoes = el('div', 'atraso-botoes');
+    [[-15, '−15'], [15, '+15'], [30, '+30'], [45, '+45']].forEach(function (x) {
+      const b = el('button', 'atraso-btn', x[1]);
+      b.setAttribute('aria-label', (x[0] > 0 ? 'Atrasar' : 'Adiantar') + ' o dia em ' +
+        Math.abs(x[0]) + ' minutos');
+      b.addEventListener('click', function () { deslocarReferencia(dia, x[0]); });
+      botoes.appendChild(b);
+    });
+    if (refEditada(dia)) {
+      const z = el('button', 'atraso-btn atraso-zerar', 'Zerar');
+      z.addEventListener('click', function () {
+        E.definirReferencia(dia.id, null);
+        pintarDia(); rolarAteAgora();
+      });
+      botoes.appendChild(z);
+    }
+    li.appendChild(botoes);
+    const quebrados = blocosDoDia(dia).filter((it) => it.colisao && !E.feito(it.dados.id));
+    if (quebrados.length) {
+      li.appendChild(el('div', 'atraso-resumo',
+        plural(quebrados.length, 'bloco deixou', 'blocos deixaram') + ' de caber: ' +
+        quebrados.map((it) => it.dados.titulo).join(' · ')));
+    }
+    return li;
+  }
+  function deslocarReferencia(dia, delta) {
+    const nova = paraHora(paraMin(refDoDia(dia)) + delta);
+    E.definirReferencia(dia.id, nova === dia.referencia.padrao ? null : nova);
+    pintarDia();
+    rolarAteAgora();
+  }
+
+  // A próxima mesa com hora marcada, de agora em diante — é o compromisso que não
+  // espera, e o número dela precisa estar à mão.
+  function proximaReserva() {
+    if (!window.Fase3) return null;
+    const hoje = hojeISO(), agora = agoraMin();
+    const lista = R.restaurantes.filter(function (r) {
+      if (!r.precisaReserva || !r.hora) return false;
+      const s = Fase3.statusDe(r);
+      if (s !== 'reservado' && s !== 'confirmado') return false;
+      return r.data > hoje || (r.data === hoje && paraMin(r.hora) >= agora);
+    }).sort((a, b) => (a.data + a.hora).localeCompare(b.data + b.hora));
+    return lista.length ? { r: lista[0], conf: Fase3.confirmacaoDe(lista[0]) } : null;
+  }
+
   function paradaEl(item, dia) {
     const b = item.dados;
     const li = el('li', 'parada t-' + b.tipo +
       (E.feito(b.id) ? ' feita' : '') + (item.colisao ? ' colide' : ''));
+    li.dataset.bloco = b.id;
 
     const marca = el('div', 'marcador');
     marca.appendChild(svg(ICONES[b.tipo] || ICONES.livre));
@@ -853,13 +1135,24 @@
       chk.setAttribute('aria-label', 'Marcar como feito: ' + b.titulo);
       chk.appendChild(svg('M4 12l6 6L20 6'));
       chk.addEventListener('click', function () {
-        E.marcarFeito(b.id, !E.feito(b.id));
-        pintarLinhaTempo(dia); pintarProgresso(dia);
+        const agora = !E.feito(b.id);
+        E.marcarFeito(b.id, agora);
+        // Com o filtro ligado o bloco sai da lista; sem ele, só o cartão muda e
+        // nada que estava aberto fecha.
+        if (soFalta) pintarLinhaTempo(dia);
+        else {
+          li.classList.toggle('feita', agora);
+          chk.setAttribute('aria-pressed', agora ? 'true' : 'false');
+          marcarMomentos(dia);
+        }
+        pintarProgresso(dia);
       });
       cab.appendChild(chk);
     }
     card.appendChild(cab);
     card.appendChild(el('div', 'ct-titulo', b.titulo));
+    // O "não cabe" logo abaixo do título: no pé do cartão ele vinha depois do texto longo.
+    if (item.colisao) card.appendChild(el('div', 'ct-colisao', '⚠ ' + item.colisao));
     if (b.descricao) card.appendChild(el('div', 'ct-desc', b.descricao));
 
     if (b.areaParque || b.endereco) {
@@ -963,7 +1256,6 @@
 
     if (b.condicao) card.appendChild(el('div', 'ct-nota', '→ ' + b.condicao));
     if (b.nota) card.appendChild(el('div', 'ct-nota', b.nota));
-    if (item.colisao) card.appendChild(el('div', 'ct-colisao', '⚠ ' + item.colisao));
 
     // atração ganha busca no Maps por nome — sem coordenada inventada
     if (b.tipo === 'atracao' && !b.localId) {
@@ -973,20 +1265,26 @@
       a.appendChild(document.createTextNode('achar no Maps'));
       card.appendChild(a);
     }
-    if (b.contexto) card.appendChild(el('div', 'ct-contexto', b.contexto));
-
-    // Procedencia: de onde veio o que esta escrito aqui. O app promete isso na
-    // tela de Ajustes e ate agora so cumpria nas notas do dia e nas dicas.
-    if (b.pesquisa || b.verificado === false) {
-      const p = el('div', 'ct-pesquisa');
-      if (b.pesquisa) {
-        p.appendChild(el('span', null,
-          'verificado na web em ' + b.pesquisa.split('-').reverse().join('/')));
+    // O texto longo e a procedência ficam recolhidos. Abertos, empurravam o agora
+    // dois mil pixels para baixo; hora, título, selos, fila e colisão seguem à vista.
+    if (b.contexto || b.pesquisa || b.verificado === false) {
+      const mais = el('details', 'ct-mais');
+      mais.dataset.chave = 'bloco:' + b.id;
+      mais.appendChild(el('summary', 'ct-mais-rot', 'Detalhes'));
+      if (b.contexto) mais.appendChild(el('div', 'ct-contexto', b.contexto));
+      // Procedencia: de onde veio o que esta escrito aqui.
+      if (b.pesquisa || b.verificado === false) {
+        const p = el('div', 'ct-pesquisa');
+        if (b.pesquisa) {
+          p.appendChild(el('span', null,
+            'verificado na web em ' + b.pesquisa.split('-').reverse().join('/')));
+        }
+        if (b.verificado === false) {
+          p.appendChild(el('span', 'ct-pesquisa-est', 'estimativa, confiram'));
+        }
+        mais.appendChild(p);
       }
-      if (b.verificado === false) {
-        p.appendChild(el('span', 'ct-pesquisa-est', 'estimativa, confiram'));
-      }
-      card.appendChild(p);
+      card.appendChild(mais);
     }
 
     li.appendChild(card);
@@ -1040,8 +1338,15 @@
     const escuroSistema = window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (!atual) aplicarTema(escuroSistema ? 'claro' : 'escuro');
     else aplicarTema(atual === 'escuro' ? 'claro' : 'escuro');
-    if (!$('#tela-dia').classList.contains('oculto')) pintarNavDias();
+    aoMudarTema();
   });
+  // O tema do sistema também muda sozinho ao anoitecer: o topo e a régua acompanham.
+  function aoMudarTema() {
+    const noDia = !$('#tela-dia').classList.contains('oculto');
+    aplicarCorTopo(noDia ? diaAtual : null);
+    if (noDia) pintarNavDias();
+  }
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', aoMudarTema);
 
   /* =========================================================================
      Arranque
@@ -1062,6 +1367,10 @@
   setInterval(function () {
     if (!$('#tela-dia').classList.contains('oculto') && diaAtual.data === hojeISO()) {
       pintarLinhaTempo(diaAtual);
+    }
+    // Durante a viagem o cartão da Home também anda: agora, a seguir e a reserva.
+    if (!$('#tela-home').classList.contains('oculto') && diaDeHoje()) {
+      pintarCartaoAcao(diaDeHoje());
     }
   }, 60000);
 

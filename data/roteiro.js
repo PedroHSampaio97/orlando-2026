@@ -41,9 +41,9 @@ window.ROTEIRO = {
       'referência do dia e os blocos ancorados deslocam junto.\n\n' +
       'A PARTIR DO COMPROMISSO DE HORA MARCADA — desfile, show, reserva, pôr do sol —, os ' +
       'blocos são fixos e não se mexem com a abertura.\n\n' +
-      'Cinco dias têm outra referência: a saída do Terminal C no dia 10, a sessão do ' +
-      'Grinchmas no dia 14, o início do jogo nos dias 18 e 21 e a decolagem de Orlando no ' +
-      'dia 26. Os dias 12, 20 e 25 não têm referência: todos os blocos são fixos.',
+      'Oito dias têm outra referência: a saída do Terminal C no dia 10, a saída do hotel ' +
+      'nos dias 12, 20 e 25, a sessão do Grinchmas no dia 14, o início do jogo nos dias 18 ' +
+      'e 21 e a decolagem de Orlando no dia 26.',
 
     // Vocabulários fechados. A interface valida contra isto no load.
     tiposBloco: ['atracao', 'refeicao', 'deslocamento', 'show', 'compras',
@@ -1485,7 +1485,7 @@ window.ROTEIRO = {
     custoZero: false,
     fechado: true,
     revisadoEm: '2026-09-10',
-    referencia: null,
+    referencia: { rotulo: 'Saída do hotel', padrao: '09:30', confirmado: false },
 
     resumo:
       'O dia inteiro roda no eixo da International Drive. Ele é leve de propósito: vocês vêm ' +
@@ -1673,7 +1673,7 @@ window.ROTEIRO = {
 
     /* --------------------------------------------------------------------- */
     blocos: [
-      { id: 'b-1211-0830', hora: '08:30', ancora: 'fixo', tipo: 'refeicao',
+      { id: 'b-1211-0830', hora: '08:30', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Café da manhã no hotel',
         descricao: 'Incluso. Sem alarme',
         contexto:
@@ -1682,7 +1682,7 @@ window.ROTEIRO = {
           'despertador: nada hoje depende de acordar cedo.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 60 },
 
-      { id: 'b-1211-0930', hora: '09:30', ancora: 'fixo', tipo: 'deslocamento',
+      { id: 'b-1211-0930', hora: '09:30', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Sair para o outlet',
         descricao: 'Uber, ~25 min, US$ 20–30',
         contexto:
@@ -1690,7 +1690,7 @@ window.ROTEIRO = {
           'chegam na abertura, que é o único momento em que a loja está inteira.',
         localId: 'premium-outlets', acesso: [], duracaoMin: 30 },
 
-      { id: 'b-1211-1000', hora: '10:00', ancora: 'fixo', tipo: 'compras',
+      { id: 'b-1211-1000', hora: '10:00', ancora: 'referencia', tipo: 'compras',
         titulo: 'Orlando International Premium Outlets',
         descricao: '~25 min do hotel. Quinta, 10h às 21h',
         contexto:
@@ -1700,7 +1700,7 @@ window.ROTEIRO = {
         endereco: '4951 International Dr', localId: 'premium-outlets', acesso: [],
         pesquisa: '2026-09-10', duracaoMin: 5 },
 
-      { id: 'b-1211-1005', hora: '10:05', ancora: 'fixo', tipo: 'compras',
+      { id: 'b-1211-1005', hora: '10:05', ancora: 'referencia', tipo: 'compras',
         titulo: 'Disney’s Character Warehouse',
         descricao: 'Dentro do mesmo outlet. Abre 10h de segunda a sábado',
         contexto:
@@ -1714,7 +1714,7 @@ window.ROTEIRO = {
         endereco: '4951 International Dr', localId: 'premium-outlets', acesso: [],
         pesquisa: '2026-09-09', duracaoMin: 170 },
 
-      { id: 'b-1211-1300', hora: '13:00', ancora: 'fixo', tipo: 'refeicao',
+      { id: 'b-1211-1300', hora: '13:00', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Ford’s Garage',
         descricao: 'Mesa com garçom, dentro do próprio outlet',
         contexto:
@@ -4993,7 +4993,7 @@ window.ROTEIRO = {
     custoZero: false,
     fechado: true,
     revisadoEm: '2026-09-11',
-    referencia: null,
+    referencia: { rotulo: 'Saída do hotel', padrao: '08:30', confirmado: false },
     resumo:
       'O único respiro entre o Epic e cinco dias pesados seguidos. Café sem pressa no IHOP, ' +
       'almoço porto-riquenho no Old Town, o carro às 15h — a tarefa crítica do dia — e, à ' +
@@ -5080,7 +5080,7 @@ window.ROTEIRO = {
         ] },
     ],
     blocos: [
-      { id: 'b-2011-0800', hora: '08:30', ancora: 'fixo', tipo: 'refeicao',
+      { id: 'b-2011-0800', hora: '08:30', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Café da manhã — IHOP',
         descricao: 'Sem alarme. A 750 m do hotel, aberto desde as 6h. Ou o do hotel, incluso',
         contexto:
@@ -5096,7 +5096,7 @@ window.ROTEIRO = {
         endereco: '5184 W Irlo Bronson Memorial Hwy', acesso: [], duracaoMin: 75,
         pesquisa: '2026-09-11' },
 
-      { id: 'b-2011-1000', hora: '10:00', ancora: 'fixo', tipo: 'tarefa',
+      { id: 'b-2011-1000', hora: '10:00', ancora: 'referencia', tipo: 'tarefa',
         titulo: 'Lavanderia',
         descricao: 'A única rodada da viagem. Sabão e moedas de 25 centavos vêm da lista do Walmart',
         contexto:
@@ -5107,7 +5107,7 @@ window.ROTEIRO = {
           'Se a máquina do hotel não funcionar, procurem uma lavanderia self-service na 192.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 150 },
 
-      { id: 'b-2011-1230', hora: '12:45', ancora: 'fixo', tipo: 'refeicao',
+      { id: 'b-2011-1230', hora: '12:45', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — El Cilantrillo',
         descricao: 'Porto-riquenho de mesa, dentro do Old Town. Três minutos de Uber',
         contexto:
@@ -5122,7 +5122,7 @@ window.ROTEIRO = {
         endereco: '5770 W Irlo Bronson Memorial Hwy, Suite 130', restauranteId: 'r-cilantrillo',
         localId: 'old-town', acesso: [], duracaoMin: 75, pesquisa: '2026-09-11' },
 
-      { id: 'b-2011-1401', hora: '14:00', ancora: 'fixo', tipo: 'livre',
+      { id: 'b-2011-1401', hora: '14:00', ancora: 'referencia', tipo: 'livre',
         titulo: 'Old Town de dia · Mine Blower opcional',
         descricao: 'Uma volta pela rua de tijolinho. A montanha-russa do Fun Spot, se a comida deixar',
         contexto:
@@ -6705,7 +6705,7 @@ window.ROTEIRO = {
     custoZero: false,
     fechado: true,
     revisadoEm: '2026-09-11',
-    referencia: null,
+    referencia: { rotulo: 'Saída do hotel', padrao: '10:00', confirmado: false },
     resumo:
       'De manhã, o outlet do Vineland, Marshalls, Ross e Walgreens. O carro volta à Avis às ' +
       '15h e as malas fecham no hotel. À noite, o Disney Springs de Natal: árvores, neve na ' +
@@ -6778,7 +6778,7 @@ window.ROTEIRO = {
         ] },
     ],
     blocos: [
-      { id: 'b-2511-0900', hora: '09:00', ancora: 'fixo', tipo: 'refeicao',
+      { id: 'b-2511-0900', hora: '09:00', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Café da manhã do hotel',
         descricao: 'Sem pressa: a volta de Tampa foi às 22h15',
         contexto:
@@ -6786,7 +6786,7 @@ window.ROTEIRO = {
           'reserva.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 45 },
 
-      { id: 'b-2511-1000', hora: '10:00', ancora: 'fixo', tipo: 'deslocamento',
+      { id: 'b-2511-1000', hora: '10:00', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'De carro para o Vineland',
         descricao: 'Uns 15 minutos até o outlet',
         contexto:
@@ -6794,7 +6794,7 @@ window.ROTEIRO = {
           'hotel em linha reta. O tempo de estrada é estimativa.',
         localId: 'vineland-outlets', acesso: [], duracaoMin: 15 },
 
-      { id: 'b-2511-1015', hora: '10:15', ancora: 'fixo', tipo: 'compras',
+      { id: 'b-2511-1015', hora: '10:15', ancora: 'referencia', tipo: 'compras',
         titulo: 'Orlando Vineland Premium Outlets',
         descricao: 'Abre às 10h. Horário estendido na semana da Black Friday',
         contexto:
@@ -6803,7 +6803,7 @@ window.ROTEIRO = {
         endereco: '8200 Vineland Ave', localId: 'vineland-outlets', acesso: [], duracaoMin: 90,
         pesquisa: '2026-09-11' },
 
-      { id: 'b-2511-1150', hora: '11:50', ancora: 'fixo', tipo: 'compras',
+      { id: 'b-2511-1150', hora: '11:50', ancora: 'referencia', tipo: 'compras',
         titulo: 'Marshalls — Vineland Pointe',
         descricao: 'Ao lado do outlet. Garimpo',
         contexto:
@@ -6812,7 +6812,7 @@ window.ROTEIRO = {
         endereco: '7655 Lake St', localId: 'vineland-outlets', acesso: [], duracaoMin: 40,
         pesquisa: '2026-09-11' },
 
-      { id: 'b-2511-1235', hora: '12:35', ancora: 'fixo', tipo: 'refeicao',
+      { id: 'b-2511-1235', hora: '12:35', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Sofrito Latin Cafe',
         descricao: 'Cozinha latina de balcão, na Palm Pkwy. Leve: o jantar é o Homecomin’',
         contexto:
@@ -6822,7 +6822,7 @@ window.ROTEIRO = {
         endereco: '8607 Palm Pkwy', restauranteId: 'r-sofrito', localId: 'vineland-outlets',
         acesso: [], duracaoMin: 45, pesquisa: '2026-09-11' },
 
-      { id: 'b-2511-1335', hora: '13:35', ancora: 'fixo', tipo: 'compras',
+      { id: 'b-2511-1335', hora: '13:35', ancora: 'referencia', tipo: 'compras',
         titulo: 'Ross — Vineland Rd',
         descricao: 'Ao lado do Publix, a 600 m do Walmart do dia 10',
         contexto:
@@ -6831,7 +6831,7 @@ window.ROTEIRO = {
         endereco: '3231 Vineland Rd', localId: 'publix-vineland', acesso: [], duracaoMin: 35,
         pesquisa: '2026-09-11' },
 
-      { id: 'b-2511-1415', hora: '14:15', ancora: 'fixo', tipo: 'tarefa',
+      { id: 'b-2511-1415', hora: '14:15', ancora: 'referencia', tipo: 'tarefa',
         titulo: 'Walgreens e posto, antes da Avis',
         descricao: 'Vitaminas e cosméticos. No posto, paguem dentro da loja',
         contexto:
@@ -7424,7 +7424,7 @@ window.ROTEIRO = {
              '(Columbia Harbour House e Casey’s)',
       restauranteIds: ['r-columbia-harbour'] },
 
-    { id: 'ck-1409', dataAlvo: '2026-09-14', hora: '06:00', fuso: 'ET',
+    { id: 'ck-1409', dataAlvo: '2026-09-14', validaAte: '2026-11-13', hora: '06:00', fuso: 'ET',
       janelaReserva: true, critico: false,
       texto: 'Reservar Sanaa para o jantar de 13/11 (janela de 60 dias)',
       nota:
@@ -7436,7 +7436,7 @@ window.ROTEIRO = {
         'a savana. A escolha é pela comida.',
       restauranteIds: ['r-sanaa'] },
 
-    { id: 'ck-1609', dataAlvo: '2026-09-16', hora: '06:00', fuso: 'ET',
+    { id: 'ck-1609', dataAlvo: '2026-09-16', validaAte: '2026-11-15', hora: '06:00', fuso: 'ET',
       janelaReserva: true, critico: false,
       texto: 'Hollywood Studios: Oga’s Cantina e Sci-Fi Dine-In — e ajustar os blocos',
       nota:
@@ -7447,7 +7447,7 @@ window.ROTEIRO = {
         'isso o app vai seguir mostrando 17h e 18h o resto da viagem.',
       restauranteIds: ['r-ogas', 'r-scifi'] },
 
-    { id: 'ck-1709', dataAlvo: '2026-09-17', hora: '06:00', fuso: 'ET',
+    { id: 'ck-1709', dataAlvo: '2026-09-17', validaAte: '2026-11-16', hora: '06:00', fuso: 'ET',
       janelaReserva: true, critico: false,
       texto: 'Epcot: abrir a janela de mesa só se mudarem de ideia sobre o Food & Wine',
       nota:
@@ -7458,7 +7458,7 @@ window.ROTEIRO = {
         'ou nunca. Não decidindo nada, não façam nada — e risquem.',
       restauranteIds: ['r-epcot-mesa'] },
 
-    { id: 'ck-ingresso', dataAlvo: '2026-09-15', dataEstimada: true, motivoData: 'Bloqueia o plano de Lightning Lane inteiro', hora: null, fuso: null,
+    { id: 'ck-ingresso', dataAlvo: '2026-09-15', validaAte: '2026-11-08', dataEstimada: true, motivoData: 'Bloqueia o plano de Lightning Lane inteiro', hora: null, fuso: null,
       janelaReserva: false, critico: true,
       texto: 'Confirmar com a agência a regra exata de validade do ingresso Disney de 4 dias',
       nota:
@@ -7468,7 +7468,7 @@ window.ROTEIRO = {
         'quatro pendências de Lightning Lane deste checklist.',
       restauranteIds: [] },
 
-    { id: 'ck-shuttle', dataAlvo: '2026-10-06', dataEstimada: true,
+    { id: 'ck-shuttle', dataAlvo: '2026-10-06', validaAte: '2026-11-15', dataEstimada: true,
       motivoData: 'Junto com a reserva do carro, para decidir transporte de uma vez',
       hora: null, fuso: null, janelaReserva: false, critico: false,
       texto: 'Confirmar o transfer gratuito do hotel para Magic Kingdom e Hollywood Studios',
@@ -7481,7 +7481,7 @@ window.ROTEIRO = {
         'primeiro shuttle sair depois disso, ignorem.',
       restauranteIds: [] },
 
-    { id: 'ck-carro', dataAlvo: '2026-10-06', dataEstimada: true, motivoData: 'Preço de locadora sobe perto da data', hora: null, fuso: null,
+    { id: 'ck-carro', dataAlvo: '2026-10-06', validaAte: '2026-11-20', dataEstimada: true, motivoData: 'Preço de locadora sobe perto da data', hora: null, fuso: null,
       janelaReserva: false, critico: true,
       texto: 'Reservar o carro na Avis do Old Town: retirada 20/11 às 15h, devolução 25/11 às 15h',
       nota:
@@ -7493,13 +7493,13 @@ window.ROTEIRO = {
       pesquisa: '2026-09-11',
       restauranteIds: [] },
 
-    { id: 'ck-columbia', dataAlvo: '2026-09-11', dataEstimada: true, motivoData: 'O Columbia não publica a janela: tentem já, e se 14/11 ainda não abrir, de novo em 01/10', hora: null, fuso: null,
+    { id: 'ck-columbia', dataAlvo: '2026-09-11', validaAte: '2026-11-14', dataEstimada: true, motivoData: 'O Columbia não publica a janela: tentem já, e se 14/11 ainda não abrir, de novo em 01/10', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Reservar o Columbia Restaurant para o almoço de 14/11 (Celebration)',
       restauranteIds: ['r-columbia'] },
 
     /* --- prazo médio (outubro) --- */
-    { id: 'ck-ing-disney', dataAlvo: '2026-10-01', dataEstimada: true,
+    { id: 'ck-ing-disney', dataAlvo: '2026-10-01', validaAte: '2026-11-08', dataEstimada: true,
       motivoData: 'Muito antes de 08/11, porque ingresso não vinculado bloqueia o Lightning Lane',
       hora: null, fuso: null, janelaReserva: false, critico: true,
       texto: 'Ingressos Disney aparecendo no My Disney Experience — nos DOIS perfis',
@@ -7512,7 +7512,7 @@ window.ROTEIRO = {
         'véspera.',
       restauranteIds: [] },
 
-    { id: 'ck-mde-cartao', dataAlvo: '2026-10-01', dataEstimada: true,
+    { id: 'ck-mde-cartao', dataAlvo: '2026-10-01', validaAte: '2026-11-11', dataEstimada: true,
       motivoData: 'Na mesma sessão em que vocês conferem os ingressos no My Disney Experience',
       hora: null, fuso: null, janelaReserva: false, critico: false,
       texto: 'Cartão de crédito salvo no My Disney Experience, nos DOIS perfis',
@@ -7525,7 +7525,7 @@ window.ROTEIRO = {
         'horas de viagem, é tarde.',
       restauranteIds: [] },
 
-    { id: 'ck-horarios-epic', dataAlvo: '2026-11-01', dataEstimada: true,
+    { id: 'ck-horarios-epic', dataAlvo: '2026-11-01', validaAte: '2026-11-19', dataEstimada: true,
       motivoData: 'Horários de show de Natal só saem perto da temporada, que começa em 14/11',
       hora: null, fuso: null, janelaReserva: false, critico: true,
       texto: 'Horário do Epic Universe em 19/11 — abertura, FECHAMENTO e shows de Natal',
@@ -7539,7 +7539,7 @@ window.ROTEIRO = {
         'Cachée. A Universal anuncia os horários perto do início da temporada.',
       restauranteIds: [] },
 
-    { id: 'ck-epa-epic', dataAlvo: '2026-11-12', dataEstimada: true,
+    { id: 'ck-epa-epic', dataAlvo: '2026-11-12', validaAte: '2026-11-19', dataEstimada: true,
       motivoData: 'A lista muda por temporada: uma semana antes, e de novo na véspera',
       hora: null, fuso: null, janelaReserva: false, critico: true,
       texto: 'Conferir quais lands do Epic estão no Early Park Admission em 19/11',
@@ -7555,7 +7555,7 @@ window.ROTEIRO = {
       pesquisa: '2026-09-10',
       restauranteIds: [] },
 
-    { id: 'ck-ing-universal', dataAlvo: '2026-10-25', dataEstimada: true,
+    { id: 'ck-ing-universal', dataAlvo: '2026-10-25', validaAte: '2026-11-14', dataEstimada: true,
       motivoData: 'Duas semanas antes da viagem, com folga para acionar a agência',
       hora: null, fuso: null, janelaReserva: false, critico: false,
       texto: 'Ingressos Universal aparecendo no app — nos DOIS perfis',
@@ -7569,7 +7569,7 @@ window.ROTEIRO = {
         'Riscar só quando aparecer no app da Bianca também.',
       restauranteIds: [] },
 
-    { id: 'ck-ing-united', dataAlvo: '2026-10-25', dataEstimada: true,
+    { id: 'ck-ing-united', dataAlvo: '2026-10-25', validaAte: '2026-11-22', dataEstimada: true,
       motivoData: 'Junto com os da Universal, para resolver tudo numa conferência só',
       hora: null, fuso: null, janelaReserva: false, critico: false,
       texto: 'Ingressos SeaWorld e Busch Gardens (Promo Park) — com o plano de refeição',
@@ -7582,7 +7582,7 @@ window.ROTEIRO = {
       restauranteIds: [] },
 
 
-    { id: 'ck-kres', dataAlvo: '2026-09-11', dataEstimada: true,
+    { id: 'ck-kres', dataAlvo: '2026-09-11', validaAte: '2026-11-18', dataEstimada: true,
       motivoData: 'O Kres não publica a janela: tentem já, e se 18/11 ainda não abrir, de novo em 01/10',
       hora: null, fuso: null, janelaReserva: false, critico: false,
       texto: 'Reservar o Kres Chophouse para o jantar de 18/11 (centro de Orlando)',
@@ -7593,7 +7593,7 @@ window.ROTEIRO = {
         'Alternativa no mesmo bairro: The Boheme, no Grand Bohemian.',
       restauranteIds: ['r-kres'] },
 
-    { id: 'ck-harp', dataAlvo: '2026-09-11', dataEstimada: true,
+    { id: 'ck-harp', dataAlvo: '2026-09-11', validaAte: '2026-11-21', dataEstimada: true,
       motivoData: 'O Harp & Celt não publica janela: tentem já, por e-mail ou telefone, e de novo em 01/10 se ainda não aceitarem 21/11',
       hora: null, fuso: null, janelaReserva: false, critico: false,
       texto: 'Reservar o Harp & Celt para as 17h20 de 21/11 (centro de Orlando), por telefone',
@@ -7615,7 +7615,7 @@ window.ROTEIRO = {
       texto: 'Lombard’s Seafood Grille (17/11, 18h45) — RESERVADO, confirmação 639247504692187392',
       restauranteIds: ['r-lombards'] },
 
-    { id: 'ck-homecomin', dataAlvo: '2026-09-26', dataEstimada: false,
+    { id: 'ck-homecomin', dataAlvo: '2026-09-26', validaAte: '2026-11-25', dataEstimada: false,
       hora: '06:00', fuso: 'ET', janelaReserva: true, critico: true,
       texto: 'Reservar o Homecomin’ para as 19h30 de 25/11 — a janela de 60 dias abre às 6h ET',
       nota:
@@ -7631,12 +7631,12 @@ window.ROTEIRO = {
       texto: 'Atlantic (19/11, 17h) — RESERVADO, confirmação 639247233607631616',
       restauranteIds: ['r-atlantic'] },
 
-    { id: 'ck-powerband', dataAlvo: '2026-10-15', dataEstimada: true, motivoData: 'Prazo de outubro, com folga para o site do parque', hora: null, fuso: null,
+    { id: 'ck-powerband', dataAlvo: '2026-10-15', validaAte: '2026-11-19', dataEstimada: true, motivoData: 'Prazo de outubro, com folga para o site do parque', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Decidir sobre a Power-Up Band do Epic Universe (~US$ 40)',
       restauranteIds: [] },
 
-    { id: 'ck-esim', dataAlvo: '2026-10-25', dataEstimada: true,
+    { id: 'ck-esim', dataAlvo: '2026-10-25', validaAte: '2026-11-10', dataEstimada: true,
       motivoData: 'Duas semanas antes, com folga para resolver a ativação com as operadoras',
       hora: null, fuso: null, janelaReserva: false, critico: true,
       texto: 'Ativar o roaming nas duas linhas e confirmar a cobertura na Colômbia',
@@ -7657,7 +7657,7 @@ window.ROTEIRO = {
         'viagem são em Bogotá, na ida e na volta.',
       restauranteIds: [] },
 
-    { id: 'ck-vip-outlet', dataAlvo: '2026-11-05', dataEstimada: true,
+    { id: 'ck-vip-outlet', dataAlvo: '2026-11-05', validaAte: '2026-11-12', dataEstimada: true,
       motivoData: 'Cadastro leva minutos; basta estar feito antes de embarcar',
       hora: null, fuso: null, janelaReserva: false, critico: false,
       texto: 'Cadastrar no Simon VIP Club para o cupom do outlet sair de graça',
@@ -7670,7 +7670,7 @@ window.ROTEIRO = {
         'Vale para o dia 12, no Orlando International Premium Outlets.',
       restauranteIds: [] },
 
-    { id: 'ck-natal-datas', dataAlvo: '2026-10-15', dataEstimada: true, motivoData: 'As datas dos eventos saem com antecedência', hora: null, fuso: null,
+    { id: 'ck-natal-datas', dataAlvo: '2026-10-15', validaAte: '2026-11-24', dataEstimada: true, motivoData: 'As datas dos eventos saem com antecedência', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Confirmar que 22/11 tem Christmas Celebration (SeaWorld) e 24/11 tem ' +
              'Christmas Town (Busch Gardens) — ambos rodam em datas selecionadas',
@@ -7680,7 +7680,7 @@ window.ROTEIRO = {
         'SeaWorld, e com ela a referência do dia 22.',
       restauranteIds: [] },
 
-    { id: 'ck-roda-icon', dataAlvo: '2026-10-15', dataEstimada: true,
+    { id: 'ck-roda-icon', dataAlvo: '2026-10-15', validaAte: '2026-11-12', dataEstimada: true,
       motivoData: 'O dia 12 manda conferir em outubro, e o plano B depende da resposta',
       hora: null, fuso: null, janelaReserva: false, critico: false,
       texto: 'Conferir se The Wheel do ICON Park voltou a operar (para 12/11)',
@@ -7692,7 +7692,7 @@ window.ROTEIRO = {
       restauranteIds: [] },
 
     /* --- já em Orlando --- */
-    { id: 'ck-hotel', dataAlvo: '2026-11-05', hora: null, fuso: null,
+    { id: 'ck-hotel', dataAlvo: '2026-11-05', validaAte: '2026-11-10', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Reserva do Travelodge salva OFFLINE nos dois celulares',
       nota:
@@ -7717,7 +7717,7 @@ window.ROTEIRO = {
         'Detalhes na dica “Quando dá errado”, no Guia.',
       restauranteIds: [] },
 
-    { id: 'ck-horarios-ak', dataAlvo: '2026-09-14', hora: null, fuso: null,
+    { id: 'ck-horarios-ak', dataAlvo: '2026-09-14', validaAte: '2026-11-13', hora: null, fuso: null,
       janelaReserva: false, critico: true,
       texto: 'Conferir ABERTURA E FECHAMENTO do Animal Kingdom em 13/11',
       nota:
@@ -7734,7 +7734,7 @@ window.ROTEIRO = {
       pesquisa: '2026-09-10',
       restauranteIds: [] },
 
-    { id: 'ck-mco-reserve', dataAlvo: '2026-11-19', hora: null, fuso: null,
+    { id: 'ck-mco-reserve', dataAlvo: '2026-11-19', validaAte: '2026-11-26', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Reservar o MCO Reserve para a volta de 26/11',
       nota:
@@ -7753,7 +7753,7 @@ window.ROTEIRO = {
       pesquisa: '2026-09-10',
       restauranteIds: [] },
 
-    { id: 'ck-ll-0811', dataAlvo: '2026-11-08', hora: '07:00', fuso: 'ET',
+    { id: 'ck-ll-0811', dataAlvo: '2026-11-08', validaAte: '2026-11-11', hora: '07:00', fuso: 'ET',
       janelaReserva: false, critico: true,
       texto: 'Lightning Lane — Multi Pass do Magic Kingdom (11/11) e, com ingresso de datas fixas, dos quatro dias',
       nota:
@@ -7776,7 +7776,7 @@ window.ROTEIRO = {
         'dentro do parque, assim que vocês usarem a Mansão às 11h.',
       restauranteIds: [] },
 
-    { id: 'ck-ll-1011', dataAlvo: '2026-11-10', hora: '07:00', fuso: 'ET',
+    { id: 'ck-ll-1011', dataAlvo: '2026-11-10', validaAte: '2026-11-13', hora: '07:00', fuso: 'ET',
       janelaReserva: false, critico: false,
       texto: 'NÃO é compra: o Single Pass do Flight of Passage se decide dentro do parque',
       nota:
@@ -7793,7 +7793,7 @@ window.ROTEIRO = {
         'demais no dia.',
       restauranteIds: [] },
 
-    { id: 'ck-ll-1211', dataAlvo: '2026-11-12', hora: '07:00', fuso: 'ET',
+    { id: 'ck-ll-1211', dataAlvo: '2026-11-12', validaAte: '2026-11-15', hora: '07:00', fuso: 'ET',
       janelaReserva: false, critico: true,
       texto: 'Lightning Lane para 15/11 — Multi Pass do dia e Single Pass do Rise',
       nota:
@@ -7808,7 +7808,7 @@ window.ROTEIRO = {
         'Fantasmic.',
       restauranteIds: [] },
 
-    { id: 'ck-ll-1311', dataAlvo: '2026-11-13', hora: '07:00', fuso: 'ET',
+    { id: 'ck-ll-1311', dataAlvo: '2026-11-13', validaAte: '2026-11-16', hora: '07:00', fuso: 'ET',
       janelaReserva: false, critico: true,
       texto: 'Lightning Lane para 16/11 — Multi Pass do dia e Single Pass do Cosmic Rewind',
       nota:
@@ -7824,7 +7824,7 @@ window.ROTEIRO = {
         'do dia.',
       restauranteIds: [] },
 
-    { id: 'ck-oakley', dataAlvo: '2026-11-14', hora: null, fuso: null,
+    { id: 'ck-oakley', dataAlvo: '2026-11-14', validaAte: '2026-11-25', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Comprar o Oakley Meta Vanguard no app do Best Buy, com retirada no Best Buy do ' +
              'Millenia (4155 Millenia Blvd)',
@@ -7838,7 +7838,7 @@ window.ROTEIRO = {
       pesquisa: '2026-09-11',
       restauranteIds: [] },
 
-    { id: 'ck-horarios-mk', dataAlvo: '2026-09-13', dataEstimada: true,
+    { id: 'ck-horarios-mk', dataAlvo: '2026-09-13', validaAte: '2026-11-11', dataEstimada: true,
       motivoData: 'A Disney publica com 60 dias de antecedência, e 60 dias antes de 11/11 é 12/09',
       hora: null, fuso: null, janelaReserva: false, critico: true,
       texto: 'Conferir o horário oficial do Magic Kingdom em 11/11 e ajustar a referência do dia',
@@ -7851,7 +7851,7 @@ window.ROTEIRO = {
         'da reforma antes do previsto.',
       restauranteIds: [] },
 
-    { id: 'ck-horarios-dhs-epcot', dataAlvo: '2026-09-17', hora: null, fuso: null,
+    { id: 'ck-horarios-dhs-epcot', dataAlvo: '2026-09-17', validaAte: '2026-11-16', hora: null, fuso: null,
       janelaReserva: false, critico: true,
       texto: 'Horários oficiais de 15/11 e 16/11 — e a hora do Fantasmic e do Luminous',
       nota:
@@ -7865,14 +7865,14 @@ window.ROTEIRO = {
         'dos dois dias, que move a manhã.',
       restauranteIds: [] },
 
-    { id: 'ck-horarios', dataAlvo: '2026-10-10', dataEstimada: true,
+    { id: 'ck-horarios', dataAlvo: '2026-10-10', validaAte: '2026-11-24', dataEstimada: true,
       motivoData: 'Universal, SeaWorld e Busch Gardens publicam novembro sem data fixa: confiram em outubro e de novo na semana da viagem',
       hora: null, fuso: null, janelaReserva: false, critico: true,
       texto: 'Conferir os horários oficiais de 17, 22, 23 e 24/11 e ajustar a referência de cada dia',
       nota: 'É só editar o horário de abertura no dia — os blocos ancorados deslocam sozinhos.',
       restauranteIds: [] },
 
-    { id: 'ck-shows', dataAlvo: '2026-11-01', dataEstimada: true, motivoData: 'Horários de show só saem perto da data', hora: null, fuso: null,
+    { id: 'ck-shows', dataAlvo: '2026-11-01', validaAte: '2026-11-17', dataEstimada: true, motivoData: 'Horários de show só saem perto da data', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Confirmar horário do Grinchmas (14/11), do desfile da Macy’s (17/11) e do ' +
              'Fantasmic! (15/11) — e o fechamento do parque em 17/11',
@@ -8721,6 +8721,15 @@ window.ROTEIRO = {
 
   R.checklist.forEach((c) => {
     if (!c.dataAlvo) erros.push(`checklist ${c.id}: sem dataAlvo`);
+    // validaAte: último dia em que a pendência ainda serve. Depois dele ela sai da
+    // Home e do selo, e vai para "perderam a validade".
+    if (c.validaAte !== undefined) {
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(c.validaAte || '')) {
+        erros.push(`checklist ${c.id}: validaAte inválida "${c.validaAte}"`);
+      } else if (c.dataAlvo && c.validaAte < c.dataAlvo) {
+        erros.push(`checklist ${c.id}: validaAte ${c.validaAte} antes da dataAlvo ${c.dataAlvo}`);
+      }
+    }
     (c.restauranteIds || []).forEach((rid) => {
       if (!idsRest.has(rid)) erros.push(`checklist ${c.id}: restaurante "${rid}" não existe`);
     });

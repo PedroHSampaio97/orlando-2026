@@ -61,6 +61,14 @@
 
   --topo-h: 56px;
   --barra-h: 62px;
+
+  /* --- texto sobre cor: o par é conferido no checar.js, 4,5:1 nos dois temas --- */
+  --sobre-op:      #FFFFFF;
+  --sobre-perigo:  #FFFFFF;
+  --sobre-ok:      #FFFFFF;
+  --sobre-acento:  #14181C;   /* o coral é claro demais para branco: dava 3,8:1 */
+  --sobre-marca:   #FFFFFF;
+  --sobre-alerta:  #FFFFFF;
 }
 
 /* modo escuro: manual e por sistema, mesmos valores */
@@ -79,6 +87,8 @@
   --sombra-1: 0 1px 2px rgba(0,0,0,.5);
   --sombra-2: 0 8px 28px rgba(0,0,0,.55);
   --fio-topo: inset 0 1px 0 rgba(255,255,255,.06);
+  --sobre-op:#12171C; --sobre-perigo:#12171C; --sobre-ok:#12171C;
+  --sobre-acento:#12171C; --sobre-marca:#12171C; --sobre-alerta:#12171C;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-tema="claro"]) {
@@ -96,6 +106,8 @@
     --sombra-1: 0 1px 2px rgba(0,0,0,.5);
     --sombra-2: 0 8px 28px rgba(0,0,0,.55);
     --fio-topo: inset 0 1px 0 rgba(255,255,255,.06);
+    --sobre-op:#12171C; --sobre-perigo:#12171C; --sobre-ok:#12171C;
+    --sobre-acento:#12171C; --sobre-marca:#12171C; --sobre-alerta:#12171C;
   }
 }
 
@@ -165,9 +177,9 @@ body {
   align-items: center; gap: 4px; padding: 0 6px;
 }
 .topo-titulo { text-align: center; line-height: 1.15; overflow: hidden; }
-.topo-titulo strong { display: block; color: #fff; font-size: 15px; font-weight: 700;
+.topo-titulo strong { display: block; color: var(--sobre-op); font-size: 15px; font-weight: 700;
   letter-spacing: -.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.topo-titulo span { display: block; color: rgba(255,255,255,.72); font-size: 11px;
+.topo-titulo span { display: block; color: color-mix(in srgb, var(--sobre-op) 78%, transparent); font-size: 11px;
   font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
 
 .btn-icone {
@@ -175,9 +187,9 @@ body {
   background: none; border: 0; border-radius: var(--r-botao); cursor: pointer; padding: 0;
   -webkit-tap-highlight-color: transparent;
 }
-.btn-icone svg { width: 21px; height: 21px; fill: none; stroke: #fff; stroke-width: 1.75;
+.btn-icone svg { width: 21px; height: 21px; fill: none; stroke: var(--sobre-op); stroke-width: 1.75;
   stroke-linecap: round; stroke-linejoin: round; }
-.btn-icone:active { background: rgba(255,255,255,.2); }
+.btn-icone:active { background: color-mix(in srgb, var(--sobre-op) 20%, transparent); }
 .btn-icone.escuro svg { stroke: var(--texto-fraco); }
 .btn-icone.escuro:active { background: var(--superficie-2); }
 
@@ -238,7 +250,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
                     box-shadow: inset 0 0 0 1px currentColor; }
 .selo-molha       { background: #0E5A72; color: #fff; }
 .selo-locker      { background: #6B3B06; color: #fff; }
-.selo-critico     { background: var(--perigo); color: #fff; }
+.selo-critico     { background: var(--perigo); color: var(--sobre-perigo); }
 .selo-estimada    { background: var(--ouro-fundo); color: var(--ouro);
                     box-shadow: inset 0 0 0 1px currentColor; }
 /* fila alternativa: aparece como "ou single rider", ao lado da fila principal */
@@ -293,7 +305,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .badge {
   position: absolute; top: 8px; right: calc(50% - 22px);
   min-width: 17px; height: 17px; padding: 0 5px; border-radius: 9px;
-  background: var(--perigo); color: #fff; font-size: 10px; font-weight: 800;
+  background: var(--perigo); color: var(--sobre-perigo); font-size: 10px; font-weight: 800;
   font-style: normal; display: grid; place-items: center;
 }
 
@@ -315,7 +327,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .acao {
   position: relative; overflow: hidden;
   border-radius: var(--r-card); padding: 20px;
-  background: var(--op, var(--marca)); color: #fff;
+  background: var(--op, var(--marca)); color: var(--sobre-op);
   box-shadow: var(--sombra-2);
 }
 /* dois radial-gradients a 4% dão profundidade sem custar contraste */
@@ -336,16 +348,21 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .acao-meta { font-size: 13px; opacity: .82; margin-top: 8px; font-weight: 600; }
 .acao-botao {
   margin-top: 16px; width: 100%; min-height: 46px; border: 0; cursor: pointer;
-  border-radius: var(--r-botao); background: rgba(255,255,255,.18);
-  color: #fff; font: inherit; font-weight: 700; font-size: 14px;
+  border-radius: var(--r-botao); background: color-mix(in srgb, var(--sobre-op) 16%, transparent);
+  color: var(--sobre-op); font: inherit; font-weight: 700; font-size: 14px;
   backdrop-filter: blur(4px); -webkit-tap-highlight-color: transparent;
 }
-.acao-botao:active { background: rgba(255,255,255,.28); }
+.acao-botao:active { background: color-mix(in srgb, var(--sobre-op) 26%, transparent); }
 
 /* barra de progresso dentro do card de ação (durante a viagem) */
-.acao-prog { height: 6px; border-radius: 3px; background: rgba(255,255,255,.25);
+.acao-prog { height: 6px; border-radius: 3px;
+  background: color-mix(in srgb, var(--sobre-op) 25%, transparent);
   overflow: hidden; margin-top: 12px; }
-.acao-prog i { display: block; height: 100%; background: #fff; border-radius: 3px; }
+.acao-prog i { display: block; height: 100%; background: var(--sobre-op); border-radius: 3px; }
+/* durante a viagem: o que é agora e a próxima reserva */
+.acao-agora { font-size: 13.5px; font-weight: 700; margin-top: 10px; line-height: 1.4; }
+.acao-reserva { margin-top: 12px; padding-top: 10px; font-size: 13.5px; font-weight: 650;
+  line-height: 1.45; border-top: 1px solid color-mix(in srgb, var(--sobre-op) 25%, transparent); }
 
 /* PRÓXIMAS PENDÊNCIAS */
 .mini-pend {
@@ -545,9 +562,9 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   font-variant-numeric: tabular-nums; }
 .pilula span { display: block; font-size: 9px; font-weight: 800; letter-spacing: .07em;
   color: var(--texto-fraco); text-transform: uppercase; }
-.pilula.ativa { background: var(--op-p); border-color: var(--op-p); color: #fff; }
-.pilula.ativa span { color: rgba(255,255,255,.82); }
-.pilula.ativa::before { background: rgba(255,255,255,.5); }
+.pilula.ativa { background: var(--op-p); border-color: var(--op-p); color: var(--sobre-op); }
+.pilula.ativa span { color: color-mix(in srgb, var(--sobre-op) 85%, transparent); }
+.pilula.ativa::before { background: color-mix(in srgb, var(--sobre-op) 50%, transparent); }
 
 /* cabeçalho do dia */
 .cabeca-dia {
@@ -674,7 +691,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   transition: opacity .15s; }
 .ct-check[aria-pressed="true"] { background: var(--ok); border-color: var(--ok);
   transform: scale(1.06); }
-.ct-check[aria-pressed="true"] svg { stroke: #fff; opacity: 1; }
+.ct-check[aria-pressed="true"] svg { stroke: var(--sobre-ok); opacity: 1; }
 .ct-check:active { transform: scale(.9); }
 
 .ct-titulo { font-size: 17px; font-weight: 680; line-height: 1.3; letter-spacing: -.01em; }
@@ -770,7 +787,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .agora-linha { flex: 1; height: 2px; background: var(--perigo); border-radius: 1px; }
 .agora-rot {
   font-size: 10.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
-  color: #fff; background: var(--perigo); padding: 3px 8px; border-radius: 10px;
+  color: var(--sobre-perigo); background: var(--perigo); padding: 3px 8px; border-radius: 10px;
   font-variant-numeric: tabular-nums;
 }
 
@@ -824,11 +841,12 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   font-variant-numeric: tabular-nums; white-space: nowrap; }
 .ct-janela-conta { font-size: 12px; font-weight: 750; color: var(--texto-fraco);
   white-space: nowrap; margin-left: auto; }
-.ct-janela-fim { color: #fff; background: var(--perigo); padding: 3px 8px;
+.ct-janela-fim { color: var(--sobre-perigo); background: var(--perigo); padding: 3px 8px;
   border-radius: 999px; }
 
 /* editor de hora de um bloco */
-.editor-hora { position: fixed; left: 12px; right: 12px; bottom: 84px; z-index: 60;
+.editor-hora { position: fixed; left: 12px; right: 12px; z-index: 60;
+  bottom: calc(var(--barra-h) + env(safe-area-inset-bottom, 0px) + 12px);
   border: 1px solid var(--borda); border-radius: var(--r-card);
   background: var(--superficie); padding: 16px; box-shadow: 0 12px 32px rgba(0,0,0,.22); }
 .editor-rot { font-size: 14px; font-weight: 700; line-height: 1.4; margin-bottom: 11px; }
@@ -838,8 +856,12 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   font-variant-numeric: tabular-nums; }
 .editor-botoes { display: flex; gap: 9px; margin-top: 12px; }
 .editor-ok { flex: 1 1 auto; min-height: 46px; border: none; border-radius: var(--r-botao);
-  background: var(--acento); color: #fff; font: inherit; font-weight: 700;
+  background: var(--acento); color: var(--sobre-acento); font: inherit; font-weight: 700;
   font-size: 15px; cursor: pointer; }
+.editor-ok:disabled { opacity: .45; cursor: default; }
+.editor-previsto { font-size: 12.5px; color: var(--texto-fraco); margin: -4px 0 10px; }
+.editor-voltar { margin-top: 10px; width: 100%; min-height: 44px; border: 0; background: none;
+  color: var(--marca); font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; }
 .editor-limpar { flex: 1 1 auto; min-height: 46px; border: 1px solid var(--borda);
   border-radius: var(--r-botao); background: var(--fundo); color: var(--texto-fraco);
   font: inherit; font-weight: 650; font-size: 14px; cursor: pointer; }
@@ -867,7 +889,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   color: var(--acento); font-size: 13px; }
 .vence-texto { flex: 1 1 auto; min-width: 0; }
 .vence-btn { margin-top: 11px; width: 100%; min-height: 44px; border: none;
-  border-radius: var(--r-botao); background: var(--acento); color: #fff;
+  border-radius: var(--r-botao); background: var(--acento); color: var(--sobre-acento);
   font: inherit; font-size: 15px; font-weight: 700; cursor: pointer; }
 
 /* telefones do Guia */
@@ -1031,11 +1053,11 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
   -webkit-tap-highlight-color: transparent;
 }
 .pill-status:active { transform: scale(.97); }
-.pill-status[aria-pressed="true"] { color: #fff; border-color: transparent; }
-.pill-status[aria-pressed="true"][data-s="a-reservar"] { background: var(--alerta); color: #21170A; }
-.pill-status[aria-pressed="true"][data-s="reservado"]  { background: var(--marca-clara); color: #fff; }
-.pill-status[aria-pressed="true"][data-s="confirmado"] { background: var(--ok); color: #fff; }
-.pill-status[aria-pressed="true"][data-s="cancelado"]  { background: var(--perigo); color: #fff; }
+.pill-status[aria-pressed="true"] { color: var(--sobre-marca); border-color: transparent; }
+.pill-status[aria-pressed="true"][data-s="a-reservar"] { background: var(--alerta); color: var(--sobre-alerta); }
+.pill-status[aria-pressed="true"][data-s="reservado"]  { background: var(--marca-clara); color: var(--sobre-marca); }
+.pill-status[aria-pressed="true"][data-s="confirmado"] { background: var(--ok); color: var(--sobre-ok); }
+.pill-status[aria-pressed="true"][data-s="cancelado"]  { background: var(--perigo); color: var(--sobre-perigo); }
 
 .rest-conf { margin-top: 12px; }
 .rest-conf label { font-size: 10.5px; text-transform: uppercase; letter-spacing: .08em;
@@ -1100,7 +1122,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .bl-check svg { width: 20px; height: 20px; fill: none; stroke: var(--texto-fraco);
   stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; opacity: .3; }
 .bl-check[aria-pressed="true"] { background: var(--ok); border-color: var(--ok); }
-.bl-check[aria-pressed="true"] svg { stroke: #fff; opacity: 1; }
+.bl-check[aria-pressed="true"] svg { stroke: var(--sobre-ok); opacity: 1; }
 .bl-check:active { transform: scale(.9); }
 
 /* =============================================================================
@@ -1154,7 +1176,7 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .local.t-parque .local-icone { background: var(--marca); }
 .local.t-parque .local-icone svg { stroke: var(--fundo); }
 .local.t-hotel .local-icone { background: var(--ok); }
-.local.t-hotel .local-icone svg { stroke: #fff; }
+.local.t-hotel .local-icone svg { stroke: var(--sobre-ok); }
 
 .local-nome { font-size: 16px; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; }
 .local-end { font-size: 13px; color: var(--texto-fraco); margin-top: 3px; }
@@ -1232,11 +1254,11 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .plano-topo { display: flex; gap: 12px; align-items: flex-start; }
 .plano-letra {
   flex: 0 0 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
-  font-size: 15px; font-weight: 800; color: #fff; background: var(--texto-fraco);
+  font-size: 15px; font-weight: 800; color: var(--fundo); background: var(--texto-fraco);
 }
-.pl-a .plano-letra { background: var(--ok); }
-.pl-b .plano-letra { background: var(--alerta); color: #21170A; }
-.pl-c .plano-letra { background: var(--perigo); }
+.pl-a .plano-letra { background: var(--ok); color: var(--sobre-ok); }
+.pl-b .plano-letra { background: var(--alerta); color: var(--sobre-alerta); }
+.pl-c .plano-letra { background: var(--perigo); color: var(--sobre-perigo); }
 .plano-titulo { font-size: 16px; font-weight: 750; letter-spacing: -.01em; line-height: 1.25; }
 .plano-gatilho {
   font-size: 13px; color: var(--texto-fraco); margin-top: 3px; font-weight: 650;
@@ -1316,3 +1338,71 @@ button.selo { font-family: inherit; border: none; cursor: pointer; min-height: 3
 .onde-viagem  { background: var(--alerta-fundo); color: var(--alerta);
                 box-shadow: inset 0 0 0 1px currentColor; }
 .onde-orlando { background: var(--marca-fundo); color: var(--marca); }
+
+/* =============================================================================
+   LINHA DO TEMPO EM DOIS NÍVEIS — o essencial à vista, o texto longo recolhido
+   ========================================================================== */
+.ct-mais { margin-top: 6px; }
+.ct-mais-rot { list-style: none; cursor: pointer; display: inline-flex; align-items: center;
+  gap: 6px; min-height: 44px; font-size: 13px; font-weight: 750; color: var(--marca);
+  -webkit-tap-highlight-color: transparent; }
+.ct-mais-rot::-webkit-details-marker { display: none; }
+.ct-mais-rot::after { content: "\25BE"; font-size: 12px; transition: transform .2s; }
+.ct-mais[open] > .ct-mais-rot::after { transform: rotate(180deg); }
+.ct-mais .ct-contexto { margin-top: 2px; }
+
+/* agora e a seguir, na cor do dia */
+.ct-momento { flex: 0 0 auto; white-space: nowrap; font-size: 10.5px; font-weight: 800;
+  letter-spacing: .08em; text-transform: uppercase; padding: 3px 7px;
+  border-radius: var(--r-selo); background: var(--op); color: var(--sobre-op); }
+.parada.pa-em-curso .cartao { border-color: var(--op);
+  box-shadow: 0 0 0 1px var(--op), var(--sombra-2); }
+.parada.pa-a-seguir .cartao { border-color: var(--op); }
+.pa-a-seguir .ct-momento { background: transparent; color: var(--op);
+  box-shadow: inset 0 0 0 1px var(--op); }
+
+/* avisos do dia: a primeira frase do que é para resolver, o resto no acordeão */
+.avisos-resumo { list-style: none; margin: 12px 0 0; padding: 12px 14px 12px 16px;
+  border-radius: var(--r-botao); background: var(--alerta-fundo);
+  border-left: 3px solid var(--alerta); display: grid; gap: 8px; }
+.avisos-resumo li { font-size: 14px; line-height: 1.45; font-weight: 650; color: var(--texto); }
+.avisos-todos .aviso { white-space: pre-line; }
+.avisos-todos .aviso:first-child { margin-top: 0; }
+
+/* o que vence hoje com hora marcada, junto do agora */
+.vence-faixa { list-style: none; padding-left: 48px; margin: 8px 0 4px; }
+.vf-item { border: 1px solid var(--acento); border-left: 4px solid var(--acento);
+  border-radius: var(--r-card); background: var(--superficie); padding: 12px 14px;
+  margin-bottom: 8px; box-shadow: var(--sombra-1); }
+.vf-topo { display: flex; align-items: center; gap: 10px; }
+.vf-hora { flex: 0 0 auto; white-space: nowrap; font-weight: 800; font-size: 15px;
+  font-variant-numeric: tabular-nums; color: var(--texto); }
+.vf-conta { flex: 0 0 auto; white-space: nowrap; font-size: 12.5px; font-weight: 800;
+  color: var(--texto-fraco); }
+.vf-venceu { color: var(--perigo); }
+.vf-topo .bl-check { margin-left: auto; }
+.vf-texto { font-size: 15px; font-weight: 650; line-height: 1.4; margin-top: 6px; }
+.vf-critico .vf-texto { font-weight: 750; }
+.vf-nota > summary { cursor: pointer; min-height: 44px; display: flex; align-items: center;
+  font-size: 13px; font-weight: 750; color: var(--marca); }
+.vf-nota-corpo { font-size: 13.5px; line-height: 1.6; color: var(--texto-fraco);
+  white-space: pre-line; }
+
+/* atrasados? ajuste rápido da referência, junto do agora */
+.atraso { list-style: none; padding-left: 48px; margin: 2px 0 10px; display: flex;
+  flex-wrap: wrap; align-items: center; gap: 8px; }
+.atraso-rot { font-size: 12.5px; font-weight: 800; color: var(--texto-fraco); }
+.atraso-botoes { display: flex; flex-wrap: wrap; gap: 6px; }
+.atraso-btn { min-height: 44px; min-width: 52px; padding: 0 10px; border-radius: var(--r-botao);
+  border: 1px solid var(--borda-forte); background: var(--superficie); color: var(--texto);
+  font: inherit; font-size: 14px; font-weight: 750; font-variant-numeric: tabular-nums;
+  cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.atraso-btn:active { background: var(--superficie-2); }
+.atraso-zerar { color: var(--perigo); border-color: currentColor; }
+.atraso-resumo { flex-basis: 100%; font-size: 13px; font-weight: 700; line-height: 1.45;
+  color: var(--perigo); background: var(--perigo-fundo); padding: 8px 10px;
+  border-radius: var(--r-botao); }
+
+/* pendência que passou do dia em que servia */
+.pend.vencida { opacity: .6; box-shadow: none; }
+.pend.vencida .pend-quando { color: var(--texto-fraco); }

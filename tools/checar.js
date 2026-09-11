@@ -80,6 +80,50 @@ const semTrava = emFlex.filter(function (cl) {
 });
 ok(semTrava.length === 0, 'badges em flex com white-space:nowrap', semTrava.join(', '));
 
+/* ---------- 3b. contraste ---------- */
+/* Texto branco sobre as cores do tema escuro dava 1,5 a 3:1, e o escuro liga sozinho
+   pelo sistema — à noite, na hora dos fogos. Cada par de texto sobre cor é medido
+   aqui, nos dois temas, contra o mínimo de 4,5:1. */
+console.log('\n=== CONTRASTE ===');
+function tokensDe(re) {
+  const m = css.match(re), t = {};
+  if (m) [...m[1].matchAll(/(--[a-z0-9-]+)\s*:\s*(#[0-9a-fA-F]{6})/g)].forEach((x) => { t[x[1]] = x[2]; });
+  return t;
+}
+const temaClaro = tokensDe(/:root\s*\{([^}]*)\}/);
+const temaEscuro = Object.assign({}, temaClaro, tokensDe(/:root\[data-tema="escuro"\]\s*\{([^}]*)\}/));
+const escuroSistema = Object.assign({}, temaClaro,
+  tokensDe(/:root:not\(\[data-tema="claro"\]\)\s*\{([^}]*)\}/));
+const difEscuro = Object.keys(temaEscuro).filter((k) => temaEscuro[k] !== escuroSistema[k]);
+ok(difEscuro.length === 0, 'o tema escuro manual e o do sistema têm os mesmos valores',
+   difEscuro.join(', '));
+const luminancia = (hex) => {
+  const c = [1, 3, 5].map((i) => parseInt(hex.substr(i, 2), 16) / 255)
+    .map((v) => (v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4)));
+  return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+};
+const razao = (a, b) => {
+  const l = [luminancia(a), luminancia(b)].sort((x, y) => y - x);
+  return (l[0] + 0.05) / (l[1] + 0.05);
+};
+const PARES_TEXTO = [
+  ['--sobre-op', '--op-disney'], ['--sobre-op', '--op-universal'], ['--sobre-op', '--op-seaworld'],
+  ['--sobre-op', '--op-busch'], ['--sobre-op', '--op-livre'], ['--sobre-op', '--op-logistica'],
+  ['--sobre-perigo', '--perigo'], ['--sobre-ok', '--ok'], ['--sobre-acento', '--acento'],
+  ['--sobre-marca', '--marca'], ['--sobre-marca', '--marca-clara'], ['--sobre-alerta', '--alerta'],
+  ['--fundo', '--texto-fraco'],
+  ['--texto', '--fundo'], ['--texto', '--superficie'],
+  ['--texto-fraco', '--fundo'], ['--texto-fraco', '--superficie'], ['--texto-fraco', '--superficie-2'],
+];
+[['claro', temaClaro], ['escuro', temaEscuro]].forEach(function (par) {
+  const t = par[1];
+  const ruins = PARES_TEXTO.filter((p) => !t[p[0]] || !t[p[1]] || razao(t[p[0]], t[p[1]]) < 4.5)
+    .map((p) => p[0] + ' sobre ' + p[1] + ' = ' +
+      (t[p[0]] && t[p[1]] ? razao(t[p[0]], t[p[1]]).toFixed(2) : 'sem token'));
+  ok(ruins.length === 0, 'texto sobre cor com 4,5:1 ou mais, tema ' + par[0] +
+     ' (' + PARES_TEXTO.length + ' pares)', ruins.join('; '));
+});
+
 /* ---------- 4. HTML x JS ---------- */
 console.log('\n=== FIAÇÃO ===');
 const html = ler('index.html');

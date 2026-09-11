@@ -291,10 +291,11 @@ window.Fase3 = (function () {
     E.feito(chaveItem(lista, item)) || (item.id ? E.feito(chaveAntiga(lista, item)) : false);
 
   function blocoLista(lista) {
-    const feitos = lista.itens.filter((i) => itemFeito(lista, i)).length;
+    const rotulo = () => '🛒  ' + lista.titulo + '  ·  ' +
+      lista.itens.filter((i) => itemFeito(lista, i)).length + '/' + lista.itens.length;
     const d = el('details', 'acordeao');
-    d.appendChild(el('summary', null,
-      '🛒  ' + lista.titulo + '  ·  ' + feitos + '/' + lista.itens.length));
+    const sum = el('summary', null, rotulo());
+    d.appendChild(sum);
     const c = el('div', 'acordeao-corpo');
     if (lista.intro) c.appendChild(el('p', 'lista-intro', lista.intro));
 
@@ -318,9 +319,14 @@ window.Fase3 = (function () {
         chk.setAttribute('aria-label', 'Marcar: ' + item.texto);
         chk.appendChild(svgP('M4 12l6 6L20 6'));
         chk.addEventListener('click', function () {
-          E.marcarFeito(chaveItem(lista, item), !marcado);
-          if (marcado && item.id) E.marcarFeito(chaveAntiga(lista, item), false);
-          pintarFechamento(diaEmFoco);
+          const agora = !itemFeito(lista, item);
+          E.marcarFeito(chaveItem(lista, item), agora);
+          if (!agora && item.id) E.marcarFeito(chaveAntiga(lista, item), false);
+          // Só o item e o contador mudam. Repintar fechava a lista aberta no meio
+          // do Walmart, a cada toque.
+          li.classList.toggle('marcado', agora);
+          chk.setAttribute('aria-pressed', agora ? 'true' : 'false');
+          sum.textContent = rotulo();
         });
         li.appendChild(chk);
 
@@ -378,11 +384,12 @@ window.Fase3 = (function () {
   function blocoPrepararAmanha(dia) {
     const p = dia.prepararAmanha;
     const chave = (i) => 'prep:' + dia.id + ':' + i.texto;
-    const feitos = p.itens.filter((i) => E.feito(chave(i))).length;
+    const rotulo = () => '🌙  Deixar pronto para amanhã  ·  ' +
+      p.itens.filter((i) => E.feito(chave(i))).length + '/' + p.itens.length;
 
     const d = el('details', 'acordeao');
-    d.appendChild(el('summary', null,
-      '🌙  Deixar pronto para amanhã  ·  ' + feitos + '/' + p.itens.length));
+    const sum = el('summary', null, rotulo());
+    d.appendChild(sum);
     const c = el('div', 'acordeao-corpo');
 
     const cab = el('div', 'prep-alvo');
@@ -409,8 +416,11 @@ window.Fase3 = (function () {
       chk.setAttribute('aria-label', 'Marcar: ' + item.texto);
       chk.appendChild(svgP('M4 12l6 6L20 6'));
       chk.addEventListener('click', function () {
-        E.marcarFeito(k, !E.feito(k));
-        pintarFechamento(diaEmFoco);
+        const agora = !E.feito(k);
+        E.marcarFeito(k, agora);
+        li.classList.toggle('marcado', agora);
+        chk.setAttribute('aria-pressed', agora ? 'true' : 'false');
+        sum.textContent = rotulo();
       });
       li.appendChild(chk);
 
@@ -540,31 +550,36 @@ window.Fase3 = (function () {
     const alvo = $('#janelas-reserva');
     alvo.innerHTML = '';
     const hoje = hojeISO();
+    const resolvido = (id) => {
+      const r = R.restaurantes.find((x) => x.id === id);
+      const s = r && statusDe(r);
+      return !r || s === 'reservado' || s === 'confirmado' || s === 'cancelado';
+    };
 
-    const porJanela = {};
-    R.restaurantes.filter((r) => r.janelaAbre).forEach(function (r) {
-      (porJanela[r.janelaAbre] = porJanela[r.janelaAbre] || []).push(r);
-    });
-    const datas = Object.keys(porJanela).sort();
-    if (!datas.length) return;
+    // As janelas saem das pendências de reserva ainda abertas, na data delas — a
+    // mesma da aba Pendências, inclusive quando ela foi ajustada à mão. Pela ficha
+    // do restaurante, o Boathouse aparecia como janela futura já reservado.
+    const abertas = R.checklist.filter((c) => (c.restauranteIds || []).length &&
+      !E.checkFeito(c.id) && !(c.validaAte && c.validaAte < hoje) &&
+      !c.restauranteIds.every(resolvido));
+    if (!abertas.length) return;
+    abertas.sort((a, b) => dataDe(a).localeCompare(dataDe(b)) ||
+      String(a.hora || '').localeCompare(String(b.hora || '')));
 
     alvo.appendChild(el('div', 'rest-dia', 'Janelas de reserva'));
-    datas.forEach(function (data) {
+    abertas.forEach(function (c) {
+      const data = dataDe(c);
       const faltam = diasEntre(hoje, data);
-      const restos = porJanela[data];
-      const todosFeitos = restos.every((r) => {
-        const s = statusDe(r);
-        return s === 'reservado' || s === 'confirmado' || s === 'cancelado';
-      });
-      const cx = el('div', 'janela-cartao' +
-        (faltam === 0 ? ' hoje' : '') + ((faltam < 0 || todosFeitos) ? ' passou' : ''));
+      const nomes = c.restauranteIds
+        .map((id) => (R.restaurantes.find((r) => r.id === id) || {}).nome).filter(Boolean);
+      const cx = el('div', 'janela-cartao' + (faltam === 0 ? ' hoje' : ''));
       cx.appendChild(el('div', 'janela-data',
-        dataExtenso(data) + (restos[0].janelaHora ? ' · ' + restos[0].janelaHora : '')));
-      cx.appendChild(el('div', 'janela-quais', restos.map((r) => r.nome).join(' · ')));
+        dataExtenso(data) + (c.hora ? ' · ' + c.hora + ' ' + (c.fuso || '') : '')));
+      cx.appendChild(el('div', 'janela-quais', nomes.join(' · ')));
       cx.appendChild(el('div', 'janela-falta',
-        todosFeitos ? '✓ resolvido'
-        : faltam > 0 ? 'em ' + faltam + ' dia' + (faltam > 1 ? 's' : '')
-        : faltam === 0 ? 'ABRE HOJE' : 'passou há ' + (-faltam) + ' dias'));
+        faltam > 0 ? 'em ' + faltam + ' dia' + (faltam > 1 ? 's' : '')
+        : faltam === 0 ? 'ABRE HOJE'
+        : 'aberta há ' + (-faltam) + ' dia' + (faltam < -1 ? 's' : '') + ' e ainda sem reserva'));
       alvo.appendChild(cx);
     });
   }
@@ -584,10 +599,11 @@ window.Fase3 = (function () {
     const feitos = R.checklist.filter((c) => E.checkFeito(c.id)).length;
     // `< hoje` deixava invisivel exatamente o que mais importa: a tarefa que
     // vence HOJE, com hora marcada. Ela so acendia amanha, quando ja nao serve.
+    const valida = (c) => !(c.validaAte && c.validaAte < hoje);
     const atrasadas = R.checklist.filter(
-      (c) => !E.checkFeito(c.id) && dataDe(c) <= hoje).length;
+      (c) => !E.checkFeito(c.id) && valida(c) && dataDe(c) <= hoje).length;
     const vencemHoje = R.checklist.filter(
-      (c) => !E.checkFeito(c.id) && dataDe(c) === hoje).length;
+      (c) => !E.checkFeito(c.id) && valida(c) && dataDe(c) === hoje).length;
 
     $('#pend-fill').style.width = (total ? (feitos / total) * 100 : 0) + '%';
     $('#pend-texto').textContent = feitos + ' de ' + total + ' feitas';
@@ -608,10 +624,11 @@ window.Fase3 = (function () {
 
     let itens = R.checklist.slice();
     if (pendSoFalta) itens = itens.filter((c) => !E.checkFeito(c.id));
+    // Abertas por prazo, depois as que perderam a validade, e as feitas no fim.
+    const peso = (c) => E.checkFeito(c.id) ? 2 : valida(c) ? 0 : 1;
     itens.sort(function (a, b) {
-      const fa = E.checkFeito(a.id) ? 1 : 0, fb = E.checkFeito(b.id) ? 1 : 0;
-      if (fa !== fb) return fa - fb;               // feitas por último
-      return dataDe(a).localeCompare(dataDe(b));   // resto por prazo
+      if (peso(a) !== peso(b)) return peso(a) - peso(b);
+      return dataDe(a).localeCompare(dataDe(b));
     });
 
     if (!itens.length) {
@@ -625,11 +642,11 @@ window.Fase3 = (function () {
     let mesAtual = null;
     itens.forEach(function (c) {
       const d = dataDe(c);
-      const mes = E.checkFeito(c.id) ? 'feitas' : d.slice(0, 7);
+      const mes = E.checkFeito(c.id) ? 'feitas' : !valida(c) ? 'vencidas' : d.slice(0, 7);
       if (mes !== mesAtual) {
         mesAtual = mes;
-        alvo.appendChild(el('div', 'pend-mes', mes === 'feitas'
-          ? 'Concluídas'
+        alvo.appendChild(el('div', 'pend-mes', mes === 'feitas' ? 'Concluídas'
+          : mes === 'vencidas' ? 'Perderam a validade'
           : MESES_EXT[(+d.split('-')[1]) - 1] + ' de ' + d.split('-')[0]));
       }
       alvo.appendChild(cartaoPendencia(c, hoje));
@@ -640,11 +657,12 @@ window.Fase3 = (function () {
     const feito = E.checkFeito(c.id);
     const data = dataDe(c);
     const faltam = diasEntre(hoje, data);
-    const atrasada = !feito && faltam < 0;
+    const vencida = !feito && !!c.validaAte && c.validaAte < hoje;
+    const atrasada = !feito && !vencida && faltam < 0;
     const editada = !!E.dataChecklist(c.id);
 
-    const cx = el('div', 'pend' + (feito ? ' feita' : '') +
-      (atrasada ? ' atrasada' : '') + (!feito && faltam === 0 ? ' hoje' : ''));
+    const cx = el('div', 'pend' + (feito ? ' feita' : '') + (vencida ? ' vencida' : '') +
+      (atrasada ? ' atrasada' : '') + (!feito && !vencida && faltam === 0 ? ' hoje' : ''));
 
     const chk = el('button', 'bl-check');
     chk.setAttribute('aria-pressed', feito ? 'true' : 'false');
@@ -660,7 +678,9 @@ window.Fase3 = (function () {
     const quando = el('div', 'pend-quando');
     quando.appendChild(document.createTextNode(
       ddmmP(data) + (c.hora ? ' · ' + c.hora + ' ' + (c.fuso || '') : '')));
-    if (!feito) {
+    if (vencida) {
+      quando.appendChild(document.createTextNode(' · perdeu a validade em ' + ddmmP(c.validaAte)));
+    } else if (!feito) {
       quando.appendChild(document.createTextNode(
         faltam > 0 ? ' · em ' + faltam + (faltam === 1 ? ' dia' : ' dias')
         : faltam === 0 ? ' · HOJE'
