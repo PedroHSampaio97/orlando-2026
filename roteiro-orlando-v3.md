@@ -517,30 +517,36 @@ Infinity Falls (molha demais e a noite esfria), Sesame Street Land, Sky Tower (p
 
 # ⚡ 23/11 (segunda) — ISLANDS OF ADVENTURE
 
-O dia mais forte em montanha-russa da viagem. **Hagrid's não aceita Express desde julho de 2026** — a única arma é chegar primeiro.
+Hagrid's na abertura, que é a única janela abaixo de uma hora, e depois uma volta inteira no anel do parque sem voltar atrás. À noite, Hogwarts Express, o castelo iluminado e o jantar no Mythos, no último Natal dele.
 
-| Hora | O quê | Como |
+| Hora | O quê | Onde |
 |---|---|---|
-| **7h45** | Sair do hotel | |
-| **8h30** | Portão | Fiquem à esquerda, sentido Hogsmeade |
-| **9h00** | **Hagrid's Magical Creatures Motorbike Adventure** | Rope drop, sem exceção. A melhor de Orlando |
-| **9h55** | **VelociCoaster** | A mais intensa do parque. Inversões sobre o lago |
-| **10h40** | **Forbidden Journey** | Dentro do castelo de Hogwarts |
-| **11h25** | **The Incredible Hulk Coaster** | Lançamento de 0 a 64 km/h em 2 segundos |
-| **12h00** | **Jurassic Park River Adventure** | Molha. Novembro é ameno, mas leve capa |
-| **12h40** | **Almoço — Three Broomsticks** | Costelinha e frango assado |
-| **13h50** | **The Amazing Adventures of Spider-Man** | Clássico. Ainda é referência técnica |
-| **14h35** | **Skull Island: Reign of Kong** | |
-| **15h20** | **Hogwarts Express — ida** | Para o Beco Diagonal. Precisa do Park-to-Park, que vocês têm |
-| **15h50** | Beco Diagonal | Cerveja amanteigada, o que ficou faltando no dia 17 |
-| **16h40** | **Hogwarts Express — volta** | **O trajeto é diferente na volta.** Façam os dois |
-| **17h20** | **Doctor Doom's Fearfall** | Torre de lançamento, rápido |
-| **17h50** | **Flight of the Hippogriff** | Coaster leve, 1 min, boa vista do castelo |
-| **18h30** | **Jantar — Mythos** | Já eleito o melhor restaurante de parque temático do mundo |
-| **20h00** | Hogsmeade à noite | Projeção no castelo, se quiserem rever |
+| **7h45** | Sair do hotel de carro — 33 min e uns 20 a pé. Estacionamento US$ 32 pago antes | |
+| **8h35** | Portão — pela esquerda, sentido Hogsmeade | |
+| **9h00** | **Hagrid's** — rope drop. 30–65 min na abertura, mais de 2h depois | Hogsmeade |
+| **10h30** | **Forbidden Journey** — a fila atravessa o castelo | Hogsmeade |
+| **11h40** | **Almoço — Confisco Grille** — mesa com garçom, pratos de US$ 21 a 35 | Port of Entry |
+| **12h45** | **Hulk** — detector de metal | Marvel |
+| **13h35** | **Spider-Man** | Marvel |
+| **14h15** | Doctor Doom's Fearfall | Marvel |
+| **14h45** | **Kong** | Skull Island |
+| **15h35** | **Jurassic Park River Adventure** — molha. Reaberto depois da reforma | Jurassic Park |
+| **16h20** | **VelociCoaster** — por single rider | Jurassic Park |
+| **17h20** | **Hogwarts Express** — ida e volta, filmes diferentes. Precisa park-to-park | Hogsmeade |
+| **18h35** | **Hogsmeade à noite · projeção no castelo** — a cada 20 min | Hogsmeade |
+| **19h10** | **Jantar — Mythos** — reserva, pratos de US$ 26 a 42 | Lost Continent |
+| **20h30** | Saída — hotel por volta das 21h30 | |
+
+**Por que o Hagrid's primeiro:** nos dados de 2026, 30 a 65 minutos na abertura, 120 ao meio-dia e acima de 100 até fechar. Ele saiu do Express em 1º de julho de 2026.
+
+**Por que a VelociCoaster à tarde:** ela fica entre 67 e 102 minutos o dia inteiro — não tem hora boa. Por single rider, a hora deixa de importar.
+
+**O que mudou no parque:** o Jurassic Park River Adventure reabre em 19–20/11 depois de dez meses de reforma. A Lost Continent está sendo demolida em fases, e o Mythos fecha em 2027. O Thunder Falls Terrace fechou em julho.
+
+**Horário:** o de 23/11 ainda não saiu. A referência é 9h; o fechamento tende a 20–21h na semana de Thanksgiving. Se fechar às 20h, o Mythos sobe para 18h35 e a projeção fica para depois do jantar.
 
 ### Renúncias
-Pteranodon Flyers (só com criança), Storm Force Accelatron, Caro-Seuss-el, One Fish Two Fish, Cat in the Hat, Popeye e Dudley Do-Right (molham muito e vocês já vão molhar no Jurassic Park).
+Grinchmas (visto no dia 14), Flight of the Hippogriff (34 min de fila para um minuto), Beco Diagonal (feito no dia 17), Pteranodon Flyers, os brinquedos da Seuss Landing, Popeye e Dudley Do-Right (molham muito).
 
 ---
 

@@ -2354,7 +2354,7 @@ window.ROTEIRO = {
       'Sábado, e sábado é o pior dia para parque. A manhã é Celebration a pé e a tarde é ' +
       'hotel. À noite vocês entram no Islands pela primeira noite da temporada de Natal — ' +
       'mas com um alvo só: o Grinchmas. O resto da Hogsmeade decorada vocês reveem no dia 23, ' +
-      'numa quinta-feira, com menos gente.',
+      'numa segunda-feira, com menos gente.',
 
     avisos: [
       'O GRINCHMAS É O ÚNICO COMPROMISSO DE RELÓGIO DA NOITE. Plateia por ordem de chegada, ' +
@@ -2669,8 +2669,7 @@ window.ROTEIRO = {
           'passa de uma hora em fim de semana — num sábado de abertura de temporada, depois ' +
           'de um dia inteiro, é esperar em pé no estacionamento social. Aqui vocês comem ' +
           'dentro da decoração que vieram ver.\n\n' +
-          'É balcão: não leva gorjeta. E vocês voltam a comer aqui no almoço do dia 23 — se ' +
-          'quiserem variar, é o dia 23 que muda, não hoje.',
+          'É balcão: não leva gorjeta.',
         restauranteId: 'r-broomsticks-14', areaParque: 'Hogsmeade', acesso: [],
         duracaoMin: 90 },
 
@@ -5892,185 +5891,317 @@ window.ROTEIRO = {
     operadora: 'universal',
     parqueId: 'islands-of-adventure',
     custoZero: false,
+    fechado: true,
+    revisadoEm: '2026-09-11',
     referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: false },
     resumo:
-      'Hagrid’s não aceita Express desde julho de 2026 — a única arma é chegar primeiro. ' +
-      'Hoje é o dia com mais locker obrigatório da viagem: contem 10 a 15 minutos extras em ' +
-      'Hulk, VelociCoaster, Hagrid’s e Forbidden Journey.',
+      'Hagrid’s na abertura, que é a única janela abaixo de uma hora, e depois uma volta ' +
+      'inteira no anel do parque sem voltar atrás: Marvel, Kong, Jurassic Park e a ' +
+      'VelociCoaster por single rider. À noite, Hogwarts Express, o castelo iluminado e o ' +
+      'jantar no Mythos, no último Natal dele.',
     avisos: [
-      'Standby em tudo, os dois juntos. O que compra tempo hoje é a hora de chegada e o peso ' +
-      'da mochila: quatro atrações exigem locker obrigatório e isso custa 40 a 60 minutos ' +
-      'somados. Quanto menos vocês carregarem, mais atração cabe no dia.',
+      'O HAGRID’S NÃO ACEITA EXPRESS DESDE 1º DE JULHO DE 2026, e a janela barata dele é a ' +
+      'abertura. Portão às 8h35 e direto para Hogsmeade, sem parar em nada.',
+      'Hoje é o dia com mais locker obrigatório da viagem, e Hulk e VelociCoaster têm ' +
+      'detector de metal. Levem o mínimo.',
     ],
     notas: [
       { tipo: 'atencao', texto:
-        'Somando os lockers obrigatórios do dia, são 40 a 60 minutos que o cronograma de ' +
-        '45 min por atração não previu. Levem o mínimo possível: quanto menos bagagem, menos ' +
-        'tempo perdido. Hulk e VelociCoaster têm detector de metal e não passa nem celular.',
-        pesquisa: '2026-09-08' },
+        'O HORÁRIO DE 23/11 AINDA NÃO SAIU. A referência está em 9h, que é a abertura padrão ' +
+        'do Islands; o fechamento na semana de Thanksgiving tende a ficar entre 20h e 21h. A ' +
+        'projeção no castelo e o Mythos estão fixos de propósito. Se o parque fechar às 20h, ' +
+        'vale o plano B2.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'POR QUE O HAGRID’S VEM PRIMEIRO, mesmo sem a entrada antecipada de hotel: nos dados ' +
+        'de março e abril de 2026, a fila média na abertura foi de 30 a 65 minutos. Às 10h já ' +
+        'passava de 65, ao meio-dia chegava a 120, às 13h a 154, e não voltou para baixo de ' +
+        '100 nem na última hora.\n\n' +
+        'A VELOCICOASTER NÃO TEM HORA BOA: de 67 a 102 minutos das 9h às 22h. Por isso ela ' +
+        'sai da manhã e vai para a tarde, por single rider.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'O QUE MUDOU NO PARQUE EM 2026:\n\n' +
+        'O Jurassic Park River Adventure passou dez meses em reforma e reabre em 19 ou 20/11. ' +
+        'Se atrasar, vale o plano B.\n\n' +
+        'A Lost Continent está sendo demolida em fases. O prédio do Poseidon’s Fury já foi ao ' +
+        'chão, e o Mythos continua aberto até 2027.\n\n' +
+        'O Thunder Falls Terrace, no Jurassic Park, fechou em julho e vira o novo restaurante ' +
+        'com mesa do parque em 2027.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'DE CARRO: estacionamento US$ 35 na hora ou US$ 32 pago antes pelo site. Do carro até ' +
+        'o portão são uns 20 minutos a pé, pelo CityWalk — está dentro do bloco de saída. De ' +
+        'Uber seriam US$ 56 a 80 ida e volta.',
+        pesquisa: '2026-09-11' },
+    ],
+    planos: [
+      { letra: 'A', titulo: 'O dia como está escrito',
+        gatilho: 'O parque abre às 9h e o Jurassic Park River Adventure já reabriu.',
+        passos: [
+          'Portão às 8h35, Hagrid’s na abertura e Forbidden Journey logo depois.',
+          'Almoço no Confisco Grille às 11h40, na entrada do parque.',
+          'Marvel, Kong, Jurassic Park River Adventure e VelociCoaster por single rider.',
+          'Hogwarts Express ida e volta, projeção no castelo e jantar no Mythos às 19h10.',
+        ] },
+      { letra: 'B', titulo: 'O Jurassic Park River Adventure não reabriu',
+        gatilho: 'A reforma atrasou e ele continua fechado em 23/11.',
+        passos: [
+          'Os 40 minutos dele viram folga: a VelociCoaster pode ir às 15h35.',
+          'Nada mais muda. A capa de chuva fica na mochila.',
+        ] },
+      { letra: 'B2', titulo: 'O parque fecha às 20h',
+        gatilho: 'O horário oficial sai com fechamento às 20h.',
+        passos: [
+          'Mudem a reserva do Mythos para 18h35, logo depois do Hogwarts Express.',
+          'A projeção no castelo fica para depois do jantar: ela repete a cada 20 minutos até ' +
+          'o parque fechar.',
+        ] },
+      { letra: 'C', titulo: 'Cansaço ou atraso',
+        gatilho: 'O Hagrid’s demorou mais que o previsto ou o corpo pediu pausa.',
+        passos: [
+          'Doctor Doom e Kong caem primeiro.',
+          'O Hogwarts Express e o Mythos ficam: são a noite do dia.',
+        ] },
     ],
     blocos: [
       { id: 'b-2311-0745', hora: '07:45', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Sair do hotel', descricao: '', localId: 'islands-of-adventure', acesso: [] },
+        titulo: 'Sair do hotel de carro',
+        descricao: '33 min de estrada e uns 20 a pé. Estacionamento US$ 32 pago antes',
+        contexto:
+          'O estacionamento da Universal fica longe da catraca: do carro até o CityWalk, e do ' +
+          'CityWalk até o portão do Islands, são uns 20 minutos a pé. Pago antes pelo site ' +
+          'custa US$ 32; na hora, US$ 35.',
+        localId: 'islands-of-adventure', acesso: [], duracaoMin: 50, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-0830', hora: '08:30', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Portão', descricao: 'Fiquem à esquerda, sentido Hogsmeade',
-        localId: 'islands-of-adventure', acesso: [] },
+      { id: 'b-2311-0835', hora: '08:35', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Portão',
+        descricao: 'Pela esquerda, sentido Hogsmeade. Sem parar em nada',
+        contexto:
+          'Passando a catraca, sigam pela esquerda: Seuss Landing, Lost Continent e Hogsmeade, ' +
+          'uns 12 minutos a pé. Pela direita, pela Marvel, é mais longe.\n\n' +
+          'Quem está hospedado na Universal entra uma hora antes, e o Hagrid’s costuma estar ' +
+          'nessa lista. Mesmo assim, a abertura é a hora mais barata dele para vocês.',
+        localId: 'islands-of-adventure', acesso: [], duracaoMin: 25, pesquisa: '2026-09-11' },
 
       { id: 'b-2311-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Hagrid’s Magical Creatures Motorbike Adventure',
-        descricao: 'Rope drop, sem exceção. A melhor de Orlando',
+        descricao: 'Rope drop, sem exceção. Na abertura, 30 a 65 min; depois, mais de 2h',
         contexto:
           'Montanha-russa de lançamento em motos com sidecar, com sete lançamentos, uma queda ' +
           'vertical e um trecho de ré. Sem inversões. É considerada a melhor montanha-russa de ' +
-          'Orlando e a fila passa de 2 horas o dia todo. Saiu do Express em julho de 2026: ' +
-          'chegar primeiro é literalmente a única saída.\n\n' +
+          'Orlando.\n\n' +
+          'POR QUE AGORA: nos dados de 2026, 30 a 65 minutos na abertura, 120 ao meio-dia, 154 ' +
+          'às 13h e acima de 100 até fechar. E ela saiu do Express em 1º de julho: não existe ' +
+          'atalho pago.\n\n' +
           'SINGLE RIDER: as fontes divergem sobre a fila de single rider daqui continuar ' +
           'existindo. Não contem com ela; se aparecer a placa, é bônus.',
         areaParque: 'Hogsmeade', acesso: ['rope-drop', 'standby'],
         locker: 'obrigatorio',
         lockerNota: 'Pochete de 3 pontos na cintura costuma ser liberada, a critério do funcionário.',
-        pesquisa: '2026-09-08' },
+        duracaoMin: 90, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-0955', hora: '09:55', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'VelociCoaster',
-        descricao: 'A mais intensa do parque. Inversões sobre o lago',
-        contexto:
-          'Dois lançamentos, 70 metros de altura, quatro inversões e um trecho rasante sobre a ' +
-          'água. É consenso como a melhor montanha-russa da Flórida e uma das melhores do mundo. ' +
-          'Detector de metal: absolutamente nada nos bolsos.',
-        areaParque: 'Jurassic Park', acesso: ['standby'],
-        acessoAlt: 'single-rider', locker: 'detector', pesquisa: '2026-09-08' },
-
-      { id: 'b-2311-1040', hora: '10:40', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Forbidden Journey',
-        descricao: 'Dentro do castelo de Hogwarts',
+      { id: 'b-2311-1030', hora: '10:30', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Harry Potter and the Forbidden Journey',
+        descricao: 'Dentro do castelo de Hogwarts, colado no Hagrid’s',
         contexto:
           'Braço robótico que carrega vocês por cenários físicos e telas, com voo sobre ' +
           'Hogwarts. Balança bastante e causa enjoo em parte das pessoas. A fila atravessa o ' +
-          'castelo por dentro — retratos falantes, sala do Dumbledore — e vale a caminhada.',
+          'castelo por dentro — retratos falantes, sala do Dumbledore — e vale a caminhada.\n\n' +
+          'Fila média de 32 minutos. A próxima reforma dele é só em fevereiro de 2027.',
         areaParque: 'Hogsmeade', acesso: ['standby'],
-        acessoAlt: 'single-rider', locker: 'obrigatorio', pesquisa: '2026-09-08',
-        acessoAltNota: 'Na primeira visita, não: single rider pula o castelo, e a fila é metade da atração.' },
+        acessoAlt: 'single-rider', locker: 'obrigatorio',
+        acessoAltNota: 'Na primeira visita, não: single rider pula o castelo, e a fila é metade da atração.',
+        duracaoMin: 55, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-1125', hora: '11:25', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1140', hora: '11:40', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Almoço — Confisco Grille',
+        descricao: 'Mesa com garçom na entrada do parque. Pratos de US$ 21 a 35',
+        contexto:
+          'O restaurante com mesa da Port of Entry: cozinha internacional, de pad thai e ' +
+          'salmão com missô a churrasco de Angus e massas. Pratos de US$ 21 a 35.\n\n' +
+          'POR QUE AQUI: fica exatamente no caminho de Hogsmeade para a Marvel, e é mesa, não ' +
+          'balcão. No Three Broomsticks vocês já jantam no dia 14.\n\n' +
+          'São 12 minutos a pé do Forbidden Journey, passando pela Lost Continent e pela Seuss ' +
+          'Landing. É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
+        restauranteId: 'r-confisco', areaParque: 'Port of Entry', acesso: [], duracaoMin: 60,
+        pesquisa: '2026-09-11' },
+
+      { id: 'b-2311-1245', hora: '12:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'The Incredible Hulk Coaster',
-        descricao: 'Lançamento de 0 a 64 km/h em 2 segundos',
+        descricao: 'Lançamento de 0 a 64 km/h em 2 segundos, sete inversões',
         contexto:
           'Lançamento dentro de um túnel, sete inversões e muito barulho. Clássica de 1999, ' +
-          'reconstruída em 2016. Detector de metal — nada nos bolsos.',
+          'reconstruída em 2016.\n\n' +
+          'DETECTOR DE METAL: nada nos bolsos, nem celular. Fila média de 32 minutos.',
         areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
-        acessoAlt: 'single-rider', locker: 'detector', pesquisa: '2026-09-08' },
+        acessoAlt: 'single-rider', locker: 'detector', duracaoMin: 45, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-1200', hora: '12:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Jurassic Park River Adventure',
-        descricao: 'Molha. Novembro é ameno, mas leve capa',
-        contexto:
-          'Passeio de barco que vira ataque de dinossauros e termina numa queda de 25 metros ' +
-          'no escuro. Molha de verdade, principalmente nas primeiras fileiras. A capa de ' +
-          'chuva do Walmart do dia 10 serve aqui.',
-        areaParque: 'Jurassic Park', acesso: ['standby'],
-        acessoAlt: 'single-rider', molha: true, pesquisa: '2026-09-08' },
-
-      { id: 'b-2311-1240', hora: '12:40', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Almoço — Three Broomsticks',
-        descricao: 'Costelinha e frango assado',
-        contexto:
-          'Balcão temático dentro de Hogsmeade, com telhado alto e vigas tortas. Porções ' +
-          'grandes; o combo de costelinha e frango serve dois com folga.',
-        restauranteId: 'r-broomsticks', areaParque: 'Hogsmeade', acesso: [] },
-
-      { id: 'b-2311-1350', hora: '13:50', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1335', hora: '13:35', ancora: 'referencia', tipo: 'atracao',
         titulo: 'The Amazing Adventures of Spider-Man',
         descricao: 'Clássico. Ainda é referência técnica',
         contexto:
           'Veículo em movimento que combina cenário físico, telas 3D e uma simulação de queda ' +
           'livre de 120 metros que parece real. É de 1999 e continua sendo estudada como ' +
-          'referência de dark ride.',
+          'referência de dark ride.\n\n' +
+          'Fila média de 29 minutos.',
         areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
         acessoAlt: 'single-rider',
         acessoAltNota: 'Entrada do single rider pela esquerda, no corredor que liga a saída à loja.',
-        pesquisa: '2026-09-08' },
+        duracaoMin: 35, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-1435', hora: '14:35', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1415', hora: '14:15', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Doctor Doom’s Fearfall',
+        descricao: 'Torre que atira para cima. Rápido',
+        contexto:
+          'Torre que atira vocês para cima em vez de soltar de cima. Dura menos de um minuto, ' +
+          'e a sensação de estômago é forte.\n\n' +
+          'Fila média de 15 minutos. Se o dia atrasou, é o primeiro bloco a cair.',
+        areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
+        acessoAlt: 'single-rider', duracaoMin: 20, pesquisa: '2026-09-11' },
+
+      { id: 'b-2311-1445', hora: '14:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Skull Island: Reign of Kong',
-        descricao: '',
+        descricao: 'Caminhão expedicionário, telas 3D e o Kong animatrônico',
         contexto:
           'Caminhão expedicionário com telas 3D e um animatrônico enorme do Kong no fim. Tem ' +
-          'atores na fila. Escuro e barulhento, mas sem emoção física forte.',
+          'atores na fila. Escuro e barulhento, mas sem emoção física forte.\n\n' +
+          'Fila média de 35 minutos.',
         areaParque: 'Skull Island', acesso: ['standby'],
-        acessoAlt: 'single-rider', pesquisa: '2026-09-08' },
+        acessoAlt: 'single-rider', duracaoMin: 45, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-1520', hora: '15:20', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Hogwarts Express — ida',
-        descricao: 'Para o Beco Diagonal. Precisa do Park-to-Park, que vocês têm',
+      { id: 'b-2311-1535', hora: '15:35', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Jurassic Park River Adventure',
+        descricao: 'Molha. Reaberto depois de dez meses de reforma',
         contexto:
-          'Trem real entre os dois parques, com janelas que são telas mostrando a paisagem e ' +
-          'sombras no corredor da cabine. Leva ~7 minutos e é uma atração, não só transporte.',
-        areaParque: 'Hogsmeade Station', acesso: ['standby'], duracaoMin: 7 },
+          'Passeio de barco que vira ataque de dinossauros e termina numa queda de 26 metros ' +
+          'no escuro. Molha de verdade, principalmente nas primeiras fileiras.\n\n' +
+          'REFORMA: ficou fechado de janeiro a 19 ou 20/11 de 2026, com dinossauros e cenário ' +
+          'sendo refeitos. Se ainda estiver fechado, vale o plano B.\n\n' +
+          'Está às 15h35 porque é a hora mais quente. Capa de chuva e o celular no Ziploc. Fila ' +
+          'média de 22 minutos.',
+        areaParque: 'Jurassic Park', acesso: ['standby'],
+        acessoAlt: 'single-rider', molha: true, duracaoMin: 40, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-1550', hora: '15:50', ancora: 'referencia', tipo: 'livre',
-        titulo: 'Beco Diagonal',
-        descricao: 'Cerveja amanteigada, o que ficou faltando no dia 17',
-        areaParque: 'Diagon Alley', acesso: [] },
-
-      { id: 'b-2311-1640', hora: '16:40', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Hogwarts Express — volta',
-        descricao: 'O trajeto é diferente na volta. Façam os dois',
+      { id: 'b-2311-1620', hora: '16:20', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Jurassic World VelociCoaster',
+        descricao: 'A mais intensa do parque. Por single rider',
         contexto:
-          'A ida e a volta têm filmes e cenas completamente diferentes — não é o mesmo passeio ' +
-          'invertido. É por isso que vale fazer os dois sentidos.',
-        areaParque: 'King’s Cross', acesso: ['standby'], duracaoMin: 7 },
+          'Dois lançamentos, 47 metros de altura, 110 km/h, quatro inversões e um trecho ' +
+          'rasante sobre a água. É consenso como uma das melhores montanhas-russas do mundo.\n\n' +
+          'POR QUE À TARDE E POR SINGLE RIDER: das 9h às 22h ela fica entre 67 e 102 minutos — ' +
+          'não tem hora boa. Nesta hora a fila normal passa de 80; pela regra de ouro, acima de ' +
+          '45 é single rider, e vocês andam em carrinhos separados.\n\n' +
+          'DETECTOR DE METAL: absolutamente nada nos bolsos.',
+        areaParque: 'Jurassic Park', acesso: ['standby'],
+        acessoAlt: 'single-rider', locker: 'detector', duracaoMin: 55, pesquisa: '2026-09-11' },
 
       { id: 'b-2311-1720', hora: '17:20', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Doctor Doom’s Fearfall',
-        descricao: 'Torre de lançamento, rápido',
+        titulo: 'Hogwarts Express — ida e volta',
+        descricao: 'Quatro minutos em cada sentido, com filmes diferentes. Precisa park-to-park',
         contexto:
-          'Torre que atira vocês para cima em vez de soltar de cima. Dura menos de 1 minuto. ' +
-          'A sensação de estômago é forte, mas acaba rápido.',
-        areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
-        acessoAlt: 'single-rider', duracaoMin: 1, pesquisa: '2026-09-08' },
+          'Trem de verdade entre os dois parques, com as janelas virando tela e sombras no ' +
+          'corredor da cabine. A ida e a volta mostram filmes diferentes — por isso os dois ' +
+          'sentidos.\n\n' +
+          'Na chegada a King’s Cross, no Universal Studios, sigam direto para a entrada da ' +
+          'estação e peguem o trem de volta. O Beco Diagonal vocês já fizeram inteiro no dia 17.\n\n' +
+          'Só funciona com ingresso park-to-park, que está na conferência dos ingressos. Fila ' +
+          'média de 22 minutos na estação de Hogsmeade.',
+        areaParque: 'Hogsmeade', acesso: ['standby'], duracaoMin: 70, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-1750', hora: '17:50', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Flight of the Hippogriff',
-        descricao: 'Coaster leve, 1 min, boa vista do castelo',
-        areaParque: 'Hogsmeade', acesso: ['standby'], duracaoMin: 1 },
+      { id: 'b-2311-1835', hora: '18:35', ancora: 'fixo', tipo: 'show',
+        titulo: 'Hogsmeade à noite · projeção no castelo',
+        descricao: 'The Magic of Christmas at Hogwarts Castle. Repete a cada 20 min',
+        contexto:
+          'Projeções e efeitos no castelo de Hogwarts com cenas de Natal dos filmes, depois ' +
+          'que escurece. Repete a cada vinte minutos até o parque fechar — não precisa pegar ' +
+          'na hora exata.\n\n' +
+          'É a Hogsmeade decorada à noite, a parte do Natal que o dia 14 deixou para hoje — ' +
+          'numa segunda-feira, não num sábado.',
+        areaParque: 'Hogsmeade', acesso: [], duracaoMin: 30, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-1830', hora: '18:30', ancora: 'fixo', tipo: 'refeicao',
+      { id: 'b-2311-1910', hora: '19:10', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Mythos',
-        descricao: 'Já eleito o melhor restaurante de parque temático do mundo',
+        descricao: 'O melhor restaurante de parque temático, no último Natal dele',
         contexto:
-          'Serviço à mesa dentro de uma caverna cenográfica com vista para a lagoa central. ' +
-          'Ganhou várias vezes o prêmio de melhor restaurante de parque temático. ' +
-          'RESERVA CONFIRMADA COMO NECESSÁRIA — está no checklist.',
-        restauranteId: 'r-mythos', areaParque: 'The Lost Continent', acesso: ['reserva'] },
+          'Mesa com garçom dentro de uma caverna cenográfica, com vista para a lagoa. Ganhou ' +
+          'dez vezes o prêmio de melhor restaurante de parque temático do Theme Park Insider. ' +
+          'Pratos de US$ 26 a 42.\n\n' +
+          'É O ÚLTIMO NATAL DELE: a Lost Continent está sendo demolida em fases, e o Mythos ' +
+          'fecha em 2027.\n\n' +
+          'RESERVA: está no checklist, pelo app da Universal ou pelo telefone de reservas nos ' +
+          'Contatos. É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
+        restauranteId: 'r-mythos', areaParque: 'Lost Continent', acesso: ['reserva'],
+        duracaoMin: 75, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-2000', hora: '20:00', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Hogsmeade à noite',
-        descricao: 'Projeção no castelo, se quiserem rever',
-        areaParque: 'Hogsmeade', acesso: [] },
+      { id: 'b-2311-2030', hora: '20:30', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Saída',
+        descricao: 'Uns 20 min a pé até o carro. Hotel por volta das 21h30',
+        contexto:
+          'A volta até o estacionamento é o mesmo caminho da manhã, pelo CityWalk.\n\n' +
+          'AMANHÃ É BUSCH GARDENS, EM TAMPA: saída às 7h, alarme às 6h. Deixem a mochila ' +
+          'pronta antes de dormir.',
+        acesso: [], duracaoMin: 60 },
     ],
+    naoPerca: [
+      { nome: 'A projeção no castelo de Hogwarts', quando: 'hoje', custo: 'incluso',
+        motivo: 'The Magic of Christmas at Hogwarts Castle, depois que escurece, repetindo a ' +
+                'cada 20 minutos.',
+        pesquisa: '2026-09-11' },
+      { nome: 'Hogwarts Express nos dois sentidos', quando: 'hoje',
+        custo: 'incluso, precisa park-to-park',
+        motivo: 'A ida e a volta têm filmes diferentes.',
+        pesquisa: '2026-09-11' },
+      { nome: 'Mythos', quando: 'hoje', custo: 'US$ 26 a 42 o prato',
+        motivo: 'Dez vezes eleito o melhor restaurante de parque temático, e fecha em 2027.',
+        pesquisa: '2026-09-11' },
+    ],
+    prepararAmanha: {
+      paraODia: '2026-11-24',
+      titulo: 'Busch Gardens Tampa · saída 7h',
+      aviso: 'Amanhã é o dia mais pesado fisicamente da viagem, com 1h30 de estrada para cada ' +
+             'lado. Vocês chegam do Islands por volta das 21h30: durmam cedo.',
+      itens: [
+        { texto: 'Alarme para 6h nos dois celulares', critico: true,
+          motivo: 'Saída às 7h, antes do rush da I-4 sentido Tampa.' },
+        { texto: 'Conferir o horário de abertura do Busch Gardens', critico: true,
+          motivo: 'Amanhã assume abertura às 10h, ainda sem confirmação. Se for outro horário, ' +
+                  'a saída muda junto.' },
+        { texto: 'Ingresso do Busch Gardens e o plano de refeição no celular', critico: true,
+          motivo: 'É o mesmo ingresso do SeaWorld, com o plano de refeição incluso.' },
+      ],
+    },
     ficha: {
       multiPass: null, singlePass: null,
       expressPass: {
         usar: false,
         motivo:
-          'O Hagrid’s saiu do Express em julho de 2026 — vocês pagariam e ainda enfrentariam ' +
-          'a fila que incomoda.',
-        alternativa: 'Express Pass Now dentro do parque (US$ 20–30, uma atração).',
+          'O Hagrid’s saiu do Express em 1º de julho de 2026, e a fila que mais pesa no dia é ' +
+          'justamente a dele. Nas outras, o single rider resolve sem pagar nada.',
       },
-      custoEstimadoCasal: { min: 0, max: 0, moeda: 'USD' },
-      extras: [],
+      custoEstimadoCasal: { min: 32, max: 35, moeda: 'USD' },
+      extras: [
+        { nome: 'Estacionamento da Universal',
+          custo: { min: 32, max: 35, moeda: 'USD' },
+          texto: 'US$ 32 pago antes pelo site, US$ 35 na hora.' },
+      ],
     },
     renuncias: {
       gerais: [
-        { nome: 'Pteranodon Flyers', motivo: 'Só com criança' },
-        { nome: 'Storm Force Accelatron' }, { nome: 'Caro-Seuss-el' },
-        { nome: 'One Fish Two Fish' }, { nome: 'Cat in the Hat' },
+        { nome: 'Grinchmas Who-liday Spectacular', motivo: 'Visto no dia 14, que existe para ele.' },
+        { nome: 'Flight of the Hippogriff',
+          motivo: 'Montanha-russa de família de um minuto, com 34 minutos de fila média.' },
+        { nome: 'Beco Diagonal', motivo: 'Feito inteiro no dia 17, inclusive à noite.' },
+        { nome: 'Pteranodon Flyers', motivo: 'Só com criança.' },
+        { nome: 'Seuss Landing', motivo: 'Brinquedos infantis. Vocês atravessam a pé.' },
         { nome: 'Popeye e Dudley Do-Right',
-          motivo: 'Molham muito e vocês já vão molhar no Jurassic Park' },
+          motivo: 'Molham muito, e o Jurassic Park River Adventure já cumpre esse papel.' },
       ],
-      idioma: null, fechado: [],
+      idioma: null,
+      fechado: [],
     },
   },
 
@@ -6512,11 +6643,11 @@ window.ROTEIRO = {
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: null, blocoId: 'b-1711-1845', nota: null },
 
-    { id: 'r-broomsticks', nome: 'Three Broomsticks', data: '2026-11-23', hora: '12:40',
-      refeicao: 'almoco', local: 'Islands of Adventure · Hogsmeade', alternativas: [],
+    { id: 'r-confisco', nome: 'Confisco Grille', data: '2026-11-23', hora: '11:40',
+      refeicao: 'almoco', local: 'Islands of Adventure · Port of Entry', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Mobile order pelo app da Universal', blocoId: 'b-2311-1240',
-      nota: 'Costelinha e frango assado. Combo serve dois com folga.' },
+      canal: 'Chegar direto', blocoId: 'b-2311-1140',
+      nota: 'Mesa com garçom na entrada do parque, cozinha internacional. Pratos de US$ 21 a 35.' },
 
     { id: 'r-kres', nome: 'Kres Chophouse', data: '2026-11-18', hora: '17:45',
       refeicao: 'jantar', local: 'Centro de Orlando · 17 W Church St',
@@ -6527,13 +6658,13 @@ window.ROTEIRO = {
             'minutos a pé. Noite de jogo da NBA enche o centro: reservem. Avisem na chegada ' +
             'que vocês têm hora.' },
 
-    { id: 'r-mythos', nome: 'Mythos', data: '2026-11-23', hora: '18:30',
-      refeicao: 'jantar', local: 'Islands of Adventure · The Lost Continent',
+    { id: 'r-mythos', nome: 'Mythos', data: '2026-11-23', hora: '19:10',
+      refeicao: 'jantar', local: 'Islands of Adventure · Lost Continent',
       alternativas: [],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
-      canal: 'App / site da Universal Orlando', blocoId: 'b-2311-1830',
-      nota: 'Reserva recomendada — confirmado em 08/09. Já eleito o melhor restaurante de ' +
-            'parque temático do mundo.' },
+      canal: 'App / site da Universal Orlando, ou +1 407-224-3663', blocoId: 'b-2311-1910',
+      nota: 'Dez vezes eleito o melhor restaurante de parque temático. Pratos de US$ 26 a 42. ' +
+            'Fecha em 2027, com a demolição da Lost Continent.' },
 
     { id: 'r-homecomin', nome: 'Homecomin’', data: '2026-11-25', hora: '20:00',
       refeicao: 'jantar', local: 'Disney Springs · Town Center',
@@ -6814,7 +6945,7 @@ window.ROTEIRO = {
 
     { id: 'ck-mythos', dataAlvo: '2026-10-24', dataEstimada: true, motivoData: '30 dias antes do jantar de 23/11', hora: null, fuso: null,
       janelaReserva: false, critico: false,
-      texto: 'Reservar o Mythos para o jantar de 23/11 (Islands of Adventure)',
+      texto: 'Reservar o Mythos para as 19h10 de 23/11 (Islands of Adventure)',
       restauranteIds: ['r-mythos'] },
 
     { id: 'ck-homecomin', dataAlvo: '2026-10-26', dataEstimada: true,
@@ -7348,11 +7479,14 @@ window.ROTEIRO = {
       forma: 'Um anel em volta da lagoa. Do portão dá para ir pelos dois lados, e o ' +
              'caminho mais curto entre duas áreas quase nunca passa pelo meio.',
       margem: 'Somem 50% em dia cheio. Hogsmeade trava o fluxo quando tem projeção no ' +
-              'castelo — a multidão para no pátio e o resto do anel não anda.',
+              'castelo — a multidão para no pátio e o resto do anel não anda. A Skull Island ' +
+              'fica no meio do caminho entre a Toon Lagoon e o Jurassic Park: os 4 minutos ' +
+              'entre as duas foram divididos ao meio, sem medição própria.',
       arestas: [
         ['Port of Entry', 'Marvel Super Hero Island', 4],
         ['Marvel Super Hero Island', 'Toon Lagoon', 4],
-        ['Toon Lagoon', 'Jurassic Park', 4],
+        ['Toon Lagoon', 'Skull Island', 2],
+        ['Skull Island', 'Jurassic Park', 2],
         ['Jurassic Park', 'Hogsmeade', 5],
         ['Hogsmeade', 'Lost Continent', 4],
         ['Lost Continent', 'Seuss Landing', 4],

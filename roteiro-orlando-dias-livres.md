@@ -106,7 +106,7 @@ Sábado. O objetivo do dia é ficar longe de parque cheio e chegar inteiro na se
 > decoração que vocês vieram ver, e não leva gorjeta.
 
 **Não tentem atração grande hoje.** Hagrid's, VelociCoaster e Forbidden Journey são do dia 23,
-numa quinta-feira. Hoje é sábado e primeira noite da temporada: o pior momento possível
+numa segunda-feira. Hoje é sábado e primeira noite da temporada: o pior momento possível
 para encarar fila.
 
 ---
