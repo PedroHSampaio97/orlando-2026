@@ -3916,7 +3916,15 @@ window.ROTEIRO = {
         fila: { min: 30, quando: 'de manhã', pico: 120, media: 44, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
-      { id: 'b-1711-1110', hora: '11:10', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1711-1105', hora: '11:05', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Parada — água, banheiro e sentar',
+        descricao: 'Dez minutos. Banheiro na New York, perto do Mummy',
+        contexto:
+          'Quatro atrações com fila e armário desde as 9h, e o Beco Diagonal só senta no almoço, às 13h15. Encham as garrafas — qualquer balcão dá água gelada de graça — e sentem dez ' +
+          'minutos antes de descer para a Minion Land.',
+        areaParque: 'New York', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
+
+      { id: 'b-1711-1125', hora: '11:25', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Despicable Me Minion Mayhem',
         descricao: 'A terceira maior fila do parque',
         contexto:
@@ -3930,7 +3938,7 @@ window.ROTEIRO = {
         fila: { min: 25, quando: 'antes do almoço', pico: 75, media: 35, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
-      { id: 'b-1711-1145', hora: '11:45', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1711-1200', hora: '12:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Villain-Con Minion Blast',
         descricao: 'Você atira, andando numa esteira. Sem fila de verdade',
         contexto:
@@ -3940,7 +3948,7 @@ window.ROTEIRO = {
         areaParque: 'Minion Land', acesso: [], duracaoMin: 30,
         pesquisa: '2026-09-10' },
 
-      { id: 'b-1711-1225', hora: '12:25', ancora: 'referencia', tipo: 'livre',
+      { id: 'b-1711-1240', hora: '12:40', ancora: 'referencia', tipo: 'livre',
         titulo: 'Beco Diagonal',
         descricao: 'Ollivanders, o dragão do Gringotts, decoração de Natal',
         contexto:
@@ -3953,7 +3961,7 @@ window.ROTEIRO = {
           'graça assistir; a varinha custa à parte.\n\n' +
           'É AGORA E NÃO À NOITE que dá para ver as vitrines com calma — o Beco à noite, no ' +
           'fim do dia, é para a luz, não para as lojas.',
-        areaParque: 'Diagon Alley', acesso: [], duracaoMin: 45,
+        areaParque: 'Diagon Alley', acesso: [], duracaoMin: 30,
         pesquisa: '2026-09-10' },
 
       { id: 'b-1711-1315', hora: '13:15', ancora: 'referencia', tipo: 'refeicao',
@@ -4729,7 +4737,14 @@ window.ROTEIRO = {
         fila: { min: 20, quando: 'logo depois da abertura', pico: 75, media: 46, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
-      { id: 'b-1911-1020', hora: '10:20', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1911-1020', hora: '10:20', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Parada — água, banheiro e sentar',
+        descricao: 'Dez minutos, na saída da Dark Universe. O mapa não marca banheiros: perguntem',
+        contexto:
+          'Duas montanhas-russas com armário e o Stardust logo em seguida, e o almoço só às 13h05. Sentem no Celestial Park, encham as garrafas, e só então o Stardust.',
+        areaParque: 'Celestial Park', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
+
+      { id: 'b-1911-1030', hora: '10:30', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Stardust Racers',
         descricao: 'Celestial Park. Dois trens correndo lado a lado. Detector de metal',
         contexto:
@@ -4745,7 +4760,7 @@ window.ROTEIRO = {
         fila: { min: 20, quando: 'no meio da manhã', pico: 105, media: 25, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
-      { id: 'b-1911-1105', hora: '11:05', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1911-1115', hora: '11:15', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mario Kart: Bowser’s Challenge',
         descricao: 'A janela dele é 11h–12h, quando a turma do EPA sai da Nintendo',
         contexto:
@@ -4763,7 +4778,7 @@ window.ROTEIRO = {
         fila: { min: 60, quando: 'entre 11h e 12h', pico: 170, media: 72, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
-      { id: 'b-1911-1215', hora: '12:15', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1911-1225', hora: '12:25', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Yoshi’s Adventure',
         descricao: 'Lento e elevado. É a única vista da Nintendo de cima',
         contexto:
@@ -4776,7 +4791,7 @@ window.ROTEIRO = {
         fila: { min: 20, quando: 'no meio do dia', pico: 95, media: 34, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
-      { id: 'b-1911-1300', hora: '13:00', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-1911-1305', hora: '13:05', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Toadstool Cafe',
         descricao: 'Não aceita reserva. Confiram a lista no app às 11h',
         contexto:
@@ -4787,10 +4802,10 @@ window.ROTEIRO = {
           'guias fala de lista de espera pelo app da Universal, e um diz que é por ordem de ' +
           'chegada. Por isso o bloco das 11h manda conferir no app — se houver lista, entrem ' +
           'nela ali.\n\n' +
-          'O pico do almoço no parque é das 11h30 às 13h30. Às 13h vocês pegam o fim dele.\n\n' +
+          'O pico do almoço no parque é das 11h30 às 13h30. Às 13h05 vocês pegam o fim dele.\n\n' +
           'É serviço rápido, com pedido pela mesa: não leva gorjeta de garçom.',
         restauranteId: 'r-toadstool', areaParque: 'Super Nintendo World', acesso: [],
-        duracaoMin: 60, pesquisa: '2026-09-10' },
+        duracaoMin: 55, pesquisa: '2026-09-10' },
 
       { id: 'b-1911-1410', hora: '14:10', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Hiccup’s Wing Gliders',
@@ -4836,7 +4851,7 @@ window.ROTEIRO = {
         fila: { min: 10, quando: 'qualquer hora', pico: 65, media: 13, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
-      { id: 'b-1911-1615', hora: '16:15', ancora: 'referencia', tipo: 'livre',
+      { id: 'b-1911-1615', hora: '16:15', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Pausa · Constellation Carousel · Celestial Park de Natal',
         descricao: 'Água, banheiro, alguma coisa da mochila. O carrossel é se der vontade',
         contexto:
@@ -5803,7 +5818,14 @@ window.ROTEIRO = {
         areaParque: 'Mako e Shark Encounter', acesso: ['standby'], locker: true, duracaoMin: 30,
         pesquisa: '2026-09-11' },
 
-      { id: 'b-2211-1140', hora: '11:40', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2211-1135', hora: '11:35', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Parada — água, banheiro e sentar',
+        descricao: 'Dez minutos. Banheiro ao lado do Sharks Underwater Grill',
+        contexto:
+          'Três montanhas-russas e o Expedition Odyssey desde as 9h, e o almoço só às 12h55. Sentem dez minutos antes do túnel dos tubarões, que é caminhada.',
+        areaParque: 'Mako e Shark Encounter', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
+
+      { id: 'b-2211-1145', hora: '11:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Shark Encounter',
         descricao: 'Túnel de acrílico dentro do tanque de tubarões',
         contexto:
@@ -5812,7 +5834,7 @@ window.ROTEIRO = {
           'É caminhar e parar onde quiserem.',
         areaParque: 'Mako e Shark Encounter', acesso: [], duracaoMin: 20, pesquisa: '2026-09-11' },
 
-      { id: 'b-2211-1205', hora: '12:05', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2211-1210', hora: '12:10', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Penguin Trek',
         descricao: 'Montanha-russa de lançamento que termina no hábitat dos pinguins',
         contexto:
@@ -5821,7 +5843,7 @@ window.ROTEIRO = {
           'montanha-russa com aquário.\n\n' +
           'É a segunda maior fila do parque, 35 minutos de média. Levem algo de manga longa: o ' +
           'hábitat é mantido a poucos graus.',
-        areaParque: 'Penguin Trek', acesso: ['standby'], duracaoMin: 45, pesquisa: '2026-09-11' },
+        areaParque: 'Penguin Trek', acesso: ['standby'], duracaoMin: 40, pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1255', hora: '12:55', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Voyager’s Smokehouse',
@@ -6114,7 +6136,7 @@ window.ROTEIRO = {
       { letra: 'B', titulo: 'O Jurassic Park River Adventure não reabriu',
         gatilho: 'A reforma atrasou e ele continua fechado em 23/11.',
         passos: [
-          'Os 40 minutos dele viram folga: a VelociCoaster pode ir às 15h35.',
+          'Os 40 minutos dele viram folga: a VelociCoaster pode ir às 15h40.',
           'Nada mais muda. A capa de chuva fica na mochila.',
         ] },
       { letra: 'B2', titulo: 'O parque fecha às 20h',
@@ -6230,7 +6252,14 @@ window.ROTEIRO = {
         areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
         acessoAlt: 'single-rider', duracaoMin: 20, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-1445', hora: '14:45', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1435', hora: '14:35', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Parada — água, banheiro e sentar',
+        descricao: 'Dez minutos. Banheiro ao lado do Captain America Diner',
+        contexto:
+          'Do almoço até o Mythos são sete horas, e só o Hogwarts Express senta. Esta é a parada do meio: água, banheiro e dez minutos sentados antes do Kong.',
+        areaParque: 'Marvel Super Hero Island', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
+
+      { id: 'b-2311-1455', hora: '14:55', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Skull Island: Reign of Kong',
         descricao: 'Caminhão expedicionário, telas 3D e o Kong animatrônico',
         contexto:
@@ -6238,9 +6267,9 @@ window.ROTEIRO = {
           'atores na fila. Escuro e barulhento, mas sem emoção física forte.\n\n' +
           'Fila média de 35 minutos.',
         areaParque: 'Skull Island', acesso: ['standby'],
-        acessoAlt: 'single-rider', duracaoMin: 45, pesquisa: '2026-09-11' },
+        acessoAlt: 'single-rider', duracaoMin: 40, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-1535', hora: '15:35', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1540', hora: '15:40', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Jurassic Park River Adventure',
         descricao: 'Molha. Reaberto depois de dez meses de reforma',
         contexto:
@@ -6248,13 +6277,13 @@ window.ROTEIRO = {
           'no escuro. Molha de verdade, principalmente nas primeiras fileiras.\n\n' +
           'REFORMA: ficou fechado de janeiro a 19 ou 20/11 de 2026, com dinossauros e cenário ' +
           'sendo refeitos. Se ainda estiver fechado, vale o plano B.\n\n' +
-          'Está às 15h35 porque é a hora mais quente. Capa de chuva e o celular no Ziploc — ou ' +
+          'Está às 15h40 porque é a hora mais quente. Capa de chuva e o celular no Ziploc — ou ' +
           'no armário de aluguel da entrada, que aqui é opcional, pelo mapa oficial. Fila média ' +
           'de 22 minutos.',
         areaParque: 'Jurassic Park', acesso: ['standby'],
         acessoAlt: 'single-rider', molha: true, duracaoMin: 40, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-1620', hora: '16:20', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1625', hora: '16:25', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Jurassic World VelociCoaster',
         descricao: 'A mais intensa do parque. Por single rider',
         contexto:
@@ -6265,7 +6294,7 @@ window.ROTEIRO = {
           '45 é single rider, e vocês andam em carrinhos separados.\n\n' +
           'DETECTOR DE METAL: absolutamente nada nos bolsos.',
         areaParque: 'Jurassic Park', acesso: ['standby'],
-        acessoAlt: 'single-rider', locker: 'detector', duracaoMin: 55, pesquisa: '2026-09-11' },
+        acessoAlt: 'single-rider', locker: 'detector', duracaoMin: 50, pesquisa: '2026-09-11' },
 
       { id: 'b-2311-1720', hora: '17:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Hogwarts Express — ida e volta',
@@ -6567,7 +6596,14 @@ window.ROTEIRO = {
         areaParque: 'Pantopia', acesso: ['standby'], locker: true, duracaoMin: 20,
         pesquisa: '2026-09-11' },
 
-      { id: 'b-2411-1245', hora: '12:45', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2411-1240', hora: '12:40', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Parada — água, banheiro e sentar',
+        descricao: 'Dez minutos. Banheiro ao lado do Dragon Fire Grill',
+        contexto:
+          'Cinco montanhas-russas seguidas desde as 10h, cada uma com armário. Dez minutos sentados em Pantopia antes do SheiKra e do almoço.',
+        areaParque: 'Pantopia', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
+
+      { id: 'b-2411-1255', hora: '12:55', ancora: 'referencia', tipo: 'atracao',
         titulo: 'SheiKra',
         descricao: 'Para quatro segundos na beirada e cai a 90°',
         contexto:
@@ -6578,7 +6614,7 @@ window.ROTEIRO = {
         areaParque: 'Stanleyville', acesso: ['standby'], locker: true, duracaoMin: 30,
         pesquisa: '2026-09-11' },
 
-      { id: 'b-2411-1320', hora: '13:20', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-2411-1325', hora: '13:25', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Zambia Smokehouse',
         descricao: 'Churrasco, ao lado do SheiKra. Plano de refeição',
         contexto:
@@ -7432,10 +7468,10 @@ window.ROTEIRO = {
       nota: 'Churrasco grelhado, frango com sofrito e pernil. Coberto pelo plano de refeição. ' +
             'É onde o Papai Noel recebe visitas no Natal.' },
 
-    { id: 'r-toadstool', nome: 'Toadstool Cafe', data: '2026-11-19', hora: '13:00',
+    { id: 'r-toadstool', nome: 'Toadstool Cafe', data: '2026-11-19', hora: '13:05',
       refeicao: 'almoco', local: 'Epic Universe · Super Nintendo World', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Sem reserva — conferir lista de espera no app da Universal', blocoId: 'b-1911-1300',
+      canal: 'Sem reserva — conferir lista de espera no app da Universal', blocoId: 'b-1911-1305',
       nota: 'Não aceita reserva. As fontes divergem entre lista de espera pelo app e ordem de ' +
             'chegada: confiram no app ao entrar na Super Nintendo World, às 11h. Pico do ' +
             'almoço das 11h30 às 13h30. Faixa $ no mapa oficial: até US$ 15 por pessoa.' },
@@ -7493,10 +7529,10 @@ window.ROTEIRO = {
             'saindo da arena às 21h30, vocês chegam por volta das 22h05 e têm quase uma hora. ' +
             'Se o jogo esticar, o Miller’s Ale House fica aberto até as 2h.' },
 
-    { id: 'r-zambia', nome: 'Zambia Smokehouse', data: '2026-11-24', hora: '13:20',
+    { id: 'r-zambia', nome: 'Zambia Smokehouse', data: '2026-11-24', hora: '13:25',
       refeicao: 'almoco', local: 'Busch Gardens Tampa · Stanleyville', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Plano de refeição (All-Day Dining Deal)', blocoId: 'b-2411-1320',
+      canal: 'Plano de refeição (All-Day Dining Deal)', blocoId: 'b-2411-1325',
       nota: 'Churrasco: costela, brisket e frango defumado. Coberto pelo plano de refeição.' },
 
     { id: 'r-dragonfire', nome: 'Dragon Fire Grill & Pub', data: '2026-11-24', hora: '17:20',

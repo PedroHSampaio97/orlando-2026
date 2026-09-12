@@ -344,9 +344,10 @@ O parque de rua, não de castelo: quarteirões de Nova York e São Francisco mon
 | **9h00** | **Escape from Gringotts** | Rope drop. Locker obrigatório |
 | **9h50** | **Transformers: The Ride 3D** | Walk-on na 1ª hora, 30 min na 2ª. A janela fecha às 11h |
 | **10h30** | **Revenge of the Mummy** | Locker obrigatório, sem detector de metal |
-| **11h10** | **Despicable Me Minion Mayhem** | A 3ª maior fila do parque |
-| **11h45** | **Villain-Con Minion Blast** | Mesma land, sem caminhada |
-| **12h25** | **Beco Diagonal** | Ollivanders, o dragão do Gringotts, Knockturn Alley |
+| **11h05** | **Parada** | Dez minutos. Banheiro na New York, perto do Mummy |
+| **11h25** | **Despicable Me Minion Mayhem** | A 3ª maior fila do parque |
+| **12h00** | **Villain-Con Minion Blast** | Mesma land, sem caminhada |
+| **12h40** | **Beco Diagonal** | Ollivanders, o dragão do Gringotts, Knockturn Alley. Meia hora |
 | **13h15** | **Almoço — Leaky Cauldron** | Balcão. Mobile order pelo app da Universal |
 | **14h15** | **Men in Black: Alien Attack** | Vocês disputam pontuação |
 | **15h00** | **The Simpsons Ride** | A Springfield inteira está reconstruída em volta |
@@ -409,10 +410,11 @@ O parque mais concorrido de Orlando, **no dia mais vazio da segunda metade da vi
 | **7h50** | **Entrar e ir para a porta da Dark Universe** | O Celestial Park abre para todos no Early Park Admission |
 | **9h00** | **Monsters Unchained** | **Rope drop.** Locker obrigatório |
 | **9h40** | **Curse of the Werewolf** | Montanha-russa giratória, com trechos de ré |
-| **10h20** | **Stardust Racers** | Detector de metal. A mais forte do parque |
-| **11h05** | **Mario Kart: Bowser's Challenge** | A janela dele é 11h–12h. Conferir a lista do Toadstool no app |
-| **12h15** | **Yoshi's Adventure** | A única vista da Nintendo de cima — e ela está decorada |
-| **13h00** | **Almoço — Toadstool Cafe** | Sem reserva |
+| **10h20** | **Parada** | Dez minutos, na saída da Dark Universe. O mapa não marca banheiros: perguntem |
+| **10h30** | **Stardust Racers** | Detector de metal. A mais forte do parque |
+| **11h15** | **Mario Kart: Bowser's Challenge** | A janela dele é 11h–12h. Conferir a lista do Toadstool no app |
+| **12h25** | **Yoshi's Adventure** | A única vista da Nintendo de cima — e ela está decorada |
+| **13h05** | **Almoço — Toadstool Cafe** | Sem reserva |
 | **14h10** | **Hiccup's Wing Gliders** | Lançamento de alta velocidade. Locker obrigatório |
 | **15h00** | **Dragon Racer's Rally** | Você controla a inclinação e as inversões |
 | **15h45** | **Fyre Drill** — opcional | O guia oficial diz "possivelmente encharca". Frio, pulem |
@@ -478,8 +480,9 @@ As montanhas-russas grandes e o simulador novo até as 15h30, os animais e o Orc
 | **9h35** | **Ice Breaker** — lançamentos para frente e para trás | Ice Breaker e Bayside Stadium |
 | **10h05** | **Expedition Odyssey: Fire & Ice** — a maior fila do parque. Belugas e morsas no fim | Ice Breaker e Bayside Stadium |
 | **11h05** | **Mako** — a mais alta e rápida de Orlando | Mako e Shark Encounter |
-| **11h40** | **Shark Encounter** — túnel dentro do tanque | Mako e Shark Encounter |
-| **12h05** | **Penguin Trek** — termina no hábitat dos pinguins | Penguin Trek |
+| **11h35** | Parada — dez minutos. Banheiro ao lado do Sharks Underwater Grill | Mako e Shark Encounter |
+| **11h45** | **Shark Encounter** — túnel dentro do tanque | Mako e Shark Encounter |
+| **12h10** | **Penguin Trek** — termina no hábitat dos pinguins | Penguin Trek |
 | **12h55** | **Almoço — Voyager's Smokehouse** — plano de refeição | Waterfront e Sky Tower |
 | **13h50** | **Kraken** — sem piso, sete inversões | Kraken e Atlantis |
 | **14h20** | **Journey to Atlantis** — molha bastante | Kraken e Atlantis |
@@ -522,9 +525,10 @@ Hagrid's na abertura, que é a única janela abaixo de uma hora, e depois uma vo
 | **12h45** | **Hulk** — detector de metal | Marvel |
 | **13h35** | **Spider-Man** | Marvel |
 | **14h15** | Doctor Doom's Fearfall | Marvel |
-| **14h45** | **Kong** | Skull Island |
-| **15h35** | **Jurassic Park River Adventure** — molha. Reaberto depois da reforma | Jurassic Park |
-| **16h20** | **VelociCoaster** — por single rider | Jurassic Park |
+| **14h35** | Parada — dez minutos. Banheiro ao lado do Captain America Diner | Marvel |
+| **14h55** | **Kong** | Skull Island |
+| **15h40** | **Jurassic Park River Adventure** — molha. Reaberto depois da reforma | Jurassic Park |
+| **16h25** | **VelociCoaster** — por single rider | Jurassic Park |
 | **17h20** | **Hogwarts Express** — ida e volta, filmes diferentes. Precisa park-to-park | Hogsmeade |
 | **18h35** | **Hogsmeade à noite · projeção no castelo** — a segunda vez, agora numa segunda-feira. A cada 20 min | Hogsmeade |
 | **19h15** | **Jantar — Mythos** — reservado, pratos de US$ 26 a 42. Cheguem às 19h10 | Lost Continent |
@@ -556,8 +560,9 @@ Só de carro, 1h25 de cada lado. Cinco montanhas-russas e a torre de queda até 
 | **10h45** | **Cheetah Hunt** — a maior fila média do parque | Edge of Africa |
 | **11h35** | **Montu** — invertida, sete inversões | Egypt |
 | **12h20** | **Falcon's Fury** — torre de 102 m, cai olhando o chão | Pantopia |
-| **12h45** | **SheiKra** — para na beirada e cai a 90° | Stanleyville |
-| **13h20** | **Almoço — Zambia Smokehouse** — plano de refeição | Stanleyville |
+| **12h40** | Parada — dez minutos. Banheiro ao lado do Dragon Fire Grill | Pantopia |
+| **12h55** | **SheiKra** — para na beirada e cai a 90° | Stanleyville |
+| **13h25** | **Almoço — Zambia Smokehouse** — plano de refeição | Stanleyville |
 | **14h20** | **Tigris** — três lançamentos, 100 km/h | Stanleyville |
 | **14h55** | Serengeti Express — o trem pela planície dos animais | Stanleyville |
 | **15h40** | Pausa e lanche — plano de refeição. Banheiro ao lado da estação do trem | Stanleyville |
