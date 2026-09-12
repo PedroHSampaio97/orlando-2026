@@ -998,8 +998,7 @@ window.ROTEIRO = {
     naoPerca: [
       { nome: 'Happily Ever After', quando: 'hoje', custo: 'grátis',
         motivo: 'Fogos com projeção mapeada no castelo, cerca de 18 minutos. É o melhor ' +
-                'espetáculo noturno da Disney. Às 20h em novembro — confiram no app, porque ' +
-                'em noite de evento especial ele não acontece.' },
+                'espetáculo noturno da Disney, e a hora já saiu confirmada: 20h.' },
 
       { nome: 'As duas horas depois dos fogos', quando: 'hoje', custo: 'grátis',
         motivo: 'A maior parte das 20 mil pessoas vai embora às 20h25 e as filas despencam. ' +
@@ -1254,8 +1253,10 @@ window.ROTEIRO = {
         contexto:
           'Desfile de carros alegóricos, 12 minutos.\n\n' +
           'HORÁRIO FIXO — não desloca se o parque abrir mais cedo, e é ele que ancora toda a ' +
-          'tarde a partir daqui. Confiram a hora no app da Disney: ela varia conforme o ' +
-          'horário do parque.',
+          'tarde a partir daqui.\n\n' +
+          'É A ÚLTIMA HORA DO DIA QUE FALTA: o parque e os fogos já saíram, o desfile não. O ' +
+          'roteiro assume 15h, que é o padrão. Se sair outra, mexam aqui — a travessia das ' +
+          '15h12 e a janela do TRON andam com o desfile, não com a abertura.',
         areaParque: 'Liberty Square', acesso: [], duracaoMin: 12, confirmarHorario: true },
 
       { id: 'b-1111-1512', hora: '15:12', ancora: 'fixo', tipo: 'deslocamento',
@@ -1348,14 +1349,15 @@ window.ROTEIRO = {
 
       { id: 'b-1111-2000', hora: '20:00', ancora: 'fixo', tipo: 'show',
         titulo: 'Happily Ever After',
-        descricao: '20h em novembro, não 21h — o horário de verão acaba em 01/11',
+        descricao: 'Confirmado para as 20h. Projeção no castelo, 18 minutos',
         contexto:
           'Fogos com projeção mapeada no castelo, cerca de 18 minutos. É o melhor espetáculo ' +
           'noturno da Disney.\n\n' +
-          'HORÁRIO FIXO. Confiram no app da Disney em novembro: em noites de evento especial ' +
-          'ele não acontece, e a hora pode mudar com o horário do parque.',
+          'HORÁRIO CONFIRMADO PARA AS 20H, junto com o calendário do parque. É âncora fixa: ' +
+          'não desloca se a abertura mudar, e é ele que segura a noite inteira — o lugar na ' +
+          'Main Street às 19h20 e o Seven Dwarfs às 20h30 dependem dele.',
         areaParque: 'Main Street', acesso: [], duracaoMin: 18,
-        confirmarHorario: true, pesquisa: '2026-09-09' },
+        confirmarHorario: false, pesquisa: '2026-09-12' },
 
       { id: 'b-1111-1045', hora: '20:30', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Seven Dwarfs Mine Train',
@@ -7875,13 +7877,15 @@ window.ROTEIRO = {
     { id: 'ck-horarios-mk', dataAlvo: '2026-09-13', validaAte: '2026-11-11', dataEstimada: true,
       motivoData: 'A Disney publica com 60 dias de antecedência, e 60 dias antes de 11/11 é 12/09',
       hora: null, fuso: null, janelaReserva: false, critico: true,
-      texto: 'Magic Kingdom 11/11 confirmado (9h às 22h) — falta a hora do desfile e dos fogos',
+      texto: 'Magic Kingdom 11/11: falta só a hora do Festival of Fantasy',
       nota:
         'O PARQUE SAIU EM 12/09: 9h às 22h, com Early Entry às 8h30. É exatamente o que o ' +
         'dia assumia, então a referência já está certa e nenhum bloco mudou.\n\n' +
-        'O QUE FALTA são as duas horas fixas do dia: o Festival of Fantasy (15h é o ' +
-        'padrão) e o Happily Ever After (20h desde 01/11). Eles NÃO deslocam com a ' +
-        'abertura: se mudarem, mexam à mão no bloco de cada um.\n\n' +
+        'OS FOGOS TAMBÉM SAÍRAM: Happily Ever After às 20h, exatamente o que o dia assumia.\n\n' +
+        'FALTA SÓ O DESFILE. O Festival of Fantasy assume 15h, que é o padrão, e é a hora ' +
+        'que ancora a tarde inteira: a travessia para a Tomorrowland às 15h12 e a janela do ' +
+        'TRON andam com ele. Se sair outra, mexam no bloco do desfile — nada disso desloca ' +
+        'com a abertura.\n\n' +
         'Confiram na mesma visita se a Tiana’s voltou da reforma antes do previsto.',
       restauranteIds: [] },
 

@@ -71,7 +71,7 @@ No Islands, o Hagrid's saiu do Express em julho de 2026 — vocês pagariam e ai
 | **17h55** | **Jantar — Casey's Corner** | Mesas de fora, de frente para o pianista |
 | **19h00** | Main Street | Compras, fotos com o castelo iluminado |
 | **19h20** | **Posição para os fogos** | Main Street, lado direito olhando o castelo |
-| **20h00** | **Happily Ever After** | Em novembro é às 20h — o horário de verão acaba em 01/11 |
+| **20h00** | **Happily Ever After** | Confirmado para as 20h, com o calendário do parque |
 | **20h30** | **Seven Dwarfs Mine Train** | A última hora é quando ele fica barato |
 | **21h25** | TRON de novo, se tiverem pique | Opcional. É também o plano B da fila das 15h30 |
 | **22h00** | Sair — **pelo ferry**, não pelo monotrilho | |
@@ -616,7 +616,7 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [x] **11/09** — Lombard’s Seafood Grille (17/11, 18h45) — RESERVADO, confirmação 639247504692187392
 - [x] **11/09** — Atlantic (19/11, 17h) — RESERVADO, confirmação 639247233607631616
 - [x] **12/09** — Magic Kingdom — sem reserva: almoço e jantar do dia 11 são de balcão (Columbia Harbour House e Casey’s)
-- [ ] **13/09** — Magic Kingdom 11/11 confirmado (9h às 22h) — falta a hora do desfile e dos fogos *(data estimada)*
+- [ ] **13/09** — Magic Kingdom 11/11: falta só a hora do Festival of Fantasy *(data estimada)*
 - [ ] **14/09, 6h ET** — Reservar Sanaa para o jantar de 13/11 (janela de 60 dias)
 - [x] **14/09** — Animal Kingdom 13/11 — 8h às 18h, confirmado (Early Entry 7h30)
 - [ ] **15/09** — Confirmar com a agência a regra exata de validade do ingresso Disney de 4 dias *(data estimada)*
