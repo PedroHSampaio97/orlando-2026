@@ -4118,9 +4118,9 @@ window.ROTEIRO = {
         { texto: 'Ingresso do jogo do Orlando Magic à mão nos dois celulares', critico: true,
           motivo: 'Jogo às 19h no Kia Center. Confiram o horário: a NBA remarca por TV, e ' +
                   'isso muda perto da data.' },
-        { texto: 'Para a arena amanhã, só bolso ou clutch', critico: true,
-          motivo: 'O Kia Center NÃO aceita bolsa: só uma clutch de 11 × 16 × 2,5 cm, menor que ' +
-                  'a maioria das carteiras. A mochila e as sacolas do shopping ficam no hotel ' +
+        { texto: 'Para a arena amanhã, só o bolso', critico: true,
+          motivo: 'O Kia Center NÃO aceita bolsa: celular, cartão e documento no bolso. A mochila ' +
+                  'e as sacolas do shopping ficam no hotel ' +
                   'na volta das 14h40 — ou vão para um armário Binbox na Church St.' },
         { texto: 'Pedido do Oakley pronto para retirada no app do Best Buy', critico: false,
           motivo: 'Amanhã às 14h15, depois do almoço no Millenia, vocês passam no Best Buy só ' +
@@ -4216,9 +4216,9 @@ window.ROTEIRO = {
       'da tarde e basquete à noite. É também a véspera do Epic Universe — por isso a ' +
       'manhã é lenta de propósito.',
     avisos: [
-      'O KIA CENTER NÃO ACEITA BOLSA. A única exceção é uma clutch de 4,5" × 6,5" × 1" — ' +
-      'onze por dezesseis centímetros, menor que a maioria das carteiras. Não é "bolsa ' +
-      'pequena": é quase nada. Quem chegar com sacola usa os armários Binbox, na Church St. ' +
+      'O KIA CENTER NÃO ACEITA BOLSA: celular, cartão e documento no bolso. A única exceção ' +
+      'da regra é uma clutch de 4,5" × 6,5" × 1", menor que a maioria das carteiras — não é ' +
+      '"bolsa pequena", é quase nada. Quem chegar com sacola usa os armários Binbox, na Church St. ' +
       'com a Division Ave., por uma taxa.',
       'Amanhã é o Epic Universe e a saída é 7h15. Vocês voltam do jogo por volta das ' +
       '22h15. Deixem a mochila de amanhã pronta ANTES de sair hoje.',
@@ -4366,7 +4366,7 @@ window.ROTEIRO = {
         descricao: 'NÃO é descanso. É a única janela de largar sacola antes da arena',
         contexto:
           'Este bloco existe por causa da regra de bolsa do Kia Center, não por cansaço. A ' +
-          'arena aceita uma clutch de 11 × 16 cm e mais nada — sacola de shopping não entra ' +
+          'arena não aceita bolsa — sacola de shopping não entra ' +
           'de jeito nenhum.\n\n' +
           'Aproveitem para trocar de roupa e carregar o celular: a noite vai até 22h15 e a ' +
           'saída de amanhã é 7h15.\n\n' +
@@ -4429,12 +4429,12 @@ window.ROTEIRO = {
 
       { id: 'b-1811-1850', hora: '18:50', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Kia Center — portões',
-        descricao: 'Cinco minutos a pé do Kres. Clutch de 11 cm, ou nada',
+        descricao: 'Cinco minutos a pé do Kres. Nada de bolsa: tudo no bolso',
         contexto:
           'Os portões abrem às 18h, uma hora antes do jogo, mas não há motivo para entrar ' +
           'cedo: o que existe lá dentro é loja e balcão de comida.\n\n' +
           'ÚLTIMA CONFERÊNCIA ANTES DA CATRACA: nada de bolsa. Celular, cartão e documento no ' +
-          'bolso, ou numa clutch de 11 × 16 × 2,5 cm. Ingresso no celular dos dois, cada um ' +
+          'bolso. Ingresso no celular dos dois, cada um ' +
           'com o seu.',
         localId: 'kia-center', acesso: [], duracaoMin: 10 },
 
@@ -4487,7 +4487,7 @@ window.ROTEIRO = {
              'a volta e a saída — resolvam tudo ANTES de sair para o jogo, não depois.',
       itens: [
         { texto: 'Mochila do Epic montada ANTES de sair para o jogo', critico: true,
-          motivo: 'Hoje vocês saem com uma clutch de 11 cm e voltam depois das 22h. A mochila ' +
+          motivo: 'Hoje vocês saem só com o bolso e voltam depois das 22h. A mochila ' +
                   'de amanhã tem de estar pronta em cima da cama quando vocês chegarem: duas ' +
                   'garrafas, barrinhas, protetor solar, power bank, cabo e capa de chuva.' },
         { texto: 'Alarme para 6h15 nos dois celulares', critico: true,
@@ -5288,7 +5288,7 @@ window.ROTEIRO = {
           motivo: 'Café da manhã do hotel às 7h15 e saída às 8h. O Farmers Market de Winter ' +
                   'Garden vai das 8h às 13h e só funciona aos sábados.' },
         { texto: 'A mochila fica no quarto antes do jogo', critico: true,
-          motivo: 'O Kia Center não aceita bolsa — só uma clutch de 11 × 16 cm. A volta de ' +
+          motivo: 'O Kia Center não aceita bolsa, e vocês vão só com o bolso. A volta de ' +
                   'Winter Garden passa pelo hotel à tarde: a mochila fica lá, junto com o carro.' },
         { texto: 'Ingresso do Solar Bears nos dois celulares', critico: true,
           motivo: 'Jogo às 19h no Kia Center.' },
@@ -5341,7 +5341,7 @@ window.ROTEIRO = {
       'à noite, com uma tarde inteira de descanso no meio. O carro leva a Winter Garden; à ' +
       'noite ele fica no hotel e o jogo é de Uber.',
     avisos: [
-      'O KIA CENTER NÃO ACEITA BOLSA. Só uma clutch de 11 × 16 × 2,5 cm. A mochila de Winter ' +
+      'O KIA CENTER NÃO ACEITA BOLSA. A mochila de Winter ' +
       'Garden fica no quarto, e para o jogo vocês saem só com o bolso.',
       'Amanhã é SeaWorld e vocês voltam do jogo por volta das 22h15. A mochila de amanhã fica ' +
       'pronta na tarde de descanso, ANTES de sair para o centro.',
@@ -5356,8 +5356,8 @@ window.ROTEIRO = {
         pesquisa: '2026-09-11' },
 
       { tipo: 'alerta', texto:
-        'A REGRA DA BOLSA É A MESMA DO DIA 18. Bolsa nenhuma passa; a exceção é uma clutch de ' +
-        '11 × 16 × 2,5 cm. Hoje é mais fácil: não há compras, e a volta de Winter Garden passa ' +
+        'A REGRA DA BOLSA É A MESMA DO DIA 18: bolsa nenhuma passa, e vocês vão só com o ' +
+        'bolso. Hoje é mais fácil: não há compras, e a volta de Winter Garden passa ' +
         'pelo hotel. Celular, cartão e documento no bolso, ingresso no celular dos dois.',
         pesquisa: '2026-09-11' },
 
@@ -5510,8 +5510,8 @@ window.ROTEIRO = {
         descricao: '30 km, ~29 min, US$ 32–45. O carro fica no hotel',
         contexto:
           'O carro fica no hotel e a noite é de Uber, ida e volta.\n\n' +
-          'ANTES DE SAIR: nada de bolsa. Celular, cartão e documento no bolso, ou numa clutch ' +
-          'de 11 × 16 × 2,5 cm. Ingresso do jogo no celular dos dois.',
+          'ANTES DE SAIR: nada de bolsa. Celular, cartão e documento no bolso. Ingresso do jogo ' +
+          'no celular dos dois.',
         endereco: '2885 S Orange Ave', localId: 'kia-center', acesso: [], duracaoMin: 30 },
 
       { id: 'b-2111-1735', hora: '17:35', ancora: 'referencia', tipo: 'refeicao',
@@ -8179,7 +8179,8 @@ window.ROTEIRO = {
       lat: 28.53916667, lng: -81.38361111, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 35, tempoFonte: 'estimado',
                  uberUSD: { min: 32, max: 45 }, uberFonte: 'estimado' },
-      nota: 'NÃO ACEITA BOLSA. Só uma clutch de 4,5" × 6,5" × 1" (11 × 16 × 2,5 cm). ' +
+      nota: 'NÃO ACEITA BOLSA: tudo no bolso. A única exceção da regra é uma clutch de ' +
+            '4,5" × 6,5" × 1", menor que uma carteira. ' +
             'Armários Binbox do lado de fora, na Church St. com Division Ave. Na saída, a ' +
             'zona oficial de Uber e Lyft é a esquina da Hughey Ave com a Pine St — andem até ' +
             'lá antes de chamar: a tarifa dinâmica na porta é brutal.' },

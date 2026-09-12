@@ -127,7 +127,7 @@ Dia de cidade, não de parque. É também **a véspera do Epic Universe** — a 
 | **16h30** | **Lake Eola — barco-cisne** | US$ 15 / 30 min, para dois. Ter–dom, 10h–19h. Sem reserva |
 | **17h15** | **Pôr do sol na margem** | A volta do lago tem 1,4 km. Sol cai ~17h30 |
 | **17h45** | **Jantar — Kres Chophouse** | 17 W Church St. **5 min a pé da arena.** Avisem que têm hora |
-| **18h50** | **Kia Center** — portões | Clutch de 11 cm, ou nada |
+| **18h50** | **Kia Center** — portões | Nada de bolsa: tudo no bolso |
 | **19h00** | **Orlando Magic × Philadelphia 76ers** | ⟵ **referência do dia** |
 | **21h30** | Saída | Andem dois quarteirões antes de chamar o Uber |
 
@@ -135,7 +135,7 @@ Dia de cidade, não de parque. É também **a véspera do Epic Universe** — a 
 
 ### ⚠️ A regra de bagagem do Kia Center
 
-**Nenhuma bolsa entra.** A única exceção é uma clutch de **4,5" × 6,5" × 1"** — onze por dezesseis centímetros, menor que a maioria das carteiras. Não é "bolsa pequena": é quase nada.
+**Nenhuma bolsa entra, e vocês vão só com o bolso:** celular, cartão e documento. A única exceção da regra é uma clutch de 4,5" × 6,5" × 1", menor que a maioria das carteiras — não é "bolsa pequena", é quase nada.
 
 Se chegarem com sacola, existem os armários **Binbox**, do lado de fora, perto do *Tavern on Church*, na esquina da **Church St. com a Division Ave.**, por uma taxa.
 
@@ -216,7 +216,7 @@ Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de 
 
 **Por que o jantar ficou partido em dois:** nenhuma rede americana clássica ficou a pé do Kia Center — o Five Guys da 55 W Church St fechou, e o mais próximo hoje é este Chick-fil-A, a 3,9 km. Então a noite come leve antes do jogo, de balcão, e janta de verdade na volta, no Red Lobster da 192, que no sábado vai até as 23h. Se o jogo esticar além das 22h20, o Miller's Ale House fica aberto até as 2h.
 
-**A bolsa:** a regra do Kia Center é a mesma do dia 18 — só uma clutch de 11 × 16 × 2,5 cm. Hoje é fácil: a mochila de Winter Garden fica no quarto na tarde de descanso.
+**A bolsa:** a regra do Kia Center é a mesma do dia 18 — nenhuma, tudo no bolso. Hoje é fácil: a mochila de Winter Garden fica no quarto na tarde de descanso.
 
 **Cowbell:** a arena proíbe qualquer objeto que faça barulho, com uma exceção — o cowbell, e só nos jogos do Solar Bears.
 
