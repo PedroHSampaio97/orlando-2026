@@ -50,7 +50,7 @@ No Islands, o Hagrid's saiu do Express em julho de 2026 — vocês pagariam e ai
 | Hora | O quê | Como |
 |---|---|---|
 | **6h45** | Sair do hotel | Uber para o TTC. **Monotrilho na ida** |
-| **7h45** | Portão · posicionar para a **Frontierland** | À esquerda depois da Main Street, não à direita |
+| **7h45** | Portão · posicionar para a **Frontierland** | A catraca abre ~8h para todos: barrinhas e foto do castelo na Main Street. Depois, à esquerda, não à direita |
 | **9h00** | **Big Thunder Mountain** | Rope drop, standby. É lista alta e sai de graça |
 | **9h40** | **Piratas do Caribe** | Standby. Adventureland fica ao lado |
 | **10h15** | **Jungle Cruise** | Standby. Também lista alta, também de graça antes das 11h |
@@ -134,7 +134,7 @@ Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's
 | Hora | O quê | Como |
 |---|---|---|
 | **6h30** | Sair do hotel | Uber, ~35 min. O AK tem entrada direta, sem monotrilho |
-| **7h15** | Portão · pré-fila no checkpoint da **África** | Não na ponte de Pandora |
+| **7h15** | Portão · pré-fila no checkpoint da **África** | A catraca abre 30 a 45 min antes das 8h e a espera é na Discovery Island, com a foto da Árvore da Vida. Não na ponte de Pandora |
 | **8h00** | **Kilimanjaro Safaris** | Rope drop. Walk-on, e os animais estão ativos com o frio |
 | **8h40** | **Expedition Everest** | Walk-on pelo mesmo motivo |
 | **9h15** | **Kali River Rapids** | **Opcional — molha de verdade.** A decisão é a temperatura |
@@ -216,7 +216,7 @@ O parque mais difícil da Disney, e o único dos três em que o Single Pass se j
 | Hora | O quê | Como |
 |---|---|---|
 | **7h00** | Sair do hotel | Uber, ~30 min, US$ 22–32. A segurança daqui é lenta |
-| **8h00** | Portão · posicionar para o **Toy Story Land** | Não para o Galaxy's Edge |
+| **8h00** | Portão · posicionar para o **Toy Story Land** | A catraca abre ~8h para todos e a Hollywood Blvd é de vocês; esperem no checkpoint do corredor do Toy Story Land. Não para o Galaxy's Edge |
 | **9h00** | **Slinky Dog Dash** | Rope drop. A fila mais teimosa do parque |
 | **9h40** | **Toy Story Mania** | Standby, mesma land |
 | **10h15** | **Alien Swirling Saucers** | Opcional. Só se a fila estiver abaixo de 15 min |
@@ -234,7 +234,7 @@ O parque mais difícil da Disney, e o único dos três em que o Single Pass se j
 | **19h25** | **Sunset Blvd** — Natal e compras | **É o momento de compra do dia.** As lojas fecham com o parque |
 | **19h45** | Posição para o Fantasmic! | Meio e um pouco atrás. O teatro abre às 18h30; as primeiras fileiras molham |
 | **20h00** | **Fantasmic!** | ~26 min. O parque fecha às 21h; a hora do show ainda não saiu |
-| **20h35** | Voltar ao hotel | Uber, ~30 min, US$ 22–32. Amanhã sai às 7h45 |
+| **20h35** | Voltar ao hotel | Uber, ~30 min, US$ 22–32. Amanhã sai às 7h15 |
 
 ### Por que o dia está nesta ordem — a fila típica
 
@@ -279,8 +279,8 @@ Meio dia de parque e meio de festival. A manhã resolve as filas; a partir das 1
 
 | Hora | O quê | Como |
 |---|---|---|
-| **7h45** | Sair do hotel | Uber, ~25 min, US$ 20–30 |
-| **8h45** | Portão · posicionar para o **World Discovery** | Test Track, não Cosmic Rewind |
+| **7h15** | Sair do hotel | Uber, ~25 min, US$ 20–30 |
+| **8h15** | Portão · posicionar para o **World Discovery** | A catraca abre ~7h30 e quem é de fora espera na Spaceship Earth até as 9h. Test Track, não Cosmic Rewind |
 | **9h00** | **Test Track** | Rope drop. 53 min agora contra 99 de média |
 | **9h45** | **Mission: SPACE** | Multi Pass · lista baixa. **Na saída, reservem o Remy.** A **verde** se houver tendência a enjoo |
 | **10h20** | **Guardians: Cosmic Rewind** | Single Pass |
@@ -340,7 +340,7 @@ O parque de rua, não de castelo: quarteirões de Nova York e São Francisco mon
 | Hora | O quê | Como |
 |---|---|---|
 | **7h45** | Sair do hotel | 30–35 min de Kissimmee. Uber US$ 25–35 |
-| **8h30** | Portão | Meia hora antes. **Não parem na Minion Land**, à esquerda da catraca — ela entope no rope drop |
+| **8h30** | Portão | Meia hora antes. **Não parem na Minion Land**, à esquerda da catraca — ela entope no rope drop. Se o parque tiver a entrada antecipada de hotel, a catraca abre uma hora antes para todos e a espera é na frente do parque |
 | **9h00** | **Escape from Gringotts** | Rope drop. Locker obrigatório |
 | **9h50** | **Transformers: The Ride 3D** | Walk-on na 1ª hora, 30 min na 2ª. A janela fecha às 11h |
 | **10h30** | **Revenge of the Mummy** | Locker obrigatório, sem detector de metal |
@@ -517,8 +517,8 @@ Hagrid's na abertura, que é a única janela abaixo de uma hora, e depois uma vo
 
 | Hora | O quê | Onde |
 |---|---|---|
-| **7h45** | Sair do hotel de carro — 33 min e uns 20 a pé. Estacionamento US$ 32 pago antes | |
-| **8h35** | Portão — pela esquerda, sentido Hogsmeade | |
+| **7h25** | Sair do hotel de carro — 33 min e uns 20 a pé. Estacionamento US$ 32 pago antes | |
+| **8h15** | Portão — a catraca abre antes das 9h e a espera é na corda da Seuss Landing. Quando soltar, pela esquerda, sentido Hogsmeade | |
 | **9h00** | **Hagrid's** — rope drop. 30–65 min na abertura, mais de 2h depois | Hogsmeade |
 | **10h30** | **Forbidden Journey** — a fila atravessa o castelo | Hogsmeade |
 | **11h40** | **Almoço — Confisco Grille** — mesa com garçom, pratos de US$ 21 a 35 | Port of Entry |
@@ -598,7 +598,7 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 
 ## PARTE 3 — Sete regras que valem para todos os dias
 
-**1. Rope drop vale mais que qualquer passe.** A primeira hora de parque rende o que as três da tarde rendem. Chegar 45 minutos antes da abertura é a decisão mais barata e mais eficaz da viagem. Quando o dia marca outra hora de portão, vale a do dia: vai de 75 minutos antes no Magic Kingdom, por causa do monotrilho, a 15 no Epcot.
+**1. Rope drop vale mais que qualquer passe.** A primeira hora de parque rende o que as três da tarde rendem. Chegar 45 minutos antes da abertura é a decisão mais barata e mais eficaz da viagem. Quando o dia marca outra hora de portão, vale a do dia: vai de 75 minutos antes no Magic Kingdom, por causa do monotrilho, a 30 no Universal Studios. Na Disney e na Universal a catraca abre antes para todo mundo, e essa espera é do lado de dentro.
 
 **2. Não reserve Multi Pass para o que você vai fazer no rope drop.** Erro clássico: reservar a atração que já estaria vazia às 9h e depois enfrentar fila de 80 minutos no resto.
 

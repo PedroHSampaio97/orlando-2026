@@ -89,7 +89,8 @@ window.ROTEIRO = {
       texto: 'A primeira hora de parque rende o que as três da tarde rendem. Chegar 45 ' +
              'minutos antes da abertura é a decisão mais barata e mais eficaz da viagem. ' +
              'Quando o dia marca outra hora de portão, vale a do dia: vai de 75 minutos antes ' +
-             'no Magic Kingdom, por causa do monotrilho, a 15 no Epcot.' },
+             'no Magic Kingdom, por causa do monotrilho, a 30 no Universal Studios. Na Disney e ' +
+             'na Universal a catraca abre antes para todo mundo, e essa espera é do lado de dentro.' },
     { n: 2, momento: 'todo-dia',
       titulo: 'Não reserve Multi Pass para o que você vai fazer no rope drop.',
       texto: 'Erro clássico: reservar a atração que já estaria vazia às 9h e depois ' +
@@ -1096,26 +1097,30 @@ window.ROTEIRO = {
 
       { id: 'b-1111-0745', hora: '07:45', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Portão · posicionar para a FRONTIERLAND',
-        descricao: 'À esquerda depois da Main Street, não à direita',
+        descricao: 'Catraca ~8h: Main Street e foto do castelo. Depois, à esquerda, não à direita',
         contexto:
           'ESTA É A DECISÃO MAIS IMPORTANTE DA MANHÃ, e ela é contraintuitiva.\n\n' +
-          'Vocês não têm Early Entry, porque não estão em hotel Disney. Isso significa que, ' +
-          'quando o portão abre às 9h, os hóspedes Disney já estão dentro há meia hora — e ' +
-          'já estão em pé na Tomorrowland e na Fantasyland, que são as áreas do Early Entry. ' +
-          'Correr para o TRON às 9h é entrar na fila atrás dessa gente toda: dá 90 minutos ou ' +
-          'mais.\n\n' +
+          'A CATRACA ABRE PARA TODO MUNDO POR VOLTA DAS 8H, uma hora antes do parque. Com o ' +
+          'ingresso comum vocês já entram na Main Street e na praça do castelo, com as lojas ' +
+          'abertas. O que fica fechado até as 9h são as áreas e as atrações.\n\n' +
+          'Vocês não têm Early Entry, porque não estão em hotel Disney. Às 8h30 os hóspedes ' +
+          'Disney passam para a Tomorrowland e a Fantasyland, que são as áreas do Early Entry, ' +
+          'e às 9h já estão nas filas de lá. Correr para o TRON às 9h é entrar na fila atrás ' +
+          'dessa gente toda: dá 90 minutos ou mais.\n\n' +
           'A recomendação para quem vem de fora é ir para a FRONTIERLAND ou a ADVENTURELAND, ' +
           'que ficam quase vazias na abertura justamente porque o Early Entry não as inclui. ' +
-          'É lá que vocês começam.\n\n' +
-          'ESTES 75 MINUTOS SÃO O CAFÉ DA MANHÃ DE VOCÊS. Saindo às 6h45 vocês não comem ' +
-          'nada até o almoço — comam as barrinhas da mochila aqui, parados na fila, que é o ' +
-          'único momento do dia em que sobra tempo.\n\n' +
+          'Esperem na corda da praça do castelo, do lado delas: às 9h a equipe solta o grupo ' +
+          'e vocês seguem direto para o Big Thunder.\n\n' +
+          'ESTES 75 MINUTOS SÃO O CAFÉ DA MANHÃ E A FOTO DO CASTELO. Saindo às 6h45 vocês não ' +
+          'comem nada até o almoço: comam as barrinhas da mochila já do lado de dentro, na ' +
+          'Main Street, e façam a foto do castelo antes de a praça encher. Depois, para a ' +
+          'corda.\n\n' +
           'Água: qualquer balcão de comida do parque dá copo de água gelada de graça, é ' +
           'só pedir. Não comprem garrafa a US$ 4 lá dentro — recarreguem as de vocês.\n\n' +
           'PONTO DE ENCONTRO DE HOJE: o coreto da Town Square, logo depois da catraca. Se ' +
           'vocês se perderem, vão para lá e ESPEREM — não saiam procurando. Combinem isso ' +
-          'agora, na fila, e não depois.',
-        localId: 'magic-kingdom', acesso: [], duracaoMin: 75, pesquisa: '2026-09-10' },
+          'antes de a corda soltar.',
+        localId: 'magic-kingdom', acesso: [], duracaoMin: 75, pesquisa: '2026-09-12' },
 
       { id: 'b-1111-1330', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Big Thunder Mountain',
@@ -2054,20 +2059,24 @@ window.ROTEIRO = {
         descricao: 'Não na ponte de Pandora',
         contexto:
           'A MESMA DECISÃO CONTRAINTUITIVA DO DIA 11, e aqui ela é ainda mais forte.\n\n' +
+          'A CATRACA ABRE PARA TODO MUNDO 30 A 45 MINUTOS ANTES DAS 8H. Quem não é hóspede ' +
+          'passa pelo Oasis e espera na Discovery Island, em volta da Árvore da Vida. Os ' +
+          'checkpoints do Early Entry ficam ali, um na passagem para cada área, e vocês ' +
+          'esperam no da ÁFRICA.\n\n' +
           'Mais de 90% dos visitantes correm para Pandora no rope drop — e o Early Entry do ' +
           'Animal Kingdom INCLUI Pandora. São só quatro atrações no Early Entry e duas delas ' +
           'são o Flight of Passage e o Na’vi. Ou seja: os hóspedes Disney já andaram nas duas ' +
-          'antes de vocês entrarem, e ainda estão na fila quando o portão abre para vocês.\n\n' +
+          'antes de vocês, e ainda estão na fila quando a corda solta para vocês, às 8h.\n\n' +
           'O resto do parque fica praticamente vazio nos primeiros 60 a 90 minutos. Kilimanjaro ' +
           'Safaris, Expedition Everest e Kali River Rapids costumam ser walk-on nessa janela. ' +
           'É para lá que vocês vão.\n\n' +
-          'Desde meados de 2026 quem não é hóspede pode fazer pré-fila direto no checkpoint da ' +
-          'land, e não mais só na entrada — peçam o da África.\n\n' +
-          'Café da manhã aqui, das barrinhas da mochila. O almoço é só às 12h30.\n\n' +
+          'Café da manhã aqui, das barrinhas da mochila, e a foto de vocês com a Árvore da ' +
+          'Vida no fundo: ela fica no caminho do checkpoint, e antes das 8h a praça ainda não ' +
+          'encheu. O almoço é só às 12h30.\n\n' +
           'PONTO DE ENCONTRO DE HOJE: a base da Árvore da Vida, na Discovery Island. É ' +
           'visível de quase todo o parque e todo caminho passa por ela. Se vocês se ' +
           'perderem, vão para lá e ESPEREM.',
-        localId: 'animal-kingdom', acesso: [], duracaoMin: 45, pesquisa: '2026-09-10' },
+        localId: 'animal-kingdom', acesso: [], duracaoMin: 45, pesquisa: '2026-09-12' },
 
       { id: 'b-1311-0935', hora: '08:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Kilimanjaro Safaris — rope drop',
@@ -2860,7 +2869,7 @@ window.ROTEIRO = {
           'O QUE NÃO SE SACRIFICA: o Fantasmic. Se for para cortar, cortem nesta ordem — ' +
           'Alien, Star Tours e o Millennium Falcon.',
           'O Fantasmic é cancelado com chuva forte. Se cancelarem, usem a hora para o Rise ' +
-          'de novo ou para a Torre, e saiam mais cedo: amanhã é Epcot com saída às 7h45.',
+          'de novo ou para a Torre, e saiam mais cedo: amanhã é Epcot com saída às 7h15.',
         ],
       },
     ],
@@ -2891,7 +2900,7 @@ window.ROTEIRO = {
                 'Fantasmic.\n\n' +
                 'O plano B de graça existe e está no bloco: entrar na fila depois do ' +
                 'Fantasmic, por volta das 20h35, com a regra de que quem está na fila no ' +
-                'fechamento anda. Saem por volta das 21h40, e amanhã é Epcot com saída às 7h45.',
+                'fechamento anda. Saem por volta das 21h40, e amanhã é Epcot com saída às 7h15.',
         pesquisa: '2026-09-10' },
 
       { nome: 'Muppet*Vision 3D', quando: 'fechada', custo: '—',
@@ -2904,13 +2913,14 @@ window.ROTEIRO = {
     /* --------------------------------------------------------------------- */
     prepararAmanha: {
       paraODia: '2026-11-16',
-      titulo: 'Epcot · alarme 6h45, saída 7h45',
+      titulo: 'Epcot · alarme 6h15, saída 7h15',
       aviso:
-        'Hoje termina perto das 21h35 e amanhã sai às 7h45. O Epcot é o dia mais leve dos ' +
+        'Hoje termina perto das 21h35 e amanhã sai às 7h15. O Epcot é o dia mais leve dos ' +
         'quatro da Disney — a tarde é comida, não fila — mas a manhã ainda tem hora.',
       itens: [
-        { texto: 'Alarme para 6h45 nos dois celulares', critico: true,
-          motivo: 'Saída às 7h45. Depois de um dia que termina às 21h35, um alarme só falha.' },
+        { texto: 'Alarme para 6h15 nos dois celulares', critico: true,
+          motivo: 'Saída às 7h15, para estar na corda do Epcot às 8h15. Depois de um dia que ' +
+                  'termina às 21h35, um alarme só falha.' },
         { texto: 'Conferir se as reservas de Lightning Lane do dia 16 aparecem no app',
           critico: true,
           motivo: 'O Multi Pass do dia 16 (Mission: SPACE, Soarin’ e Frozen) e o Single Pass ' +
@@ -2919,7 +2929,7 @@ window.ROTEIRO = {
         { texto: 'Conferir o horário de abertura do Epcot e ajustar a referência',
           critico: true,
           motivo: 'O dia 16 assume 9h. Se for outro, mudem a referência e a manhã desloca ' +
-                  'junto, inclusive a saída das 7h45.' },
+                  'junto, inclusive a saída das 7h15.' },
         { texto: 'Mochila remontada e celular carregando', critico: true,
           motivo: 'Duas garrafas, barrinhas, protetor solar, power bank, cabo e uma camada ' +
                   'leve para cada um — o Epcot é o parque com mais área aberta, e a World ' +
@@ -2945,17 +2955,23 @@ window.ROTEIRO = {
         contexto:
           'PELA TERCEIRA VEZ, O PONTO CERTO É O CONTRAINTUITIVO — e aqui o motivo está ' +
           'documentado com nome e sobrenome.\n\n' +
+          'A CATRACA ABRE PARA TODO MUNDO POR VOLTA DAS 8H, uma hora antes do parque. Com o ' +
+          'ingresso comum vocês andam pela Hollywood Blvd inteira. Os checkpoints do Early ' +
+          'Entry ficam lá dentro, um deles no corredor que leva ao Toy Story Land, e quem é de ' +
+          'fora espera perto dele até as 9h.\n\n' +
           'O Early Entry do Hollywood Studios inclui o Rise of the Resistance, o Slinky Dog ' +
           'Dash e a Torre do Terror. E a grande maioria dos hóspedes vai para o RISE, que ' +
-          'fica no Galaxy’s Edge. Quem entra às 9h e caminha para lá está andando para ' +
+          'fica no Galaxy’s Edge. Quem sai da corda às 9h e caminha para lá está andando para ' +
           'dentro da multidão que já está na fila há meia hora.\n\n' +
           'A recomendação para quem está fora dos hotéis é ir ao Toy Story Land. É para lá ' +
-          'que vocês vão, direto, assim que passarem a catraca.\n\n' +
+          'que vocês vão, direto, assim que passarem a catraca: esperem na frente do ' +
+          'checkpoint do corredor dele.\n\n' +
           'PONTO DE ENCONTRO DE HOJE: o Chinese Theater, no fim da Hollywood Blvd. É o ' +
           'prédio que se vê da entrada e por onde todo caminho passa. Se vocês se perderem, ' +
           'vão para lá e ESPEREM — não saiam procurando.\n\n' +
-          'Café da manhã aqui na fila, das barrinhas da mochila: o almoço é 12h20.',
-        localId: 'hollywood-studios', acesso: [], duracaoMin: 60, pesquisa: '2026-09-10' },
+          'Café da manhã aqui, das barrinhas da mochila, e a foto da Hollywood Blvd com o ' +
+          'Chinese Theater no fundo, no caminho, antes de a rua encher. O almoço é 12h20.',
+        localId: 'hollywood-studios', acesso: [], duracaoMin: 60, pesquisa: '2026-09-12' },
 
       { id: 'b-1511-1115', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Slinky Dog Dash — rope drop',
@@ -3008,7 +3024,7 @@ window.ROTEIRO = {
           '63 depois das 19h, e as 19h de vocês já estão com Oga’s, Sci-Fi e Fantasmic.\n\n' +
           'PLANO B DE GRAÇA, se vocês não comprarem: entrar na fila DEPOIS do Fantasmic, por ' +
           'volta das 20h35. Vale a mesma regra do dia 13 — quem está na fila no fechamento ' +
-          'anda. Vocês sairiam por volta das 21h40, e o dia 16 é Epcot com saída às 7h45.',
+          'anda. Vocês sairiam por volta das 21h40, e o dia 16 é Epcot com saída às 7h15.',
         areaParque: 'Galaxy’s Edge', acesso: ['single-pass'], critico: true, duracaoMin: 50,
         fila: { min: 10, quando: 'com o Single Pass', pico: 100, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
@@ -3170,12 +3186,12 @@ window.ROTEIRO = {
 
       { id: 'b-1511-2050', hora: '20:35', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel',
-        descricao: 'Uber, ~30 min, US$ 22–32. Amanhã sai às 7h45',
+        descricao: 'Uber, ~30 min, US$ 22–32. Amanhã sai às 7h15',
         contexto:
           'Saindo com o fluxo do Fantasmic, a caminhada até o ponto de rideshare leva uns ' +
           'quinze minutos — o parque inteiro sai ao mesmo tempo.\n\n' +
           'Se a tarifa estiver em alta, andem um pouco para longe da entrada antes de chamar. ' +
-          'Amanhã é Epcot com saída às 7h45, então não estiquem.',
+          'Amanhã é Epcot com saída às 7h15, então não estiquem.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 60 },
     ],
 
@@ -3310,7 +3326,7 @@ window.ROTEIRO = {
       {
         letra: 'A',
         titulo: 'O dia como está escrito',
-        gatilho: 'Vocês estão no portão às 8h45 e o Test Track está operando.',
+        gatilho: 'Vocês estão na corda às 8h15 e o Test Track está operando.',
         passos: [
           'Test Track no rope drop, sem desviar para o Cosmic Rewind.',
           'Mission: SPACE às 9h45 com o Multi Pass — e, na saída, reservem o Remy.',
@@ -3341,7 +3357,7 @@ window.ROTEIRO = {
         gatilho: 'O parque é 9h às 21h, oficial. O que ainda não saiu é a hora do Luminous.',
         passos: [
           'Mudem a referência do dia. A manhã inteira desloca junto, inclusive a saída das ' +
-          '7h45.',
+          '7h15.',
           'O LUMINOUS E A POSIÇÃO NÃO DESLOCAM: eles seguem o fechamento do parque, não a ' +
           'abertura. Se o app avisar colisão em vermelho no fim da tarde, é a última volta de ' +
           'barracas batendo na posição — e a solução é encurtar a volta, não atrasar o lugar.',
@@ -3420,19 +3436,24 @@ window.ROTEIRO = {
     },
 
     blocos: [
-      { id: 'b-1611-0800', hora: '07:45', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-1611-0715', hora: '07:15', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Sair do hotel',
         descricao: 'Uber, ~25 min, US$ 20–30',
         contexto:
           'O Epcot tem entrada direta e a segurança aqui é mais rápida que no Hollywood ' +
-          'Studios. Saindo 7h45 vocês chegam com uma folga confortável para a abertura.',
+          'Studios. Saindo 7h15 vocês estão na corda às 8h15, 45 minutos antes da abertura: ' +
+          'a catraca já abriu, e a espera é do lado de dentro.',
         localId: 'epcot', acesso: [], duracaoMin: 60 },
 
-      { id: 'b-1611-0845', hora: '08:45', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-1611-0815', hora: '08:15', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Portão · posicionar para o WORLD DISCOVERY',
         descricao: 'Test Track, não Cosmic Rewind',
         contexto:
           'PELA QUARTA VEZ O PONTO CERTO É O CONTRAINTUITIVO, e aqui o erro seria duplo.\n\n' +
+          'A CATRACA ABRE POR VOLTA DAS 7H30, uma hora antes do Early Entry, para todo mundo. ' +
+          'Na Spaceship Earth o caminho se divide: quem tem Early Entry segue por um lado, e ' +
+          'quem não tem é segurado do outro até as 9h. Chegando às 8h15 vocês estão nessa ' +
+          'corda com mais folga que os 30 minutos que os guias pedem para quem é de fora.\n\n' +
           'Quem entra pela frente com Early Entry vai para o COSMIC REWIND — é a recomendação ' +
           'padrão para hóspedes. Correr para lá às 9h é entrar atrás de meia hora de fila já ' +
           'formada, e gastar o Single Pass no único horário em que ele não precisaria ser ' +
@@ -3443,8 +3464,9 @@ window.ROTEIRO = {
           'PONTO DE ENCONTRO DE HOJE: a Spaceship Earth — a esfera. É o símbolo do parque, ' +
           'fica na entrada e é visível de quase todo lugar. Se vocês se perderem, vão para a ' +
           'base dela e ESPEREM.\n\n' +
-          'Café da manhã aqui na fila, das barrinhas da mochila.',
-        localId: 'epcot', acesso: [], duracaoMin: 15, pesquisa: '2026-09-10' },
+          'Café da manhã aqui, das barrinhas da mochila, e a foto da esfera antes de a praça ' +
+          'encher.',
+        localId: 'epcot', acesso: [], duracaoMin: 45, pesquisa: '2026-09-12' },
 
       { id: 'b-1611-0950', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Test Track — rope drop',
@@ -3863,8 +3885,12 @@ window.ROTEIRO = {
           'perderem, vão para lá e ESPEREM.\n\n' +
           'A PRIMEIRA COISA AO PASSAR: não parem na Minion Land, à esquerda da catraca. Ela é a ' +
           'primeira área que aparece e é exatamente por isso que ela entope no rope drop. ' +
-          'Sigam reto.',
-        localId: 'universal-studios', acesso: [], duracaoMin: 30 },
+          'Sigam reto.\n\n' +
+          'A CATRACA PODE ABRIR BEM ANTES DAS 9H. Quando o Universal Studios é o parque da ' +
+          'entrada antecipada de hotel do dia, ela abre uma hora antes para todo mundo, e quem ' +
+          'é de fora espera na frente do parque até a abertura. Se estiver aberta, passem logo ' +
+          'e fiquem o mais perto do caminho do Beco Diagonal que a equipe deixar.',
+        localId: 'universal-studios', acesso: [], duracaoMin: 30, pesquisa: '2026-09-12' },
 
       { id: 'b-1711-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Harry Potter and the Escape from Gringotts',
@@ -5672,7 +5698,7 @@ window.ROTEIRO = {
     avisos: [
       'OBJETO SOLTO É PROIBIDO NAS MONTANHAS-RUSSAS. Cada uma tem armário de US$ 2 na entrada ' +
       'da fila, e a entrada do parque tem detector de metal. Levem o mínimo.',
-      'Amanhã é o Islands, com saída às 7h45. Vocês chegam dos fogos por volta das 22h: a ' +
+      'Amanhã é o Islands, com saída às 7h25. Vocês chegam dos fogos por volta das 22h: a ' +
       'mochila de amanhã fica pronta antes de dormir.',
     ],
     notas: [
@@ -5745,7 +5771,7 @@ window.ROTEIRO = {
         gatilho: 'Depois do show no gelo, o corpo pediu cama.',
         passos: [
           'Vejam o Sea of Trees e saiam por volta das 20h40, antes da multidão dos fogos.',
-          'Amanhã a saída é 7h45: o que se ganha é uma hora de sono.',
+          'Amanhã a saída é 7h25: o que se ganha é uma hora de sono.',
         ] },
     ],
     blocos: [
@@ -5988,7 +6014,7 @@ window.ROTEIRO = {
         contexto:
           'O parque inteiro sai junto depois dos fogos, e a fila de carros do estacionamento ' +
           'entra na conta: por isso a volta tem 45 minutos para uma estrada de 20.\n\n' +
-          'AMANHÃ É ISLANDS: saída às 7h45, alarme às 6h45.',
+          'AMANHÃ É ISLANDS: saída às 7h25, alarme às 6h25.',
         acesso: [], duracaoMin: 45 },
     ],
     naoPerca: [
@@ -6013,12 +6039,12 @@ window.ROTEIRO = {
     ],
     prepararAmanha: {
       paraODia: '2026-11-23',
-      titulo: 'Islands of Adventure · saída 7h45',
+      titulo: 'Islands of Adventure · saída 7h25',
       aviso: 'Vocês chegam do SeaWorld por volta das 22h, e amanhã é o dia com mais detector ' +
              'de metal da viagem. A mochila sai mínima.',
       itens: [
-        { texto: 'Alarme para 6h45 nos dois celulares', critico: true,
-          motivo: 'Saída 7h45 para o rope drop do Hagrid’s. Depois de uma noite que termina às ' +
+        { texto: 'Alarme para 6h25 nos dois celulares', critico: true,
+          motivo: 'Saída 7h25 para estar na frente da corda do Hagrid’s às 8h15. Depois de uma noite que termina às ' +
                   '22h, um alarme só falha.' },
         { texto: 'Mochila mínima para o Islands', critico: true,
           motivo: 'Hulk e VelociCoaster têm detector de metal e não passa nem celular, e quatro ' +
@@ -6087,7 +6113,7 @@ window.ROTEIRO = {
       'jantar no Mythos, provavelmente no último Natal dele.',
     avisos: [
       'O HAGRID’S NÃO ACEITA EXPRESS DESDE 1º DE JULHO DE 2026, e a janela barata dele é a ' +
-      'abertura. Portão às 8h35 e direto para Hogsmeade, sem parar em nada.',
+      'abertura. Na corda às 8h15 e direto para Hogsmeade quando ela soltar.',
       'Hoje é o dia com mais detector de metal da viagem: Hulk e VelociCoaster, onde não ' +
       'passa nem celular. E quatro atrações exigem locker. Levem o mínimo.',
     ],
@@ -6128,7 +6154,7 @@ window.ROTEIRO = {
       { letra: 'A', titulo: 'O dia como está escrito',
         gatilho: 'O parque abre às 9h e o Jurassic Park River Adventure já reabriu.',
         passos: [
-          'Portão às 8h35, Hagrid’s na abertura e Forbidden Journey logo depois.',
+          'Na corda às 8h15, Hagrid’s na abertura e Forbidden Journey logo depois.',
           'Almoço no Confisco Grille às 11h40, na entrada do parque.',
           'Marvel, Kong, Jurassic Park River Adventure e VelociCoaster por single rider.',
           'Hogwarts Express ida e volta, projeção no castelo e jantar no Mythos às 19h15.',
@@ -6155,7 +6181,7 @@ window.ROTEIRO = {
         ] },
     ],
     blocos: [
-      { id: 'b-2311-0745', hora: '07:45', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-2311-0725', hora: '07:25', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Sair do hotel de carro',
         descricao: '33 min de estrada e uns 20 a pé. Estacionamento US$ 32 pago antes',
         contexto:
@@ -6164,17 +6190,24 @@ window.ROTEIRO = {
           'custa US$ 32; na hora, US$ 35.',
         localId: 'islands-of-adventure', acesso: [], duracaoMin: 50, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-0835', hora: '08:35', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-2311-0815', hora: '08:15', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Portão',
         descricao: 'Pela esquerda, sentido Hogsmeade. Sem parar em nada',
         contexto:
-          'Passando a catraca, sigam pela esquerda: Seuss Landing, Lost Continent e Hogsmeade, ' +
-          'uns 12 minutos a pé. Pela direita, pela Marvel, é mais longe.\n\n' +
+          'A CATRACA ABRE ANTES DAS 9H PARA TODO MUNDO: uma hora antes quando o Islands é o ' +
+          'parque da entrada antecipada de hotel do dia, e 15 a 30 minutos antes nos outros. ' +
+          'Quem é de fora anda pelo Port of Entry e é segurado na entrada da Seuss Landing até ' +
+          'poucos minutos antes da abertura. Chegando às 8h15 vocês esperam na frente dessa ' +
+          'corda, e quem sai na frente dela chega primeiro ao Hagrid’s. Se a catraca ainda ' +
+          'estiver fechada, a espera é na fila dela.\n\n' +
+          'Quando a corda soltar, sigam pela esquerda: Seuss Landing, Lost Continent e ' +
+          'Hogsmeade, uns 12 minutos a pé. Pela direita, pela Marvel, é mais longe.\n\n' +
           'Quem está hospedado na Universal entra uma hora antes, e o Hagrid’s costuma estar ' +
           'nessa lista. Mesmo assim, a abertura é a hora mais barata dele para vocês.\n\n' +
           'PONTO DE ENCONTRO DE HOJE: o mesmo do dia 14, o farol do Port of Entry, na beira da ' +
-          'lagoa. Se vocês se perderem, vão para lá e ESPEREM.',
-        localId: 'islands-of-adventure', acesso: [], duracaoMin: 25, pesquisa: '2026-09-11' },
+          'lagoa. É também a foto da manhã, no caminho da corda. Se vocês se perderem, vão ' +
+          'para lá e ESPEREM.',
+        localId: 'islands-of-adventure', acesso: [], duracaoMin: 45, pesquisa: '2026-09-12' },
 
       { id: 'b-2311-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Hagrid’s Magical Creatures Motorbike Adventure',
@@ -8629,7 +8662,14 @@ window.ROTEIRO = {
         'de pé no ponto certo do parque.\n\n' +
         'SIGAM A HORA DO PORTÃO DE CADA DIA, e não uma conta fixa. Ela vai de 75 minutos ' +
         'antes da abertura no MAGIC KINGDOM, onde o Uber deixa no TTC e ainda falta ' +
-        'monotrilho ou barco, a 15 minutos no Epcot.\n\n' +
+        'monotrilho ou barco, a 30 minutos no Universal Studios.\n\n' +
+        'A CATRACA ABRE ANTES DO PARQUE, E ISSO VEM NO INGRESSO. Na Disney ela abre para ' +
+        'todo mundo de 30 minutos a uma hora e meia antes da abertura, conforme o parque; ' +
+        'na Universal, até uma hora antes no parque que tem a entrada antecipada de hotel ' +
+        'do dia. Quem é de fora entra, espera numa área liberada, e só as atrações ficam ' +
+        'fechadas: é a hora das barrinhas e da foto antes de o parque encher. No SeaWorld e ' +
+        'no Busch Gardens não há fonte de que isso aconteça, e a espera é na frente da ' +
+        'catraca.\n\n' +
         'Onde ficar de pé enquanto espera define o que vocês fazem primeiro. Cada dia diz o ' +
         'ponto: FRONTIERLAND no Magic Kingdom, checkpoint da ÁFRICA no Animal Kingdom, TOY ' +
         'STORY LAND no Hollywood Studios, WORLD DISCOVERY no Epcot, Beco Diagonal no Universal ' +
@@ -8637,7 +8677,7 @@ window.ROTEIRO = {
         'Islands.\n\n' +
         'NOS QUATRO PARQUES DA DISNEY O PONTO É CONTRAINTUITIVO, e é de propósito. Vocês não ' +
         'têm Early Entry em lugar nenhum — não estão em hotel Disney nem Universal. Isso ' +
-        'significa que os hóspedes já estão DENTRO do parque meia hora antes de vocês, e ' +
+        'significa que os hóspedes passam dos checkpoints meia hora antes de vocês, e ' +
         'já estão de pé onde o Early Entry deixa entrar. Correr para lá é chegar atrás ' +
         'deles.\n\n' +
         'A saída é ir para onde essa multidão não está: Frontierland no Magic Kingdom, África ' +
