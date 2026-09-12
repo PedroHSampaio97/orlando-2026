@@ -5,7 +5,7 @@
 **Perfil:** casal, sem crianças. Prioridade: clássicos + montanhas-russas fortes.
 **Decisões fechadas:** dias 19 Epic Universe, 21 Winter Garden, 22 SeaWorld e 23 Islands of Adventure · **o Epic Universe é um dia só, 19/11** · sem Mickey's Very Merry Christmas Party · sem Express Pass na Universal · carro alugado de 20 a 25/11, **devolvido no dia 25**, para o dia 26 ser só café da manhã e aeroporto · PID já emitida · a última noite é no Disney Springs, 25/11
 
-> **Aviso sobre horários:** os horários oficiais dos parques só saem perto da data, e as pendências dizem quando conferir cada um. Os relógios abaixo assumem abertura às 9h, com duas exceções: **o Animal Kingdom abre às 8h (13/11)** e o **Busch Gardens (24/11) às 10h**. O **SeaWorld (22/11)** também está em 9h, pela previsão do Queue-Times. Ajustem a referência do dia no app e os blocos ancorados deslocam junto. **A partir do compromisso de hora marcada — desfile, show, reserva, pôr do sol — os blocos são fixos** e não se mexem com a abertura. Oito dias têm outra referência: a saída do Terminal C no dia 10, a saída do hotel nos dias 12, 20 e 25, a sessão do Grinchmas no dia 14, o início do jogo nos dias 18 e 21 e a decolagem de Orlando no dia 26.
+> **Aviso sobre horários:** os quatro dias de Disney já têm **horário oficial**, saído em 12/09: **Magic Kingdom 9h–22h (11/11)**, **Animal Kingdom 8h–18h (13/11)**, **Hollywood Studios 9h–21h (15/11)** e **Epcot 9h–21h (16/11)**, todos com Early Entry meia hora antes — 7h30 no Animal Kingdom. Os quatro confirmam o que o roteiro já assumia: nenhum bloco mudou de hora. Ainda são suposição: Universal (17/11), Epic (19/11), SeaWorld (22/11) e Islands (23/11) em 9h, e Busch Gardens (24/11) em 10h. Ajustem a referência do dia no app e os blocos ancorados deslocam junto. **A partir do compromisso de hora marcada — desfile, show, reserva, pôr do sol — os blocos são fixos** e não se mexem com a abertura. Oito dias têm outra referência: a saída do Terminal C no dia 10, a saída do hotel nos dias 12, 20 e 25, a sessão do Grinchmas no dia 14, o início do jogo nos dias 18 e 21 e a decolagem de Orlando no dia 26.
 
 ---
 
@@ -125,7 +125,7 @@ Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's
 **Sem Multi Pass.** Chegando na abertura pelo lado certo, a manhã inteira sai no standby.
 **Single Pass:** **nenhum.** O Flight of Passage fica como plano B pago — ver a nota no fim.
 
-> **O parque estimado abre às 8h e fecha às 18h.** Em novembro o Animal Kingdom costuma operar nesse horário, e só a semana do Thanksgiving estica. Por isso a saída do hotel é **6h30**. O horário oficial sai por volta de 14/09 — confiram e ajustem a referência no app.
+> **O parque abre às 8h e fecha às 18h** — oficial desde 12/09, uma hora antes dos outros parques Disney. Por isso a saída do hotel é **6h30**, e o Early Entry, que vocês não têm, começa às 7h30.
 
 > **NÃO VÃO PARA PANDORA DE MANHÃ.** Mais de 90% dos visitantes correm para lá no rope drop — e o **Early Entry do Animal Kingdom inclui Pandora**: são só quatro atrações no Early Entry e duas delas são o Flight of Passage e o Na'vi. Os hóspedes Disney já andaram nas duas antes de vocês entrarem. Enquanto isso, Kilimanjaro Safaris, Expedition Everest e Kali River Rapids ficam **walk-on nos primeiros 60 a 90 minutos**.
 
@@ -231,7 +231,7 @@ O parque mais difícil da Disney, e o único dos três em que o Single Pass se j
 | **18h00** | **Jantar — Sci-Fi Dine-In** | Reserva. Vocês sentam dentro de um carro dos anos 50 |
 | **19h25** | **Sunset Blvd** — Natal e compras | **É o momento de compra do dia.** As lojas fecham com o parque |
 | **19h45** | Posição para o Fantasmic! | Meio e um pouco atrás. As primeiras fileiras molham |
-| **20h00** | **Fantasmic!** | ~26 min. Previsão: segue o fechamento do parque, não a abertura |
+| **20h00** | **Fantasmic!** | ~26 min. O parque fecha às 21h; a hora do show ainda não saiu |
 | **20h35** | Voltar ao hotel | Uber, ~30 min, US$ 22–32. Amanhã sai às 7h45 |
 
 ### Por que o dia está nesta ordem — a fila típica
@@ -295,7 +295,7 @@ Meio dia de parque e meio de festival. A manhã resolve as filas; a partir das 1
 | **19h00** | **Spaceship Earth** | A fila some à noite |
 | **20h00** | **Food & Wine — última volta** | O que faltou. Comprem a bebida e levem para o lago |
 | **20h30** | Posição para o Luminous | Margem entre México e Noruega |
-| **21h00** | **Luminous: The Symphony of Us** | ~17 min. Segue o fechamento, não a abertura |
+| **21h00** | **Luminous: The Symphony of Us** | ~17 min. Roda no fechamento, às 21h — hora a confirmar |
 | **21h20** | Voltar ao hotel | Uber, ~25 min, US$ 20–30 |
 
 ### Por que o dia está nesta ordem — a fila típica
@@ -616,13 +616,13 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [x] **11/09** — Lombard’s Seafood Grille (17/11, 18h45) — RESERVADO, confirmação 639247504692187392
 - [x] **11/09** — Atlantic (19/11, 17h) — RESERVADO, confirmação 639247233607631616
 - [x] **12/09** — Magic Kingdom — sem reserva: almoço e jantar do dia 11 são de balcão (Columbia Harbour House e Casey’s)
-- [ ] **13/09** — Conferir o horário oficial do Magic Kingdom em 11/11 e ajustar a referência do dia *(data estimada)*
+- [ ] **13/09** — Magic Kingdom 11/11 confirmado (9h às 22h) — falta a hora do desfile e dos fogos *(data estimada)*
 - [ ] **14/09, 6h ET** — Reservar Sanaa para o jantar de 13/11 (janela de 60 dias)
-- [ ] **14/09** — Conferir ABERTURA E FECHAMENTO do Animal Kingdom em 13/11
+- [x] **14/09** — Animal Kingdom 13/11 — 8h às 18h, confirmado (Early Entry 7h30)
 - [ ] **15/09** — Confirmar com a agência a regra exata de validade do ingresso Disney de 4 dias *(data estimada)*
 - [ ] **16/09, 6h ET** — Hollywood Studios: Oga’s Cantina e Sci-Fi Dine-In — e ajustar os blocos
 - [ ] **17/09, 6h ET** — Epcot: abrir a janela de mesa só se mudarem de ideia sobre o Food & Wine
-- [ ] **17/09** — Horários oficiais de 15/11 e 16/11 — e a hora do Fantasmic e do Luminous
+- [ ] **17/09** — A hora do Fantasmic (15/11) e do Luminous (16/11) — os parques já saíram
 - [ ] **26/09, 6h ET** — Reservar o Homecomin’ para as 19h30 de 25/11 — a janela de 60 dias abre às 6h ET
 
 **Outubro**

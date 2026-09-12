@@ -34,11 +34,14 @@ window.ROTEIRO = {
     fontes: ['roteiro-orlando-v3.md', 'roteiro-orlando-dias-livres.md'],
     geradoEm: '2026-09-08',
     avisoHorarios:
-      'Os horários oficiais dos parques só saem perto da data, e as pendências dizem quando ' +
-      'conferir cada um. Os relógios deste roteiro assumem abertura às 9h, com duas ' +
-      'exceções: o ANIMAL KINGDOM às 8h (13/11) e o Busch Gardens às 10h (24/11). O ' +
-      'SeaWorld (22/11) também está em 9h, pela previsão do Queue-Times. Ajustem a ' +
-      'referência do dia e os blocos ancorados deslocam junto.\n\n' +
+      'OS QUATRO DIAS DE DISNEY TÊM HORÁRIO OFICIAL, saído em 12/09: Magic Kingdom das 9h ' +
+      'às 22h no dia 11, Animal Kingdom das 8h às 18h no dia 13, Hollywood Studios das 9h ' +
+      'às 21h no dia 15 e Epcot das 9h às 21h no dia 16. Os quatro confirmam o que o ' +
+      'roteiro já assumia: nenhum bloco mudou de hora. O Early Entry, que vocês não têm, ' +
+      'abre meia hora antes — e 7h30 no Animal Kingdom.\n\n' +
+      'AINDA É SUPOSIÇÃO: Universal (17/11), Epic (19/11), SeaWorld (22/11) e Islands ' +
+      '(23/11) em 9h, e Busch Gardens (24/11) em 10h. As pendências dizem quando conferir ' +
+      'cada um; ajustem a referência do dia e os blocos ancorados deslocam junto.\n\n' +
       'A PARTIR DO COMPROMISSO DE HORA MARCADA — desfile, show, reserva, pôr do sol —, os ' +
       'blocos são fixos e não se mexem com a abertura.\n\n' +
       'Oito dias têm outra referência: a saída do Terminal C no dia 10, a saída do hotel ' +
@@ -653,11 +656,12 @@ window.ROTEIRO = {
                   'reservas dos dias 15 e 16 também aparecem. Se alguma faltar, hoje ainda ' +
                   'dá tempo de rever o plano. Amanhã às 9h, não.' },
 
-        { texto: 'Conferir o horário real de abertura do Magic Kingdom e ajustar aqui no app',
+        { texto: 'Conferir que a referência do dia 11 continua em 9h — o oficial é 9h às 22h',
           critico: true,
-          motivo: 'Os horários do dia 11 assumem abertura às 9h. Se for outro, mudem a ' +
-                  'referência na tela do dia 11 e os blocos ancorados deslocam sozinhos, ' +
-                  'inclusive a hora de sair do hotel. O desfile e os fogos ficam parados.' },
+          motivo: 'O horário saiu em 12/09: 9h às 22h, com Early Entry às 8h30. A ' +
+                  'referência do dia já está certa — isto aqui é só para ninguém embarcar ' +
+                  'com ela deslocada por engano. O desfile e os fogos ficam parados de ' +
+                  'qualquer jeito.' },
 
         { texto: 'Cartão cadastrado no My Disney Experience para mobile order',
           motivo: 'Almoço no Columbia Harbour House e jantar no Casey’s são os dois de ' +
@@ -863,7 +867,7 @@ window.ROTEIRO = {
     custoZero: false,
     fechado: true,
     revisadoEm: '2026-09-10',
-    referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: false },
+    referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: true },
 
     resumo:
       'O parque mais visitado do mundo, e o dia com mais decisão por minuto da viagem. ' +
@@ -960,7 +964,7 @@ window.ROTEIRO = {
       {
         letra: 'B2',
         titulo: 'O parque não abre às 9h',
-        gatilho: 'Os horários oficiais saem por volta de 12/09 e podem não ser 9h.',
+        gatilho: 'O oficial é 9h às 22h, mas a Disney ainda mexe no calendário perto da data.',
         passos: [
           'Mudem a referência do dia aqui no app. A MANHÃ INTEIRA desloca junto, inclusive a ' +
           'hora de sair do hotel.',
@@ -1820,7 +1824,7 @@ window.ROTEIRO = {
     custoZero: false,
     fechado: true,
     revisadoEm: '2026-09-10',
-    referencia: { rotulo: 'Abertura do parque', padrao: '08:00', confirmado: false },
+    referencia: { rotulo: 'Abertura do parque', padrao: '08:00', confirmado: true },
 
     resumo:
       'O dia inteiro é uma inversão: todo mundo corre para Pandora na abertura, e vocês vão ' +
@@ -1829,20 +1833,20 @@ window.ROTEIRO = {
       'acesa e vazia na saída.',
 
     avisos: [
-      'A ESTIMATIVA É QUE O PARQUE ABRA ÀS 8H, não às 9h. Em novembro o Animal Kingdom ' +
-      'costuma operar das 8h às 18h. Por isso a saída do hotel é 6h30. Confiram o horário ' +
-      'oficial e ajustem a referência assim que ele sair.',
+      'O PARQUE ABRE ÀS 8H E FECHA ÀS 18H, oficial desde 12/09 — uma hora antes dos outros ' +
+      'parques Disney, e é por isso que a saída do hotel é 6h30. O Early Entry, que vocês ' +
+      'não têm, começa às 7h30.',
       'NÃO VÃO PARA PANDORA DE MANHÃ. O Early Entry do Animal Kingdom inclui Pandora, e mais ' +
       'de 90% dos visitantes correm para lá. O parque inteiro fica vazio do outro lado.',
     ],
 
     notas: [
       { tipo: 'atencao', texto:
-        'ESTE É O DIA MAIS DEPENDENTE DE UM HORÁRIO QUE AINDA NÃO SAIU. O fechamento do ' +
-        'parque decide a reta final inteira: safári ao entardecer, Na’vi e a fila do Flight ' +
-        'of Passage estão coreografados para um fechamento às 18h. Se for 19h ou 20h, o dia ' +
-        'respira e cabe repetir o Everest. Se for antes das 18h, o plano B assume.',
-        pesquisa: '2026-09-10' },
+        'O FECHAMENTO ÀS 18H É O QUE COREOGRAFA A RETA FINAL: o safári ao entardecer, o Na’vi ' +
+        'e a fila do Flight of Passage no último minuto estão encaixados nele — e o ' +
+        'horário oficial de 12/09 confirmou os 18h. O plano A vale como está, e o Sanaa ' +
+        'das 19h45 deixa de ter risco de colisão.',
+        pesquisa: '2026-09-12' },
 
       { tipo: 'bom', texto:
         'MAIS DE 90% DOS VISITANTES CORREM PARA PANDORA NO ROPE DROP. Nos primeiros 60 a 90 ' +
@@ -1904,8 +1908,8 @@ window.ROTEIRO = {
       },
       {
         letra: 'B2',
-        titulo: 'O parque não abre às 8h, ou fecha mais tarde',
-        gatilho: 'O horário oficial sai por volta de 14/09 e pode não ser 8h–18h.',
+        titulo: 'A Disney mexe no horário depois de publicado',
+        gatilho: 'O oficial é 8h às 18h, mas a semana do Thanksgiving costuma esticar o dia.',
         passos: [
           'ABRIU MAIS TARDE: mudem a referência aqui no app. A manhã inteira desloca junto, ' +
           'inclusive a saída do hotel. Os shows têm sessão própria — confiram a grade e ' +
@@ -2748,7 +2752,7 @@ window.ROTEIRO = {
     custoZero: false,
     fechado: true,
     revisadoEm: '2026-09-10',
-    referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: false },
+    referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: true },
 
     resumo:
       'O parque mais difícil da Disney, e o único dos três em que o Single Pass se ' +
@@ -2822,7 +2826,7 @@ window.ROTEIRO = {
       {
         letra: 'B2',
         titulo: 'O parque não abre às 9h, ou o Fantasmic é em outra hora',
-        gatilho: 'Os horários oficiais saem por volta de 16/09.',
+        gatilho: 'O parque é 9h às 21h, oficial. O que ainda não saiu é a hora do Fantasmic.',
         passos: [
           'ABERTURA DIFERENTE: mudem a referência do dia. A manhã inteira desloca junto, ' +
           'inclusive a saída das 7h.',
@@ -3234,7 +3238,7 @@ window.ROTEIRO = {
     custoZero: false,
     fechado: true,
     revisadoEm: '2026-09-10',
-    referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: false },
+    referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: true },
 
     resumo:
       'Meio dia de parque e meio de festival. A manhã resolve as três filas grandes no ' +
@@ -3316,7 +3320,7 @@ window.ROTEIRO = {
       {
         letra: 'B2',
         titulo: 'O parque não abre às 9h',
-        gatilho: 'Os horários oficiais saem por volta de 17/09.',
+        gatilho: 'O parque é 9h às 21h, oficial. O que ainda não saiu é a hora do Luminous.',
         passos: [
           'Mudem a referência do dia. A manhã inteira desloca junto, inclusive a saída das ' +
           '7h45.',
@@ -7751,17 +7755,14 @@ window.ROTEIRO = {
       restauranteIds: [] },
 
     { id: 'ck-horarios-ak', dataAlvo: '2026-09-14', validaAte: '2026-11-13', hora: null, fuso: null,
-      janelaReserva: false, critico: true,
-      texto: 'Conferir ABERTURA E FECHAMENTO do Animal Kingdom em 13/11',
+      janelaReserva: false, critico: true, feitoPadrao: true,
+      texto: 'Animal Kingdom 13/11 — 8h às 18h, confirmado (Early Entry 7h30)',
       nota:
-        'Os horários saem por volta de hoje, 60 dias antes. É a pendência que sustenta o ' +
-        'dia 13 inteiro, e OS DOIS NÚMEROS IMPORTAM.\n\n' +
-        'A ABERTURA: o dia assume 8h, que é o típico de novembro. Se for outra, mudem a ' +
-        'referência na tela do dia 13 e a manhã inteira desloca junto, inclusive a saída ' +
-        'das 6h30.\n\n' +
-        'O FECHAMENTO: é ele que decide a reta final. Com 18h o plano está no limite. Com ' +
-        '19h ou 20h o dia respira, MAS colide com a mesa do Sanaa às 19h45 — o plano B2 do ' +
-        'dia 13 explica o que fazer em cada caso.\n\n' +
+        'SAIU EM 12/09, nos dois números que importavam: 8h às 18h, com Early Entry às 7h30. ' +
+        'É o que o dia assumia — a referência já está em 8h, a saída das 6h30 continua de ' +
+        'pé e a reta final do fim da tarde está encaixada nesse fechamento.\n\n' +
+        'O Sanaa das 19h45 deixa de ter risco: com o parque fechando às 18h, a fila do ' +
+        'Flight of Passage no último minuto termina a tempo da mesa.\n\n' +
         'Confiram também o horário de fechamento do KILIMANJARO SAFARIS, que fecha 30 a 60 ' +
         'minutos antes do parque e sustenta o bloco das 16h30.',
       pesquisa: '2026-09-10',
@@ -7874,28 +7875,29 @@ window.ROTEIRO = {
     { id: 'ck-horarios-mk', dataAlvo: '2026-09-13', validaAte: '2026-11-11', dataEstimada: true,
       motivoData: 'A Disney publica com 60 dias de antecedência, e 60 dias antes de 11/11 é 12/09',
       hora: null, fuso: null, janelaReserva: false, critico: true,
-      texto: 'Conferir o horário oficial do Magic Kingdom em 11/11 e ajustar a referência do dia',
+      texto: 'Magic Kingdom 11/11 confirmado (9h às 22h) — falta a hora do desfile e dos fogos',
       nota:
-        'O dia 11 inteiro assume abertura às 9h e fechamento às 22h. Se for diferente, ' +
-        'mudem a referência na tela do dia 11 e tudo o que é ancorado desloca junto, ' +
-        'inclusive a saída do hotel. O desfile e os fogos não deslocam.\n\n' +
-        'Confiram na mesma visita: a hora do Festival of Fantasy (15h é o padrão), a ' +
-        'hora do Happily Ever After (20h a partir de 01/11) e se a Tiana’s voltou ' +
-        'da reforma antes do previsto.',
+        'O PARQUE SAIU EM 12/09: 9h às 22h, com Early Entry às 8h30. É exatamente o que o ' +
+        'dia assumia, então a referência já está certa e nenhum bloco mudou.\n\n' +
+        'O QUE FALTA são as duas horas fixas do dia: o Festival of Fantasy (15h é o ' +
+        'padrão) e o Happily Ever After (20h desde 01/11). Eles NÃO deslocam com a ' +
+        'abertura: se mudarem, mexam à mão no bloco de cada um.\n\n' +
+        'Confiram na mesma visita se a Tiana’s voltou da reforma antes do previsto.',
       restauranteIds: [] },
 
     { id: 'ck-horarios-dhs-epcot', dataAlvo: '2026-09-17', validaAte: '2026-11-16', hora: null, fuso: null,
       janelaReserva: false, critico: true,
-      texto: 'Horários oficiais de 15/11 e 16/11 — e a hora do Fantasmic e do Luminous',
+      texto: 'A hora do Fantasmic (15/11) e do Luminous (16/11) — os parques já saíram',
       nota:
-        'Os dois shows SEGUEM O FECHAMENTO DO PARQUE, não a abertura, e cada um fecha o ' +
-        'seu dia.\n\n' +
-        'FANTASMIC (15/11): com fechamento às 21h ele costuma ser às 20h; com 22h, às ' +
-        '21h. O roteiro assume 20h.\n\n' +
-        'LUMINOUS (16/11): roda junto do fechamento. O roteiro assume 21h.\n\n' +
-        'Se algum mudar, ajustem a hora no bloco do show. A posição para o show, o bloco ' +
-        'antes dela e a volta ao hotel não andam junto: ajustem à mão. E confiram a abertura ' +
-        'dos dois dias, que move a manhã.',
+        'OS DOIS PARQUES SAÍRAM EM 12/09: Hollywood Studios e Epcot das 9h às 21h, com ' +
+        'Early Entry às 8h30. As manhãs estão certas; falta a hora dos dois shows, que ' +
+        'seguem o FECHAMENTO do parque, não a abertura.\n\n' +
+        'FANTASMIC (15/11): com o parque fechando às 21h, o padrão é 20h — que é o que o ' +
+        'roteiro assume.\n\n' +
+        'LUMINOUS (16/11): roda junto do fechamento, às 21h — que é o que o roteiro ' +
+        'assume.\n\n' +
+        'Se algum for outro, ajustem a hora no bloco do show. A posição para o show, o ' +
+        'bloco antes dela e a volta ao hotel não andam junto: ajustem à mão.',
       restauranteIds: [] },
 
     { id: 'ck-horarios', dataAlvo: '2026-10-10', validaAte: '2026-11-24', dataEstimada: true,
