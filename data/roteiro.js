@@ -888,6 +888,15 @@ window.ROTEIRO = {
 
     notas: [
       { tipo: 'atencao', texto:
+        'HÁ UM DESFILE NOTURNO, o Disney Starlight: Dream the Night Away, que o mapa oficial ' +
+        'destaca e este roteiro não usa. Ele faz a mesma rota do desfile das 15h — ' +
+        'Frontierland, Liberty Square, hub e Main Street — e corta o parque do mesmo jeito. ' +
+        'Às 20h30 vocês estão na Fantasyland e às 21h25 na Tomorrowland, e a saída das 22h ' +
+        'desce a Main Street. A hora dele em 11/11 está na pendência do desfile: se rodar ' +
+        'perto das 21h, a Main Street estará tomada na hora de sair — e as filas do Seven ' +
+        'Dwarfs e do TRON ficam ainda mais curtas enquanto ele passa.',
+        pesquisa: '2026-09-12' },
+      { tipo: 'atencao', texto:
         'A TIANA’S BAYOU ADVENTURE ESTARÁ FECHADA. Entra em reforma em 02/11, com volta ' +
         'prevista para dezembro, sem dia marcado. A Tiana’s Bayou General fecha junto; a ' +
         'Critter Co-Op fica aberta. Com ela fora, o alvo da Frontierland na abertura é o ' +
@@ -1162,7 +1171,7 @@ window.ROTEIRO = {
 
       { id: 'b-1111-1115p', hora: '11:35', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
-        descricao: 'Quinze minutos. Não é folga, é o que faz o resto funcionar',
+        descricao: 'Quinze minutos. Banheiro ao lado do Columbia Harbour House, onde é o almoço',
         contexto:
           'Vocês estão de pé desde as 5h45 e vieram emendando desde as 9h. Banheiro, ' +
           'encher as garrafas num balcão de comida (a água gelada é de graça, é só ' +
@@ -1221,7 +1230,7 @@ window.ROTEIRO = {
 
       { id: 'b-1111-1645p', hora: '14:10', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
-        descricao: 'Antes do desfile e da corrida que vem depois dele',
+        descricao: 'Antes do desfile. Banheiro atrás da torre da Rapunzel, a caminho da Liberty Square',
         contexto:
           'Os próximos noventa minutos são o miolo tático do dia: desfile, travessia do ' +
           'parque e a fila do TRON. Vão para eles com a garrafa cheia e sem fila de ' +
@@ -1292,7 +1301,7 @@ window.ROTEIRO = {
 
       { id: 'b-1111-1515p', hora: '16:25', ancora: 'fixo', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
-        descricao: 'Saindo do TRON, antes da reta final',
+        descricao: 'Saindo do TRON. Banheiro ao lado do Cosmic Ray’s, no caminho do Space Mountain',
         contexto:
           'Daqui até a saída, às 22h, são mais cinco horas e meia. Banheiro, garrafas ' +
           'cheias e protetor solar antes de encarar a Main Street lotada.',
@@ -2113,7 +2122,7 @@ window.ROTEIRO = {
 
       { id: 'b-1311-1030p', hora: '10:35', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
-        descricao: 'Quinze minutos. Vocês estão de pé desde as 5h30',
+        descricao: 'Quinze minutos. Banheiro na Harambe, ao lado do Tusker House',
         contexto:
           'Banheiro, encher as garrafas num balcão de comida (água gelada de graça, é só ' +
           'pedir) e sentar.\n\n' +
@@ -2184,7 +2193,7 @@ window.ROTEIRO = {
 
       { id: 'b-1311-1545p', hora: '15:25', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — antes da reta final',
-        descricao: 'Garrafas cheias, power bank, e conferir o horário do safári',
+        descricao: 'Garrafas, power bank, o horário do safári. Banheiro junto do Flame Tree Barbecue',
         contexto:
           'A reta final começa agora e é coreografada minuto a minuto.\n\n' +
           'COMAM ALGUMA COISA DA MOCHILA. Os petiscos do Nomad foram às 14h25 e o Sanaa é ' +
@@ -3030,7 +3039,7 @@ window.ROTEIRO = {
 
       { id: 'b-1511-1320p', hora: '13:20', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — e a travessia mais longa do dia',
-        descricao: 'Quinze minutos aqui, e treze de caminhada até a Sunset Blvd',
+        descricao: 'Quinze minutos e treze de caminhada até a Sunset Blvd. Banheiro ao lado do Docking Bay 7',
         contexto:
           'Banheiro, garrafas cheias e sentar, ainda em Batuu.\n\n' +
           'DEPOIS DAQUI VEM A CAMINHADA MAIS LONGA DO PARQUE: do Galaxy’s Edge até a Sunset ' +
@@ -3088,7 +3097,7 @@ window.ROTEIRO = {
 
       { id: 'b-1511-1645p', hora: '16:45', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — antes da noite',
-        descricao: 'Quinze minutos. A partir daqui o dia é sentado',
+        descricao: 'Quinze minutos. Banheiro ao lado do Docking Bay 7; a partir daqui o dia é sentado',
         contexto:
           'Banheiro, garrafas e power bank. Daqui até a saída são quatro horas, e três delas ' +
           'são sentadas: Oga’s, Sci-Fi e Fantasmic.\n\n' +
@@ -3136,10 +3145,13 @@ window.ROTEIRO = {
 
       { id: 'b-1511-2000p', hora: '19:45', ancora: 'fixo', tipo: 'espera',
         titulo: 'Posição para o Fantasmic!',
-        descricao: 'Quinze minutos antes. O teatro tem 6.900 lugares e enche',
+        descricao: 'Quinze minutos antes. O teatro abre às 18h30 e enche',
         contexto:
           'O Hollywood Hills Amphitheater tem quase sete mil lugares e ainda assim enche nas ' +
           'noites de temporada.\n\n' +
+          'O TEATRO ABRE 90 MINUTOS ANTES, às 18h30, pelo mapa oficial. Quinze minutos antes ' +
+          'ainda dá lugar no meio, mas não escolha: se quiserem lugar bom num domingo cheio, ' +
+          'é trocar a Sunset Blvd das 19h25 por fila.\n\n' +
           'Sentem no MEIO e um pouco atrás, não na frente: o show usa projeção em cortina de ' +
           'água, e de perto demais a imagem se perde. As primeiras fileiras também molham.',
         areaParque: 'Sunset Blvd', acesso: [], duracaoMin: 15 },
@@ -3205,18 +3217,22 @@ window.ROTEIRO = {
     renuncias: {
       gerais: [
         { nome: 'Disney Junior' }, { nome: 'Frozen Sing-Along' }, { nome: 'Vacation Fun' },
-        { nome: 'Lightning McQueen’s Racing Academy' }, { nome: 'Walt Disney Presents' },
-        { nome: 'Beauty and the Beast Live on Stage' },
+        { nome: 'Walt Disney Presents' }, { nome: 'Beauty and the Beast Live on Stage' },
+        { nome: 'Disney Villains: Unfairly Ever After',
+          motivo: 'Show de 18 minutos na Sunset Blvd. Cairia na janela da tarde em que o ' +
+                  'Multi Pass está girando — Rock ’n’ Roller, Torre e Runaway Railway — e ' +
+                  'é falado.' },
         { nome: 'The Magic of Disney Animation — abre em 14/09/2026, mas não é atração ' +
                  'de fila: é aula de desenho com um animatrônico do Olaf, encontros com ' +
                  'personagens e um teatro. Sem nenhum interesse para vocês, e ocuparia a ' +
                  'janela do Star Tours' },
       ],
       idioma: {
-        itens: ['Indiana Jones Epic Stunt Spectacular'],
+        itens: ['Indiana Jones Epic Stunt Spectacular', 'The Little Mermaid — A Musical Adventure'],
         motivo:
-          'É visual, mas tem muito texto falado entre as cenas. Se o dia atrasar, é o primeiro ' +
-          'a cair.',
+          'O Indiana Jones é visual, mas tem muito texto falado entre as cenas — se o dia ' +
+          'atrasar, é o primeiro a cair. A Little Mermaid é musical de 18 minutos, cantado e ' +
+          'falado em inglês: mesmo teste.',
       },
       fechado: [
         'Muppet*Vision 3D — fechou em 08/06/2025 para dar lugar à Monstropolis, a land de ' +
@@ -3511,7 +3527,7 @@ window.ROTEIRO = {
 
       { id: 'b-1611-1240p', hora: '12:40', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — antes de virar o dia',
-        descricao: 'A partir daqui o Epcot é outro parque',
+        descricao: 'A partir daqui o Epcot é outro parque. Banheiro dentro do The Land, junto do Sunshine Seasons',
         contexto:
           'Banheiro, garrafas cheias e sentar.\n\n' +
           'DAQUI PARA A FRENTE O DIA MUDA DE NATUREZA: acabaram as filas e começa o World ' +
@@ -3796,8 +3812,8 @@ window.ROTEIRO = {
       { letra: 'A', titulo: 'O dia como está escrito',
         gatilho: 'Vocês estão no portão às 8h30 e o parque abre às 9h.',
         passos: [
-          'Direto ao Beco Diagonal, sem parar na Production Central — ela é a zona de ' +
-          'esmagamento do rope drop justamente por ser a primeira que aparece.',
+          'Direto ao Beco Diagonal, sem parar na Minion Land — ela é a zona de esmagamento ' +
+          'do rope drop justamente por ser a primeira que aparece, à esquerda da catraca.',
           'Gringotts primeiro, enquanto ele custa 15 minutos em vez de 83.',
           'Transformers na segunda hora, que é a última janela barata dele antes da noite.',
           'Mummy, Minion Land e o Beco com calma até o almoço.',
@@ -3845,8 +3861,9 @@ window.ROTEIRO = {
           'PONTO DE ENCONTRO DE HOJE: a fonte do globo giratório da Universal, logo depois da ' +
           'catraca. É o ponto mais óbvio do parque e todo mundo sabe onde fica. Se vocês se ' +
           'perderem, vão para lá e ESPEREM.\n\n' +
-          'A PRIMEIRA COISA AO PASSAR: não parem na Production Central. Ela é a primeira área ' +
-          'que aparece e é exatamente por isso que ela entope no rope drop. Sigam reto.',
+          'A PRIMEIRA COISA AO PASSAR: não parem na Minion Land, à esquerda da catraca. Ela é a ' +
+          'primeira área que aparece e é exatamente por isso que ela entope no rope drop. ' +
+          'Sigam reto.',
         localId: 'universal-studios', acesso: [], duracaoMin: 30 },
 
       { id: 'b-1711-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
@@ -3879,7 +3896,7 @@ window.ROTEIRO = {
           'ELE É WALK-ON POR EXATAMENTE UMA HORA DEPOIS DA ABERTURA, 30 minutos na segunda ' +
           'hora, e chega a 120 no pico. Fazer ele agora custa meia hora; fazer ao meio-dia ' +
           'custa o dobro.',
-        areaParque: 'Production Central', acesso: ['standby'], acessoAlt: 'single-rider', duracaoMin: 35,
+        areaParque: 'New York', acesso: ['standby'], acessoAlt: 'single-rider', duracaoMin: 35,
         fila: { min: 30, quando: 'na segunda hora', pico: 120, media: 33, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
@@ -4060,7 +4077,10 @@ window.ROTEIRO = {
         descricao: 'Uber. Andem até o CityWalk antes de chamar',
         contexto:
           'A tarifa dinâmica na porta do parque logo depois do fechamento é brutal. O ' +
-          'CityWalk fica no caminho e tem ponto próprio.\n\n' +
+          'CityWalk fica no caminho e tem ponto próprio: o transporte por app sai da área de ' +
+          'estacionamento e ônibus, no extremo sul do CityWalk.\n\n' +
+          'SE O CINESATIONAL RODAR HOJE — o show da lagoa, no fechamento —, a decisão já foi ' +
+          'tomada na pendência de 01/11. Ficar para ele é sair com todo mundo.\n\n' +
           'Amanhã não tem parque e não tem alarme: o dia 18 começa às 9h.',
         acesso: [], duracaoMin: 45 },
     ],
@@ -4148,7 +4168,8 @@ window.ROTEIRO = {
                   'passam por ela indo da Springfield para a Hollywood e é só isso.' },
       ],
       idioma: {
-        itens: ['Animal Actors on Location', 'DreamWorks Imagination Celebration'],
+        itens: ['Animal Actors on Location', 'DreamWorks Imagination Celebration',
+                'Universal Orlando’s Horror Make-Up Show'],
         motivo:
           'Shows de palco falados em inglês, 20 a 25 minutos cada. Mesmo teste que reprovou o ' +
           'American Adventure no Epcot e os dois shows do Epic. O Bourne Stuntacular passou no ' +
@@ -5679,7 +5700,7 @@ window.ROTEIRO = {
         passos: [
           'Portão às 8h15. Pipeline, Ice Breaker e Expedition Odyssey antes das 11h.',
           'Mako, Shark Encounter e Penguin Trek; almoço no Voyager’s Smokehouse às 12h55.',
-          'Kraken, Journey to Atlantis e Manta à tarde, depois os animais da Sea of Shallows.',
+          'Kraken, Journey to Atlantis e Manta à tarde, depois os animais de água rasa.',
           'Orca Encounter às 17h30, jantar no Waterway Grill e o show no gelo.',
           'Sea of Trees, fogos às 21h e saída.',
         ] },
@@ -5689,13 +5710,13 @@ window.ROTEIRO = {
           'Ele vira a maior fila do parque. Pipeline no rope drop e o SEAQuest logo depois: ele ' +
           'fica atrás do Expedition Odyssey, na mesma direção.',
           'O Ice Breaker passa para depois do Expedition Odyssey.',
-          'O atraso sai da tarde: os animais da Sea of Shallows caem primeiro.',
+          'O atraso sai da tarde: os animais de água rasa caem primeiro.',
         ] },
       { letra: 'B2', titulo: 'O parque abre às 10h',
         gatilho: 'O horário oficial sai com abertura às 10h.',
         passos: [
           'Mudem a referência para 10h: a manhã inteira desloca uma hora.',
-          'A tarde perde os animais da Sea of Shallows e a pausa. O app vai avisar o aperto.',
+          'A tarde perde os animais de água rasa e a pausa. O app vai avisar o aperto.',
           'O Orca, o jantar e a noite não mudam.',
         ] },
       { letra: 'C', titulo: 'Tempestade com raio',
@@ -5742,7 +5763,7 @@ window.ROTEIRO = {
           'POR QUE PRIMEIRO: carrega devagar e a fila cresce rápido. No rope drop são 10 a 15 ' +
           'minutos; no resto do dia, 27 de média.\n\n' +
           'Altura máxima de 1,98 m. Nada solto: armário de US$ 2 na entrada da fila.',
-        areaParque: 'Port of Entry', acesso: ['rope-drop', 'standby'], locker: true,
+        areaParque: 'Entrada e Pipeline', acesso: ['rope-drop', 'standby'], locker: true,
         duracaoMin: 30,
         pesquisa: '2026-09-11' },
 
@@ -5755,7 +5776,7 @@ window.ROTEIRO = {
           'A fila média do dia é de 22 minutos, e à tarde fica em 30 a 45. De manhã, a cinco ' +
           'minutos da Pipeline, sai barata.\n\n' +
           'Nada solto: armário de US$ 2 na entrada da fila.',
-        areaParque: 'Sea of Power', acesso: ['standby'], locker: true, duracaoMin: 30,
+        areaParque: 'Ice Breaker e Bayside Stadium', acesso: ['standby'], locker: true, duracaoMin: 30,
         pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1005', hora: '10:05', ancora: 'referencia', tipo: 'atracao',
@@ -5768,7 +5789,7 @@ window.ROTEIRO = {
           'POR QUE DE MANHÃ: é a maior fila do parque, 46 minutos de média e 81 de pico médio. ' +
           'Como fica ao lado do Ice Breaker, entra no começo do dia sem custar caminhada.\n\n' +
           'Intensidade de família. Altura mínima de 99 cm.',
-        areaParque: 'Sea of Power', acesso: ['standby'], duracaoMin: 45, pesquisa: '2026-09-11' },
+        areaParque: 'Ice Breaker e Bayside Stadium', acesso: ['standby'], duracaoMin: 45, pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1105', hora: '11:05', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mako',
@@ -5779,7 +5800,7 @@ window.ROTEIRO = {
           'Não precisa de manhã: a fila média do dia é de 13 minutos.\n\n' +
           'São onze minutos a pé do Expedition Odyssey, passando pelo estádio do Orca. Nada ' +
           'solto: armário de US$ 2 na entrada da fila.',
-        areaParque: 'Sea of Mystery', acesso: ['standby'], locker: true, duracaoMin: 30,
+        areaParque: 'Mako e Shark Encounter', acesso: ['standby'], locker: true, duracaoMin: 30,
         pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1140', hora: '11:40', ancora: 'referencia', tipo: 'atracao',
@@ -5789,7 +5810,7 @@ window.ROTEIRO = {
           'Um túnel que passa por dentro do tanque, com os tubarões em volta. É a mesma vista ' +
           'do Sharks Underwater Grill, sem a conta.\n\n' +
           'É caminhar e parar onde quiserem.',
-        areaParque: 'Sea of Mystery', acesso: [], duracaoMin: 20, pesquisa: '2026-09-11' },
+        areaParque: 'Mako e Shark Encounter', acesso: [], duracaoMin: 20, pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1205', hora: '12:05', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Penguin Trek',
@@ -5800,7 +5821,7 @@ window.ROTEIRO = {
           'montanha-russa com aquário.\n\n' +
           'É a segunda maior fila do parque, 35 minutos de média. Levem algo de manga longa: o ' +
           'hábitat é mantido a poucos graus.',
-        areaParque: 'Sea of Ice', acesso: ['standby'], duracaoMin: 45, pesquisa: '2026-09-11' },
+        areaParque: 'Penguin Trek', acesso: ['standby'], duracaoMin: 45, pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1255', hora: '12:55', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Voyager’s Smokehouse',
@@ -5810,7 +5831,7 @@ window.ROTEIRO = {
           'defumado e sanduíches de peru e de porco desfiado.\n\n' +
           'PLANO DE REFEIÇÃO: um prato, um acompanhamento ou sobremesa e um refrigerante. A ' +
           'próxima refeição do plano só libera 90 minutos depois, a partir das 14h25.',
-        restauranteId: 'r-voyagers', areaParque: 'Sea of Delight', acesso: [], duracaoMin: 50,
+        restauranteId: 'r-voyagers', areaParque: 'Waterfront e Sky Tower', acesso: [], duracaoMin: 50,
         pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1350', hora: '13:50', ancora: 'referencia', tipo: 'atracao',
@@ -5822,7 +5843,7 @@ window.ROTEIRO = {
           'A fila média do dia é de 10 minutos, a menor entre as montanhas-russas grandes — por ' +
           'isso ela fica para depois do almoço.\n\n' +
           'Nada solto: armário de US$ 2 na entrada da fila.',
-        areaParque: 'Sea of Legends', acesso: ['standby'], locker: true, duracaoMin: 25,
+        areaParque: 'Kraken e Atlantis', acesso: ['standby'], locker: true, duracaoMin: 25,
         pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1420', hora: '14:20', ancora: 'referencia', tipo: 'atracao',
@@ -5834,7 +5855,7 @@ window.ROTEIRO = {
           'inteira para secar antes de escurecer. Capa de chuva, e o celular no Ziploc ou no ' +
           'armário de US$ 2.\n\n' +
           'Fila média de 21 minutos.',
-        areaParque: 'Sea of Legends', acesso: ['standby'], molha: true, locker: true,
+        areaParque: 'Kraken e Atlantis', acesso: ['standby'], molha: true, locker: true,
         duracaoMin: 35,
         pesquisa: '2026-09-11' },
 
@@ -5846,30 +5867,33 @@ window.ROTEIRO = {
           'para baixo, braços soltos, passando rente à água. 43 metros, 90 km/h e quatro ' +
           'inversões.\n\n' +
           'Fila média de 19 minutos. Nada solto: armário de US$ 2 na entrada da fila.',
-        areaParque: 'Sea of Shallows', acesso: ['standby'], locker: true, duracaoMin: 30,
+        areaParque: 'Manta e Dolphin Stadium', acesso: ['standby'], locker: true, duracaoMin: 30,
         pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1535', hora: '15:35', ancora: 'referencia', tipo: 'livre',
         titulo: 'Tartarugas, golfinhos e arraias',
         descricao: 'Turtle Trek, golfinhos e o tanque de arraias. Sem fila',
         contexto:
-          'A Sea of Shallows é a área dos animais de água rasa: o Turtle Trek, com o domo de ' +
+          'Em volta do Manta e do Dolphin Stadium ficam os animais de água rasa: o Turtle Trek, com o domo de ' +
           'filme e as tartarugas e peixes-boi resgatados, o tanque de arraias e os golfinhos.\n\n' +
           'DOLPHIN ADVENTURES: o show dos golfinhos é no Dolphin Stadium, aqui ao lado. Em 2025 ' +
           'era às 11h e às 15h; se no dia houver sessão perto das 15h30, é aqui que ela cabe.',
-        areaParque: 'Sea of Shallows', acesso: [], duracaoMin: 40, pesquisa: '2026-09-11' },
+        areaParque: 'Manta e Dolphin Stadium', acesso: [], duracaoMin: 40, pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1620', hora: '16:20', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Pausa e lanche no Waterfront',
-        descricao: 'Segunda refeição do plano. Sentem',
+        descricao: 'Segunda refeição do plano. Banheiro junto do Sky Tower',
         contexto:
           'O lanche entra no plano de refeição: os 90 minutos desde o almoço já passaram. O ' +
           'Seafire Grill e o Lakeside Grill ficam por aqui.\n\n' +
+          'HÁ UM CHICK-FIL-A DENTRO DO PARQUE, perto do Orca Stadium e do Sesame Street — ' +
+          'está no mapa oficial. Pelo que o mapa mostra, ele fica fora do plano de refeição; ' +
+          'confiram no app do SeaWorld. Se quiserem, é o lanche desta pausa, pago à parte.\n\n' +
           'É a última parada antes de uma noite longa, que só termina depois dos fogos das ' +
           '21h.\n\n' +
           'O SHOW DOS LEÕES-MARINHOS é no estádio ao lado. Em 2025 era às 14h e às 16h; se ' +
           'houver sessão nesta hora, cabe.',
-        areaParque: 'Sea of Delight', acesso: [], duracaoMin: 35, pesquisa: '2026-09-11' },
+        areaParque: 'Waterfront e Sky Tower', acesso: [], duracaoMin: 35, pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1710', hora: '17:10', ancora: 'fixo', tipo: 'show',
         titulo: 'Orca Encounter',
@@ -5881,7 +5905,7 @@ window.ROTEIRO = {
           '17h30 — a grade do dia sai no app, confiram de manhã.\n\n' +
           'Cheguem 20 minutos antes: os bons lugares acabam rápido. As primeiras fileiras são a ' +
           'zona molhada, e ela é real.',
-        areaParque: 'Orca Encounter', acesso: [], confirmarHorario: true, critico: true,
+        areaParque: 'Orca Stadium', acesso: [], confirmarHorario: true, critico: true,
         duracaoMin: 50, pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1805', hora: '18:05', ancora: 'fixo', tipo: 'refeicao',
@@ -5892,7 +5916,7 @@ window.ROTEIRO = {
           'devagar ou tiras de frango.\n\n' +
           'Fica a quatro minutos do estádio do Orca, e é onde o Papai Noel recebe visitas no ' +
           'Natal.',
-        restauranteId: 'r-waterway', areaParque: 'Sea of Fun', acesso: [], duracaoMin: 55,
+        restauranteId: 'r-waterway', areaParque: 'Sesame Street e Waterway Grill', acesso: [], duracaoMin: 55,
         pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1910', hora: '19:10', ancora: 'fixo', tipo: 'show',
@@ -5904,7 +5928,7 @@ window.ROTEIRO = {
           'HORÁRIO A CONFIRMAR: as sessões do dia só aparecem no app. O bloco assume uma sessão ' +
           'por volta das 19h10; se for outra, troquem de lugar com o Sea of Trees, que roda a ' +
           'noite toda.',
-        areaParque: 'Sea of Power', acesso: [], confirmarHorario: true, duracaoMin: 40,
+        areaParque: 'Ice Breaker e Bayside Stadium', acesso: [], confirmarHorario: true, duracaoMin: 40,
         pesquisa: '2026-09-11' },
 
       { id: 'b-2211-2000', hora: '20:00', ancora: 'fixo', tipo: 'show',
@@ -5916,7 +5940,7 @@ window.ROTEIRO = {
           'Waterfront, o Bayside Stadium e o caminho do Orca.\n\n' +
           'NO CAMINHO, perto da entrada: a Rudolph’s Christmas Town, no caminho da Pipeline, com ' +
           'o Rudolph e o Bumble para foto.',
-        areaParque: 'Sea of Delight', acesso: [], duracaoMin: 40, pesquisa: '2026-09-11' },
+        areaParque: 'Waterfront e Sky Tower', acesso: [], duracaoMin: 40, pesquisa: '2026-09-11' },
 
       { id: 'b-2211-2040', hora: '20:40', ancora: 'fixo', tipo: 'espera',
         titulo: 'Lugar para os fogos',
@@ -5924,7 +5948,7 @@ window.ROTEIRO = {
         contexto:
           'Os fogos são sobre a lagoa. Escolham o ponto na beira do Waterfront com calma, ' +
           'enquanto ainda há espaço.',
-        areaParque: 'Sea of Delight', acesso: [], duracaoMin: 20 },
+        areaParque: 'Waterfront e Sky Tower', acesso: [], duracaoMin: 20 },
 
       { id: 'b-2211-2100', hora: '21:00', ancora: 'fixo', tipo: 'show',
         titulo: 'Holiday Reflections',
@@ -5933,7 +5957,7 @@ window.ROTEIRO = {
           'O final da noite: fogos sobre a lagoa no fechamento do parque, em toda noite da ' +
           'Christmas Celebration.\n\n' +
           'HORA A CONFIRMAR: o bloco segue o fechamento previsto, às 21h.',
-        areaParque: 'Sea of Delight', acesso: [], confirmarHorario: true, critico: true,
+        areaParque: 'Waterfront e Sky Tower', acesso: [], confirmarHorario: true, critico: true,
         duracaoMin: 15, pesquisa: '2026-09-11' },
 
       { id: 'b-2211-2115', hora: '21:15', ancora: 'fixo', tipo: 'deslocamento',
@@ -6224,8 +6248,9 @@ window.ROTEIRO = {
           'no escuro. Molha de verdade, principalmente nas primeiras fileiras.\n\n' +
           'REFORMA: ficou fechado de janeiro a 19 ou 20/11 de 2026, com dinossauros e cenário ' +
           'sendo refeitos. Se ainda estiver fechado, vale o plano B.\n\n' +
-          'Está às 15h35 porque é a hora mais quente. Capa de chuva e o celular no Ziploc. Fila ' +
-          'média de 22 minutos.',
+          'Está às 15h35 porque é a hora mais quente. Capa de chuva e o celular no Ziploc — ou ' +
+          'no armário de aluguel da entrada, que aqui é opcional, pelo mapa oficial. Fila média ' +
+          'de 22 minutos.',
         areaParque: 'Jurassic Park', acesso: ['standby'],
         acessoAlt: 'single-rider', molha: true, duracaoMin: 40, pesquisa: '2026-09-11' },
 
@@ -6295,6 +6320,15 @@ window.ROTEIRO = {
         motivo: 'The Magic of Christmas at Hogwarts Castle, depois que escurece, repetindo a ' +
                 'cada 20 minutos.',
         pesquisa: '2026-09-11' },
+      { nome: 'Raptor Encounter', quando: 'hoje', custo: 'incluso',
+        motivo: 'Um velociraptor animatrônico com tratador, no Jurassic Park, em sessões curtas ' +
+                'ao longo do dia. Cabe entre o Kong e o River Adventure, sem bloco — está no ' +
+                'mapa oficial.',
+        pesquisa: '2026-09-12' },
+      { nome: 'Frog Choir e Triwizard Spirit Rally', quando: 'hoje', custo: 'incluso',
+        motivo: 'Shows de rua na Hogsmeade, de uns dez minutos, várias vezes ao dia. Se um ' +
+                'estiver começando quando vocês passarem, parem.',
+        pesquisa: '2026-09-12' },
       { nome: 'Hogwarts Express nos dois sentidos', quando: 'hoje',
         custo: 'incluso, precisa park-to-park',
         motivo: 'A ida e a volta têm filmes diferentes.',
@@ -6577,12 +6611,23 @@ window.ROTEIRO = {
 
       { id: 'b-2411-1540', hora: '15:40', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Pausa e lanche',
-        descricao: 'Segunda refeição do plano, em Stanleyville',
+        descricao: 'Segunda refeição do plano, em Stanleyville. Banheiro ao lado da estação do trem',
         contexto:
           'Os 90 minutos do almoço já passaram: o lanche entra no plano. O SheiKra Eats e o ' +
           'Zambia ficam aqui.\n\n' +
           'É a última parada antes da noite, que termina com a estrada de volta.',
-        areaParque: 'Stanleyville', acesso: [], duracaoMin: 25, pesquisa: '2026-09-11' },
+        areaParque: 'Stanleyville', acesso: [], duracaoMin: 20, pesquisa: '2026-09-11' },
+
+      { id: 'b-2411-1605', hora: '16:05', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Skyride — de Stanleyville ao Edge of Africa',
+        descricao: 'Teleférico por cima do parque. Desce ao lado do Cheetah Hunt',
+        contexto:
+          'O Skyride liga Stanleyville ao Edge of Africa por cima do parque, e desce a dois ' +
+          'minutos do Morocco, onde é o show. É o atalho que evita a volta a pé pela Sesame ' +
+          'Street e pela Bird Gardens — está no mapa oficial.\n\n' +
+          'SE ESTIVER PARADO — vento fecha teleférico —, a pé são uns 14 minutos pelo caminho ' +
+          'de sempre, e o show das 16h20 fica apertado: cheguem como der.',
+        areaParque: 'Edge of Africa', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
 
       { id: 'b-2411-1620', hora: '16:20', ancora: 'fixo', tipo: 'show',
         titulo: 'Christmas on Ice',
@@ -6593,8 +6638,8 @@ window.ROTEIRO = {
           'HORÁRIO A CONFIRMAR: em 2025 havia várias sessões por dia, a primeira por volta das ' +
           '14h. O teatro enche, e a recomendação é chegar bem antes — o bloco reserva 45 minutos ' +
           'por isso.\n\n' +
-          'De Stanleyville até aqui são 14 minutos a pé, passando pela Sesame Street e pela Bird ' +
-          'Gardens.',
+          'De Stanleyville, o Skyride deixa vocês a dois minutos daqui. A pé seriam 14, pela ' +
+          'Sesame Street e pela Bird Gardens.',
         areaParque: 'Morocco', acesso: [], confirmarHorario: true, duracaoMin: 45,
         pesquisa: '2026-09-11' },
 
@@ -7283,7 +7328,8 @@ window.ROTEIRO = {
                      'passa de uma hora'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Balcão, sem reserva', blocoId: 'b-1411-2100',
-      nota: 'Balcão dentro da Hogsmeade decorada — não leva gorjeta.' },
+      nota: 'Balcão dentro da Hogsmeade decorada — não leva gorjeta. Faixa $ no mapa oficial: ' +
+            'até US$ 15 por pessoa.' },
 
     { id: 'r-docking-bay', nome: 'Docking Bay 7', data: '2026-11-15', hora: '12:20',
       refeicao: 'almoco', local: 'Hollywood Studios · Galaxy’s Edge',
@@ -7317,7 +7363,8 @@ window.ROTEIRO = {
       refeicao: 'almoco', local: 'Universal Studios · Diagon Alley', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Mobile order pelo app da Universal', blocoId: 'b-1711-1315',
-      nota: 'Bangers and mash, fish and chips. O melhor quick service da Universal.' },
+      nota: 'Bangers and mash, fish and chips. O melhor quick service da Universal. Faixa $ ' +
+            'no mapa oficial: até US$ 15 por pessoa.' },
 
     { id: 'r-lombards', nome: 'Lombard’s Seafood Grille', data: '2026-11-17', hora: '18:45',
       refeicao: 'jantar', local: 'Universal Studios · San Francisco',
@@ -7379,7 +7426,7 @@ window.ROTEIRO = {
             'refeição do ingresso.' },
 
     { id: 'r-waterway', nome: 'Waterway Grill', data: '2026-11-22', hora: '18:05',
-      refeicao: 'jantar', local: 'SeaWorld · Sea of Fun', alternativas: [],
+      refeicao: 'jantar', local: 'SeaWorld · ao lado do Sesame Street', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Plano de refeição (All-Day Dining Deal)', blocoId: 'b-2211-1805',
       nota: 'Churrasco grelhado, frango com sofrito e pernil. Coberto pelo plano de refeição. ' +
@@ -7391,7 +7438,7 @@ window.ROTEIRO = {
       canal: 'Sem reserva — conferir lista de espera no app da Universal', blocoId: 'b-1911-1300',
       nota: 'Não aceita reserva. As fontes divergem entre lista de espera pelo app e ordem de ' +
             'chegada: confiram no app ao entrar na Super Nintendo World, às 11h. Pico do ' +
-            'almoço das 11h30 às 13h30.' },
+            'almoço das 11h30 às 13h30. Faixa $ no mapa oficial: até US$ 15 por pessoa.' },
 
     { id: 'r-atlantic', nome: 'Atlantic', data: '2026-11-19', hora: '17:00',
       refeicao: 'jantar', local: 'Epic Universe · Celestial Park',
@@ -7604,8 +7651,11 @@ window.ROTEIRO = {
         'conferido de novo em 16/06/2026, são Ministry of Magic, Super Nintendo World e Isle ' +
         'of Berk — e o dia 19 começa na Dark Universe justamente por ela estar fora.\n\n' +
         'A LISTA MUDOU PELO MENOS TRÊS VEZES EM DEZOITO MESES. Se a Dark Universe voltar e o ' +
-        'Ministry sair, vale o plano B do dia 19: os dois blocos trocam de lugar.',
-      pesquisa: '2026-09-10',
+        'Ministry sair, vale o plano B do dia 19: os dois blocos trocam de lugar.\n\n' +
+        'E CONFIRAM O LOCKER DO DRAGON RACER’S RALLY: o mapa oficial marca "sem objetos ' +
+        'soltos" nele também, e o guia de segurança fala em três atrações. Se forem quatro, o ' +
+        'bloco das 15h ganha os 10 a 15 minutos de armário.',
+      pesquisa: '2026-09-12',
       restauranteIds: [] },
 
     { id: 'ck-ing-universal', dataAlvo: '2026-10-25', validaAte: '2026-11-14', dataEstimada: true,
@@ -7716,7 +7766,10 @@ window.ROTEIRO = {
       nota:
         'O calendário do Queue-Times já marca 22/11 com a Christmas Celebration e horário ' +
         'das 9h às 21h. É previsão de terceiro: a confirmação é o calendário oficial do ' +
-        'SeaWorld, e com ela a referência do dia 22.',
+        'SeaWorld, e com ela a referência do dia 22.\n\n' +
+        'E CONFIRAM SE O SEAQUEST: LEGENDS OF THE DEEP JÁ ABRIU. O mapa de julho o marca como ' +
+        '"all-new, coming 2026", a leste, perto do Sea Harbor. O plano B do dia 22 depende ' +
+        'disso.',
       restauranteIds: [] },
 
     { id: 'ck-roda-icon', dataAlvo: '2026-10-15', validaAte: '2026-11-12', dataEstimada: true,
@@ -7877,7 +7930,7 @@ window.ROTEIRO = {
     { id: 'ck-horarios-mk', dataAlvo: '2026-09-13', validaAte: '2026-11-11', dataEstimada: true,
       motivoData: 'A Disney publica com 60 dias de antecedência, e 60 dias antes de 11/11 é 12/09',
       hora: null, fuso: null, janelaReserva: false, critico: true,
-      texto: 'Magic Kingdom 11/11: falta só a hora do Festival of Fantasy',
+      texto: 'Magic Kingdom 11/11: falta a hora do Festival of Fantasy e do desfile noturno',
       nota:
         'O PARQUE SAIU EM 12/09: 9h às 22h, com Early Entry às 8h30. É exatamente o que o ' +
         'dia assumia, então a referência já está certa e nenhum bloco mudou.\n\n' +
@@ -7886,6 +7939,10 @@ window.ROTEIRO = {
         'que ancora a tarde inteira: a travessia para a Tomorrowland às 15h12 e a janela do ' +
         'TRON andam com ele. Se sair outra, mexam no bloco do desfile — nada disso desloca ' +
         'com a abertura.\n\n' +
+        'E O DESFILE NOTURNO, Disney Starlight: Dream the Night Away, que o mapa oficial ' +
+        'destaca. Mesma rota do diurno, mesmo corte do parque. Se rodar perto das 21h, a Main ' +
+        'Street estará tomada na saída das 22h — e o Seven Dwarfs e o TRON ficam ainda mais ' +
+        'vazios enquanto ele passa. Anotem a hora na nota do dia 11.\n\n' +
         'Confiram na mesma visita se a Tiana’s voltou da reforma antes do previsto.',
       restauranteIds: [] },
 
@@ -7913,8 +7970,8 @@ window.ROTEIRO = {
 
     { id: 'ck-shows', dataAlvo: '2026-11-01', validaAte: '2026-11-17', dataEstimada: true, motivoData: 'Horários de show só saem perto da data', hora: null, fuso: null,
       janelaReserva: false, critico: false,
-      texto: 'Confirmar horário do Grinchmas (14/11), do desfile da Macy’s (17/11) e do ' +
-             'Fantasmic! (15/11) — e o fechamento do parque em 17/11',
+      texto: 'Confirmar horário do Grinchmas (14/11), do desfile da Macy’s (17/11), do ' +
+             'Fantasmic! (15/11) e do CineSational (17/11) — e o fechamento do parque em 17/11',
       nota:
         'O Grinchmas é a referência do dia 14: ajustando ele, deslocam a saída, a fila e a ' +
         'Hogsmeade decorada. A projeção no castelo, o Hippogriff, o jantar e a volta são ' +
@@ -7927,7 +7984,10 @@ window.ROTEIRO = {
         'noite.\n\n' +
         'CONFIRAM TAMBÉM O FECHAMENTO DE 17/11. O parque fecha entre 19h e 22h conforme a ' +
         'época, e a temporada de Natal estica. Se fechar às 19h, o Beco à noite não existe ' +
-        'e o jantar vira CityWalk, que fica fora da catraca.',
+        'e o jantar vira CityWalk, que fica fora da catraca.\n\n' +
+        'E O CINESATIONAL: o show noturno da lagoa do Universal Studios, que o mapa oficial ' +
+        'lista e o roteiro não usa, costuma rodar no fechamento — a hora em que vocês saem. ' +
+        'Se estiver na grade de 17/11, decidam antes: ficar para ele custa a saída no pico.',
       restauranteIds: [] },
   ],
 
@@ -7973,7 +8033,9 @@ window.ROTEIRO = {
     { id: 'animal-kingdom', nome: 'Disney’s Animal Kingdom', tipo: 'parque',
       lat: 28.358, lng: -81.59, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 35, tempoFonte: 'documento',
-                 uberUSD: { min: 20, max: 30 }, uberFonte: 'estimado' } },
+                 uberUSD: { min: 20, max: 30 }, uberFonte: 'estimado' },
+      nota: 'Carona por app: o ponto de encontro é à esquerda, assim que saírem do parque — ' +
+            'está no mapa oficial.' },
 
     { id: 'ak-lodge', nome: 'Animal Kingdom Lodge (Sanaa)', tipo: 'restaurante',
       lat: 28.353637, lng: -81.602756, verificado: true, fonteCoord: 'wikipedia', endereco: null,
@@ -7984,7 +8046,9 @@ window.ROTEIRO = {
     { id: 'hollywood-studios', nome: 'Disney’s Hollywood Studios', tipo: 'parque',
       lat: 28.3575, lng: -81.56, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 30, tempoFonte: 'documento',
-                 uberUSD: { min: 22, max: 32 }, uberFonte: 'estimado' } },
+                 uberUSD: { min: 22, max: 32 }, uberFonte: 'estimado' },
+      nota: 'Carona por app: o ponto de encontro fica no ponto dos ônibus fretados, na saída ' +
+            '— está no mapa oficial.' },
 
     { id: 'epcot', nome: 'Epcot', tipo: 'parque',
       lat: 28.371, lng: -81.55, verificado: true, fonteCoord: 'wikipedia', endereco: null,
@@ -8012,7 +8076,10 @@ window.ROTEIRO = {
     { id: 'citywalk', nome: 'Universal CityWalk', tipo: 'compras',
       lat: 28.4733226, lng: -81.466124, verificado: true, fonteCoord: 'osm', endereco: null,
       doHotel: { tempoMin: 30, tempoFonte: 'documento',
-                 uberUSD: { min: 28, max: 40 }, uberFonte: 'estimado' } },
+                 uberUSD: { min: 28, max: 40 }, uberFonte: 'estimado' },
+      nota: 'O transporte por app sai da área de estacionamento e ônibus, no extremo sul do ' +
+            'CityWalk — não junto da entrada dos parques. É até lá que vocês andam antes de ' +
+            'chamar, nos dias 14, 17 e 23.' },
 
     { id: 'epic-universe', nome: 'Universal Epic Universe', tipo: 'parque',
       lat: 28.4422, lng: -81.449, verificado: true, fonteCoord: 'wikipedia', endereco: null,
@@ -8025,7 +8092,8 @@ window.ROTEIRO = {
       lat: 28.41083333, lng: -81.4625, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 20, tempoFonte: 'estimado',
                  uberUSD: { min: 22, max: 32 }, uberFonte: 'estimado' },
-      nota: 'Estacionamento geral US$ 37. Detector de metal na entrada.' },
+      nota: 'Estacionamento geral US$ 37. Detector de metal na entrada. O ponto de ônibus, táxi ' +
+            'e carona por app fica à esquerda da entrada.' },
 
     { id: 'busch-gardens', nome: 'Busch Gardens Tampa Bay', tipo: 'parque',
       lat: 28.0375, lng: -82.4225, verificado: true, fonteCoord: 'wikipedia', endereco: null,
@@ -8180,16 +8248,16 @@ window.ROTEIRO = {
 
     'universal-studios': {
       forma: 'Um anel em volta da lagoa, com o Beco Diagonal pendurado como beco sem ' +
-             'saída: entra e sai pela mesma boca, na London. A Production Central e a ' +
-             'Minion Land são as primeiras depois da catraca — e é por isso que elas ' +
-             'entopem no rope drop.',
+             'saída: entra e sai pela mesma boca, na London. A Minion Land é a primeira ' +
+             'depois da catraca, à esquerda, com a Hollywood à direita — e é por isso que ' +
+             'ela entope no rope drop. Transformers e Jimmy Fallon ficam em New York, logo ' +
+             'depois dela.',
       margem: 'Somem 50% em dia cheio. Os números batem com os dois publicados: da catraca ' +
               'até o Beco Diagonal dá 10 minutos, e a volta completa do anel dá 23. O World ' +
               'Expo e a Springfield ficam levemente fora do caminho da lagoa — quem passa ' +
               'por lá tem de resolver os dois de uma vez ou volta atrás.',
       arestas: [
-        ['Production Central', 'Hollywood', 3],
-        ['Production Central', 'Minion Land', 2],
+        ['Minion Land', 'Hollywood', 3],
         ['Minion Land', 'New York', 3],
         ['New York', 'San Francisco', 3],
         ['San Francisco', 'Diagon Alley', 2],
@@ -8210,11 +8278,11 @@ window.ROTEIRO = {
         ['Hollywood Blvd', 'Echo Lake', 3],
         ['Hollywood Blvd', 'Sunset Blvd', 4],
         ['Hollywood Blvd', 'Commissary Lane', 3],
-        ['Hollywood Blvd', 'The Walt Disney Studios', 4],
+        ['Hollywood Blvd', 'Animation Courtyard', 4],
         ['Echo Lake', 'Grand Avenue', 3],
         ['Grand Avenue', 'Galaxy’s Edge', 3],
         ['Commissary Lane', 'Toy Story Land', 5],
-        ['The Walt Disney Studios', 'Toy Story Land', 4],
+        ['Animation Courtyard', 'Toy Story Land', 4],
         ['Galaxy’s Edge', 'Toy Story Land', 6],
       ],
     },
@@ -8280,28 +8348,29 @@ window.ROTEIRO = {
     },
 
     seaworld: {
-      forma: 'Um anel em volta da lagoa, com a entrada no lado oeste e a Pipeline colada ' +
-             'nela. Ao sul ficam a Sea of Power — Ice Breaker, Expedition Odyssey e o Bayside ' +
-             'Stadium — e o estádio do Orca; do outro lado do anel, Mako, Penguin Trek, Kraken ' +
-             'e Manta. O Waterfront é o centro, na margem da lagoa.',
+      forma: 'Um anel em volta da lagoa, com a entrada ao sul e a Pipeline colada nela. A ' +
+             'leste ficam Ice Breaker, Expedition Odyssey, o Bayside Stadium e o Orca Stadium; ' +
+             'ao norte, Mako e Shark Encounter; a oeste, Penguin Trek, Kraken, Atlantis e Manta. ' +
+             'O Waterfront e o Sky Tower são o centro, na margem da lagoa. As áreas têm aqui os ' +
+             'nomes dos marcos, porque o mapa oficial não imprime nome de área nenhum.',
       margem: 'Somem 50% em dia cheio. E ATENÇÃO: não há tempos publicados para conferir. ' +
               'Estes saem das coordenadas do OpenStreetMap, com 30% de desvio sobre a linha ' +
               'reta e passo de 75 metros por minuto. A volta inteira dá uns 32 minutos e da ' +
               'entrada ao Mako são 9 — o que bate com o "5 a 10 minutos entre atrações" dos ' +
               'guias.',
       arestas: [
-        ['Port of Entry', 'Sea of Shallows', 5],
-        ['Port of Entry', 'Sea of Delight', 5],
-        ['Port of Entry', 'Sea of Power', 5],
-        ['Sea of Shallows', 'Sea of Delight', 3],
-        ['Sea of Shallows', 'Sea of Legends', 4],
-        ['Sea of Legends', 'Sea of Ice', 2],
-        ['Sea of Ice', 'Sea of Delight', 3],
-        ['Sea of Ice', 'Sea of Mystery', 5],
-        ['Sea of Delight', 'Sea of Mystery', 4],
-        ['Sea of Mystery', 'Sea of Fun', 3],
-        ['Sea of Fun', 'Orca Encounter', 4],
-        ['Orca Encounter', 'Sea of Power', 4],
+        ['Entrada e Pipeline', 'Manta e Dolphin Stadium', 5],
+        ['Entrada e Pipeline', 'Waterfront e Sky Tower', 5],
+        ['Entrada e Pipeline', 'Ice Breaker e Bayside Stadium', 5],
+        ['Manta e Dolphin Stadium', 'Waterfront e Sky Tower', 3],
+        ['Manta e Dolphin Stadium', 'Kraken e Atlantis', 4],
+        ['Kraken e Atlantis', 'Penguin Trek', 2],
+        ['Penguin Trek', 'Waterfront e Sky Tower', 3],
+        ['Penguin Trek', 'Mako e Shark Encounter', 5],
+        ['Waterfront e Sky Tower', 'Mako e Shark Encounter', 4],
+        ['Mako e Shark Encounter', 'Sesame Street e Waterway Grill', 3],
+        ['Sesame Street e Waterway Grill', 'Orca Stadium', 4],
+        ['Orca Stadium', 'Ice Breaker e Bayside Stadium', 4],
       ],
     },
 
@@ -8313,7 +8382,9 @@ window.ROTEIRO = {
       margem: 'Somem 50% em dia cheio. E ATENÇÃO: não há tempos publicados para conferir. ' +
               'Estes saem das coordenadas do OpenStreetMap, com 30% de desvio sobre a linha ' +
               'reta e passo de 75 metros por minuto. A volta inteira dá uns 32 minutos. O trem ' +
-              'e o teleférico cortam caminho, mas não entram no grafo.',
+              'não entra no grafo. O Skyride entra, como a aresta Stanleyville–Edge of Africa ' +
+              'de 5 minutos, que o dia 24 usa às 16h05: se o teleférico estiver parado por ' +
+              'vento, a pé são 14.',
       arestas: [
         ['Morocco', 'Edge of Africa', 2],
         ['Edge of Africa', 'Egypt', 3],
@@ -8324,6 +8395,7 @@ window.ROTEIRO = {
         ['Congo', 'Jungala', 2],
         ['Jungala', 'Stanleyville', 3],
         ['Pantopia', 'Stanleyville', 4],
+        ['Stanleyville', 'Edge of Africa', 5],
         ['Stanleyville', 'Sesame Street', 5],
         ['Sesame Street', 'Bird Gardens', 3],
         ['Bird Gardens', 'Morocco', 6],
@@ -8571,6 +8643,12 @@ window.ROTEIRO = {
         'socorros, com enfermeiro, ar-condicionado e remédio básico de graça. Peçam ' +
         '“First Aid” a qualquer funcionário — eles levam vocês. Para emergência ' +
         'de verdade, 911 de qualquer celular, inclusive sem chip americano.\n\n' +
+        'ONDE FICA O POSTO, pelos mapas oficiais: Magic Kingdom, na Main Street, ao lado do ' +
+        'Crystal Palace · Animal Kingdom, na Discovery Island, junto da ponte do Oasis · ' +
+        'Hollywood Studios, na entrada, à direita · Epcot, no Odyssey, entre o Test Track e o ' +
+        'México · Universal Studios, na entrada e em New York · Islands, no Port of Entry e na ' +
+        'Lost Continent, ao lado do Mythos · Epic, na entrada, à direita · SeaWorld, atrás da ' +
+        'Stingray Lagoon, perto da entrada · Busch Gardens, na entrada, no Morocco.\n\n' +
         'FORA DO PARQUE, PARA O QUE NÃO É EMERGÊNCIA — febre, torção, corte, dor de ouvido, ' +
         'virose — o caminho é Urgent Care, não pronto-socorro. A mais perto é a Centra Care ' +
         'de Celebration, a uns 2 km do hotel, até as 20h (17h no fim de semana). Depois ' +

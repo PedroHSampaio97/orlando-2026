@@ -55,17 +55,17 @@ No Islands, o Hagrid's saiu do Express em julho de 2026 — vocês pagariam e ai
 | **9h40** | **Piratas do Caribe** | Standby. Adventureland fica ao lado |
 | **10h15** | **Jungle Cruise** | Standby. Também lista alta, também de graça antes das 11h |
 | **11h00** | **Mansão Mal-Assombrada** | Multi Pass. **Ao sair, reservem o Space Mountain** |
-| **11h35** | **Parada — água, banheiro e sentar** | 15 min |
+| **11h35** | **Parada — água, banheiro e sentar** | 15 min. Banheiro ao lado do Columbia Harbour House |
 | **11h50** | **Almoço — Columbia Harbour House** | Balcão, mobile order, segundo andar. 11h50 evita o pico |
 | **12h45** | **it's a small world** | Standby. Capacidade alta, a fila anda |
 | **13h20** | **Peter Pan's Flight** | Multi Pass. A única lista alta que vale gastar passe |
 | **13h50** | **Mickey's PhilharMagic** | Standby. 12 min, ar-condicionado |
-| **14h10** | **Parada** | Antes do miolo tático do dia |
+| **14h10** | **Parada** | Antes do miolo tático do dia. Banheiro atrás da torre da Rapunzel, a caminho da Liberty Square |
 | **14h25** | **Posicionar na LIBERTY SQUARE** | Não na Main Street. O motivo está na linha seguinte |
 | **15h00** | **Festival of Fantasy Parade** | Da Liberty Square, que é o começo da rota |
 | **15h12** | **Atravessar para a Tomorrowland** | Por Fantasyland, por trás da rota. Não pelo hub |
 | **15h30** | **TRON Lightcycle / Run** | A janela do desfile. Se marcar +60 min, saiam e voltem às 21h25 |
-| **16h25** | **Parada** | |
+| **16h25** | **Parada** | Banheiro ao lado do Cosmic Ray's |
 | **16h40** | **Space Mountain** | Multi Pass rolando |
 | **17h15** | **Buzz Lightyear** | Multi Pass |
 | **17h55** | **Jantar — Casey's Corner** | Mesas de fora, de frente para o pianista |
@@ -102,6 +102,8 @@ ou com dois Single Pass.*
 
 > **Por que o dia vai até as 22h.** Os fogos são às 20h e o parque fecha às 22h. A multidão vai embora às 20h25 e sobram **duas horas de fila curta** — é nelas que cabem o Seven Dwarfs (média de 80 minutos o dia inteiro) e a segunda chance do TRON. Dá para esticar porque o dia 12 não tem alarme.
 
+> **Há um desfile noturno**, o Disney Starlight: Dream the Night Away, na mesma rota do das 15h. A hora dele em 11/11 está nas pendências: se rodar perto das 21h, a Main Street estará tomada na saída das 22h — e o Seven Dwarfs e o TRON ficam ainda mais vazios enquanto ele passa.
+
 > **Monotrilho na ida, ferry na volta.** Depois dos fogos e no fechamento, a fila do monotrilho passa de 20 a 30 minutos porque todo mundo vai por padrão para ela. No fechamento a Disney opera os três barcos, cada um leva centenas de pessoas de uma vez, e a fila some em bloco.
 
 > **Sobre as três paradas:** elas não são enfeite. Sem elas o dia emenda atração atrás de atração desde as 9h, sem banheiro, sem sentar e sem encher a garrafa. Um dia sem folga nenhuma não é um dia otimizado, é uma conta que não fecha. Toda land tem banheiro, normalmente ao lado do maior balcão de comida, e qualquer balcão dá copo de água gelada de graça.
@@ -137,13 +139,13 @@ Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's
 | **8h40** | **Expedition Everest** | Walk-on pelo mesmo motivo |
 | **9h15** | **Kali River Rapids** | **Opcional — molha de verdade.** A decisão é a temperatura |
 | **9h50** | **Maharajah Jungle Trek** | Trilha. Tigres. Sem fila, e serve para secar |
-| **10h35** | **Parada** | Já na África, depois da caminhada |
+| **10h35** | **Parada** | Já na África, depois da caminhada. Banheiro ao lado do Tusker House |
 | **10h50** | **Gorilla Falls** | Trilha. Ritmo lento de propósito |
 | **11h30** | **Festival of the Lion King** | **Chegar 11h30 para o show de 11h50.** Os 20 min estão dentro do bloco |
 | **12h30** | **Almoço — Satu'li Canteen** | Mobile order, pedido durante o show |
 | **13h40** | **Discovery Island Trails** | Trilhas em volta da Árvore da Vida. Quase ninguém faz |
 | **14h25** | **Nomad Lounge** | O descanso do dia. Varanda, drink, ventilador |
-| **15h25** | **Parada** | **Confiram a que horas o safári fecha.** A reta final depende disso |
+| **15h25** | **Parada** | **Confiram a que horas o safári fecha.** A reta final depende disso. Banheiro junto do Flame Tree Barbecue |
 | **15h45** | **Expedition Everest de novo** | **Opcional — e é a margem da reta final.** Atrasou? Pulem sem pensar |
 | **16h30** | **Kilimanjaro Safaris DE NOVO** | Ao entardecer. **Os leões acordam** |
 | **17h15** | **Na'vi River Journey** | A fila cede junto com o resto do parque |
@@ -221,16 +223,16 @@ O parque mais difícil da Disney, e o único dos três em que o Single Pass se j
 | **10h45** | **Rise of the Resistance** | Single Pass |
 | **11h35** | **Millennium Falcon: Smugglers Run** | Standby. **Peçam para ser PILOTOS** |
 | **12h20** | **Almoço — Docking Bay 7** | Mobile order, pedido na fila do Falcon |
-| **13h20** | **Parada** | E a travessia mais longa do dia: 13 min até a Sunset Blvd |
+| **13h20** | **Parada** | E a travessia mais longa do dia: 13 min até a Sunset Blvd. Banheiro ao lado do Docking Bay 7 |
 | **13h50** | **Rock 'n' Roller Coaster (Muppets)** | Multi Pass · lista alta. **Ao usar, reservem o Runaway Railway** |
 | **14h30** | **Torre do Terror** | Multi Pass · lista baixa |
 | **15h15** | **Mickey & Minnie's Runaway Railway** | Multi Pass rolando. Sem horário, standby |
 | **16h00** | **Star Tours** | Multi Pass · lista baixa. O roteiro muda a cada visita |
-| **16h45** | **Parada** | Comam algo da mochila: o Oga's é bebida, não jantar |
+| **16h45** | **Parada** | Comam algo da mochila: o Oga's é bebida, não jantar. Banheiro ao lado do Docking Bay 7 |
 | **17h00** | **Oga's Cantina** | Reserva. Limite de 45 min por grupo |
 | **18h00** | **Jantar — Sci-Fi Dine-In** | Reserva. Vocês sentam dentro de um carro dos anos 50 |
 | **19h25** | **Sunset Blvd** — Natal e compras | **É o momento de compra do dia.** As lojas fecham com o parque |
-| **19h45** | Posição para o Fantasmic! | Meio e um pouco atrás. As primeiras fileiras molham |
+| **19h45** | Posição para o Fantasmic! | Meio e um pouco atrás. O teatro abre às 18h30; as primeiras fileiras molham |
 | **20h00** | **Fantasmic!** | ~26 min. O parque fecha às 21h; a hora do show ainda não saiu |
 | **20h35** | Voltar ao hotel | Uber, ~30 min, US$ 22–32. Amanhã sai às 7h45 |
 
@@ -255,11 +257,11 @@ O parque mais difícil da Disney, e o único dos três em que o Single Pass se j
 > **As duas reservas ainda não existem.** A janela do Oga's e do Sci-Fi abre em **16/09**, e os horários acima são proposta: 17h e 18h fazem a tarde caber sem correria e deixam 20 minutos de Sunset Blvd antes do show. Se conseguirem outros, os blocos da noite acompanham.
 
 ### Renúncias
-Disney Junior, Frozen Sing-Along, Vacation Fun, Lightning McQueen's Racing Academy, Walt Disney Presents, Beauty and the Beast Live on Stage.
+Disney Junior, Frozen Sing-Along, Vacation Fun, Walt Disney Presents, Beauty and the Beast Live on Stage e Disney Villains: Unfairly Ever After — o show de 18 minutos da Sunset Blvd cairia na janela da tarde em que o Multi Pass está girando.
 
 **The Magic of Disney Animation** abre em 14/09/2026, mas não é atração de fila: é aula de desenho com um animatrônico do Olaf, encontros com personagens e um teatro. Sem interesse para vocês, e ocuparia a janela do Star Tours.
 
-**Renúncia por idioma:** Indiana Jones Epic Stunt Spectacular é visual, mas tem muito texto falado entre as cenas. Se o dia atrasar, é o primeiro a cair.
+**Renúncia por idioma:** Indiana Jones Epic Stunt Spectacular é visual, mas tem muito texto falado entre as cenas. Se o dia atrasar, é o primeiro a cair. A Little Mermaid — A Musical Adventure, 18 minutos cantados e falados em inglês, cai pelo mesmo teste.
 
 **Fechado:** Muppet*Vision 3D fechou em 08/06/2025, junto com o PizzeRizzo e o Muppets Courtyard inteiro, para dar lugar à Monstropolis — a land de Monsters, Inc. prevista para 2027.
 
@@ -284,7 +286,7 @@ Meio dia de parque e meio de festival. A manhã resolve as filas; a partir das 1
 | **10h20** | **Guardians: Cosmic Rewind** | Single Pass |
 | **11h15** | **Soarin' Across America** | Multi Pass · lista baixa. Filme novo desde maio de 2026 |
 | **12h00** | **The Seas e Living with the Land** | Fila curta, ar-condicionado |
-| **12h40** | **Parada** | A partir daqui o dia muda de natureza |
+| **12h40** | **Parada** | A partir daqui o dia muda de natureza. Banheiro dentro do The Land, junto do Sunshine Seasons |
 | **13h00** | **World Showcase — México** | Sentido horário |
 | **13h20** | **Gran Fiesta Tour** | Barquinho dentro da pirâmide. Fila mínima |
 | **13h40** | **Frozen Ever After** | Multi Pass · lista alta |
@@ -338,7 +340,7 @@ O parque de rua, não de castelo: quarteirões de Nova York e São Francisco mon
 | Hora | O quê | Como |
 |---|---|---|
 | **7h45** | Sair do hotel | 30–35 min de Kissimmee. Uber US$ 25–35 |
-| **8h30** | Portão | Meia hora antes. **Não parem na Production Central** — ela entope no rope drop |
+| **8h30** | Portão | Meia hora antes. **Não parem na Minion Land**, à esquerda da catraca — ela entope no rope drop |
 | **9h00** | **Escape from Gringotts** | Rope drop. Locker obrigatório |
 | **9h50** | **Transformers: The Ride 3D** | Walk-on na 1ª hora, 30 min na 2ª. A janela fecha às 11h |
 | **10h30** | **Revenge of the Mummy** | Locker obrigatório, sem detector de metal |
@@ -373,6 +375,8 @@ O roteiro assume **17h30**, mas em anos anteriores ele rodou tanto às 17h30 qua
 
 A temporada de Natal da Universal vai de **14/11 a 03/01**. Vocês pegaram a primeira noite dela no Islands, no dia 14.
 
+**O CineSational**, show noturno da lagoa, costuma rodar no fechamento — que é a hora em que vocês saem. Se estiver na grade de 17/11, é decidir antes: ficar para ele custa a saída no pico. Está na pendência de 01/11.
+
 ### Três atrações que não existem mais
 
 Nenhuma delas é escolha de vocês:
@@ -383,7 +387,7 @@ Nenhuma delas é escolha de vocês:
 
 ### Renúncias
 
-Race Through New York (Jimmy Fallon), Kang & Kodos, DreamWorks Land (infantil), Animal Actors e DreamWorks Imagination Celebration (shows falados em inglês). Hogwarts Express fica para o **dia 23**, quando dá para fazer ida e volta.
+Race Through New York (Jimmy Fallon), Kang & Kodos, DreamWorks Land (infantil), Animal Actors, DreamWorks Imagination Celebration e o Horror Make-Up Show (shows falados em inglês). Hogwarts Express fica para o **dia 23**, quando dá para fazer ida e volta.
 
 *O Bourne Stuntacular passou no teste do idioma porque é ação de ponta a ponta e a trama cabe numa frase.*
 
@@ -470,22 +474,22 @@ As montanhas-russas grandes e o simulador novo até as 15h30, os animais e o Orc
 |---|---|---|
 | **7h45** | Sair do hotel de carro — ~20 min, estacionamento US$ 37 | |
 | **8h15** | Portão | |
-| **9h00** | **Pipeline** — rope drop. De pé numa prancha, lançados a 96 km/h | Port of Entry |
-| **9h35** | **Ice Breaker** — lançamentos para frente e para trás | Sea of Power |
-| **10h05** | **Expedition Odyssey: Fire & Ice** — a maior fila do parque. Belugas e morsas no fim | Sea of Power |
-| **11h05** | **Mako** — a mais alta e rápida de Orlando | Sea of Mystery |
-| **11h40** | **Shark Encounter** — túnel dentro do tanque | Sea of Mystery |
-| **12h05** | **Penguin Trek** — termina no hábitat dos pinguins | Sea of Ice |
-| **12h55** | **Almoço — Voyager's Smokehouse** — plano de refeição | Sea of Delight |
-| **13h50** | **Kraken** — sem piso, sete inversões | Sea of Legends |
-| **14h20** | **Journey to Atlantis** — molha bastante | Sea of Legends |
-| **15h00** | **Manta** — de bruços, rasando a água | Sea of Shallows |
-| **15h35** | Tartarugas, golfinhos e arraias | Sea of Shallows |
-| **16h20** | Pausa e lanche — plano de refeição | Sea of Delight |
+| **9h00** | **Pipeline** — rope drop. De pé numa prancha, lançados a 96 km/h | Entrada e Pipeline |
+| **9h35** | **Ice Breaker** — lançamentos para frente e para trás | Ice Breaker e Bayside Stadium |
+| **10h05** | **Expedition Odyssey: Fire & Ice** — a maior fila do parque. Belugas e morsas no fim | Ice Breaker e Bayside Stadium |
+| **11h05** | **Mako** — a mais alta e rápida de Orlando | Mako e Shark Encounter |
+| **11h40** | **Shark Encounter** — túnel dentro do tanque | Mako e Shark Encounter |
+| **12h05** | **Penguin Trek** — termina no hábitat dos pinguins | Penguin Trek |
+| **12h55** | **Almoço — Voyager's Smokehouse** — plano de refeição | Waterfront e Sky Tower |
+| **13h50** | **Kraken** — sem piso, sete inversões | Kraken e Atlantis |
+| **14h20** | **Journey to Atlantis** — molha bastante | Kraken e Atlantis |
+| **15h00** | **Manta** — de bruços, rasando a água | Manta e Dolphin Stadium |
+| **15h35** | Tartarugas, golfinhos e arraias | Manta e Dolphin Stadium |
+| **16h20** | Pausa e lanche — plano de refeição. Banheiro junto do Sky Tower. Há um Chick-fil-A perto do Orca Stadium, fora do plano | Waterfront e Sky Tower |
 | **17h10** | **Orca Encounter** — sessão das 17h30, a confirmar | Estádio do Orca |
-| **18h05** | **Jantar — Waterway Grill** — plano de refeição. É onde fica o Papai Noel | Sea of Fun |
+| **18h05** | **Jantar — Waterway Grill** — plano de refeição. É onde fica o Papai Noel | Sesame Street e Waterway Grill |
 | **19h10** | **Winter Wonderland on Ice** — horário a confirmar | Bayside Stadium |
-| **20h00** | **Sea of Trees** e o Waterfront aceso | Sea of Delight |
+| **20h00** | **Sea of Trees** e o Waterfront aceso | Waterfront e Sky Tower |
 | **21h00** | **Holiday Reflections** — fogos no fechamento | Lagoa |
 | **21h15** | Saída — hotel por volta das 22h | |
 
@@ -556,7 +560,8 @@ Só de carro, 1h25 de cada lado. Cinco montanhas-russas e a torre de queda até 
 | **13h20** | **Almoço — Zambia Smokehouse** — plano de refeição | Stanleyville |
 | **14h20** | **Tigris** — três lançamentos, 100 km/h | Stanleyville |
 | **14h55** | Serengeti Express — o trem pela planície dos animais | Stanleyville |
-| **15h40** | Pausa e lanche — plano de refeição | Stanleyville |
+| **15h40** | Pausa e lanche — plano de refeição. Banheiro ao lado da estação do trem | Stanleyville |
+| **16h05** | **Skyride** — teleférico de Stanleyville ao Edge of Africa, por cima do parque. Parado por vento, a pé são 14 min | Stanleyville → Edge of Africa |
 | **16h20** | **Christmas on Ice** — horário a confirmar | Morocco |
 | **17h20** | **Jantar — Dragon Fire Grill & Pub** — salão de balcão, plano de refeição | Pantopia |
 | **18h25** | **Show de luzes no Serengeti** e o parque aceso | Pantopia |
@@ -616,7 +621,7 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [x] **11/09** — Lombard’s Seafood Grille (17/11, 18h45) — RESERVADO, confirmação 639247504692187392
 - [x] **11/09** — Atlantic (19/11, 17h) — RESERVADO, confirmação 639247233607631616
 - [x] **12/09** — Magic Kingdom — sem reserva: almoço e jantar do dia 11 são de balcão (Columbia Harbour House e Casey’s)
-- [ ] **13/09** — Magic Kingdom 11/11: falta só a hora do Festival of Fantasy *(data estimada)*
+- [ ] **13/09** — Magic Kingdom 11/11: falta a hora do Festival of Fantasy e do desfile noturno *(data estimada)*
 - [ ] **14/09, 6h ET** — Reservar Sanaa para o jantar de 13/11 (janela de 60 dias)
 - [x] **14/09** — Animal Kingdom 13/11 — 8h às 18h, confirmado (Early Entry 7h30)
 - [ ] **15/09** — Confirmar com a agência a regra exata de validade do ingresso Disney de 4 dias *(data estimada)*
@@ -640,7 +645,7 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 
 **Novembro, antes de embarcar**
 - [ ] **01/11** — Horário do Epic Universe em 19/11 — abertura, FECHAMENTO e shows de Natal *(data estimada)*
-- [ ] **01/11** — Confirmar horário do Grinchmas (14/11), do desfile da Macy’s (17/11) e do Fantasmic! (15/11) — e o fechamento do parque em 17/11 *(data estimada)*
+- [ ] **01/11** — Confirmar horário do Grinchmas (14/11), do desfile da Macy’s (17/11), do Fantasmic! (15/11) e do CineSational (17/11) — e o fechamento do parque em 17/11 *(data estimada)*
 - [ ] **05/11** — Cadastrar no Simon VIP Club para o cupom do outlet sair de graça *(data estimada)*
 - [ ] **05/11** — Reserva do Travelodge salva OFFLINE nos dois celulares
 - [ ] **05/11** — Apólice do seguro salva OFFLINE nos dois celulares, e banco avisado
