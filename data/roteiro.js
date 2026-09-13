@@ -117,7 +117,7 @@ window.ROTEIRO = {
     { n: 7, momento: 'todo-dia', titulo: 'Peçam água gelada de graça em todo balcão.',
       texto: 'Todo balcão de comida rápida da Disney e da Universal dá um copo de água gelada ' +
              'sem cobrar — é só pedir "a cup of ice water". A garrafa lá dentro custa US$ 4 a ' +
-             '6. Com a garrafa reutilizável da lista do Walmart, vira reabastecimento o dia ' +
+             '6. Com os dois soft flasks de 500 ml da mochila, vira reabastecimento o dia ' +
              'inteiro.',
       pesquisa: '2026-09-10' },
   ],
@@ -418,14 +418,14 @@ window.ROTEIRO = {
           { id: 'agua', secao: 'Bebidas', essencial: true,
             texto: 'Água — caixa de 24 garrafas',
             marca: 'Great Value Purified Water', alternativaBarata: null,
-            motivo: 'Duas garrafas por pessoa nos dias de parque, completadas com a água gelada ' +
-                    'grátis dos balcões. Não paguem por Dasani nem Aquafina: é a mesma água ' +
-                    'purificada. Com a garrafa reutilizável da seção Casa, 24 bastam.' },
+            motivo: 'Para o quarto e para encher os dois soft flasks antes de sair; no parque, a ' +
+                    'água gelada grátis dos balcões completa. Não paguem por Dasani nem Aquafina: é a ' +
+                    'mesma água purificada. 24 bastam.' },
           { id: 'isotonico', secao: 'Bebidas', essencial: true,
             texto: 'Isotônico',
             marca: 'Gatorade Zero', alternativaBarata: 'em pó: Propel Powder Packets',
             motivo: 'Doze horas em pé desidratam mais do que parece. O Zero não tem açúcar e ' +
-                    'não empapuça. O pó ocupa menos espaço: um sachê na garrafa reutilizável.' },
+                    'não empapuça. O pó ocupa menos espaço: um sachê num dos soft flasks.' },
           { id: 'cafe', secao: 'Bebidas', essencial: false,
             texto: 'Café — para a cafeteira do quarto',
             marca: 'Dunkin’ Original Blend moído, ou Dunkin’ K-Cups', alternativaBarata: 'Folgers',
@@ -552,12 +552,6 @@ window.ROTEIRO = {
             marca: 'Anker', alternativaBarata: 'onn.',
             motivo: 'Um cabo a mais resolve o dia em que um resolver morrer.' },
 
-          { id: 'garrafa', secao: 'Casa', essencial: true,
-            texto: 'Garrafa reutilizável — uma por pessoa',
-            marca: 'Owala FreeSip 24oz', alternativaBarata: 'Contigo Autoseal',
-            motivo: 'É o que transforma a regra de ouro 7 em economia de verdade: sem garrafa, a ' +
-                    'água gelada grátis vira um copinho bebido na hora; com garrafa, vira ' +
-                    'reabastecimento o dia inteiro.' },
           { id: 'utensilios', secao: 'Casa', essencial: false,
             texto: 'Tigela de micro-ondas, talheres e guardanapos',
             marca: null, alternativaBarata: 'versão descartável',
@@ -669,8 +663,8 @@ window.ROTEIRO = {
                   'balcão. Com mobile order vocês pulam a fila; sem cartão salvo, não pulam.' },
 
         { texto: 'Mochila montada e deixada na porta', critico: true,
-          motivo: 'Duas garrafas de água, barrinhas, protetor solar, power bank e cabo — ' +
-                  'tudo comprado hoje no Walmart. Montar hoje evita abrir mala às 6h.\n\n' +
+          motivo: 'Os dois soft flasks cheios com a água do fardo, barrinhas, protetor solar, ' +
+                  'power bank e cabo. Montar hoje evita abrir mala às 6h.\n\n' +
                   'E UMA CAMADA LEVE PARA CADA UM. Amanhã vocês saem às 6h45 com uns 15°C, ' +
                   'ao meio-dia faz 27 e às 20h, parados na Main Street esperando os fogos, ' +
                   'volta para 16. A camada sai vestida, passa a tarde na mochila e volta ' +
@@ -796,8 +790,8 @@ window.ROTEIRO = {
         descricao: '4 min, US$ 7–10. Fardo de água não vai para o Disney Springs',
         contexto:
           'Esta volta existe por um motivo só: ninguém anda pelo Disney Springs com uma ' +
-          'caixa de 24 garrafas. Guardem tudo, separem só o que vai para o dia 11 — duas ' +
-          'garrafas, protetor solar e barrinhas na mochila — e saiam de novo.\n\n' +
+          'caixa de 24 garrafas. Guardem tudo, separem só o que vai para o dia 11 — os soft ' +
+          'flasks cheios, protetor solar e barrinhas na mochila — e saiam de novo.\n\n' +
           'Essa ida e volta custa ~US$ 16 no total e come 8 minutos de carro.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 5 },
 
@@ -1116,7 +1110,7 @@ window.ROTEIRO = {
           'Main Street, e façam a foto do castelo antes de a praça encher. Depois, para a ' +
           'corda.\n\n' +
           'Água: qualquer balcão de comida do parque dá copo de água gelada de graça, é ' +
-          'só pedir. Não comprem garrafa a US$ 4 lá dentro — recarreguem as de vocês.\n\n' +
+          'só pedir. Não comprem garrafa a US$ 4 lá dentro — recarreguem os soft flasks de vocês.\n\n' +
           'PONTO DE ENCONTRO DE HOJE: o coreto da Town Square, logo depois da catraca. Se ' +
           'vocês se perderem, vão para lá e ESPEREM — não saiam procurando. Combinem isso ' +
           'antes de a corda soltar.',
@@ -1179,7 +1173,7 @@ window.ROTEIRO = {
         descricao: 'Quinze minutos. Banheiro ao lado do Columbia Harbour House, onde é o almoço',
         contexto:
           'Vocês estão de pé desde as 5h45 e vieram emendando desde as 9h. Banheiro, ' +
-          'encher as garrafas num balcão de comida (a água gelada é de graça, é só ' +
+          'encher os flasks num balcão de comida (a água gelada é de graça, é só ' +
           'pedir) e sentar num banco.\n\n' +
           'Toda land tem banheiro, normalmente ao lado do maior balcão de comida — ' +
           'vocês nunca estão a mais de dois minutos de um. Não vale a pena procurar ' +
@@ -1238,7 +1232,7 @@ window.ROTEIRO = {
         descricao: 'Antes do desfile. Banheiro atrás da torre da Rapunzel, a caminho da Liberty Square',
         contexto:
           'Os próximos noventa minutos são o miolo tático do dia: desfile, travessia do ' +
-          'parque e a fila do TRON. Vão para eles com a garrafa cheia e sem fila de ' +
+          'parque e a fila do TRON. Vão para eles com os flasks cheios e sem fila de ' +
           'banheiro pendurada.\n\n' +
           'COMAM ALGUMA COISA DA MOCHILA AGORA. O almoço foi 11h50 e o jantar é 17h55 — ' +
           'são seis horas, com o desfile e a fila do TRON no meio. Barrinha, fruta, o ' +
@@ -1308,8 +1302,8 @@ window.ROTEIRO = {
         titulo: 'Parada — água, banheiro e sentar',
         descricao: 'Saindo do TRON. Banheiro ao lado do Cosmic Ray’s, no caminho do Space Mountain',
         contexto:
-          'Daqui até a saída, às 22h, são mais cinco horas e meia. Banheiro, garrafas ' +
-          'cheias e protetor solar antes de encarar a Main Street lotada.',
+          'Daqui até a saída, às 22h, são mais cinco horas e meia. Banheiro, flasks ' +
+          'cheios e protetor solar antes de encarar a Main Street lotada.',
         areaParque: 'Tomorrowland', acesso: [], duracaoMin: 15 },
 
       { id: 'b-1111-0940', hora: '16:40', ancora: 'fixo', tipo: 'atracao',
@@ -1676,7 +1670,7 @@ window.ROTEIRO = {
                   'vão pular — ganham 35 minutos e não passam o dia com roupa molhada.' },
 
         { texto: 'Mochila remontada e celular carregando', critico: true,
-          motivo: 'O de sempre: duas garrafas de água, barrinhas, protetor solar, power ' +
+          motivo: 'O de sempre: os dois soft flasks cheios, barrinhas, protetor solar, power ' +
                   'bank e cabo.\n\n' +
                   'E TRÊS COISAS SÓ DE AMANHÃ, se vocês forem fazer o Kali River Rapids às ' +
                   '9h15: duas capas de chuva, um saco Ziploc para o celular e um par de ' +
@@ -2133,7 +2127,7 @@ window.ROTEIRO = {
         titulo: 'Parada — água, banheiro e sentar',
         descricao: 'Quinze minutos. Banheiro na Harambe, ao lado do Tusker House',
         contexto:
-          'Banheiro, encher as garrafas num balcão de comida (água gelada de graça, é só ' +
+          'Banheiro, encher os flasks num balcão de comida (água gelada de graça, é só ' +
           'pedir) e sentar.\n\n' +
           'Toda land tem banheiro, normalmente ao lado do maior balcão de comida. Não vale ' +
           'procurar no mapa; vale parar quando o corpo pedir.',
@@ -2202,7 +2196,7 @@ window.ROTEIRO = {
 
       { id: 'b-1311-1545p', hora: '15:25', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — antes da reta final',
-        descricao: 'Garrafas, power bank, o horário do safári. Banheiro junto do Flame Tree Barbecue',
+        descricao: 'Flasks, power bank, o horário do safári. Banheiro junto do Flame Tree Barbecue',
         contexto:
           'A reta final começa agora e é coreografada minuto a minuto.\n\n' +
           'COMAM ALGUMA COISA DA MOCHILA. Os petiscos do Nomad foram às 14h25 e o Sanaa é ' +
@@ -2564,7 +2558,7 @@ window.ROTEIRO = {
           motivo: 'Saída às 7h. Depois de uma noite que termina às 22h, um alarme só falha.' },
         { texto: 'Mochila montada ANTES de sair para a Universal', critico: true,
           motivo: 'Voltando perto das 22h, ninguém monta mochila. Deixem pronta agora, na ' +
-                  'hora do descanso da tarde: garrafas, barrinhas, protetor solar, power ' +
+                  'hora do descanso da tarde: os soft flasks, barrinhas, protetor solar, power ' +
                   'bank, cabo e uma camada leve para cada um.' },
         { texto: 'Reservas do Oga’s Cantina e do Sci-Fi Dine-In à mão',
           motivo: 'Os dois são de horário fixo amanhã. Deixem os números acessíveis no ' +
@@ -2931,7 +2925,7 @@ window.ROTEIRO = {
           motivo: 'O dia 16 assume 9h. Se for outro, mudem a referência e a manhã desloca ' +
                   'junto, inclusive a saída das 7h15.' },
         { texto: 'Mochila remontada e celular carregando', critico: true,
-          motivo: 'Duas garrafas, barrinhas, protetor solar, power bank, cabo e uma camada ' +
+          motivo: 'Os dois soft flasks, barrinhas, protetor solar, power bank, cabo e uma camada ' +
                   'leve para cada um — o Epcot é o parque com mais área aberta, e a World ' +
                   'Showcase à noite esfria.' },
         { texto: 'Guardar as compras da Sunset Blvd',
@@ -3057,7 +3051,7 @@ window.ROTEIRO = {
         titulo: 'Parada — e a travessia mais longa do dia',
         descricao: 'Quinze minutos e treze de caminhada até a Sunset Blvd. Banheiro ao lado do Docking Bay 7',
         contexto:
-          'Banheiro, garrafas cheias e sentar, ainda em Batuu.\n\n' +
+          'Banheiro, flasks cheios e sentar, ainda em Batuu.\n\n' +
           'DEPOIS DAQUI VEM A CAMINHADA MAIS LONGA DO PARQUE: do Galaxy’s Edge até a Sunset ' +
           'Blvd são treze minutos atravessando o parque inteiro, e num dia cheio mais. Ela ' +
           'está contada no relógio — não é atraso, é o mapa.',
@@ -3115,7 +3109,7 @@ window.ROTEIRO = {
         titulo: 'Parada — antes da noite',
         descricao: 'Quinze minutos. Banheiro ao lado do Docking Bay 7; a partir daqui o dia é sentado',
         contexto:
-          'Banheiro, garrafas e power bank. Daqui até a saída são quatro horas, e três delas ' +
+          'Banheiro, flasks e power bank. Daqui até a saída são quatro horas, e três delas ' +
           'são sentadas: Oga’s, Sci-Fi e Fantasmic.\n\n' +
           'COMAM ALGUMA COISA DA MOCHILA se estiverem com fome: o almoço foi 12h20 e o ' +
           'Oga’s serve bebida, não jantar. A comida de verdade só chega às 18h.',
@@ -3423,7 +3417,7 @@ window.ROTEIRO = {
         { texto: 'Alarme para 6h45 nos dois celulares', critico: true,
           motivo: 'Saída às 7h45, e hoje termina perto das 22h30. Um alarme só falha.' },
         { texto: 'Mochila remontada e celular carregando', critico: true,
-          motivo: 'Duas garrafas, barrinhas, protetor solar, power bank, cabo e uma camada ' +
+          motivo: 'Os dois soft flasks, barrinhas, protetor solar, power bank, cabo e uma camada ' +
                   'leve para cada um.\n\n' +
                   'E ATENÇÃO ÀS ATRAÇÕES COM LOCKER OBRIGATÓRIO: a Universal tem dez delas, ' +
                   'com detector de metal em três — Hulk, VelociCoaster e Stardust Racers, ' +
@@ -3551,7 +3545,7 @@ window.ROTEIRO = {
         titulo: 'Parada — antes de virar o dia',
         descricao: 'A partir daqui o Epcot é outro parque. Banheiro dentro do The Land, junto do Sunshine Seasons',
         contexto:
-          'Banheiro, garrafas cheias e sentar.\n\n' +
+          'Banheiro, flasks cheios e sentar.\n\n' +
           'DAQUI PARA A FRENTE O DIA MUDA DE NATUREZA: acabaram as filas e começa o World ' +
           'Showcase, que é comida e caminhada. Não há mais nenhum compromisso de relógio até ' +
           'o Luminous, às 21h.\n\n' +
@@ -3946,7 +3940,7 @@ window.ROTEIRO = {
         titulo: 'Parada — água, banheiro e sentar',
         descricao: 'Dez minutos. Banheiro na New York, perto do Mummy',
         contexto:
-          'Quatro atrações com fila e armário desde as 9h, e o Beco Diagonal só senta no almoço, às 13h15. Encham as garrafas — qualquer balcão dá água gelada de graça — e sentem dez ' +
+          'Quatro atrações com fila e armário desde as 9h, e o Beco Diagonal só senta no almoço, às 13h15. Encham os flasks — qualquer balcão dá água gelada de graça — e sentem dez ' +
           'minutos antes de descer para a Minion Land.',
         areaParque: 'New York', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
 
@@ -4514,8 +4508,8 @@ window.ROTEIRO = {
       itens: [
         { texto: 'Mochila do Epic montada ANTES de sair para o jogo', critico: true,
           motivo: 'Hoje vocês saem só com o bolso e voltam depois das 22h. A mochila ' +
-                  'de amanhã tem de estar pronta em cima da cama quando vocês chegarem: duas ' +
-                  'garrafas, barrinhas, protetor solar, power bank, cabo e capa de chuva.' },
+                  'de amanhã tem de estar pronta em cima da cama quando vocês chegarem: os dois ' +
+                  'soft flasks, barrinhas, protetor solar, power bank, cabo e capa de chuva.' },
         { texto: 'Alarme para 6h15 nos dois celulares', critico: true,
           motivo: 'Saída 7h15. Depois de uma noite que termina 22h15, um alarme só falha.' },
         { texto: 'Conferir o horário de abertura do Epic Universe e ajustar a referência',
@@ -4767,7 +4761,7 @@ window.ROTEIRO = {
         titulo: 'Parada — água, banheiro e sentar',
         descricao: 'Dez minutos, na saída da Dark Universe. O mapa não marca banheiros: perguntem',
         contexto:
-          'Duas montanhas-russas com armário e o Stardust logo em seguida, e o almoço só às 13h05. Sentem no Celestial Park, encham as garrafas, e só então o Stardust.',
+          'Duas montanhas-russas com armário e o Stardust logo em seguida, e o almoço só às 13h05. Sentem no Celestial Park, encham os flasks, e só então o Stardust.',
         areaParque: 'Celestial Park', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
 
       { id: 'b-1911-1030', hora: '10:30', ancora: 'referencia', tipo: 'atracao',
@@ -4882,7 +4876,7 @@ window.ROTEIRO = {
         descricao: 'Água, banheiro, alguma coisa da mochila. O carrossel é se der vontade',
         contexto:
           'A parada antes da reta final, e a reta final é longa: jantar, Ministry e Mine-Cart ' +
-          'emendados até as 21h. Encham as garrafas num balcão de comida — a água gelada é de ' +
+          'emendados até as 21h. Encham os flasks num balcão de comida — a água gelada é de ' +
           'graça — e sentem.\n\n' +
           'O Celestial Park no Natal vira paisagem de inverno, com show natalino nas fontes. O ' +
           'horário do show ainda não saiu.\n\n' +
@@ -5632,7 +5626,7 @@ window.ROTEIRO = {
              'tarde de descanso, antes de sair para o centro — não depois.',
       itens: [
         { texto: 'Mochila do SeaWorld montada ANTES de sair para o jogo', critico: true,
-          motivo: 'Hoje vocês saem só com o bolso e voltam depois das 22h. Duas garrafas, ' +
+          motivo: 'Hoje vocês saem só com o bolso e voltam depois das 22h. Os dois soft flasks, ' +
                   'barrinhas, protetor solar, power bank, cabo e capa de chuva.' },
         { texto: 'Alarme para 6h45 nos dois celulares', critico: true,
           motivo: 'Saída 7h45 e portão às 8h15, 45 minutos antes da abertura. Depois de uma ' +

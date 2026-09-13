@@ -106,7 +106,7 @@ ou com dois Single Pass.*
 
 > **Monotrilho na ida, ferry na volta.** Depois dos fogos e no fechamento, a fila do monotrilho passa de 20 a 30 minutos porque todo mundo vai por padrão para ela. No fechamento a Disney opera os três barcos, cada um leva centenas de pessoas de uma vez, e a fila some em bloco.
 
-> **Sobre as três paradas:** elas não são enfeite. Sem elas o dia emenda atração atrás de atração desde as 9h, sem banheiro, sem sentar e sem encher a garrafa. Um dia sem folga nenhuma não é um dia otimizado, é uma conta que não fecha. Toda land tem banheiro, normalmente ao lado do maior balcão de comida, e qualquer balcão dá copo de água gelada de graça.
+> **Sobre as três paradas:** elas não são enfeite. Sem elas o dia emenda atração atrás de atração desde as 9h, sem banheiro, sem sentar e sem encher os flasks. Um dia sem folga nenhuma não é um dia otimizado, é uma conta que não fecha. Toda land tem banheiro, normalmente ao lado do maior balcão de comida, e qualquer balcão dá copo de água gelada de graça.
 
 > **O desfile corta o parque ao meio** enquanto passa — e é por isso que a travessia das 15h12 vai por Fantasyland, por trás da rota, e nunca pelo hub.
 
@@ -610,7 +610,7 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 
 **6. Single rider quando a fila passar de 45 minutos.** Vocês entram separados e se encontram na saída: custa o andar junto e devolve tempo de fila. Os blocos com o selo "ou single rider" têm essa fila. Três exceções, escritas no próprio bloco: Forbidden Journey e Gringotts, onde a fila é metade da atração, e o Millennium Falcon, onde single rider quase nunca pilota. A fila de single rider abre e fecha ao longo do dia — a placa da entrada manda.
 
-**7. Peçam água gelada de graça em todo balcão.** Todo balcão de comida rápida da Disney e da Universal dá um copo de água gelada sem cobrar — é só pedir "a cup of ice water". A garrafa lá dentro custa US$ 4 a 6. Com a garrafa reutilizável da lista do Walmart, vira reabastecimento o dia inteiro.
+**7. Peçam água gelada de graça em todo balcão.** Todo balcão de comida rápida da Disney e da Universal dá um copo de água gelada sem cobrar — é só pedir "a cup of ice water". A garrafa lá dentro custa US$ 4 a 6. Com os dois soft flasks de 500 ml da mochila, vira reabastecimento o dia inteiro.
 
 ---
 
