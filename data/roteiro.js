@@ -7280,7 +7280,17 @@ window.ROTEIRO = {
           'atração.',
         areaParque: 'Morocco', acesso: ['rope-drop', 'standby'], locker: 'detector',
         duracaoMin: 40,
-        pesquisa: '2026-09-11' },
+        pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Aproveitou a estrutura do Gwazi, montanha-russa de madeira de 1999 fechada ' +
+                   'em 2015, que ganhou trilho de aço da Rocky Mountain Construction. A ' +
+                   'pandemia adiou a inauguração até 11/03/2022.',
+            fonte: 'Wikipedia — Iron Gwazi', pesquisa: '2026-09-15' },
+          { texto: 'Além de a mais alta da América do Norte, é a híbrida mais rápida e mais ' +
+                   'inclinada do mundo, e ganhou o Golden Ticket de melhor montanha-russa ' +
+                   'nova.',
+            fonte: 'Wikipedia — Iron Gwazi', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2411-1045', hora: '10:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Cheetah Hunt',
@@ -7291,7 +7301,12 @@ window.ROTEIRO = {
           'depois da Iron Gwazi, a dois minutos a pé.\n\n' +
           'Nada solto: armário obrigatório.',
         areaParque: 'Edge of Africa', acesso: ['standby'], locker: true, duracaoMin: 45,
-        pesquisa: '2026-09-11' },
+        pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu em 27/05/2011, junto com o Cheetah Run, a área ao lado em que ' +
+                   'guepardos correm numa pista de 67 metros, com vidros para ver de perto.',
+            fonte: 'Wikipedia — Cheetah Hunt', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2411-1135', hora: '11:35', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Montu',
@@ -7302,7 +7317,13 @@ window.ROTEIRO = {
           'e rápida do mundo.\n\n' +
           'Fila média de 12 minutos. Nada solto: armário obrigatório.',
         areaParque: 'Egypt', acesso: ['standby'], locker: true, duracaoMin: 30,
-        pesquisa: '2026-09-11' },
+        pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'O nome é do deus egípcio da guerra, representado com cabeça de falcão. A ' +
+                   'pista mergulha duas vezes em trincheiras abaixo do chão, e ela foi a ' +
+                   'primeira invertida com sete inversões.',
+            fonte: 'Wikipedia — Montu (roller coaster)', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2411-1220', hora: '12:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Falcon’s Fury',
@@ -7313,7 +7334,13 @@ window.ROTEIRO = {
           'São onze minutos a pé do Montu, passando pela Nairobi. Fila média de 7 minutos. Nada ' +
           'solto: armário obrigatório.',
         areaParque: 'Pantopia', acesso: ['standby'], locker: true, duracaoMin: 20,
-        pesquisa: '2026-09-11' },
+        pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu em 02/09/2014, com quatro meses de atraso por problemas nos cabos, e ' +
+                   'foi a primeira torre de queda do mundo com assentos que inclinam de cara ' +
+                   'para o chão.',
+            fonte: 'Wikipedia — Falcon’s Fury', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2411-1240', hora: '12:40', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
@@ -7331,7 +7358,13 @@ window.ROTEIRO = {
           'e uma passagem rente à água que levanta um paredão de spray.\n\n' +
           'Fila média de 10 minutos. Nada solto: armário obrigatório.',
         areaParque: 'Stanleyville', acesso: ['standby'], locker: true, duracaoMin: 30,
-        pesquisa: '2026-09-11' },
+        pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu em 21/05/2005 como a primeira dive coaster da América do Norte e ' +
+                   'ganhou trens sem piso em 2007. O nome vem do shikra, um gavião da Ásia e ' +
+                   'da África que mergulha na vertical atrás da presa.',
+            fonte: 'Wikipedia — SheiKra', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2411-1325', hora: '13:25', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Zambia Smokehouse',
@@ -7352,7 +7385,13 @@ window.ROTEIRO = {
           'com um giro de cabeça para baixo. Curta e intensa.\n\n' +
           'Fila média de 18 minutos. Nada solto: armário obrigatório.',
         areaParque: 'Stanleyville', acesso: ['standby'], locker: true, duracaoMin: 30,
-        pesquisa: '2026-09-11' },
+        pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu em 19/04/2019 como a montanha-russa de lançamento mais alta da ' +
+                   'Flórida, no lugar do Tanganyika Tidal Wave, e reaproveitou até o ' +
+                   'paisagismo do caminho da fila.',
+            fonte: 'Wikipedia — Tigris (roller coaster)', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2411-1455', hora: '14:55', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Serengeti Express',
@@ -7362,7 +7401,12 @@ window.ROTEIRO = {
           'zebras, antílopes e avestruzes soltos. Estações em Stanleyville, Congo e Nairobi.\n\n' +
           'É a parte dos animais do dia, sentados — e a pausa das pernas antes da noite. A ' +
           'duração da volta não é publicada: o bloco assume uns 40 minutos com a espera.',
-        areaParque: 'Stanleyville', acesso: ['standby'], duracaoMin: 40, pesquisa: '2026-09-11' },
+        areaParque: 'Stanleyville', acesso: ['standby'], duracaoMin: 40, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'A planície do Serengeti tem 26 hectares, com manadas soltas de girafas, ' +
+                   'zebras, antílopes e avestruzes.',
+            fonte: 'Busch Gardens; Orlando Informer', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2411-1540', hora: '15:40', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Pausa e lanche',
@@ -8986,7 +9030,20 @@ window.ROTEIRO = {
       lat: 28.0375, lng: -82.4225, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 85, tempoFonte: 'estimado',
                  uberUSD: null, uberFonte: null },
-      nota: 'Só de carro: 109 km, 1h25 sem trânsito. Estacionamento US$ 32 mais imposto.' },
+      nota: 'Só de carro: 109 km, 1h25 sem trânsito. Estacionamento US$ 32 mais imposto.',
+      historia: {
+        linhas: [
+          'Abriu em 01/06/1959, de graça, como jardim da cervejaria Anheuser-Busch em ' +
+          'Tampa, com 36 mil plantas, 300 árvores e cerveja grátis para os visitantes.',
+          'Os animais africanos vieram depois, e a partir de 1976 o parque se chamou The ' +
+          'Dark Continent.',
+          'Em 2009 a cervejaria, já parte da AB InBev, vendeu os parques para o fundo ' +
+          'Blackstone. Hoje o Busch e o SeaWorld são da United Parks & Resorts.',
+          'A cerveja grátis acabou em 2009 e voltou só em temporadas de verão. Em 2026 foi ' +
+          'de 22/05 a 09/08 — em novembro não tem.',
+        ],
+        fontes: 'Wikipedia — Busch Gardens Tampa Bay; Busch Gardens', pesquisa: '2026-09-15',
+      } },
 
     { id: 'premium-outlets', nome: 'Orlando International Premium Outlets', tipo: 'compras',
       lat: 28.4750673, lng: -81.4514825, verificado: true, fonteCoord: 'osm', endereco: '4951 International Dr',
