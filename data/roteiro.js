@@ -3100,7 +3100,7 @@ window.ROTEIRO = {
     /* --------------------------------------------------------------------- */
     naoPerca: [
       { nome: 'Fantasmic!', quando: 'hoje', custo: 'incluso no ingresso',
-        motivo: 'Fogo, água, barcos, projeção em cortina de água e um dragão de vinte ' +
+        motivo: 'Fogo, água, barcos, projeção em cortina de água e um dragão de uns doze ' +
                 'metros. É o show mais antigo e mais querido do parque, e é o fecho do dia. ' +
                 'Sentem no meio e um pouco atrás: de perto a projeção se perde e as ' +
                 'primeiras fileiras molham.' },
@@ -3194,7 +3194,15 @@ window.ROTEIRO = {
           'vão para lá e ESPEREM — não saiam procurando.\n\n' +
           'Café da manhã aqui, das barrinhas da mochila, e a foto da Hollywood Blvd com o ' +
           'Chinese Theater no fundo, no caminho, antes de a rua encher. O almoço é 12h20.',
-        localId: 'hollywood-studios', acesso: [], duracaoMin: 60, pesquisa: '2026-09-12' },
+        localId: 'hollywood-studios', acesso: [], duracaoMin: 60, pesquisa: '2026-09-12',
+        curiosidades: [
+          { texto: 'O Chinese Theatre no fim da avenida é uma réplica em tamanho real do ' +
+                   'Grauman’s Chinese Theatre, de Hollywood. Por dentro, desde 2020, funciona ' +
+                   'o Runaway Railway.',
+            fonte: 'Wikipedia — Disney’s Hollywood Studios; Wikipedia — Mickey & Minnie’s Runaway Railway', pesquisa: '2026-09-15' },
+          { texto: 'A torre da entrada recria a Crossroads of the World, marco de Los Angeles.',
+            fonte: 'Wikipedia — Disney’s Hollywood Studios', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1511-1115', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Slinky Dog Dash — rope drop',
@@ -3211,7 +3219,16 @@ window.ROTEIRO = {
         areaParque: 'Toy Story Land', acesso: ['rope-drop', 'standby'], critico: true,
         duracaoMin: 40,
         fila: { min: 40, quando: 'no rope drop', pico: 97, estimado: true, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'O Toy Story Land de Orlando é o maior da Disney. A ideia é que vocês ' +
+                   'encolheram ao tamanho de um brinquedo no quintal do Andy — por isso as ' +
+                   'cercas de Lincoln Logs, os Tinkertoys e as pegadas gigantes do Andy no ' +
+                   'chão.',
+            fonte: 'Wikipedia — Toy Story Land', pesquisa: '2026-09-15' },
+          { texto: 'No fim do percurso, um Wheezy animatrônico canta para quem passa.',
+            fonte: 'Wikipedia — Toy Story Land', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1511-1545', hora: '09:40', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Toy Story Mania',
@@ -3221,7 +3238,12 @@ window.ROTEIRO = {
           'pontuação. Puxem o gatilho o mais rápido possível: a pontuação premia volume de ' +
           'tiros, não pontaria.',
         areaParque: 'Toy Story Land', acesso: ['standby'], duracaoMin: 35,
-        fila: { min: 25, quando: 'de manhã', pico: 55, estimado: true, fonte: '2026-09-10' } },
+        fila: { min: 25, quando: 'de manhã', pico: 55, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'Abriu em 31/05/2008, em outra área do parque, e ganhou esta entrada nova ' +
+                   'quando o Toy Story Land abriu, em 2018.',
+            fonte: 'Wikipedia — Toy Story Midway Mania!; Wikipedia — Toy Story Land', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1511-1145', hora: '10:15', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Alien Swirling Saucers',
@@ -3250,7 +3272,14 @@ window.ROTEIRO = {
           'anda. Vocês sairiam por volta das 21h40, e o dia 16 é Epcot com saída às 7h15.',
         areaParque: 'Galaxy’s Edge', acesso: ['single-pass'], critico: true, duracaoMin: 50,
         fila: { min: 10, quando: 'com o Single Pass', pico: 100, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'Abriu em 05/12/2019, dura 18 minutos e tem 65 animatrônicos.',
+            fonte: 'Wikipedia — Star Wars: Rise of the Resistance', pesquisa: '2026-09-15' },
+          { texto: 'No hangar há dois AT-ATs de verdade, e um espelho faz parecer que são ' +
+                   'quatro. Os veículos não têm trilho: se guiam por sensores no chão.',
+            fonte: 'Wikipedia — Star Wars: Rise of the Resistance', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1511-0900', hora: '11:35', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Millennium Falcon: Smugglers Run',
@@ -3263,7 +3292,12 @@ window.ROTEIRO = {
           'engenheiro são bem menos interessantes, e é a diferença entre jogar e assistir.',
         areaParque: 'Galaxy’s Edge', acesso: ['standby'], acessoAlt: 'single-rider', duracaoMin: 45,
         acessoAltNota: 'Aqui não: single rider quase sempre vira engenheiro, e este bloco é para pilotar.',
-        fila: { min: 35, quando: 'antes do meio-dia', pico: 65, estimado: true, fonte: '2026-09-10' } },
+        fila: { min: 35, quando: 'antes do meio-dia', pico: 65, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'O Galaxy’s Edge abriu em 29/08/2019, com 14 acres. Batuu é um planeta ' +
+                   'criado para a land, e o Millennium Falcon lá fora é em tamanho real.',
+            fonte: 'Wikipedia — Star Wars: Galaxy’s Edge', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1511-1215', hora: '12:20', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Docking Bay 7',
@@ -3276,7 +3310,12 @@ window.ROTEIRO = {
           'não refeição.\n\n' +
           'QUARENTA MINUTOS, NÃO UMA HORA: o pedido já sai da fila do Falcon, e às 13h vocês ' +
           'andam para o Indiana Jones. Banheiro e flasks aqui mesmo, antes de sair de Batuu.',
-        restauranteId: 'r-docking-bay', areaParque: 'Galaxy’s Edge', acesso: [], duracaoMin: 40 },
+        restauranteId: 'r-docking-bay', areaParque: 'Galaxy’s Edge', acesso: [], duracaoMin: 40,
+        curiosidades: [
+          { texto: 'As placas da land são em aurebesh, o alfabeto de Star Wars, e até a ' +
+                   'Coca-Cola ganhou versão temática.',
+            fonte: 'Wikipedia — Star Wars: Galaxy’s Edge', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1511-1315s', hora: '13:15', ancora: 'fixo', tipo: 'show',
         titulo: 'Indiana Jones Epic Stunt Spectacular',
@@ -3284,8 +3323,8 @@ window.ROTEIRO = {
         contexto:
           'O show de dublês do parque desde 1989: cenas do Caçadores da Arca Perdida ' +
           'refeitas ao vivo, com lutas, quedas, fogo e explosões, e a equipe mostrando entre ' +
-          'uma cena e outra como cada efeito é feito. Antes de começar, escolhem figurantes ' +
-          'na plateia. É o mesmo tipo de espetáculo do Bourne Stuntacular do dia 17.\n\n' +
+          'uma cena e outra como cada efeito é feito. É o mesmo tipo de espetáculo do Bourne ' +
+          'Stuntacular do dia 17.\n\n' +
           'POR QUE AGORA: do Galaxy’s Edge até a Sunset Blvd são treze minutos atravessando o ' +
           'parque, e o teatro fica na Echo Lake, no meio desse caminho. A sessão das 13h15 ' +
           'transforma a travessia em meia hora sentados: seis minutos de Batuu até aqui, sete ' +
@@ -3295,7 +3334,16 @@ window.ROTEIRO = {
           'técnico. Se não houver sessão entre 13h e 13h20, ou se ela for cancelada, sentem ' +
           'dez minutos na Echo Lake, que é o canto mais tranquilo do parque, e sigam.',
         areaParque: 'Echo Lake', acesso: [], duracaoMin: 30, confirmarHorario: true,
-        pesquisa: '2026-09-15' },
+        pesquisa: '2026-09-15',
+        curiosidades: [
+          { texto: 'Estreou em 25/08/1989, com produção executiva de George Lucas.',
+            fonte: 'Wikipedia — Indiana Jones Epic Stunt Spectacular!', pesquisa: '2026-09-15' },
+          { texto: 'No fim de dezembro de 2025, a pedra de 180 kg da primeira cena saiu do ' +
+                   'trilho. Um funcionário se pôs na frente dela para proteger a plateia e se ' +
+                   'feriu; em maio de 2026 ele já tinha voltado ao show, e a cena voltou ' +
+                   'modificada.',
+            fonte: 'Wikipedia — Indiana Jones Epic Stunt Spectacular!; WDWNT; BlogMickey', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1511-0945', hora: '13:55', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Rock ’n’ Roller Coaster (Muppets)',
@@ -3310,7 +3358,13 @@ window.ROTEIRO = {
           'libera a próxima.',
         areaParque: 'Sunset Blvd', acesso: ['multi-pass'], acessoAlt: 'single-rider', duracaoMin: 40,
         fila: { min: 10, quando: 'com o Multi Pass', pico: 75, estimado: true, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'Abriu em 29/07/1999 com o Aerosmith, que ficou até 02/03/2026. Cada ' +
+                   'assento tem cinco alto-falantes, com um subwoofer embaixo, e o carrinho ' +
+                   'agora se chama L.I.M.O.',
+            fonte: 'Wikipedia — Rock ’n’ Roller Coaster', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1511-1315', hora: '14:35', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Torre do Terror',
@@ -3321,7 +3375,17 @@ window.ROTEIRO = {
           'Sensação de estômago forte — se algum dos dois tem medo de queda, é esta e não as ' +
           'montanhas-russas.',
         areaParque: 'Sunset Blvd', acesso: ['multi-pass'], duracaoMin: 40,
-        fila: { min: 10, quando: 'com o Multi Pass', pico: 35, fonte: '2026-09-10' } },
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 35, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'Abriu em 22/07/1994, junto com a Sunset Blvd. Tem 199 pés, só meio pé a ' +
+                   'menos que o Everest. Na história, o raio atinge o hotel em 31/10/1939.',
+            fonte: 'Wikipedia — The Twilight Zone Tower of Terror', pesquisa: '2026-09-15' },
+          { texto: 'O Rod Serling da abertura é imagem real, tirada do episódio “It’s a Good ' +
+                   'Life”, de Além da Imaginação. Desde 2003 as quedas são sorteadas por ' +
+                   'computador, e no meio do passeio o elevador sai do poço e anda na ' +
+                   'horizontal.',
+            fonte: 'Wikipedia — The Twilight Zone Tower of Terror', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1511-1400', hora: '15:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mickey & Minnie’s Runaway Railway',
@@ -3333,7 +3397,12 @@ window.ROTEIRO = {
           'houver horário perto das 15h20, façam no standby — a fila chega a uns 50 minutos ' +
           'no pico.',
         areaParque: 'Hollywood Blvd', acesso: ['multi-pass'], duracaoMin: 40,
-        fila: { min: 10, quando: 'com o Multi Pass', pico: 50, estimado: true, fonte: '2026-09-10' } },
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 50, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'Ocupa o prédio onde funcionava a Great Movie Ride e abriu em 04/03/2020 — ' +
+                   'a primeira atração de passeio da Disney estrelada pelo Mickey.',
+            fonte: 'Wikipedia — Mickey & Minnie’s Runaway Railway', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1511-1630', hora: '16:05', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Star Tours',
@@ -3342,7 +3411,13 @@ window.ROTEIRO = {
           'Simulador de cabine com tela e movimento. O sistema sorteia destinos e ' +
           'personagens a cada sessão, então duas voltas quase nunca são iguais.',
         areaParque: 'Echo Lake', acesso: ['multi-pass'], duracaoMin: 39,
-        fila: { min: 10, quando: 'com o Multi Pass', pico: 45, estimado: true, fonte: '2026-09-10' } },
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 45, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'A versão atual é de 20/05/2011, com 3D e cenas sorteadas, em cerca de ' +
+                   '1.500 combinações. O C-3PO tem a voz e os movimentos do Anthony Daniels, o ' +
+                   'ator dos filmes.',
+            fonte: 'Wikipedia — Star Tours – The Adventures Continue', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1511-1645p', hora: '16:50', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — antes da noite',
@@ -3365,7 +3440,12 @@ window.ROTEIRO = {
           'de caminhada até o Sci-Fi. Se só conseguirem outro horário, ajustem os blocos ' +
           'daqui até o Fantasmic.',
         restauranteId: 'r-ogas', areaParque: 'Galaxy’s Edge', acesso: ['reserva'],
-        duracaoMin: 45 },
+        duracaoMin: 45,
+        curiosidades: [
+          { texto: 'O DJ, R-3X, é o antigo “Capitão Rex”, que pilotava a primeira versão do ' +
+                   'Star Tours.',
+            fonte: 'Wikipedia — Star Wars: Galaxy’s Edge', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1511-1815', hora: '18:00', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Sci-Fi Dine-In',
@@ -3378,7 +3458,14 @@ window.ROTEIRO = {
           'imposto.\n\n' +
           'HORÁRIO FIXO de reserva, também proposta. Janela abre 16/09.',
         restauranteId: 'r-scifi', areaParque: 'Commissary Lane', acesso: ['reserva'],
-        duracaoMin: 78 },
+        duracaoMin: 78,
+        curiosidades: [
+          { texto: 'Abriu em 20/04/1991. Os carros são de fibra de vidro, com cromado e pneu ' +
+                   'de faixa branca, e o loop de trailers dura 47 minutos, com Plan 9 from ' +
+                   'Outer Space e o trailer original de Attack of the 50 Foot Woman. Em menos ' +
+                   'de um ano virou o restaurante mais concorrido do parque.',
+            fonte: 'Wikipedia — Sci-Fi Dine-In Theater Restaurant', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1511-1945', hora: '19:25', ancora: 'fixo', tipo: 'compras',
         titulo: 'Sunset Blvd · decoração de Natal e compras',
@@ -3403,19 +3490,29 @@ window.ROTEIRO = {
           'é trocar a Sunset Blvd das 19h25 por fila.\n\n' +
           'Sentem no MEIO e um pouco atrás, não na frente: o show usa projeção em cortina de ' +
           'água, e de perto demais a imagem se perde. As primeiras fileiras também molham.',
-        areaParque: 'Sunset Blvd', acesso: [], duracaoMin: 15 },
+        areaParque: 'Sunset Blvd', acesso: [], duracaoMin: 15,
+        curiosidades: [
+          { texto: 'O teatro foi construído só para o show e recebe quase 10 mil pessoas, ' +
+                   'contando as que ficam de pé.',
+            fonte: 'Wikipedia — Fantasmic!; Disney Tourist Blog', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1511-2015', hora: '20:00', ancora: 'fixo', tipo: 'show',
         titulo: 'Fantasmic!',
         descricao: '~26 min. O fecho do dia',
         contexto:
           'Espetáculo noturno com fogo, água, barcos, projeção em cortina de água e um ' +
-          'dragão de vinte metros. É o show mais antigo e mais querido do parque.\n\n' +
+          'dragão de uns doze metros. É o show mais antigo e mais querido do parque.\n\n' +
           'HORÁRIO A CONFIRMAR: ele acompanha o fechamento do parque. Com fechamento às 21h ' +
           'costuma ser às 20h; com 22h, às 21h. O roteiro assume 20h. Confiram no app da ' +
           'Disney e ajustem aqui; a posição e a Sunset Blvd, antes dele, se ajustam à mão.',
         areaParque: 'Sunset Blvd', acesso: [], duracaoMin: 35,
-        confirmarHorario: true, pesquisa: '2026-09-10' },
+        confirmarHorario: true, pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'Estreou aqui em 15/10/1998 e ficou fora do ar de março de 2020 a ' +
+                   '03/11/2022.',
+            fonte: 'Wikipedia — Fantasmic!', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1511-2050', hora: '20:35', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel',
@@ -8389,7 +8486,22 @@ window.ROTEIRO = {
       doHotel: { tempoMin: 30, tempoFonte: 'documento',
                  uberUSD: { min: 22, max: 32 }, uberFonte: 'estimado' },
       nota: 'Carona por app: o ponto de encontro fica no ponto dos ônibus fretados, na saída ' +
-            '— está no mapa oficial.' },
+            '— está no mapa oficial.',
+      historia: {
+        linhas: [
+          'Abriu em 01/05/1989 como Disney-MGM Studios. A obra foi acelerada quando a ' +
+          'Universal começou a construir, a poucos quilômetros, o Universal Studios ' +
+          'Florida, com o mesmo tema.',
+          'Foi estúdio de verdade: tinha estúdios de gravação e um estúdio de animação da ' +
+          'Disney, onde foram feitos Mulan e Lilo & Stitch. A animação fechou em 2004.',
+          'Em 07/01/2008 passou a se chamar Disney’s Hollywood Studios.',
+          'O símbolo do parque já foi a Earffel Tower, uma caixa-d’água com orelhas de ' +
+          'Mickey, e depois um chapéu de feiticeiro do Mickey, de 2001 a 2015.',
+          'O Toy Story Land (2018) e o Galaxy’s Edge (2019) refizeram o parque. Em 2024 ele ' +
+          'recebeu 10,3 milhões de visitantes.',
+        ],
+        fontes: 'Wikipedia — Disney’s Hollywood Studios', pesquisa: '2026-09-15',
+      } },
 
     { id: 'epcot', nome: 'Epcot', tipo: 'parque',
       lat: 28.371, lng: -81.55, verificado: true, fonteCoord: 'wikipedia', endereco: null,
