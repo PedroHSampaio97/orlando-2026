@@ -5300,7 +5300,7 @@ window.ROTEIRO = {
           'COMO JOGAR: a mira é com a cabeça — o casco vai para onde vocês olham — e ele sai ' +
           'com o botão do volante. O volante só gira quando aparece uma seta na frente, e isso ' +
           'dá moedas. Cada um vê as próprias moedas no volante, mas quem ganha é o time: são ' +
-          'precisas 100 moedas para vencer o Bowser.\n\n' +
+          'necessárias 100 moedas para vencer o Bowser.\n\n' +
           'POR QUE AGORA: ele é a terceira maior fila do parque, 67 a 78 minutos de média, e a ' +
           'janela menos ruim dele é entre 11h e 12h, quando quem entrou no Early Park Admission ' +
           'já andou nele e seguiu adiante.\n\n' +
@@ -6349,7 +6349,13 @@ window.ROTEIRO = {
           'Altura máxima de 1,98 m. Nada solto: armário de US$ 2 na entrada da fila.',
         areaParque: 'Entrada e Pipeline', acesso: ['rope-drop', 'standby'], locker: true,
         duracaoMin: 30,
-        pesquisa: '2026-09-11' },
+        pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu em 27/05/2023, anunciada como a primeira surf coaster do mundo, e é ' +
+                   'a primeira montanha-russa de pé construída desde 1999. Diferente das ' +
+                   'antigas, o apoio sobe e desce durante o percurso.',
+            fonte: 'Wikipedia — Pipeline: The Surf Coaster', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2211-0935', hora: '09:35', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Ice Breaker',
@@ -6361,7 +6367,12 @@ window.ROTEIRO = {
           'minutos da Pipeline, sai barata.\n\n' +
           'Nada solto: armário de US$ 2 na entrada da fila.',
         areaParque: 'Ice Breaker e Bayside Stadium', acesso: ['standby'], locker: true, duracaoMin: 30,
-        pesquisa: '2026-09-11' },
+        pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu em 18/02/2022 e tem a queda mais inclinada da Flórida: o pico de 28 ' +
+                   'metros passa da vertical, com 100 graus.',
+            fonte: 'Wikipedia — Ice Breaker (roller coaster)', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2211-1005', hora: '10:05', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Expedition Odyssey: Fire & Ice',
@@ -6373,7 +6384,13 @@ window.ROTEIRO = {
           'POR QUE DE MANHÃ: é a maior fila do parque, 46 minutos de média e 81 de pico médio. ' +
           'Como fica ao lado do Ice Breaker, entra no começo do dia sem custar caminhada.\n\n' +
           'Intensidade de família. Altura mínima de 99 cm.',
-        areaParque: 'Ice Breaker e Bayside Stadium', acesso: ['standby'], duracaoMin: 45, pesquisa: '2026-09-11' },
+        areaParque: 'Ice Breaker e Bayside Stadium', acesso: ['standby'], duracaoMin: 45, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'O simulador abriu em 09/05/2025, no lugar do Wild Arctic, e menos de um ' +
+                   'ano depois ganhou a versão Fire & Ice, que termina nas belugas e morsas de ' +
+                   'verdade.',
+            fonte: 'Spectrum News 13; FOX 35 Orlando', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2211-1105', hora: '11:05', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mako',
@@ -6385,7 +6402,13 @@ window.ROTEIRO = {
           'São onze minutos a pé do Expedition Odyssey, passando pelo estádio do Orca. Nada ' +
           'solto: armário de US$ 2 na entrada da fila.',
         areaParque: 'Mako e Shark Encounter', acesso: ['standby'], locker: true, duracaoMin: 30,
-        pesquisa: '2026-09-11' },
+        pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'É a mais alta, a mais rápida e a mais longa de Orlando, com 1,45 km de ' +
+                   'trilho e nove momentos em que o corpo sai do banco. O nome vem do ' +
+                   'tubarão-mako, o mais rápido dos tubarões.',
+            fonte: 'Wikipedia — Mako (roller coaster)', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2211-1135', hora: '11:35', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
@@ -6412,7 +6435,12 @@ window.ROTEIRO = {
           'montanha-russa com aquário.\n\n' +
           'É a segunda maior fila do parque, 35 minutos de média. Levem algo de manga longa: o ' +
           'hábitat é mantido a poucos graus.',
-        areaParque: 'Penguin Trek', acesso: ['standby'], duracaoMin: 40, pesquisa: '2026-09-11' },
+        areaParque: 'Penguin Trek', acesso: ['standby'], duracaoMin: 40, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu em 07/07/2024, no lugar do Antarctica: Empire of the Penguin ' +
+                   '(2013–2020). É da B&M, a mesma fabricante da Mako, do Kraken e da Manta.',
+            fonte: 'Wikipedia — Penguin Trek', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2211-1255', hora: '12:55', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Voyager’s Smokehouse',
@@ -6435,7 +6463,15 @@ window.ROTEIRO = {
           'isso ela fica para depois do almoço.\n\n' +
           'Nada solto: armário de US$ 2 na entrada da fila.',
         areaParque: 'Kraken e Atlantis', acesso: ['standby'], locker: true, duracaoMin: 25,
-        pesquisa: '2026-09-11' },
+        pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Quando abriu, em 2000, era a segunda montanha-russa sem piso mais longa do ' +
+                   'mundo. Tem três mergulhos em túneis subterrâneos, a “toca” do monstro.',
+            fonte: 'Wikipedia — Kraken (roller coaster)', pesquisa: '2026-09-15' },
+          { texto: 'Em 2017 ganhou óculos de realidade virtual, que saíram em 2018 porque ' +
+                   'travavam a fila.',
+            fonte: 'Wikipedia — Kraken (roller coaster)', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2211-1420', hora: '14:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Journey to Atlantis',
@@ -6448,7 +6484,12 @@ window.ROTEIRO = {
           'Fila média de 21 minutos.',
         areaParque: 'Kraken e Atlantis', acesso: ['standby'], molha: true, locker: true,
         duracaoMin: 35,
-        pesquisa: '2026-09-11' },
+        pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu em 17/04/1998, com uma queda de 18 metros. Os efeitos da sereia ' +
+                   'Allura e do cavalo-marinho Hermes foram desligados em 2017.',
+            fonte: 'Wikipedia — Journey to Atlantis', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2211-1500', hora: '15:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Manta',
@@ -6459,7 +6500,13 @@ window.ROTEIRO = {
           'inversões.\n\n' +
           'Fila média de 19 minutos. Nada solto: armário de US$ 2 na entrada da fila.',
         areaParque: 'Manta e Dolphin Stadium', acesso: ['standby'], locker: true, duracaoMin: 30,
-        pesquisa: '2026-09-11' },
+        pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu em 22/05/2009. No giro sobre o lago, jatos de água sobem perto do ' +
+                   'trem para parecer que ele tocou a água, e a fila passa por dez aquários ' +
+                   'com mais de 300 arraias.',
+            fonte: 'Wikipedia — Manta (SeaWorld Orlando)', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2211-1535', hora: '15:35', ancora: 'referencia', tipo: 'livre',
         titulo: 'Tartarugas, golfinhos e arraias',
@@ -6469,7 +6516,13 @@ window.ROTEIRO = {
           'filme e as tartarugas e peixes-boi resgatados, o tanque de arraias e os golfinhos.\n\n' +
           'DOLPHIN ADVENTURES: o show dos golfinhos é no Dolphin Stadium, aqui ao lado. Em 2025 ' +
           'era às 11h e às 15h; se no dia houver sessão perto das 15h30, é aqui que ela cabe.',
-        areaParque: 'Manta e Dolphin Stadium', acesso: [], duracaoMin: 40, pesquisa: '2026-09-11' },
+        areaParque: 'Manta e Dolphin Stadium', acesso: [], duracaoMin: 40, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'O SeaWorld Orlando tem a maior operação de resgate de peixes-boi dos ' +
+                   'Estados Unidos, e a rede já passou de 43 mil animais resgatados em mais de ' +
+                   '60 anos.',
+            fonte: 'SeaWorld; PR Newswire', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2211-1620', hora: '16:20', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Pausa e lanche no Waterfront',
@@ -6497,7 +6550,13 @@ window.ROTEIRO = {
           'Cheguem 20 minutos antes: os bons lugares acabam rápido. As primeiras fileiras são a ' +
           'zona molhada, e ela é real.',
         areaParque: 'Orca Stadium', acesso: [], confirmarHorario: true, critico: true,
-        duracaoMin: 50, pesquisa: '2026-09-11' },
+        duracaoMin: 50, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'O Orca Encounter substituiu o show teatral One Ocean em 01/01/2020, depois ' +
+                   'que o SeaWorld encerrou a reprodução de orcas, em 2016. Não nascem mais ' +
+                   'orcas na rede: as do parque são a última geração.',
+            fonte: 'NPR; National Geographic; NBC News', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2211-1805', hora: '18:05', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Waterway Grill',
@@ -8808,7 +8867,25 @@ window.ROTEIRO = {
       doHotel: { tempoMin: 20, tempoFonte: 'estimado',
                  uberUSD: { min: 22, max: 32 }, uberFonte: 'estimado' },
       nota: 'Estacionamento geral US$ 37. Detector de metal na entrada. O ponto de ônibus, táxi ' +
-            'e carona por app fica à esquerda da entrada.' },
+            'e carona por app fica à esquerda da entrada.',
+      historia: {
+        linhas: [
+          'Abriu em 15/12/1973, o terceiro parque da rede SeaWorld, dois anos depois do ' +
+          'Magic Kingdom.',
+          'Em 1989 a cervejaria Anheuser-Busch comprou a rede. Por isso o SeaWorld e o ' +
+          'Busch Gardens, do dia 24, são da mesma empresa até hoje, desde 2024 chamada ' +
+          'United Parks & Resorts.',
+          'Em 2010 a treinadora Dawn Brancheau morreu num acidente com a orca Tilikum, e o ' +
+          'documentário Blackfish, de 2013, derrubou o público e a receita da empresa.',
+          'Em 17/03/2016 o SeaWorld anunciou o fim da reprodução de orcas em cativeiro. Em ' +
+          'Orlando, o show teatral One Ocean deu lugar ao Orca Encounter, mais educativo, ' +
+          'em 01/01/2020.',
+          'As montanhas-russas começaram com a Journey to Atlantis (1998) e o Kraken (2000) ' +
+          'e ganharam força com a Mako (2016), a Ice Breaker (2022), a Pipeline (2023) e a ' +
+          'Penguin Trek (2024).',
+        ],
+        fontes: 'Wikipedia — SeaWorld Orlando; NPR; NBC News', pesquisa: '2026-09-15',
+      } },
 
     { id: 'busch-gardens', nome: 'Busch Gardens Tampa Bay', tipo: 'parque',
       lat: 28.0375, lng: -82.4225, verificado: true, fonteCoord: 'wikipedia', endereco: null,
