@@ -4338,7 +4338,15 @@ window.ROTEIRO = {
         acessoAltNota: 'Não na primeira vez: single rider pula o saguão dos duendes e os dois pré-shows.',
         critico: true, locker: true, duracaoMin: 40,
         fila: { min: 15, quando: 'na primeira hora', pico: 190, media: 57, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'O dragão em cima do banco é um Ironbelly ucraniano de 18 metros.',
+            fonte: 'Wikipedia — Harry Potter and the Escape from Gringotts', pesquisa: '2026-09-15' },
+          { texto: 'Helena Bonham Carter e Ralph Fiennes gravaram cenas novas para a atração. ' +
+                   'Daniel Radcliffe e Emma Watson não: os rostos deles aparecem com voz ' +
+                   'dublada.',
+            fonte: 'Wikipedia — Harry Potter and the Escape from Gringotts', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1711-0950', hora: '09:50', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Transformers: The Ride 3D',
@@ -4352,13 +4360,19 @@ window.ROTEIRO = {
           'custa o dobro.',
         areaParque: 'New York', acesso: ['standby'], acessoAlt: 'single-rider', duracaoMin: 35,
         fila: { min: 30, quando: 'na segunda hora', pico: 120, media: 33, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'Abriu em 20/06/2013 e custou cerca de US$ 100 milhões. As telas 3D têm até ' +
+                   '18 metros de altura, o Optimus Prime tem a voz original do Peter Cullen, e ' +
+                   'o diretor dos filmes, Michael Bay, participou do projeto.',
+            fonte: 'Wikipedia — Transformers: The Ride', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1711-1030', hora: '10:30', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Revenge of the Mummy',
         descricao: 'Coaster no escuro com lançamento. Locker obrigatório',
         contexto:
-          'Montanha-russa fechada com lançamento, fogo de verdade e uma parada no escuro total ' +
+          'Montanha-russa fechada com lançamento, efeitos de fogo e uma parada no escuro total ' +
           'no meio. Curta e muito bem feita — é consenso como a melhor montanha-russa deste ' +
           'parque.\n\n' +
           'A FILA DELE DISTRIBUI IGUAL O DIA INTEIRO, com média de 44 minutos: não existe hora ' +
@@ -4368,7 +4382,12 @@ window.ROTEIRO = {
         areaParque: 'New York', acesso: ['standby'], acessoAlt: 'single-rider', locker: true,
         duracaoMin: 35,
         fila: { min: 30, quando: 'de manhã', pico: 120, media: 44, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'Abriu em 21/05/2004, no lugar do Kongfrontation. O Brendan Fraser aparece ' +
+                   'no vídeo da fila e na cena final.',
+            fonte: 'Wikipedia — Revenge of the Mummy', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1711-1105', hora: '11:05', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
@@ -4383,14 +4402,20 @@ window.ROTEIRO = {
         descricao: 'A terceira maior fila do parque',
         contexto:
           'Simulador com telas, em que vocês viram Minions. É bobo de propósito e funciona ' +
-          'muito bem — não depende de inglês e é dos poucos que arranca risada de todo mundo.\n\n' +
+          'muito bem — é dos poucos que arranca risada de todo mundo.\n\n' +
           'Ele faz 35 minutos de média, atrás só do Gringotts e do Mummy. Fica aqui porque a ' +
           'Minion Land é parada do dia por causa do Villain-Con, no bloco seguinte: são duas ' +
           'atrações na mesma área, sem caminhada ' +
           'entre elas.',
         areaParque: 'Minion Land', acesso: [], duracaoMin: 35,
         fila: { min: 25, quando: 'antes do almoço', pico: 75, media: 35, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'Abriu em 02/07/2012, num prédio que já teve o Funtastic World of ' +
+                   'Hanna-Barbera (1990–2002) e o Jimmy Neutron (2003–2011). Em 2023 virou o ' +
+                   'centro da Minion Land.',
+            fonte: 'Wikipedia — Despicable Me Minion Mayhem', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1711-1200', hora: '12:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Villain-Con Minion Blast',
@@ -4443,21 +4468,34 @@ window.ROTEIRO = {
         areaParque: 'World Expo', acesso: ['standby'], acessoAlt: 'single-rider', locker: true,
         duracaoMin: 40,
         fila: { min: 20, quando: 'à tarde', pico: 60, media: 22, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'Abriu em 14/04/2000, custou US$ 70 milhões e tem 35 finais diferentes, ' +
+                   'conforme a pontuação. Will Smith e Rip Torn gravaram para a atração.',
+            fonte: 'Wikipedia — Men in Black: Alien Attack', pesquisa: '2026-09-15' },
+          { texto: 'O botão vermelho do confronto final vale 100 mil pontos para quem apertar ' +
+                   'primeiro.',
+            fonte: 'Wikipedia — Men in Black: Alien Attack', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1711-1500', hora: '15:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'The Simpsons Ride',
-        descricao: 'Simulador. O humor sobrevive à tradução',
+        descricao: 'Simulador, com a Springfield inteira em volta',
         contexto:
           'Simulador em tela gigante côncava, com a família Simpson num parque de diversões ' +
-          'que dá errado. É rápido, sacode e o humor é visual o bastante para funcionar sem ' +
-          'pegar todas as piadas.\n\n' +
+          'que dá errado. É rápido e sacode.\n\n' +
           'A área em volta é a Springfield inteira reconstruída — a estátua do Jebediah, o ' +
           'Kwik-E-Mart, a Duff. Vale andar cinco minutos por ela mesmo sem entrar em nada, e ' +
           'esses minutos estão dentro deste bloco.',
         areaParque: 'Springfield', acesso: [], duracaoMin: 40,
         fila: { min: 20, quando: 'à tarde', pico: 55, media: 22, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'Abriu em 15/05/2008, no prédio do Back to the Future: The Ride ' +
+                   '(1991–2007). Matt Groening e James L. Brooks participaram, e o elenco ' +
+                   'original gravou as vozes — só o Harry Shearer ficou de fora.',
+            fonte: 'Wikipedia — The Simpsons Ride', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1711-1550', hora: '15:50', ancora: 'referencia', tipo: 'atracao',
         titulo: 'E.T. Adventure',
@@ -4473,7 +4511,15 @@ window.ROTEIRO = {
           '2024 puseram um arco separando os dois, e a entrada do E.T. ficou do lado de fora.',
         areaParque: 'Hollywood', acesso: [], duracaoMin: 35, opcional: true,
         fila: { min: 25, quando: 'no fim da tarde', pico: 70, media: 28, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'É o último E.T. Adventure do mundo: o de Hollywood fechou em 2003, e o do ' +
+                   'Japão em 2009.',
+            fonte: 'Wikipedia — E.T. Adventure', pesquisa: '2026-09-15' },
+          { texto: 'Spielberg quis um passeio pessoal. O planeta verde e o Botanicus saem do ' +
+                   'livro E.T.: The Book of the Green Planet.',
+            fonte: 'Wikipedia — E.T. Adventure', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1711-1630', hora: '16:30', ancora: 'fixo', tipo: 'show',
         titulo: 'The Bourne Stuntacular',
@@ -4487,7 +4533,12 @@ window.ROTEIRO = {
           'parque são infantis ou estão fechados.\n\n' +
           'Cheguem 15 minutos antes. Ele tem sessão marcada e não desloca com o resto do dia.',
         areaParque: 'Hollywood', acesso: [], duracaoMin: 50, confirmarHorario: true,
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'Estreou em 30/06/2020. A Julia Stiles, a Nicky Parsons dos filmes, gravou ' +
+                   'as partes filmadas.',
+            fonte: 'Wikipedia — The Bourne Stuntacular', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1711-1730', hora: '17:30', ancora: 'fixo', tipo: 'show',
         titulo: 'Universal’s Holiday Parade featuring Macy’s',
@@ -4504,7 +4555,12 @@ window.ROTEIRO = {
           'do Mel’s. É onde o desfile ' +
           'passa mais devagar e onde dá para sair rápido no fim.',
         areaParque: 'Hollywood', acesso: [], duracaoMin: 60, confirmarHorario: true, critico: true,
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'Desde 2002 a Universal traz balões e carros alegóricos do desfile da ' +
+                   'Macy’s de Nova York. O carro do Papai Noel é o mesmo que desfila lá.',
+            fonte: 'Wikipedia — Macy’s Thanksgiving Day Parade', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1711-1845', hora: '18:45', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Lombard’s Seafood Grille',
@@ -8641,7 +8697,20 @@ window.ROTEIRO = {
       lat: 28.4752, lng: -81.467, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 33, tempoFonte: 'documento',
                  uberUSD: { min: 25, max: 35 }, uberFonte: 'estimado' },
-      nota: 'Documento: 30–35 min de Kissimmee. Do estacionamento à catraca são +15–20 min a pé.' },
+      nota: 'Documento: 30–35 min de Kissimmee. Do estacionamento à catraca são +15–20 min a pé.',
+      historia: {
+        linhas: [
+          'Abriu em 07/06/1990. Steven Spielberg deu palpite em atrações como E.T., Back to ' +
+          'the Future e Jaws.',
+          'A inauguração foi um desastre técnico: Kongfrontation, Earthquake e Jaws ' +
+          'quebraram tanto que a Universal distribuiu vales para os visitantes voltarem ' +
+          'outro dia.',
+          'Foi estúdio de verdade: a Nickelodeon gravou programas aqui de 1990 a 2005.',
+          'Em 08/07/2014 o Beco Diagonal abriu no lugar da área do Jaws, fechada em 2012.',
+          'Em 2023 o parque recebeu 9,75 milhões de visitantes.',
+        ],
+        fontes: 'Wikipedia — Universal Studios Florida', pesquisa: '2026-09-15',
+      } },
 
     { id: 'islands-of-adventure', nome: 'Islands of Adventure', tipo: 'parque',
       lat: 28.47166667, lng: -81.47138889, verificado: true, fonteCoord: 'wikipedia', endereco: null,
