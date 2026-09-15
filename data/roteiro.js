@@ -3791,15 +3791,24 @@ window.ROTEIRO = {
           'base dela e ESPEREM.\n\n' +
           'Café da manhã aqui, das barrinhas da mochila, e a foto da esfera antes de a praça ' +
           'encher.',
-        localId: 'epcot', acesso: [], duracaoMin: 45, pesquisa: '2026-09-12' },
+        localId: 'epcot', acesso: [], duracaoMin: 45, pesquisa: '2026-09-12',
+        curiosidades: [
+          { texto: 'A Spaceship Earth tem 55 metros e 11.324 facetas prateadas. A chuva não ' +
+                   'escorre pela esfera: entra por frestas entre as facetas e desce por calhas ' +
+                   'até o lago do World Showcase.',
+            fonte: 'Wikipedia — Spaceship Earth', pesquisa: '2026-09-15' },
+          { texto: 'O escritor Ray Bradbury ajudou a projetar a esfera e a escrever a história ' +
+                   'original da atração.',
+            fonte: 'Wikipedia — Spaceship Earth', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1611-0950', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Test Track — rope drop',
         descricao: 'A única janela barata dele. E ele quebra muito',
         contexto:
           'Vocês desenham um carro num painel e depois andam num veículo que faz testes de ' +
-          'curva, freio e um trecho externo a 105 km/h. É a parte mais rápida da Disney em ' +
-          'linha reta.\n\n' +
+          'curva, freio e um trecho externo a 104 km/h. É a atração mais rápida que a Disney ' +
+          'já construiu.\n\n' +
           'POR QUE AGORA E NÃO DEPOIS: 53 minutos no rope drop contra 99 de média no dia. É a ' +
           'segunda pior fila do Epcot e não existe outra janela.\n\n' +
           'E TEM UM SEGUNDO MOTIVO: em 2026, um ano depois de reabrir, o Test Track quebrou ' +
@@ -3810,7 +3819,13 @@ window.ROTEIRO = {
         critico: true,
         duracaoMin: 45,
         fila: { min: 53, quando: 'no rope drop', pico: 99, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'A primeira versão atrasou quase dois anos por problemas nas rodas e no ' +
+                   'software e só abriu em 1999, no lugar do World of Motion. A atual, a ' +
+                   'terceira, reabriu em 22/07/2025, de novo com a General Motors.',
+            fonte: 'Wikipedia — Test Track', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1611-1035', hora: '09:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mission: SPACE — Orange',
@@ -3826,7 +3841,14 @@ window.ROTEIRO = {
           'antes das 11h.',
         areaParque: 'World Discovery', acesso: ['multi-pass'], duracaoMin: 33,
         fila: { min: 10, quando: 'com o Multi Pass', pico: 40, estimado: true, fonte: '2026-09-10' },
-        pesquisa: '2026-09-11' },
+        pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Ocupa o terreno do Horizons, que fechou em 1999. A inauguração, em 2003, ' +
+                   'teve o administrador da NASA e astronautas, e até 2017 quem falava com os ' +
+                   'tripulantes pelo rádio era o Gary Sinise, de Apollo 13. Hoje é a Gina ' +
+                   'Torres.',
+            fonte: 'Wikipedia — Mission: Space', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1611-0900', hora: '10:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Guardians of the Galaxy: Cosmic Rewind',
@@ -3842,7 +3864,16 @@ window.ROTEIRO = {
           'sorteio às 7h da manhã.',
         areaParque: 'World Discovery', acesso: ['single-pass'], critico: true, duracaoMin: 45,
         fila: { min: 10, quando: 'com o Single Pass', pico: 101, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'Foi a primeira montanha-russa da Disney lançada de ré e é uma das mais ' +
+                   'longas do mundo em ambiente fechado, com 1,7 km. Custou cerca de US$ 500 ' +
+                   'milhões e ocupa o lugar do Universe of Energy, fechado em 2017.',
+            fonte: 'Wikipedia — Guardians of the Galaxy: Cosmic Rewind', pesquisa: '2026-09-15' },
+          { texto: 'As seis músicas que podem ser sorteadas: September, One Way or Another, ' +
+                   'Everybody Wants to Rule the World, Conga, I Ran e Disco Inferno.',
+            fonte: 'Wikipedia — Guardians of the Galaxy: Cosmic Rewind', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1611-1115', hora: '11:15', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Soarin’ Across America',
@@ -3858,19 +3889,34 @@ window.ROTEIRO = {
           'Showcase.',
         areaParque: 'World Nature', acesso: ['multi-pass'], duracaoMin: 45,
         fila: { min: 10, quando: 'com o Multi Pass', pico: 74, fonte: '2026-09-10' },
-        pesquisa: '2026-09-11' },
+        pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'O mecanismo nasceu de um protótipo que o engenheiro Mark Sumner montou com ' +
+                   'Meccano e barbante. O filme Across America, de 26/05/2026, foi feito para ' +
+                   'os 250 anos dos Estados Unidos.',
+            fonte: 'Wikipedia — Soarin’', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1611-1200', hora: '12:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'The Seas e Living with the Land',
         descricao: 'Os dois no mesmo pavilhão. Fila curta, ar-condicionado',
         contexto:
-          'The Seas é um aquário enorme com golfinhos e peixes-boi, e dá para ficar o tempo ' +
+          'The Seas é um aquário enorme, com peixes-boi, e dá para ficar o tempo ' +
           'que quiserem. Living with the Land é um passeio de barco por estufas hidropônicas ' +
           'REAIS, onde a Disney cultiva parte do que serve nos restaurantes do parque — ' +
           'inclusive o que vocês podem comer hoje.\n\n' +
           'Os dois são calmos, quase sem fila, e caem na pior hora de calor de propósito.',
         areaParque: 'World Nature', acesso: ['standby'], duracaoMin: 40,
-        fila: { min: 10, quando: 'quase sempre', pico: 25, estimado: true, fonte: '2026-09-10' } },
+        fila: { min: 10, quando: 'quase sempre', pico: 25, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'O aquário do The Seas tem 21,6 milhões de litros, o segundo maior dos ' +
+                   'Estados Unidos. Os dois peixes-boi são animais resgatados.',
+            fonte: 'Wikipedia — The Seas with Nemo & Friends', pesquisa: '2026-09-15' },
+          { texto: 'As estufas do Living with the Land colhem mais de 30 toneladas por ano, ' +
+                   'servidas no Garden Grill e no Sunshine Seasons, e um pé de tomate delas ' +
+                   'entrou no Guinness: mais de 32 mil tomates em 16 meses.',
+            fonte: 'Wikipedia — Living with the Land', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1611-1240p', hora: '12:40', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — antes de virar o dia',
@@ -3903,7 +3949,12 @@ window.ROTEIRO = {
           'noturno cenográfico permanente, com vulcão ao fundo. Fresco, escuro e quase sempre ' +
           'sem fila. É o clássico mais subestimado do parque.',
         areaParque: 'World Showcase', acesso: ['standby'], duracaoMin: 20,
-        fila: { min: 5, quando: 'quase sempre', pico: 15, estimado: true, fonte: '2026-09-10' } },
+        fila: { min: 5, quando: 'quase sempre', pico: 15, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'Até 2007 o passeio se chamava El Río del Tiempo. A versão atual ganhou o ' +
+                   'Pato Donald e os Três Cavaleiros.',
+            fonte: 'Wikipedia — Mexico Pavilion at Epcot', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1611-1330', hora: '13:40', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Frozen Ever After',
@@ -3917,7 +3968,17 @@ window.ROTEIRO = {
           'vocês vieram fazer. Nos outros dias a fila compete com outra fila; aqui compete com ' +
           'o dia.',
         areaParque: 'World Showcase', acesso: ['multi-pass'], duracaoMin: 40,
-        fila: { min: 10, quando: 'com o Multi Pass', pico: 75, fonte: '2026-09-10' } },
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 75, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'Usa os barcos e o percurso do Maelstrom, a atração viking que funcionou ' +
+                   'aqui até 2014. O pavilhão da Noruega, de 1988, é o país mais novo do World ' +
+                   'Showcase.',
+            fonte: 'Wikipedia — Frozen Ever After; Wikipedia — World Showcase', pesquisa: '2026-09-15' },
+          { texto: 'Foram os primeiros animatrônicos totalmente elétricos da Disney, e em ' +
+                   '12/02/2026 os três personagens principais ganharam a tecnologia do World ' +
+                   'of Frozen de Hong Kong.',
+            fonte: 'Wikipedia — Frozen Ever After', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1611-1415', hora: '14:20', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Food & Wine — volta 1',
@@ -3933,7 +3994,16 @@ window.ROTEIRO = {
           'Grécia e o waffle da Bélgica. O cardápio de 2026 sai no app da Disney.\n\n' +
           'A caminhada entre os pavilhões está dentro da duração deste bloco — ele não é uma ' +
           'parada, é a volta.',
-        areaParque: 'World Showcase', acesso: [], duracaoMin: 70 },
+        areaParque: 'World Showcase', acesso: [], duracaoMin: 70,
+        curiosidades: [
+          { texto: 'A Alemanha foi projetada com um passeio de barco pelos rios Reno, Tauber, ' +
+                   'Ruhr e Isar que nunca foi construído. O saguão de entrada dele virou salão ' +
+                   'de restaurante.',
+            fonte: 'Wikipedia — Germany Pavilion at Epcot', pesquisa: '2026-09-15' },
+          { texto: 'O templo da China copia o Templo do Céu, de Pequim. O campanário e o ' +
+                   'palácio da Itália copiam a Praça de São Marcos, de Veneza.',
+            fonte: 'Wikipedia — China Pavilion at Epcot; Wikipedia — Italy Pavilion at Epcot', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1611-1600', hora: '15:30', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Food & Wine — volta 2',
@@ -3943,14 +4013,23 @@ window.ROTEIRO = {
           'a melhor loja do World Showcase. O do Marrocos é o mais elaborado ' +
           'arquitetonicamente e quase sempre o mais vazio.\n\n' +
           'Caminhada inclusa na duração.',
-        areaParque: 'World Showcase', acesso: [], duracaoMin: 75 },
+        areaParque: 'World Showcase', acesso: [], duracaoMin: 75,
+        curiosidades: [
+          { texto: 'O pagode do Japão copia o do templo Horyuji, e o portão na água, o do ' +
+                   'santuário de Itsukushima. A Mitsukoshi daqui é a única filial da rede que ' +
+                   'sobrou na América do Norte.',
+            fonte: 'Wikipedia — Japan Pavilion at Epcot', pesquisa: '2026-09-15' },
+          { texto: 'O Marrocos, de 1984, foi patrocinado diretamente pelo governo marroquino ' +
+                   'até 2020.',
+            fonte: 'Wikipedia — World Showcase', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1611-1700', hora: '16:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Remy’s Ratatouille Adventure',
         descricao: 'França. Multi Pass rolando, reservado às 9h45',
         contexto:
           'Vocês encolhem ao tamanho de um rato e andam por uma cozinha em escala gigante, em ' +
-          'veículos sem trilhos com telas 3D e cheiro sincronizado. Sem emoção forte, e a ' +
+          'veículos sem trilhos com telas e cheiro sincronizado. Sem emoção forte, e a ' +
           'escala do cenário é o ponto alto.\n\n' +
           'Segunda das duas filas do World Showcase, e a segunda razão do Multi Pass: 40 a 60 ' +
           'minutos no standby, dez com o passe.\n\n' +
@@ -3959,7 +4038,16 @@ window.ROTEIRO = {
           'trocar a volta 2 pela fila ou deixar o Remy de fora.',
         areaParque: 'World Showcase', acesso: ['multi-pass'], duracaoMin: 45,
         fila: { min: 10, quando: 'com o Multi Pass', pico: 60, fonte: '2026-09-10' },
-        pesquisa: '2026-09-11' },
+        pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Estreou em 01/10/2021, nos 50 anos do Walt Disney World, copiando a ' +
+                   'atração que a Disneyland Paris abriu em 2014. Os diálogos alternam inglês ' +
+                   'e francês.',
+            fonte: 'Wikipedia — Remy’s Ratatouille Adventure', pesquisa: '2026-09-15' },
+          { texto: 'Desde novembro de 2025 roda sem óculos 3D, e em 2026 ganhou objetos de ' +
+                   'cenário gigantes.',
+            fonte: 'Guide2WDW; WDWNT', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1611-1745', hora: '17:30', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Food & Wine — volta 3',
@@ -3971,7 +4059,12 @@ window.ROTEIRO = {
           'O pub do Reino Unido serve cerveja de verdade e costuma ter música ao vivo no ' +
           'pátio. É o melhor lugar do parque para sentar sem pressa.\n\n' +
           'ESTE É O JANTAR. Não há outro bloco de refeição hoje — de propósito.',
-        areaParque: 'World Showcase', acesso: [], duracaoMin: 85 },
+        areaParque: 'World Showcase', acesso: [], duracaoMin: 85,
+        curiosidades: [
+          { texto: 'O Les Chefs de France foi aberto em 1982 por Paul Bocuse, Roger Vergé e ' +
+                   'Gaston Lenôtre. Desde 1996 é tocado pelo filho de Bocuse, Jérôme.',
+            fonte: 'Wikipedia — France Pavilion at Epcot', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1611-1900', hora: '19:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Spaceship Earth',
@@ -3983,7 +4076,15 @@ window.ROTEIRO = {
           'À noite a fila praticamente some, e vocês passam por ela de qualquer jeito na ' +
           'volta para o lago.',
         areaParque: 'World Celebration', acesso: ['standby'], duracaoMin: 50,
-        fila: { min: 10, quando: 'à noite', pico: 40, estimado: true, fonte: '2026-09-10' } },
+        fila: { min: 10, quando: 'à noite', pico: 40, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'A narradora é a Judi Dench, desde 2007. Antes dela vieram Vic Perrin, ' +
+                   'Walter Cronkite e Jeremy Irons.',
+            fonte: 'Wikipedia — Spaceship Earth', pesquisa: '2026-09-15' },
+          { texto: 'Na D23 de agosto de 2026 a Disney anunciou uma versão nova da atração, ' +
+                   'sobre conexão humana e a era da internet. Ainda não há data de fechamento.',
+            fonte: 'Wikipedia — Spaceship Earth; Inside the Magic', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1611-2000', hora: '20:00', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Food & Wine — última volta',
@@ -4005,7 +4106,11 @@ window.ROTEIRO = {
           'Trinta minutos antes não é exagero em noite de festival. Levem a bebida da barraca ' +
           'anterior: de lá não dá para sair e voltar.\n\n' +
           'HORÁRIO FIXO, colado no show.',
-        areaParque: 'World Showcase', acesso: [], duracaoMin: 30 },
+        areaParque: 'World Showcase', acesso: [], duracaoMin: 30,
+        curiosidades: [
+          { texto: 'A volta completa do lago do World Showcase tem 1,9 km.',
+            fonte: 'Wikipedia — Epcot', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1611-2100', hora: '21:00', ancora: 'fixo', tipo: 'show',
         titulo: 'Luminous: The Symphony of Us',
@@ -8506,7 +8611,24 @@ window.ROTEIRO = {
     { id: 'epcot', nome: 'Epcot', tipo: 'parque',
       lat: 28.371, lng: -81.55, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 25, tempoFonte: 'estimado',
-                 uberUSD: { min: 20, max: 30 }, uberFonte: 'estimado' } },
+                 uberUSD: { min: 20, max: 30 }, uberFonte: 'estimado' },
+      historia: {
+        linhas: [
+          'EPCOT era a sigla de Experimental Prototype Community of Tomorrow. O plano do ' +
+          'Walt, nos anos 1960, era uma cidade de verdade para 20 mil moradores, sempre ' +
+          'testando tecnologia nova.',
+          'Depois da morte dele, o plano virou parque: o EPCOT Center abriu em 01/10/1982, ' +
+          'o segundo do Walt Disney World.',
+          'Nos anos 1990 o nome passou a Epcot, em minúsculas, para se distinguir do plano ' +
+          'do Walt. Em 2020 voltou às maiúsculas, como homenagem.',
+          'A partir de 2019, a antiga Future World foi dividida em World Celebration, World ' +
+          'Discovery e World Nature.',
+          'A maioria dos funcionários do World Showcase vem dos próprios países, por um ' +
+          'programa de intercâmbio cultural da Disney. Em 2024 o parque recebeu 12,1 ' +
+          'milhões de visitantes.',
+        ],
+        fontes: 'Wikipedia — Epcot', pesquisa: '2026-09-15',
+      } },
 
     { id: 'disney-springs', nome: 'Disney Springs', tipo: 'compras',
       lat: 28.3702539, lng: -81.5209851, verificado: true, fonteCoord: 'wikipedia', endereco: null,
