@@ -270,7 +270,8 @@ const historiasRuins = historias.filter(l => !Array.isArray(l.historia.linhas) |
   !l.historia.fontes || !ISO.test(l.historia.pesquisa || ''));
 ok(historiasRuins.length === 0, 'toda historia tem de 3 a 6 linhas, fontes e data (' + historias.length + ')',
    historiasRuins.map(l => l.id).join(', '));
-const historiasSemDia = historias.filter(l => !R.dias.some(d => d.parqueId === l.id));
+const historiasSemDia = historias.filter(l =>
+  !R.dias.some(d => d.parqueId === l.id || d.historiaLocalId === l.id));
 ok(historiasSemDia.length === 0, 'toda historia aparece na ficha de algum dia',
    historiasSemDia.map(l => l.id).join(', '));
 

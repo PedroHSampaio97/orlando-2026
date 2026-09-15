@@ -272,6 +272,7 @@ window.ROTEIRO = {
     tipo: 'logistica',
     operadora: null,
     parqueId: null,
+    historiaLocalId: 'disney-springs',
     custoZero: false,
     fechado: true,
     revisadoEm: '2026-09-09',
@@ -822,7 +823,13 @@ window.ROTEIRO = {
           'São 1h25 de loja e 15 minutos de folga antes da mesa — o Boathouse pede que ' +
           'vocês cheguem 15 minutos antes, e esse tempo está aqui dentro. Dá para o World ' +
           'of Disney sem correr e ainda pegar o pôr do sol às 17h35 na beira da água.',
-        localId: 'disney-springs', acesso: [], duracaoMin: 85 },
+        localId: 'disney-springs', acesso: [], duracaoMin: 85,
+        curiosidades: [
+          { texto: 'O barco a vapor da The Landing é um prédio com fundação de concreto. Foi o ' +
+                   'Empress Lilly, batizado em 1977 pela Lillian Disney, viúva do Walt, e hoje ' +
+                   'abriga o restaurante Paddlefish.',
+            fonte: 'D23; MousePlanet', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1011-1900', hora: '19:00', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — The Boathouse',
@@ -832,7 +839,12 @@ window.ROTEIRO = {
           'antes. HORÁRIO FIXO: não desloca nem se o voo atrasar — se o dia virar plano C, ' +
           'cancelem em vez de perder a reserva por não comparecimento.',
         restauranteId: 'r-boathouse', localId: 'disney-springs', acesso: ['reserva'],
-        critico: true, duracaoMin: 90 },
+        critico: true, duracaoMin: 90,
+        curiosidades: [
+          { texto: 'Os carros que entram na água são Amphicars, fabricados na Alemanha entre ' +
+                   '1961 e 1968. Foram menos de 4 mil, e hoje sobram menos de 400 no mundo.',
+            fonte: 'AllEars', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1011-2100', hora: '21:00', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel',
@@ -7576,6 +7588,7 @@ window.ROTEIRO = {
     tipo: 'livre',
     operadora: null,
     parqueId: null,
+    historiaLocalId: 'disney-springs',
     custoZero: false,
     fechado: true,
     revisadoEm: '2026-09-11',
@@ -7775,7 +7788,13 @@ window.ROTEIRO = {
           'Disney Experience ou pelo +1 407-560-0100. Está no checklist.\n\n' +
           'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
         restauranteId: 'r-homecomin', localId: 'disney-springs', acesso: ['reserva'],
-        duracaoMin: 75, pesquisa: '2026-09-11' },
+        duracaoMin: 75, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'O chef Art Smith é floridiano de sexta geração, foi chef particular da ' +
+                   'Oprah Winfrey por dez anos e ganhou o prêmio James Beard. O restaurante ' +
+                   'abriu em julho de 2016.',
+            fonte: 'Central Florida Public Media; Visit Orlando', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2511-2050', hora: '20:50', ancora: 'fixo', tipo: 'compras',
         titulo: 'World of Disney · Papai Noel, se der',
@@ -8930,7 +8949,22 @@ window.ROTEIRO = {
       doHotel: { tempoMin: 20, tempoFonte: 'documento',
                  uberUSD: { min: 15, max: 25 }, uberFonte: 'estimado' },
       nota: 'Estacionamento gratuito, mas na segunda ida, em 25/11, o carro já foi devolvido: ' +
-            'é de Uber. Embarque e desembarque no West Side ou no Marketplace.' },
+            'é de Uber. Embarque e desembarque no West Side ou no Marketplace.',
+      historia: {
+        linhas: [
+          'Abriu em 22/03/1975 como Lake Buena Vista Shopping Village.',
+          'Mudou de nome quatro vezes: Walt Disney World Village (1977), Disney Village ' +
+          'Marketplace (1989), Downtown Disney (1997) e Disney Springs (29/09/2015).',
+          'Em 1989 ganhou o Pleasure Island, uma área de casas noturnas cujas boates ' +
+          'fecharam em 27/09/2008.',
+          'A reforma anunciada em 2013 criou o Town Center, aberto em 15/05/2016 onde era ' +
+          'estacionamento a céu aberto, e as garagens gratuitas com nome de fruta: Orange, ' +
+          'Lime e Grapefruit.',
+          'A história de fachada é a de uma cidade da Flórida: um criador de gado do século ' +
+          'XIX encontrou as nascentes, e cada área representa uma época do lugar.',
+        ],
+        fontes: 'Wikipedia — Disney Springs', pesquisa: '2026-09-15',
+      } },
 
     { id: 'universal-studios', nome: 'Universal Studios Florida', tipo: 'parque',
       lat: 28.4752, lng: -81.467, verificado: true, fonteCoord: 'wikipedia', endereco: null,

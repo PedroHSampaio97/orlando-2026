@@ -105,14 +105,18 @@ window.Fase3 = (function () {
     if (temPasses) alvo.appendChild(blocoPasses(dia, f));
     if (temRenuncias) alvo.appendChild(blocoRenuncias(dia.renuncias));
     if (dia.tipo === 'parque') alvo.appendChild(blocoRegras());
-    const parque = dia.parqueId && R.locais.find((l) => l.id === dia.parqueId);
-    if (parque && parque.historia) alvo.appendChild(blocoHistoria(parque.historia));
+    // Dia de parque mostra a historia do parque; dia livre pode apontar para um lugar.
+    const idHistoria = dia.parqueId || dia.historiaLocalId;
+    const lugar = idHistoria && R.locais.find((l) => l.id === idHistoria);
+    if (lugar && lugar.historia) alvo.appendChild(blocoHistoria(lugar));
     if (dia.alternativa) alvo.appendChild(blocoAlternativa(dia.alternativa));
   }
 
-  function blocoHistoria(h) {
+  function blocoHistoria(lugar) {
+    const h = lugar.historia;
     const d = el('details', 'acordeao');
-    d.appendChild(el('summary', null, '🏛️  História do parque'));
+    d.appendChild(el('summary', null, '🏛️  História do ' +
+      (lugar.tipo === 'parque' ? 'parque' : 'lugar')));
     const c = el('div', 'acordeao-corpo');
     h.linhas.forEach((t) => c.appendChild(el('p', 'historia-linha', t)));
     c.appendChild(el('p', 'historia-fonte', 'Fontes: ' + h.fontes + ' · verificado em ' +
