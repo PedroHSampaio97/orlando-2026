@@ -2870,7 +2870,12 @@ window.ROTEIRO = {
           'PONTO DE ENCONTRO DE HOJE: o farol do Port of Entry, o Pharos Lighthouse, na beira ' +
           'da lagoa. O parque é um anel, e o Port of Entry é o único ponto por onde todo mundo ' +
           'passa.',
-        localId: 'islands-of-adventure', acesso: [], duracaoMin: 15 },
+        localId: 'islands-of-adventure', acesso: [], duracaoMin: 15,
+        curiosidades: [
+          { texto: 'O farol do Port of Entry, o Pharos Lighthouse, funciona de verdade: toda ' +
+                   'noite manda um facho de luz para guiar quem entra e sai do parque.',
+            fonte: 'Wikipedia — Universal Islands of Adventure', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1411-1700', hora: '17:00', ancora: 'referencia', tipo: 'espera',
         titulo: 'Fila do Grinchmas — trinta minutos antes',
@@ -2883,7 +2888,12 @@ window.ROTEIRO = {
           'Trinta minutos parados aqui é o preço de ver o show sentado e de frente. Comam ' +
           'alguma coisa da mochila enquanto esperam: o jantar é só às 20h.',
         areaParque: 'Seuss Landing', acesso: [], critico: true, duracaoMin: 30,
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'A Seuss Landing quase não tem linhas retas, de propósito. Até as palmeiras ' +
+                   'tortas foram plantadas assim, depois de entortadas pelo furacão Andrew.',
+            fonte: 'Wikipedia — Universal Islands of Adventure', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1411-1845', hora: '17:30', ancora: 'referencia', tipo: 'show',
         titulo: 'Grinchmas Who-liday Spectacular',
@@ -2897,7 +2907,13 @@ window.ROTEIRO = {
           'HORÁRIO A CONFIRMAR no app da Universal. É ele que ancora a noite: mudou a sessão, ' +
           'mudem a referência e tudo até a cerveja amanteigada desloca junto.',
         areaParque: 'Seuss Landing', acesso: [], duracaoMin: 30,
-        confirmarHorario: true, critico: true, pesquisa: '2026-09-10' },
+        confirmarHorario: true, critico: true, pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'O Grinchmas começou em dezembro de 2000, um ano depois de o parque abrir e ' +
+                   'no ano do filme da Universal com o Jim Carrey. A trilha do show é do Chip ' +
+                   'Davis, do Mannheim Steamroller.',
+            fonte: 'Wikipedia — Universal Islands of Adventure; Orlando Informer', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1411-1930', hora: '18:10', ancora: 'referencia', tipo: 'livre',
         titulo: 'Hogsmeade decorada · cerveja amanteigada frozen',
@@ -2943,14 +2959,19 @@ window.ROTEIRO = {
           'vinte minutos e as sessões mais tarde são melhores.',
         areaParque: 'Hogsmeade', acesso: ['standby'], opcional: true, duracaoMin: 45,
         condicao: 'Só se a fila estiver abaixo de 20 min',
-        fila: { min: 15, quando: 'à noite', pico: 45, estimado: true, fonte: '2026-09-10' } },
+        fila: { min: 15, quando: 'à noite', pico: 45, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'Antes de Hogsmeade, ela era a Flying Unicorn, de 2000 a 2008, e ganhou o ' +
+                   'tema de Harry Potter com a abertura da área, em 2010.',
+            fonte: 'Wikipedia — Flight of the Hippogriff', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1411-2100', hora: '20:00', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Three Broomsticks',
         descricao: 'Dentro da Hogsmeade decorada. Sem sair do cenário',
         contexto:
-          'Balcão temático dentro de Hogsmeade, com vigas de madeira e sombras de professores ' +
-          'projetadas no teto. Frango assado, costela, fish and chips e o Great Feast para ' +
+          'Balcão temático dentro de Hogsmeade, com vigas de madeira e elfos domésticos e ' +
+          'fantasmas escondidos nelas. Frango assado, costela, fish and chips e o Great Feast para ' +
           'dividir.\n\n' +
           'A ESCOLHA FOI DELIBERADA. O Toothsome, no CityWalk, não aceita reserva e a espera ' +
           'passa de uma hora em fim de semana — num sábado de abertura de temporada, depois ' +
@@ -2958,7 +2979,12 @@ window.ROTEIRO = {
           'dentro da decoração que vieram ver.\n\n' +
           'É balcão: não leva gorjeta.',
         restauranteId: 'r-broomsticks-14', areaParque: 'Hogsmeade', acesso: [],
-        duracaoMin: 90 },
+        duracaoMin: 90,
+        curiosidades: [
+          { texto: 'Olhem para as vigas: há referências escondidas aos livros e aos filmes, ' +
+                   'como elfos domésticos e fantasmas.',
+            fonte: 'Wikipedia — The Wizarding World of Harry Potter (Universal Orlando Resort)', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1411-2130', hora: '21:30', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel',
@@ -6831,7 +6857,16 @@ window.ROTEIRO = {
         areaParque: 'Hogsmeade', acesso: ['rope-drop', 'standby'],
         locker: 'obrigatorio',
         lockerNota: 'Pochete de 3 pontos na cintura costuma ser liberada, a critério do funcionário.',
-        duracaoMin: 90, pesquisa: '2026-09-11' },
+        duracaoMin: 90, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu em 13/06/2019, no lugar do Dragon Challenge, e custou cerca de US$ ' +
+                   '300 milhões. Os sete lançamentos eram recorde mundial na inauguração, e na ' +
+                   'queda livre o trilho se solta e desce 5 metros junto com o trem.',
+            fonte: 'Wikipedia — Hagrid’s Magical Creatures Motorbike Adventure', pesquisa: '2026-09-15' },
+          { texto: 'Foi a última vez que o Robbie Coltrane interpretou o Hagrid. Por causa da ' +
+                   'saúde, ele gravou só o rosto e a cabeça, e morreu em 2022.',
+            fonte: 'Wikipedia — Hagrid’s Magical Creatures Motorbike Adventure', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2311-1030', hora: '10:30', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Harry Potter and the Forbidden Journey',
@@ -6844,7 +6879,13 @@ window.ROTEIRO = {
         areaParque: 'Hogsmeade', acesso: ['standby'],
         acessoAlt: 'single-rider', locker: 'obrigatorio',
         acessoAltNota: 'Na primeira visita, não: single rider pula o castelo, e a fila é metade da atração.',
-        duracaoMin: 55, pesquisa: '2026-09-11' },
+        duracaoMin: 55, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu com Hogsmeade, em 2010. Daniel Radcliffe, Rupert Grint, Emma Watson ' +
+                   'e Michael Gambon gravaram cenas para a atração, e o braço robótico é da ' +
+                   'KUKA — o mesmo tipo usado depois no Monsters Unchained, do Epic.',
+            fonte: 'Wikipedia — Harry Potter and the Forbidden Journey; Wikipedia — Monsters Unchained', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2311-1140', hora: '11:40', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Confisco Grille',
@@ -6867,7 +6908,12 @@ window.ROTEIRO = {
           'reconstruída em 2016.\n\n' +
           'DETECTOR DE METAL: nada nos bolsos, nem celular. Fila média de 32 minutos.',
         areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
-        acessoAlt: 'single-rider', locker: 'detector', duracaoMin: 45, pesquisa: '2026-09-11' },
+        acessoAlt: 'single-rider', locker: 'detector', duracaoMin: 45, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu com o parque, em 1999, e foi reconstruída em 2016, com trilho e ' +
+                   'trens novos e som a bordo. Chega a 108 km/h, com sete inversões.',
+            fonte: 'Wikipedia — The Incredible Hulk Coaster', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2311-1335', hora: '13:35', ancora: 'referencia', tipo: 'atracao',
         titulo: 'The Amazing Adventures of Spider-Man',
@@ -6880,7 +6926,12 @@ window.ROTEIRO = {
         areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
         acessoAlt: 'single-rider',
         acessoAltNota: 'Entrada do single rider pela esquerda, no corredor que liga a saída à loja.',
-        duracaoMin: 35, pesquisa: '2026-09-11' },
+        duracaoMin: 35, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Ganhou o Golden Ticket de melhor dark ride por 12 anos seguidos, de 1999 a ' +
+                   '2010. O Stan Lee aparece no clímax e é a voz dos avisos.',
+            fonte: 'Wikipedia — The Amazing Adventures of Spider-Man', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2311-1435', hora: '14:15', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
@@ -6897,7 +6948,12 @@ window.ROTEIRO = {
           'atores na fila. Escuro e barulhento, mas sem emoção física forte.\n\n' +
           'Fila média de 35 minutos.',
         areaParque: 'Skull Island', acesso: ['standby'],
-        acessoAlt: 'single-rider', duracaoMin: 40, pesquisa: '2026-09-11' },
+        acessoAlt: 'single-rider', duracaoMin: 40, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu em 13/07/2016, com consultoria do Peter Jackson, o diretor do King ' +
+                   'Kong de 2005. O templo da entrada tem 24 metros.',
+            fonte: 'Wikipedia — Skull Island: Reign of Kong', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2311-1540', hora: '15:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Jurassic Park River Adventure',
@@ -6911,7 +6967,11 @@ window.ROTEIRO = {
           'no armário de aluguel da entrada, que aqui é opcional, pelo mapa oficial. Fila média ' +
           'de 22 minutos.',
         areaParque: 'Jurassic Park', acesso: ['standby'],
-        acessoAlt: 'single-rider', molha: true, duracaoMin: 40, pesquisa: '2026-09-11' },
+        acessoAlt: 'single-rider', molha: true, duracaoMin: 40, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu com o parque, em 1999. A queda final tem 26 metros, a 55 graus.',
+            fonte: 'Wikipedia — Jurassic Park: The Ride', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2311-1625', hora: '16:05', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Jurassic World VelociCoaster',
@@ -6928,7 +6988,16 @@ window.ROTEIRO = {
           'uma hora e meia: fila, locker e detector.\n\n' +
           'DETECTOR DE METAL: absolutamente nada nos bolsos.',
         areaParque: 'Jurassic Park', acesso: ['standby'],
-        locker: 'detector', duracaoMin: 90, pesquisa: '2026-09-15' },
+        locker: 'detector', duracaoMin: 90, pesquisa: '2026-09-15',
+        curiosidades: [
+          { texto: 'Abriu em 10/06/2021, no terreno do antigo Triceratops Encounter, e ganhou ' +
+                   'o Golden Ticket de melhor montanha-russa nova. O segundo lançamento vai de ' +
+                   '64 a 113 km/h em 2,4 segundos.',
+            fonte: 'Wikipedia — Jurassic World VelociCoaster', pesquisa: '2026-09-15' },
+          { texto: 'O Chris Pratt e a Bryce Dallas Howard gravaram os vídeos da fila, e o giro ' +
+                   'de cabeça para baixo sobre a lagoa se chama Mosasaurus Roll.',
+            fonte: 'Wikipedia — Jurassic World VelociCoaster', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2311-1720', hora: '17:40', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Hogwarts Express — ida e volta',
@@ -6941,7 +7010,12 @@ window.ROTEIRO = {
           'estação e peguem o trem de volta. O Beco Diagonal vocês já fizeram inteiro no dia 17.\n\n' +
           'Só funciona com ingresso park-to-park, que está na conferência dos ingressos. Fila ' +
           'média de 22 minutos na estação de Hogsmeade.',
-        areaParque: 'Hogsmeade', acesso: ['standby'], duracaoMin: 70, pesquisa: '2026-09-11' },
+        areaParque: 'Hogsmeade', acesso: ['standby'], duracaoMin: 70, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Na estação de King’s Cross, do lado do Universal Studios, dá para ' +
+                   '“atravessar” a parede entre as plataformas 9 e 10, como no primeiro filme.',
+            fonte: 'Wikipedia — The Wizarding World of Harry Potter (Universal Orlando Resort)', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2311-1835', hora: '18:50', ancora: 'fixo', tipo: 'show',
         titulo: 'Hogsmeade à noite · projeção no castelo',
@@ -6969,7 +7043,13 @@ window.ROTEIRO = {
           'a mesa é segurada por 15 minutos depois do horário. É mesa com garçom: 18 a 20% de ' +
           'gorjeta sobre o valor sem imposto.',
         restauranteId: 'r-mythos', areaParque: 'Lost Continent', acesso: ['reserva'],
-        duracaoMin: 75, pesquisa: '2026-09-11' },
+        duracaoMin: 75, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'O Mythos venceu o prêmio do Theme Park Insider de 2003 a 2008 e de novo de ' +
+                   '2019 a 2022, e com a décima vitória foi o primeiro a entrar no Hall da ' +
+                   'Fama do prêmio.',
+            fonte: 'Theme Park Insider', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-2311-2030', hora: '20:30', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Saída',
@@ -8830,7 +8910,22 @@ window.ROTEIRO = {
     { id: 'islands-of-adventure', nome: 'Islands of Adventure', tipo: 'parque',
       lat: 28.47166667, lng: -81.47138889, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 33, tempoFonte: 'documento',
-                 uberUSD: { min: 28, max: 40 }, uberFonte: 'estimado' } },
+                 uberUSD: { min: 28, max: 40 }, uberFonte: 'estimado' },
+      historia: {
+        linhas: [
+          'Abriu em 28/05/1999, o segundo parque da Universal em Orlando.',
+          'Por contrato, a Universal tem os direitos de parque de parte da Marvel a leste ' +
+          'do rio Mississippi: Homem-Aranha, Vingadores, Quarteto Fantástico e X-Men. Por ' +
+          'isso a Disney não pode usar esses personagens no Walt Disney World, mas pode ' +
+          'usar os Guardiões da Galáxia no Epcot.',
+          'Hogsmeade abriu em 18/06/2010 e fez o público do parque subir. Em 2014, o ' +
+          'Hogwarts Express ligou o Islands ao Beco Diagonal.',
+          'A Lost Continent começou a ser demolida em fases no verão de 2026, e o Mythos ' +
+          'fecha em 2027, ainda sem data.',
+          'Em 2024 o parque recebeu 9,4 milhões de visitantes.',
+        ],
+        fontes: 'Wikipedia — Universal Islands of Adventure; Inside Universal', pesquisa: '2026-09-15',
+      } },
 
     { id: 'citywalk', nome: 'Universal CityWalk', tipo: 'compras',
       lat: 28.4733226, lng: -81.466124, verificado: true, fonteCoord: 'osm', endereco: null,
