@@ -884,13 +884,14 @@ window.ROTEIRO = {
     notas: [
       { tipo: 'atencao', texto:
         'HÁ UM DESFILE NOTURNO, o Disney Starlight: Dream the Night Away, que o mapa oficial ' +
-        'destaca e este roteiro não usa. Ele faz a mesma rota do desfile das 15h — ' +
+        'destaca e este roteiro não usa. Nas noites de festa de Natal ele não roda, e 11/11 ' +
+        'não é uma delas. Ele faz a mesma rota do desfile das 15h — ' +
         'Frontierland, Liberty Square, hub e Main Street — e corta o parque do mesmo jeito. ' +
         'Às 20h30 vocês estão na Fantasyland e às 21h25 na Tomorrowland, e a saída das 22h ' +
         'desce a Main Street. A hora dele em 11/11 está na pendência do desfile: se rodar ' +
         'perto das 21h, a Main Street estará tomada na hora de sair — e as filas do Seven ' +
         'Dwarfs e do TRON ficam ainda mais curtas enquanto ele passa.',
-        pesquisa: '2026-09-12' },
+        pesquisa: '2026-09-15' },
       { tipo: 'atencao', texto:
         'A TIANA’S BAYOU ADVENTURE ESTARÁ FECHADA. Entra em reforma em 02/11, com volta ' +
         'prevista para dezembro, sem dia marcado. A Tiana’s Bayou General fecha junto; a ' +
@@ -7992,23 +7993,30 @@ window.ROTEIRO = {
       pesquisa: '2026-09-11',
       restauranteIds: [] },
 
-    { id: 'ck-horarios-mk', dataAlvo: '2026-09-13', validaAte: '2026-11-11', dataEstimada: true,
-      motivoData: 'A Disney publica com 60 dias de antecedência, e 60 dias antes de 11/11 é 12/09',
+    { id: 'ck-horarios-mk', dataAlvo: '2026-10-11', validaAte: '2026-11-11', dataEstimada: true,
+      motivoData: 'Um mês antes do dia 11. Em 15/09 a agenda da Disney não mostrava nenhum desfile a partir de 08/11, quando começa a temporada da festa de Natal',
       hora: null, fuso: null, janelaReserva: false, critico: true,
       texto: 'Magic Kingdom 11/11: falta a hora do Festival of Fantasy e do desfile noturno',
       nota:
         'O PARQUE SAIU EM 12/09: 9h às 22h, com Early Entry às 8h30. É exatamente o que o ' +
         'dia assumia, então a referência já está certa e nenhum bloco mudou.\n\n' +
         'OS FOGOS TAMBÉM SAÍRAM: Happily Ever After às 20h, exatamente o que o dia assumia.\n\n' +
-        'FALTA SÓ O DESFILE. O Festival of Fantasy assume 15h, que é o padrão, e é a hora ' +
+        'FALTA SÓ O DESFILE, E ELE AINDA NÃO SAIU PARA NINGUÉM. Em 15/09 a agenda da Disney ' +
+        'não mostrava nenhum desfile a partir de 08/11, que é quando começa a temporada da ' +
+        'Mickey’s Very Merry Christmas Party: os horários dessa temporada ainda não foram ' +
+        'carregados. Confiram de novo daqui a um mês, e se não tiver saído até a véspera, a ' +
+        'hora do dia estará no app da Disney na manhã do dia 11.\n\n' +
+        'O Festival of Fantasy assume 15h, que é o padrão, e é a hora ' +
         'que ancora a tarde inteira: a travessia para a Tomorrowland às 15h12 e a janela do ' +
         'TRON andam com ele. Se sair outra, mexam no bloco do desfile — nada disso desloca ' +
         'com a abertura.\n\n' +
         'E O DESFILE NOTURNO, Disney Starlight: Dream the Night Away, que o mapa oficial ' +
-        'destaca. Mesma rota do diurno, mesmo corte do parque. Se rodar perto das 21h, a Main ' +
+        'destaca. Ele não roda nas noites de festa de Natal e segue normal nas outras, e ' +
+        '11/11 não é noite de festa. Mesma rota do diurno, mesmo corte do parque. Se rodar perto das 21h, a Main ' +
         'Street estará tomada na saída das 22h — e o Seven Dwarfs e o TRON ficam ainda mais ' +
         'vazios enquanto ele passa. Anotem a hora na nota do dia 11.\n\n' +
         'Confiram na mesma visita se a Tiana’s voltou da reforma antes do previsto.',
+      pesquisa: '2026-09-15',
       restauranteIds: [] },
 
     { id: 'ck-horarios-dhs-epcot', dataAlvo: '2026-09-17', validaAte: '2026-11-16', hora: null, fuso: null,

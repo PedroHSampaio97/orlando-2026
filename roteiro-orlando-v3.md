@@ -102,7 +102,7 @@ ou com dois Single Pass.*
 
 > **Por que o dia vai até as 22h.** Os fogos são às 20h e o parque fecha às 22h. A multidão vai embora às 20h25 e sobram **duas horas de fila curta** — é nelas que cabem o Seven Dwarfs (média de 80 minutos o dia inteiro) e a segunda chance do TRON. Dá para esticar porque o dia 12 não tem alarme.
 
-> **Há um desfile noturno**, o Disney Starlight: Dream the Night Away, na mesma rota do das 15h. A hora dele em 11/11 está nas pendências: se rodar perto das 21h, a Main Street estará tomada na saída das 22h — e o Seven Dwarfs e o TRON ficam ainda mais vazios enquanto ele passa.
+> **Há um desfile noturno**, o Disney Starlight: Dream the Night Away, na mesma rota do das 15h. Ele não roda nas noites de festa de Natal, e 11/11 não é uma delas. A hora dele em 11/11 está nas pendências — a agenda da Disney ainda não mostra desfile nenhum a partir de 08/11: se rodar perto das 21h, a Main Street estará tomada na saída das 22h — e o Seven Dwarfs e o TRON ficam ainda mais vazios enquanto ele passa.
 
 > **Monotrilho na ida, ferry na volta.** Depois dos fogos e no fechamento, a fila do monotrilho passa de 20 a 30 minutos porque todo mundo vai por padrão para ela. No fechamento a Disney opera os três barcos, cada um leva centenas de pessoas de uma vez, e a fila some em bloco.
 
@@ -626,7 +626,6 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [x] **11/09** — Lombard’s Seafood Grille (17/11, 18h45) — RESERVADO, confirmação 639247504692187392
 - [x] **11/09** — Atlantic (19/11, 17h) — RESERVADO, confirmação 639247233607631616
 - [x] **12/09** — Magic Kingdom — sem reserva: almoço e jantar do dia 11 são de balcão (Columbia Harbour House e Casey’s)
-- [ ] **13/09** — Magic Kingdom 11/11: falta a hora do Festival of Fantasy e do desfile noturno *(data estimada)*
 - [x] **14/09** — Sanaa (13/11, 19h40) — RESERVADO, confirmação 356258407484
 - [x] **14/09** — Animal Kingdom 13/11 — 8h às 18h, confirmado (Early Entry 7h30)
 - [ ] **15/09** — Confirmar com a agência a regra exata de validade do ingresso Disney de 4 dias *(data estimada)*
@@ -641,6 +640,7 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [ ] **06/10** — Confirmar o transfer gratuito do hotel para Magic Kingdom e Hollywood Studios *(data estimada)*
 - [ ] **06/10** — Reservar o carro na Avis do Old Town: retirada 20/11 às 15h, devolução 25/11 às 15h *(data estimada)*
 - [ ] **10/10** — Conferir os horários oficiais de 17, 22, 23 e 24/11 e ajustar a referência de cada dia *(data estimada)*
+- [ ] **11/10** — Magic Kingdom 11/11: falta a hora do Festival of Fantasy e do desfile noturno *(data estimada)*
 - [ ] **15/10** — Decidir sobre a Power-Up Band do Epic Universe (~US$ 40) *(data estimada)*
 - [ ] **15/10** — Confirmar que 22/11 tem Christmas Celebration (SeaWorld) e 24/11 tem Christmas Town (Busch Gardens) — ambos rodam em datas selecionadas *(data estimada)*
 - [ ] **15/10** — Conferir se The Wheel do ICON Park voltou a operar (para 12/11) *(data estimada)*
