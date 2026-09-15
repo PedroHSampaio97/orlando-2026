@@ -151,8 +151,8 @@ Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's
 | **17h15** | **Na'vi River Journey** | A fila cede junto com o resto do parque |
 | **17h45** | **ENTRAR NA FILA do Flight of Passage** | Até o último minuto vale. Vocês andam por volta das 18h30 |
 | **18h40** | **Sair caminhando pela Pandora escura** | Acesa, vazia, com o Awakenings na Árvore da Vida |
-| **19h05** | Uber para o Animal Kingdom Lodge | ~10 min. É outro endereço, não é o parque |
-| **19h45** | **Jantar — Sanaa** | Vão pela comida. Peçam o Bread Service |
+| **19h05** | Uber para o Animal Kingdom Lodge | ~10 min. Destino: **Kidani Village**, 3701 Osceola Pkwy, não o parque |
+| **19h40** | **Jantar — Sanaa** | Reservado, confirmação 356258407484. Vão pela comida. Peçam o Bread Service |
 
 ### Por que o dia está nesta ordem — a fila típica
 
@@ -627,7 +627,7 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [x] **11/09** — Atlantic (19/11, 17h) — RESERVADO, confirmação 639247233607631616
 - [x] **12/09** — Magic Kingdom — sem reserva: almoço e jantar do dia 11 são de balcão (Columbia Harbour House e Casey’s)
 - [ ] **13/09** — Magic Kingdom 11/11: falta a hora do Festival of Fantasy e do desfile noturno *(data estimada)*
-- [ ] **14/09, 6h ET** — Reservar Sanaa para o jantar de 13/11 (janela de 60 dias)
+- [x] **14/09** — Sanaa (13/11, 19h40) — RESERVADO, confirmação 356258407484
 - [x] **14/09** — Animal Kingdom 13/11 — 8h às 18h, confirmado (Early Entry 7h30)
 - [ ] **15/09** — Confirmar com a agência a regra exata de validade do ingresso Disney de 4 dias *(data estimada)*
 - [ ] **16/09, 6h ET** — Hollywood Studios: Oga’s Cantina e Sci-Fi Dine-In — e ajustar os blocos
