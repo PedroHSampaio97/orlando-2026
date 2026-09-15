@@ -2195,7 +2195,14 @@ window.ROTEIRO = {
           'PONTO DE ENCONTRO DE HOJE: a base da Árvore da Vida, na Discovery Island. É ' +
           'visível de quase todo o parque e todo caminho passa por ela. Se vocês se ' +
           'perderem, vão para lá e ESPEREM.',
-        localId: 'animal-kingdom', acesso: [], duracaoMin: 45, pesquisa: '2026-09-12' },
+        localId: 'animal-kingdom', acesso: [], duracaoMin: 45, pesquisa: '2026-09-12',
+        curiosidades: [
+          { texto: 'Vocês esperam embaixo de uma árvore de concreto de 44 metros, com cerca de ' +
+                   '102 mil folhas artificiais. A estrutura foi fabricada em Houston, no pátio ' +
+                   'da Brown & Root — a empreiteira que construiu uma das primeiras ' +
+                   'plataformas de petróleo no mar do mundo.',
+            fonte: 'Wikipedia — Tree of Life (Disney); Wikipedia — Brown & Root', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1311-0935', hora: '08:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Kilimanjaro Safaris — rope drop',
@@ -2209,7 +2216,12 @@ window.ROTEIRO = {
           'diferente, e o motivo está naquele bloco.',
         areaParque: 'Africa', acesso: ['rope-drop', 'standby'], critico: true, duracaoMin: 34,
         fila: { min: 10, quando: 'na abertura', pico: 55, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'A savana tem uns 45 hectares e 32 espécies. Os caminhões são GMC e Ford de ' +
+                   'verdade, movidos a propano, e a “lama” seca na lataria é cimento pintado.',
+            fonte: 'Wikipedia — Kilimanjaro Safaris', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1311-1040', hora: '08:40', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Expedition Everest',
@@ -2223,7 +2235,16 @@ window.ROTEIRO = {
           'SINGLE RIDER: a Disney retirou a placa da fila de single rider em julho de 2026, e ' +
           'ela deve acabar. Se precisarem, perguntem ao funcionário da entrada.',
         areaParque: 'Asia', acesso: ['standby'], duracaoMin: 35,
-        fila: { min: 15, quando: 'na abertura', pico: 40, fonte: '2026-09-10' } },
+        fila: { min: 15, quando: 'na abertura', pico: 40, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'A montanha tem 199,5 pés, 60,8 metros: a partir de 200 pés a lei americana ' +
+                   'exigiria uma luz de aviso para aviões no topo. É a montanha artificial ' +
+                   'mais alta do mundo e custou uns US$ 100 milhões.',
+            fonte: 'Wikipedia — Expedition Everest', pesquisa: '2026-09-15' },
+          { texto: 'A fila tem um museu do Yeti com cerca de 8 mil objetos do Nepal, onde a ' +
+                   'Disney fez expedições de pesquisa em 2005.',
+            fonte: 'Wikipedia — Expedition Everest', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1311-0915', hora: '09:15', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Kali River Rapids',
@@ -2237,7 +2258,13 @@ window.ROTEIRO = {
           'resto do dia.\n\n' +
           'Se fizerem: capa de chuva vestida, celular no Ziploc, e há lockers na entrada.',
         areaParque: 'Asia', acesso: ['standby'], molha: true, opcional: true, duracaoMin: 35,
-        fila: { min: 15, quando: 'na abertura', pico: 45, estimado: true, fonte: '2026-09-10' } },
+        fila: { min: 15, quando: 'na abertura', pico: 45, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'Antes de abrir, em 1999, ela se chamaria Tiger Rapids Run. O percurso é ' +
+                   'uma denúncia: a floresta verde vira toco queimado, e um caminhão de ' +
+                   'madeira ilegal aparece atolado no rio.',
+            fonte: 'Wikipedia — Kali River Rapids', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1311-1415', hora: '09:50', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Maharajah Jungle Trek',
@@ -2246,7 +2273,16 @@ window.ROTEIRO = {
           'Trilha a pé por ruínas cenográficas com tigres, dragões-de-komodo e morcegos ' +
           'gigantes. Sem fila, no seu ritmo, com muita sombra.\n\n' +
           'Vem aqui de propósito: se vocês fizeram o Kali, é a hora de secar andando.',
-        areaParque: 'Asia', acesso: [], duracaoMin: 39 },
+        areaParque: 'Asia', acesso: [], duracaoMin: 39,
+        curiosidades: [
+          { texto: 'A trilha conta a história de um marajá que cercou a floresta para caçar e ' +
+                   'morreu num acidente de caça. Gerações depois, a área virou santuário.',
+            fonte: 'Wikipedia — Maharajah Jungle Trek', pesquisa: '2026-09-15' },
+          { texto: 'Os tigres de hoje são de Sumatra, e dois filhotes nasceram no parque em ' +
+                   '2017. Os búfalos-d’água, que chegaram em 2015, têm nomes das personagens ' +
+                   'de The Golden Girls.',
+            fonte: 'Wikipedia — Maharajah Jungle Trek', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1311-1030p', hora: '10:35', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
@@ -2264,14 +2300,19 @@ window.ROTEIRO = {
         contexto:
           'Trilha a pé com gorilas, hipopótamos vistos por baixo d’água e um aviário. ' +
           'Diferente do safári, aqui vocês param quanto quiserem.',
-        areaParque: 'Africa', acesso: [], duracaoMin: 40 },
+        areaParque: 'Africa', acesso: [], duracaoMin: 40,
+        curiosidades: [
+          { texto: 'A trilha abriu com este nome em 1998, virou Pangani Forest Exploration ' +
+                   'Trail poucos meses depois e só recuperou o nome original em 2016.',
+            fonte: 'Wikipedia — Gorilla Falls Exploration Trail', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1311-1315', hora: '11:30', ancora: 'fixo', tipo: 'show',
         titulo: 'Festival of the Lion King — chegar 11h30, show 11h50',
         descricao: 'Os 20 min de chegar antes estão dentro deste bloco',
         contexto:
           'Espetáculo em teatro circular com acrobatas, cantores e carros alegóricos. É quase ' +
-          'todo música e acrobacia, então o inglês não atrapalha.\n\n' +
+          'todo música e acrobacia.\n\n' +
           'CHEGUEM 11H30 PARA O SHOW DE 11H50. Os vinte minutos de antecedência não são ' +
           'exagero: a plateia é por ordem de chegada e a primeira fila é ruim. Este bloco ' +
           'já tem esse tempo dentro dele — não é folga.\n\n' +
@@ -2280,7 +2321,13 @@ window.ROTEIRO = {
           'HORÁRIO FIXO de sessão — confiram a grade no app da Disney no dia e ajustem aqui ' +
           'se a sessão for outra. Se a mais próxima for muito diferente das 11h30, o almoço ' +
           'acompanha.',
-        areaParque: 'Africa', acesso: [], duracaoMin: 50, confirmarHorario: true },
+        areaParque: 'Africa', acesso: [], duracaoMin: 50, confirmarHorario: true,
+        curiosidades: [
+          { texto: 'Estreou com o parque, na Camp Minnie-Mickey. Com a obra de Pandora, ganhou ' +
+                   'este teatro em Harambe em 01/06/2014. A plateia se divide em quatro ' +
+                   'setores com nomes de bichos: girafa, elefante, javali e leão.',
+            fonte: 'Wikipedia — Festival of the Lion King', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1311-1215', hora: '12:30', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Satu’li Canteen',
@@ -2294,7 +2341,16 @@ window.ROTEIRO = {
           'aos 65 minutos deste bloco — não é tempo de mesa, é tempo de chegar.\n\n' +
           'É a primeira vez que vocês pisam em Pandora hoje, e é de dia. Olhem as montanhas ' +
           'flutuantes agora, porque à noite o lugar é outro — e vocês voltam.',
-        restauranteId: 'r-satuli', areaParque: 'Pandora', acesso: [], duracaoMin: 65 },
+        restauranteId: 'r-satuli', areaParque: 'Pandora', acesso: [], duracaoMin: 65,
+        curiosidades: [
+          { texto: 'As montanhas flutuantes têm 47 metros, com a sustentação de aço escondida ' +
+                   'por perspectiva forçada, e se inspiram nos picos de Zhangjiajie, na China. ' +
+                   'A land se passa gerações depois do filme.',
+            fonte: 'Wikipedia — Pandora – The World of Avatar', pesquisa: '2026-09-15' },
+          { texto: 'James Cameron conta que achava que a Disney queria uma atração de Avatar. ' +
+                   'A Disney queria a land inteira.',
+            fonte: 'Wikipedia — Pandora – The World of Avatar', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1311-1345', hora: '13:40', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Discovery Island Trails e a Árvore da Vida',
@@ -2302,10 +2358,17 @@ window.ROTEIRO = {
         contexto:
           'Trilhas laterais que contornam a base da Árvore da Vida, com lêmures, lontras e ' +
           'cangurus. Quase ninguém entra — a maioria fotografa a árvore de longe e segue.\n\n' +
-          'Olhem a árvore de perto: são mais de 300 animais esculpidos no tronco, e a ' +
-          'estrutura é uma plataforma de petróleo reaproveitada. À noite ela vira outra coisa, ' +
-          'e vocês vão ver isso na saída.',
-        areaParque: 'Discovery Island', acesso: [], duracaoMin: 45 },
+          'Olhem a árvore de perto: são 337 animais esculpidos no tronco e nas raízes. À ' +
+          'noite ela vira outra coisa, e vocês vão ver isso na saída.',
+        areaParque: 'Discovery Island', acesso: [], duracaoMin: 45,
+        curiosidades: [
+          { texto: 'A árvore levou 18 meses para ficar pronta, com três Imagineers e dez ' +
+                   'artistas liderados pelo escultor Zsolt Hormay.',
+            fonte: 'Wikipedia — Tree of Life (Disney)', pesquisa: '2026-09-15' },
+          { texto: 'Dentro do tronco há um teatro de 428 lugares. Foi o It’s Tough to Be a Bug ' +
+                   'de 1998 a 2025, e hoje passa o Zootopia.',
+            fonte: 'Wikipedia — Tree of Life (Disney)', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1311-1630', hora: '14:25', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Nomad Lounge — a varanda',
@@ -2317,7 +2380,13 @@ window.ROTEIRO = {
           'espera pelo app da Disney, ou no balcão, e passeiem enquanto esperam.\n\n' +
           'Esta hora é o VAZIO PROPOSITAL do dia, só que com sombra e bebida. Vocês vão ' +
           'precisar dela: a partir das 16h30 o dia não para mais até o jantar.',
-        restauranteId: 'r-nomad', areaParque: 'Discovery Island', acesso: [], duracaoMin: 60 },
+        restauranteId: 'r-nomad', areaParque: 'Discovery Island', acesso: [], duracaoMin: 60,
+        curiosidades: [
+          { texto: 'O Tiffins, ao lado, abriu em 27/05/2016, no dia em que o parque começou a ' +
+                   'abrir à noite. A arte das salas dele nasceu das fotos e desenhos das ' +
+                   'viagens de pesquisa dos Imagineers pela África, Ásia e América do Sul.',
+            fonte: 'WDWNT; Wikipedia — Disney’s Animal Kingdom', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1311-1545p', hora: '15:25', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — antes da reta final',
@@ -2347,7 +2416,14 @@ window.ROTEIRO = {
           'PENSAR. Estes 45 minutos são a margem que protege o safári do entardecer e a ' +
           'fila do Flight of Passage, que são os dois blocos insubstituíveis do dia.',
         areaParque: 'Asia', acesso: ['standby'], opcional: true, duracaoMin: 39,
-        fila: { min: 20, quando: 'no fim da tarde', pico: 40, estimado: true, fonte: '2026-09-10' } },
+        fila: { min: 20, quando: 'no fim da tarde', pico: 40, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'O Yeti tem 7,6 metros e era o maior animatrônico da Disney quando a ' +
+                   'atração abriu, em 2006. Meses depois a estrutura rachou, e desde então ele ' +
+                   'fica parado sob luz estroboscópica — o “Disco Yeti”. Em 15/08/2026 a ' +
+                   'Disney anunciou na D23 que vai consertá-lo, ainda sem data.',
+            fonte: 'Wikipedia — Expedition Everest; BlogMickey; Wandering In Disney', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1311-1631', hora: '16:30', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Kilimanjaro Safaris DE NOVO — agora ao entardecer',
@@ -2364,7 +2440,12 @@ window.ROTEIRO = {
           'fechamento do safári na parada anterior — ele fecha antes do parque.',
         areaParque: 'Africa', acesso: ['standby'], critico: true, duracaoMin: 35,
         fila: { min: 15, quando: 'na última hora', pico: 55, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'O safári noturno voltou em 2016, com um “pôr do sol” artificial e sons de ' +
+                   'animais no percurso.',
+            fonte: 'Wikipedia — Kilimanjaro Safaris', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1311-0900', hora: '17:15', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Na’vi River Journey',
@@ -2377,7 +2458,11 @@ window.ROTEIRO = {
           'resto do parque. E é a entrada certa para o que vem depois: vocês já ficam em ' +
           'Pandora, com o sol se pondo.',
         areaParque: 'Pandora', acesso: ['standby'], duracaoMin: 30,
-        fila: { min: 30, quando: 'no fim do dia', pico: 65, fonte: '2026-09-10' } },
+        fila: { min: 30, quando: 'no fim do dia', pico: 65, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'A música é de James Horner, o compositor de Avatar, com Simon Franglen.',
+            fonte: 'Wikipedia — Na’vi River Journey', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1311-1120', hora: '17:45', ancora: 'fixo', tipo: 'atracao',
         titulo: 'ENTRAR NA FILA do Flight of Passage',
@@ -2396,7 +2481,13 @@ window.ROTEIRO = {
           'Há locker na entrada e nada solto é permitido.',
         areaParque: 'Pandora', acesso: ['standby'], locker: true, critico: true, duracaoMin: 55,
         fila: { min: 50, quando: 'na última hora', pico: 180, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'A imagem é em 10K a 60 quadros por segundo, e a atração ganhou em 2018 o ' +
+                   'prêmio da Visual Effects Society. Na história, vocês são “ligados” a um ' +
+                   'avatar para voar num banshee — o rito de passagem dos jovens Na’vi.',
+            fonte: 'Wikipedia — Avatar Flight of Passage', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1311-1730', hora: '18:40', ancora: 'fixo', tipo: 'livre',
         titulo: 'Sair caminhando pela Pandora escura',
@@ -2416,7 +2507,14 @@ window.ROTEIRO = {
           'Se vocês querem trazer alguma coisa deste dia, é aqui e é agora — amanhã não ' +
           'passa por aqui, e a loja fecha junto com o parque. Vale entrar mesmo que seja ' +
           'só para olhar.',
-        areaParque: 'Pandora', acesso: [], duracaoMin: 25, pesquisa: '2026-09-10' },
+        areaParque: 'Pandora', acesso: [], duracaoMin: 25, pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'O Tree of Life Awakenings estreou em 27/05/2016.',
+            fonte: 'Wikipedia — Tree of Life (Disney)', pesquisa: '2026-09-15' },
+          { texto: 'Pandora tem 20 espécies de plantas inventadas para a land, e algumas ' +
+                   'reagem ao toque com sensores da Disney Research.',
+            fonte: 'Wikipedia — Pandora – The World of Avatar', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1311-1830', hora: '19:05', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Uber para o Animal Kingdom Lodge',
@@ -2448,7 +2546,12 @@ window.ROTEIRO = {
           'Nos pratos principais: curry de frutos do mar goês, butter chicken, carne ' +
           'braseada ou vindaloo de porco, entre US$ 15 e 35. Reserva pelo My Disney ' +
           'Experience, janela abre 14/09. HORÁRIO FIXO de reserva.',
-        restauranteId: 'r-sanaa', localId: 'ak-lodge', acesso: ['reserva'], duracaoMin: 90 },
+        restauranteId: 'r-sanaa', localId: 'ak-lodge', acesso: ['reserva'], duracaoMin: 90,
+        curiosidades: [
+          { texto: 'Kidani quer dizer “colar” em suaíli. A Kidani Village, onde fica o Sanaa, ' +
+                   'abriu em 2009.',
+            fonte: 'D23; Wikipedia — Disney’s Animal Kingdom Lodge', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1311-2115', hora: '21:15', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel',
@@ -8254,7 +8357,25 @@ window.ROTEIRO = {
       doHotel: { tempoMin: 35, tempoFonte: 'documento',
                  uberUSD: { min: 20, max: 30 }, uberFonte: 'estimado' },
       nota: 'Carona por app: o ponto de encontro é à esquerda, assim que saírem do parque — ' +
-            'está no mapa oficial.' },
+            'está no mapa oficial.',
+      historia: {
+        linhas: [
+          'Abriu em 22/04/1998, Dia da Terra, com 580 acres — o maior parque temático do ' +
+          'mundo na inauguração.',
+          'Para defender animais de verdade no parque, o Imagineer Joe Rohde levou um ' +
+          'tigre-de-bengala vivo a uma reunião com o presidente da Disney, Michael Eisner. ' +
+          'O próprio Rohde diz que a história foi crescendo com o tempo, mas o tigre ' +
+          'existiu.',
+          'O projeto original tinha o Beastly Kingdom, uma área de criaturas mitológicas ' +
+          'que nunca foi construída. No terreno dela ficou a Camp Minnie-Mickey, e depois, ' +
+          'em 2017, Pandora.',
+          'Por causa dos animais, o parque não tem fogos de artifício e não usa canudos, ' +
+          'tampas de plástico nem balões.',
+          'Em 2024 recebeu 8,8 milhões de visitantes. A próxima grande mudança é a Tropical ' +
+          'Americas, prevista para 2027 no lugar da DinoLand.',
+        ],
+        fontes: 'Wikipedia — Disney’s Animal Kingdom; Joe Rohde (X)', pesquisa: '2026-09-15',
+      } },
 
     { id: 'ak-lodge', nome: 'Animal Kingdom Villas · Kidani Village (Sanaa)', tipo: 'restaurante',
       lat: 28.3543353, lng: -81.6056084, verificado: true, fonteCoord: 'osm', endereco: '3701 Osceola Pkwy',
