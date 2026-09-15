@@ -68,7 +68,8 @@ window.Busca = (function () {
               (window.AppNav && AppNav.horaDoBloco ? AppNav.horaDoBloco(dia, b) : b.hora);
           },
           busca: normal([b.titulo, b.descricao, b.contexto, b.areaParque,
-                         dia.titulo, b.nota].join(' ')),
+                         dia.titulo, b.nota]
+                         .concat((b.curiosidades || []).map((c) => c.texto)).join(' ')),
           diaId: dia.id, foco: '.parada[data-bloco="' + b.id + '"]',
         });
       });
@@ -135,7 +136,8 @@ window.Busca = (function () {
         onde: (l.endereco || l.tipo) +
               (l.doHotel && l.doHotel.tempoMin != null
                 ? ' · ' + l.doHotel.tempoMin + ' min do hotel' : ''),
-        busca: normal([l.nome, l.endereco, l.tipo, l.nota].join(' ')),
+        busca: normal([l.nome, l.endereco, l.tipo, l.nota]
+                      .concat(l.historia ? l.historia.linhas : []).join(' ')),
         tela: 'guia', foco: '.local[data-item="' + l.id + '"]',
       });
     });

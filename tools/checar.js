@@ -144,7 +144,7 @@ const CAMPOS_BLOCO = [
   'hora', 'ancora', 'tipo', 'titulo', 'descricao', 'contexto', 'fuso', 'acesso',
   'acessoAlt', 'condicao', 'confirmarHorario', 'molha', 'locker', 'critico',
   'duracaoMin', 'areaParque', 'endereco', 'localId', 'restauranteId', 'pesquisa',
-  'nota', 'opcional', 'fila', 'acessoAltNota',
+  'nota', 'opcional', 'fila', 'acessoAltNota', 'curiosidades',
 ];
 /* Campos que existem de proposito sem uso na tela. Cada um precisa de motivo. */
 const MORTOS_DE_PROPOSITO = {

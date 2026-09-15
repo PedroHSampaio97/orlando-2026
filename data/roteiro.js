@@ -1115,7 +1115,21 @@ window.ROTEIRO = {
           'PONTO DE ENCONTRO DE HOJE: o coreto da Town Square, logo depois da catraca. Se ' +
           'vocês se perderem, vão para lá e ESPEREM — não saiam procurando. Combinem isso ' +
           'antes de a corda soltar.',
-        localId: 'magic-kingdom', acesso: [], duracaoMin: 75, pesquisa: '2026-09-12' },
+        localId: 'magic-kingdom', acesso: [], duracaoMin: 75, pesquisa: '2026-09-12',
+        curiosidades: [
+          { texto: 'As janelas do segundo andar da Main Street são os créditos do parque, como ' +
+                   'no fim de um filme: quem construiu o Walt Disney World aparece como dono ' +
+                   'de um negócio fictício. A do Walt fica em cima do Plaza Restaurant, no fim ' +
+                   'da rua, virada para o castelo — "Walter E. Disney – Graduate School of ' +
+                   'Design & Master Planning". A do pai dele fica na Center Street, em cima da ' +
+                   'Uptown Jewelers: "Elias Disney – Contractor – Est. 1895".',
+            fonte: 'Wikipedia — List of Disney Main Street window honors', pesquisa: '2026-09-15' },
+          { texto: 'O castelo tem 58 metros contando o fosso e não tem um tijolo: por dentro é ' +
+                   'estrutura de aço, por fora é reboco. De baixo para cima, pedras, janelas e ' +
+                   'portas vão diminuindo — perspectiva forçada, para ele parecer mais alto do ' +
+                   'que é.',
+            fonte: 'Wikipedia — Cinderella Castle', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1111-1330', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Big Thunder Mountain',
@@ -1130,17 +1144,34 @@ window.ROTEIRO = {
           'A Tiana’s Bayou Adventure, que seria a outra da área, está fechada.',
         areaParque: 'Frontierland', acesso: ['rope-drop', 'standby'],
         critico: true, duracaoMin: 37, pesquisa: '2026-09-10',
-        fila: { min: 20, quando: 'na abertura', pico: 60, estimado: true, fonte: '2026-09-10' } },
+        fila: { min: 20, quando: 'na abertura', pico: 60, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'A versão da Flórida abriu em 1980, e as rochas imitam o Monument Valley, ' +
+                   'no Arizona: montanhas pontudas e de cor viva. A da Disneyland, na ' +
+                   'Califórnia, imita as formações arredondadas e de cor apagada do Bryce ' +
+                   'Canyon.',
+            fonte: 'Wikipedia — Big Thunder Mountain Railroad', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1111-1410', hora: '09:40', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Piratas do Caribe',
         descricao: 'Standby. Adventureland fica ao lado',
         contexto:
-          'Passeio de barco de 1967, o clássico que originou os filmes. Cenários com ' +
+          'Passeio de barco, o clássico que originou os filmes. Cenários com ' +
           'animatrônicos, uma queda pequena no escuro, quase não molha. A capacidade é ' +
           'altíssima, então a fila anda mesmo quando parece grande — não vale gastar passe.',
         areaParque: 'Adventureland', acesso: ['standby'], duracaoMin: 35,
-        fila: { min: 15, quando: 'de manhã', pico: 45, estimado: true, fonte: '2026-09-10' } },
+        fila: { min: 15, quando: 'de manhã', pico: 45, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'Ele não existia na abertura, em 1971: a Disney achou que, na Flórida, tão ' +
+                   'perto do Caribe, um passeio de piratas caribenhos não teria o mesmo ' +
+                   'encanto que na Califórnia. Acabou abrindo em 15/12/1973. O forte da fila é ' +
+                   'inspirado no Castillo San Felipe del Morro, em San Juan de Porto Rico.',
+            fonte: 'Wikipedia — Pirates of the Caribbean (attraction)', pesquisa: '2026-09-15' },
+          { texto: 'Uma das vozes dos piratas que cantam é do Thurl Ravenscroft. Guardem o ' +
+                   'nome: ele aparece de novo às 11h, na Mansão.',
+            fonte: 'Wikipedia — Thurl Ravenscroft', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1111-1545', hora: '10:15', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Jungle Cruise',
@@ -1151,20 +1182,35 @@ window.ROTEIRO = {
           'É lista alta e vocês também fazem sem passe, porque a Adventureland ainda está ' +
           'vazia a esta hora. Depois das 11h ela passa de uma hora.',
         areaParque: 'Adventureland', acesso: ['standby'], duracaoMin: 39,
-        fila: { min: 25, quando: 'antes das 11h', pico: 60, fonte: '2026-09-10' } },
+        fila: { min: 25, quando: 'antes das 11h', pico: 60, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'Atração do dia da abertura, em 1971. Em 2021 a Disney reescreveu o passeio ' +
+                   'e trocou a cena final, para tirar representações ofensivas de povos ' +
+                   'nativos; entraram personagens novos da Jungle Navigation Co.',
+            fonte: 'Wikipedia — Jungle Cruise', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1111-1150', hora: '11:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mansão Mal-Assombrada',
         descricao: 'Multi Pass · lista baixa. Ao sair, reservem o Space Mountain',
         contexto:
-          'A Haunted Mansion, de 1969. Passeio em cápsulas por cenários com 999 fantasmas, ' +
+          'A Haunted Mansion. Passeio em cápsulas por cenários com 999 fantasmas, ' +
           'feito com truques de ilusão óptica do século XIX que continuam funcionando. É ' +
           'assombrado de brincadeira, não de susto. Um dos melhores da Disney.\n\n' +
           'ESTA É A PRIMEIRA RESERVA DO DIA E É POR ISSO QUE ELA VEM CEDO. No segundo em ' +
           'que vocês passarem a catraca, abre espaço para reservar a próxima — e a restrição ' +
           'de lista cai junto. Reservem o SPACE MOUNTAIN ali mesmo, de pé na saída.',
         areaParque: 'Liberty Square', acesso: ['multi-pass'], critico: true, duracaoMin: 35,
-        fila: { min: 10, quando: 'com o Multi Pass', pico: 40, fonte: '2026-09-10' } },
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 40, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'Atração do dia da abertura, em 1971. Na Disneyland, a sala que “estica” no ' +
+                   'começo é um elevador que desce; aqui é o teto que sobe.',
+            fonte: 'Wikipedia — The Haunted Mansion', pesquisa: '2026-09-15' },
+          { texto: 'O busto que puxa o canto no cemitério, perto do fim, é o Thurl Ravenscroft ' +
+                   '— por mais de 50 anos a voz do Tony the Tiger, o tigre do Sucrilhos, no ' +
+                   '“They’re gr-r-reat!”.',
+            fonte: 'Wikipedia — Thurl Ravenscroft', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1111-1115p', hora: '11:35', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
@@ -1196,11 +1242,21 @@ window.ROTEIRO = {
         titulo: 'it’s a small world',
         descricao: 'Standby. Capacidade alta, a fila anda',
         contexto:
-          'Passeio de barco de 1964 com centenas de bonecos animatrônicos e a música que ' +
+          'Passeio de barco com centenas de bonecos animatrônicos e a música que ' +
           'gruda na cabeça por três dias. Lento e climatizado — serve de descanso depois do ' +
           'almoço, e a fila engana: some rápido.',
         areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 35,
-        fila: { min: 25, quando: 'depois do almoço', pico: 35, fonte: '2026-09-10' } },
+        fila: { min: 25, quando: 'depois do almoço', pico: 35, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'Nasceu na Feira Mundial de Nova York de 1964, no pavilhão da UNICEF ' +
+                   'patrocinado pela Pepsi, com o visual da Mary Blair, e veio para cá na ' +
+                   'abertura de 1971.',
+            fonte: 'Wikipedia — It’s a Small World', pesquisa: '2026-09-15' },
+          { texto: 'Walt pediu aos irmãos Sherman uma música fácil de traduzir e de cantar em ' +
+                   'cânone. A revista Time a chamou de a música mais tocada em público de ' +
+                   'todos os tempos.',
+            fonte: 'Wikipedia — It’s a Small World', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1111-1015', hora: '13:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Peter Pan’s Flight',
@@ -1250,7 +1306,17 @@ window.ROTEIRO = {
           'HORÁRIO FIXO, colado no desfile. Se o parque abrir mais cedo, a manhã inteira ' +
           'termina antes e sobra tempo livre aqui — não venham para cá antes da hora, ' +
           'aproveitem para repetir o que mais gostaram.',
-        areaParque: 'Liberty Square', acesso: [], duracaoMin: 35 },
+        areaParque: 'Liberty Square', acesso: [], duracaoMin: 35,
+        curiosidades: [
+          { texto: 'O carvalho no centro da praça, a Liberty Tree, foi achado dentro do ' +
+                   'terreno da Disney e transplantado para cá. As 13 lanternas penduradas nele ' +
+                   'representam as 13 colônias.',
+            fonte: 'Wikipedia — Liberty Square; Military Disney Tips', pesquisa: '2026-09-15' },
+          { texto: 'Numa janela do andar de cima da praça há duas lanternas acesas: é o sinal ' +
+                   'da Revolução Americana, do “one if by land, two if by sea” — uma se os ' +
+                   'ingleses viessem por terra, duas se viessem pelo mar.',
+            fonte: 'Wikipedia — Liberty Square', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1111-1500', hora: '15:00', ancora: 'fixo', tipo: 'show',
         titulo: 'Festival of Fantasy Parade',
@@ -1262,7 +1328,15 @@ window.ROTEIRO = {
           'É A ÚLTIMA HORA DO DIA QUE FALTA: o parque e os fogos já saíram, o desfile não. O ' +
           'roteiro assume 15h, que é o padrão. Se sair outra, mexam aqui — a travessia das ' +
           '15h12 e a janela do TRON andam com o desfile, não com a abertura.',
-        areaParque: 'Liberty Square', acesso: [], duracaoMin: 12, confirmarHorario: true },
+        areaParque: 'Liberty Square', acesso: [], duracaoMin: 12, confirmarHorario: true,
+        curiosidades: [
+          { texto: 'Estreou em 09/03/2014. O dragão da Malévola tem uns 8 metros, cospe fogo e ' +
+                   'anda sobre um chassi articulado, que dobra nas curvas.',
+            fonte: 'Disney Wiki (Fandom) — Festival of Fantasy Parade', pesquisa: '2026-09-15' },
+          { texto: 'Em 11/05/2018 o dragão pegou fogo de verdade no meio do desfile. Um ' +
+                   'funcionário apagou, ninguém se feriu e o parque seguiu normal.',
+            fonte: 'CBS News', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1111-1512', hora: '15:12', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Atravessar para a Tomorrowland — AGORA',
@@ -1282,7 +1356,7 @@ window.ROTEIRO = {
         titulo: 'TRON Lightcycle / Run',
         descricao: 'A janela do desfile. Standby',
         contexto:
-          'A montanha-russa mais rápida do Magic Kingdom, ~100 km/h. Vocês montam em motos, ' +
+          'A montanha-russa mais rápida do Magic Kingdom, ~97 km/h. Vocês montam em motos, ' +
           'inclinados para frente, e o lançamento é forte. É curta — cerca de 1 minuto.\n\n' +
           'POR QUE AQUI E NÃO NA ABERTURA: o TRON não entra no Early Entry, mas os hóspedes ' +
           'Disney já estão dentro do parque quando ele abre e disparam para cá. Quem vem de ' +
@@ -1293,7 +1367,13 @@ window.ROTEIRO = {
           'Guardem tudo no locker antes — o TRON não permite nada solto.',
         areaParque: 'Tomorrowland', acesso: ['standby'], locker: true,
         critico: true, duracaoMin: 55, pesquisa: '2026-09-10',
-        fila: { min: 50, quando: 'na janela do desfile', pico: 90, estimado: true, fonte: '2026-09-10' } },
+        fila: { min: 50, quando: 'na janela do desfile', pico: 90, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'É cópia da montanha-russa que a Shanghai Disneyland abriu em 2016 — na ' +
+                   'época, a mais rápida de qualquer parque da Disney. A de Orlando abriu em ' +
+                   '04/04/2023 e passa por baixo de uma cobertura que muda de cor.',
+            fonte: 'Wikipedia — Tron Lightcycle Power Run', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1111-1515p', hora: '16:25', ancora: 'fixo', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
@@ -1313,15 +1393,29 @@ window.ROTEIRO = {
           'É lista alta e vocês pegam com a reserva rolante, sem ter gasto nada da compra ' +
           'inicial nela.',
         areaParque: 'Tomorrowland', acesso: ['multi-pass'], duracaoMin: 35,
-        fila: { min: 10, quando: 'com o Multi Pass', pico: 60, fonte: '2026-09-10' } },
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 60, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'É o primeiro Space Mountain do mundo: abriu em 15/01/1975, dois anos antes ' +
+                   'do da Disneyland. Walt levou a ideia ao designer John Hench em 1964, mas a ' +
+                   'tecnologia da época e o espaço da Califórnia não davam. São dois trilhos ' +
+                   'espelhados, o Alpha e o Omega.',
+            fonte: 'Wikipedia — Space Mountain (Magic Kingdom)', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1111-1700', hora: '17:15', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Buzz Lightyear',
         descricao: 'Multi Pass · lista baixa. Repaginado em 2026',
         contexto:
-          'Dark ride onde vocês atiram em alvos e disputam pontuação. Girem a cabine com o ' +
-          'joystick central para mirar melhor, e os alvos com Z valem mais.',
+          'Dark ride onde vocês atiram em alvos e disputam pontuação. Desde a reforma de ' +
+          'abril de 2026 a pistola é de mão, com laser sempre ligado, e o placar aparece numa ' +
+          'tela na frente de vocês.\n\n' +
+          'AS DICAS OFICIAIS DA DISNEY: mirem no centro de cada alvo — quando o tiro é bom, o ' +
+          'alvo acende com a cor da pistola, vermelha ou verde. Alvo mais distante ou mais ' +
+          'difícil vale mais. Anel branco vale o dobro, e o anel multicolorido, o mais raro, ' +
+          'liga um bônus curto em que todos os alvos da cena valem muito mais para todo mundo ' +
+          'por perto.',
         areaParque: 'Tomorrowland', acesso: ['multi-pass'], duracaoMin: 33,
+        pesquisa: '2026-09-15',
         fila: { min: 10, quando: 'com o Multi Pass', pico: 35, fonte: '2026-09-10' } },
 
       { id: 'b-1111-1745', hora: '17:55', ancora: 'fixo', tipo: 'refeicao',
@@ -1331,7 +1425,13 @@ window.ROTEIRO = {
           'Cachorro-quente de balcão, com pianista tocando ao vivo na porta. Foi por isso ' +
           'que vocês escolheram — comer dentro perde o motivo da escolha.\n\n' +
           'Mobile order aqui também.',
-        restauranteId: 'r-caseys', areaParque: 'Main Street', acesso: [], duracaoMin: 65 },
+        restauranteId: 'r-caseys', areaParque: 'Main Street', acesso: [], duracaoMin: 65,
+        curiosidades: [
+          { texto: 'O nome vem de “Casey at the Bat”, poema de 1888 de Ernest Thayer sobre o ' +
+                   'rebatedor de Mudville que é eliminado e perde o jogo. A Disney transformou ' +
+                   'a história em desenho nos anos 1940.',
+            fonte: 'KennythePirate; Disney Wiki (Fandom)', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1111-1900', hora: '19:00', ancora: 'fixo', tipo: 'compras',
         titulo: 'Main Street',
@@ -1340,7 +1440,14 @@ window.ROTEIRO = {
           'As lojas da Main Street ficam abertas até depois dos fogos e esvaziam justamente ' +
           'quando todo mundo está se posicionando. Como hoje vocês ficam até as 22h, dá para ' +
           'deixar a compra para o fim se preferirem.',
-        areaParque: 'Main Street', acesso: [], duracaoMin: 20 },
+        areaParque: 'Main Street', acesso: [], duracaoMin: 20,
+        curiosidades: [
+          { texto: 'Atravessem o túnel do castelo: os cinco mosaicos contam a Cinderela em ' +
+                   'mais de 500 cores de vidro, com ouro e prata. Numa das cenas uma irmã está ' +
+                   'com o rosto verde de inveja e a outra vermelho de raiva, e dois ' +
+                   'Imagineers, Herb Ryman e John Hench, emprestaram o rosto a personagens.',
+            fonte: 'Jim Korkis; Celebrations Magazine; Wikipedia — Cinderella Castle', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1111-1920', hora: '19:20', ancora: 'fixo', tipo: 'espera',
         titulo: 'Posição para os fogos',
@@ -1362,7 +1469,13 @@ window.ROTEIRO = {
           'não desloca se a abertura mudar, e é ele que segura a noite inteira — o lugar na ' +
           'Main Street às 19h20 e o Seven Dwarfs às 20h30 dependem dele.',
         areaParque: 'Main Street', acesso: [], duracaoMin: 18,
-        confirmarHorario: false, pesquisa: '2026-09-12' },
+        confirmarHorario: false, pesquisa: '2026-09-12',
+        curiosidades: [
+          { texto: 'Estreou em 12/05/2017, saiu de cena para o show dos 50 anos do Walt Disney ' +
+                   'World e voltou em 03/04/2023 — já com projeções nas fachadas da Main ' +
+                   'Street, e não só no castelo.',
+            fonte: 'Wikipedia — Happily Ever After (Magic Kingdom)', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1111-1045', hora: '20:30', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Seven Dwarfs Mine Train',
@@ -1377,7 +1490,13 @@ window.ROTEIRO = {
           'as filas despencam. É por isso que hoje vocês ficam até o fim.',
         areaParque: 'Fantasyland', acesso: ['standby'], critico: true, duracaoMin: 51,
         pesquisa: '2026-09-10',
-        fila: { min: 40, quando: 'na última hora', pico: 90, estimado: true, fonte: '2026-09-10' } },
+        fila: { min: 40, quando: 'na última hora', pico: 90, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'Abriu em 28/05/2014 e fechou a expansão da Fantasyland, que durou de 2010 ' +
+                   'a 2014. Ocupa o lugar do 20,000 Leagues Under the Sea, que funcionou de ' +
+                   '1971 a 1994.',
+            fonte: 'Wikipedia — Seven Dwarfs Mine Train', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1111-2125', hora: '21:25', ancora: 'fixo', tipo: 'atracao',
         titulo: 'TRON de novo, se ainda tiverem pique',
@@ -1404,7 +1523,15 @@ window.ROTEIRO = {
           'padrão de quem conhece — monotrilho na ida, barco na volta.\n\n' +
           'Do TTC até o hotel, contem 45 a 60 minutos e US$ 22–32 de Uber. Com o ferry, ' +
           'vocês chegam perto das 23h.',
-        localId: 'mk-ttc', acesso: [], duracaoMin: 60, pesquisa: '2026-09-10' },
+        localId: 'mk-ttc', acesso: [], duracaoMin: 60, pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'Os três barcos têm nomes de executivos da construção: General Joe Potter ' +
+                   '(faixa azul), Richard F. Irvine (vermelha) e Admiral Joe Fowler (verde). ' +
+                   'Potter, general que tinha governado a Zona do Canal do Panamá, cuidou da ' +
+                   'drenagem, dos esgotos e das usinas que tornaram o pântano habitável — e ' +
+                   'tem janela na Main Street.',
+            fonte: 'Wikipedia — Magic Kingdom; D23', pesquisa: '2026-09-15' },
+        ] },
     ],
 
     ficha: {
@@ -8098,7 +8225,23 @@ window.ROTEIRO = {
       lat: 28.41861111, lng: -81.58111111, verificado: true, fonteCoord: 'wikipedia', endereco: null,
       doHotel: { tempoMin: 30, tempoFonte: 'estimado',
                  uberUSD: { min: 22, max: 32 }, uberFonte: 'estimado' },
-      nota: 'O Uber não deixa aqui. Deixa no TTC.' },
+      nota: 'O Uber não deixa aqui. Deixa no TTC.',
+      historia: {
+        linhas: [
+          'A partir de 1964, a Disney comprou 27.443 acres na Flórida por meio de empresas ' +
+          'de fachada. Emily Bavar, editora do Orlando Sentinel, descobriu a história em ' +
+          'outubro de 1965, e o anúncio oficial saiu em 15/11/1965.',
+          'Walt morreu em 15/12/1966, antes de a obra começar. O irmão, Roy O. Disney, ' +
+          'adiou a aposentadoria para tocar a construção.',
+          'O Magic Kingdom abriu em 01/10/1971. Na dedicação, Roy batizou o complexo de ' +
+          '“Walt Disney World”, em homenagem ao irmão.',
+          'O parque fica no “segundo andar”: no nível do chão estão os túneis de serviço, e ' +
+          'por cima deles foi posta a terra tirada da escavação do Seven Seas Lagoon.',
+          'Em 2024 recebeu 17,83 milhões de visitantes — o parque temático mais visitado do ' +
+          'mundo pelo 18º ano seguido.',
+        ],
+        fontes: 'Wikipedia — Walt Disney World; Wikipedia — Magic Kingdom', pesquisa: '2026-09-15',
+      } },
 
     { id: 'mk-ttc', nome: 'Ticket & Transportation Center (TTC)', tipo: 'transporte',
       lat: 28.4060892, lng: -81.5804985, verificado: true, fonteCoord: 'osm', endereco: null,

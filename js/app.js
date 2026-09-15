@@ -1417,11 +1417,20 @@
     }
     // O texto longo e a procedência ficam recolhidos. Abertos, empurravam o agora
     // dois mil pixels para baixo; hora, título, selos, fila e colisão seguem à vista.
-    if (b.contexto || b.pesquisa || b.verificado === false) {
+    const curiosidades = b.curiosidades || [];
+    if (b.contexto || curiosidades.length || b.pesquisa || b.verificado === false) {
       const mais = el('details', 'ct-mais');
       mais.dataset.chave = 'bloco:' + b.id;
       mais.appendChild(el('summary', 'ct-mais-rot', 'Detalhes'));
       if (b.contexto) mais.appendChild(el('div', 'ct-contexto', b.contexto));
+      // Historia do lugar onde voces estao parados, sempre com a fonte junto.
+      curiosidades.forEach(function (c) {
+        const cx = el('div', 'ct-curiosidade');
+        cx.appendChild(el('div', 'ct-curiosidade-rot', 'Curiosidade'));
+        cx.appendChild(el('div', null, c.texto));
+        cx.appendChild(el('div', 'ct-curiosidade-fonte', 'Fonte: ' + c.fonte));
+        mais.appendChild(cx);
+      });
       // Procedencia: de onde veio o que esta escrito aqui.
       if (b.pesquisa || b.verificado === false) {
         const p = el('div', 'ct-pesquisa');

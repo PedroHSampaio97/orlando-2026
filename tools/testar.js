@@ -255,5 +255,24 @@ R.dias.forEach(function (dia, i) {
 ok(saidasErradas.length === 0, 'a saida da vespera bate com o primeiro deslocamento do dia seguinte',
    saidasErradas.join(' | '));
 
+console.log('\n--- curiosidades e historia dos parques ---');
+// Curiosidade sem fonte e hipotese com cara de fato: nenhuma entra sem de onde veio.
+const ISO = /^\d{4}-\d{2}-\d{2}$/;
+const curios = todosBlocos.flatMap(b => (b.curiosidades || []).map(c => ({ id: b.id, c })));
+const curiosRuins = curios.filter(x => !x.c.texto || !x.c.fonte || !ISO.test(x.c.pesquisa || ''));
+ok(curiosRuins.length === 0, 'toda curiosidade tem texto, fonte e data de pesquisa (' + curios.length + ')',
+   curiosRuins.map(x => x.id).join(', '));
+const blocosCheios = todosBlocos.filter(b => (b.curiosidades || []).length > 2);
+ok(blocosCheios.length === 0, 'no maximo duas curiosidades por bloco', blocosCheios.map(b => b.id).join(', '));
+const historias = R.locais.filter(l => l.historia);
+const historiasRuins = historias.filter(l => !Array.isArray(l.historia.linhas) ||
+  l.historia.linhas.length < 3 || l.historia.linhas.length > 6 ||
+  !l.historia.fontes || !ISO.test(l.historia.pesquisa || ''));
+ok(historiasRuins.length === 0, 'toda historia tem de 3 a 6 linhas, fontes e data (' + historias.length + ')',
+   historiasRuins.map(l => l.id).join(', '));
+const historiasSemDia = historias.filter(l => !R.dias.some(d => d.parqueId === l.id));
+ok(historiasSemDia.length === 0, 'toda historia aparece na ficha de algum dia',
+   historiasSemDia.map(l => l.id).join(', '));
+
 console.log(falhas ? '\n>>> ' + falhas + ' FALHA(S)' : '\n>>> TUDO OK');
 process.exit(falhas ? 1 : 0);

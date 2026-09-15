@@ -105,7 +105,20 @@ window.Fase3 = (function () {
     if (temPasses) alvo.appendChild(blocoPasses(dia, f));
     if (temRenuncias) alvo.appendChild(blocoRenuncias(dia.renuncias));
     if (dia.tipo === 'parque') alvo.appendChild(blocoRegras());
+    const parque = dia.parqueId && R.locais.find((l) => l.id === dia.parqueId);
+    if (parque && parque.historia) alvo.appendChild(blocoHistoria(parque.historia));
     if (dia.alternativa) alvo.appendChild(blocoAlternativa(dia.alternativa));
+  }
+
+  function blocoHistoria(h) {
+    const d = el('details', 'acordeao');
+    d.appendChild(el('summary', null, '🏛️  História do parque'));
+    const c = el('div', 'acordeao-corpo');
+    h.linhas.forEach((t) => c.appendChild(el('p', 'historia-linha', t)));
+    c.appendChild(el('p', 'historia-fonte', 'Fontes: ' + h.fontes + ' · verificado em ' +
+      h.pesquisa.split('-').reverse().join('/')));
+    d.appendChild(c);
+    return d;
   }
 
   function blocoPasses(dia, f) {

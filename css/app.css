@@ -1372,6 +1372,15 @@ button.selo::after { content: ''; position: absolute; left: 0; right: 0; top: -6
 .ct-mais[open] > .ct-mais-rot::after { transform: rotate(180deg); }
 .ct-mais .ct-contexto { margin-top: 2px; }
 
+/* curiosidade: a historia do lugar, recolhida em Detalhes, com a fonte */
+.ct-curiosidade { font-size: 13.5px; color: var(--texto); line-height: 1.6; margin-top: 12px;
+  padding: 10px 12px; background: var(--superficie-2); border-radius: var(--r-botao); }
+.ct-curiosidade-rot { font-size: 11px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: .08em; color: var(--texto-fraco); margin-bottom: 3px; }
+.ct-curiosidade-fonte { font-size: 12px; color: var(--texto-fraco); margin-top: 5px; }
+.historia-linha { font-size: 14px; line-height: 1.6; margin: 0 0 10px; }
+.historia-fonte { font-size: 12px; color: var(--texto-fraco); margin: 12px 0 0; }
+
 /* agora e a seguir, na cor do dia */
 .ct-momento { flex: 0 0 auto; white-space: nowrap; font-size: 12px; font-weight: 800;
   letter-spacing: .08em; text-transform: uppercase; padding: 3px 7px;
