@@ -225,9 +225,10 @@ window.ROTEIRO = {
           'escritas no próprio bloco: Forbidden Journey e Gringotts, onde a fila é metade da ' +
           'atração, e o Millennium Falcon, onde single rider quase sempre vira engenheiro.\n\n' +
           'Hagrid’s e Expedition Everest ficam sem selo: a fila de single rider dos dois está ' +
-          'saindo ou tem informação conflitante. Perguntem na entrada.\n\n' +
+          'saindo ou tem informação conflitante. Perguntem na entrada. A VelociCoaster também ' +
+          'fica sem selo: a Universal fechou a fila de single rider dela.\n\n' +
           'A fila de single rider abre e fecha ao longo do dia. A placa na entrada manda.',
-        pesquisa: '2026-09-10',
+        pesquisa: '2026-09-15',
       },
       lockers: {
         titulo: 'O imposto de tempo dos lockers',
@@ -6106,7 +6107,7 @@ window.ROTEIRO = {
     resumo:
       'Hagrid’s na abertura, que é a única janela abaixo de uma hora, e depois uma volta ' +
       'inteira no anel do parque sem voltar atrás: Marvel, Kong, Jurassic Park e a ' +
-      'VelociCoaster por single rider. À noite, Hogwarts Express, o castelo iluminado e o ' +
+      'VelociCoaster na fila normal. À noite, Hogwarts Express, o castelo iluminado e o ' +
       'jantar no Mythos, provavelmente no último Natal dele.',
     avisos: [
       'O HAGRID’S NÃO ACEITA EXPRESS DESDE 1º DE JULHO DE 2026, e a janela barata dele é a ' +
@@ -6127,9 +6128,11 @@ window.ROTEIRO = {
         'de março e abril de 2026, a fila média na abertura foi de 30 a 65 minutos. Às 10h já ' +
         'passava de 65, ao meio-dia chegava a 120, às 13h a 154, e não voltou para baixo de ' +
         '100 nem na última hora.\n\n' +
-        'A VELOCICOASTER NÃO TEM HORA BOA: de 67 a 102 minutos das 9h às 22h. Por isso ela ' +
-        'sai da manhã e vai para a tarde, por single rider.',
-        pesquisa: '2026-09-11' },
+        'A VELOCICOASTER NÃO TEM HORA BOA, e não tem mais single rider: de 67 a 102 minutos ' +
+        'da abertura até a noite, e a Universal fechou a fila de single rider dela. Por isso ' +
+        'ela fica à tarde, com um bloco de uma hora e meia, e o Doctor Doom saiu do dia para ' +
+        'caber.',
+        pesquisa: '2026-09-15' },
 
       { tipo: 'info', texto:
         'O QUE MUDOU NO PARQUE EM 2026:\n\n' +
@@ -6153,27 +6156,31 @@ window.ROTEIRO = {
         passos: [
           'Na corda às 8h15, Hagrid’s na abertura e Forbidden Journey logo depois.',
           'Almoço no Confisco Grille às 11h40, na entrada do parque.',
-          'Marvel, Kong, Jurassic Park River Adventure e VelociCoaster por single rider.',
+          'Marvel, Kong, Jurassic Park River Adventure e VelociCoaster na fila normal.',
           'Hogwarts Express ida e volta, projeção no castelo e jantar no Mythos às 19h15.',
         ] },
       { letra: 'B', titulo: 'O Jurassic Park River Adventure não reabriu',
         gatilho: 'A reforma atrasou e ele continua fechado em 23/11.',
         passos: [
-          'Os 40 minutos dele viram folga: a VelociCoaster pode ir às 15h40.',
-          'Nada mais muda. A capa de chuva fica na mochila.',
+          'Os 40 minutos dele devolvem o Doctor Doom: ele entra às 14h15, logo depois do ' +
+          'Spider-Man, a parada vai para 14h35 e o Kong para 14h55.',
+          'A VelociCoaster vai às 15h40, e os 25 minutos que sobram antes do Hogwarts Express ' +
+          'são folga. A capa de chuva fica na mochila.',
         ] },
       { letra: 'B2', titulo: 'O parque fecha às 20h',
         gatilho: 'O horário oficial sai com fechamento às 20h.',
         passos: [
-          'Remarquem o Mythos, reservado para 19h15, para 18h35, logo depois do Hogwarts ' +
-          'Express — pelo app da Universal ou pelo +1 407-224-3663.',
-          'A projeção no castelo fica para depois do jantar: ela repete a cada 20 minutos até ' +
-          'o parque fechar.',
+          'Remarquem o Mythos, reservado para 19h15, para 18h35 — pelo app da Universal ou ' +
+          'pelo +1 407-224-3663.',
+          'O Kong sai, e a tarde sobe 40 minutos: River Adventure às 14h35, VelociCoaster às ' +
+          '15h20 e Hogwarts Express às 16h55.',
+          'A projeção no castelo vai para 18h05, se já tiver escurecido. Senão, fica para ' +
+          'depois do jantar: ela repete a cada 20 minutos até o parque fechar.',
         ] },
       { letra: 'C', titulo: 'Cansaço ou atraso',
         gatilho: 'O Hagrid’s demorou mais que o previsto ou o corpo pediu pausa.',
         passos: [
-          'Doctor Doom e Kong caem primeiro.',
+          'O Kong cai primeiro.',
           'O Hogwarts Express e o Mythos ficam: são a noite do dia.',
         ] },
     ],
@@ -6272,24 +6279,14 @@ window.ROTEIRO = {
         acessoAltNota: 'Entrada do single rider pela esquerda, no corredor que liga a saída à loja.',
         duracaoMin: 35, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-1415', hora: '14:15', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Doctor Doom’s Fearfall',
-        descricao: 'Torre que atira para cima. Rápido',
-        contexto:
-          'Torre que atira vocês para cima em vez de soltar de cima. Dura menos de um minuto, ' +
-          'e a sensação de estômago é forte.\n\n' +
-          'Fila média de 15 minutos. Se o dia atrasou, é o primeiro bloco a cair.',
-        areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
-        acessoAlt: 'single-rider', duracaoMin: 20, pesquisa: '2026-09-11' },
-
-      { id: 'b-2311-1435', hora: '14:35', ancora: 'referencia', tipo: 'pausa',
+      { id: 'b-2311-1435', hora: '14:15', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
         descricao: 'Dez minutos. Banheiro ao lado do Captain America Diner',
         contexto:
           'Do almoço até o Mythos são sete horas, e só o Hogwarts Express senta. Esta é a parada do meio: água, banheiro e dez minutos sentados antes do Kong.',
         areaParque: 'Marvel Super Hero Island', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
 
-      { id: 'b-2311-1455', hora: '14:55', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1455', hora: '14:35', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Skull Island: Reign of Kong',
         descricao: 'Caminhão expedicionário, telas 3D e o Kong animatrônico',
         contexto:
@@ -6299,7 +6296,7 @@ window.ROTEIRO = {
         areaParque: 'Skull Island', acesso: ['standby'],
         acessoAlt: 'single-rider', duracaoMin: 40, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-1540', hora: '15:40', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1540', hora: '15:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Jurassic Park River Adventure',
         descricao: 'Molha. Reaberto depois de dez meses de reforma',
         contexto:
@@ -6307,26 +6304,30 @@ window.ROTEIRO = {
           'no escuro. Molha de verdade, principalmente nas primeiras fileiras.\n\n' +
           'REFORMA: ficou fechado de janeiro a 19 ou 20/11 de 2026, com dinossauros e cenário ' +
           'sendo refeitos. Se ainda estiver fechado, vale o plano B.\n\n' +
-          'Está às 15h40 porque é a hora mais quente. Capa de chuva e o celular no Ziploc — ou ' +
+          'Está às 15h20 porque é a hora mais quente. Capa de chuva e o celular no Ziploc — ou ' +
           'no armário de aluguel da entrada, que aqui é opcional, pelo mapa oficial. Fila média ' +
           'de 22 minutos.',
         areaParque: 'Jurassic Park', acesso: ['standby'],
         acessoAlt: 'single-rider', molha: true, duracaoMin: 40, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-1625', hora: '16:25', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1625', hora: '16:05', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Jurassic World VelociCoaster',
-        descricao: 'A mais intensa do parque. Por single rider',
+        descricao: 'A mais intensa do parque. Fila normal: uma hora e meia de bloco',
         contexto:
           'Dois lançamentos, 47 metros de altura, 110 km/h, quatro inversões e um trecho ' +
           'rasante sobre a água. É consenso como uma das melhores montanhas-russas do mundo.\n\n' +
-          'POR QUE À TARDE E POR SINGLE RIDER: das 9h às 22h ela fica entre 67 e 102 minutos — ' +
-          'não tem hora boa. Nesta hora a fila normal passa de 80; pela regra de ouro, acima de ' +
-          '45 é single rider, e vocês andam em carrinhos separados.\n\n' +
+          'SEM SINGLE RIDER: a Universal fechou a fila de single rider daqui e passou a ' +
+          'embarcar os grupos em duas filas, de número par e ímpar de pessoas, para não sobrar ' +
+          'lugar vazio. Vocês vão pela fila normal, juntos.\n\n' +
+          'POR QUE ÀS 16H05: ela não tem hora barata. Nos dados de 2026, 85 minutos às 10h, 102 ' +
+          'às 11h, 76 às 14h, 83 às 16h e 72 às 18h. Entre a melhor e a pior hora da tarde são ' +
+          'dez minutos, e as horas da noite já são do Hogwarts Express e do Mythos. O bloco tem ' +
+          'uma hora e meia: fila, locker e detector.\n\n' +
           'DETECTOR DE METAL: absolutamente nada nos bolsos.',
         areaParque: 'Jurassic Park', acesso: ['standby'],
-        acessoAlt: 'single-rider', locker: 'detector', duracaoMin: 50, pesquisa: '2026-09-11' },
+        locker: 'detector', duracaoMin: 90, pesquisa: '2026-09-15' },
 
-      { id: 'b-2311-1720', hora: '17:20', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1720', hora: '17:40', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Hogwarts Express — ida e volta',
         descricao: 'Quatro minutos em cada sentido, com filmes diferentes. Precisa park-to-park',
         contexto:
@@ -6339,7 +6340,7 @@ window.ROTEIRO = {
           'média de 22 minutos na estação de Hogsmeade.',
         areaParque: 'Hogsmeade', acesso: ['standby'], duracaoMin: 70, pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-1835', hora: '18:35', ancora: 'fixo', tipo: 'show',
+      { id: 'b-2311-1835', hora: '18:50', ancora: 'fixo', tipo: 'show',
         titulo: 'Hogsmeade à noite · projeção no castelo',
         descricao: 'The Magic of Christmas at Hogwarts Castle. Repete a cada 20 min',
         contexto:
@@ -6347,8 +6348,10 @@ window.ROTEIRO = {
           'que escurece. Repete a cada vinte minutos até o parque fechar — não precisa pegar ' +
           'na hora exata.\n\n' +
           'É a segunda vez da projeção: a primeira foi no dia 14, na noite de estreia da ' +
-          'temporada, num sábado. Hoje é segunda-feira, e dá para ver com calma.',
-        areaParque: 'Hogsmeade', acesso: [], duracaoMin: 30, pesquisa: '2026-09-11' },
+          'temporada, num sábado. Hoje o bloco é de quinze minutos, colado no Hogwarts ' +
+          'Express, que termina aqui mesmo: vejam a sessão que estiver rodando e sigam para o ' +
+          'Mythos, que fica ao lado, na Lost Continent.',
+        areaParque: 'Hogsmeade', acesso: [], duracaoMin: 15, pesquisa: '2026-09-15' },
 
       { id: 'b-2311-1915', hora: '19:15', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Mythos',
@@ -6424,7 +6427,8 @@ window.ROTEIRO = {
         usar: false,
         motivo:
           'O Hagrid’s saiu do Express em 1º de julho de 2026, e a fila que mais pesa no dia é ' +
-          'justamente a dele. Nas outras, o single rider resolve sem pagar nada.',
+          'justamente a dele. A segunda, a VelociCoaster, cabe na fila normal à tarde, e nas ' +
+          'outras o single rider resolve sem pagar nada.',
       },
       custoEstimadoCasal: { min: 32, max: 35, moeda: 'USD' },
       extras: [
@@ -6443,6 +6447,9 @@ window.ROTEIRO = {
         { nome: 'Seuss Landing', motivo: 'Brinquedos infantis. Vocês atravessam a pé.' },
         { nome: 'Popeye e Dudley Do-Right',
           motivo: 'Molham muito, e o Jurassic Park River Adventure já cumpre esse papel.' },
+        { nome: 'Doctor Doom’s Fearfall',
+          motivo: 'Torre de menos de um minuto. O tempo dele foi para a fila da VelociCoaster, ' +
+                  'que não tem single rider. Volta no plano B.' },
       ],
       idioma: null,
       fechado: [],

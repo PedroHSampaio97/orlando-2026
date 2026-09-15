@@ -524,26 +524,25 @@ Hagrid's na abertura, que é a única janela abaixo de uma hora, e depois uma vo
 | **11h40** | **Almoço — Confisco Grille** — mesa com garçom, pratos de US$ 21 a 35 | Port of Entry |
 | **12h45** | **Hulk** — detector de metal | Marvel |
 | **13h35** | **Spider-Man** | Marvel |
-| **14h15** | Doctor Doom's Fearfall | Marvel |
-| **14h35** | Parada — dez minutos. Banheiro ao lado do Captain America Diner | Marvel |
-| **14h55** | **Kong** | Skull Island |
-| **15h40** | **Jurassic Park River Adventure** — molha. Reaberto depois da reforma | Jurassic Park |
-| **16h25** | **VelociCoaster** — por single rider | Jurassic Park |
-| **17h20** | **Hogwarts Express** — ida e volta, filmes diferentes. Precisa park-to-park | Hogsmeade |
-| **18h35** | **Hogsmeade à noite · projeção no castelo** — a segunda vez, agora numa segunda-feira. A cada 20 min | Hogsmeade |
+| **14h15** | Parada — dez minutos. Banheiro ao lado do Captain America Diner | Marvel |
+| **14h35** | **Kong** | Skull Island |
+| **15h20** | **Jurassic Park River Adventure** — molha. Reaberto depois da reforma | Jurassic Park |
+| **16h05** | **VelociCoaster** — fila normal, bloco de uma hora e meia | Jurassic Park |
+| **17h40** | **Hogwarts Express** — ida e volta, filmes diferentes. Precisa park-to-park | Hogsmeade |
+| **18h50** | **Hogsmeade à noite · projeção no castelo** — a segunda vez, quinze minutos antes do jantar. A cada 20 min | Hogsmeade |
 | **19h15** | **Jantar — Mythos** — reservado, pratos de US$ 26 a 42. Cheguem às 19h10 | Lost Continent |
 | **20h30** | Saída — hotel por volta das 21h30 | |
 
 **Por que o Hagrid's primeiro:** nos dados de 2026, 30 a 65 minutos na abertura, 120 ao meio-dia e acima de 100 até fechar. Ele saiu do Express em 1º de julho de 2026.
 
-**Por que a VelociCoaster à tarde:** ela fica entre 67 e 102 minutos o dia inteiro — não tem hora boa. Por single rider, a hora deixa de importar.
+**Por que a VelociCoaster à tarde:** ela fica entre 67 e 102 minutos o dia inteiro — não tem hora boa — e não tem single rider: a Universal fechou essa fila e embarca os grupos em filas de número par e ímpar. Nos dados de 2026, a tarde vai de 72 a 83 minutos, e a noite já é do Hogwarts Express e do Mythos. O bloco tem uma hora e meia, e para caber o Doctor Doom saiu do dia.
 
 **O que mudou no parque:** o Jurassic Park River Adventure reabre em 19–20/11 depois de dez meses de reforma. A Lost Continent está sendo demolida em fases, e a Universal diz que o Mythos fecha em 2027, ainda sem data. O Thunder Falls Terrace fechou em julho.
 
-**Horário:** o de 23/11 ainda não saiu. A referência é 9h; o fechamento tende a 20–21h na semana de Thanksgiving. Se fechar às 20h, remarquem o Mythos para 18h35 e a projeção fica para depois do jantar.
+**Horário:** o de 23/11 ainda não saiu. A referência é 9h; o fechamento tende a 20–21h na semana de Thanksgiving. Se fechar às 20h, remarquem o Mythos para 18h35, o Kong sai e a tarde sobe 40 minutos — River Adventure 14h35, VelociCoaster 15h20, Hogwarts Express 16h55 e a projeção às 18h05, se já tiver escurecido.
 
 ### Renúncias
-Grinchmas (visto no dia 14), Flight of the Hippogriff (34 min de fila para um minuto), Beco Diagonal (feito no dia 17), Pteranodon Flyers, os brinquedos da Seuss Landing, Popeye e Dudley Do-Right (molham muito).
+Grinchmas (visto no dia 14), Flight of the Hippogriff (34 min de fila para um minuto), Beco Diagonal (feito no dia 17), Pteranodon Flyers, os brinquedos da Seuss Landing, Popeye e Dudley Do-Right (molham muito) e Doctor Doom's Fearfall (o tempo dele foi para a fila da VelociCoaster; volta se o River Adventure não tiver reaberto).
 
 ---
 

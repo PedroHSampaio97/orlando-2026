@@ -150,9 +150,9 @@ const todosBlocos = R.dias.flatMap(d => d.blocos);
 ok(!todosBlocos.some(b => 'singleRider' in b || 'singleRiderNota' in b),
    'nenhum bloco com o campo antigo singleRider');
 const comSR = todosBlocos.filter(b => b.acessoAlt === 'single-rider');
-ok(comSR.length === 21, 'blocos com single rider: ' + comSR.length + ' (esperado 21)');
-ok(!comSR.some(b => /Hagrid|Everest/.test(b.titulo)),
-   'Hagrid’s e Everest sem selo de single rider (fila saindo ou incerta)');
+ok(comSR.length === 19, 'blocos com single rider: ' + comSR.length + ' (esperado 19)');
+ok(!comSR.some(b => /Hagrid|Everest|VelociCoaster/.test(b.titulo)),
+   'Hagrid’s, Everest e VelociCoaster sem selo de single rider (fila fechada, saindo ou incerta)');
 const walmart = R.dias[0].listas.find(l => l.id === 'lista-walmart');
 const idsItem = walmart.itens.map(i => i.id);
 ok(idsItem.every(Boolean) && new Set(idsItem).size === idsItem.length,
