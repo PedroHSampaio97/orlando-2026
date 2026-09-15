@@ -5219,7 +5219,7 @@ window.ROTEIRO = {
         titulo: 'Monsters Unchained: The Frankenstein Experiment',
         descricao: 'Rope drop. O portal que abre vazio para quem é de fora',
         contexto:
-          'Dark ride em braço robótico: a neta do Dr. Frankenstein faz experimentos com monstros ' +
+          'Dark ride em braço robótico: a tataraneta do Dr. Frankenstein faz experimentos com monstros ' +
           'capturados e eles escapam. O veículo acelera, para, gira, sobe e cai, com ' +
           'animatrônicos no nível dos melhores de Orlando. Tem susto, mas nenhuma queda grande.\n\n' +
           'POR QUE AGORA: é a primeira fila que abre vazia para quem não está em hotel da ' +
@@ -5229,7 +5229,17 @@ window.ROTEIRO = {
         areaParque: 'Dark Universe', acesso: ['rope-drop', 'standby'], acessoAlt: 'single-rider',
         locker: 'obrigatorio', critico: true, duracaoMin: 35,
         fila: { min: 10, quando: 'na abertura', pico: 45, media: 14, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'A Dra. Victoria Frankenstein da história é tataraneta do Henry ' +
+                   'Frankenstein. Aparecem Drácula, o Lobisomem, a Criatura da Lagoa Negra, as ' +
+                   'Noivas de Drácula e o Fantasma da Ópera.',
+            fonte: 'Wikipedia — Monsters Unchained: The Frankenstein Experiment', pesquisa: '2026-09-15' },
+          { texto: 'O veículo é um braço robótico KUKA, parecido com o do Forbidden Journey, e ' +
+                   'o primeiro Frankenstein que vocês encontram é um animatrônico de 2,7 ' +
+                   'metros e 360 kg.',
+            fonte: 'Wikipedia — Monsters Unchained: The Frankenstein Experiment', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1911-0940', hora: '09:40', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Curse of the Werewolf',
@@ -5243,7 +5253,14 @@ window.ROTEIRO = {
           'Sem locker obrigatório, mas prendam tudo que estiver solto.',
         areaParque: 'Dark Universe', acesso: ['standby'], acessoAlt: 'single-rider', duracaoMin: 35,
         fila: { min: 20, quando: 'logo depois da abertura', pico: 75, media: 46, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'É uma montanha-russa giratória da Mack, inspirada no filme O Lobisomem, de ' +
+                   '1941. Quanto cada carrinho gira depende de como o peso está distribuído, e ' +
+                   'no lançamento o trem para numa subida, volta de ré pelo motor e é lançado ' +
+                   'de novo.',
+            fonte: 'Coasterpedia; RCDB', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1911-1020', hora: '10:20', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
@@ -5266,15 +5283,24 @@ window.ROTEIRO = {
         areaParque: 'Celestial Park', acesso: ['standby'], acessoAlt: 'single-rider', locker: 'detector',
         duracaoMin: 40,
         fila: { min: 20, quando: 'no meio da manhã', pico: 105, media: 25, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'É da Mack Rides e ganhou o Golden Ticket de melhor montanha-russa nova de ' +
+                   '2025. O ponto alto é o Celestial Spin, a inversão de 40 metros em que um ' +
+                   'trem faz um giro de gravidade zero e o outro, um parafuso para baixo.',
+            fonte: 'Wikipedia — Stardust Racers', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1911-1115', hora: '11:15', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mario Kart: Bowser’s Challenge',
         descricao: 'A janela dele é 11h–12h, quando a turma do EPA sai da Nintendo',
         contexto:
-          'Corrida de kart em realidade aumentada: vocês usam um visor acoplado ao boné e ' +
-          'coletam moedas e atiram cascos girando o volante. É um jogo, não emoção física — e ' +
-          'o placar é por pessoa.\n\n' +
+          'Corrida de kart em realidade aumentada: vocês usam um visor acoplado ao boné. É um ' +
+          'jogo, não emoção física.\n\n' +
+          'COMO JOGAR: a mira é com a cabeça — o casco vai para onde vocês olham — e ele sai ' +
+          'com o botão do volante. O volante só gira quando aparece uma seta na frente, e isso ' +
+          'dá moedas. Cada um vê as próprias moedas no volante, mas quem ganha é o time: são ' +
+          'precisas 100 moedas para vencer o Bowser.\n\n' +
           'POR QUE AGORA: ele é a terceira maior fila do parque, 67 a 78 minutos de média, e a ' +
           'janela menos ruim dele é entre 11h e 12h, quando quem entrou no Early Park Admission ' +
           'já andou nele e seguiu adiante.\n\n' +
@@ -5284,7 +5310,11 @@ window.ROTEIRO = {
         areaParque: 'Super Nintendo World', acesso: ['standby'], acessoAlt: 'single-rider',
         critico: true, duracaoMin: 70,
         fila: { min: 60, quando: 'entre 11h e 12h', pico: 170, media: 72, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'A atração estreou no Japão em 2021, e a fila é o castelo do Bowser.',
+            fonte: 'Wikipedia — Mario Kart: Bowser’s Challenge', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1911-1225', hora: '12:25', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Yoshi’s Adventure',
@@ -5329,7 +5359,12 @@ window.ROTEIRO = {
         areaParque: 'Isle of Berk', acesso: ['standby'], acessoAlt: 'single-rider', locker: 'obrigatorio',
         duracaoMin: 45,
         fila: { min: 30, quando: 'no começo da tarde', pico: 120, media: 38, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'É da Intamin, a mesma fabricante da VelociCoaster: dois lançamentos até 72 ' +
+                   'km/h, o segundo depois de o trem voltar de ré.',
+            fonte: 'Coasterpedia', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1911-1500', hora: '15:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Dragon Racer’s Rally',
@@ -5351,7 +5386,12 @@ window.ROTEIRO = {
           'Mine-Cart emendados até as 21h. Encham os flasks num balcão de comida — a água ' +
           'gelada é de graça — e sentem, ainda em Berk, com a vila decorada para o Snoggletog.\n\n' +
           'Às 16h10 sigam para a fila do The Untrainable Dragon, que fica aqui mesmo.',
-        areaParque: 'Isle of Berk', acesso: [], duracaoMin: 25, pesquisa: '2026-09-15' },
+        areaParque: 'Isle of Berk', acesso: [], duracaoMin: 25, pesquisa: '2026-09-15',
+        curiosidades: [
+          { texto: 'Como Treinar o Seu Dragão está num parque da Universal porque a ' +
+                   'NBCUniversal comprou a DreamWorks Animation em 2016, por US$ 3,8 bilhões.',
+            fonte: 'Wikipedia — DreamWorks Animation', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1911-1610e', hora: '16:10', ancora: 'fixo', tipo: 'espera',
         titulo: 'Fila do The Untrainable Dragon',
@@ -5415,7 +5455,17 @@ window.ROTEIRO = {
         areaParque: 'Ministry of Magic', acesso: ['standby'], acessoAlt: 'single-rider', critico: true,
         confirmarHorario: true, duracaoMin: 90,
         fila: { min: 45, quando: 'nas últimas 2–3 horas', pico: 185, media: 76, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'Vocês entram pela Paris bruxa dos anos 1920 e chegam à Londres dos anos ' +
+                   '1990 pelas lareiras da rede de Flu. A história se passa logo depois da ' +
+                   'derrota de Voldemort: a Dolores Umbridge vai a julgamento e tenta fugir, ' +
+                   'com a Imelda Staunton de volta ao papel.',
+            fonte: 'Wikipedia — Harry Potter and the Battle at the Ministry', pesquisa: '2026-09-15' },
+          { texto: 'Os veículos são elevadores que andam em todas as direções, fabricados pela ' +
+                   'Simtec.',
+            fonte: 'Wikipedia — Harry Potter and the Battle at the Ministry', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1911-2000', hora: '20:00', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Mine-Cart Madness',
@@ -5433,7 +5483,13 @@ window.ROTEIRO = {
         areaParque: 'Super Nintendo World', acesso: ['standby'], acessoAlt: 'single-rider',
         critico: true, confirmarHorario: true, duracaoMin: 50,
         fila: { min: 20, quando: 'na última hora', pico: 205, media: 113, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'O truque do trilho que falta é um braço: as rodas correm num trilho ' +
+                   'embaixo e sustentam o carrinho por cima. A atração estreou no Japão em ' +
+                   '11/12/2024, e o Donkey Kong Country daqui é a maior versão da área.',
+            fonte: 'Wikipedia — Super Nintendo World', pesquisa: '2026-09-15' },
+        ] },
 
       { id: 'b-1911-2100', hora: '21:00', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Sair — Uber',
@@ -8730,7 +8786,22 @@ window.ROTEIRO = {
       doHotel: { tempoMin: 30, tempoFonte: 'documento',
                  uberUSD: { min: 25, max: 38 }, uberFonte: 'estimado' },
       nota: 'Dia 19, de Uber: o ponto de embarque do Epic é próprio, na 1222 Epic Blvd, a ' +
-            'cinco minutos a pé da entrada. Não é o estacionamento da Universal.' },
+            'cinco minutos a pé da entrada. Não é o estacionamento da Universal.',
+      historia: {
+        linhas: [
+          'Abriu em 22/05/2025, quase seis anos depois do anúncio, feito em 01/08/2019. É o ' +
+          'quarto parque do complexo da Universal em Orlando.',
+          'A obra parou de julho de 2020 a março de 2021 por causa da pandemia, e a ' +
+          'inauguração, prevista para 2023, foi para 2025.',
+          'O parque tem 45 hectares, dentro de um terreno total de 300 hectares.',
+          'O desenho é de portais: o Celestial Park, com a torre Chronos no centro, leva a ' +
+          'quatro mundos — Dark Universe, Ministry of Magic, Super Nintendo World e Isle of ' +
+          'Berk.',
+          'A parceria da Nintendo com a Universal foi anunciada em 2015. A Super Nintendo ' +
+          'World abriu primeiro no Japão, em 2021, e depois em Hollywood, em 2023.',
+        ],
+        fontes: 'Wikipedia — Universal Epic Universe; Wikipedia — Super Nintendo World', pesquisa: '2026-09-15',
+      } },
 
     { id: 'seaworld', nome: 'SeaWorld Orlando', tipo: 'parque',
       lat: 28.41083333, lng: -81.4625, verificado: true, fonteCoord: 'wikipedia', endereco: null,
