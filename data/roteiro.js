@@ -98,7 +98,7 @@ window.ROTEIRO = {
     { n: 3, momento: 'todo-dia', titulo: 'Use a primeira reserva do Multi Pass cedo.',
       texto: 'O sistema só libera a próxima depois que você usa a atual. Quem usa às 11h ' +
              'faz o dobro de quem usa às 15h. Nos dias 11 e 16 a primeira é usada às 11h e às ' +
-             '9h45. No dia 15 ela fica para as 13h50, porque a manhã já sai no rope drop, no ' +
+             '9h45. No dia 15 ela fica para as 13h55, porque a manhã já sai no rope drop, no ' +
              'standby e no Single Pass do Rise.' },
     { n: 4, momento: 'todo-dia', titulo: 'Mobile order em tudo que for balcão.',
       texto: 'Disney e Universal permitem pedir pelo app e só buscar. Economiza 20 a 30 ' +
@@ -572,10 +572,10 @@ window.ROTEIRO = {
           { id: 'capa-chuva', secao: 'Casa', essencial: true,
             texto: 'Capas de chuva descartáveis — 8 unidades',
             marca: null, alternativaBarata: null,
-            motivo: 'São QUATRO atrações que molham de verdade, e vocês são dois: Kali River ' +
-                    'Rapids no dia 13, Fyre Drill no 19 (opcional), Journey to Atlantis no 22 ' +
-                    'e Jurassic Park River Adventure no 23. Oito usos. Procurem "disposable ' +
-                    'rain poncho" na seção de camping.' },
+            motivo: 'São TRÊS atrações que molham de verdade, e vocês são dois: Kali River ' +
+                    'Rapids no dia 13, Journey to Atlantis no 22 e Jurassic Park River ' +
+                    'Adventure no 23. Seis usos e duas de reserva para chuva. Procurem ' +
+                    '"disposable rain poncho" na seção de camping.' },
           { id: 'meias', secao: 'Casa', essencial: true,
             texto: 'Meias de secagem rápida — 3 pares',
             marca: 'Balega Hidden Comfort, se tiver na loja', alternativaBarata: 'Hanes X-Temp ou Athletic Works',
@@ -1025,9 +1025,8 @@ window.ROTEIRO = {
                 'comer dentro perde o motivo da escolha.' },
 
       { nome: 'Mickey’s PhilharMagic', quando: 'hoje', custo: 'grátis',
-        motivo: 'Doze minutos, ar-condicionado, e praticamente sem diálogo — não sofre com a ' +
-                'barreira de idioma. É o melhor bloco de descanso do parque na pior hora de ' +
-                'calor, e ainda é bom de verdade.' },
+        motivo: 'Doze minutos sentados, com ar-condicionado. É o melhor bloco de descanso do ' +
+                'parque na pior hora de calor, e ainda é bom de verdade.' },
 
       { nome: 'Single Pass do TRON', quando: 'decidir', custo: 'US$ 20–23 por pessoa',
         motivo: 'PLANO B PAGO, não compra antecipada. O roteiro tem duas janelas de graça — ' +
@@ -1150,9 +1149,7 @@ window.ROTEIRO = {
           'Passeio de barco com um piloto que narra piadas ruins de propósito — é o charme ' +
           'da atração.\n\n' +
           'É lista alta e vocês também fazem sem passe, porque a Adventureland ainda está ' +
-          'vazia a esta hora. Depois das 11h ela passa de uma hora.\n\n' +
-          'ATENÇÃO: é a única do dia que depende inteiramente de inglês falado. Se o humor ' +
-          'não pegar, é o primeiro bloco a sacrificar quando o dia atrasar.',
+          'vazia a esta hora. Depois das 11h ela passa de uma hora.',
         areaParque: 'Adventureland', acesso: ['standby'], duracaoMin: 39,
         fila: { min: 25, quando: 'antes das 11h', pico: 60, fonte: '2026-09-10' } },
 
@@ -1162,8 +1159,7 @@ window.ROTEIRO = {
         contexto:
           'A Haunted Mansion, de 1969. Passeio em cápsulas por cenários com 999 fantasmas, ' +
           'feito com truques de ilusão óptica do século XIX que continuam funcionando. É ' +
-          'assombrado de brincadeira, não de susto. Um dos melhores da Disney e não depende ' +
-          'de idioma.\n\n' +
+          'assombrado de brincadeira, não de susto. Um dos melhores da Disney.\n\n' +
           'ESTA É A PRIMEIRA RESERVA DO DIA E É POR ISSO QUE ELA VEM CEDO. No segundo em ' +
           'que vocês passarem a catraca, abre espaço para reservar a próxima — e a restrição ' +
           'de lista cai junto. Reservem o SPACE MOUNTAIN ali mesmo, de pé na saída.',
@@ -1223,8 +1219,7 @@ window.ROTEIRO = {
         titulo: 'Mickey’s PhilharMagic',
         descricao: 'Standby. 12 min, ar-condicionado',
         contexto:
-          'Filme 3D com efeitos no teatro — cheiro, água, ar. Praticamente sem diálogo ' +
-          'relevante, então não sofre com a barreira de idioma. É o melhor bloco de descanso ' +
+          'Filme 3D com efeitos no teatro — cheiro, água, ar. É o melhor bloco de descanso ' +
           'do parque, e cai na pior hora de calor de propósito.',
         areaParque: 'Fantasyland', acesso: ['standby'], duracaoMin: 20,
         fila: { min: 10, quando: 'quase sempre', pico: 20, fonte: '2026-09-10' } },
@@ -1467,14 +1462,15 @@ window.ROTEIRO = {
         { nome: 'Swiss Family Treehouse — escadaria longa, e o dia já tem 25 mil passos' },
         { nome: 'Prince Charming Regal Carrousel — mesma família do Dumbo e do Mad Tea ' +
                  'Party, que também ficaram de fora' },
+        { nome: 'Hall of Presidents — 22 minutos de história cívica americana com os ' +
+                 'presidentes em animatrônico' },
+        { nome: 'Country Bear Jamboree — musical de 12 minutos com ursos animatrônicos ' +
+                 'cantando músicas Disney em versão country, voltado a família' },
+        { nome: 'Monsters Inc. Laugh Floor — comédia de improviso com humor pensado para ' +
+                 'criança' },
+        { nome: 'Enchanted Tiki Room — clássico de 10 minutos, de pássaros cantando, mas a ' +
+                 'Adventureland das 9h40 às 10h50 não tem brecha' },
       ],
-      idioma: {
-        itens: ['Hall of Presidents', 'Country Bear Jamboree',
-                'Monsters Inc. Laugh Floor', 'Enchanted Tiki Room'],
-        motivo:
-          'São atrações longas, faladas e com humor que depende de referência americana. São ' +
-          '20 a 25 minutos cada que rendem muito mais em outro lugar.',
-      },
       fechado: [
         'Carousel of Progress — fechou em 06/07/2026 para uma reforma que troca as quatro ' +
         'cenas e põe um animatrônico do Walt abrindo o show. Volta só no fim da primavera ' +
@@ -2382,7 +2378,6 @@ window.ROTEIRO = {
                  'crítica chama de frenético e esquecível, num dia em que a única ' +
                  'montanha-russa do parque estava sendo feita uma vez só' },
       ],
-      idioma: null,
       fechado: ['DINOSAUR e toda a DinoLand (demolidos para a futura Tropical Americas)'],
     },
   },
@@ -2665,8 +2660,7 @@ window.ROTEIRO = {
         descricao: 'O motivo de vocês estarem aqui hoje',
         contexto:
           'Musical ao vivo de cerca de 30 minutos com o Grinch e os Whos, em teatro coberto. ' +
-          'O ator do Grinch improvisa com a plateia e é o ponto alto. É falado em inglês, mas ' +
-          'a história é conhecida e a produção é muito visual.\n\n' +
+          'O ator do Grinch improvisa com a plateia e é o ponto alto.\n\n' +
           'POR QUE A SESSÃO DAS 17H30 E NÃO A DAS 18H30: a grade típica termina às 18h30. ' +
           'Mirando a penúltima, vocês ganham a última como plano B em vez de não ter nenhuma. ' +
           'E saem do teatro já no escuro, que é quando Hogsmeade fica boa.\n\n' +
@@ -2822,8 +2816,9 @@ window.ROTEIRO = {
           'Do portão, direto para o TOY STORY LAND — não para o Galaxy’s Edge.',
           'Slinky Dog no rope drop, Toy Story Mania em seguida, Alien só se estiver vazio.',
           'Rise às 10h45 com o Single Pass, e o Millennium Falcon no standby logo depois.',
-          'Almoço em Batuu, parada, e a travessia longa até a Sunset Blvd.',
-          'Rock ’n’ Roller com o Multi Pass às 13h50; ao usar, reservem o Runaway Railway. ' +
+          'Almoço em Batuu e a travessia até a Sunset Blvd, com o Indiana Jones das 13h15 no ' +
+          'meio do caminho.',
+          'Rock ’n’ Roller com o Multi Pass às 13h55; ao usar, reservem o Runaway Railway. ' +
           'Torre e Star Tours já estão reservados.',
           'Noite sentada: Oga’s, Sci-Fi, Sunset Blvd e o Fantasmic.',
         ],
@@ -3048,20 +3043,31 @@ window.ROTEIRO = {
           'comida reconhecível. Usem mobile order — a fila do balcão é longa e a retirada é ' +
           'imediata. Peçam ainda dentro da fila do Millennium Falcon.\n\n' +
           'É a última comida de verdade até as 18h: o Oga’s às 17h serve bebida e petisco, ' +
-          'não refeição.',
-        restauranteId: 'r-docking-bay', areaParque: 'Galaxy’s Edge', acesso: [], duracaoMin: 60 },
+          'não refeição.\n\n' +
+          'QUARENTA MINUTOS, NÃO UMA HORA: o pedido já sai da fila do Falcon, e às 13h vocês ' +
+          'andam para o Indiana Jones. Banheiro e flasks aqui mesmo, antes de sair de Batuu.',
+        restauranteId: 'r-docking-bay', areaParque: 'Galaxy’s Edge', acesso: [], duracaoMin: 40 },
 
-      { id: 'b-1511-1320p', hora: '13:20', ancora: 'referencia', tipo: 'pausa',
-        titulo: 'Parada — e a travessia mais longa do dia',
-        descricao: 'Quinze minutos e treze de caminhada até a Sunset Blvd. Banheiro ao lado do Docking Bay 7',
+      { id: 'b-1511-1315s', hora: '13:15', ancora: 'fixo', tipo: 'show',
+        titulo: 'Indiana Jones Epic Stunt Spectacular',
+        descricao: 'Show de dublês de 30 min, sentados, no caminho para a Sunset Blvd',
         contexto:
-          'Banheiro, flasks cheios e sentar, ainda em Batuu.\n\n' +
-          'DEPOIS DAQUI VEM A CAMINHADA MAIS LONGA DO PARQUE: do Galaxy’s Edge até a Sunset ' +
-          'Blvd são treze minutos atravessando o parque inteiro, e num dia cheio mais. Ela ' +
-          'está contada no relógio — não é atraso, é o mapa.',
-        areaParque: 'Galaxy’s Edge', acesso: [], duracaoMin: 15 },
+          'O show de dublês do parque desde 1989: cenas do Caçadores da Arca Perdida ' +
+          'refeitas ao vivo, com lutas, quedas, fogo e explosões, e a equipe mostrando entre ' +
+          'uma cena e outra como cada efeito é feito. Antes de começar, escolhem figurantes ' +
+          'na plateia. É o mesmo tipo de espetáculo do Bourne Stuntacular do dia 17.\n\n' +
+          'POR QUE AGORA: do Galaxy’s Edge até a Sunset Blvd são treze minutos atravessando o ' +
+          'parque, e o teatro fica na Echo Lake, no meio desse caminho. A sessão das 13h15 ' +
+          'transforma a travessia em meia hora sentados: seis minutos de Batuu até aqui, sete ' +
+          'daqui até o Rock ’n’ Roller.\n\n' +
+          'HORÁRIO A CONFIRMAR: em setembro de 2026 as sessões eram 10h45, 12h, 13h15, 15h15 ' +
+          'e 16h30, e o show é cancelado com alguma frequência — chuva, vento ou problema ' +
+          'técnico. Se não houver sessão entre 13h e 13h20, ou se ela for cancelada, sentem ' +
+          'dez minutos na Echo Lake, que é o canto mais tranquilo do parque, e sigam.',
+        areaParque: 'Echo Lake', acesso: [], duracaoMin: 30, confirmarHorario: true,
+        pesquisa: '2026-09-15' },
 
-      { id: 'b-1511-0945', hora: '13:50', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1511-0945', hora: '13:55', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Rock ’n’ Roller Coaster (Muppets)',
         descricao: 'Multi Pass · lista alta. Ao usar, reservem o Runaway Railway',
         contexto:
@@ -3076,7 +3082,7 @@ window.ROTEIRO = {
         fila: { min: 10, quando: 'com o Multi Pass', pico: 75, estimado: true, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
-      { id: 'b-1511-1315', hora: '14:30', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1511-1315', hora: '14:35', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Torre do Terror',
         descricao: 'Multi Pass · lista baixa',
         contexto:
@@ -3084,40 +3090,39 @@ window.ROTEIRO = {
           'subidas e quedas que muda a cada volta. A ambientação é a melhor da Disney.\n\n' +
           'Sensação de estômago forte — se algum dos dois tem medo de queda, é esta e não as ' +
           'montanhas-russas.',
-        areaParque: 'Sunset Blvd', acesso: ['multi-pass'], duracaoMin: 41,
+        areaParque: 'Sunset Blvd', acesso: ['multi-pass'], duracaoMin: 40,
         fila: { min: 10, quando: 'com o Multi Pass', pico: 35, fonte: '2026-09-10' } },
 
-      { id: 'b-1511-1400', hora: '15:15', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1511-1400', hora: '15:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mickey & Minnie’s Runaway Railway',
-        descricao: 'Multi Pass rolando — reservado às 13h50',
+        descricao: 'Multi Pass rolando — reservado às 13h55',
         contexto:
           'Dark ride sem trilhos visíveis onde vocês entram literalmente dentro de um ' +
-          'desenho. Colorido, rápido, sem emoção forte. Tem diálogo, mas a graça é visual.\n\n' +
-          'É A RESERVA ROLANDO, feita às 13h50, assim que o Rock ’n’ Roller é usado. Se não ' +
-          'houver horário perto das 15h15, façam no standby — a fila chega a uns 50 minutos ' +
+          'desenho. Colorido, rápido, sem emoção forte.\n\n' +
+          'É A RESERVA ROLANDO, feita às 13h55, assim que o Rock ’n’ Roller é usado. Se não ' +
+          'houver horário perto das 15h20, façam no standby — a fila chega a uns 50 minutos ' +
           'no pico.',
         areaParque: 'Hollywood Blvd', acesso: ['multi-pass'], duracaoMin: 40,
         fila: { min: 10, quando: 'com o Multi Pass', pico: 50, estimado: true, fonte: '2026-09-10' } },
 
-      { id: 'b-1511-1630', hora: '16:00', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1511-1630', hora: '16:05', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Star Tours',
         descricao: 'Multi Pass · lista baixa. O roteiro muda a cada visita',
         contexto:
           'Simulador de cabine com tela e movimento. O sistema sorteia destinos e ' +
-          'personagens a cada sessão, então duas voltas quase nunca são iguais. Legendas ' +
-          'disponíveis, e a trama é simples.',
+          'personagens a cada sessão, então duas voltas quase nunca são iguais.',
         areaParque: 'Echo Lake', acesso: ['multi-pass'], duracaoMin: 39,
         fila: { min: 10, quando: 'com o Multi Pass', pico: 45, estimado: true, fonte: '2026-09-10' } },
 
-      { id: 'b-1511-1645p', hora: '16:45', ancora: 'referencia', tipo: 'pausa',
+      { id: 'b-1511-1645p', hora: '16:50', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — antes da noite',
-        descricao: 'Quinze minutos. Banheiro ao lado do Docking Bay 7; a partir daqui o dia é sentado',
+        descricao: 'Dez minutos. Banheiro ao lado do Docking Bay 7; a partir daqui o dia é sentado',
         contexto:
           'Banheiro, flasks e power bank. Daqui até a saída são quatro horas, e três delas ' +
           'são sentadas: Oga’s, Sci-Fi e Fantasmic.\n\n' +
           'COMAM ALGUMA COISA DA MOCHILA se estiverem com fome: o almoço foi 12h20 e o ' +
           'Oga’s serve bebida, não jantar. A comida de verdade só chega às 18h.',
-        areaParque: 'Galaxy’s Edge', acesso: [], duracaoMin: 15 },
+        areaParque: 'Galaxy’s Edge', acesso: [], duracaoMin: 10 },
 
       { id: 'b-1511-1715', hora: '17:00', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Oga’s Cantina',
@@ -3207,7 +3212,7 @@ window.ROTEIRO = {
           'Nível 1 no Hollywood Studios: Slinky Dog Dash, Runaway Railway, Rock ’n’ Roller ' +
           'Coaster e Millennium Falcon — só um entra na compra antecipada. O Slinky vai no ' +
           'rope drop e o Falcon no standby; o Rock ’n’ Roller leva o nível 1, e o Runaway ' +
-          'Railway é reservado rolando assim que ele é usado, às 13h50.',
+          'Railway é reservado rolando assim que ele é usado, às 13h55.',
       },
       singlePass: {
         itens: ['Rise of the Resistance'], opcionais: [],
@@ -3224,8 +3229,8 @@ window.ROTEIRO = {
       extras: [
         { nome: 'A travessia mais longa dos parques mapeados',
           texto: 'Do Galaxy’s Edge até a Sunset Blvd são treze minutos atravessando o ' +
-                 'parque inteiro, e mais num dia cheio. Ela está contada no relógio, com ' +
-                 'uma parada antes — não é atraso, é o mapa.' },
+                 'parque inteiro, e mais num dia cheio. Ela está contada no relógio, com o ' +
+                 'Indiana Jones da Echo Lake no meio — não é atraso, é o mapa.' },
       ],
     },
     renuncias: {
@@ -3234,20 +3239,15 @@ window.ROTEIRO = {
         { nome: 'Walt Disney Presents' }, { nome: 'Beauty and the Beast Live on Stage' },
         { nome: 'Disney Villains: Unfairly Ever After',
           motivo: 'Show de 18 minutos na Sunset Blvd. Cairia na janela da tarde em que o ' +
-                  'Multi Pass está girando — Rock ’n’ Roller, Torre e Runaway Railway — e ' +
-                  'é falado.' },
+                  'Multi Pass está girando — Rock ’n’ Roller, Torre e Runaway Railway.' },
+        { nome: 'The Little Mermaid — A Musical Adventure',
+          motivo: 'Musical de 18 minutos com bonecos, voltado a família. O show do dia é o ' +
+                  'Indiana Jones.' },
         { nome: 'The Magic of Disney Animation — abre em 14/09/2026, mas não é atração ' +
                  'de fila: é aula de desenho com um animatrônico do Olaf, encontros com ' +
                  'personagens e um teatro. Sem nenhum interesse para vocês, e ocuparia a ' +
                  'janela do Star Tours' },
       ],
-      idioma: {
-        itens: ['Indiana Jones Epic Stunt Spectacular', 'The Little Mermaid — A Musical Adventure'],
-        motivo:
-          'O Indiana Jones é visual, mas tem muito texto falado entre as cenas — se o dia ' +
-          'atrasar, é o primeiro a cair. A Little Mermaid é musical de 18 minutos, cantado e ' +
-          'falado em inglês: mesmo teste.',
-      },
       fechado: [
         'Muppet*Vision 3D — fechou em 08/06/2025 para dar lugar à Monstropolis, a land de ' +
         'Monsters, Inc. prevista para 2027',
@@ -3652,8 +3652,7 @@ window.ROTEIRO = {
         contexto:
           'O passeio dentro da esfera geodésica que é o símbolo do Epcot. Conta a história da ' +
           'comunicação humana em cenários com animatrônicos, subindo em espiral até o topo. ' +
-          'Lento, climatizado, com narração em inglês mas totalmente compreensível pelo ' +
-          'visual.\n\n' +
+          'Lento e climatizado.\n\n' +
           'À noite a fila praticamente some, e vocês passam por ela de qualquer jeito na ' +
           'volta para o lago.',
         areaParque: 'World Celebration', acesso: ['standby'], duracaoMin: 50,
@@ -3746,13 +3745,12 @@ window.ROTEIRO = {
     },
     renuncias: {
       gerais: [
-        { nome: 'The American Adventure — 30 min de show todo falado em inglês, e ocuparia ' +
-                 'a janela do Remy' },
+        { nome: 'The American Adventure — 30 minutos de história americana contada por ' +
+                 'animatrônicos, numa tarde que é das barracas do Food & Wine e do Remy' },
         { nome: 'Journey Into Imagination' }, { nome: 'Awesome Planet' },
         { nome: 'Turtle Talk with Crush' }, { nome: 'Disney & Pixar Short Film Festival' },
         { nome: 'Os filmes 360° da China e do Canadá' },
       ],
-      idioma: null,
       fechado: [],
     },
   },
@@ -4053,8 +4051,8 @@ window.ROTEIRO = {
           'o ator sai de dentro da tela e continua a cena no palco sem corte visível. É ' +
           'perseguição, luta e queda de prédio, e é consenso como o melhor show de qualquer ' +
           'parque de Orlando.\n\n' +
-          'É FALADO EM INGLÊS MAS NÃO DEPENDE DISSO: é ação de ponta a ponta e a trama cabe ' +
-          'numa frase. Foi por isso que ele ficou e os outros shows do parque não.\n\n' +
+          'É ação de ponta a ponta, e é por isso que ele é o show do dia: os outros shows do ' +
+          'parque são infantis ou estão fechados.\n\n' +
           'Cheguem 15 minutos antes. Ele tem sessão marcada e não desloca com o resto do dia.',
         areaParque: 'Hollywood', acesso: [], duracaoMin: 50, confirmarHorario: true,
         pesquisa: '2026-09-10' },
@@ -4198,16 +4196,14 @@ window.ROTEIRO = {
         { nome: 'DreamWorks Land',
           motivo: 'Trolls Trollercoaster, Caterbus e as áreas de brincar são infantis. Vocês ' +
                   'passam por ela indo da Springfield para a Hollywood e é só isso.' },
+        { nome: 'Animal Actors on Location',
+          motivo: 'Show de truques com animais treinados, voltado a criança.' },
+        { nome: 'DreamWorks Imagination Celebration',
+          motivo: 'Show infantil com os personagens da DreamWorks Land.' },
       ],
-      idioma: {
-        itens: ['Animal Actors on Location', 'DreamWorks Imagination Celebration',
-                'Universal Orlando’s Horror Make-Up Show'],
-        motivo:
-          'Shows de palco falados em inglês, 20 a 25 minutos cada. Mesmo teste que reprovou o ' +
-          'American Adventure no Epcot e os dois shows do Epic. O Bourne Stuntacular passou no ' +
-          'teste porque é ação de ponta a ponta e não depende de texto.',
-      },
       fechado: [
+        'Universal Orlando’s Horror Make-Up Show — fechou em 12/05/2026 para ganhar uma ' +
+        'versão nova, e a volta prevista passou para o inverno de 2027.',
         'Hollywood Rip Ride Rockit — fechou em 2025 para dar lugar ao Fast & Furious: ' +
         'Hollywood Drift. ATENÇÃO: o Hollywood Drift abre em 16/09/2026 na CALIFÓRNIA; a ' +
         'versão da Flórida só chega em 2027. Nada ocupa o lugar dele durante a viagem.',
@@ -4557,7 +4553,6 @@ window.ROTEIRO = {
           motivo: 'Fica a dois quarteirões do Kres e é o plano C de chuva. Em dia de sol o ' +
                   'lago ganha.' },
       ],
-      idioma: null,
       fechado: [
         'Ace Cafe Orlando — fechou em maio de 2023, depois de seis anos, e o terreno foi ' +
         'vendido para virar um prédio alto.',
@@ -4666,7 +4661,7 @@ window.ROTEIRO = {
           'Monsters Unchained às 9h e Curse of the Werewolf em seguida.',
           'Stardust Racers no meio da manhã, e Super Nintendo World às 11h, quando a turma do ' +
           'EPA sai de lá.',
-          'Tarde em Berk, com o Fyre Drill só se estiver quente.',
+          'Tarde em Berk, com o The Untrainable Dragon às 16h30, antes do jantar.',
           'Jantar às 17h, Battle at the Ministry às 18h20, Mine-Cart Madness às 20h.',
         ] },
       { letra: 'B', titulo: 'A Dark Universe voltou para o Early Park Admission',
@@ -4686,7 +4681,8 @@ window.ROTEIRO = {
           'para 21h e a saída para 22h.',
           'FECHAMENTO ÀS 20H: o Ministry sobe para 17h20 e o Mine-Cart para 19h, e o jantar das ' +
           '17h bate no Ministry. Remarquem o Atlantic para perto das 15h45, pelo app da ' +
-          'Universal; sem mesa, o Mead Hall, em Berk, não pede reserva.',
+          'Universal; sem mesa, o Mead Hall, em Berk, não pede reserva. O The Untrainable ' +
+          'Dragon sai: o jantar ocupa a janela dele.',
         ] },
       { letra: 'C', titulo: 'O Mine-Cart parou às 20h',
         gatilho: 'Vocês chegam na Super Nintendo World e ele está fora do ar.',
@@ -4699,8 +4695,8 @@ window.ROTEIRO = {
       { letra: 'C2', titulo: 'Chuva ou frio',
         gatilho: 'Chove, ou a tarde está fria.',
         passos: [
-          'O Fyre Drill cai sem discussão: ele encharca.',
-          'Monsters Unchained, Battle at the Ministry, Toadstool e Atlantic são cobertos.',
+          'Monsters Unchained, Battle at the Ministry, o teatro do Untrainable Dragon, Toadstool ' +
+          'e Atlantic são cobertos.',
           'As montanhas-russas param com raio. Se pararem, adiantem o que é coberto e voltem.',
         ] },
     ],
@@ -4859,34 +4855,40 @@ window.ROTEIRO = {
         fila: { min: 25, quando: 'à tarde', pico: 100, media: 37, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
-      { id: 'b-1911-1545', hora: '15:45', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Fyre Drill',
-        descricao: 'Opcional. O guia oficial diz: "possivelmente encharca"',
+      { id: 'b-1911-1545', hora: '15:45', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Parada em Berk — água, banheiro e sentar',
+        descricao: 'Vinte e cinco minutos. Às 16h10, fila do teatro',
         contexto:
-          'Barcos giratórios em que vocês operam canhões de água contra os outros barcos — e ' +
-          'levam água de volta, inclusive de jatos que disparam sem aviso. O guia oficial da ' +
-          'Universal é direto: os passageiros vão se molhar, possivelmente encharcar.\n\n' +
-          'O CRITÉRIO É O MESMO DO KALI RIVER RAPIDS NO DIA 13 — a temperatura: se a tarde ' +
-          'estiver fria, pulem sem culpa. Ele fica às 15h45 de propósito, com o sol ainda ' +
-          'alto.\n\n' +
-          'Se fizerem: capa de chuva vestida e celular no Ziploc.',
-        areaParque: 'Isle of Berk', acesso: ['standby'], molha: true, opcional: true,
-        duracaoMin: 25,
-        fila: { min: 10, quando: 'qualquer hora', pico: 65, media: 13, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
+          'A parada antes da reta final, e a reta final é longa: show, jantar, Ministry e ' +
+          'Mine-Cart emendados até as 21h. Encham os flasks num balcão de comida — a água ' +
+          'gelada é de graça — e sentem, ainda em Berk, com a vila decorada para o Snoggletog.\n\n' +
+          'Às 16h10 sigam para a fila do The Untrainable Dragon, que fica aqui mesmo.',
+        areaParque: 'Isle of Berk', acesso: [], duracaoMin: 25, pesquisa: '2026-09-15' },
 
-      { id: 'b-1911-1615', hora: '16:15', ancora: 'referencia', tipo: 'pausa',
-        titulo: 'Pausa · Constellation Carousel · Celestial Park de Natal',
-        descricao: 'Água, banheiro, alguma coisa da mochila. O carrossel é se der vontade',
+      { id: 'b-1911-1610e', hora: '16:10', ancora: 'fixo', tipo: 'espera',
+        titulo: 'Fila do The Untrainable Dragon',
+        descricao: 'Vinte minutos antes da sessão. Meio do teatro',
         contexto:
-          'A parada antes da reta final, e a reta final é longa: jantar, Ministry e Mine-Cart ' +
-          'emendados até as 21h. Encham os flasks num balcão de comida — a água gelada é de ' +
-          'graça — e sentem.\n\n' +
-          'O Celestial Park no Natal vira paisagem de inverno, com show natalino nas fontes. O ' +
-          'horário do show ainda não saiu.\n\n' +
-          'O Constellation Carousel fica aqui, com criaturas que giram sozinhas além do giro ' +
-          'do carrossel. Fila média de 21 minutos. Não é bloco próprio: se estiver curta, vão.',
-        areaParque: 'Celestial Park', acesso: [], duracaoMin: 40, pesquisa: '2026-09-10' },
+          'Plateia por ordem de chegada. Sentem no meio, de fileira e de lado: muito perto, ' +
+          'as telas laterais e as projeções saem do campo de visão.',
+        areaParque: 'Isle of Berk', acesso: [], duracaoMin: 20, pesquisa: '2026-09-15' },
+
+      { id: 'b-1911-1630s', hora: '16:30', ancora: 'fixo', tipo: 'show',
+        titulo: 'The Untrainable Dragon',
+        descricao: 'O maior show do Epic, 20 min. Termina a três minutos do Atlantic',
+        contexto:
+          'Musical de palco com atores, bonecos enormes e efeitos em cima da plateia, contando ' +
+          'a chegada de um dragão novo à vila de Berk. O Banguela mecânico pesa mais de meia ' +
+          'tonelada, tem oito metros de envergadura e voa por cima do público. Muitas resenhas ' +
+          'o apontam como o melhor show do parque.\n\n' +
+          'POR QUE ÀS 16H30: é a última sessão antes do jantar das 17h, e a Isle of Berk fica a ' +
+          'três minutos do Atlantic. Ele termina por volta das 16h50, e vocês chegam à mesa às ' +
+          '16h55, que é a antecedência que a Universal pede.\n\n' +
+          'HORÁRIO A CONFIRMAR: em setembro de 2026 as sessões iam das 11h10 às 19h, a cada 50 ' +
+          'minutos — 15h40, 16h30, 17h20. Se em novembro não houver sessão entre 16h15 e 16h35, ' +
+          'a parada das 15h45 vira a pausa inteira até as 16h50 e o show fica de fora.',
+        areaParque: 'Isle of Berk', acesso: [], duracaoMin: 20, confirmarHorario: true,
+        pesquisa: '2026-09-15' },
 
       { id: 'b-1911-1700', hora: '17:00', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Atlantic',
@@ -4899,8 +4901,8 @@ window.ROTEIRO = {
           'última — e as duas precisam de todo o tempo depois daqui.\n\n' +
           'RESERVADO: confirmação 639247233607631616, duas pessoas, 17h. A Universal pede ' +
           'chegada 5 minutos antes e segura a mesa só por 15 minutos — às 17h15 a reserva é ' +
-          'liberada. A pausa das 16h15 termina às 16h55 no próprio Celestial Park: é ' +
-          'exatamente a folga pedida.\n\n' +
+          'liberada. O The Untrainable Dragon termina por volta das 16h50, em Berk, a três ' +
+          'minutos daqui: é exatamente a folga pedida.\n\n' +
           'Para remarcar ou cancelar: pela conta da Universal no app, ou +1 407-224-3663.\n\n' +
           'SE PERDEREM A MESA: o Mead Hall, salão viking da Isle of Berk, não aceita reserva — ' +
           'é mais barato e mais temático. Berk fica do outro lado do Ministry: contem a ' +
@@ -4950,7 +4952,8 @@ window.ROTEIRO = {
         descricao: 'Pelo Celestial Park iluminado. Embarque na 1222 Epic Blvd',
         contexto:
           'A saída atravessa o Celestial Park de noite, com a decoração de Natal acesa — é o ' +
-          'parque no seu melhor, e vocês passam por ele de qualquer jeito.\n\n' +
+          'parque no seu melhor, e vocês passam por ele de qualquer jeito. Se o show natalino ' +
+          'das fontes estiver na grade perto das 21h, é aqui que ele entra.\n\n' +
           'A tarifa dinâmica sobe no fechamento. Se estiver absurda, esperem dez minutos no ' +
           'Celestial Park antes de chamar.\n\n' +
           'Amanhã a manhã é livre, sem alarme.',
@@ -5034,17 +5037,17 @@ window.ROTEIRO = {
         { nome: 'Bowser Jr. Shadow Showdown',
           motivo: 'Desafio interativo da Super Nintendo World que depende da Power-Up Band. ' +
                   'Menor fila do parque, e é voltado a criança.' },
+        { nome: 'Fyre Drill',
+          motivo: 'Barcos com canhões de água: o guia oficial diz que os passageiros podem ' +
+                  'encharcar. Depois dele viriam um show sentado e um jantar de mesa.' },
+        { nome: 'Constellation Carousel',
+          motivo: 'Carrossel com criaturas que giram sozinhas, 21 minutos de fila média. A ' +
+                  'pausa da tarde agora é em Berk, antes do show.' },
+        { nome: 'Le Cirque Arcanus',
+          motivo: 'Circo de criaturas de Animais Fantásticos, com 23 minutos de show e 10 de ' +
+                  'pré-show. As resenhas se dividem, e a noite no Ministry of Magic é da fila ' +
+                  'do Battle at the Ministry. O show do dia é o The Untrainable Dragon.' },
       ],
-      idioma: {
-        itens: ['Le Cirque Arcanus', 'The Untrainable Dragon'],
-        motivo:
-          'Os dois shows de teatro do parque, falados em inglês. Mesmo teste que reprovou o ' +
-          'American Adventure no Epcot: são 25 a 30 minutos sentados que rendem muito mais ' +
-          'andando.\n\n' +
-          'ESTES DOIS, mais as áreas de brincar acima, SÃO A DIFERENÇA INTEIRA entre um dia e ' +
-          'dois no Epic Universe. O parque tem 11 atrações de brinquedo, 2 shows e 2 áreas de ' +
-          'brincar — e as 11 de brinquedo estão todas neste dia.',
-      },
       fechado: [],
     },
   },
@@ -5341,7 +5344,6 @@ window.ROTEIRO = {
         { nome: 'Kissimmee Lakefront Park',
           motivo: 'Sem carro de manhã, são 16 minutos de Uber em cada sentido para ver um lago.' },
       ],
-      idioma: null,
       fechado: [],
     },
   },
@@ -5669,7 +5671,6 @@ window.ROTEIRO = {
           motivo: 'A decoração e o acendimento da árvore, no Light Up Winter Garden, são na ' +
                   'primeira sexta de dezembro — depois da viagem.' },
       ],
-      idioma: null,
       fechado: [],
     },
   },
@@ -6084,7 +6085,6 @@ window.ROTEIRO = {
           motivo: 'Show de corais no Nautilus Theater, na mesma faixa da noite que o show no ' +
                   'gelo.' },
       ],
-      idioma: null,
       fechado: [],
     },
   },
@@ -6451,7 +6451,6 @@ window.ROTEIRO = {
           motivo: 'Torre de menos de um minuto. O tempo dele foi para a fila da VelociCoaster, ' +
                   'que não tem single rider. Volta no plano B.' },
       ],
-      idioma: null,
       fechado: [],
     },
   },
@@ -6830,7 +6829,6 @@ window.ROTEIRO = {
                   'planície.' },
         { nome: 'Sesame Street Safari of Fun e Wild Oasis', motivo: 'Áreas infantis.' },
       ],
-      idioma: null,
       fechado: [
         'Kumba — fechou em 02/08/2026. O Kumba’s Revenge, que vai no lugar, ainda não tem data.',
         'Stanley Falls — fechou em 07/09/2025 e foi demolida.',
@@ -7111,7 +7109,6 @@ window.ROTEIRO = {
           motivo: 'A retirada do Oakley é no dia 18. Aqui o Best Buy só entra no plano B.' },
         { nome: 'Black Friday', motivo: 'Cai em 27/11, o dia seguinte ao voo de volta.' },
       ],
-      idioma: null,
       fechado: [],
     },
   },
@@ -7308,7 +7305,6 @@ window.ROTEIRO = {
           motivo: 'Entra na cota de US$ 1.000 das compras no exterior. A cota extra é a do ' +
                   'free shop na chegada ao Brasil.' },
       ],
-      idioma: null,
       fechado: [],
     },
   },
@@ -8618,7 +8614,7 @@ window.ROTEIRO = {
       id: 'dica-molha',
       categoria: 'geral',
       momento: 'dia-especifico',
-      dias: ['d-2026-11-13', 'd-2026-11-19', 'd-2026-11-22', 'd-2026-11-23'],
+      dias: ['d-2026-11-13', 'd-2026-11-22', 'd-2026-11-23'],
       titulo: 'O que molha de verdade',
       corpo:
         'Novembro em Orlando é ameno, e roupa molhada às 17h fica desconfortável rápido quando ' +
@@ -8627,9 +8623,8 @@ window.ROTEIRO = {
         'horas de parque pela frente\n' +
         'Jurassic Park River Adventure (23/11) — molha bastante, levem capa\n' +
         'Journey to Atlantis (22/11) — molha bastante\n' +
-        'Fyre Drill (19/11) — o guia oficial diz "possivelmente encharca". Opcional, às 15h45\n' +
         '\n' +
-        'Ficam de fora por molharem demais: Infinity Falls (SeaWorld), ' +
+        'Ficam de fora por molharem demais: Fyre Drill (Epic), Infinity Falls (SeaWorld), ' +
         'Popeye e Dudley Do-Right (Islands) e Congo River Rapids (Busch).\n\n' +
         'Capa de chuva descartável custa ~US$ 1 no Walmart do dia 10 e ~US$ 10 dentro do parque.',
     },

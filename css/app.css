@@ -1017,8 +1017,6 @@ button.selo::after { content: ''; position: absolute; left: 0; right: 0; top: -6
 .renuncia-item.com-motivo { text-decoration: none; display: block; width: 100%; }
 .renuncia-item.com-motivo b { text-decoration: line-through; color: var(--texto); }
 .renuncia-motivo { font-size: 12.5px; margin-top: 3px; line-height: 1.5; }
-.renuncia-nota { font-size: 13px; color: var(--texto-fraco); margin: 10px 0 0;
-  font-style: italic; line-height: 1.6; }
 
 .regra { display: flex; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--borda); }
 .regra:last-child { border-bottom: 0; }

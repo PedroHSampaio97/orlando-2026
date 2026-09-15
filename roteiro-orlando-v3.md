@@ -116,7 +116,7 @@ ou com dois Single Pass.*
 ### Renúncias — não vão render para vocês
 Dumbo, Barnstormer, Tomorrowland Speedway, Astro Orbiter, Mad Tea Party, Ariel's Undersea Adventure, Enchanted Tales with Belle, Tapete Mágico, Tom Sawyer Island, Liberty Belle.
 
-**Renúncias por barreira de idioma:** Hall of Presidents, Country Bear Jamboree, Monsters Inc. Laugh Floor e Enchanted Tiki Room são atrações longas, faladas e com humor que depende de referência americana. São 20 a 25 minutos cada que rendem muito mais em outro lugar.
+Hall of Presidents (22 minutos de história cívica americana), Country Bear Jamboree (musical de 12 minutos voltado a família), Monsters Inc. Laugh Floor (humor pensado para criança) e Enchanted Tiki Room (clássico de 10 minutos, mas a Adventureland das 9h40 às 10h50 não tem brecha).
 
 **Fechado:** Carousel of Progress — fechou em 06/07/2026 para uma reforma que troca as quatro cenas e põe um animatrônico do Walt abrindo o show. Volta só no fim da primavera de 2027, sem data anunciada.
 
@@ -206,7 +206,7 @@ com a manhã e a noite juntas.
 
 O parque mais difícil da Disney, e o único dos três em que o Single Pass se justifica.
 
-**Multi Pass:** lista alta → **Rock 'n' Roller Coaster** · lista baixa → **Torre do Terror** e **Star Tours** · rolando → **Runaway Railway**, reservado às 13h50
+**Multi Pass:** lista alta → **Rock 'n' Roller Coaster** · lista baixa → **Torre do Terror** e **Star Tours** · rolando → **Runaway Railway**, reservado às 13h55
 **Single Pass:** **Rise of the Resistance** — peçam janela entre 10h30 e 11h
 
 > **NÃO VÃO PARA O GALAXY'S EDGE NA ABERTURA.** Pela terceira vez o ponto certo é o contraintuitivo, e aqui o motivo tem nome: o Early Entry do Hollywood Studios inclui o **Rise, o Slinky e a Torre**, e a grande maioria dos hóspedes vai para o **Rise**. Quem entra às 9h e caminha para o Galaxy's Edge está indo para dentro da multidão que já está na fila há meia hora. A recomendação para quem está fora dos hotéis é o **Toy Story Land**.
@@ -222,13 +222,13 @@ O parque mais difícil da Disney, e o único dos três em que o Single Pass se j
 | **10h15** | **Alien Swirling Saucers** | Opcional. Só se a fila estiver abaixo de 15 min |
 | **10h45** | **Rise of the Resistance** | Single Pass |
 | **11h35** | **Millennium Falcon: Smugglers Run** | Standby. **Peçam para ser PILOTOS** |
-| **12h20** | **Almoço — Docking Bay 7** | Mobile order, pedido na fila do Falcon |
-| **13h20** | **Parada** | E a travessia mais longa do dia: 13 min até a Sunset Blvd. Banheiro ao lado do Docking Bay 7 |
-| **13h50** | **Rock 'n' Roller Coaster (Muppets)** | Multi Pass · lista alta. **Ao usar, reservem o Runaway Railway** |
-| **14h30** | **Torre do Terror** | Multi Pass · lista baixa |
-| **15h15** | **Mickey & Minnie's Runaway Railway** | Multi Pass rolando. Sem horário, standby |
-| **16h00** | **Star Tours** | Multi Pass · lista baixa. O roteiro muda a cada visita |
-| **16h45** | **Parada** | Comam algo da mochila: o Oga's é bebida, não jantar. Banheiro ao lado do Docking Bay 7 |
+| **12h20** | **Almoço — Docking Bay 7** | 40 min. Mobile order, pedido na fila do Falcon. Banheiro antes de sair de Batuu |
+| **13h15** | **Indiana Jones Epic Stunt Spectacular** | 30 min sentados, na Echo Lake, no meio da travessia até a Sunset Blvd. Horário a confirmar |
+| **13h55** | **Rock 'n' Roller Coaster (Muppets)** | Multi Pass · lista alta. **Ao usar, reservem o Runaway Railway** |
+| **14h35** | **Torre do Terror** | Multi Pass · lista baixa |
+| **15h20** | **Mickey & Minnie's Runaway Railway** | Multi Pass rolando. Sem horário, standby |
+| **16h05** | **Star Tours** | Multi Pass · lista baixa. O roteiro muda a cada visita |
+| **16h50** | **Parada** | Dez minutos. Comam algo da mochila: o Oga's é bebida, não jantar. Banheiro ao lado do Docking Bay 7 |
 | **17h00** | **Oga's Cantina** | Reserva. Limite de 45 min por grupo |
 | **18h00** | **Jantar — Sci-Fi Dine-In** | Reserva. Vocês sentam dentro de um carro dos anos 50 |
 | **19h25** | **Sunset Blvd** — Natal e compras | **É o momento de compra do dia.** As lojas fecham com o parque |
@@ -245,10 +245,10 @@ O parque mais difícil da Disney, e o único dos três em que o Single Pass se j
 | Alien Swirling Saucers | 10h15, de manhã | ~15 min | ~35 |
 | **Rise of the Resistance** | 10h45, Single Pass | ~10 min | **~100** |
 | Millennium Falcon | 11h35, antes do meio-dia | ~35 min | ~65 |
-| Rock 'n' Roller Coaster | 13h50, Multi Pass | ~10 min | ~75 |
-| Torre do Terror | 14h30, Multi Pass | ~10 min | ~35 |
-| Runaway Railway | 15h15, Multi Pass rolando | ~10 min | ~50 |
-| Star Tours | 16h00, Multi Pass | ~10 min | ~45 |
+| Rock 'n' Roller Coaster | 13h55, Multi Pass | ~10 min | ~75 |
+| Torre do Terror | 14h35, Multi Pass | ~10 min | ~35 |
+| Runaway Railway | 15h20, Multi Pass rolando | ~10 min | ~50 |
+| Star Tours | 16h05, Multi Pass | ~10 min | ~45 |
 
 *Médias publicadas, consultadas em 10/09/2026.*
 
@@ -261,7 +261,9 @@ Disney Junior, Frozen Sing-Along, Vacation Fun, Walt Disney Presents, Beauty and
 
 **The Magic of Disney Animation** abre em 14/09/2026, mas não é atração de fila: é aula de desenho com um animatrônico do Olaf, encontros com personagens e um teatro. Sem interesse para vocês, e ocuparia a janela do Star Tours.
 
-**Renúncia por idioma:** Indiana Jones Epic Stunt Spectacular é visual, mas tem muito texto falado entre as cenas. Se o dia atrasar, é o primeiro a cair. A Little Mermaid — A Musical Adventure, 18 minutos cantados e falados em inglês, cai pelo mesmo teste.
+**The Little Mermaid — A Musical Adventure:** musical de 18 minutos com bonecos, voltado a família. O show do dia é o Indiana Jones.
+
+> **Por que o Indiana Jones às 13h15.** Do Galaxy's Edge até a Sunset Blvd são treze minutos atravessando o parque, e o teatro fica na Echo Lake, no meio do caminho. A sessão das 13h15 transforma a travessia em meia hora sentados: seis minutos de Batuu até o teatro e sete dele até o Rock 'n' Roller. O custo é um almoço de 40 minutos e uma parada de 10 antes do Oga's. Em setembro de 2026 as sessões eram 10h45, 12h, 13h15, 15h15 e 16h30, e o show é cancelado com alguma frequência: sem sessão entre 13h e 13h20, sentem dez minutos na Echo Lake e sigam.
 
 **Fechado:** Muppet*Vision 3D fechou em 08/06/2025, junto com o PizzeRizzo e o Muppets Courtyard inteiro, para dar lugar à Monstropolis — a land de Monsters, Inc. prevista para 2027.
 
@@ -324,7 +326,7 @@ Meio dia de parque e meio de festival. A manhã resolve as filas; a partir das 1
 Peguem o passaporte na entrada. **Dividam cada prato entre os dois** e provem 8 a 10 barracas ao longo da tarde, em vez de fazer três refeições. É assim que o festival funciona, e é por isso que hoje **não existe bloco de almoço nem de jantar** — o Food & Wine é as duas refeições, servidas em quatro voltas. Destaques que se repetem todo ano: Canadá (sopa de cheddar com bacon), Alemanha, Grécia, Bélgica (waffle).
 
 ### Renúncias
-**The American Adventure** — 30 min de show todo falado em inglês, e ocuparia a janela do Remy, que é uma das duas filas que o Multi Pass existe para resolver.
+**The American Adventure** — 30 minutos de história americana contada por animatrônicos, numa tarde que é das barracas do Food & Wine e do Remy.
 
 Journey Into Imagination, Awesome Planet, Turtle Talk with Crush, Disney & Pixar Short Film Festival, os filmes 360° da China e do Canadá.
 
@@ -378,19 +380,20 @@ A temporada de Natal da Universal vai de **14/11 a 03/01**. Vocês pegaram a pri
 
 **O CineSational**, show noturno da lagoa, costuma rodar no fechamento — que é a hora em que vocês saem. Se estiver na grade de 17/11, é decidir antes: ficar para ele custa a saída no pico. Está na pendência de 01/11.
 
-### Três atrações que não existem mais
+### Quatro atrações que não existem mais
 
 Nenhuma delas é escolha de vocês:
 
 - **Hollywood Rip Ride Rockit** — fechou em 2025 para dar lugar ao *Fast & Furious: Hollywood Drift*. **Cuidado com a notícia:** o Hollywood Drift abre em 16/09/2026 na **Califórnia**; a versão da Flórida só chega em **2027**. Nada ocupa o lugar dele.
 - **Fast & Furious: Supercharged** — fechou em **17/08/2026**. Com ele foi a única atração da San Francisco, que virou área de passagem.
 - **Woody Woodpecker's Nuthouse Coaster** — fechou em 16/01/2023 com o resto da KidZone, que virou DreamWorks Land.
+- **Horror Make-Up Show** — fechou em 12/05/2026 para ganhar uma versão nova, e a volta prevista passou para o inverno de 2027.
 
 ### Renúncias
 
-Race Through New York (Jimmy Fallon), Kang & Kodos, DreamWorks Land (infantil), Animal Actors, DreamWorks Imagination Celebration e o Horror Make-Up Show (shows falados em inglês). Hogwarts Express fica para o **dia 23**, quando dá para fazer ida e volta.
+Race Through New York (Jimmy Fallon), Kang & Kodos, DreamWorks Land, Animal Actors e DreamWorks Imagination Celebration (infantis). Hogwarts Express fica para o **dia 23**, quando dá para fazer ida e volta.
 
-*O Bourne Stuntacular passou no teste do idioma porque é ação de ponta a ponta e a trama cabe numa frase.*
+*O Bourne Stuntacular é o show do dia porque é ação de ponta a ponta; os outros shows do parque são infantis ou estão fechados.*
 
 ### Lockers
 
@@ -417,8 +420,9 @@ O parque mais concorrido de Orlando, **no dia mais vazio da segunda metade da vi
 | **13h05** | **Almoço — Toadstool Cafe** | Sem reserva |
 | **14h10** | **Hiccup's Wing Gliders** | Lançamento de alta velocidade. Locker obrigatório |
 | **15h00** | **Dragon Racer's Rally** | Você controla a inclinação e as inversões |
-| **15h45** | **Fyre Drill** — opcional | O guia oficial diz "possivelmente encharca". Frio, pulem |
-| **16h15** | **Pausa · Carrossel · Celestial Park de Natal** | Água, banheiro, mochila |
+| **15h45** | **Parada em Berk** | 25 min. Água, banheiro, sentar |
+| **16h10** | Fila do teatro | Plateia por ordem de chegada. Meio do teatro |
+| **16h30** | **The Untrainable Dragon** | O maior show do Epic, 20 min. Horário a confirmar |
 | **17h00** | **Jantar — Atlantic** | **Reservado.** A mesa espera só 15 min — cheguem 16h55 |
 | **18h20** | **Harry Potter and the Battle at the Ministry** | Nas últimas horas cai para 45–75 min |
 | **20h00** | **Mine-Cart Madness** | Na última hora cai para 20–30 min. Quem está na fila no fechamento anda |
@@ -441,9 +445,11 @@ Ou seja: às 9h os hóspedes de hotel já estão há uma hora no Battle at the M
 | Hiccup's Wing Gliders | 35–41 min | cedo; pior por volta das 17h |
 | Dragon Racer's Rally · Yoshi · Stardust | 18–37 min | meio do dia |
 | Monsters Unchained | 13–15 min | enche logo depois da abertura |
-| Fyre Drill · Carrossel | 13–21 min | qualquer hora |
+É isso que obriga o **jantar às 17h**: as três últimas horas são das duas maiores filas. O Atlantic está **reservado** para as 17h, duas pessoas. A Universal pede chegada 5 minutos antes e **segura a mesa só por 15 minutos** — o The Untrainable Dragon termina por volta das 16h50, em Berk, a três minutos do Atlantic, exatamente a folga pedida.
 
-É isso que obriga o **jantar às 17h**: as três últimas horas são das duas maiores filas. O Atlantic está **reservado** para as 17h, duas pessoas. A Universal pede chegada 5 minutos antes e **segura a mesa só por 15 minutos** — a pausa das 16h15 termina às 16h55 no próprio Celestial Park, exatamente a folga pedida. Remarcar ou cancelar: app da Universal ou **+1 407-224-3663**. Se perderem a mesa, o **Mead Hall** (Isle of Berk) não aceita reserva e entra no lugar.
+### O show da tarde
+
+**The Untrainable Dragon** é o maior show do Epic: atores, bonecos enormes e um Banguela mecânico de meia tonelada e oito metros de envergadura voando por cima da plateia, em 20 minutos. A sessão das 16h30 é a última antes do jantar. Em setembro de 2026 as sessões iam das 11h10 às 19h, a cada 50 minutos; se em novembro não houver sessão entre 16h15 e 16h35, a parada das 15h45 vira a pausa inteira e o show fica de fora. Remarcar ou cancelar: app da Universal ou **+1 407-224-3663**. Se perderem a mesa, o **Mead Hall** (Isle of Berk) não aceita reserva e entra no lugar.
 
 ### O guia oficial da Universal
 
@@ -456,13 +462,13 @@ A Super Nintendo World ganha decoração **pela primeira vez**, Berk faz o **Sno
 ### Planos
 
 - **B — a Dark Universe voltou para o EPA.** Battle at the Ministry às 9h; Monsters e Curse às 18h20.
-- **B2 — o parque não fecha às 21h.** Ministry, Mine-Cart e saída acompanham o fechamento. Às 22h, o jantar das 17h fica; às 20h, o Ministry sobe para 17h20 e o Atlantic é remarcado para perto das 15h45.
+- **B2 — o parque não fecha às 21h.** Ministry, Mine-Cart e saída acompanham o fechamento. Às 22h, o jantar das 17h fica; às 20h, o Ministry sobe para 17h20, o Atlantic é remarcado para perto das 15h45 e o The Untrainable Dragon sai.
 - **C — Mine-Cart parado às 20h.** Ele quebra com frequência. Se voltar antes das 21h, entrem na fila antes de fechar.
-- **C2 — chuva ou frio.** Fyre Drill cai. Monsters, Ministry, Toadstool e Atlantic são cobertos.
+- **C2 — chuva ou frio.** Monsters, Ministry, o teatro do Untrainable Dragon, Toadstool e Atlantic são cobertos.
 
 ### Renúncias
 
-**Le Cirque Arcanus** e **The Untrainable Dragon** (shows falados em inglês), **Astronomica** e **Viking Training Camp** (áreas de brincar), **Bowser Jr. Shadow Showdown** (desafio da Power-Up Band, voltado a criança). É a diferença inteira entre um dia e dois no Epic — as 11 atrações de brinquedo estão todas aqui.
+**Le Cirque Arcanus** (circo de Animais Fantásticos, 23 minutos e 10 de pré-show; resenhas divididas, e a noite no Ministry é da fila do Battle), **Fyre Drill** (encharca, e depois vêm o show e o jantar de mesa), **Constellation Carousel**, **Astronomica** e **Viking Training Camp** (áreas de brincar), **Bowser Jr. Shadow Showdown** (desafio da Power-Up Band, voltado a criança). As 11 atrações de brinquedo do parque estão todas no dia.
 
 **Power-Up Band:** comprem se quiserem jogar os desafios interativos da Super Nintendo World. ~US$ 40. Decisão no checklist de outubro.
 
@@ -601,7 +607,7 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 
 **2. Não reserve Multi Pass para o que você vai fazer no rope drop.** Erro clássico: reservar a atração que já estaria vazia às 9h e depois enfrentar fila de 80 minutos no resto.
 
-**3. Use a primeira reserva do Multi Pass cedo.** O sistema só libera a próxima depois que você usa a atual. Quem usa às 11h faz o dobro de quem usa às 15h. Nos dias 11 e 16 a primeira é usada às 11h e às 9h45. No dia 15 ela fica para as 13h50, porque a manhã já sai no rope drop, no standby e no Single Pass do Rise.
+**3. Use a primeira reserva do Multi Pass cedo.** O sistema só libera a próxima depois que você usa a atual. Quem usa às 11h faz o dobro de quem usa às 15h. Nos dias 11 e 16 a primeira é usada às 11h e às 9h45. No dia 15 ela fica para as 13h55, porque a manhã já sai no rope drop, no standby e no Single Pass do Rise.
 
 **4. Mobile order em tudo que for balcão.** Disney e Universal permitem pedir pelo app e só buscar. Economiza 20 a 30 minutos por refeição.
 

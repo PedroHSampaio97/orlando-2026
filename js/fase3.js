@@ -100,7 +100,6 @@ window.Fase3 = (function () {
     const temPasses = f && (f.multiPass || f.singlePass || f.expressPass);
     const temRenuncias = dia.renuncias && (
       (dia.renuncias.gerais || []).length ||
-      dia.renuncias.idioma ||
       (dia.renuncias.fechado || []).length);
 
     if (temPasses) alvo.appendChild(blocoPasses(dia, f));
@@ -211,8 +210,7 @@ window.Fase3 = (function () {
   }
 
   function blocoRenuncias(ren) {
-    const total = (ren.gerais || []).length +
-      (ren.idioma ? ren.idioma.itens.length : 0) + (ren.fechado || []).length;
+    const total = (ren.gerais || []).length + (ren.fechado || []).length;
     const d = el('details', 'acordeao');
     d.appendChild(el('summary', null, '🚫  Renúncias — ' + total + ' coisas que vocês não vão fazer'));
     const c = el('div', 'acordeao-corpo');
@@ -232,16 +230,6 @@ window.Fase3 = (function () {
         }
       });
       g.appendChild(lista);
-      c.appendChild(g);
-    }
-
-    if (ren.idioma) {
-      const g = el('div', 'renuncia-grupo');
-      g.appendChild(el('h4', null, 'Renúncia por barreira de idioma'));
-      const lista = el('div', 'renuncia-lista');
-      ren.idioma.itens.forEach((n) => lista.appendChild(el('span', 'renuncia-item', n)));
-      g.appendChild(lista);
-      g.appendChild(el('p', 'renuncia-nota', ren.idioma.motivo));
       c.appendChild(g);
     }
 
