@@ -34,11 +34,13 @@ window.ROTEIRO = {
     fontes: ['roteiro-orlando-v3.md', 'roteiro-orlando-dias-livres.md'],
     geradoEm: '2026-09-08',
     avisoHorarios:
-      'OS QUATRO DIAS DE DISNEY TÊM HORÁRIO OFICIAL, saído em 12/09: Magic Kingdom das 9h ' +
-      'às 22h no dia 11, Animal Kingdom das 8h às 18h no dia 13, Hollywood Studios das 9h ' +
-      'às 21h no dia 15 e Epcot das 9h às 21h no dia 16. Os quatro confirmam o que o ' +
-      'roteiro já assumia: nenhum bloco mudou de hora. O Early Entry, que vocês não têm, ' +
-      'abre meia hora antes — e 7h30 no Animal Kingdom.\n\n' +
+      'OS QUATRO DIAS DE DISNEY TÊM HORÁRIO PUBLICADO: Magic Kingdom das 9h às 22h no dia ' +
+      '11, Epcot das 9h às 21h no dia 13, Hollywood Studios das 9h às 21h no dia 15 e ' +
+      'Animal Kingdom das 8h às 18h no dia 16. O Early Entry, que vocês não têm, abre meia ' +
+      'hora antes — e 7h30 no Animal Kingdom.\n\n' +
+      'O HORÁRIO DOS DIAS 13 E 16 VEM DO CALENDÁRIO PUBLICADO, conferido em 16/09, e não da ' +
+      'confirmação oficial de 12/09: confirmem os dois no app da Disney. Está nas ' +
+      'pendências.\n\n' +
       'AINDA É SUPOSIÇÃO: Universal (17/11), Epic (19/11), SeaWorld (22/11) e Islands ' +
       '(23/11) em 9h, e Busch Gardens (24/11) em 10h. As pendências dizem quando conferir ' +
       'cada um; ajustem a referência do dia e os blocos ancorados deslocam junto.\n\n' +
@@ -97,7 +99,7 @@ window.ROTEIRO = {
              'enfrentar fila de 80 minutos no resto.' },
     { n: 3, momento: 'todo-dia', titulo: 'Use a primeira reserva do Multi Pass cedo.',
       texto: 'O sistema só libera a próxima depois que você usa a atual. Quem usa às 11h ' +
-             'faz o dobro de quem usa às 15h. Nos dias 11 e 16 a primeira é usada às 11h e às ' +
+             'faz o dobro de quem usa às 15h. Nos dias 11 e 13 a primeira é usada às 11h e às ' +
              '9h45. No dia 15 ela fica para as 13h55, porque a manhã já sai no rope drop, no ' +
              'standby e no Single Pass do Rise.' },
     { n: 4, momento: 'todo-dia', titulo: 'Mobile order em tudo que for balcão.',
@@ -130,12 +132,12 @@ window.ROTEIRO = {
       resumo: [
         { data: '2026-11-11', parque: 'Magic Kingdom',     multiPass: 'Sim',
           singlePass: 'Nenhum — os dois ficam como plano B pago', custo: { min: 40, max: 70 } },
-        { data: '2026-11-13', parque: 'Animal Kingdom',    multiPass: 'Não',
-          singlePass: 'Flight of Passage — só se o fim de dia não resolver', custo: { min: 0, max: 40 } },
+        { data: '2026-11-13', parque: 'Epcot',             multiPass: 'Sim',
+          singlePass: 'Cosmic Rewind',                           custo: { min: 60, max: 110 } },
         { data: '2026-11-15', parque: 'Hollywood Studios', multiPass: 'Sim',
           singlePass: 'Rise of the Resistance',                  custo: { min: 70, max: 130 } },
-        { data: '2026-11-16', parque: 'Epcot',             multiPass: 'Sim',
-          singlePass: 'Cosmic Rewind',                           custo: { min: 60, max: 110 } },
+        { data: '2026-11-16', parque: 'Animal Kingdom',    multiPass: 'Não',
+          singlePass: 'Flight of Passage — só se o fim de dia não resolver', custo: { min: 0, max: 40 } },
       ],
       correcao:
         'Seven Dwarfs Mine Train e Flight of Passage NÃO estão no Multi Pass. São Single ' +
@@ -161,19 +163,19 @@ window.ROTEIRO = {
             'INGRESSO DE DATAS FIXAS (date-based): a compra abre 3 dias antes do PRIMEIRO dia ' +
             'do ingresso e cobre todos os dias de uma vez, Multi Pass e Single Pass. Aí 08/11 ' +
             'resolve os quatro dias.\n\n' +
-            'INGRESSO SEM DATA FIXA: 3 dias antes de CADA visita — 08/11 para o dia 11, 12/11 ' +
-            'para o dia 15 e 13/11 para o dia 16.\n\n' +
-            'MULTI PASS, dia a dia: 11/11 Peter Pan / Mansão / Buzz. 13/11 nenhum, o ' +
-            'Animal Kingdom não usa. 15/11 Rock ’n’ Roller Coaster / Torre do Terror / Star ' +
-            'Tours, com o Runaway Railway rolando. 16/11 Frozen / Mission: SPACE / Soarin’, ' +
-            'com o Remy rolando.\n\n' +
+            'INGRESSO SEM DATA FIXA: 3 dias antes de CADA visita — 08/11 para o dia 11, 10/11 ' +
+            'para o dia 13 e 12/11 para o dia 15. O dia 16 não usa Multi Pass.\n\n' +
+            'MULTI PASS, dia a dia: 11/11 Peter Pan / Mansão / Buzz. 13/11 Frozen / ' +
+            'Mission: SPACE / Soarin’, com o Remy rolando. 15/11 Rock ’n’ Roller Coaster / ' +
+            'Torre do Terror / Star Tours, com o Runaway Railway rolando. 16/11 nenhum, o ' +
+            'Animal Kingdom não usa.\n\n' +
             'SINGLE PASS: dois dias compram.\n' +
             '  · Seven Dwarfs e TRON (11/11) → NÃO COMPRAR. São plano B pago, resolvidos por ' +
             'janela de horário dentro do parque.\n' +
-            '  · Flight of Passage (13/11) → NÃO COMPRAR antes. Se for preciso, compra-se ' +
+            '  · Flight of Passage (16/11) → NÃO COMPRAR antes. Se for preciso, compra-se ' +
             'dentro do parque às 17h30, se ainda houver janela.\n' +
             '  · Rise of the Resistance (15/11) → janela entre 10h30 e 11h\n' +
-            '  · Cosmic Rewind (16/11) → janela entre 10h15 e 10h45\n\n' +
+            '  · Cosmic Rewind (13/11) → janela entre 10h15 e 10h45\n\n' +
             'PREÇO: dinâmico. Em setembro de 2026 o Multi Pass custava US$ 15–37 no Epcot e ' +
             'US$ 20–39 no Hollywood Studios, por pessoa; o Single Pass, US$ 14–17 no Cosmic ' +
             'Rewind e US$ 15–25 no Rise. Novembro tende a ser mais caro.\n\n' +
@@ -205,9 +207,9 @@ window.ROTEIRO = {
           'enfrentariam a fila que incomoda. No Epic, o Express tem preço dinâmico, de ' +
           'US$ 150 a mais de 360 por pessoa, por dia, e o dia de vocês não precisa dele para ' +
           'caber.\n\n' +
-          'Se o dia 19 der muito errado, a manhã livre do dia 20 é o lugar de voltar ao Epic — ' +
-          'se o ingresso tiver um dia sobrando com Epic. Isso está na pendência dos ingressos ' +
-          'da Universal.',
+          'Se o dia 19 der muito errado, a manhã livre do dia 20 é o lugar de voltar ao Epic, ' +
+          'e isso não custa dia de ingresso: o de vocês é de 14 dias com entradas ilimitadas. ' +
+          'Confirmem o produto e a data de início na pendência dos ingressos da Universal.',
         alternativa:
           'Nas filas longas, single rider a partir de 45 minutos, onde houver. Para uma fila ' +
           'específica, o Universal Express Now: comprado no app, dentro do parque, US$ 20 a 25 ' +
@@ -574,7 +576,7 @@ window.ROTEIRO = {
             texto: 'Capas de chuva descartáveis — 8 unidades',
             marca: null, alternativaBarata: null,
             motivo: 'São TRÊS atrações que molham de verdade, e vocês são dois: Kali River ' +
-                    'Rapids no dia 13, Journey to Atlantis no 22 e Jurassic Park River ' +
+                    'Rapids no dia 16, Journey to Atlantis no 22 e Jurassic Park River ' +
                     'Adventure no 23. Seis usos e duas de reserva para chuva. Procurem ' +
                     '"disposable rain poncho" na seção de camping.' },
           { id: 'meias', secao: 'Casa', essencial: true,
@@ -1005,7 +1007,7 @@ window.ROTEIRO = {
           'Chuva forte costuma esvaziar as filas das montanhas-russas. Se pararem por ' +
           'raio, voltam rápido — vale esperar sob cobertura em vez de ir embora.',
           'Se os fogos forem cancelados, não fiquem esperando: saiam mais cedo e durmam. ' +
-          'O dia 13 é Animal Kingdom e pode abrir às 8h.',
+          'O dia 13 é Epcot e abre às 9h.',
           'O que não se sacrifica: a manhã na Frontierland. Ela é o que faz o dia caber sem ' +
           'comprar passe nenhum.',
         ],
@@ -1711,72 +1713,32 @@ window.ROTEIRO = {
     /* --------------------------------------------------------------------- */
     prepararAmanha: {
       paraODia: '2026-11-13',
-      titulo: 'Animal Kingdom · alarme 5h30, saída 6h30',
+      titulo: 'Epcot · alarme 6h15, saída 7h15',
       aviso:
-        'Acabou a parte leve. O dia 13 abre a sequência mais pesada da viagem, e é o dia ' +
-        'mais dependente de um horário que só sai perto da data — confiram tudo hoje.',
+        'Hoje a noite acaba cedo, no BoardWalk, e amanhã sai às 7h15. O Epcot é o dia mais leve dos ' +
+        'quatro da Disney — a tarde é comida, não fila — mas a manhã ainda tem hora.',
       itens: [
-        { texto: 'Conferir ABERTURA E FECHAMENTO do Animal Kingdom e ajustar a referência',
+        { texto: 'Alarme para 6h15 nos dois celulares', critico: true,
+          motivo: 'Saída às 7h15, para estar na corda do Epcot às 8h15. Depois de um dia que ' +
+                  'termina às 21h35, um alarme só falha.' },
+        { texto: 'Conferir se as reservas de Lightning Lane do dia 13 aparecem no app',
           critico: true,
-          motivo: 'OS DOIS IMPORTAM, e é o item mais importante da lista.\n\n' +
-                  'A ABERTURA: o dia assume 8h, que é o típico de novembro. Se for outra, ' +
-                  'mudem a referência na tela do dia e a manhã inteira desloca junto, ' +
-                  'inclusive a saída das 6h30.\n\n' +
-                  'O FECHAMENTO: é ele que sustenta a reta final. Com 18h, o plano está no ' +
-                  'limite e o safári do entardecer, o Na’vi e a fila do Flight of Passage ' +
-                  'estão coreografados minuto a minuto. Com 19h ou 20h o dia respira. A ' +
-                  'reta final é fixa e NÃO desloca com a abertura — ela segue o sol.' },
-
-        { texto: 'Decidir sobre o Single Pass do Flight of Passage', critico: false,
-          motivo: 'NÃO é compra pendente, é decisão. O dia foi montado para pegar a fila ' +
-                  'de 40 a 65 minutos do fim da tarde em vez dos 100 a 180 do pico. Só ' +
-                  'vale comprar se o fechamento não deixar o plano caber, ou se vocês ' +
-                  'decidirem que não querem 50 minutos de fila no fim de dez horas de ' +
-                  'parque. Se decidirem comprar, é na hora, pelo app, dentro do parque — se ' +
-                  'ainda houver janela de retorno.' },
-
-        { texto: 'Reserva do Sanaa: número de confirmação à mão', critico: false,
-          motivo: 'Jantar às 19h40, confirmação 356258407484, na Kidani Village do Animal ' +
-                  'Kingdom Lodge — OUTRO endereço, não é dentro do parque. Deixem o número acessível no celular hoje, não procurando ' +
-                  'e-mail amanhã com o Uber esperando. O telefone da Disney está no Guia, ' +
-                  'se precisarem remarcar: +1 407-939-3463, com 2h de antecedência.' },
-
-        { texto: 'Alarme para 5h30 nos dois celulares', critico: true,
-          motivo: 'Saída às 6h30 — uma hora mais cedo do que nos outros dias de parque, ' +
-                  'porque o Animal Kingdom abre às 8h e não às 9h. Depois de um dia sem ' +
-                  'alarme, o corpo não ajuda.' },
-
-        { texto: 'Decidir HOJE o Lightning Lane do dia 16, que se compra às 7h de amanhã',
+          motivo: 'O Multi Pass do dia 13 (Mission: SPACE, Soarin’ e Frozen) e o Single Pass ' +
+                  'do Cosmic Rewind saíram em 10/11, ou em 08/11 com ingresso de datas fixas. ' +
+                  'Se algo falhou, hoje ainda dá para replanejar a manhã do Epcot.' },
+        { texto: 'Conferir o horário de abertura do Epcot e ajustar a referência',
           critico: true,
-          motivo: 'Às 7h de amanhã vocês já saíram: a saída é 6h30. A compra vai ser no ' +
-                  'celular, dentro do Uber ou na fila da catraca do Animal Kingdom, e não ' +
-                  'é hora de escolher atração. Deixem decidido: Multi Pass com Frozen na ' +
-                  'lista alta, Mission: SPACE e Soarin’ na baixa, e Single Pass do Cosmic ' +
-                  'Rewind com janela entre 10h15 e 10h45. Com ingresso de datas fixas, isso ' +
-                  'saiu em 08/11 e é só conferir.' },
-
-        { texto: 'Decidir sobre o Kali River Rapids olhando a previsão', critico: false,
-          motivo: 'Ele está às 9h15 e molha de verdade. Em novembro Orlando amanhece por ' +
-                  'volta dos 15°C. Se a mínima de amanhã estiver baixa, decidam HOJE que ' +
-                  'vão pular — ganham 35 minutos e não passam o dia com roupa molhada.' },
-
+          motivo: 'O dia 13 assume 9h. Se for outro, mudem a referência e a manhã desloca ' +
+                  'junto, inclusive a saída das 7h15.' },
         { texto: 'Mochila remontada e celular carregando', critico: true,
-          motivo: 'O de sempre: os dois soft flasks cheios, barrinhas, protetor solar, power ' +
-                  'bank e cabo.\n\n' +
-                  'E TRÊS COISAS SÓ DE AMANHÃ, se vocês forem fazer o Kali River Rapids às ' +
-                  '9h15: duas capas de chuva, um saco Ziploc para o celular e um par de ' +
-                  'meias secas. O Kali não é respingo, é balde — e depois dele ainda são ' +
-                  'nove horas de parque.\n\n' +
-                  'Uma camada leve também: amanhã amanhece por volta dos 15°C e vocês saem ' +
-                  'às 6h30. Ao meio-dia ela vai para a mochila.' },
-
+          motivo: 'Os dois soft flasks, barrinhas, protetor solar, power bank, cabo e uma camada ' +
+                  'leve para cada um — o Epcot é o parque com mais área aberta, e a World ' +
+                  'Showcase à noite esfria.' },
         { texto: 'Guardar as compras do outlet',
-          motivo: 'Vocês voltam com sacola hoje. Amanhã a mochila precisa estar vazia para ' +
-                  'o que interessa.' },
+          motivo: 'Vocês voltam com sacola hoje. Amanhã a mochila precisa sair leve.' },
       ],
     },
 
-    /* --------------------------------------------------------------------- */
     blocos: [
       { id: 'b-1211-0830', hora: '08:30', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Café da manhã — IHOP',
@@ -1870,7 +1832,7 @@ window.ROTEIRO = {
           'uns 25 minutos de caminhada sem pressa. O pôr do sol é às 17h33, então vocês pegam ' +
           'a luz do fim da tarde e a virada para a noite.\n\n' +
           'O portão do Epcot pelo International Gateway fica a cinco minutos a pé daqui, mas ' +
-          'hoje ele não serve: o dia de Epcot é 16/11 e o ingresso é por data.',
+          'hoje ele não serve: o dia de Epcot é amanhã, e o ingresso é por data.',
         localId: 'boardwalk', acesso: [], duracaoMin: 60, pesquisa: '2026-09-16' },
 
       { id: 'b-1211-1900', hora: '19:00', ancora: 'fixo', tipo: 'refeicao',
@@ -1891,80 +1853,76 @@ window.ROTEIRO = {
         descricao: 'Uber do Swan, ~30 min, US$ 25–35. Amanhã sai às 6h30',
         contexto:
           'Voltem a pé até o Swan para chamar o carro, pelo mesmo motivo da ida.\n\n' +
-          'Não estiquem. O dia 13 é Animal Kingdom com saída às 6h30 — a mais cedo da viagem ' +
-          '— e abre a sequência pesada: Animal Kingdom, Hollywood Studios, Epcot e Universal ' +
-          'Studios, de 13 a 17.',
+          'Não estiquem. O dia 13 é Epcot com saída às 7h15, e ele abre a sequência pesada: ' +
+          'Epcot, Celebration com Islands à noite, Hollywood Studios, Animal Kingdom e ' +
+          'Universal Studios, de 13 a 17.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 40 },
     ],
     renuncias: null,
     ficha: null,
   },
 
-  /* ===== 13/11 · SEXTA · ANIMAL KINGDOM ================================== */
+  /* ===== 13/11 · SEXTA · EPCOT =========================================== */
   {
     id: 'd-2026-11-13',
     data: '2026-11-13',
     diaSemana: 'sexta',
-    emoji: '🦁',
-    titulo: 'Animal Kingdom',
-    subtitulo: 'Rope drop na África · Pandora no fim',
+    emoji: '🌍',
+    titulo: 'Epcot',
+    subtitulo: 'Food & Wine · a tarde é comida, não fila',
     tipo: 'parque',
     operadora: 'disney',
-    parqueId: 'animal-kingdom',
+    parqueId: 'epcot',
     custoZero: false,
     fechado: true,
     revisadoEm: '2026-09-10',
-    referencia: { rotulo: 'Abertura do parque', padrao: '08:00', confirmado: true },
+    referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: true },
 
     resumo:
-      'O dia inteiro é uma inversão: todo mundo corre para Pandora na abertura, e vocês vão ' +
-      'para o lado oposto. A recompensa vem no fim — o safári ao entardecer, quando os leões ' +
-      'acordam, e a fila do Flight of Passage no último minuto, que devolve Pandora escura, ' +
-      'acesa e vazia na saída.',
+      'Meio dia de parque e meio de festival. A manhã resolve as três filas grandes no ' +
+      'World Discovery e no World Nature; a partir das 13h o dia vira comida e caminhada ' +
+      'em volta de um lago, sem nenhum compromisso de relógio até o Luminous.',
 
     avisos: [
-      'O PARQUE ABRE ÀS 8H E FECHA ÀS 18H, oficial desde 12/09 — uma hora antes dos outros ' +
-      'parques Disney, e é por isso que a saída do hotel é 6h30. O Early Entry, que vocês ' +
-      'não têm, começa às 7h30.',
-      'NÃO VÃO PARA PANDORA DE MANHÃ. O Early Entry do Animal Kingdom inclui Pandora, e mais ' +
-      'de 90% dos visitantes correm para lá. O parque inteiro fica vazio do outro lado.',
+      'NÃO CORRAM PARA O COSMIC REWIND NA ABERTURA. É para lá que vai o Early Entry, e ' +
+      'gastar o Single Pass às 9h é gastá-lo no único horário em que ele não precisaria ser ' +
+      'gasto. Vocês vão para o Test Track, na mesma área.',
+      'O FOOD & WINE É O ALMOÇO E O JANTAR de hoje. Não há bloco de refeição além das ' +
+      'barracas — de propósito. Peguem o passaporte na entrada.',
     ],
 
     notas: [
+      { tipo: 'bom', texto:
+        'VERIFICADO: o Food & Wine de 2026 vai de 27/08 a 21/11, então 13/11 está dentro com ' +
+        'folga. O Festival of the Holidays só começa em 27/11, depois que vocês vão embora — ' +
+        'vocês pegam o festival certo.', pesquisa: '2026-09-10' },
+
       { tipo: 'atencao', texto:
-        'O FECHAMENTO ÀS 18H É O QUE COREOGRAFA A RETA FINAL: o safári ao entardecer, o Na’vi ' +
-        'e a fila do Flight of Passage no último minuto estão encaixados nele — e o ' +
-        'horário oficial de 12/09 confirmou os 18h. O plano A vale como está, e o Sanaa ' +
-        'das 19h40 deixa de ter risco de colisão.',
-        pesquisa: '2026-09-12' },
-
-      { tipo: 'bom', texto:
-        'MAIS DE 90% DOS VISITANTES CORREM PARA PANDORA NO ROPE DROP. Nos primeiros 60 a 90 ' +
-        'minutos o resto do parque fica praticamente vazio: Kilimanjaro Safaris, Expedition ' +
-        'Everest e Kali River Rapids costumam ser walk-on ou menos de 15 minutos. É essa ' +
-        'janela que o dia usa.',
+        'O TEST TRACK QUEBRA MUITO. Em 2026, um ano depois de reabrir: parada de quase 24 ' +
+        'horas em 1º de agosto, outra de cinco horas no dia 23 que comeu a tarde inteira, e ' +
+        'falhas mecânicas em fevereiro — sem comunicado da Disney em nenhuma delas. É por isso ' +
+        'que ele é o rope drop: se vai cair, cai no meio do dia.',
         pesquisa: '2026-09-10' },
 
       { tipo: 'bom', texto:
-        'O SAFÁRI VALE DUAS VEZES E É A ÚNICA ATRAÇÃO DO PARQUE ASSIM. De manhã os animais ' +
-        'estão ativos com o frio e não há fila. No fim da tarde os LEÕES ACORDAM — são ' +
-        'noturnos e dormem o dia todo — e a Disney instalou iluminação no percurso para o ' +
-        'safári rodar mesmo depois do pôr do sol. ATENÇÃO: ele fecha 30 a 60 minutos ANTES ' +
-        'do parque, então confirmem o horário dele no dia.',
-        pesquisa: '2026-09-10' },
+        'O COSMIC REWIND NÃO TEM MAIS FILA VIRTUAL desde fevereiro de 2025. Acabou o sorteio ' +
+        'às 7h da manhã: hoje é standby puro ou Single Pass. Mas ele faz 101 minutos de média ' +
+        'e passa de uma hora até às 8h — não existe janela barata, e é por isso que o passe ' +
+        'fica, como no dia 15.', pesquisa: '2026-09-10' },
 
       { tipo: 'bom', texto:
-        'DÁ PARA ENTRAR NA FILA ATÉ O MINUTO DO FECHAMENTO e completar a atração depois. É ' +
-        'política da Disney e é o que sustenta o bloco das 17h45: a fila do Flight of Passage ' +
-        'cai de 100–180 minutos no pico para 40–65 depois das 17h, e vocês saem andando por ' +
-        'uma Pandora escura e vazia.',
+        'O WORLD SHOWCASE ABRE ÀS 9H, junto com o resto do parque. As lojas e barracas dos ' +
+        'pavilhões é que só ativam por volta das 11h — o que não muda nada no roteiro de ' +
+        'vocês, que só chega lá às 13h.',
         pesquisa: '2026-09-10' },
 
-      { tipo: 'info', texto:
-        'O pôr do sol em Orlando em meados de novembro é por volta das 17h30. Toda a reta ' +
-        'final do dia segue o sol, não a abertura do parque — por isso aqueles blocos são ' +
-        'fixos e não deslocam com a referência.',
-        pesquisa: '2026-09-08' },
+      { tipo: 'atencao', texto:
+        'SÓ UM DO NÍVEL 1 NA COMPRA. No Epcot, Frozen, Remy e Test Track são do nível 1, e a ' +
+        'compra antecipada leva só um: vai o Frozen. O Remy é reservado rolando, e o Multi ' +
+        'Pass dele costuma esgotar antes das 11h — nos dados de agosto e setembro de 2026, ' +
+        'por volta das 10h50. Por isso o Mission: SPACE é o primeiro uso, às 9h45: na saída ' +
+        'dele, reservem o Remy para o fim da tarde.',
+        pesquisa: '2026-09-11' },
     ],
 
     /* --------------------------------------------------------------------- */
@@ -1972,122 +1930,82 @@ window.ROTEIRO = {
       {
         letra: 'A',
         titulo: 'O dia como está escrito',
-        gatilho: 'Parque das 8h às 18h e o safári rodando até pelo menos 17h.',
+        gatilho: 'Vocês estão na corda às 8h15 e o Test Track está operando.',
         passos: [
-          'Pré-fila no checkpoint da ÁFRICA, não na ponte de Pandora.',
-          'Safári, Everest e as trilhas de manhã, com o parque vazio do lado de cá.',
-          'Meio do dia nos shows e no Nomad Lounge, que é o descanso do dia.',
-          'Safári de novo às 16h30, agora atrás dos leões.',
-          'Na’vi às 17h15 e a fila do Flight of Passage às 17h45 — até o último minuto vale.',
-          'Sair devagar pela Pandora escura, com o Awakenings na Árvore da Vida.',
+          'Test Track no rope drop, sem desviar para o Cosmic Rewind.',
+          'Mission: SPACE às 9h45 com o Multi Pass — e, na saída, reservem o Remy.',
+          'Cosmic Rewind às 10h20 com o Single Pass e Soarin’ às 11h15 com o Multi Pass.',
+          'A partir das 13h, World Showcase no sentido horário e quatro voltas de barracas.',
+          'Frozen com o Multi Pass e o Remy com a reserva rolando — as duas únicas filas da tarde.',
+          'Última volta às 20h e posição para o Luminous às 20h30.',
         ],
       },
       {
         letra: 'B',
-        titulo: 'O safári fecha cedo demais',
-        gatilho: 'Na parada das 15h25 vocês descobrem que o último caminhão sai antes das 16h30.',
+        titulo: 'O Test Track está fora do ar',
+        gatilho: 'Vocês chegam nele às 9h e está fechado, ou fecha durante a fila.',
         passos: [
-          'VÃO AGORA. Larguem o resto e peguem o safári enquanto ele ainda roda — é o bloco ' +
-          'mais insubstituível da tarde.',
-          'Isso adianta a reta final. O Na’vi sobe para o horário que sobrar e vocês chegam ' +
-          'na fila do Flight of Passage mais cedo, o que é bom: mais margem antes do ' +
-          'fechamento.',
-          'Se sobrar tempo depois do Na’vi, o Everest de novo é o melhor uso — a fila dele ' +
-          'também cede no fim do dia.',
+          'ISSO ACONTECE COM FREQUÊNCIA REAL AQUI. Não esperem em frente: as paradas dele em ' +
+          '2026 duraram horas, não minutos.',
+          'Pivô imediato para o pavilhão do The Land — The Seas e Living with the Land, ' +
+          'praticamente vazios na abertura. O Mission: SPACE continua às 9h45, com o passe.',
+          'O Cosmic Rewind e o Soarin’ não mudam — os dois têm hora marcada.',
+          'Se o Test Track voltar durante o dia, reservem-no rolando assim que usarem o ' +
+          'Soarin’, às 11h15 — o Remy já foi reservado depois do Mission: SPACE. Se não ' +
+          'voltar, não voltou: não vale reorganizar a tarde por causa dele.',
         ],
       },
       {
         letra: 'B2',
-        titulo: 'A Disney mexe no horário depois de publicado',
-        gatilho: 'O oficial é 8h às 18h, mas a semana do Thanksgiving costuma esticar o dia.',
+        titulo: 'O parque não abre às 9h',
+        gatilho: 'O parque é 9h às 21h, oficial. O que ainda não saiu é a hora do Luminous.',
         passos: [
-          'ABRIU MAIS TARDE: mudem a referência aqui no app. A manhã inteira desloca junto, ' +
-          'inclusive a saída do hotel. Os shows têm sessão própria — confiram a grade e ' +
-          'ajustem no selo de horário de cada um.',
-          'FECHOU MAIS TARDE (19h ou 20h): o dia respira, MAS CUIDADO COM O SANAA. A mesa é ' +
-          'às 19h40 e a Disney cobra taxa de não comparecimento, com cancelamento exigido ' +
-          'com 2 horas de antecedência (+1 407-939-3463).\n\n' +
-          'Com fechamento às 19h ou às 20h, NÃO dá para fazer as duas coisas: a fila do ' +
-          'Flight of Passage no último minuto termina depois das 19h30, e ainda são 25 ' +
-          'minutos saindo de Pandora e 25 de Uber até a mesa das 19h40. Ou vocês remarcam o ' +
-          'Sanaa para as 21h logo de manhã, pelo My Disney Experience, ou mantêm a fila do ' +
-          'Flight of Passage às 17h45 como está no plano A e usam a folga que sobrou para ' +
-          'o Everest. A segunda opção é a segura.',
-          'A RETA FINAL NÃO DESLOCA COM A ABERTURA. Ela segue o sol e o fechamento, por isso ' +
-          'aqueles blocos são fixos. Se o app avisar colisão em vermelho no meio do dia, é o ' +
-          'almoço ou os shows batendo — ajustem esses, não o fim.',
+          'Mudem a referência do dia. A manhã inteira desloca junto, inclusive a saída das ' +
+          '7h15.',
+          'O LUMINOUS E A POSIÇÃO NÃO DESLOCAM: eles seguem o fechamento do parque, não a ' +
+          'abertura. Se o app avisar colisão em vermelho no fim da tarde, é a última volta de ' +
+          'barracas batendo na posição — e a solução é encurtar a volta, não atrasar o lugar.',
+          'As quatro voltas do Food & Wine são elásticas de propósito. Elas são a folga do dia.',
         ],
       },
       {
         letra: 'C',
-        titulo: 'Chuva forte ou o dia desandou',
-        gatilho: 'Chuva que não passa, cansaço, ou o dia atrasou demais.',
+        titulo: 'Chuva, cansaço ou o dia desandou',
+        gatilho: 'Chuva que não passa, ou vocês acordaram destruídos.',
         passos: [
-          'O Animal Kingdom é o parque com menos cobertura da Disney. Com chuva forte, o ' +
-          'Festival of the Lion King é teatro fechado, e o Nomad Lounge tem varanda ' +
-          'coberta com ventilador.',
-          'O safári RODA na chuva e os animais costumam ficar mais ativos. O caminhão tem ' +
-          'teto. Não é motivo para desistir dele.',
-          'O QUE NÃO SE SACRIFICA: a fila do Flight of Passage no fim, e o safári do ' +
-          'entardecer. Se for para cortar, cortem nesta ordem: o Everest de novo (15h45), ' +
-          'o Kali (9h15) e as trilhas. Os três são opcionais de propósito e existem ' +
-          'justamente para serem a margem.',
-          'Se vocês estiverem destruídos, o Sanaa às 19h40 tem tolerância curta e taxa por ' +
-          'não comparecimento: cancelem com 2 horas de antecedência pelo My Disney Experience ' +
-          'ou pelo +1 407-939-3463.',
+          'O World Showcase é todo ao ar livre e é o coração do dia — chuva forte aqui dói ' +
+          'mais que nos outros parques.',
+          'O que funciona coberto: Spaceship Earth, The Seas, Living with the Land, Frozen, ' +
+          'Remy e o Gran Fiesta. Todos de fila curta, e os pavilhões do Japão, Marrocos e ' +
+          'Reino Unido têm área interna generosa.',
+          'O QUE NÃO SE SACRIFICA: o Luminous, e as quatro voltas de barracas — que são o dia.',
+          'Se o Luminous for cancelado por vento, saiam mais cedo. Amanhã não tem alarme.',
         ],
       },
     ],
 
     /* --------------------------------------------------------------------- */
     naoPerca: [
-      { nome: 'Pandora escura, na saída', quando: 'hoje', custo: 'grátis',
-        motivo: 'A vegetação inteira é pintada com tinta reativa e acende em azul e roxo. ' +
-                'Saindo do Flight of Passage por volta das 18h30, vocês atravessam a land ' +
-                'no escuro e praticamente sem ninguém, porque o parque já fechou. É a ' +
-                'recompensa do dia e é de graça.',
-        pesquisa: '2026-09-10' },
+      { nome: 'O passaporte do Food & Wine', quando: 'hoje', custo: 'grátis',
+        motivo: 'Peguem na entrada do parque. É onde vocês marcam as barracas que já fizeram ' +
+                'e é o que transforma quatro voltas soltas numa coisa só. Sem ele, às 20h ' +
+                'ninguém lembra o que faltou.' },
 
-      { nome: 'Tree of Life Awakenings', quando: 'hoje', custo: 'grátis',
-        condicao: 'só em noites de outono e inverno',
-        motivo: 'Projeção de animais no tronco da Árvore da Vida, a cada dez minutos depois ' +
-                'que escurece, até o fechamento — e costuma continuar um pouco depois. ' +
-                'Novembro está na temporada. Vocês passam por baixo dela na saída, exatamente ' +
-                'nessa janela.',
-        pesquisa: '2026-09-10' },
+      { nome: 'Dividir cada prato entre os dois', quando: 'hoje', custo: 'economiza',
+        motivo: 'É assim que o festival funciona. Dividindo, dá para provar oito a dez ' +
+                'barracas ao longo da tarde; sem dividir, dá para quatro e vocês saem cheios ' +
+                'na terceira. Os pratos são pequenos de propósito.' },
 
-      { nome: 'O safári ao entardecer', quando: 'hoje', custo: 'grátis',
-        motivo: 'Leões são noturnos. A chance real de ver um acordado é no fim da tarde, e a ' +
-                'Disney iluminou o percurso para o safári rodar depois do pôr do sol. É a ' +
-                'única atração do parque em que repetir dá conteúdo diferente.',
-        pesquisa: '2026-09-10' },
+      { nome: 'A sopa de cheddar com bacon do Canadá', quando: 'hoje', custo: '~US$ 9',
+        motivo: 'Aparece em toda lista de melhores do festival, todo ano, há mais de uma ' +
+                'década. Fica no fim do anel, na volta 3 — que é justamente a hora em que ' +
+                'esfria o suficiente para uma sopa fazer sentido.' },
 
-      { nome: 'Kali River Rapids', quando: 'decidir', custo: 'grátis',
-        condicao: 'molha de verdade, e às 9h15 ainda está fresco',
-        motivo: 'Em novembro Orlando amanhece por volta dos 15°C. Se o dia estiver frio, ' +
-                'pular ganha 35 minutos e evita passar o resto do dia com roupa molhada. Se ' +
-                'estiver quente, é diversão barata e sem fila naquela hora.' },
-
-      { nome: 'Single Pass do Flight of Passage', quando: 'decidir',
-        custo: 'US$ 18–20 por pessoa',
-        motivo: 'PLANO B PAGO, não compra antecipada. O dia foi montado para pegar a fila de ' +
-                '40–65 minutos do fim da tarde em vez dos 100–180 do pico. Só vale comprar ' +
-                'se o parque fechar cedo demais para o plano caber, ou se vocês decidirem ' +
-                'que não querem encarar 50 minutos de fila no fim de um dia de dez horas. ' +
-                'A compra é na hora, pelo app, dentro do parque — se ainda houver janela.',
-        pesquisa: '2026-09-10' },
-
-      { nome: 'Starlight Safari', quando: 'descartado',
-        custo: 'US$ 75 a 89 por pessoa · US$ 150 a 178 no casal',
-        motivo:
-          'Safári noturno na savana do Animal Kingdom Lodge, 1h30, com óculos de visão ' +
-          'noturna, saindo às 20h30 e às 22h. Não exige hospedagem, e vocês já estarão no ' +
-          'Lodge para o Sanaa.\n\n' +
-          'Fica de fora por dois motivos. O preço — US$ 150 a 178 no casal, a mesma régua ' +
-          'que deixa o Amphicar de fora a US$ 62 por cabeça. E SERIA O TERCEIRO SAFÁRI DO ' +
-          'MESMO DIA: o roteiro já faz o Kilimanjaro de manhã e de novo ao entardecer, ' +
-          'quando os leões acordam.',
-        pesquisa: '2026-09-09' },
+      { nome: 'Mission: SPACE — a versão VERDE', quando: 'decidir', custo: 'incluso',
+        motivo: 'A laranja gira numa centrífuga de verdade e causa enjoo em muita gente — tem ' +
+                'saco no assento por um motivo. A verde é a mesma cabine sem girar, mesma ' +
+                'fila, mesma história. Se qualquer um dos dois tem tendência a enjoo, a verde ' +
+                'salva as duas horas seguintes, e a decisão é tomada na hora de entrar.' },
     ],
 
     /* --------------------------------------------------------------------- */
@@ -2095,12 +2013,12 @@ window.ROTEIRO = {
       paraODia: '2026-11-14',
       titulo: 'Celebration e Islands à noite · sem alarme',
       aviso:
-        'Depois de um dia que termina 21h15 no Sanaa, o dia 14 começa com bloco vazio às ' +
+        'Depois de um dia que termina perto das 22h20 no Epcot, o dia 14 começa com bloco vazio às ' +
         '9h de propósito. Não coloquem despertador.',
       itens: [
         { texto: 'Dormir sem alarme', critico: true,
           motivo: 'O dia 14 só sai do hotel às 11h e o bloco das 9h é vazio de propósito. ' +
-                  'Hoje foram dez horas de parque; amanhã é a primeira noite da temporada de ' +
+                  'Hoje foram catorze horas de parque; amanhã é a primeira noite da temporada de ' +
                   'Natal da Universal e vocês vão querer estar inteiros.' },
         { texto: 'Conferir o horário do Grinchmas no app da Universal', critico: true,
           motivo: 'É o Grinchmas que ancora a noite de amanhã no Islands. Quando souberem a ' +
@@ -2118,452 +2036,429 @@ window.ROTEIRO = {
 
     /* --------------------------------------------------------------------- */
     blocos: [
-      { id: 'b-1311-0730', hora: '06:30', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-1311-0715', hora: '07:15', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Sair do hotel',
-        descricao: 'Uber, ~35 min, US$ 20–30. O AK tem entrada direta',
-        contexto:
-          'Diferente do Magic Kingdom, aqui o Uber deixa vocês na entrada — não há ' +
-          'monotrilho nem barco no meio. Ainda assim a saída é cedo, porque a estimativa é ' +
-          'que o parque abra às 8h e não às 9h: em novembro o Animal Kingdom costuma operar ' +
-          'das 8h às 18h.',
-        localId: 'animal-kingdom', acesso: [], critico: true, duracaoMin: 45 },
-
-      { id: 'b-1311-0815', hora: '07:15', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Portão · pré-fila no checkpoint da ÁFRICA',
-        descricao: 'Não na ponte de Pandora',
-        contexto:
-          'A MESMA DECISÃO CONTRAINTUITIVA DO DIA 11, e aqui ela é ainda mais forte.\n\n' +
-          'A CATRACA ABRE PARA TODO MUNDO 30 A 45 MINUTOS ANTES DAS 8H. Quem não é hóspede ' +
-          'passa pelo Oasis e espera na Discovery Island, em volta da Árvore da Vida. Os ' +
-          'checkpoints do Early Entry ficam ali, um na passagem para cada área, e vocês ' +
-          'esperam no da ÁFRICA.\n\n' +
-          'Mais de 90% dos visitantes correm para Pandora no rope drop — e o Early Entry do ' +
-          'Animal Kingdom INCLUI Pandora. São só quatro atrações no Early Entry e duas delas ' +
-          'são o Flight of Passage e o Na’vi. Ou seja: os hóspedes Disney já andaram nas duas ' +
-          'antes de vocês, e ainda estão na fila quando a corda solta para vocês, às 8h.\n\n' +
-          'O resto do parque fica praticamente vazio nos primeiros 60 a 90 minutos. Kilimanjaro ' +
-          'Safaris, Expedition Everest e Kali River Rapids costumam ser walk-on nessa janela. ' +
-          'É para lá que vocês vão.\n\n' +
-          'Café da manhã aqui, das barrinhas da mochila, e a foto de vocês com a Árvore da ' +
-          'Vida no fundo: ela fica no caminho do checkpoint, e antes das 8h a praça ainda não ' +
-          'encheu. O almoço é só às 12h30.\n\n' +
-          'PONTO DE ENCONTRO DE HOJE: a base da Árvore da Vida, na Discovery Island. É ' +
-          'visível de quase todo o parque e todo caminho passa por ela. Se vocês se ' +
-          'perderem, vão para lá e ESPEREM.',
-        localId: 'animal-kingdom', acesso: [], duracaoMin: 45, pesquisa: '2026-09-12',
-        curiosidades: [
-          { texto: 'Vocês esperam embaixo de uma árvore de concreto de 44 metros, com cerca de ' +
-                   '102 mil folhas artificiais. A estrutura foi fabricada em Houston, no pátio ' +
-                   'da Brown & Root — a empreiteira que construiu uma das primeiras ' +
-                   'plataformas de petróleo no mar do mundo.',
-            fonte: 'Wikipedia — Tree of Life (Disney); Wikipedia — Brown & Root', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1311-0935', hora: '08:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Kilimanjaro Safaris — rope drop',
-        descricao: 'Walk-on, e os animais estão ativos com o frio da manhã',
-        contexto:
-          'Safári de caminhão por 45 hectares com animais soltos de verdade — girafas, leões, ' +
-          'elefantes, rinocerontes. Dura cerca de 22 minutos e cada passeio é diferente.\n\n' +
-          'DE MANHÃ É QUANDO ELES ESTÃO ATIVOS: no calor da tarde se escondem na sombra. E ' +
-          'às 8h a fila não existe, porque o parque inteiro está em Pandora.\n\n' +
-          'Vocês voltam aqui às 16h30. É a única atração do parque em que repetir dá conteúdo ' +
-          'diferente, e o motivo está naquele bloco.',
-        areaParque: 'Africa', acesso: ['rope-drop', 'standby'], critico: true, duracaoMin: 34,
-        fila: { min: 10, quando: 'na abertura', pico: 55, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10',
-        curiosidades: [
-          { texto: 'A savana tem uns 45 hectares e 32 espécies. Os caminhões são GMC e Ford de ' +
-                   'verdade, movidos a propano, e a “lama” seca na lataria é cimento pintado.',
-            fonte: 'Wikipedia — Kilimanjaro Safaris', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1311-1040', hora: '08:40', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Expedition Everest',
-        descricao: 'Walk-on pelo mesmo motivo',
-        contexto:
-          'Montanha-russa dentro de uma montanha cenográfica de 60 metros, com um trecho longo ' +
-          'andando para trás no escuro. É a mais intensa do parque, mas ainda assim familiar — ' +
-          'sem inversões. A fila tem um museu de ioga e ietis que vale olhar.\n\n' +
-          'Ela está no Early Entry, mas continua vazia na abertura oficial porque todo mundo ' +
-          'que entrou cedo foi para Pandora.\n\n' +
-          'SINGLE RIDER: a Disney retirou a placa da fila de single rider em julho de 2026, e ' +
-          'ela deve acabar. Se precisarem, perguntem ao funcionário da entrada.',
-        areaParque: 'Asia', acesso: ['standby'], duracaoMin: 35,
-        fila: { min: 15, quando: 'na abertura', pico: 40, fonte: '2026-09-10' },
-        curiosidades: [
-          { texto: 'A montanha tem 199,5 pés, 60,8 metros: a partir de 200 pés a lei americana ' +
-                   'exigiria uma luz de aviso para aviões no topo. É a montanha artificial ' +
-                   'mais alta do mundo e custou uns US$ 100 milhões.',
-            fonte: 'Wikipedia — Expedition Everest', pesquisa: '2026-09-15' },
-          { texto: 'A fila tem um museu do Yeti com cerca de 8 mil objetos do Nepal, onde a ' +
-                   'Disney fez expedições de pesquisa em 2005.',
-            fonte: 'Wikipedia — Expedition Everest', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1311-0915', hora: '09:15', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Kali River Rapids',
-        descricao: 'MOLHA DE VERDADE. Opcional, e a decisão é o clima',
-        contexto:
-          'Bote circular por corredeiras. Não é radical — o valor está no cenário e em se ' +
-          'molhar junto. E vocês vão se molhar: não é respingo, é balde.\n\n' +
-          'A DECISÃO É A TEMPERATURA. Em novembro Orlando amanhece por volta dos 15°C e às ' +
-          '9h15 ainda não esquentou. Se o dia estiver fresco, pulem sem culpa e ganhem 35 ' +
-          'minutos — vocês têm capa de chuva na mochila, mas roupa molhada às 9h estraga o ' +
-          'resto do dia.\n\n' +
-          'Se fizerem: capa de chuva vestida, celular no Ziploc, e há lockers na entrada.',
-        areaParque: 'Asia', acesso: ['standby'], molha: true, opcional: true, duracaoMin: 35,
-        fila: { min: 15, quando: 'na abertura', pico: 45, estimado: true, fonte: '2026-09-10' },
-        curiosidades: [
-          { texto: 'Antes de abrir, em 1999, ela se chamaria Tiger Rapids Run. O percurso é ' +
-                   'uma denúncia: a floresta verde vira toco queimado, e um caminhão de ' +
-                   'madeira ilegal aparece atolado no rio.',
-            fonte: 'Wikipedia — Kali River Rapids', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1311-1415', hora: '09:50', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Maharajah Jungle Trek',
-        descricao: 'Trilha a pé. Tigres. Sem fila, no ritmo de vocês',
-        contexto:
-          'Trilha a pé por ruínas cenográficas com tigres, dragões-de-komodo e morcegos ' +
-          'gigantes. Sem fila, no seu ritmo, com muita sombra.\n\n' +
-          'Vem aqui de propósito: se vocês fizeram o Kali, é a hora de secar andando.',
-        areaParque: 'Asia', acesso: [], duracaoMin: 39,
-        curiosidades: [
-          { texto: 'A trilha conta a história de um marajá que cercou a floresta para caçar e ' +
-                   'morreu num acidente de caça. Gerações depois, a área virou santuário.',
-            fonte: 'Wikipedia — Maharajah Jungle Trek', pesquisa: '2026-09-15' },
-          { texto: 'Os tigres de hoje são de Sumatra, e dois filhotes nasceram no parque em ' +
-                   '2017. Os búfalos-d’água, que chegaram em 2015, têm nomes das personagens ' +
-                   'de The Golden Girls.',
-            fonte: 'Wikipedia — Maharajah Jungle Trek', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1311-1030p', hora: '10:35', ancora: 'referencia', tipo: 'pausa',
-        titulo: 'Parada — água, banheiro e sentar',
-        descricao: 'Quinze minutos. Banheiro na Harambe, ao lado do Tusker House',
-        contexto:
-          'Banheiro, encher os flasks num balcão de comida (água gelada de graça, é só ' +
-          'pedir) e sentar.\n\n' +
-          'Toda land tem banheiro, normalmente ao lado do maior balcão de comida. Não vale ' +
-          'procurar no mapa; vale parar quando o corpo pedir.',
-        areaParque: 'Africa', acesso: [], duracaoMin: 15 },
-
-      { id: 'b-1311-1545', hora: '10:50', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Gorilla Falls Exploration Trail',
-        descricao: 'Trilha. Ritmo lento de propósito',
-        contexto:
-          'Trilha a pé com gorilas, hipopótamos vistos por baixo d’água e um aviário. ' +
-          'Diferente do safári, aqui vocês param quanto quiserem.',
-        areaParque: 'Africa', acesso: [], duracaoMin: 40,
-        curiosidades: [
-          { texto: 'A trilha abriu com este nome em 1998, virou Pangani Forest Exploration ' +
-                   'Trail poucos meses depois e só recuperou o nome original em 2016.',
-            fonte: 'Wikipedia — Gorilla Falls Exploration Trail', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1311-1315', hora: '11:30', ancora: 'fixo', tipo: 'show',
-        titulo: 'Festival of the Lion King — chegar 11h30, show 11h50',
-        descricao: 'Os 20 min de chegar antes estão dentro deste bloco',
-        contexto:
-          'Espetáculo em teatro circular com acrobatas, cantores e carros alegóricos. É quase ' +
-          'todo música e acrobacia.\n\n' +
-          'CHEGUEM 11H30 PARA O SHOW DE 11H50. Os vinte minutos de antecedência não são ' +
-          'exagero: a plateia é por ordem de chegada e a primeira fila é ruim. Este bloco ' +
-          'já tem esse tempo dentro dele — não é folga.\n\n' +
-          'Vem logo depois do Gorilla Falls de propósito: os dois ficam na África, e assim ' +
-          'vocês atravessam para Pandora uma vez só, já indo almoçar.\n\n' +
-          'HORÁRIO FIXO de sessão — confiram a grade no app da Disney no dia e ajustem aqui ' +
-          'se a sessão for outra. Se a mais próxima for muito diferente das 11h30, o almoço ' +
-          'acompanha.',
-        areaParque: 'Africa', acesso: [], duracaoMin: 50, confirmarHorario: true,
-        curiosidades: [
-          { texto: 'Estreou com o parque, na Camp Minnie-Mickey. Com a obra de Pandora, ganhou ' +
-                   'este teatro em Harambe em 01/06/2014. A plateia se divide em quatro ' +
-                   'setores com nomes de bichos: girafa, elefante, javali e leão.',
-            fonte: 'Wikipedia — Festival of the Lion King', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1311-1215', hora: '12:30', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Almoço — Satu’li Canteen',
-        descricao: 'Balcão, em Pandora. Um dos melhores da Disney',
-        contexto:
-          'Serviço de balcão com tigelas montáveis — escolhem proteína e base. É ' +
-          'consistentemente eleito o melhor quick service do Walt Disney World.\n\n' +
-          'Usem mobile order pelo app: a fila do balcão aqui é longa e a do mobile order não ' +
-          'existe. Peçam durante o Festival of the Lion King, sentados.\n\n' +
-          'São dez minutos de caminhada da África até Pandora, e o app soma essa caminhada ' +
-          'aos 65 minutos deste bloco — não é tempo de mesa, é tempo de chegar.\n\n' +
-          'É a primeira vez que vocês pisam em Pandora hoje, e é de dia. Olhem as montanhas ' +
-          'flutuantes agora, porque à noite o lugar é outro — e vocês voltam.',
-        restauranteId: 'r-satuli', areaParque: 'Pandora', acesso: [], duracaoMin: 65,
-        curiosidades: [
-          { texto: 'As montanhas flutuantes têm 47 metros, com a sustentação de aço escondida ' +
-                   'por perspectiva forçada, e se inspiram nos picos de Zhangjiajie, na China. ' +
-                   'A land se passa gerações depois do filme.',
-            fonte: 'Wikipedia — Pandora – The World of Avatar', pesquisa: '2026-09-15' },
-          { texto: 'James Cameron conta que achava que a Disney queria uma atração de Avatar. ' +
-                   'A Disney queria a land inteira.',
-            fonte: 'Wikipedia — Pandora – The World of Avatar', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1311-1345', hora: '13:40', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Discovery Island Trails e a Árvore da Vida',
-        descricao: 'Trilhas curtas em volta da árvore. Quase ninguém faz',
-        contexto:
-          'Trilhas laterais que contornam a base da Árvore da Vida, com lêmures, lontras e ' +
-          'cangurus. Quase ninguém entra — a maioria fotografa a árvore de longe e segue.\n\n' +
-          'Olhem a árvore de perto: são 337 animais esculpidos no tronco e nas raízes. À ' +
-          'noite ela vira outra coisa, e vocês vão ver isso na saída.',
-        areaParque: 'Discovery Island', acesso: [], duracaoMin: 45,
-        curiosidades: [
-          { texto: 'A árvore levou 18 meses para ficar pronta, com três Imagineers e dez ' +
-                   'artistas liderados pelo escultor Zsolt Hormay.',
-            fonte: 'Wikipedia — Tree of Life (Disney)', pesquisa: '2026-09-15' },
-          { texto: 'Dentro do tronco há um teatro de 428 lugares. Foi o It’s Tough to Be a Bug ' +
-                   'de 1998 a 2025, e hoje passa o Zootopia.',
-            fonte: 'Wikipedia — Tree of Life (Disney)', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1311-1630', hora: '14:25', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Nomad Lounge — a varanda',
-        descricao: 'O lugar mais gostoso do parque. Drink e petisco',
-        contexto:
-          'Bar ao lado do Tiffins, com varanda sobre a água e ventiladores. Drinks autorais e ' +
-          'petiscos.\n\n' +
-          'Costuma ter espera de 15 a 30 minutos e não aceita reserva: entrem na lista de ' +
-          'espera pelo app da Disney, ou no balcão, e passeiem enquanto esperam.\n\n' +
-          'Esta hora é o VAZIO PROPOSITAL do dia, só que com sombra e bebida. Vocês vão ' +
-          'precisar dela: a partir das 16h30 o dia não para mais até o jantar.',
-        restauranteId: 'r-nomad', areaParque: 'Discovery Island', acesso: [], duracaoMin: 60,
-        curiosidades: [
-          { texto: 'O Tiffins, ao lado, abriu em 27/05/2016, no dia em que o parque começou a ' +
-                   'abrir à noite. A arte das salas dele nasceu das fotos e desenhos das ' +
-                   'viagens de pesquisa dos Imagineers pela África, Ásia e América do Sul.',
-            fonte: 'WDWNT; Wikipedia — Disney’s Animal Kingdom', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1311-1545p', hora: '15:25', ancora: 'referencia', tipo: 'pausa',
-        titulo: 'Parada — antes da reta final',
-        descricao: 'Flasks, power bank, o horário do safári. Banheiro junto do Flame Tree Barbecue',
-        contexto:
-          'A reta final começa agora e é coreografada minuto a minuto.\n\n' +
-          'COMAM ALGUMA COISA DA MOCHILA. Os petiscos do Nomad foram às 14h25 e o Sanaa é ' +
-          'às 19h40 — cinco horas, com o safári, o Na’vi e 55 minutos de fila do ' +
-          'Flight of Passage no meio. Entrar naquela fila com fome é o erro mais fácil de ' +
-          'evitar do dia.\n\n' +
-          'E duas conferências antes de tudo:\n\n' +
-          'CONFIRAM NO APP DA DISNEY A QUE HORAS O KILIMANJARO SAFARIS FECHA. Ele fecha 30 a ' +
-          '60 minutos ANTES do parque, e o bloco das 16h30 depende disso. Se o último caminhão ' +
-          'sair às 17h, está tudo bem. Se sair às 16h30, vão agora.\n\n' +
-          'E confiram a hora do fechamento do parque, que é o que sustenta o bloco do Flight ' +
-          'of Passage às 17h45.',
-        areaParque: 'Discovery Island', acesso: [], duracaoMin: 15, critico: true },
-
-      { id: 'b-1311-1041', hora: '15:45', ancora: 'fixo', tipo: 'atracao',
-        titulo: 'Expedition Everest de novo',
-        descricao: 'Opcional — e é também a margem da reta final',
-        contexto:
-          'O Animal Kingdom tem UMA montanha-russa e vocês a fizeram às 8h40. Este bloco ' +
-          'existe para ela não ser feita uma vez só num dia de dez horas.\n\n' +
-          'É DUPLO PROPÓSITO, e é por isso que ele é opcional: se o dia estiver no horário, ' +
-          'andem de novo — a fila do fim de tarde é curta. Se estiver atrasado, PULEM SEM ' +
-          'PENSAR. Estes 45 minutos são a margem que protege o safári do entardecer e a ' +
-          'fila do Flight of Passage, que são os dois blocos insubstituíveis do dia.',
-        areaParque: 'Asia', acesso: ['standby'], opcional: true, duracaoMin: 39,
-        fila: { min: 20, quando: 'no fim da tarde', pico: 40, estimado: true, fonte: '2026-09-10' },
-        curiosidades: [
-          { texto: 'O Yeti tem 7,6 metros e era o maior animatrônico da Disney quando a ' +
-                   'atração abriu, em 2006. Meses depois a estrutura rachou, e desde então ele ' +
-                   'fica parado sob luz estroboscópica — o “Disco Yeti”. Em 15/08/2026 a ' +
-                   'Disney anunciou na D23 que vai consertá-lo, ainda sem data.',
-            fonte: 'Wikipedia — Expedition Everest; BlogMickey; Wandering In Disney', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1311-1631', hora: '16:30', ancora: 'fixo', tipo: 'atracao',
-        titulo: 'Kilimanjaro Safaris DE NOVO — agora ao entardecer',
-        descricao: 'Os leões acordam. É outro safári',
-        contexto:
-          'É A ÚNICA ATRAÇÃO DO PARQUE EM QUE REPETIR DÁ CONTEÚDO DIFERENTE, e é o melhor ' +
-          'truque do dia.\n\n' +
-          'Leões são noturnos e dormem o dia inteiro. A chance real de ver leão acordado é no ' +
-          'fim da tarde, perto do fechamento — e a Disney instalou iluminação em todo o ' +
-          'percurso justamente para o safári continuar rodando depois que o sol se põe.\n\n' +
-          'De quebra, a última hora do safári é quando praticamente não há fila: quem queria ' +
-          'já foi de manhã.\n\n' +
-          'HORÁRIO FIXO, colado no fim do dia e não na abertura. E confirmem o horário de ' +
-          'fechamento do safári na parada anterior — ele fecha antes do parque.',
-        areaParque: 'Africa', acesso: ['standby'], critico: true, duracaoMin: 35,
-        fila: { min: 15, quando: 'na última hora', pico: 55, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10',
-        curiosidades: [
-          { texto: 'O safári noturno voltou em 2016, com um “pôr do sol” artificial e sons de ' +
-                   'animais no percurso.',
-            fonte: 'Wikipedia — Kilimanjaro Safaris', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1311-0900', hora: '17:15', ancora: 'fixo', tipo: 'atracao',
-        titulo: 'Na’vi River Journey',
-        descricao: 'A fila também cede no fim do dia',
-        contexto:
-          'Passeio de barco de 5 minutos por uma floresta bioluminescente de Pandora. Não tem ' +
-          'emoção nenhuma — é puramente visual, e o animatrônico da Xamã no fim é considerado ' +
-          'o melhor que a Disney já construiu.\n\n' +
-          'Capacidade baixa e fila cruel o dia inteiro; no fim do fim ela cede junto com o ' +
-          'resto do parque. E é a entrada certa para o que vem depois: vocês já ficam em ' +
-          'Pandora, com o sol se pondo.',
-        areaParque: 'Pandora', acesso: ['standby'], duracaoMin: 30,
-        fila: { min: 30, quando: 'no fim do dia', pico: 65, fonte: '2026-09-10' },
-        curiosidades: [
-          { texto: 'A música é de James Horner, o compositor de Avatar, com Simon Franglen.',
-            fonte: 'Wikipedia — Na’vi River Journey', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1311-1120', hora: '17:45', ancora: 'fixo', tipo: 'atracao',
-        titulo: 'ENTRAR NA FILA do Flight of Passage',
-        descricao: 'A melhor atração do Walt Disney World, pelo menor preço do dia',
-        contexto:
-          'Simulador em que vocês montam num banco de moto e “voam” num banshee sobre ' +
-          'Pandora, com tela 3D gigante, vento, cheiro e o banco respirando embaixo de vocês. ' +
-          'É consenso como a melhor atração da Disney no mundo.\n\n' +
-          'ESTE BLOCO É O MOTIVO DE O DIA INTEIRO ESTAR NESTA ORDEM. A fila dele fica entre ' +
-          '100 e 180 minutos das 11h às 15h, e cai para 40 a 65 depois das 17h. Entrando ' +
-          'agora, vocês pagam a menor fila do dia pela maior atração do complexo — e não ' +
-          'gastam o Single Pass.\n\n' +
-          'A REGRA QUE FAZ ISSO FUNCIONAR: quem está na fila no horário de fechamento anda. ' +
-          'Dá para entrar até o último minuto e completar a atração depois do parque fechado. ' +
-          'Se a fila estiver em 50 minutos e faltarem 15 para fechar, entrem mesmo assim.\n\n' +
-          'Há locker na entrada e nada solto é permitido.',
-        areaParque: 'Pandora', acesso: ['standby'], locker: true, critico: true, duracaoMin: 55,
-        fila: { min: 50, quando: 'na última hora', pico: 180, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10',
-        curiosidades: [
-          { texto: 'A imagem é em 10K a 60 quadros por segundo, e a atração ganhou em 2018 o ' +
-                   'prêmio da Visual Effects Society. Na história, vocês são “ligados” a um ' +
-                   'avatar para voar num banshee — o rito de passagem dos jovens Na’vi.',
-            fonte: 'Wikipedia — Avatar Flight of Passage', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1311-1730', hora: '18:40', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Sair caminhando pela Pandora escura',
-        descricao: 'Acesa, vazia, e com a Árvore da Vida acordando no caminho',
-        contexto:
-          'ESTA É A RECOMPENSA DO DIA E ELA É DE GRAÇA.\n\n' +
-          'Toda a vegetação de Pandora é pintada com tinta reativa e acende em azul e roxo ' +
-          'quando escurece. Saindo do Flight of Passage por volta das 18h30, vocês atravessam ' +
-          'a land inteira no escuro, iluminada, e praticamente sem ninguém — porque o parque ' +
-          'já fechou e todo mundo foi embora.\n\n' +
-          'No caminho para a saída, parem embaixo da ÁRVORE DA VIDA: o Tree of Life Awakenings ' +
-          'roda a cada dez minutos depois que escurece, projetando animais no tronco. Ele só ' +
-          'acontece em noites de outono e inverno — novembro está dentro — e costuma continuar ' +
-          'um pouco depois do fechamento.\n\n' +
-          'Não corram. Este bloco não tem fila, não tem ingresso e é o que vocês vão lembrar.\n\n' +
-          'A WINDTRADERS FICA NA SAÍDA DO FLIGHT OF PASSAGE, e é a única loja de Pandora. ' +
-          'Se vocês querem trazer alguma coisa deste dia, é aqui e é agora — amanhã não ' +
-          'passa por aqui, e a loja fecha junto com o parque. Vale entrar mesmo que seja ' +
-          'só para olhar.',
-        areaParque: 'Pandora', acesso: [], duracaoMin: 25, pesquisa: '2026-09-10',
-        curiosidades: [
-          { texto: 'O Tree of Life Awakenings estreou em 27/05/2016.',
-            fonte: 'Wikipedia — Tree of Life (Disney)', pesquisa: '2026-09-15' },
-          { texto: 'Pandora tem 20 espécies de plantas inventadas para a land, e algumas ' +
-                   'reagem ao toque com sensores da Disney Research.',
-            fonte: 'Wikipedia — Pandora – The World of Avatar', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1311-1830', hora: '19:05', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Uber para o Animal Kingdom Lodge',
-        descricao: 'Uber, ~10 min, US$ 10–15. Destino: Kidani Village, não o parque',
-        contexto:
-          'O Sanaa NÃO é dentro do parque: fica na Kidani Village, a ala de villas do Animal ' +
-          'Kingdom Lodge, em 3701 Osceola Pkwy. No Uber, o destino é "Disney’s Animal ' +
-          'Kingdom Villas – Kidani Village", e não o parque nem o prédio principal do Lodge, ' +
-          'que tem outra entrada.\n\n' +
-          'Levem o número da reserva à mão: 356258407484. Chegando 19h30, vocês têm ' +
-          'dez minutos de folga antes da mesa.',
-        localId: 'ak-lodge', acesso: [], duracaoMin: 25, pesquisa: '2026-09-15' },
-
-      { id: 'b-1311-1940', hora: '19:40', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — Sanaa',
-        descricao: 'Vão pela comida, não pela janela',
-        contexto:
-          'Cozinha indiana com influência africana; o nome quer dizer “obra de arte” em ' +
-          'suaíli.\n\n' +
-          'NÃO PEÇAM MESA NA JANELA. O pôr do sol em 13/11 é por volta das 17h30 e vocês ' +
-          'chegam às 19h40 — está escuro há mais de duas horas. A savana tem iluminação ' +
-          'fraca e, de dentro, o vidro vira espelho. A promessa de girafas e zebras na ' +
-          'janela é real, mas só de dia. E hoje vocês já viram os bichos duas vezes, no ' +
-          'safári.\n\n' +
-          'O que sustenta a escolha é a comida. Peçam o BREAD SERVICE: cinco pães ' +
-          'indianos com nove acompanhamentos, ~US$ 23, enorme e feito para dividir. É o ' +
-          'prato mais elogiado do Walt Disney World inteiro e não existe igual em ' +
-          'nenhum outro restaurante daqui.\n\n' +
-          'Nos pratos principais: curry de frutos do mar goês, butter chicken, carne ' +
-          'braseada ou vindaloo de porco, entre US$ 15 e 35. Reserva pelo My Disney ' +
-          'Experience, janela abre 14/09. HORÁRIO FIXO de reserva.',
-        restauranteId: 'r-sanaa', localId: 'ak-lodge', acesso: ['reserva'], duracaoMin: 90,
-        curiosidades: [
-          { texto: 'Kidani quer dizer “colar” em suaíli. A Kidani Village, onde fica o Sanaa, ' +
-                   'abriu em 2009.',
-            fonte: 'D23; Wikipedia — Disney’s Animal Kingdom Lodge', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1311-2115', hora: '21:15', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Voltar ao hotel',
         descricao: 'Uber, ~25 min, US$ 20–30',
         contexto:
-          'Chamem do saguão do Animal Kingdom Lodge, não da porta do restaurante — a ' +
-          'entrada de carro do hotel é onde o motorista consegue parar.\n\n' +
-          'São dezesseis horas de pé desde as 5h30. Amanhã não tem alarme.',
-        localId: 'hotel-travelodge', acesso: [], duracaoMin: 25 },
+          'O Epcot tem entrada direta e a segurança aqui é mais rápida que no Hollywood ' +
+          'Studios. Saindo 7h15 vocês estão na corda às 8h15, 45 minutos antes da abertura: ' +
+          'a catraca já abriu, e a espera é do lado de dentro.',
+        localId: 'epcot', acesso: [], duracaoMin: 60 },
+
+      { id: 'b-1311-0815', hora: '08:15', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Portão · posicionar para o WORLD DISCOVERY',
+        descricao: 'Test Track, não Cosmic Rewind',
+        contexto:
+          'PELA QUARTA VEZ O PONTO CERTO É O CONTRAINTUITIVO, e aqui o erro seria duplo.\n\n' +
+          'A CATRACA ABRE POR VOLTA DAS 7H30, uma hora antes do Early Entry, para todo mundo. ' +
+          'Na Spaceship Earth o caminho se divide: quem tem Early Entry segue por um lado, e ' +
+          'quem não tem é segurado do outro até as 9h. Chegando às 8h15 vocês estão nessa ' +
+          'corda com mais folga que os 30 minutos que os guias pedem para quem é de fora.\n\n' +
+          'Quem entra pela frente com Early Entry vai para o COSMIC REWIND — é a recomendação ' +
+          'padrão para hóspedes. Correr para lá às 9h é entrar atrás de meia hora de fila já ' +
+          'formada, e gastar o Single Pass no único horário em que ele não precisaria ser ' +
+          'gasto.\n\n' +
+          'Vocês vão para o Test Track, que fica na mesma área. Ele é a segunda pior fila do ' +
+          'parque e o rope drop é a ÚNICA janela barata dele: 53 minutos agora contra 99 de ' +
+          'média no resto do dia.\n\n' +
+          'PONTO DE ENCONTRO DE HOJE: a Spaceship Earth — a esfera. É o símbolo do parque, ' +
+          'fica na entrada e é visível de quase todo lugar. Se vocês se perderem, vão para a ' +
+          'base dela e ESPEREM.\n\n' +
+          'Café da manhã aqui, das barrinhas da mochila, e a foto da esfera antes de a praça ' +
+          'encher.',
+        localId: 'epcot', acesso: [], duracaoMin: 45, pesquisa: '2026-09-12',
+        curiosidades: [
+          { texto: 'A Spaceship Earth tem 55 metros e 11.324 facetas prateadas. A chuva não ' +
+                   'escorre pela esfera: entra por frestas entre as facetas e desce por calhas ' +
+                   'até o lago do World Showcase.',
+            fonte: 'Wikipedia — Spaceship Earth', pesquisa: '2026-09-15' },
+          { texto: 'O escritor Ray Bradbury ajudou a projetar a esfera e a escrever a história ' +
+                   'original da atração.',
+            fonte: 'Wikipedia — Spaceship Earth', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1311-0950', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Test Track — rope drop',
+        descricao: 'A única janela barata dele. E ele quebra muito',
+        contexto:
+          'Vocês desenham um carro num painel e depois andam num veículo que faz testes de ' +
+          'curva, freio e um trecho externo a 104 km/h. É a atração mais rápida que a Disney ' +
+          'já construiu.\n\n' +
+          'POR QUE AGORA E NÃO DEPOIS: 53 minutos no rope drop contra 99 de média no dia. É a ' +
+          'segunda pior fila do Epcot e não existe outra janela.\n\n' +
+          'E TEM UM SEGUNDO MOTIVO: em 2026, um ano depois de reabrir, o Test Track quebrou ' +
+          'muito — parada de quase 24 horas em 1º de agosto, outra de cinco horas no dia 23 ' +
+          'que comeu a tarde inteira, e falhas mecânicas em fevereiro. Se ele vai cair, cai no ' +
+          'meio do dia. Andar agora é a única forma de não depender disso.',
+        areaParque: 'World Discovery', acesso: ['rope-drop', 'standby'], acessoAlt: 'single-rider',
+        critico: true,
+        duracaoMin: 45,
+        fila: { min: 53, quando: 'no rope drop', pico: 99, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'A primeira versão atrasou quase dois anos por problemas nas rodas e no ' +
+                   'software e só abriu em 1999, no lugar do World of Motion. A atual, a ' +
+                   'terceira, reabriu em 22/07/2025, de novo com a General Motors.',
+            fonte: 'Wikipedia — Test Track', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1311-1035', hora: '09:45', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Mission: SPACE — Orange',
+        descricao: 'Multi Pass · lista baixa. Na saída, reservem o Remy',
+        contexto:
+          'Simulador de lançamento espacial dentro de uma centrífuga que gera força G real. A ' +
+          'versão LARANJA causa enjoo em muita gente — tem saco no assento por um motivo.\n\n' +
+          'A VERDE é a mesma cabine sem girar, e a fila é a mesma até o ponto em que vocês ' +
+          'escolhem. Se qualquer um dos dois tem tendência a enjoo, peguem a verde: não é ' +
+          'vergonha nenhuma e salva as duas horas seguintes.\n\n' +
+          'É O PRIMEIRO USO DO MULTI PASS, e cada reserva usada libera a próxima. NA SAÍDA, ' +
+          'RESERVEM O REMY no app, para o fim da tarde: o Multi Pass dele costuma esgotar ' +
+          'antes das 11h.',
+        areaParque: 'World Discovery', acesso: ['multi-pass'], duracaoMin: 33,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 40, estimado: true, fonte: '2026-09-10' },
+        pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Ocupa o terreno do Horizons, que fechou em 1999. A inauguração, em 2003, ' +
+                   'teve o administrador da NASA e astronautas, e até 2017 quem falava com os ' +
+                   'tripulantes pelo rádio era o Gary Sinise, de Apollo 13. Hoje é a Gina ' +
+                   'Torres.',
+            fonte: 'Wikipedia — Mission: Space', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1311-0900', hora: '10:20', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Guardians of the Galaxy: Cosmic Rewind',
+        descricao: 'Single Pass, janela entre 10h15 e 10h45',
+        contexto:
+          'Montanha-russa fechada e no escuro, com lançamento e cabines que giram 360° para ' +
+          'onde a cena está acontecendo. Sem inversões, mas rápida. Cada volta sorteia uma ' +
+          'música diferente dos anos 70 e 80. É a melhor atração do Epcot.\n\n' +
+          'POR QUE O PASSE FICA: ele faz 101 minutos de média e as fontes são diretas — mesmo ' +
+          'às 8h da manhã ele passa de uma hora. Não existe janela barata em nenhum momento ' +
+          'do dia, e é a mesma situação do Rise of the Resistance no dia 15.\n\n' +
+          'A fila virtual acabou em fevereiro de 2025: hoje é standby ou Single Pass, sem ' +
+          'sorteio às 7h da manhã.',
+        areaParque: 'World Discovery', acesso: ['single-pass'], critico: true, duracaoMin: 45,
+        fila: { min: 10, quando: 'com o Single Pass', pico: 101, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'Foi a primeira montanha-russa da Disney lançada de ré e é uma das mais ' +
+                   'longas do mundo em ambiente fechado, com 1,7 km. Custou cerca de US$ 500 ' +
+                   'milhões e ocupa o lugar do Universe of Energy, fechado em 2017.',
+            fonte: 'Wikipedia — Guardians of the Galaxy: Cosmic Rewind', pesquisa: '2026-09-15' },
+          { texto: 'As seis músicas que podem ser sorteadas: September, One Way or Another, ' +
+                   'Everybody Wants to Rule the World, Conga, I Ran e Disco Inferno.',
+            fonte: 'Wikipedia — Guardians of the Galaxy: Cosmic Rewind', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1311-1115', hora: '11:15', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Soarin’ Across America',
+        descricao: 'Multi Pass · lista baixa. Filme novo desde maio de 2026',
+        contexto:
+          'Vocês sentam num banco que sobe e balança na frente de uma tela IMAX côncava, com ' +
+          'sensação de estar voando de pernas soltas. Tem cheiro sincronizado com as cenas. ' +
+          'Suave, sem emoção forte — agrada praticamente todo mundo.\n\n' +
+          'O filme é o Across America desde 26/05/2026, com trilha nova e uma fila temática ' +
+          'da National Geographic.\n\n' +
+          'A fila dele sai de praticamente zero na abertura para 74 minutos às 16h. Com o ' +
+          'Multi Pass às 11h15 ela deixa de importar, e ele fecha a manhã antes do World ' +
+          'Showcase.',
+        areaParque: 'World Nature', acesso: ['multi-pass'], duracaoMin: 45,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 74, fonte: '2026-09-10' },
+        pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'O mecanismo nasceu de um protótipo que o engenheiro Mark Sumner montou com ' +
+                   'Meccano e barbante. O filme Across America, de 26/05/2026, foi feito para ' +
+                   'os 250 anos dos Estados Unidos.',
+            fonte: 'Wikipedia — Soarin’', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1311-1200', hora: '12:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'The Seas e Living with the Land',
+        descricao: 'Os dois no mesmo pavilhão. Fila curta, ar-condicionado',
+        contexto:
+          'The Seas é um aquário enorme, com peixes-boi, e dá para ficar o tempo ' +
+          'que quiserem. Living with the Land é um passeio de barco por estufas hidropônicas ' +
+          'REAIS, onde a Disney cultiva parte do que serve nos restaurantes do parque — ' +
+          'inclusive o que vocês podem comer hoje.\n\n' +
+          'Os dois são calmos, quase sem fila, e caem na pior hora de calor de propósito.',
+        areaParque: 'World Nature', acesso: ['standby'], duracaoMin: 40,
+        fila: { min: 10, quando: 'quase sempre', pico: 25, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'O aquário do The Seas tem 21,6 milhões de litros, o segundo maior dos ' +
+                   'Estados Unidos. Os dois peixes-boi são animais resgatados.',
+            fonte: 'Wikipedia — The Seas with Nemo & Friends', pesquisa: '2026-09-15' },
+          { texto: 'As estufas do Living with the Land colhem mais de 30 toneladas por ano, ' +
+                   'servidas no Garden Grill e no Sunshine Seasons, e um pé de tomate delas ' +
+                   'entrou no Guinness: mais de 32 mil tomates em 16 meses.',
+            fonte: 'Wikipedia — Living with the Land', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1311-1240p', hora: '12:40', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Parada — antes de virar o dia',
+        descricao: 'A partir daqui o Epcot é outro parque. Banheiro dentro do The Land, junto do Sunshine Seasons',
+        contexto:
+          'Banheiro, flasks cheios e sentar.\n\n' +
+          'DAQUI PARA A FRENTE O DIA MUDA DE NATUREZA: acabaram as filas e começa o World ' +
+          'Showcase, que é comida e caminhada. Não há mais nenhum compromisso de relógio até ' +
+          'o Luminous, às 21h.\n\n' +
+          'Não comam agora: em vinte minutos vocês estarão na primeira barraca.',
+        areaParque: 'World Nature', acesso: [], duracaoMin: 14 },
+
+      { id: 'b-1311-1245', hora: '13:00', ancora: 'referencia', tipo: 'livre',
+        titulo: 'World Showcase — México',
+        descricao: 'Comecem aqui, sentido horário',
+        contexto:
+          'O World Showcase são onze pavilhões de países ao redor de um lago, cada um com ' +
+          'arquitetura, lojas e comida do país, e funcionários nativos daquele país — ' +
+          'estudantes num programa de intercâmbio da Disney. Dá para conversar em espanhol no ' +
+          'México e em português no… não, não tem Brasil. Mas o México resolve.\n\n' +
+          'A volta completa a pé é de cerca de 2 km. Sentido horário a partir do México deixa ' +
+          'França, Reino Unido e Canadá para o fim da tarde, que é quando eles ficam bonitos.',
+        areaParque: 'World Showcase', acesso: [], duracaoMin: 20 },
+
+      { id: 'b-1311-1300', hora: '13:20', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Gran Fiesta Tour',
+        descricao: 'Barquinho dentro da pirâmide. Fila mínima',
+        contexto:
+          'Passeio de barco lento dentro do pavilhão do México, que por dentro é um mercado ' +
+          'noturno cenográfico permanente, com vulcão ao fundo. Fresco, escuro e quase sempre ' +
+          'sem fila. É o clássico mais subestimado do parque.',
+        areaParque: 'World Showcase', acesso: ['standby'], duracaoMin: 20,
+        fila: { min: 5, quando: 'quase sempre', pico: 15, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'Até 2007 o passeio se chamava El Río del Tiempo. A versão atual ganhou o ' +
+                   'Pato Donald e os Três Cavaleiros.',
+            fonte: 'Wikipedia — Mexico Pavilion at Epcot', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1311-1330', hora: '13:40', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Frozen Ever After',
+        descricao: 'Noruega. Multi Pass · lista alta',
+        contexto:
+          'Passeio de barco pelo mundo de Frozen, com animatrônicos muito bons e um trecho ' +
+          'curto de ré. A fila é sempre desproporcional ao tamanho da atração — 45 a 75 ' +
+          'minutos —, e é por isso que ela leva a lista alta do Multi Pass.\n\n' +
+          'É AQUI QUE O MULTI PASS SE PAGA. Esta e o Remy são as duas únicas filas do World ' +
+          'Showcase, e elas competem diretamente com as barracas do Food & Wine, que é o que ' +
+          'vocês vieram fazer. Nos outros dias a fila compete com outra fila; aqui compete com ' +
+          'o dia.',
+        areaParque: 'World Showcase', acesso: ['multi-pass'], duracaoMin: 40,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 75, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'Usa os barcos e o percurso do Maelstrom, a atração viking que funcionou ' +
+                   'aqui até 2014. O pavilhão da Noruega, de 1988, é o país mais novo do World ' +
+                   'Showcase.',
+            fonte: 'Wikipedia — Frozen Ever After; Wikipedia — World Showcase', pesquisa: '2026-09-15' },
+          { texto: 'Foram os primeiros animatrônicos totalmente elétricos da Disney, e em ' +
+                   '12/02/2026 os três personagens principais ganharam a tecnologia do World ' +
+                   'of Frozen de Hong Kong.',
+            fonte: 'Wikipedia — Frozen Ever After', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1311-1415', hora: '14:20', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Food & Wine — volta 1',
+        descricao: 'China, Alemanha, Itália. E é isto o almoço',
+        contexto:
+          'Barracas espalhadas pelo World Showcase, cada uma com dois a quatro pratos pequenos ' +
+          'e bebidas. PEGUEM O PASSAPORTE na entrada do parque.\n\n' +
+          'A ESTRATÉGIA: dividam cada prato entre os dois e provem oito a dez barracas ao ' +
+          'longo da tarde, em vez de fazer três refeições. É assim que o festival funciona, e ' +
+          'é por isso que hoje não existe bloco de almoço nem de jantar — o Food & Wine É as ' +
+          'duas refeições, servidas em quatro voltas.\n\n' +
+          'Destaques que se repetem todo ano: Canadá (sopa de cheddar com bacon), Alemanha, ' +
+          'Grécia e o waffle da Bélgica. O cardápio de 2026 sai no app da Disney.\n\n' +
+          'A caminhada entre os pavilhões está dentro da duração deste bloco — ele não é uma ' +
+          'parada, é a volta.',
+        areaParque: 'World Showcase', acesso: [], duracaoMin: 70,
+        curiosidades: [
+          { texto: 'A Alemanha foi projetada com um passeio de barco pelos rios Reno, Tauber, ' +
+                   'Ruhr e Isar que nunca foi construído. O saguão de entrada dele virou salão ' +
+                   'de restaurante.',
+            fonte: 'Wikipedia — Germany Pavilion at Epcot', pesquisa: '2026-09-15' },
+          { texto: 'O templo da China copia o Templo do Céu, de Pequim. O campanário e o ' +
+                   'palácio da Itália copiam a Praça de São Marcos, de Veneza.',
+            fonte: 'Wikipedia — China Pavilion at Epcot; Wikipedia — Italy Pavilion at Epcot', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1311-1600', hora: '15:30', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Food & Wine — volta 2',
+        descricao: 'Japão, Marrocos. O trecho mais bonito do anel',
+        contexto:
+          'O pavilhão do Japão tem uma loja de departamentos de verdade, a Mitsukoshi, que é ' +
+          'a melhor loja do World Showcase. O do Marrocos é o mais elaborado ' +
+          'arquitetonicamente e quase sempre o mais vazio.\n\n' +
+          'Caminhada inclusa na duração.',
+        areaParque: 'World Showcase', acesso: [], duracaoMin: 75,
+        curiosidades: [
+          { texto: 'O pagode do Japão copia o do templo Horyuji, e o portão na água, o do ' +
+                   'santuário de Itsukushima. A Mitsukoshi daqui é a única filial da rede que ' +
+                   'sobrou na América do Norte.',
+            fonte: 'Wikipedia — Japan Pavilion at Epcot', pesquisa: '2026-09-15' },
+          { texto: 'O Marrocos, de 1984, foi patrocinado diretamente pelo governo marroquino ' +
+                   'até 2020.',
+            fonte: 'Wikipedia — World Showcase', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1311-1700', hora: '16:45', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Remy’s Ratatouille Adventure',
+        descricao: 'França. Multi Pass rolando, reservado às 9h45',
+        contexto:
+          'Vocês encolhem ao tamanho de um rato e andam por uma cozinha em escala gigante, em ' +
+          'veículos sem trilhos com telas e cheiro sincronizado. Sem emoção forte, e a ' +
+          'escala do cenário é o ponto alto.\n\n' +
+          'Segunda das duas filas do World Showcase, e a segunda razão do Multi Pass: 40 a 60 ' +
+          'minutos no standby, dez com o passe.\n\n' +
+          'É A RESERVA ROLANDO, feita na saída do Mission: SPACE. SE NÃO HOUVER HORÁRIO, a ' +
+          'fila de standby do Remy à tarde fica perto de uma hora: decidam na hora entre ' +
+          'trocar a volta 2 pela fila ou deixar o Remy de fora.',
+        areaParque: 'World Showcase', acesso: ['multi-pass'], duracaoMin: 45,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 60, fonte: '2026-09-10' },
+        pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Estreou em 01/10/2021, nos 50 anos do Walt Disney World, copiando a ' +
+                   'atração que a Disneyland Paris abriu em 2014. Os diálogos alternam inglês ' +
+                   'e francês.',
+            fonte: 'Wikipedia — Remy’s Ratatouille Adventure', pesquisa: '2026-09-15' },
+          { texto: 'Desde novembro de 2025 roda sem óculos 3D, e em 2026 ganhou objetos de ' +
+                   'cenário gigantes.',
+            fonte: 'Guide2WDW; WDWNT', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1311-1745', hora: '17:30', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Food & Wine — volta 3',
+        descricao: 'França, Reino Unido, Canadá. O jantar de vocês',
+        contexto:
+          'A volta mais longa e a melhor: os três pavilhões finais são os mais gostosos ao ' +
+          'entardecer, e o Canadá tem a sopa de cheddar com bacon que aparece em toda lista ' +
+          'de melhores do festival.\n\n' +
+          'O pub do Reino Unido serve cerveja de verdade e costuma ter música ao vivo no ' +
+          'pátio. É o melhor lugar do parque para sentar sem pressa.\n\n' +
+          'ESTE É O JANTAR. Não há outro bloco de refeição hoje — de propósito.',
+        areaParque: 'World Showcase', acesso: [], duracaoMin: 85,
+        curiosidades: [
+          { texto: 'O Les Chefs de France foi aberto em 1982 por Paul Bocuse, Roger Vergé e ' +
+                   'Gaston Lenôtre. Desde 1996 é tocado pelo filho de Bocuse, Jérôme.',
+            fonte: 'Wikipedia — France Pavilion at Epcot', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1311-1900', hora: '19:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Spaceship Earth',
+        descricao: 'A fila some à noite. A esfera por dentro',
+        contexto:
+          'O passeio dentro da esfera geodésica que é o símbolo do Epcot. Conta a história da ' +
+          'comunicação humana em cenários com animatrônicos, subindo em espiral até o topo. ' +
+          'Lento e climatizado.\n\n' +
+          'À noite a fila praticamente some, e vocês passam por ela de qualquer jeito na ' +
+          'volta para o lago.',
+        areaParque: 'World Celebration', acesso: ['standby'], duracaoMin: 50,
+        fila: { min: 10, quando: 'à noite', pico: 40, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'A narradora é a Judi Dench, desde 2007. Antes dela vieram Vic Perrin, ' +
+                   'Walter Cronkite e Jeremy Irons.',
+            fonte: 'Wikipedia — Spaceship Earth', pesquisa: '2026-09-15' },
+          { texto: 'Na D23 de agosto de 2026 a Disney anunciou uma versão nova da atração, ' +
+                   'sobre conexão humana e a era da internet. Ainda não há data de fechamento.',
+            fonte: 'Wikipedia — Spaceship Earth; Inside the Magic', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1311-2000', hora: '20:00', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Food & Wine — última volta',
+        descricao: 'O que ficou faltando, a caminho do lago',
+        contexto:
+          'Última passada nas barracas que vocês marcaram no passaporte e não fizeram. As ' +
+          'filas das barracas caem depois das 20h, quando a maioria já está pegando lugar ' +
+          'para o show.\n\n' +
+          'Comprem a bebida AGORA e levem para o lugar do Luminous — de lá não dá para sair ' +
+          'sem perder a vaga.',
+        areaParque: 'World Showcase', acesso: [], duracaoMin: 30 },
+
+      { id: 'b-1311-2030p', hora: '20:30', ancora: 'fixo', tipo: 'espera',
+        titulo: 'Posição para o Luminous',
+        descricao: 'Margem entre México e Noruega. Trinta minutos antes',
+        contexto:
+          'A margem entre o México e a Noruega tem visão frontal do lago e esvazia mais rápido ' +
+          'na saída — as duas coisas importam.\n\n' +
+          'Trinta minutos antes não é exagero em noite de festival. Levem a bebida da barraca ' +
+          'anterior: de lá não dá para sair e voltar.\n\n' +
+          'HORÁRIO FIXO, colado no show.',
+        areaParque: 'World Showcase', acesso: [], duracaoMin: 30,
+        curiosidades: [
+          { texto: 'A volta completa do lago do World Showcase tem 1,9 km.',
+            fonte: 'Wikipedia — Epcot', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1311-2100', hora: '21:00', ancora: 'fixo', tipo: 'show',
+        titulo: 'Luminous: The Symphony of Us',
+        descricao: '~17 min. Fogos, fontes e projeção nas telas dos barcos',
+        contexto:
+          'Espetáculo noturno sobre o lago do World Showcase, com fogos, fontes dançantes e ' +
+          'projeção em telas montadas em barcos. Cerca de 17 minutos.\n\n' +
+          'HORÁRIO FIXO, e ele SEGUE O FECHAMENTO DO PARQUE, não a abertura. Com fechamento às ' +
+          '21h ele é às 21h. Confiram no app da Disney e ajustem aqui se mudar — este bloco e ' +
+          'a posição andam juntos.',
+        areaParque: 'World Showcase', acesso: [], duracaoMin: 20,
+        confirmarHorario: true, pesquisa: '2026-09-10' },
+
+      { id: 'b-1311-2120', hora: '21:20', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voltar ao hotel',
+        descricao: 'Uber, ~25 min, US$ 20–30. Amanhã é Celebration, sem alarme',
+        contexto:
+          'Saindo pela entrada principal, a caminhada do World Showcase até o ponto de ' +
+          'rideshare é longa — uns quinze minutos, contra o fluxo de todo mundo saindo ao ' +
+          'mesmo tempo.\n\n' +
+          'ATALHO: se a fila do Uber estiver impossível, o International Gateway fica do ' +
+          'outro lado do lago, perto do Reino Unido, e costuma escoar mais rápido. Confiram no ' +
+          'app qual dos dois pontos está mais perto de vocês quando o show acabar.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 60 },
     ],
 
     ficha: {
       multiPass: {
-        usar: false, opcional: false, listaAlta: [], listaBaixa: [], planoB: null,
+        usar: true, opcional: false,
+        listaAlta: ['Frozen Ever After'],
+        listaBaixa: ['Mission: SPACE', 'Soarin’ Across America'],
+        rolando: ['Remy’s Ratatouille Adventure'],
+        planoB:
+          'Se o Test Track estiver fechado de manhã e voltar, reservem-no rolando assim que ' +
+          'usarem o Soarin’, às 11h15.',
         nota:
-          'Sem Multi Pass. O parque ficou menor sem a DinoLand, e chegando na abertura pelo ' +
-          'lado certo — África e Ásia, longe de Pandora, para onde vai quase todo o Early ' +
-          'Entry — vocês resolvem a manhã inteira no standby, quase sem fila.',
+          'DECIDIDO: comprar. O Epcot é o único parque em que a fila compete com o que ' +
+          'vocês vieram fazer — o Frozen e o Remy são as duas únicas filas do World ' +
+          'Showcase, e são 45–75 e 40–60 minutos parados no meio das barracas do Food & ' +
+          'Wine.\n\n' +
+          'Nível 1 no Epcot: Frozen, Remy e Test Track — só um entra na compra antecipada. ' +
+          'Vai o Frozen, a fila maior; o Test Track é o rope drop; o Remy é reservado rolando ' +
+          'na saída do Mission: SPACE, às 9h45, porque o Multi Pass dele costuma esgotar ' +
+          'antes das 11h. Sem horário, ele vai de standby.',
       },
       singlePass: {
-        itens: [],
-        opcionais: ['Avatar Flight of Passage'],
+        itens: ['Guardians of the Galaxy: Cosmic Rewind'], opcionais: [],
         nota:
-          'NÃO COMPREM EM 10/11. O Flight of Passage fica como plano B pago: o dia foi montado ' +
-          'para pegar a fila de 40 a 65 minutos do fim da tarde em vez dos 100 a 180 do ' +
-          'pico, e para sair de Pandora no escuro em vez de na fila.\n\n' +
-          'A compra só se justifica se o parque fechar cedo demais para o plano caber, ou ' +
-          'se vocês decidirem que não querem 50 minutos de fila no fim de um dia de dez ' +
-          'horas.\n\n' +
-          'E NÃO PRECISA DECIDIR EM BOGOTÁ. Como o TRON no dia 11, o Single Pass do Flight ' +
-          'of Passage se compra NA HORA, pelo app, de pé dentro do parque — se ainda houver ' +
-          'janela de retorno. É por isso que ele é plano B e não compra antecipada: vocês ' +
-          'decidem às 17h30, olhando a fila, e não às 7h da manhã de 10/11 no meio de uma ' +
-          'conexão.',
+          'Segundo dia seguido em que o passe se justifica. O Cosmic Rewind faz 101 minutos ' +
+          'de média e passa de uma hora mesmo às 8h — não existe janela barata em nenhum ' +
+          'momento do dia, diferente do TRON e do Flight of Passage.\n\n' +
+          'Peçam janela entre 10h15 e 10h45: logo depois do Mission: SPACE, que é o primeiro ' +
+          'uso do Multi Pass.',
       },
       expressPass: null,
-      custoEstimadoCasal: { min: 0, max: 40, moeda: 'USD' },
+      custoEstimadoCasal: { min: 60, max: 110, moeda: 'USD' },
       extras: [
-        { nome: 'Locker no Flight of Passage',
-          texto: 'Nada solto é permitido. O locker é gratuito pelo tempo da atração, mas ' +
-                 'some 5 a 10 minutos — contem isso no bloco das 17h45, que é justamente ' +
-                 'o mais apertado do dia.' },
-        { nome: 'O safári fecha antes do parque',
-          texto: 'De 30 a 60 minutos antes. É a única informação do dia que vocês PRECISAM ' +
-                 'conferir no app da Disney na hora — o bloco das 16h30 depende dela.' },
+        { nome: 'Estratégia do Food & Wine',
+          texto:
+            'Peguem o passaporte na entrada. Dividam cada prato entre os dois e provem 8 a 10 ' +
+            'barracas, em vez de fazer três refeições. Destaques recorrentes: Canadá (sopa de ' +
+            'cheddar com bacon), Alemanha, Grécia, Bélgica (waffle).' },
       ],
     },
     renuncias: {
       gerais: [
-        { nome: 'Feathered Friends in Flight' }, { nome: 'Bluey’s Wild World' },
-        { nome: 'Wildlife Express Train' }, { nome: 'Rafiki’s Planet Watch' },
-        { nome: 'The Animation Experience' },
-        { nome: 'Zootopia: Better Zoogether! — 30 minutos num show que a própria ' +
-                 'crítica chama de frenético e esquecível, num dia em que a única ' +
-                 'montanha-russa do parque estava sendo feita uma vez só' },
+        { nome: 'The American Adventure — 30 minutos de história americana contada por ' +
+                 'animatrônicos, numa tarde que é das barracas do Food & Wine e do Remy' },
+        { nome: 'Journey Into Imagination' }, { nome: 'Awesome Planet' },
+        { nome: 'Turtle Talk with Crush' }, { nome: 'Disney & Pixar Short Film Festival' },
+        { nome: 'Os filmes 360° da China e do Canadá' },
       ],
-      fechado: ['DINOSAUR e toda a DinoLand (demolidos para a futura Tropical Americas)'],
+      fechado: [],
     },
   },
 
@@ -3073,7 +2968,7 @@ window.ROTEIRO = {
           'O QUE NÃO SE SACRIFICA: o Fantasmic. Se for para cortar, cortem nesta ordem — ' +
           'Alien, Star Tours e o Millennium Falcon.',
           'O Fantasmic é cancelado com chuva forte. Se cancelarem, usem a hora para o Rise ' +
-          'de novo ou para a Torre, e saiam mais cedo: amanhã é Epcot com saída às 7h15.',
+          'de novo ou para a Torre, e saiam mais cedo: amanhã é Animal Kingdom com saída às 6h30.',
         ],
       },
     ],
@@ -3104,7 +2999,7 @@ window.ROTEIRO = {
                 'Fantasmic.\n\n' +
                 'O plano B de graça existe e está no bloco: entrar na fila depois do ' +
                 'Fantasmic, por volta das 20h35, com a regra de que quem está na fila no ' +
-                'fechamento anda. Saem por volta das 21h40, e amanhã é Epcot com saída às 7h15.',
+                'fechamento anda. Saem por volta das 21h40, e amanhã sai às 6h30 para o Animal Kingdom.',
         pesquisa: '2026-09-10' },
 
       { nome: 'Muppet*Vision 3D', quando: 'fechada', custo: '—',
@@ -3117,32 +3012,65 @@ window.ROTEIRO = {
     /* --------------------------------------------------------------------- */
     prepararAmanha: {
       paraODia: '2026-11-16',
-      titulo: 'Epcot · alarme 6h15, saída 7h15',
+      titulo: 'Animal Kingdom · alarme 5h30, saída 6h30',
       aviso:
-        'Hoje termina perto das 21h35 e amanhã sai às 7h15. O Epcot é o dia mais leve dos ' +
-        'quatro da Disney — a tarde é comida, não fila — mas a manhã ainda tem hora.',
+        'Hoje termina perto das 21h35 e amanhã sai às 6h30, a saída mais cedo da viagem. O ' +
+        'dia 16 é o mais curto dos quatro da Disney e o mais coreografado: o parque fecha ' +
+        'às 18h e a reta final depende disso.',
       itens: [
-        { texto: 'Alarme para 6h15 nos dois celulares', critico: true,
-          motivo: 'Saída às 7h15, para estar na corda do Epcot às 8h15. Depois de um dia que ' +
-                  'termina às 21h35, um alarme só falha.' },
-        { texto: 'Conferir se as reservas de Lightning Lane do dia 16 aparecem no app',
+        { texto: 'Conferir ABERTURA E FECHAMENTO do Animal Kingdom e ajustar a referência',
           critico: true,
-          motivo: 'O Multi Pass do dia 16 (Mission: SPACE, Soarin’ e Frozen) e o Single Pass ' +
-                  'do Cosmic Rewind saíram em 13/11, ou em 08/11 com ingresso de datas fixas. ' +
-                  'Se algo falhou, hoje ainda dá para replanejar a manhã do Epcot.' },
-        { texto: 'Conferir o horário de abertura do Epcot e ajustar a referência',
-          critico: true,
-          motivo: 'O dia 16 assume 9h. Se for outro, mudem a referência e a manhã desloca ' +
-                  'junto, inclusive a saída das 7h15.' },
+          motivo: 'OS DOIS IMPORTAM, e é o item mais importante da lista.\n\n' +
+                  'A ABERTURA: o dia assume 8h, que é o típico de novembro. Se for outra, ' +
+                  'mudem a referência na tela do dia e a manhã inteira desloca junto, ' +
+                  'inclusive a saída das 6h30.\n\n' +
+                  'O FECHAMENTO: é ele que sustenta a reta final. Com 18h, o plano está no ' +
+                  'limite e o safári do entardecer, o Na’vi e a fila do Flight of Passage ' +
+                  'estão coreografados minuto a minuto. Com 19h ou 20h o dia respira. A ' +
+                  'reta final é fixa e NÃO desloca com a abertura — ela segue o sol.' },
+
+        { texto: 'Decidir sobre o Single Pass do Flight of Passage', critico: false,
+          motivo: 'NÃO é compra pendente, é decisão. O dia foi montado para pegar a fila ' +
+                  'de 40 a 65 minutos do fim da tarde em vez dos 100 a 180 do pico. Só ' +
+                  'vale comprar se o fechamento não deixar o plano caber, ou se vocês ' +
+                  'decidirem que não querem 50 minutos de fila no fim de dez horas de ' +
+                  'parque. Se decidirem comprar, é na hora, pelo app, dentro do parque — se ' +
+                  'ainda houver janela de retorno.' },
+
+        { texto: 'Reserva do Sanaa: número de confirmação à mão', critico: false,
+          motivo: 'Jantar às 19h40, confirmação 356258407484, na Kidani Village do Animal ' +
+                  'Kingdom Lodge — OUTRO endereço, não é dentro do parque. Deixem o número acessível no celular hoje, não procurando ' +
+                  'e-mail amanhã com o Uber esperando. O telefone da Disney está no Guia, ' +
+                  'se precisarem remarcar: +1 407-939-3463, com 2h de antecedência.' },
+
+        { texto: 'Alarme para 5h30 nos dois celulares', critico: true,
+          motivo: 'Saída às 6h30 — uma hora mais cedo do que nos outros dias de parque, ' +
+                  'porque o Animal Kingdom abre às 8h e não às 9h. Depois de um dia sem ' +
+                  'alarme, o corpo não ajuda.' },
+
+
+        { texto: 'Decidir sobre o Kali River Rapids olhando a previsão', critico: false,
+          motivo: 'Ele está às 9h15 e molha de verdade. Em novembro Orlando amanhece por ' +
+                  'volta dos 15°C. Se a mínima de amanhã estiver baixa, decidam HOJE que ' +
+                  'vão pular — ganham 35 minutos e não passam o dia com roupa molhada.' },
+
         { texto: 'Mochila remontada e celular carregando', critico: true,
-          motivo: 'Os dois soft flasks, barrinhas, protetor solar, power bank, cabo e uma camada ' +
-                  'leve para cada um — o Epcot é o parque com mais área aberta, e a World ' +
-                  'Showcase à noite esfria.' },
+          motivo: 'O de sempre: os dois soft flasks cheios, barrinhas, protetor solar, power ' +
+                  'bank e cabo.\n\n' +
+                  'E TRÊS COISAS SÓ DE AMANHÃ, se vocês forem fazer o Kali River Rapids às ' +
+                  '9h15: duas capas de chuva, um saco Ziploc para o celular e um par de ' +
+                  'meias secas. O Kali não é respingo, é balde — e depois dele ainda são ' +
+                  'nove horas de parque.\n\n' +
+                  'Uma camada leve também: amanhã amanhece por volta dos 15°C e vocês saem ' +
+                  'às 6h30. Ao meio-dia ela vai para a mochila.' },
+
         { texto: 'Guardar as compras da Sunset Blvd',
-          motivo: 'Vocês voltam com sacola hoje. Amanhã a mochila precisa sair leve.' },
+          motivo: 'Vocês voltam com sacola hoje. Amanhã a mochila precisa estar vazia para ' +
+                  'o que interessa.' },
       ],
     },
 
+    /* --------------------------------------------------------------------- */
     blocos: [
       { id: 'b-1511-0700', hora: '07:00', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Sair do hotel',
@@ -3244,13 +3172,13 @@ window.ROTEIRO = {
           'Não é uma atração, são quatro: pré-show, simulador de nave, um hangar em escala ' +
           'real com dezenas de stormtroopers e o passeio em veículo sem trilhos. É consenso ' +
           'como a coisa mais ambiciosa que a Disney já construiu.\n\n' +
-          'POR QUE AQUI O PASSE FICA, e nos dias 11 e 13 é plano B: nos outros dois o ' +
-          'horário resolvia — o TRON tinha a janela do desfile, o Flight of Passage tinha a ' +
+          'POR QUE AQUI O PASSE FICA, e nos dias 11 e 16 é plano B: nos outros dois o ' +
+          'horário resolve — o TRON tem a janela do desfile, o Flight of Passage tem a ' +
           'última hora. Aqui não existe janela livre. O Rise faz 100 minutos na abertura e ' +
           '63 depois das 19h, e as 19h de vocês já estão com Oga’s, Sci-Fi e Fantasmic.\n\n' +
           'PLANO B DE GRAÇA, se vocês não comprarem: entrar na fila DEPOIS do Fantasmic, por ' +
-          'volta das 20h35. Vale a mesma regra do dia 13 — quem está na fila no fechamento ' +
-          'anda. Vocês sairiam por volta das 21h40, e o dia 16 é Epcot com saída às 7h15.',
+          'volta das 20h35. Vale a mesma regra do dia 16 — quem está na fila no fechamento ' +
+          'anda. Vocês sairiam por volta das 21h40, e o dia 16 sai às 6h30 para o Animal Kingdom.',
         areaParque: 'Galaxy’s Edge', acesso: ['single-pass'], critico: true, duracaoMin: 50,
         fila: { min: 10, quando: 'com o Single Pass', pico: 100, fonte: '2026-09-10' },
         pesquisa: '2026-09-10',
@@ -3497,12 +3425,12 @@ window.ROTEIRO = {
 
       { id: 'b-1511-2050', hora: '20:35', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel',
-        descricao: 'Uber, ~30 min, US$ 22–32. Amanhã sai às 7h15',
+        descricao: 'Uber, ~30 min, US$ 22–32. Amanhã sai às 6h30',
         contexto:
           'Saindo com o fluxo do Fantasmic, a caminhada até o ponto de rideshare leva uns ' +
           'quinze minutos — o parque inteiro sai ao mesmo tempo.\n\n' +
           'Se a tarifa estiver em alta, andem um pouco para longe da entrada antes de chamar. ' +
-          'Amanhã é Epcot com saída às 7h15, então não estiquem.',
+          'Amanhã é Animal Kingdom com saída às 6h30, então não estiquem.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 60 },
     ],
 
@@ -3526,7 +3454,7 @@ window.ROTEIRO = {
         itens: ['Rise of the Resistance'], opcionais: [],
         nota:
           'ESTE É O ÚNICO DOS TRÊS DIAS DE PASSE EM QUE ELE SE JUSTIFICA. No dia 11 o TRON ' +
-          'tinha a janela do desfile; no dia 13 o Flight of Passage tinha a última hora. ' +
+          'tinha a janela do desfile; no dia 16 o Flight of Passage tem a última hora. ' +
           'Aqui não existe janela livre: o Rise faz 100 min na abertura e 63 depois das ' +
           '19h, e a noite de vocês já tem Oga’s, Sci-Fi e Fantasmic.\n\n' +
           'Peçam janela entre 10h30 e 11h. Se não comprarem, o plano B está no bloco: fila ' +
@@ -3564,67 +3492,71 @@ window.ROTEIRO = {
     },
   },
 
-  /* ===== 16/11 · SEGUNDA · EPCOT ======================================== */
+  /* ===== 16/11 · SEGUNDA · ANIMAL KINGDOM ================================ */
   {
     id: 'd-2026-11-16',
     data: '2026-11-16',
     diaSemana: 'segunda',
-    emoji: '🌍',
-    titulo: 'Epcot',
-    subtitulo: 'Food & Wine · a tarde é comida, não fila',
+    emoji: '🦁',
+    titulo: 'Animal Kingdom',
+    subtitulo: 'Rope drop na África · Pandora no fim',
     tipo: 'parque',
     operadora: 'disney',
-    parqueId: 'epcot',
+    parqueId: 'animal-kingdom',
     custoZero: false,
     fechado: true,
     revisadoEm: '2026-09-10',
-    referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: true },
+    referencia: { rotulo: 'Abertura do parque', padrao: '08:00', confirmado: true },
 
     resumo:
-      'Meio dia de parque e meio de festival. A manhã resolve as três filas grandes no ' +
-      'World Discovery e no World Nature; a partir das 13h o dia vira comida e caminhada ' +
-      'em volta de um lago, sem nenhum compromisso de relógio até o Luminous.',
+      'O dia inteiro é uma inversão: todo mundo corre para Pandora na abertura, e vocês vão ' +
+      'para o lado oposto. A recompensa vem no fim — o safári ao entardecer, quando os leões ' +
+      'acordam, e a fila do Flight of Passage no último minuto, que devolve Pandora escura, ' +
+      'acesa e vazia na saída.',
 
     avisos: [
-      'NÃO CORRAM PARA O COSMIC REWIND NA ABERTURA. É para lá que vai o Early Entry, e ' +
-      'gastar o Single Pass às 9h é gastá-lo no único horário em que ele não precisaria ser ' +
-      'gasto. Vocês vão para o Test Track, na mesma área.',
-      'O FOOD & WINE É O ALMOÇO E O JANTAR de hoje. Não há bloco de refeição além das ' +
-      'barracas — de propósito. Peguem o passaporte na entrada.',
+      'O PARQUE ABRE ÀS 8H E FECHA ÀS 18H, pelo calendário publicado — uma hora antes dos outros ' +
+      'parques Disney, e é por isso que a saída do hotel é 6h30. O Early Entry, que vocês ' +
+      'não têm, começa às 7h30.',
+      'NÃO VÃO PARA PANDORA DE MANHÃ. O Early Entry do Animal Kingdom inclui Pandora, e mais ' +
+      'de 90% dos visitantes correm para lá. O parque inteiro fica vazio do outro lado.',
     ],
 
     notas: [
-      { tipo: 'bom', texto:
-        'VERIFICADO: o Food & Wine de 2026 vai de 27/08 a 21/11, então 16/11 está dentro com ' +
-        'folga. O Festival of the Holidays só começa em 27/11, depois que vocês vão embora — ' +
-        'vocês pegam o festival certo.', pesquisa: '2026-09-10' },
-
       { tipo: 'atencao', texto:
-        'O TEST TRACK QUEBRA MUITO. Em 2026, um ano depois de reabrir: parada de quase 24 ' +
-        'horas em 1º de agosto, outra de cinco horas no dia 23 que comeu a tarde inteira, e ' +
-        'falhas mecânicas em fevereiro — sem comunicado da Disney em nenhuma delas. É por isso ' +
-        'que ele é o rope drop: se vai cair, cai no meio do dia.',
+        'O FECHAMENTO ÀS 18H É O QUE COREOGRAFA A RETA FINAL: o safári ao entardecer, o Na’vi ' +
+        'e a fila do Flight of Passage no último minuto estão encaixados nele — e o ' +
+        'horário oficial de 12/09 confirmou os 18h. O plano A vale como está, e o Sanaa ' +
+        'das 19h40 deixa de ter risco de colisão.',
+        pesquisa: '2026-09-12' },
+
+      { tipo: 'bom', texto:
+        'MAIS DE 90% DOS VISITANTES CORREM PARA PANDORA NO ROPE DROP. Nos primeiros 60 a 90 ' +
+        'minutos o resto do parque fica praticamente vazio: Kilimanjaro Safaris, Expedition ' +
+        'Everest e Kali River Rapids costumam ser walk-on ou menos de 15 minutos. É essa ' +
+        'janela que o dia usa.',
         pesquisa: '2026-09-10' },
 
       { tipo: 'bom', texto:
-        'O COSMIC REWIND NÃO TEM MAIS FILA VIRTUAL desde fevereiro de 2025. Acabou o sorteio ' +
-        'às 7h da manhã: hoje é standby puro ou Single Pass. Mas ele faz 101 minutos de média ' +
-        'e passa de uma hora até às 8h — não existe janela barata, e é por isso que o passe ' +
-        'fica, como no dia 15.', pesquisa: '2026-09-10' },
-
-      { tipo: 'bom', texto:
-        'O WORLD SHOWCASE ABRE ÀS 9H, junto com o resto do parque. As lojas e barracas dos ' +
-        'pavilhões é que só ativam por volta das 11h — o que não muda nada no roteiro de ' +
-        'vocês, que só chega lá às 13h.',
+        'O SAFÁRI VALE DUAS VEZES E É A ÚNICA ATRAÇÃO DO PARQUE ASSIM. De manhã os animais ' +
+        'estão ativos com o frio e não há fila. No fim da tarde os LEÕES ACORDAM — são ' +
+        'noturnos e dormem o dia todo — e a Disney instalou iluminação no percurso para o ' +
+        'safári rodar mesmo depois do pôr do sol. ATENÇÃO: ele fecha 30 a 60 minutos ANTES ' +
+        'do parque, então confirmem o horário dele no dia.',
         pesquisa: '2026-09-10' },
 
-      { tipo: 'atencao', texto:
-        'SÓ UM DO NÍVEL 1 NA COMPRA. No Epcot, Frozen, Remy e Test Track são do nível 1, e a ' +
-        'compra antecipada leva só um: vai o Frozen. O Remy é reservado rolando, e o Multi ' +
-        'Pass dele costuma esgotar antes das 11h — nos dados de agosto e setembro de 2026, ' +
-        'por volta das 10h50. Por isso o Mission: SPACE é o primeiro uso, às 9h45: na saída ' +
-        'dele, reservem o Remy para o fim da tarde.',
-        pesquisa: '2026-09-11' },
+      { tipo: 'bom', texto:
+        'DÁ PARA ENTRAR NA FILA ATÉ O MINUTO DO FECHAMENTO e completar a atração depois. É ' +
+        'política da Disney e é o que sustenta o bloco das 17h45: a fila do Flight of Passage ' +
+        'cai de 100–180 minutos no pico para 40–65 depois das 17h, e vocês saem andando por ' +
+        'uma Pandora escura e vazia.',
+        pesquisa: '2026-09-10' },
+
+      { tipo: 'info', texto:
+        'O pôr do sol em Orlando em meados de novembro é por volta das 17h30. Toda a reta ' +
+        'final do dia segue o sol, não a abertura do parque — por isso aqueles blocos são ' +
+        'fixos e não deslocam com a referência.',
+        pesquisa: '2026-09-08' },
     ],
 
     /* --------------------------------------------------------------------- */
@@ -3632,82 +3564,122 @@ window.ROTEIRO = {
       {
         letra: 'A',
         titulo: 'O dia como está escrito',
-        gatilho: 'Vocês estão na corda às 8h15 e o Test Track está operando.',
+        gatilho: 'Parque das 8h às 18h e o safári rodando até pelo menos 17h.',
         passos: [
-          'Test Track no rope drop, sem desviar para o Cosmic Rewind.',
-          'Mission: SPACE às 9h45 com o Multi Pass — e, na saída, reservem o Remy.',
-          'Cosmic Rewind às 10h20 com o Single Pass e Soarin’ às 11h15 com o Multi Pass.',
-          'A partir das 13h, World Showcase no sentido horário e quatro voltas de barracas.',
-          'Frozen com o Multi Pass e o Remy com a reserva rolando — as duas únicas filas da tarde.',
-          'Última volta às 20h e posição para o Luminous às 20h30.',
+          'Pré-fila no checkpoint da ÁFRICA, não na ponte de Pandora.',
+          'Safári, Everest e as trilhas de manhã, com o parque vazio do lado de cá.',
+          'Meio do dia nos shows e no Nomad Lounge, que é o descanso do dia.',
+          'Safári de novo às 16h30, agora atrás dos leões.',
+          'Na’vi às 17h15 e a fila do Flight of Passage às 17h45 — até o último minuto vale.',
+          'Sair devagar pela Pandora escura, com o Awakenings na Árvore da Vida.',
         ],
       },
       {
         letra: 'B',
-        titulo: 'O Test Track está fora do ar',
-        gatilho: 'Vocês chegam nele às 9h e está fechado, ou fecha durante a fila.',
+        titulo: 'O safári fecha cedo demais',
+        gatilho: 'Na parada das 15h25 vocês descobrem que o último caminhão sai antes das 16h30.',
         passos: [
-          'ISSO ACONTECE COM FREQUÊNCIA REAL AQUI. Não esperem em frente: as paradas dele em ' +
-          '2026 duraram horas, não minutos.',
-          'Pivô imediato para o pavilhão do The Land — The Seas e Living with the Land, ' +
-          'praticamente vazios na abertura. O Mission: SPACE continua às 9h45, com o passe.',
-          'O Cosmic Rewind e o Soarin’ não mudam — os dois têm hora marcada.',
-          'Se o Test Track voltar durante o dia, reservem-no rolando assim que usarem o ' +
-          'Soarin’, às 11h15 — o Remy já foi reservado depois do Mission: SPACE. Se não ' +
-          'voltar, não voltou: não vale reorganizar a tarde por causa dele.',
+          'VÃO AGORA. Larguem o resto e peguem o safári enquanto ele ainda roda — é o bloco ' +
+          'mais insubstituível da tarde.',
+          'Isso adianta a reta final. O Na’vi sobe para o horário que sobrar e vocês chegam ' +
+          'na fila do Flight of Passage mais cedo, o que é bom: mais margem antes do ' +
+          'fechamento.',
+          'Se sobrar tempo depois do Na’vi, o Everest de novo é o melhor uso — a fila dele ' +
+          'também cede no fim do dia.',
         ],
       },
       {
         letra: 'B2',
-        titulo: 'O parque não abre às 9h',
-        gatilho: 'O parque é 9h às 21h, oficial. O que ainda não saiu é a hora do Luminous.',
+        titulo: 'A Disney mexe no horário depois de publicado',
+        gatilho: 'O oficial é 8h às 18h, mas a semana do Thanksgiving costuma esticar o dia.',
         passos: [
-          'Mudem a referência do dia. A manhã inteira desloca junto, inclusive a saída das ' +
-          '7h15.',
-          'O LUMINOUS E A POSIÇÃO NÃO DESLOCAM: eles seguem o fechamento do parque, não a ' +
-          'abertura. Se o app avisar colisão em vermelho no fim da tarde, é a última volta de ' +
-          'barracas batendo na posição — e a solução é encurtar a volta, não atrasar o lugar.',
-          'As quatro voltas do Food & Wine são elásticas de propósito. Elas são a folga do dia.',
+          'ABRIU MAIS TARDE: mudem a referência aqui no app. A manhã inteira desloca junto, ' +
+          'inclusive a saída do hotel. Os shows têm sessão própria — confiram a grade e ' +
+          'ajustem no selo de horário de cada um.',
+          'FECHOU MAIS TARDE (19h ou 20h): o dia respira, MAS CUIDADO COM O SANAA. A mesa é ' +
+          'às 19h40 e a Disney cobra taxa de não comparecimento, com cancelamento exigido ' +
+          'com 2 horas de antecedência (+1 407-939-3463).\n\n' +
+          'Com fechamento às 19h ou às 20h, NÃO dá para fazer as duas coisas: a fila do ' +
+          'Flight of Passage no último minuto termina depois das 19h30, e ainda são 25 ' +
+          'minutos saindo de Pandora e 25 de Uber até a mesa das 19h40. Ou vocês remarcam o ' +
+          'Sanaa para as 21h logo de manhã, pelo My Disney Experience, ou mantêm a fila do ' +
+          'Flight of Passage às 17h45 como está no plano A e usam a folga que sobrou para ' +
+          'o Everest. A segunda opção é a segura.',
+          'A RETA FINAL NÃO DESLOCA COM A ABERTURA. Ela segue o sol e o fechamento, por isso ' +
+          'aqueles blocos são fixos. Se o app avisar colisão em vermelho no meio do dia, é o ' +
+          'almoço ou os shows batendo — ajustem esses, não o fim.',
         ],
       },
       {
         letra: 'C',
-        titulo: 'Chuva, cansaço ou o dia desandou',
-        gatilho: 'Chuva que não passa, ou vocês acordaram destruídos.',
+        titulo: 'Chuva forte ou o dia desandou',
+        gatilho: 'Chuva que não passa, cansaço, ou o dia atrasou demais.',
         passos: [
-          'O World Showcase é todo ao ar livre e é o coração do dia — chuva forte aqui dói ' +
-          'mais que nos outros parques.',
-          'O que funciona coberto: Spaceship Earth, The Seas, Living with the Land, Frozen, ' +
-          'Remy e o Gran Fiesta. Todos de fila curta, e os pavilhões do Japão, Marrocos e ' +
-          'Reino Unido têm área interna generosa.',
-          'O QUE NÃO SE SACRIFICA: o Luminous, e as quatro voltas de barracas — que são o dia.',
-          'Se o Luminous for cancelado por vento, saiam mais cedo. Amanhã é Universal Studios.',
+          'O Animal Kingdom é o parque com menos cobertura da Disney. Com chuva forte, o ' +
+          'Festival of the Lion King é teatro fechado, e o Nomad Lounge tem varanda ' +
+          'coberta com ventilador.',
+          'O safári RODA na chuva e os animais costumam ficar mais ativos. O caminhão tem ' +
+          'teto. Não é motivo para desistir dele.',
+          'O QUE NÃO SE SACRIFICA: a fila do Flight of Passage no fim, e o safári do ' +
+          'entardecer. Se for para cortar, cortem nesta ordem: o Everest de novo (15h45), ' +
+          'o Kali (9h15) e as trilhas. Os três são opcionais de propósito e existem ' +
+          'justamente para serem a margem.',
+          'Se vocês estiverem destruídos, o Sanaa às 19h40 tem tolerância curta e taxa por ' +
+          'não comparecimento: cancelem com 2 horas de antecedência pelo My Disney Experience ' +
+          'ou pelo +1 407-939-3463.',
         ],
       },
     ],
 
     /* --------------------------------------------------------------------- */
     naoPerca: [
-      { nome: 'O passaporte do Food & Wine', quando: 'hoje', custo: 'grátis',
-        motivo: 'Peguem na entrada do parque. É onde vocês marcam as barracas que já fizeram ' +
-                'e é o que transforma quatro voltas soltas numa coisa só. Sem ele, às 20h ' +
-                'ninguém lembra o que faltou.' },
+      { nome: 'Pandora escura, na saída', quando: 'hoje', custo: 'grátis',
+        motivo: 'A vegetação inteira é pintada com tinta reativa e acende em azul e roxo. ' +
+                'Saindo do Flight of Passage por volta das 18h30, vocês atravessam a land ' +
+                'no escuro e praticamente sem ninguém, porque o parque já fechou. É a ' +
+                'recompensa do dia e é de graça.',
+        pesquisa: '2026-09-10' },
 
-      { nome: 'Dividir cada prato entre os dois', quando: 'hoje', custo: 'economiza',
-        motivo: 'É assim que o festival funciona. Dividindo, dá para provar oito a dez ' +
-                'barracas ao longo da tarde; sem dividir, dá para quatro e vocês saem cheios ' +
-                'na terceira. Os pratos são pequenos de propósito.' },
+      { nome: 'Tree of Life Awakenings', quando: 'hoje', custo: 'grátis',
+        condicao: 'só em noites de outono e inverno',
+        motivo: 'Projeção de animais no tronco da Árvore da Vida, a cada dez minutos depois ' +
+                'que escurece, até o fechamento — e costuma continuar um pouco depois. ' +
+                'Novembro está na temporada. Vocês passam por baixo dela na saída, exatamente ' +
+                'nessa janela.',
+        pesquisa: '2026-09-10' },
 
-      { nome: 'A sopa de cheddar com bacon do Canadá', quando: 'hoje', custo: '~US$ 9',
-        motivo: 'Aparece em toda lista de melhores do festival, todo ano, há mais de uma ' +
-                'década. Fica no fim do anel, na volta 3 — que é justamente a hora em que ' +
-                'esfria o suficiente para uma sopa fazer sentido.' },
+      { nome: 'O safári ao entardecer', quando: 'hoje', custo: 'grátis',
+        motivo: 'Leões são noturnos. A chance real de ver um acordado é no fim da tarde, e a ' +
+                'Disney iluminou o percurso para o safári rodar depois do pôr do sol. É a ' +
+                'única atração do parque em que repetir dá conteúdo diferente.',
+        pesquisa: '2026-09-10' },
 
-      { nome: 'Mission: SPACE — a versão VERDE', quando: 'decidir', custo: 'incluso',
-        motivo: 'A laranja gira numa centrífuga de verdade e causa enjoo em muita gente — tem ' +
-                'saco no assento por um motivo. A verde é a mesma cabine sem girar, mesma ' +
-                'fila, mesma história. Se qualquer um dos dois tem tendência a enjoo, a verde ' +
-                'salva as duas horas seguintes, e a decisão é tomada na hora de entrar.' },
+      { nome: 'Kali River Rapids', quando: 'decidir', custo: 'grátis',
+        condicao: 'molha de verdade, e às 9h15 ainda está fresco',
+        motivo: 'Em novembro Orlando amanhece por volta dos 15°C. Se o dia estiver frio, ' +
+                'pular ganha 35 minutos e evita passar o resto do dia com roupa molhada. Se ' +
+                'estiver quente, é diversão barata e sem fila naquela hora.' },
+
+      { nome: 'Single Pass do Flight of Passage', quando: 'decidir',
+        custo: 'US$ 18–20 por pessoa',
+        motivo: 'PLANO B PAGO, não compra antecipada. O dia foi montado para pegar a fila de ' +
+                '40–65 minutos do fim da tarde em vez dos 100–180 do pico. Só vale comprar ' +
+                'se o parque fechar cedo demais para o plano caber, ou se vocês decidirem ' +
+                'que não querem encarar 50 minutos de fila no fim de um dia de dez horas. ' +
+                'A compra é na hora, pelo app, dentro do parque — se ainda houver janela.',
+        pesquisa: '2026-09-10' },
+
+      { nome: 'Starlight Safari', quando: 'descartado',
+        custo: 'US$ 75 a 89 por pessoa · US$ 150 a 178 no casal',
+        motivo:
+          'Safári noturno na savana do Animal Kingdom Lodge, 1h30, com óculos de visão ' +
+          'noturna, saindo às 20h30 e às 22h. Não exige hospedagem, e vocês já estarão no ' +
+          'Lodge para o Sanaa.\n\n' +
+          'Fica de fora por dois motivos. O preço — US$ 150 a 178 no casal, a mesma régua ' +
+          'que deixa o Amphicar de fora a US$ 62 por cabeça. E SERIA O TERCEIRO SAFÁRI DO ' +
+          'MESMO DIA: o roteiro já faz o Kilimanjaro de manhã e de novo ao entardecer, ' +
+          'quando os leões acordam.',
+        pesquisa: '2026-09-09' },
     ],
 
     /* --------------------------------------------------------------------- */
@@ -3727,7 +3699,7 @@ window.ROTEIRO = {
         { texto: 'Conferir o horário de abertura do Universal Studios', critico: true,
           motivo: 'Amanhã assume 9h. Se for outro, mudem a referência e a manhã desloca junto.' },
         { texto: 'Alarme para 6h45 nos dois celulares', critico: true,
-          motivo: 'Saída às 7h45, e hoje termina perto das 22h30. Um alarme só falha.' },
+          motivo: 'Saída às 7h45, e hoje termina perto das 21h30. Um alarme só falha.' },
         { texto: 'Mochila remontada e celular carregando', critico: true,
           motivo: 'Os dois soft flasks, barrinhas, protetor solar, power bank, cabo e uma camada ' +
                   'leve para cada um.\n\n' +
@@ -3735,436 +3707,459 @@ window.ROTEIRO = {
                   'com detector de metal em três — Hulk, VelociCoaster e Stardust Racers, ' +
                   'nenhuma delas amanhã. Levem o mínimo possível nos bolsos ' +
                   'amanhã — cada locker custa 10 a 15 minutos que o roteiro não conta.' },
-        { texto: 'Guardar as compras do World Showcase',
-          motivo: 'A Mitsukoshi do Japão e as lojas do Reino Unido são as melhores do parque. ' +
+        { texto: 'Guardar as compras da Windtraders',
+          motivo: 'A loja de Pandora fica na saída do Flight of Passage e é a única do tema. ' +
                   'Amanhã a mochila precisa sair leve.' },
       ],
     },
 
     blocos: [
-      { id: 'b-1611-0715', hora: '07:15', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-1611-0730', hora: '06:30', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Sair do hotel',
+        descricao: 'Uber, ~35 min, US$ 20–30. O AK tem entrada direta',
+        contexto:
+          'Diferente do Magic Kingdom, aqui o Uber deixa vocês na entrada — não há ' +
+          'monotrilho nem barco no meio. Ainda assim a saída é cedo, porque a estimativa é ' +
+          'que o parque abra às 8h e não às 9h: em novembro o Animal Kingdom costuma operar ' +
+          'das 8h às 18h.',
+        localId: 'animal-kingdom', acesso: [], critico: true, duracaoMin: 45 },
+
+      { id: 'b-1611-0815', hora: '07:15', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Portão · pré-fila no checkpoint da ÁFRICA',
+        descricao: 'Não na ponte de Pandora',
+        contexto:
+          'A MESMA DECISÃO CONTRAINTUITIVA DO DIA 11, e aqui ela é ainda mais forte.\n\n' +
+          'A CATRACA ABRE PARA TODO MUNDO 30 A 45 MINUTOS ANTES DAS 8H. Quem não é hóspede ' +
+          'passa pelo Oasis e espera na Discovery Island, em volta da Árvore da Vida. Os ' +
+          'checkpoints do Early Entry ficam ali, um na passagem para cada área, e vocês ' +
+          'esperam no da ÁFRICA.\n\n' +
+          'Mais de 90% dos visitantes correm para Pandora no rope drop — e o Early Entry do ' +
+          'Animal Kingdom INCLUI Pandora. São só quatro atrações no Early Entry e duas delas ' +
+          'são o Flight of Passage e o Na’vi. Ou seja: os hóspedes Disney já andaram nas duas ' +
+          'antes de vocês, e ainda estão na fila quando a corda solta para vocês, às 8h.\n\n' +
+          'O resto do parque fica praticamente vazio nos primeiros 60 a 90 minutos. Kilimanjaro ' +
+          'Safaris, Expedition Everest e Kali River Rapids costumam ser walk-on nessa janela. ' +
+          'É para lá que vocês vão.\n\n' +
+          'Café da manhã aqui, das barrinhas da mochila, e a foto de vocês com a Árvore da ' +
+          'Vida no fundo: ela fica no caminho do checkpoint, e antes das 8h a praça ainda não ' +
+          'encheu. O almoço é só às 12h30.\n\n' +
+          'PONTO DE ENCONTRO DE HOJE: a base da Árvore da Vida, na Discovery Island. É ' +
+          'visível de quase todo o parque e todo caminho passa por ela. Se vocês se ' +
+          'perderem, vão para lá e ESPEREM.',
+        localId: 'animal-kingdom', acesso: [], duracaoMin: 45, pesquisa: '2026-09-12',
+        curiosidades: [
+          { texto: 'Vocês esperam embaixo de uma árvore de concreto de 44 metros, com cerca de ' +
+                   '102 mil folhas artificiais. A estrutura foi fabricada em Houston, no pátio ' +
+                   'da Brown & Root — a empreiteira que construiu uma das primeiras ' +
+                   'plataformas de petróleo no mar do mundo.',
+            fonte: 'Wikipedia — Tree of Life (Disney); Wikipedia — Brown & Root', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1611-0935', hora: '08:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Kilimanjaro Safaris — rope drop',
+        descricao: 'Walk-on, e os animais estão ativos com o frio da manhã',
+        contexto:
+          'Safári de caminhão por 45 hectares com animais soltos de verdade — girafas, leões, ' +
+          'elefantes, rinocerontes. Dura cerca de 22 minutos e cada passeio é diferente.\n\n' +
+          'DE MANHÃ É QUANDO ELES ESTÃO ATIVOS: no calor da tarde se escondem na sombra. E ' +
+          'às 8h a fila não existe, porque o parque inteiro está em Pandora.\n\n' +
+          'Vocês voltam aqui às 16h30. É a única atração do parque em que repetir dá conteúdo ' +
+          'diferente, e o motivo está naquele bloco.',
+        areaParque: 'Africa', acesso: ['rope-drop', 'standby'], critico: true, duracaoMin: 34,
+        fila: { min: 10, quando: 'na abertura', pico: 55, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'A savana tem uns 45 hectares e 32 espécies. Os caminhões são GMC e Ford de ' +
+                   'verdade, movidos a propano, e a “lama” seca na lataria é cimento pintado.',
+            fonte: 'Wikipedia — Kilimanjaro Safaris', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1611-1040', hora: '08:40', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Expedition Everest',
+        descricao: 'Walk-on pelo mesmo motivo',
+        contexto:
+          'Montanha-russa dentro de uma montanha cenográfica de 60 metros, com um trecho longo ' +
+          'andando para trás no escuro. É a mais intensa do parque, mas ainda assim familiar — ' +
+          'sem inversões. A fila tem um museu de ioga e ietis que vale olhar.\n\n' +
+          'Ela está no Early Entry, mas continua vazia na abertura oficial porque todo mundo ' +
+          'que entrou cedo foi para Pandora.\n\n' +
+          'SINGLE RIDER: a Disney retirou a placa da fila de single rider em julho de 2026, e ' +
+          'ela deve acabar. Se precisarem, perguntem ao funcionário da entrada.',
+        areaParque: 'Asia', acesso: ['standby'], duracaoMin: 35,
+        fila: { min: 15, quando: 'na abertura', pico: 40, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'A montanha tem 199,5 pés, 60,8 metros: a partir de 200 pés a lei americana ' +
+                   'exigiria uma luz de aviso para aviões no topo. É a montanha artificial ' +
+                   'mais alta do mundo e custou uns US$ 100 milhões.',
+            fonte: 'Wikipedia — Expedition Everest', pesquisa: '2026-09-15' },
+          { texto: 'A fila tem um museu do Yeti com cerca de 8 mil objetos do Nepal, onde a ' +
+                   'Disney fez expedições de pesquisa em 2005.',
+            fonte: 'Wikipedia — Expedition Everest', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1611-0915', hora: '09:15', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Kali River Rapids',
+        descricao: 'MOLHA DE VERDADE. Opcional, e a decisão é o clima',
+        contexto:
+          'Bote circular por corredeiras. Não é radical — o valor está no cenário e em se ' +
+          'molhar junto. E vocês vão se molhar: não é respingo, é balde.\n\n' +
+          'A DECISÃO É A TEMPERATURA. Em novembro Orlando amanhece por volta dos 15°C e às ' +
+          '9h15 ainda não esquentou. Se o dia estiver fresco, pulem sem culpa e ganhem 35 ' +
+          'minutos — vocês têm capa de chuva na mochila, mas roupa molhada às 9h estraga o ' +
+          'resto do dia.\n\n' +
+          'Se fizerem: capa de chuva vestida, celular no Ziploc, e há lockers na entrada.',
+        areaParque: 'Asia', acesso: ['standby'], molha: true, opcional: true, duracaoMin: 35,
+        fila: { min: 15, quando: 'na abertura', pico: 45, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'Antes de abrir, em 1999, ela se chamaria Tiger Rapids Run. O percurso é ' +
+                   'uma denúncia: a floresta verde vira toco queimado, e um caminhão de ' +
+                   'madeira ilegal aparece atolado no rio.',
+            fonte: 'Wikipedia — Kali River Rapids', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1611-1415', hora: '09:50', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Maharajah Jungle Trek',
+        descricao: 'Trilha a pé. Tigres. Sem fila, no ritmo de vocês',
+        contexto:
+          'Trilha a pé por ruínas cenográficas com tigres, dragões-de-komodo e morcegos ' +
+          'gigantes. Sem fila, no seu ritmo, com muita sombra.\n\n' +
+          'Vem aqui de propósito: se vocês fizeram o Kali, é a hora de secar andando.',
+        areaParque: 'Asia', acesso: [], duracaoMin: 39,
+        curiosidades: [
+          { texto: 'A trilha conta a história de um marajá que cercou a floresta para caçar e ' +
+                   'morreu num acidente de caça. Gerações depois, a área virou santuário.',
+            fonte: 'Wikipedia — Maharajah Jungle Trek', pesquisa: '2026-09-15' },
+          { texto: 'Os tigres de hoje são de Sumatra, e dois filhotes nasceram no parque em ' +
+                   '2017. Os búfalos-d’água, que chegaram em 2015, têm nomes das personagens ' +
+                   'de The Golden Girls.',
+            fonte: 'Wikipedia — Maharajah Jungle Trek', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1611-1030p', hora: '10:35', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Parada — água, banheiro e sentar',
+        descricao: 'Quinze minutos. Banheiro na Harambe, ao lado do Tusker House',
+        contexto:
+          'Banheiro, encher os flasks num balcão de comida (água gelada de graça, é só ' +
+          'pedir) e sentar.\n\n' +
+          'Toda land tem banheiro, normalmente ao lado do maior balcão de comida. Não vale ' +
+          'procurar no mapa; vale parar quando o corpo pedir.',
+        areaParque: 'Africa', acesso: [], duracaoMin: 15 },
+
+      { id: 'b-1611-1545', hora: '10:50', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Gorilla Falls Exploration Trail',
+        descricao: 'Trilha. Ritmo lento de propósito',
+        contexto:
+          'Trilha a pé com gorilas, hipopótamos vistos por baixo d’água e um aviário. ' +
+          'Diferente do safári, aqui vocês param quanto quiserem.',
+        areaParque: 'Africa', acesso: [], duracaoMin: 40,
+        curiosidades: [
+          { texto: 'A trilha abriu com este nome em 1998, virou Pangani Forest Exploration ' +
+                   'Trail poucos meses depois e só recuperou o nome original em 2016.',
+            fonte: 'Wikipedia — Gorilla Falls Exploration Trail', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1611-1315', hora: '11:30', ancora: 'fixo', tipo: 'show',
+        titulo: 'Festival of the Lion King — chegar 11h30, show 11h50',
+        descricao: 'Os 20 min de chegar antes estão dentro deste bloco',
+        contexto:
+          'Espetáculo em teatro circular com acrobatas, cantores e carros alegóricos. É quase ' +
+          'todo música e acrobacia.\n\n' +
+          'CHEGUEM 11H30 PARA O SHOW DE 11H50. Os vinte minutos de antecedência não são ' +
+          'exagero: a plateia é por ordem de chegada e a primeira fila é ruim. Este bloco ' +
+          'já tem esse tempo dentro dele — não é folga.\n\n' +
+          'Vem logo depois do Gorilla Falls de propósito: os dois ficam na África, e assim ' +
+          'vocês atravessam para Pandora uma vez só, já indo almoçar.\n\n' +
+          'HORÁRIO FIXO de sessão — confiram a grade no app da Disney no dia e ajustem aqui ' +
+          'se a sessão for outra. Se a mais próxima for muito diferente das 11h30, o almoço ' +
+          'acompanha.',
+        areaParque: 'Africa', acesso: [], duracaoMin: 50, confirmarHorario: true,
+        curiosidades: [
+          { texto: 'Estreou com o parque, na Camp Minnie-Mickey. Com a obra de Pandora, ganhou ' +
+                   'este teatro em Harambe em 01/06/2014. A plateia se divide em quatro ' +
+                   'setores com nomes de bichos: girafa, elefante, javali e leão.',
+            fonte: 'Wikipedia — Festival of the Lion King', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1611-1215', hora: '12:30', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Almoço — Satu’li Canteen',
+        descricao: 'Balcão, em Pandora. Um dos melhores da Disney',
+        contexto:
+          'Serviço de balcão com tigelas montáveis — escolhem proteína e base. É ' +
+          'consistentemente eleito o melhor quick service do Walt Disney World.\n\n' +
+          'Usem mobile order pelo app: a fila do balcão aqui é longa e a do mobile order não ' +
+          'existe. Peçam durante o Festival of the Lion King, sentados.\n\n' +
+          'São dez minutos de caminhada da África até Pandora, e o app soma essa caminhada ' +
+          'aos 65 minutos deste bloco — não é tempo de mesa, é tempo de chegar.\n\n' +
+          'É a primeira vez que vocês pisam em Pandora hoje, e é de dia. Olhem as montanhas ' +
+          'flutuantes agora, porque à noite o lugar é outro — e vocês voltam.',
+        restauranteId: 'r-satuli', areaParque: 'Pandora', acesso: [], duracaoMin: 65,
+        curiosidades: [
+          { texto: 'As montanhas flutuantes têm 47 metros, com a sustentação de aço escondida ' +
+                   'por perspectiva forçada, e se inspiram nos picos de Zhangjiajie, na China. ' +
+                   'A land se passa gerações depois do filme.',
+            fonte: 'Wikipedia — Pandora – The World of Avatar', pesquisa: '2026-09-15' },
+          { texto: 'James Cameron conta que achava que a Disney queria uma atração de Avatar. ' +
+                   'A Disney queria a land inteira.',
+            fonte: 'Wikipedia — Pandora – The World of Avatar', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1611-1345', hora: '13:40', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Discovery Island Trails e a Árvore da Vida',
+        descricao: 'Trilhas curtas em volta da árvore. Quase ninguém faz',
+        contexto:
+          'Trilhas laterais que contornam a base da Árvore da Vida, com lêmures, lontras e ' +
+          'cangurus. Quase ninguém entra — a maioria fotografa a árvore de longe e segue.\n\n' +
+          'Olhem a árvore de perto: são 337 animais esculpidos no tronco e nas raízes. À ' +
+          'noite ela vira outra coisa, e vocês vão ver isso na saída.',
+        areaParque: 'Discovery Island', acesso: [], duracaoMin: 45,
+        curiosidades: [
+          { texto: 'A árvore levou 18 meses para ficar pronta, com três Imagineers e dez ' +
+                   'artistas liderados pelo escultor Zsolt Hormay.',
+            fonte: 'Wikipedia — Tree of Life (Disney)', pesquisa: '2026-09-15' },
+          { texto: 'Dentro do tronco há um teatro de 428 lugares. Foi o It’s Tough to Be a Bug ' +
+                   'de 1998 a 2025, e hoje passa o Zootopia.',
+            fonte: 'Wikipedia — Tree of Life (Disney)', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1611-1630', hora: '14:25', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Nomad Lounge — a varanda',
+        descricao: 'O lugar mais gostoso do parque. Drink e petisco',
+        contexto:
+          'Bar ao lado do Tiffins, com varanda sobre a água e ventiladores. Drinks autorais e ' +
+          'petiscos.\n\n' +
+          'Costuma ter espera de 15 a 30 minutos e não aceita reserva: entrem na lista de ' +
+          'espera pelo app da Disney, ou no balcão, e passeiem enquanto esperam.\n\n' +
+          'Esta hora é o VAZIO PROPOSITAL do dia, só que com sombra e bebida. Vocês vão ' +
+          'precisar dela: a partir das 16h30 o dia não para mais até o jantar.',
+        restauranteId: 'r-nomad', areaParque: 'Discovery Island', acesso: [], duracaoMin: 60,
+        curiosidades: [
+          { texto: 'O Tiffins, ao lado, abriu em 27/05/2016, no dia em que o parque começou a ' +
+                   'abrir à noite. A arte das salas dele nasceu das fotos e desenhos das ' +
+                   'viagens de pesquisa dos Imagineers pela África, Ásia e América do Sul.',
+            fonte: 'WDWNT; Wikipedia — Disney’s Animal Kingdom', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1611-1545p', hora: '15:25', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Parada — antes da reta final',
+        descricao: 'Flasks, power bank, o horário do safári. Banheiro junto do Flame Tree Barbecue',
+        contexto:
+          'A reta final começa agora e é coreografada minuto a minuto.\n\n' +
+          'COMAM ALGUMA COISA DA MOCHILA. Os petiscos do Nomad foram às 14h25 e o Sanaa é ' +
+          'às 19h40 — cinco horas, com o safári, o Na’vi e 55 minutos de fila do ' +
+          'Flight of Passage no meio. Entrar naquela fila com fome é o erro mais fácil de ' +
+          'evitar do dia.\n\n' +
+          'E duas conferências antes de tudo:\n\n' +
+          'CONFIRAM NO APP DA DISNEY A QUE HORAS O KILIMANJARO SAFARIS FECHA. Ele fecha 30 a ' +
+          '60 minutos ANTES do parque, e o bloco das 16h30 depende disso. Se o último caminhão ' +
+          'sair às 17h, está tudo bem. Se sair às 16h30, vão agora.\n\n' +
+          'E confiram a hora do fechamento do parque, que é o que sustenta o bloco do Flight ' +
+          'of Passage às 17h45.',
+        areaParque: 'Discovery Island', acesso: [], duracaoMin: 15, critico: true },
+
+      { id: 'b-1611-1041', hora: '15:45', ancora: 'fixo', tipo: 'atracao',
+        titulo: 'Expedition Everest de novo',
+        descricao: 'Opcional — e é também a margem da reta final',
+        contexto:
+          'O Animal Kingdom tem UMA montanha-russa e vocês a fizeram às 8h40. Este bloco ' +
+          'existe para ela não ser feita uma vez só num dia de dez horas.\n\n' +
+          'É DUPLO PROPÓSITO, e é por isso que ele é opcional: se o dia estiver no horário, ' +
+          'andem de novo — a fila do fim de tarde é curta. Se estiver atrasado, PULEM SEM ' +
+          'PENSAR. Estes 45 minutos são a margem que protege o safári do entardecer e a ' +
+          'fila do Flight of Passage, que são os dois blocos insubstituíveis do dia.',
+        areaParque: 'Asia', acesso: ['standby'], opcional: true, duracaoMin: 39,
+        fila: { min: 20, quando: 'no fim da tarde', pico: 40, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'O Yeti tem 7,6 metros e era o maior animatrônico da Disney quando a ' +
+                   'atração abriu, em 2006. Meses depois a estrutura rachou, e desde então ele ' +
+                   'fica parado sob luz estroboscópica — o “Disco Yeti”. Em 15/08/2026 a ' +
+                   'Disney anunciou na D23 que vai consertá-lo, ainda sem data.',
+            fonte: 'Wikipedia — Expedition Everest; BlogMickey; Wandering In Disney', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1611-1631', hora: '16:30', ancora: 'fixo', tipo: 'atracao',
+        titulo: 'Kilimanjaro Safaris DE NOVO — agora ao entardecer',
+        descricao: 'Os leões acordam. É outro safári',
+        contexto:
+          'É A ÚNICA ATRAÇÃO DO PARQUE EM QUE REPETIR DÁ CONTEÚDO DIFERENTE, e é o melhor ' +
+          'truque do dia.\n\n' +
+          'Leões são noturnos e dormem o dia inteiro. A chance real de ver leão acordado é no ' +
+          'fim da tarde, perto do fechamento — e a Disney instalou iluminação em todo o ' +
+          'percurso justamente para o safári continuar rodando depois que o sol se põe.\n\n' +
+          'De quebra, a última hora do safári é quando praticamente não há fila: quem queria ' +
+          'já foi de manhã.\n\n' +
+          'HORÁRIO FIXO, colado no fim do dia e não na abertura. E confirmem o horário de ' +
+          'fechamento do safári na parada anterior — ele fecha antes do parque.',
+        areaParque: 'Africa', acesso: ['standby'], critico: true, duracaoMin: 35,
+        fila: { min: 15, quando: 'na última hora', pico: 55, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'O safári noturno voltou em 2016, com um “pôr do sol” artificial e sons de ' +
+                   'animais no percurso.',
+            fonte: 'Wikipedia — Kilimanjaro Safaris', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1611-0900', hora: '17:15', ancora: 'fixo', tipo: 'atracao',
+        titulo: 'Na’vi River Journey',
+        descricao: 'A fila também cede no fim do dia',
+        contexto:
+          'Passeio de barco de 5 minutos por uma floresta bioluminescente de Pandora. Não tem ' +
+          'emoção nenhuma — é puramente visual, e o animatrônico da Xamã no fim é considerado ' +
+          'o melhor que a Disney já construiu.\n\n' +
+          'Capacidade baixa e fila cruel o dia inteiro; no fim do fim ela cede junto com o ' +
+          'resto do parque. E é a entrada certa para o que vem depois: vocês já ficam em ' +
+          'Pandora, com o sol se pondo.',
+        areaParque: 'Pandora', acesso: ['standby'], duracaoMin: 30,
+        fila: { min: 30, quando: 'no fim do dia', pico: 65, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'A música é de James Horner, o compositor de Avatar, com Simon Franglen.',
+            fonte: 'Wikipedia — Na’vi River Journey', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1611-1120', hora: '17:45', ancora: 'fixo', tipo: 'atracao',
+        titulo: 'ENTRAR NA FILA do Flight of Passage',
+        descricao: 'A melhor atração do Walt Disney World, pelo menor preço do dia',
+        contexto:
+          'Simulador em que vocês montam num banco de moto e “voam” num banshee sobre ' +
+          'Pandora, com tela 3D gigante, vento, cheiro e o banco respirando embaixo de vocês. ' +
+          'É consenso como a melhor atração da Disney no mundo.\n\n' +
+          'ESTE BLOCO É O MOTIVO DE O DIA INTEIRO ESTAR NESTA ORDEM. A fila dele fica entre ' +
+          '100 e 180 minutos das 11h às 15h, e cai para 40 a 65 depois das 17h. Entrando ' +
+          'agora, vocês pagam a menor fila do dia pela maior atração do complexo — e não ' +
+          'gastam o Single Pass.\n\n' +
+          'A REGRA QUE FAZ ISSO FUNCIONAR: quem está na fila no horário de fechamento anda. ' +
+          'Dá para entrar até o último minuto e completar a atração depois do parque fechado. ' +
+          'Se a fila estiver em 50 minutos e faltarem 15 para fechar, entrem mesmo assim.\n\n' +
+          'Há locker na entrada e nada solto é permitido.',
+        areaParque: 'Pandora', acesso: ['standby'], locker: true, critico: true, duracaoMin: 55,
+        fila: { min: 50, quando: 'na última hora', pico: 180, fonte: '2026-09-10' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'A imagem é em 10K a 60 quadros por segundo, e a atração ganhou em 2018 o ' +
+                   'prêmio da Visual Effects Society. Na história, vocês são “ligados” a um ' +
+                   'avatar para voar num banshee — o rito de passagem dos jovens Na’vi.',
+            fonte: 'Wikipedia — Avatar Flight of Passage', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1611-1730', hora: '18:40', ancora: 'fixo', tipo: 'livre',
+        titulo: 'Sair caminhando pela Pandora escura',
+        descricao: 'Acesa, vazia, e com a Árvore da Vida acordando no caminho',
+        contexto:
+          'ESTA É A RECOMPENSA DO DIA E ELA É DE GRAÇA.\n\n' +
+          'Toda a vegetação de Pandora é pintada com tinta reativa e acende em azul e roxo ' +
+          'quando escurece. Saindo do Flight of Passage por volta das 18h30, vocês atravessam ' +
+          'a land inteira no escuro, iluminada, e praticamente sem ninguém — porque o parque ' +
+          'já fechou e todo mundo foi embora.\n\n' +
+          'No caminho para a saída, parem embaixo da ÁRVORE DA VIDA: o Tree of Life Awakenings ' +
+          'roda a cada dez minutos depois que escurece, projetando animais no tronco. Ele só ' +
+          'acontece em noites de outono e inverno — novembro está dentro — e costuma continuar ' +
+          'um pouco depois do fechamento.\n\n' +
+          'Não corram. Este bloco não tem fila, não tem ingresso e é o que vocês vão lembrar.\n\n' +
+          'A WINDTRADERS FICA NA SAÍDA DO FLIGHT OF PASSAGE, e é a única loja de Pandora. ' +
+          'Se vocês querem trazer alguma coisa deste dia, é aqui e é agora — amanhã não ' +
+          'passa por aqui, e a loja fecha junto com o parque. Vale entrar mesmo que seja ' +
+          'só para olhar.',
+        areaParque: 'Pandora', acesso: [], duracaoMin: 25, pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'O Tree of Life Awakenings estreou em 27/05/2016.',
+            fonte: 'Wikipedia — Tree of Life (Disney)', pesquisa: '2026-09-15' },
+          { texto: 'Pandora tem 20 espécies de plantas inventadas para a land, e algumas ' +
+                   'reagem ao toque com sensores da Disney Research.',
+            fonte: 'Wikipedia — Pandora – The World of Avatar', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1611-1830', hora: '19:05', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Uber para o Animal Kingdom Lodge',
+        descricao: 'Uber, ~10 min, US$ 10–15. Destino: Kidani Village, não o parque',
+        contexto:
+          'O Sanaa NÃO é dentro do parque: fica na Kidani Village, a ala de villas do Animal ' +
+          'Kingdom Lodge, em 3701 Osceola Pkwy. No Uber, o destino é "Disney’s Animal ' +
+          'Kingdom Villas – Kidani Village", e não o parque nem o prédio principal do Lodge, ' +
+          'que tem outra entrada.\n\n' +
+          'Levem o número da reserva à mão: 356258407484. Chegando 19h30, vocês têm ' +
+          'dez minutos de folga antes da mesa.',
+        localId: 'ak-lodge', acesso: [], duracaoMin: 25, pesquisa: '2026-09-15' },
+
+      { id: 'b-1611-1940', hora: '19:40', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Jantar — Sanaa',
+        descricao: 'Vão pela comida, não pela janela',
+        contexto:
+          'Cozinha indiana com influência africana; o nome quer dizer “obra de arte” em ' +
+          'suaíli.\n\n' +
+          'NÃO PEÇAM MESA NA JANELA. O pôr do sol em 16/11 é por volta das 17h30 e vocês ' +
+          'chegam às 19h40 — está escuro há mais de duas horas. A savana tem iluminação ' +
+          'fraca e, de dentro, o vidro vira espelho. A promessa de girafas e zebras na ' +
+          'janela é real, mas só de dia. E hoje vocês já viram os bichos duas vezes, no ' +
+          'safári.\n\n' +
+          'O que sustenta a escolha é a comida. Peçam o BREAD SERVICE: cinco pães ' +
+          'indianos com nove acompanhamentos, ~US$ 23, enorme e feito para dividir. É o ' +
+          'prato mais elogiado do Walt Disney World inteiro e não existe igual em ' +
+          'nenhum outro restaurante daqui.\n\n' +
+          'Nos pratos principais: curry de frutos do mar goês, butter chicken, carne ' +
+          'braseada ou vindaloo de porco, entre US$ 15 e 35. Reserva pelo My Disney ' +
+          'Experience, janela abre 14/09. HORÁRIO FIXO de reserva.',
+        restauranteId: 'r-sanaa', localId: 'ak-lodge', acesso: ['reserva'], duracaoMin: 90,
+        curiosidades: [
+          { texto: 'Kidani quer dizer “colar” em suaíli. A Kidani Village, onde fica o Sanaa, ' +
+                   'abriu em 2009.',
+            fonte: 'D23; Wikipedia — Disney’s Animal Kingdom Lodge', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1611-2115', hora: '21:15', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voltar ao hotel',
         descricao: 'Uber, ~25 min, US$ 20–30',
         contexto:
-          'O Epcot tem entrada direta e a segurança aqui é mais rápida que no Hollywood ' +
-          'Studios. Saindo 7h15 vocês estão na corda às 8h15, 45 minutos antes da abertura: ' +
-          'a catraca já abriu, e a espera é do lado de dentro.',
-        localId: 'epcot', acesso: [], duracaoMin: 60 },
-
-      { id: 'b-1611-0815', hora: '08:15', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Portão · posicionar para o WORLD DISCOVERY',
-        descricao: 'Test Track, não Cosmic Rewind',
-        contexto:
-          'PELA QUARTA VEZ O PONTO CERTO É O CONTRAINTUITIVO, e aqui o erro seria duplo.\n\n' +
-          'A CATRACA ABRE POR VOLTA DAS 7H30, uma hora antes do Early Entry, para todo mundo. ' +
-          'Na Spaceship Earth o caminho se divide: quem tem Early Entry segue por um lado, e ' +
-          'quem não tem é segurado do outro até as 9h. Chegando às 8h15 vocês estão nessa ' +
-          'corda com mais folga que os 30 minutos que os guias pedem para quem é de fora.\n\n' +
-          'Quem entra pela frente com Early Entry vai para o COSMIC REWIND — é a recomendação ' +
-          'padrão para hóspedes. Correr para lá às 9h é entrar atrás de meia hora de fila já ' +
-          'formada, e gastar o Single Pass no único horário em que ele não precisaria ser ' +
-          'gasto.\n\n' +
-          'Vocês vão para o Test Track, que fica na mesma área. Ele é a segunda pior fila do ' +
-          'parque e o rope drop é a ÚNICA janela barata dele: 53 minutos agora contra 99 de ' +
-          'média no resto do dia.\n\n' +
-          'PONTO DE ENCONTRO DE HOJE: a Spaceship Earth — a esfera. É o símbolo do parque, ' +
-          'fica na entrada e é visível de quase todo lugar. Se vocês se perderem, vão para a ' +
-          'base dela e ESPEREM.\n\n' +
-          'Café da manhã aqui, das barrinhas da mochila, e a foto da esfera antes de a praça ' +
-          'encher.',
-        localId: 'epcot', acesso: [], duracaoMin: 45, pesquisa: '2026-09-12',
-        curiosidades: [
-          { texto: 'A Spaceship Earth tem 55 metros e 11.324 facetas prateadas. A chuva não ' +
-                   'escorre pela esfera: entra por frestas entre as facetas e desce por calhas ' +
-                   'até o lago do World Showcase.',
-            fonte: 'Wikipedia — Spaceship Earth', pesquisa: '2026-09-15' },
-          { texto: 'O escritor Ray Bradbury ajudou a projetar a esfera e a escrever a história ' +
-                   'original da atração.',
-            fonte: 'Wikipedia — Spaceship Earth', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1611-0950', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Test Track — rope drop',
-        descricao: 'A única janela barata dele. E ele quebra muito',
-        contexto:
-          'Vocês desenham um carro num painel e depois andam num veículo que faz testes de ' +
-          'curva, freio e um trecho externo a 104 km/h. É a atração mais rápida que a Disney ' +
-          'já construiu.\n\n' +
-          'POR QUE AGORA E NÃO DEPOIS: 53 minutos no rope drop contra 99 de média no dia. É a ' +
-          'segunda pior fila do Epcot e não existe outra janela.\n\n' +
-          'E TEM UM SEGUNDO MOTIVO: em 2026, um ano depois de reabrir, o Test Track quebrou ' +
-          'muito — parada de quase 24 horas em 1º de agosto, outra de cinco horas no dia 23 ' +
-          'que comeu a tarde inteira, e falhas mecânicas em fevereiro. Se ele vai cair, cai no ' +
-          'meio do dia. Andar agora é a única forma de não depender disso.',
-        areaParque: 'World Discovery', acesso: ['rope-drop', 'standby'], acessoAlt: 'single-rider',
-        critico: true,
-        duracaoMin: 45,
-        fila: { min: 53, quando: 'no rope drop', pico: 99, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10',
-        curiosidades: [
-          { texto: 'A primeira versão atrasou quase dois anos por problemas nas rodas e no ' +
-                   'software e só abriu em 1999, no lugar do World of Motion. A atual, a ' +
-                   'terceira, reabriu em 22/07/2025, de novo com a General Motors.',
-            fonte: 'Wikipedia — Test Track', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1611-1035', hora: '09:45', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Mission: SPACE — Orange',
-        descricao: 'Multi Pass · lista baixa. Na saída, reservem o Remy',
-        contexto:
-          'Simulador de lançamento espacial dentro de uma centrífuga que gera força G real. A ' +
-          'versão LARANJA causa enjoo em muita gente — tem saco no assento por um motivo.\n\n' +
-          'A VERDE é a mesma cabine sem girar, e a fila é a mesma até o ponto em que vocês ' +
-          'escolhem. Se qualquer um dos dois tem tendência a enjoo, peguem a verde: não é ' +
-          'vergonha nenhuma e salva as duas horas seguintes.\n\n' +
-          'É O PRIMEIRO USO DO MULTI PASS, e cada reserva usada libera a próxima. NA SAÍDA, ' +
-          'RESERVEM O REMY no app, para o fim da tarde: o Multi Pass dele costuma esgotar ' +
-          'antes das 11h.',
-        areaParque: 'World Discovery', acesso: ['multi-pass'], duracaoMin: 33,
-        fila: { min: 10, quando: 'com o Multi Pass', pico: 40, estimado: true, fonte: '2026-09-10' },
-        pesquisa: '2026-09-11',
-        curiosidades: [
-          { texto: 'Ocupa o terreno do Horizons, que fechou em 1999. A inauguração, em 2003, ' +
-                   'teve o administrador da NASA e astronautas, e até 2017 quem falava com os ' +
-                   'tripulantes pelo rádio era o Gary Sinise, de Apollo 13. Hoje é a Gina ' +
-                   'Torres.',
-            fonte: 'Wikipedia — Mission: Space', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1611-0900', hora: '10:20', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Guardians of the Galaxy: Cosmic Rewind',
-        descricao: 'Single Pass, janela entre 10h15 e 10h45',
-        contexto:
-          'Montanha-russa fechada e no escuro, com lançamento e cabines que giram 360° para ' +
-          'onde a cena está acontecendo. Sem inversões, mas rápida. Cada volta sorteia uma ' +
-          'música diferente dos anos 70 e 80. É a melhor atração do Epcot.\n\n' +
-          'POR QUE O PASSE FICA: ele faz 101 minutos de média e as fontes são diretas — mesmo ' +
-          'às 8h da manhã ele passa de uma hora. Não existe janela barata em nenhum momento ' +
-          'do dia, e é a mesma situação do Rise of the Resistance no dia 15.\n\n' +
-          'A fila virtual acabou em fevereiro de 2025: hoje é standby ou Single Pass, sem ' +
-          'sorteio às 7h da manhã.',
-        areaParque: 'World Discovery', acesso: ['single-pass'], critico: true, duracaoMin: 45,
-        fila: { min: 10, quando: 'com o Single Pass', pico: 101, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10',
-        curiosidades: [
-          { texto: 'Foi a primeira montanha-russa da Disney lançada de ré e é uma das mais ' +
-                   'longas do mundo em ambiente fechado, com 1,7 km. Custou cerca de US$ 500 ' +
-                   'milhões e ocupa o lugar do Universe of Energy, fechado em 2017.',
-            fonte: 'Wikipedia — Guardians of the Galaxy: Cosmic Rewind', pesquisa: '2026-09-15' },
-          { texto: 'As seis músicas que podem ser sorteadas: September, One Way or Another, ' +
-                   'Everybody Wants to Rule the World, Conga, I Ran e Disco Inferno.',
-            fonte: 'Wikipedia — Guardians of the Galaxy: Cosmic Rewind', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1611-1115', hora: '11:15', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Soarin’ Across America',
-        descricao: 'Multi Pass · lista baixa. Filme novo desde maio de 2026',
-        contexto:
-          'Vocês sentam num banco que sobe e balança na frente de uma tela IMAX côncava, com ' +
-          'sensação de estar voando de pernas soltas. Tem cheiro sincronizado com as cenas. ' +
-          'Suave, sem emoção forte — agrada praticamente todo mundo.\n\n' +
-          'O filme é o Across America desde 26/05/2026, com trilha nova e uma fila temática ' +
-          'da National Geographic.\n\n' +
-          'A fila dele sai de praticamente zero na abertura para 74 minutos às 16h. Com o ' +
-          'Multi Pass às 11h15 ela deixa de importar, e ele fecha a manhã antes do World ' +
-          'Showcase.',
-        areaParque: 'World Nature', acesso: ['multi-pass'], duracaoMin: 45,
-        fila: { min: 10, quando: 'com o Multi Pass', pico: 74, fonte: '2026-09-10' },
-        pesquisa: '2026-09-11',
-        curiosidades: [
-          { texto: 'O mecanismo nasceu de um protótipo que o engenheiro Mark Sumner montou com ' +
-                   'Meccano e barbante. O filme Across America, de 26/05/2026, foi feito para ' +
-                   'os 250 anos dos Estados Unidos.',
-            fonte: 'Wikipedia — Soarin’', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1611-1200', hora: '12:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'The Seas e Living with the Land',
-        descricao: 'Os dois no mesmo pavilhão. Fila curta, ar-condicionado',
-        contexto:
-          'The Seas é um aquário enorme, com peixes-boi, e dá para ficar o tempo ' +
-          'que quiserem. Living with the Land é um passeio de barco por estufas hidropônicas ' +
-          'REAIS, onde a Disney cultiva parte do que serve nos restaurantes do parque — ' +
-          'inclusive o que vocês podem comer hoje.\n\n' +
-          'Os dois são calmos, quase sem fila, e caem na pior hora de calor de propósito.',
-        areaParque: 'World Nature', acesso: ['standby'], duracaoMin: 40,
-        fila: { min: 10, quando: 'quase sempre', pico: 25, estimado: true, fonte: '2026-09-10' },
-        curiosidades: [
-          { texto: 'O aquário do The Seas tem 21,6 milhões de litros, o segundo maior dos ' +
-                   'Estados Unidos. Os dois peixes-boi são animais resgatados.',
-            fonte: 'Wikipedia — The Seas with Nemo & Friends', pesquisa: '2026-09-15' },
-          { texto: 'As estufas do Living with the Land colhem mais de 30 toneladas por ano, ' +
-                   'servidas no Garden Grill e no Sunshine Seasons, e um pé de tomate delas ' +
-                   'entrou no Guinness: mais de 32 mil tomates em 16 meses.',
-            fonte: 'Wikipedia — Living with the Land', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1611-1240p', hora: '12:40', ancora: 'referencia', tipo: 'pausa',
-        titulo: 'Parada — antes de virar o dia',
-        descricao: 'A partir daqui o Epcot é outro parque. Banheiro dentro do The Land, junto do Sunshine Seasons',
-        contexto:
-          'Banheiro, flasks cheios e sentar.\n\n' +
-          'DAQUI PARA A FRENTE O DIA MUDA DE NATUREZA: acabaram as filas e começa o World ' +
-          'Showcase, que é comida e caminhada. Não há mais nenhum compromisso de relógio até ' +
-          'o Luminous, às 21h.\n\n' +
-          'Não comam agora: em vinte minutos vocês estarão na primeira barraca.',
-        areaParque: 'World Nature', acesso: [], duracaoMin: 14 },
-
-      { id: 'b-1611-1245', hora: '13:00', ancora: 'referencia', tipo: 'livre',
-        titulo: 'World Showcase — México',
-        descricao: 'Comecem aqui, sentido horário',
-        contexto:
-          'O World Showcase são onze pavilhões de países ao redor de um lago, cada um com ' +
-          'arquitetura, lojas e comida do país, e funcionários nativos daquele país — ' +
-          'estudantes num programa de intercâmbio da Disney. Dá para conversar em espanhol no ' +
-          'México e em português no… não, não tem Brasil. Mas o México resolve.\n\n' +
-          'A volta completa a pé é de cerca de 2 km. Sentido horário a partir do México deixa ' +
-          'França, Reino Unido e Canadá para o fim da tarde, que é quando eles ficam bonitos.',
-        areaParque: 'World Showcase', acesso: [], duracaoMin: 20 },
-
-      { id: 'b-1611-1300', hora: '13:20', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Gran Fiesta Tour',
-        descricao: 'Barquinho dentro da pirâmide. Fila mínima',
-        contexto:
-          'Passeio de barco lento dentro do pavilhão do México, que por dentro é um mercado ' +
-          'noturno cenográfico permanente, com vulcão ao fundo. Fresco, escuro e quase sempre ' +
-          'sem fila. É o clássico mais subestimado do parque.',
-        areaParque: 'World Showcase', acesso: ['standby'], duracaoMin: 20,
-        fila: { min: 5, quando: 'quase sempre', pico: 15, estimado: true, fonte: '2026-09-10' },
-        curiosidades: [
-          { texto: 'Até 2007 o passeio se chamava El Río del Tiempo. A versão atual ganhou o ' +
-                   'Pato Donald e os Três Cavaleiros.',
-            fonte: 'Wikipedia — Mexico Pavilion at Epcot', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1611-1330', hora: '13:40', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Frozen Ever After',
-        descricao: 'Noruega. Multi Pass · lista alta',
-        contexto:
-          'Passeio de barco pelo mundo de Frozen, com animatrônicos muito bons e um trecho ' +
-          'curto de ré. A fila é sempre desproporcional ao tamanho da atração — 45 a 75 ' +
-          'minutos —, e é por isso que ela leva a lista alta do Multi Pass.\n\n' +
-          'É AQUI QUE O MULTI PASS SE PAGA. Esta e o Remy são as duas únicas filas do World ' +
-          'Showcase, e elas competem diretamente com as barracas do Food & Wine, que é o que ' +
-          'vocês vieram fazer. Nos outros dias a fila compete com outra fila; aqui compete com ' +
-          'o dia.',
-        areaParque: 'World Showcase', acesso: ['multi-pass'], duracaoMin: 40,
-        fila: { min: 10, quando: 'com o Multi Pass', pico: 75, fonte: '2026-09-10' },
-        curiosidades: [
-          { texto: 'Usa os barcos e o percurso do Maelstrom, a atração viking que funcionou ' +
-                   'aqui até 2014. O pavilhão da Noruega, de 1988, é o país mais novo do World ' +
-                   'Showcase.',
-            fonte: 'Wikipedia — Frozen Ever After; Wikipedia — World Showcase', pesquisa: '2026-09-15' },
-          { texto: 'Foram os primeiros animatrônicos totalmente elétricos da Disney, e em ' +
-                   '12/02/2026 os três personagens principais ganharam a tecnologia do World ' +
-                   'of Frozen de Hong Kong.',
-            fonte: 'Wikipedia — Frozen Ever After', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1611-1415', hora: '14:20', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Food & Wine — volta 1',
-        descricao: 'China, Alemanha, Itália. E é isto o almoço',
-        contexto:
-          'Barracas espalhadas pelo World Showcase, cada uma com dois a quatro pratos pequenos ' +
-          'e bebidas. PEGUEM O PASSAPORTE na entrada do parque.\n\n' +
-          'A ESTRATÉGIA: dividam cada prato entre os dois e provem oito a dez barracas ao ' +
-          'longo da tarde, em vez de fazer três refeições. É assim que o festival funciona, e ' +
-          'é por isso que hoje não existe bloco de almoço nem de jantar — o Food & Wine É as ' +
-          'duas refeições, servidas em quatro voltas.\n\n' +
-          'Destaques que se repetem todo ano: Canadá (sopa de cheddar com bacon), Alemanha, ' +
-          'Grécia e o waffle da Bélgica. O cardápio de 2026 sai no app da Disney.\n\n' +
-          'A caminhada entre os pavilhões está dentro da duração deste bloco — ele não é uma ' +
-          'parada, é a volta.',
-        areaParque: 'World Showcase', acesso: [], duracaoMin: 70,
-        curiosidades: [
-          { texto: 'A Alemanha foi projetada com um passeio de barco pelos rios Reno, Tauber, ' +
-                   'Ruhr e Isar que nunca foi construído. O saguão de entrada dele virou salão ' +
-                   'de restaurante.',
-            fonte: 'Wikipedia — Germany Pavilion at Epcot', pesquisa: '2026-09-15' },
-          { texto: 'O templo da China copia o Templo do Céu, de Pequim. O campanário e o ' +
-                   'palácio da Itália copiam a Praça de São Marcos, de Veneza.',
-            fonte: 'Wikipedia — China Pavilion at Epcot; Wikipedia — Italy Pavilion at Epcot', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1611-1600', hora: '15:30', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Food & Wine — volta 2',
-        descricao: 'Japão, Marrocos. O trecho mais bonito do anel',
-        contexto:
-          'O pavilhão do Japão tem uma loja de departamentos de verdade, a Mitsukoshi, que é ' +
-          'a melhor loja do World Showcase. O do Marrocos é o mais elaborado ' +
-          'arquitetonicamente e quase sempre o mais vazio.\n\n' +
-          'Caminhada inclusa na duração.',
-        areaParque: 'World Showcase', acesso: [], duracaoMin: 75,
-        curiosidades: [
-          { texto: 'O pagode do Japão copia o do templo Horyuji, e o portão na água, o do ' +
-                   'santuário de Itsukushima. A Mitsukoshi daqui é a única filial da rede que ' +
-                   'sobrou na América do Norte.',
-            fonte: 'Wikipedia — Japan Pavilion at Epcot', pesquisa: '2026-09-15' },
-          { texto: 'O Marrocos, de 1984, foi patrocinado diretamente pelo governo marroquino ' +
-                   'até 2020.',
-            fonte: 'Wikipedia — World Showcase', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1611-1700', hora: '16:45', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Remy’s Ratatouille Adventure',
-        descricao: 'França. Multi Pass rolando, reservado às 9h45',
-        contexto:
-          'Vocês encolhem ao tamanho de um rato e andam por uma cozinha em escala gigante, em ' +
-          'veículos sem trilhos com telas e cheiro sincronizado. Sem emoção forte, e a ' +
-          'escala do cenário é o ponto alto.\n\n' +
-          'Segunda das duas filas do World Showcase, e a segunda razão do Multi Pass: 40 a 60 ' +
-          'minutos no standby, dez com o passe.\n\n' +
-          'É A RESERVA ROLANDO, feita na saída do Mission: SPACE. SE NÃO HOUVER HORÁRIO, a ' +
-          'fila de standby do Remy à tarde fica perto de uma hora: decidam na hora entre ' +
-          'trocar a volta 2 pela fila ou deixar o Remy de fora.',
-        areaParque: 'World Showcase', acesso: ['multi-pass'], duracaoMin: 45,
-        fila: { min: 10, quando: 'com o Multi Pass', pico: 60, fonte: '2026-09-10' },
-        pesquisa: '2026-09-11',
-        curiosidades: [
-          { texto: 'Estreou em 01/10/2021, nos 50 anos do Walt Disney World, copiando a ' +
-                   'atração que a Disneyland Paris abriu em 2014. Os diálogos alternam inglês ' +
-                   'e francês.',
-            fonte: 'Wikipedia — Remy’s Ratatouille Adventure', pesquisa: '2026-09-15' },
-          { texto: 'Desde novembro de 2025 roda sem óculos 3D, e em 2026 ganhou objetos de ' +
-                   'cenário gigantes.',
-            fonte: 'Guide2WDW; WDWNT', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1611-1745', hora: '17:30', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Food & Wine — volta 3',
-        descricao: 'França, Reino Unido, Canadá. O jantar de vocês',
-        contexto:
-          'A volta mais longa e a melhor: os três pavilhões finais são os mais gostosos ao ' +
-          'entardecer, e o Canadá tem a sopa de cheddar com bacon que aparece em toda lista ' +
-          'de melhores do festival.\n\n' +
-          'O pub do Reino Unido serve cerveja de verdade e costuma ter música ao vivo no ' +
-          'pátio. É o melhor lugar do parque para sentar sem pressa.\n\n' +
-          'ESTE É O JANTAR. Não há outro bloco de refeição hoje — de propósito.',
-        areaParque: 'World Showcase', acesso: [], duracaoMin: 85,
-        curiosidades: [
-          { texto: 'O Les Chefs de France foi aberto em 1982 por Paul Bocuse, Roger Vergé e ' +
-                   'Gaston Lenôtre. Desde 1996 é tocado pelo filho de Bocuse, Jérôme.',
-            fonte: 'Wikipedia — France Pavilion at Epcot', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1611-1900', hora: '19:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Spaceship Earth',
-        descricao: 'A fila some à noite. A esfera por dentro',
-        contexto:
-          'O passeio dentro da esfera geodésica que é o símbolo do Epcot. Conta a história da ' +
-          'comunicação humana em cenários com animatrônicos, subindo em espiral até o topo. ' +
-          'Lento e climatizado.\n\n' +
-          'À noite a fila praticamente some, e vocês passam por ela de qualquer jeito na ' +
-          'volta para o lago.',
-        areaParque: 'World Celebration', acesso: ['standby'], duracaoMin: 50,
-        fila: { min: 10, quando: 'à noite', pico: 40, estimado: true, fonte: '2026-09-10' },
-        curiosidades: [
-          { texto: 'A narradora é a Judi Dench, desde 2007. Antes dela vieram Vic Perrin, ' +
-                   'Walter Cronkite e Jeremy Irons.',
-            fonte: 'Wikipedia — Spaceship Earth', pesquisa: '2026-09-15' },
-          { texto: 'Na D23 de agosto de 2026 a Disney anunciou uma versão nova da atração, ' +
-                   'sobre conexão humana e a era da internet. Ainda não há data de fechamento.',
-            fonte: 'Wikipedia — Spaceship Earth; Inside the Magic', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1611-2000', hora: '20:00', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Food & Wine — última volta',
-        descricao: 'O que ficou faltando, a caminho do lago',
-        contexto:
-          'Última passada nas barracas que vocês marcaram no passaporte e não fizeram. As ' +
-          'filas das barracas caem depois das 20h, quando a maioria já está pegando lugar ' +
-          'para o show.\n\n' +
-          'Comprem a bebida AGORA e levem para o lugar do Luminous — de lá não dá para sair ' +
-          'sem perder a vaga.',
-        areaParque: 'World Showcase', acesso: [], duracaoMin: 30 },
-
-      { id: 'b-1611-2030p', hora: '20:30', ancora: 'fixo', tipo: 'espera',
-        titulo: 'Posição para o Luminous',
-        descricao: 'Margem entre México e Noruega. Trinta minutos antes',
-        contexto:
-          'A margem entre o México e a Noruega tem visão frontal do lago e esvazia mais rápido ' +
-          'na saída — as duas coisas importam.\n\n' +
-          'Trinta minutos antes não é exagero em noite de festival. Levem a bebida da barraca ' +
-          'anterior: de lá não dá para sair e voltar.\n\n' +
-          'HORÁRIO FIXO, colado no show.',
-        areaParque: 'World Showcase', acesso: [], duracaoMin: 30,
-        curiosidades: [
-          { texto: 'A volta completa do lago do World Showcase tem 1,9 km.',
-            fonte: 'Wikipedia — Epcot', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1611-2100', hora: '21:00', ancora: 'fixo', tipo: 'show',
-        titulo: 'Luminous: The Symphony of Us',
-        descricao: '~17 min. Fogos, fontes e projeção nas telas dos barcos',
-        contexto:
-          'Espetáculo noturno sobre o lago do World Showcase, com fogos, fontes dançantes e ' +
-          'projeção em telas montadas em barcos. Cerca de 17 minutos.\n\n' +
-          'HORÁRIO FIXO, e ele SEGUE O FECHAMENTO DO PARQUE, não a abertura. Com fechamento às ' +
-          '21h ele é às 21h. Confiram no app da Disney e ajustem aqui se mudar — este bloco e ' +
-          'a posição andam juntos.',
-        areaParque: 'World Showcase', acesso: [], duracaoMin: 20,
-        confirmarHorario: true, pesquisa: '2026-09-10' },
-
-      { id: 'b-1611-2120', hora: '21:20', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Voltar ao hotel',
-        descricao: 'Uber, ~25 min, US$ 20–30. Amanhã é Universal',
-        contexto:
-          'Saindo pela entrada principal, a caminhada do World Showcase até o ponto de ' +
-          'rideshare é longa — uns quinze minutos, contra o fluxo de todo mundo saindo ao ' +
-          'mesmo tempo.\n\n' +
-          'ATALHO: se a fila do Uber estiver impossível, o International Gateway fica do ' +
-          'outro lado do lago, perto do Reino Unido, e costuma escoar mais rápido. Confiram no ' +
-          'app qual dos dois pontos está mais perto de vocês quando o show acabar.',
-        localId: 'hotel-travelodge', acesso: [], duracaoMin: 60 },
+          'Chamem do saguão do Animal Kingdom Lodge, não da porta do restaurante — a ' +
+          'entrada de carro do hotel é onde o motorista consegue parar.\n\n' +
+          'São dezesseis horas de pé desde as 5h30. Amanhã é Universal Studios, com saída às 7h45.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 25 },
     ],
 
     ficha: {
       multiPass: {
-        usar: true, opcional: false,
-        listaAlta: ['Frozen Ever After'],
-        listaBaixa: ['Mission: SPACE', 'Soarin’ Across America'],
-        rolando: ['Remy’s Ratatouille Adventure'],
-        planoB:
-          'Se o Test Track estiver fechado de manhã e voltar, reservem-no rolando assim que ' +
-          'usarem o Soarin’, às 11h15.',
+        usar: false, opcional: false, listaAlta: [], listaBaixa: [], planoB: null,
         nota:
-          'DECIDIDO: comprar. O Epcot é o único parque em que a fila compete com o que ' +
-          'vocês vieram fazer — o Frozen e o Remy são as duas únicas filas do World ' +
-          'Showcase, e são 45–75 e 40–60 minutos parados no meio das barracas do Food & ' +
-          'Wine.\n\n' +
-          'Nível 1 no Epcot: Frozen, Remy e Test Track — só um entra na compra antecipada. ' +
-          'Vai o Frozen, a fila maior; o Test Track é o rope drop; o Remy é reservado rolando ' +
-          'na saída do Mission: SPACE, às 9h45, porque o Multi Pass dele costuma esgotar ' +
-          'antes das 11h. Sem horário, ele vai de standby.',
+          'Sem Multi Pass. O parque ficou menor sem a DinoLand, e chegando na abertura pelo ' +
+          'lado certo — África e Ásia, longe de Pandora, para onde vai quase todo o Early ' +
+          'Entry — vocês resolvem a manhã inteira no standby, quase sem fila.',
       },
       singlePass: {
-        itens: ['Guardians of the Galaxy: Cosmic Rewind'], opcionais: [],
+        itens: [],
+        opcionais: ['Avatar Flight of Passage'],
         nota:
-          'Segundo dia seguido em que o passe se justifica. O Cosmic Rewind faz 101 minutos ' +
-          'de média e passa de uma hora mesmo às 8h — não existe janela barata em nenhum ' +
-          'momento do dia, diferente do TRON e do Flight of Passage.\n\n' +
-          'Peçam janela entre 10h15 e 10h45: logo depois do Mission: SPACE, que é o primeiro ' +
-          'uso do Multi Pass.',
+          'NÃO COMPREM EM 10/11. O Flight of Passage fica como plano B pago: o dia foi montado ' +
+          'para pegar a fila de 40 a 65 minutos do fim da tarde em vez dos 100 a 180 do ' +
+          'pico, e para sair de Pandora no escuro em vez de na fila.\n\n' +
+          'A compra só se justifica se o parque fechar cedo demais para o plano caber, ou ' +
+          'se vocês decidirem que não querem 50 minutos de fila no fim de um dia de dez ' +
+          'horas.\n\n' +
+          'E NÃO PRECISA DECIDIR EM BOGOTÁ. Como o TRON no dia 11, o Single Pass do Flight ' +
+          'of Passage se compra NA HORA, pelo app, de pé dentro do parque — se ainda houver ' +
+          'janela de retorno. É por isso que ele é plano B e não compra antecipada: vocês ' +
+          'decidem às 17h30, olhando a fila, e não às 7h da manhã de 10/11 no meio de uma ' +
+          'conexão.',
       },
       expressPass: null,
-      custoEstimadoCasal: { min: 60, max: 110, moeda: 'USD' },
+      custoEstimadoCasal: { min: 0, max: 40, moeda: 'USD' },
       extras: [
-        { nome: 'Estratégia do Food & Wine',
-          texto:
-            'Peguem o passaporte na entrada. Dividam cada prato entre os dois e provem 8 a 10 ' +
-            'barracas, em vez de fazer três refeições. Destaques recorrentes: Canadá (sopa de ' +
-            'cheddar com bacon), Alemanha, Grécia, Bélgica (waffle).' },
+        { nome: 'Locker no Flight of Passage',
+          texto: 'Nada solto é permitido. O locker é gratuito pelo tempo da atração, mas ' +
+                 'some 5 a 10 minutos — contem isso no bloco das 17h45, que é justamente ' +
+                 'o mais apertado do dia.' },
+        { nome: 'O safári fecha antes do parque',
+          texto: 'De 30 a 60 minutos antes. É a única informação do dia que vocês PRECISAM ' +
+                 'conferir no app da Disney na hora — o bloco das 16h30 depende dela.' },
       ],
     },
     renuncias: {
       gerais: [
-        { nome: 'The American Adventure — 30 minutos de história americana contada por ' +
-                 'animatrônicos, numa tarde que é das barracas do Food & Wine e do Remy' },
-        { nome: 'Journey Into Imagination' }, { nome: 'Awesome Planet' },
-        { nome: 'Turtle Talk with Crush' }, { nome: 'Disney & Pixar Short Film Festival' },
-        { nome: 'Os filmes 360° da China e do Canadá' },
+        { nome: 'Feathered Friends in Flight' }, { nome: 'Bluey’s Wild World' },
+        { nome: 'Wildlife Express Train' }, { nome: 'Rafiki’s Planet Watch' },
+        { nome: 'The Animation Experience' },
+        { nome: 'Zootopia: Better Zoogether! — 30 minutos num show que a própria ' +
+                 'crítica chama de frenético e esquecível, num dia em que a única ' +
+                 'montanha-russa do parque estava sendo feita uma vez só' },
       ],
-      fechado: [],
+      fechado: ['DINOSAUR e toda a DinoLand (demolidos para a futura Tropical Americas)'],
     },
   },
 
@@ -5467,7 +5462,7 @@ window.ROTEIRO = {
           'carrinho parece saltar trechos de trilho que faltam. Alta velocidade, sem inversão.\n\n' +
           'POR QUE NO FIM: é a maior fila do parque, 113 a 114 minutos de média e pico de 205. ' +
           'Fora do Early Park Admission, a única janela barata é a última hora antes de fechar, ' +
-          'quando cai para 20 a 30 minutos. É a mesma manobra do Flight of Passage no dia 13.\n\n' +
+          'quando cai para 20 a 30 minutos. É a mesma manobra do Flight of Passage no dia 16.\n\n' +
           'QUEM ESTÁ NA FILA NO FECHAMENTO ANDA. Entrem antes das 21h e não saiam dela.\n\n' +
           'ELE QUEBRA COM FREQUÊNCIA. Se estiver parado, acompanhem pelo app e fiquem por ' +
           'perto — o plano C trata disso.\n\n' +
@@ -5641,10 +5636,9 @@ window.ROTEIRO = {
       { tipo: 'info', texto:
         'A MANHÃ LIVRE TAMBÉM É A REDE DE SEGURANÇA DO EPIC. Se ontem der muito errado — o ' +
         'Mine-Cart parado a noite inteira, chuva —, esta manhã é o lugar mais barato para ' +
-        'voltar ao Epic, porque não tira nada do roteiro. Só vale se o ingresso tiver um dia ' +
-        'sobrando com Epic: os ingressos de vários dias da Universal só liberam o Epic em ' +
-        'outro dia se sobrar dia sem uso. É pergunta para a agência, na conferência dos ' +
-        'ingressos da Universal.',
+        'voltar ao Epic, porque não tira nada do roteiro e não gasta dia de ingresso: o de ' +
+        'vocês é de 14 dias com entradas ilimitadas nos três parques. O que a pendência dos ' +
+        'ingressos confirma é o produto e a data de início da validade.',
         pesquisa: '2026-09-11' },
     ],
     planos: [
@@ -8051,25 +8045,27 @@ window.ROTEIRO = {
             'antigos. Hambúrgueres, comida americana e cerveja artesanal. Segunda a sábado, ' +
             'das 11h às 22h. A conta já vem com 20% de taxa de serviço, no lugar da gorjeta.' },
 
-    { id: 'r-satuli', nome: 'Satu’li Canteen', data: '2026-11-13', hora: '12:30',
+    { id: 'r-satuli', nome: 'Satu’li Canteen', data: '2026-11-16', hora: '12:30',
       refeicao: 'almoco', local: 'Animal Kingdom · Pandora', alternativas: ['Flame Tree Barbecue, na Discovery Island', 'Harambe Market, na África'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Mobile order pelo My Disney Experience', blocoId: 'b-1311-1215',
+      canal: 'Mobile order pelo My Disney Experience', blocoId: 'b-1611-1215',
       nota: 'Balcão. Eleito o melhor quick service do Walt Disney World.' },
 
-    { id: 'r-nomad', nome: 'Nomad Lounge', data: '2026-11-13', hora: '14:25',
+    { id: 'r-nomad', nome: 'Nomad Lounge', data: '2026-11-16', hora: '14:25',
       refeicao: 'drink', local: 'Animal Kingdom · Discovery Island', alternativas: ['Tiffins, ao lado — mesma cozinha, mesa e reserva'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Lista de espera pelo My Disney Experience ou no balcão', blocoId: 'b-1311-1630',
+      canal: 'Lista de espera pelo My Disney Experience ou no balcão', blocoId: 'b-1611-1630',
       nota: 'Não aceita reserva. Entrem na lista de espera pelo app da Disney, ou no balcão, ' +
             'e passeiem enquanto esperam. Mesa com garçom: leva gorjeta.' },
 
-    { id: 'r-sanaa', nome: 'Sanaa', data: '2026-11-13', hora: '19:40',
+    { id: 'r-sanaa', nome: 'Sanaa', data: '2026-11-16', hora: '19:40',
       refeicao: 'jantar', local: 'Animal Kingdom Villas · Kidani Village', alternativas: ['The Mara, balcão no Animal Kingdom Lodge', 'Boma, bufe no Animal Kingdom Lodge'],
-      precisaReserva: true, janelaAbre: null, janelaHora: null,
-      canal: 'My Disney Experience', blocoId: 'b-1311-1940',
-      statusPadrao: 'confirmado', confirmacaoPadrao: '356258407484',
-      nota: 'RESERVADO — confirmação 356258407484, duas pessoas, 19h40. Fica na Kidani ' +
+      precisaReserva: true, janelaAbre: '2026-09-17', janelaHora: '06:00 ET',
+      canal: 'My Disney Experience', blocoId: 'b-1611-1940',
+      nota: 'A MESA É 16/11 ÀS 19h40 e precisa ser remarcada: a janela de 60 dias abre em ' +
+            '17/09, às 6h ET, e a reserva de 13/11 (confirmação 356258407484) tem de ser ' +
+            'cancelada no mesmo dia, pelo My Disney Experience ou pelo +1 407-939-3463. ' +
+            'Fica na Kidani ' +
             'Village, a ala de villas do Animal Kingdom Lodge, e não dentro do parque. Vão ' +
             'pela comida, não pela janela: às 19h40 de novembro está escuro há mais de duas ' +
             'horas e não se vê a savana. Peçam o Bread Service, cinco pães com nove ' +
@@ -8286,14 +8282,17 @@ window.ROTEIRO = {
              '(Columbia Harbour House e Casey’s)',
       restauranteIds: ['r-columbia-harbour'] },
 
-    { id: 'ck-1409', dataAlvo: '2026-09-14', hora: null, fuso: null,
-      janelaReserva: false, critico: false, feitoPadrao: true,
-      texto: 'Sanaa (13/11, 19h40) — RESERVADO, confirmação 356258407484',
+    { id: 'ck-1409', dataAlvo: '2026-09-17', validaAte: '2026-11-16', hora: '06:00', fuso: 'ET',
+      janelaReserva: true, critico: true,
+      texto: 'Sanaa: remarcar para 16/11 às 19h40 e cancelar a mesa de 13/11',
       nota:
-        'Mesa na Kidani Village, a ala de villas do Animal Kingdom Lodge. NÃO peçam mesa ' +
-        'na janela: às 19h40 está escuro e não se vê a savana. A escolha é pela comida.\n\n' +
-        'A Disney cobra taxa de não comparecimento e exige cancelamento com 2 horas de ' +
-        'antecedência, pelo My Disney Experience ou pelo +1 407-939-3463.',
+        'SÃO DUAS COISAS NO MESMO DIA. A janela de 60 dias para 16/11 abre em 17/09, entre ' +
+        '5h45 e 6h ET — entrem 5h45. E a reserva de 13/11, confirmação 356258407484, tem de ' +
+        'ser cancelada, senão a Disney cobra a taxa de não comparecimento.\n\n' +
+        'O Sanaa é considerado fácil a moderado de conseguir. Se o app não mostrar mesa, ' +
+        'tentem o OpenTable, que às vezes tem o que o app não mostra.\n\n' +
+        'Reservem 19h40 e NÃO peçam mesa na janela: a essa hora está escuro e não se vê a ' +
+        'savana. A escolha é pela comida, e a mesa fica na Kidani Village.',
       restauranteIds: ['r-sanaa'] },
 
     { id: 'ck-1609', dataAlvo: '2026-09-16', validaAte: '2026-11-15', hora: '06:00', fuso: 'ET',
@@ -8311,7 +8310,7 @@ window.ROTEIRO = {
       janelaReserva: true, critico: false,
       texto: 'Epcot: abrir a janela de mesa só se mudarem de ideia sobre o Food & Wine',
       nota:
-        'O JANTAR DO DIA 16 É O FOOD & WINE — quatro voltas de barracas ao longo da tarde e ' +
+        'O JANTAR DO DIA 13 É O FOOD & WINE — quatro voltas de barracas ao longo da tarde e ' +
         'da noite, a última às 20h, antes de pegar lugar para o Luminous.\n\n' +
         'Esta janela fica registrada porque hoje é o único dia em que ela abre. Se em ' +
         'algum momento vocês decidirem que querem uma mesa de verdade no Epcot, é hoje ' +
@@ -8324,7 +8323,7 @@ window.ROTEIRO = {
       nota:
         'É a pendência mais importante da lista. Se o ingresso for de datas fixas, o ' +
         'Lightning Lane dos três dias de passe — Multi Pass e Single Pass — sai numa compra ' +
-        'só, em 08/11. Se não for, são três compras: 08/11, 12/11 e 13/11. Isso muda as ' +
+        'só, em 08/11. Se não for, são três compras: 08/11, 10/11 e 12/11. Isso muda as ' +
         'quatro pendências de Lightning Lane deste checklist.',
       restauranteIds: [] },
 
@@ -8378,7 +8377,7 @@ window.ROTEIRO = {
       texto: 'Cartão de crédito salvo no My Disney Experience, nos DOIS perfis',
       nota:
         'É o que destrava o mobile order, e o mobile order aparece quatro vezes nos dias ' +
-        'fechados: Columbia Harbour House e Casey’s no dia 11, Satu’li Canteen no dia 13 e ' +
+        'fechados: Columbia Harbour House e Casey’s no dia 11, Satu’li Canteen no dia 16 e ' +
         'Docking Bay 7 no dia 15. Cada um desses pula de 20 a 30 minutos de fila de balcão ' +
         'que o roteiro já não conta.\n\n' +
         'Sem cartão salvo, não pula — e descobrir isso na noite de 10/11, depois de doze ' +
@@ -8426,9 +8425,13 @@ window.ROTEIRO = {
         'Cobre os dias 14, 17, 19 e 23. Confiram especificamente que é PARK-TO-PARK e que o ' +
         'Epic Universe está incluído: o Hogwarts Express do dia 23 só funciona com ' +
         'park-to-park, e o Epic é ingresso à parte em muitas combinações.\n\n' +
-        'E perguntem à agência: quantos dias o ingresso tem, se o dia do Epic é 19/11 e se ' +
-        'sobra algum dia com Epic. É isso que decide se a manhã do dia 20 serve de rede de ' +
-        'segurança para o Epic.\n\n' +
+        'O QUE A BIANCA APUROU: 14 dias de validade, com entradas ilimitadas no período. É a ' +
+        'família de ingresso que a Universal vende para quem vem de fora — com o Volcano Bay ' +
+        'fechado de 20/10/2026 a 31/03/2027, a versão da viagem é a de três parques. ' +
+        'Confirmem com a agência QUAL PRODUTO e QUAL A DATA DE INÍCIO: se a validade termina ' +
+        'em 24/11, ela começa em 11/11, e o dia 23 é o penúltimo dia útil dela.\n\n' +
+        'COM ENTRADAS ILIMITADAS, repetir parque não gasta dia: dá para voltar ao Epic na ' +
+        'manhã do dia 20 ou ao Islands em qualquer dia até o fim da validade.\n\n' +
         'Riscar só quando aparecer no app da Bianca também.',
       restauranteIds: [] },
 
@@ -8557,13 +8560,14 @@ window.ROTEIRO = {
         'Detalhes na dica “Quando dá errado”, no Guia.',
       restauranteIds: [] },
 
-    { id: 'ck-horarios-ak', dataAlvo: '2026-09-14', validaAte: '2026-11-13', hora: null, fuso: null,
-      janelaReserva: false, critico: true, feitoPadrao: true,
-      texto: 'Animal Kingdom 13/11 — 8h às 18h, confirmado (Early Entry 7h30)',
+    { id: 'ck-horarios-ak', dataAlvo: '2026-10-11', validaAte: '2026-11-16', dataEstimada: true,
+      motivoData: 'Um mês antes, com folga para ajustar a reta final se o fechamento mudar',
+      hora: null, fuso: null, janelaReserva: false, critico: true,
+      texto: 'Animal Kingdom 16/11 — confirmar 8h às 18h no app da Disney (Early Entry 7h30)',
       nota:
-        'SAIU EM 12/09, nos dois números que importavam: 8h às 18h, com Early Entry às 7h30. ' +
-        'É o que o dia assumia — a referência já está em 8h, a saída das 6h30 continua de ' +
-        'pé e a reta final do fim da tarde está encaixada nesse fechamento.\n\n' +
+        'O CALENDÁRIO PUBLICADO DÁ 8h ÀS 18h PARA 16/11, com Early Entry às 7h30, conferido ' +
+        'em 16/09. É o que o dia assume — a referência está em 8h, a saída é 6h30 e a reta ' +
+        'final do fim da tarde está encaixada nesse fechamento. Confirmem no app da Disney.\n\n' +
         'O Sanaa das 19h40 deixa de ter risco: com o parque fechando às 18h, a fila do ' +
         'Flight of Passage no último minuto termina a tempo da mesa.\n\n' +
         'Confiram também o horário de fechamento do KILIMANJARO SAFARIS, que fecha 30 a 60 ' +
@@ -8602,12 +8606,14 @@ window.ROTEIRO = {
         '  · 15/11 Hollywood Studios — Multi Pass: alta Rock ’n’ Roller Coaster; baixa Torre ' +
         'do Terror e Star Tours. Single Pass do Rise of the Resistance, janela entre 10h30 e ' +
         '11h.\n' +
-        '  · 16/11 Epcot — Multi Pass: alta Frozen Ever After; baixa Mission: SPACE e ' +
+        '  · 13/11 Epcot — Multi Pass: alta Frozen Ever After; baixa Mission: SPACE e ' +
         'Soarin’. Single Pass do Cosmic Rewind, janela entre 10h15 e 10h45.\n' +
-        '  · 13/11 Animal Kingdom — nada. O dia não usa Multi Pass, e o Single Pass do ' +
+        '  · 16/11 Animal Kingdom — nada. O dia não usa Multi Pass, e o Single Pass do ' +
         'Flight of Passage se decide dentro do parque.\n\n' +
-        'Se o ingresso NÃO for de datas fixas, hoje só abre o dia 11 — e os dias 15 e 16 ' +
-        'têm data própria, 12/11 e 13/11, já nas pendências.\n\n' +
+        'Se o ingresso NÃO for de datas fixas, hoje só abre o dia 11 — e os dias 13 e 15 ' +
+        'têm data própria, 10/11 e 12/11, já nas pendências. O 10/11 é o dia do voo: ' +
+        'às 7h ET vocês estão no ar, então esse é o cenário em que o ingresso de datas ' +
+        'fixas vale ouro.\n\n' +
         'NÃO peçam o Big Thunder nem o Jungle Cruise: os dois são lista alta e vocês vão ' +
         'fazer os dois de graça, no standby, antes das 11h. O Space Mountain entra rolando ' +
         'dentro do parque, assim que vocês usarem a Mansão às 11h.',
@@ -8622,9 +8628,9 @@ window.ROTEIRO = {
         'em Bogotá, que é o pior momento da viagem para depender de internet.\n\n' +
         'E não precisa. O Single Pass do Flight of Passage se compra NA HORA, pelo app, de ' +
         'pé dentro do Animal Kingdom, se ainda houver janela de retorno. A decisão é das ' +
-        '17h30 do dia 13, olhando a fila — não das 7h de hoje, olhando um portão de ' +
+        '17h30 do dia 16, olhando a fila — não das 7h de hoje, olhando um portão de ' +
         'embarque.\n\n' +
-        'O plano do dia 13 é fazer a atração no fim do dia, quando a fila cai para 40 a 65 ' +
+        'O plano do dia 16 é fazer a atração no fim do dia, quando a fila cai para 40 a 65 ' +
         'minutos contra 100 a 180 no pico. Comprem só se o parque fechar cedo demais para ' +
         'esse plano caber, ou se 50 minutos de fila no fim de dez horas de parque for ' +
         'demais no dia.',
@@ -8645,15 +8651,15 @@ window.ROTEIRO = {
         'Fantasmic.',
       restauranteIds: [] },
 
-    { id: 'ck-ll-1311', dataAlvo: '2026-11-13', validaAte: '2026-11-16', hora: '07:00', fuso: 'ET',
+    { id: 'ck-ll-1011', dataAlvo: '2026-11-10', validaAte: '2026-11-13', hora: '07:00', fuso: 'ET',
       janelaReserva: false, critico: true,
-      texto: 'Lightning Lane para 16/11 — Multi Pass do dia e Single Pass do Cosmic Rewind',
+      texto: 'Lightning Lane para 13/11 — Multi Pass do dia e Single Pass do Cosmic Rewind',
       nota:
-        'ATENÇÃO À HORA: às 7h de hoje vocês já saíram do hotel — a saída para o Animal ' +
-        'Kingdom é 6h30. Isto se resolve no celular, dentro do Uber ou na fila da catraca. ' +
-        'Cheguem decididos, porque não vai dar para pensar. Com ingresso de datas fixas, ' +
-        'tudo saiu em 08/11: é só conferir no app.\n\n' +
-        'MULTI PASS do dia 16 — lista alta: Frozen Ever After. Lista baixa: Mission: SPACE e ' +
+        'ATENÇÃO À HORA: às 7h ET de hoje vocês estão no voo entre o Rio e Bogotá. Se o ' +
+        'ingresso for de datas fixas, isto já saiu em 08/11 e hoje é só conferir no app ao ' +
+        'pousar. Se NÃO for, a compra tem de sair do wifi de bordo ou logo depois do pouso, ' +
+        'às 12h35 — e quanto mais tarde, pior a disponibilidade.\n\n' +
+        'MULTI PASS do dia 13 — lista alta: Frozen Ever After. Lista baixa: Mission: SPACE e ' +
         'Soarin’. Frozen, Remy e Test Track são todos do nível 1, e a compra leva só um. O ' +
         'Remy é reservado dentro do parque, na saída do Mission: SPACE, às 9h45.\n\n' +
         'SINGLE PASS do Cosmic Rewind — peçam janela entre 10h15 e 10h45. Ele faz 101 min de ' +
@@ -8703,14 +8709,16 @@ window.ROTEIRO = {
 
     { id: 'ck-horarios-dhs-epcot', dataAlvo: '2026-09-17', validaAte: '2026-11-16', hora: null, fuso: null,
       janelaReserva: false, critico: true,
-      texto: 'A hora do Fantasmic (15/11) e do Luminous (16/11) — os parques já saíram',
+      texto: 'A hora do Fantasmic (15/11) e do Luminous (13/11) — e confirmar o Epcot de 13/11',
       nota:
-        'OS DOIS PARQUES SAÍRAM EM 12/09: Hollywood Studios e Epcot das 9h às 21h, com ' +
-        'Early Entry às 8h30. As manhãs estão certas; falta a hora dos dois shows, que ' +
-        'seguem o FECHAMENTO do parque, não a abertura.\n\n' +
+        'HOLLYWOOD STUDIOS, 15/11: 9h às 21h, oficial desde 12/09, com Early Entry às 8h30.\n\n' +
+        'EPCOT, 13/11: 9h às 21h com Early Entry às 8h30, pelo calendário publicado, ' +
+        'conferido em 16/09. Confirmem no app da Disney.\n\n' +
+        'As manhãs estão certas; falta a hora dos dois shows, que seguem o FECHAMENTO do ' +
+        'parque, não a abertura.\n\n' +
         'FANTASMIC (15/11): com o parque fechando às 21h, o padrão é 20h — que é o que o ' +
         'roteiro assume.\n\n' +
-        'LUMINOUS (16/11): roda junto do fechamento, às 21h — que é o que o roteiro ' +
+        'LUMINOUS (13/11): roda junto do fechamento, às 21h — que é o que o roteiro ' +
         'assume.\n\n' +
         'Se algum for outro, ajustem a hora no bloco do show. A posição para o show, o ' +
         'bloco antes dela e a volta ao hotel não andam junto: ajustem à mão.',
@@ -9348,7 +9356,7 @@ window.ROTEIRO = {
     { id: 'tel-disney-dining', nome: 'Disney — reservas de restaurante',
       numero: '+1 407-939-3463', critico: true,
       quando:
-        'Cancelar ou remarcar o The Boathouse (10/11), o Sanaa (13/11), o Oga’s e o Sci-Fi ' +
+        'Cancelar ou remarcar o The Boathouse (10/11), o Sanaa (16/11), o Oga’s e o Sci-Fi ' +
         '(15/11) e o Homecomin’ (25/11). CANCELEM COM PELO MENOS 2 HORAS de antecedência: ' +
         'abaixo disso a Disney cobra a taxa de não comparecimento no cartão. Dá para ' +
         'cancelar pelo My Disney Experience também. O Homecomin’ tem linha direta: ' +
@@ -9429,7 +9437,7 @@ window.ROTEIRO = {
       id: 'dica-lockers',
       categoria: 'geral',
       momento: 'dia-especifico',
-      dias: ['d-2026-11-11', 'd-2026-11-13', 'd-2026-11-17', 'd-2026-11-19', 'd-2026-11-22',
+      dias: ['d-2026-11-11', 'd-2026-11-16', 'd-2026-11-17', 'd-2026-11-19', 'd-2026-11-22',
              'd-2026-11-23', 'd-2026-11-24'],
       titulo: 'Lockers obrigatórios: reserve 10 a 15 min a mais',
       corpo:
@@ -9442,7 +9450,7 @@ window.ROTEIRO = {
         'Men in Black · Monsters Unchained · Hiccup’s Wing Gliders\n\n' +
         'O locker padrão da Universal é grátis pelo tempo da fila mais a atração; o grande é ' +
         'pago, de US$ 3 a 6 conforme a fonte.\n\n' +
-        'DISNEY: o TRON (11/11) e o Flight of Passage (13/11) não deixam nada solto e têm ' +
+        'DISNEY: o TRON (11/11) e o Flight of Passage (16/11) não deixam nada solto e têm ' +
         'locker grátis na entrada.\n\n' +
         'SEAWORLD (22/11): armário na entrada da Pipeline, Ice Breaker, Mako, Kraken, Manta e ' +
         'Journey to Atlantis — US$ 2 pelas primeiras duas horas, ou US$ 10 o de uso múltiplo, ' +
@@ -9457,12 +9465,12 @@ window.ROTEIRO = {
       id: 'dica-molha',
       categoria: 'geral',
       momento: 'dia-especifico',
-      dias: ['d-2026-11-13', 'd-2026-11-22', 'd-2026-11-23'],
+      dias: ['d-2026-11-16', 'd-2026-11-22', 'd-2026-11-23'],
       titulo: 'O que molha de verdade',
       corpo:
         'Novembro em Orlando é ameno, e roupa molhada às 17h fica desconfortável rápido quando ' +
         'escurece. As atrações marcadas com o selo "molha" neste app são:\n\n' +
-        'Kali River Rapids (13/11) — não é respingo, é balde. E é às 9h15, com nove ' +
+        'Kali River Rapids (16/11) — não é respingo, é balde. E é às 9h15, com nove ' +
         'horas de parque pela frente\n' +
         'Jurassic Park River Adventure (23/11) — molha bastante, levem capa\n' +
         'Journey to Atlantis (22/11) — molha bastante\n' +

@@ -136,8 +136,8 @@ ok(new Set(ids).size === ids.length, 'nenhum id de bloco duplicado (' + ids.leng
 ok((R.contatos || []).length > 0, 'telefones no arquivo: ' + (R.contatos || []).length);
 ok(R.contatos.filter(c => c.numero).every(c => /^\+?[0-9 ()-]+$/.test(c.numero)),
    'todo telefone tem formato de telefone');
-const d13 = R.dias.find(d => d.id === 'd-2026-11-13');
-ok((d13.naoPerca || []).some(p => /Starlight/.test(p.nome)), 'Starlight Safari no dia 13');
+const dAK = R.dias.find(d => d.id === 'd-2026-11-16');
+ok((dAK.naoPerca || []).some(p => /Starlight/.test(p.nome)), 'Starlight Safari no dia do Animal Kingdom');
 const semDur = R.dias.filter(d => d.fechado).flatMap(d => d.blocos).filter(b => !b.duracaoMin);
 ok(semDur.length === 0, 'todo bloco de dia fechado tem duracao' +
    (semDur.length ? ' -> faltam ' + semDur.map(b => b.id).join(', ') : ''));

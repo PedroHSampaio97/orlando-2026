@@ -5,7 +5,7 @@
 **Perfil:** casal, sem crianças. Prioridade: clássicos + montanhas-russas fortes.
 **Decisões fechadas:** dias 19 Epic Universe, 21 Winter Garden, 22 SeaWorld e 23 Islands of Adventure · **o Epic Universe é um dia só, 19/11** · sem Mickey's Very Merry Christmas Party · sem Express Pass na Universal · carro alugado de 20 a 25/11, **devolvido no dia 25**, para o dia 26 ser só café da manhã e aeroporto · PID já emitida · a última noite é no Disney Springs, 25/11
 
-> **Aviso sobre horários:** os quatro dias de Disney já têm **horário oficial**, saído em 12/09: **Magic Kingdom 9h–22h (11/11)**, **Animal Kingdom 8h–18h (13/11)**, **Hollywood Studios 9h–21h (15/11)** e **Epcot 9h–21h (16/11)**, todos com Early Entry meia hora antes — 7h30 no Animal Kingdom. Os quatro confirmam o que o roteiro já assumia: nenhum bloco mudou de hora. Ainda são suposição: Universal (17/11), Epic (19/11), SeaWorld (22/11) e Islands (23/11) em 9h, e Busch Gardens (24/11) em 10h. Ajustem a referência do dia no app e os blocos ancorados deslocam junto. **A partir do compromisso de hora marcada — desfile, show, reserva, pôr do sol — os blocos são fixos** e não se mexem com a abertura. Oito dias têm outra referência: a saída do Terminal C no dia 10, a saída do hotel nos dias 12, 20 e 25, a sessão do Grinchmas no dia 14, o início do jogo nos dias 18 e 21 e a decolagem de Orlando no dia 26.
+> **Aviso sobre horários:** os quatro dias de Disney têm **horário publicado**: **Magic Kingdom 9h–22h (11/11)**, **Epcot 9h–21h (13/11)**, **Hollywood Studios 9h–21h (15/11)** e **Animal Kingdom 8h–18h (16/11)**, todos com Early Entry meia hora antes — 7h30 no Animal Kingdom. O horário dos dias 13 e 16 vem do calendário publicado, conferido em 16/09, e não da confirmação oficial de 12/09: confirmem os dois no app da Disney. Ainda são suposição: Universal (17/11), Epic (19/11), SeaWorld (22/11) e Islands (23/11) em 9h, e Busch Gardens (24/11) em 10h. Ajustem a referência do dia no app e os blocos ancorados deslocam junto. **A partir do compromisso de hora marcada — desfile, show, reserva, pôr do sol — os blocos são fixos** e não se mexem com a abertura. Oito dias têm outra referência: a saída do Terminal C no dia 10, a saída do hotel nos dias 12, 20 e 25, a sessão do Grinchmas no dia 14, o início do jogo nos dias 18 e 21 e a decolagem de Orlando no dia 26.
 
 ---
 
@@ -16,9 +16,9 @@
 | Dia | Multi Pass | Single Pass | Gasto estimado (casal) |
 |---|---|---|---|
 | 11/11 Magic Kingdom | **Sim** | **Nenhum** — os dois ficam como plano B pago | US$ 40–70 |
-| 13/11 Animal Kingdom | Não | Flight of Passage — só se o fim de dia não resolver | US$ 0–40 |
+| 13/11 Epcot | **Sim** | **Cosmic Rewind** | US$ 60–110 |
 | 15/11 Hollywood Studios | **Sim** | **Rise of the Resistance** | US$ 70–130 |
-| 16/11 Epcot | **Sim** | **Cosmic Rewind** | US$ 60–110 |
+| 16/11 Animal Kingdom | Não | Flight of Passage — só se o fim de dia não resolver | US$ 0–40 |
 
 Seven Dwarfs Mine Train e Flight of Passage **não estão no Multi Pass**. São Single Pass, compra separada, no máximo duas por dia.
 
@@ -122,7 +122,147 @@ Hall of Presidents (22 minutos de história cívica americana), Country Bear Jam
 
 ---
 
-# 🦁 13/11 (sexta) — ANIMAL KINGDOM
+# 🌍 13/11 (sexta) — EPCOT
+
+Meio dia de parque e meio de festival. A manhã resolve as filas; a partir das 13h o dia vira comida e caminhada em volta de um lago.
+
+**Single Pass:** **Guardians of the Galaxy: Cosmic Rewind** — peçam janela entre 10h15 e 10h45
+**Multi Pass:** **comprar.** Lista alta → **Frozen Ever After** · lista baixa → **Mission: SPACE** e **Soarin'** · rolando → **Remy**, reservado às 9h45 na saída do Mission: SPACE
+
+> **NÃO CORRAM PARA O COSMIC REWIND NA ABERTURA.** Pela quarta vez o ponto certo é o contraintuitivo, e aqui o erro seria duplo: é para o Cosmic Rewind que vai o Early Entry de quem entra pela frente, e correr para lá gastaria o Single Pass no único horário em que ele não precisaria ser gasto. Vocês vão para o **Test Track**, na mesma área.
+
+| Hora | O quê | Como |
+|---|---|---|
+| **7h15** | Sair do hotel | Uber, ~25 min, US$ 20–30 |
+| **8h15** | Portão · posicionar para o **World Discovery** | A catraca abre ~7h30 e quem é de fora espera na Spaceship Earth até as 9h. Test Track, não Cosmic Rewind |
+| **9h00** | **Test Track** | Rope drop. 53 min agora contra 99 de média |
+| **9h45** | **Mission: SPACE** | Multi Pass · lista baixa. **Na saída, reservem o Remy.** A **verde** se houver tendência a enjoo |
+| **10h20** | **Guardians: Cosmic Rewind** | Single Pass |
+| **11h15** | **Soarin' Across America** | Multi Pass · lista baixa. Filme novo desde maio de 2026 |
+| **12h00** | **The Seas e Living with the Land** | Fila curta, ar-condicionado |
+| **12h40** | **Parada** | A partir daqui o dia muda de natureza. Banheiro dentro do The Land, junto do Sunshine Seasons |
+| **13h00** | **World Showcase — México** | Sentido horário |
+| **13h20** | **Gran Fiesta Tour** | Barquinho dentro da pirâmide. Fila mínima |
+| **13h40** | **Frozen Ever After** | Multi Pass · lista alta |
+| **14h20** | **Food & Wine — volta 1** | China, Alemanha, Itália. **E é isto o almoço** |
+| **15h30** | **Food & Wine — volta 2** | Japão, Marrocos |
+| **16h45** | **Remy's Ratatouille Adventure** | Multi Pass rolando. Sem horário, standby perto de uma hora |
+| **17h30** | **Food & Wine — volta 3** | França, Reino Unido, Canadá. **E é isto o jantar** |
+| **19h00** | **Spaceship Earth** | A fila some à noite |
+| **20h00** | **Food & Wine — última volta** | O que faltou. Comprem a bebida e levem para o lago |
+| **20h30** | Posição para o Luminous | Margem entre México e Noruega |
+| **21h00** | **Luminous: The Symphony of Us** | ~17 min. Roda no fechamento, às 21h — hora a confirmar |
+| **21h20** | Voltar ao hotel | Uber, ~25 min, US$ 20–30 |
+
+### Por que o dia está nesta ordem — a fila típica
+
+| Atração | Quando vocês fazem | Fila aí | No pico |
+|---|---|---|---|
+| **Test Track** | 9h00, rope drop | **~53 min** | **~99** |
+| Mission: SPACE | 9h45, Multi Pass | ~10 min | ~40 |
+| **Cosmic Rewind** | 10h20, Single Pass | ~10 min | **~101** |
+| Soarin' | 11h15, Multi Pass | ~10 min | ~74 |
+| The Seas / Living with the Land | 12h00 | ~10 min | ~25 |
+| Gran Fiesta Tour | 13h20 | ~5 min | ~15 |
+| **Frozen Ever After** | 13h40, Multi Pass | ~10 min | **~75** |
+| **Remy** | 16h45, Multi Pass rolando | ~10 min | **~60** |
+| Spaceship Earth | 19h00, à noite | ~10 min | ~40 |
+
+*Médias publicadas, consultadas em 10/09/2026.*
+
+> **Por que comprar o Multi Pass aqui.** O Epcot é o único parque em que a fila compete com o que vocês vieram fazer. Frozen e Remy são as duas únicas filas do World Showcase — 45–75 e 40–60 minutos parados no meio das barracas do Food & Wine. Nos outros dias a fila compete com outra fila; aqui compete com o dia. Frozen, Remy e Test Track são do nível 1 e a compra leva só um: vai o Frozen. O Remy é reservado rolando na saída do Mission: SPACE, às 9h45, porque o Multi Pass dele costuma esgotar antes das 11h.
+
+> **O Test Track quebra muito.** Em 2026, um ano depois de reabrir: parada de quase 24 horas em 1º de agosto, outra de cinco horas no dia 23 que comeu a tarde inteira, e falhas mecânicas em fevereiro — sem comunicado da Disney em nenhuma delas. É por isso que ele é o rope drop: **se vai cair, cai no meio do dia.** Se estiver fechado às 9h, pivô para o pavilhão do The Land; se voltar, ele entra rolando depois do Soarin'.
+
+### Estratégia do Food & Wine
+Peguem o passaporte na entrada. **Dividam cada prato entre os dois** e provem 8 a 10 barracas ao longo da tarde, em vez de fazer três refeições. É assim que o festival funciona, e é por isso que hoje **não existe bloco de almoço nem de jantar** — o Food & Wine é as duas refeições, servidas em quatro voltas. Destaques que se repetem todo ano: Canadá (sopa de cheddar com bacon), Alemanha, Grécia, Bélgica (waffle).
+
+### Renúncias
+**The American Adventure** — 30 minutos de história americana contada por animatrônicos, numa tarde que é das barracas do Food & Wine e do Remy.
+
+Journey Into Imagination, Awesome Planet, Turtle Talk with Crush, Disney & Pixar Short Film Festival, os filmes 360° da China e do Canadá.
+
+---
+
+
+# 🎄 14/11 (sábado) — CELEBRATION E ISLANDS À NOITE
+
+O dia 14 é majoritariamente dia livre — Celebration de manhã, e a noite no Islands é
+entrada extra. Ele está descrito por inteiro em **`roteiro-orlando-dias-livres.md`**,
+com a manhã e a noite juntas.
+
+---
+
+
+# 🎬 15/11 (domingo) — HOLLYWOOD STUDIOS
+
+O parque mais difícil da Disney, e o único dos três em que o Single Pass se justifica.
+
+**Multi Pass:** lista alta → **Rock 'n' Roller Coaster** · lista baixa → **Torre do Terror** e **Star Tours** · rolando → **Runaway Railway**, reservado às 13h55
+**Single Pass:** **Rise of the Resistance** — peçam janela entre 10h30 e 11h
+
+> **NÃO VÃO PARA O GALAXY'S EDGE NA ABERTURA.** Pela terceira vez o ponto certo é o contraintuitivo, e aqui o motivo tem nome: o Early Entry do Hollywood Studios inclui o **Rise, o Slinky e a Torre**, e a grande maioria dos hóspedes vai para o **Rise**. Quem entra às 9h e caminha para o Galaxy's Edge está indo para dentro da multidão que já está na fila há meia hora. A recomendação para quem está fora dos hotéis é o **Toy Story Land**.
+
+> **O Slinky Dog não tem hora barata.** 97 min na abertura, 79 de média, 64 à noite — ele nunca cede. O rope drop nele não é quando ele fica de graça, é quando custa menos, porque a noite de vocês está ocupada. E fazê-lo às 9h **libera a lista alta do Multi Pass** para o Rock 'n' Roller Coaster.
+
+| Hora | O quê | Como |
+|---|---|---|
+| **7h00** | Sair do hotel | Uber, ~30 min, US$ 22–32. A segurança daqui é lenta |
+| **8h00** | Portão · posicionar para o **Toy Story Land** | A catraca abre ~8h para todos e a Hollywood Blvd é de vocês; esperem no checkpoint do corredor do Toy Story Land. Não para o Galaxy's Edge |
+| **9h00** | **Slinky Dog Dash** | Rope drop. A fila mais teimosa do parque |
+| **9h40** | **Toy Story Mania** | Standby, mesma land |
+| **10h15** | **Alien Swirling Saucers** | Opcional. Só se a fila estiver abaixo de 15 min |
+| **10h45** | **Rise of the Resistance** | Single Pass |
+| **11h35** | **Millennium Falcon: Smugglers Run** | Standby. **Peçam para ser PILOTOS** |
+| **12h20** | **Almoço — Docking Bay 7** | 40 min. Mobile order, pedido na fila do Falcon. Banheiro antes de sair de Batuu |
+| **13h15** | **Indiana Jones Epic Stunt Spectacular** | 30 min sentados, na Echo Lake, no meio da travessia até a Sunset Blvd. Horário a confirmar |
+| **13h55** | **Rock 'n' Roller Coaster (Muppets)** | Multi Pass · lista alta. **Ao usar, reservem o Runaway Railway** |
+| **14h35** | **Torre do Terror** | Multi Pass · lista baixa |
+| **15h20** | **Mickey & Minnie's Runaway Railway** | Multi Pass rolando. Sem horário, standby |
+| **16h05** | **Star Tours** | Multi Pass · lista baixa. O roteiro muda a cada visita |
+| **16h50** | **Parada** | Dez minutos. Comam algo da mochila: o Oga's é bebida, não jantar. Banheiro ao lado do Docking Bay 7 |
+| **17h00** | **Oga's Cantina** | Reserva. Limite de 45 min por grupo |
+| **18h00** | **Jantar — Sci-Fi Dine-In** | Reserva. Vocês sentam dentro de um carro dos anos 50 |
+| **19h25** | **Sunset Blvd** — Natal e compras | **É o momento de compra do dia.** As lojas fecham com o parque |
+| **19h45** | Posição para o Fantasmic! | Meio e um pouco atrás. O teatro abre às 18h30; as primeiras fileiras molham |
+| **20h00** | **Fantasmic!** | ~26 min. O parque fecha às 21h; a hora do show ainda não saiu |
+| **20h35** | Voltar ao hotel | Uber, ~30 min, US$ 22–32. Amanhã sai às 6h30 |
+
+### Por que o dia está nesta ordem — a fila típica
+
+| Atração | Quando vocês fazem | Fila aí | No pico |
+|---|---|---|---|
+| **Slinky Dog Dash** | 9h00, rope drop | ~40 min | **~97** |
+| Toy Story Mania | 9h40, de manhã | ~25 min | ~55 |
+| Alien Swirling Saucers | 10h15, de manhã | ~15 min | ~35 |
+| **Rise of the Resistance** | 10h45, Single Pass | ~10 min | **~100** |
+| Millennium Falcon | 11h35, antes do meio-dia | ~35 min | ~65 |
+| Rock 'n' Roller Coaster | 13h55, Multi Pass | ~10 min | ~75 |
+| Torre do Terror | 14h35, Multi Pass | ~10 min | ~35 |
+| Runaway Railway | 15h20, Multi Pass rolando | ~10 min | ~50 |
+| Star Tours | 16h05, Multi Pass | ~10 min | ~45 |
+
+*Médias publicadas, consultadas em 10/09/2026.*
+
+> **Por que aqui o Single Pass fica, e nos dias 11 e 16 é plano B.** Nos outros dois o horário resolve: o TRON tem a janela do desfile, o Flight of Passage tem a última hora. Aqui **não existe janela livre** — o Rise faz 100 min na abertura e 63 depois das 19h, e as 19h de vocês já têm Oga's, Sci-Fi e Fantasmic. O plano B de graça existe e está registrado: entrar na fila **depois do Fantasmic**, por volta das 20h35, valendo a regra de que quem está na fila no fechamento anda. Saem por volta das 21h40 — e amanhã é Epcot com saída às 7h45.
+
+> **As duas reservas ainda não existem.** A janela do Oga's e do Sci-Fi abre em **16/09**, e os horários acima são proposta: 17h e 18h fazem a tarde caber sem correria e deixam 20 minutos de Sunset Blvd antes do show. Se conseguirem outros, os blocos da noite acompanham.
+
+### Renúncias
+Disney Junior, Frozen Sing-Along, Vacation Fun, Walt Disney Presents, Beauty and the Beast Live on Stage e Disney Villains: Unfairly Ever After — o show de 18 minutos da Sunset Blvd cairia na janela da tarde em que o Multi Pass está girando.
+
+**The Magic of Disney Animation** abre em 14/09/2026, mas não é atração de fila: é aula de desenho com um animatrônico do Olaf, encontros com personagens e um teatro. Sem interesse para vocês, e ocuparia a janela do Star Tours.
+
+**The Little Mermaid — A Musical Adventure:** musical de 18 minutos com bonecos, voltado a família. O show do dia é o Indiana Jones.
+
+> **Por que o Indiana Jones às 13h15.** Do Galaxy's Edge até a Sunset Blvd são treze minutos atravessando o parque, e o teatro fica na Echo Lake, no meio do caminho. A sessão das 13h15 transforma a travessia em meia hora sentados: seis minutos de Batuu até o teatro e sete dele até o Rock 'n' Roller. O custo é um almoço de 40 minutos e uma parada de 10 antes do Oga's. Em setembro de 2026 as sessões eram 10h45, 12h, 13h15, 15h15 e 16h30, e o show é cancelado com alguma frequência: sem sessão entre 13h e 13h20, sentem dez minutos na Echo Lake e sigam.
+
+**Fechado:** Muppet*Vision 3D fechou em 08/06/2025, junto com o PizzeRizzo e o Muppets Courtyard inteiro, para dar lugar à Monstropolis — a land de Monsters, Inc. prevista para 2027.
+
+---
+
+
+# 🦁 16/11 (segunda) — ANIMAL KINGDOM
 
 **Sem Multi Pass.** Chegando na abertura pelo lado certo, a manhã inteira sai no standby.
 **Single Pass:** **nenhum.** O Flight of Passage fica como plano B pago — ver a nota no fim.
@@ -192,146 +332,6 @@ Feathered Friends in Flight, Bluey's Wild World, Wildlife Express Train, Rafiki'
 **Fechado:** DINOSAUR e toda a DinoLand (demolidos para a futura Tropical Americas).
 
 ---
-
-# 🎄 14/11 (sábado) — CELEBRATION E ISLANDS À NOITE
-
-O dia 14 é majoritariamente dia livre — Celebration de manhã, e a noite no Islands é
-entrada extra. Ele está descrito por inteiro em **`roteiro-orlando-dias-livres.md`**,
-com a manhã e a noite juntas.
-
----
-
-
-# 🎬 15/11 (domingo) — HOLLYWOOD STUDIOS
-
-O parque mais difícil da Disney, e o único dos três em que o Single Pass se justifica.
-
-**Multi Pass:** lista alta → **Rock 'n' Roller Coaster** · lista baixa → **Torre do Terror** e **Star Tours** · rolando → **Runaway Railway**, reservado às 13h55
-**Single Pass:** **Rise of the Resistance** — peçam janela entre 10h30 e 11h
-
-> **NÃO VÃO PARA O GALAXY'S EDGE NA ABERTURA.** Pela terceira vez o ponto certo é o contraintuitivo, e aqui o motivo tem nome: o Early Entry do Hollywood Studios inclui o **Rise, o Slinky e a Torre**, e a grande maioria dos hóspedes vai para o **Rise**. Quem entra às 9h e caminha para o Galaxy's Edge está indo para dentro da multidão que já está na fila há meia hora. A recomendação para quem está fora dos hotéis é o **Toy Story Land**.
-
-> **O Slinky Dog não tem hora barata.** 97 min na abertura, 79 de média, 64 à noite — ele nunca cede. O rope drop nele não é quando ele fica de graça, é quando custa menos, porque a noite de vocês está ocupada. E fazê-lo às 9h **libera a lista alta do Multi Pass** para o Rock 'n' Roller Coaster.
-
-| Hora | O quê | Como |
-|---|---|---|
-| **7h00** | Sair do hotel | Uber, ~30 min, US$ 22–32. A segurança daqui é lenta |
-| **8h00** | Portão · posicionar para o **Toy Story Land** | A catraca abre ~8h para todos e a Hollywood Blvd é de vocês; esperem no checkpoint do corredor do Toy Story Land. Não para o Galaxy's Edge |
-| **9h00** | **Slinky Dog Dash** | Rope drop. A fila mais teimosa do parque |
-| **9h40** | **Toy Story Mania** | Standby, mesma land |
-| **10h15** | **Alien Swirling Saucers** | Opcional. Só se a fila estiver abaixo de 15 min |
-| **10h45** | **Rise of the Resistance** | Single Pass |
-| **11h35** | **Millennium Falcon: Smugglers Run** | Standby. **Peçam para ser PILOTOS** |
-| **12h20** | **Almoço — Docking Bay 7** | 40 min. Mobile order, pedido na fila do Falcon. Banheiro antes de sair de Batuu |
-| **13h15** | **Indiana Jones Epic Stunt Spectacular** | 30 min sentados, na Echo Lake, no meio da travessia até a Sunset Blvd. Horário a confirmar |
-| **13h55** | **Rock 'n' Roller Coaster (Muppets)** | Multi Pass · lista alta. **Ao usar, reservem o Runaway Railway** |
-| **14h35** | **Torre do Terror** | Multi Pass · lista baixa |
-| **15h20** | **Mickey & Minnie's Runaway Railway** | Multi Pass rolando. Sem horário, standby |
-| **16h05** | **Star Tours** | Multi Pass · lista baixa. O roteiro muda a cada visita |
-| **16h50** | **Parada** | Dez minutos. Comam algo da mochila: o Oga's é bebida, não jantar. Banheiro ao lado do Docking Bay 7 |
-| **17h00** | **Oga's Cantina** | Reserva. Limite de 45 min por grupo |
-| **18h00** | **Jantar — Sci-Fi Dine-In** | Reserva. Vocês sentam dentro de um carro dos anos 50 |
-| **19h25** | **Sunset Blvd** — Natal e compras | **É o momento de compra do dia.** As lojas fecham com o parque |
-| **19h45** | Posição para o Fantasmic! | Meio e um pouco atrás. O teatro abre às 18h30; as primeiras fileiras molham |
-| **20h00** | **Fantasmic!** | ~26 min. O parque fecha às 21h; a hora do show ainda não saiu |
-| **20h35** | Voltar ao hotel | Uber, ~30 min, US$ 22–32. Amanhã sai às 7h15 |
-
-### Por que o dia está nesta ordem — a fila típica
-
-| Atração | Quando vocês fazem | Fila aí | No pico |
-|---|---|---|---|
-| **Slinky Dog Dash** | 9h00, rope drop | ~40 min | **~97** |
-| Toy Story Mania | 9h40, de manhã | ~25 min | ~55 |
-| Alien Swirling Saucers | 10h15, de manhã | ~15 min | ~35 |
-| **Rise of the Resistance** | 10h45, Single Pass | ~10 min | **~100** |
-| Millennium Falcon | 11h35, antes do meio-dia | ~35 min | ~65 |
-| Rock 'n' Roller Coaster | 13h55, Multi Pass | ~10 min | ~75 |
-| Torre do Terror | 14h35, Multi Pass | ~10 min | ~35 |
-| Runaway Railway | 15h20, Multi Pass rolando | ~10 min | ~50 |
-| Star Tours | 16h05, Multi Pass | ~10 min | ~45 |
-
-*Médias publicadas, consultadas em 10/09/2026.*
-
-> **Por que aqui o Single Pass fica, e nos dias 11 e 13 é plano B.** Nos outros dois o horário resolvia: o TRON tinha a janela do desfile, o Flight of Passage tinha a última hora. Aqui **não existe janela livre** — o Rise faz 100 min na abertura e 63 depois das 19h, e as 19h de vocês já têm Oga's, Sci-Fi e Fantasmic. O plano B de graça existe e está registrado: entrar na fila **depois do Fantasmic**, por volta das 20h35, valendo a regra de que quem está na fila no fechamento anda. Saem por volta das 21h40 — e amanhã é Epcot com saída às 7h45.
-
-> **As duas reservas ainda não existem.** A janela do Oga's e do Sci-Fi abre em **16/09**, e os horários acima são proposta: 17h e 18h fazem a tarde caber sem correria e deixam 20 minutos de Sunset Blvd antes do show. Se conseguirem outros, os blocos da noite acompanham.
-
-### Renúncias
-Disney Junior, Frozen Sing-Along, Vacation Fun, Walt Disney Presents, Beauty and the Beast Live on Stage e Disney Villains: Unfairly Ever After — o show de 18 minutos da Sunset Blvd cairia na janela da tarde em que o Multi Pass está girando.
-
-**The Magic of Disney Animation** abre em 14/09/2026, mas não é atração de fila: é aula de desenho com um animatrônico do Olaf, encontros com personagens e um teatro. Sem interesse para vocês, e ocuparia a janela do Star Tours.
-
-**The Little Mermaid — A Musical Adventure:** musical de 18 minutos com bonecos, voltado a família. O show do dia é o Indiana Jones.
-
-> **Por que o Indiana Jones às 13h15.** Do Galaxy's Edge até a Sunset Blvd são treze minutos atravessando o parque, e o teatro fica na Echo Lake, no meio do caminho. A sessão das 13h15 transforma a travessia em meia hora sentados: seis minutos de Batuu até o teatro e sete dele até o Rock 'n' Roller. O custo é um almoço de 40 minutos e uma parada de 10 antes do Oga's. Em setembro de 2026 as sessões eram 10h45, 12h, 13h15, 15h15 e 16h30, e o show é cancelado com alguma frequência: sem sessão entre 13h e 13h20, sentem dez minutos na Echo Lake e sigam.
-
-**Fechado:** Muppet*Vision 3D fechou em 08/06/2025, junto com o PizzeRizzo e o Muppets Courtyard inteiro, para dar lugar à Monstropolis — a land de Monsters, Inc. prevista para 2027.
-
----
-
-
-# 🌍 16/11 (segunda) — EPCOT
-
-Meio dia de parque e meio de festival. A manhã resolve as filas; a partir das 13h o dia vira comida e caminhada em volta de um lago.
-
-**Single Pass:** **Guardians of the Galaxy: Cosmic Rewind** — peçam janela entre 10h15 e 10h45
-**Multi Pass:** **comprar.** Lista alta → **Frozen Ever After** · lista baixa → **Mission: SPACE** e **Soarin'** · rolando → **Remy**, reservado às 9h45 na saída do Mission: SPACE
-
-> **NÃO CORRAM PARA O COSMIC REWIND NA ABERTURA.** Pela quarta vez o ponto certo é o contraintuitivo, e aqui o erro seria duplo: é para o Cosmic Rewind que vai o Early Entry de quem entra pela frente, e correr para lá gastaria o Single Pass no único horário em que ele não precisaria ser gasto. Vocês vão para o **Test Track**, na mesma área.
-
-| Hora | O quê | Como |
-|---|---|---|
-| **7h15** | Sair do hotel | Uber, ~25 min, US$ 20–30 |
-| **8h15** | Portão · posicionar para o **World Discovery** | A catraca abre ~7h30 e quem é de fora espera na Spaceship Earth até as 9h. Test Track, não Cosmic Rewind |
-| **9h00** | **Test Track** | Rope drop. 53 min agora contra 99 de média |
-| **9h45** | **Mission: SPACE** | Multi Pass · lista baixa. **Na saída, reservem o Remy.** A **verde** se houver tendência a enjoo |
-| **10h20** | **Guardians: Cosmic Rewind** | Single Pass |
-| **11h15** | **Soarin' Across America** | Multi Pass · lista baixa. Filme novo desde maio de 2026 |
-| **12h00** | **The Seas e Living with the Land** | Fila curta, ar-condicionado |
-| **12h40** | **Parada** | A partir daqui o dia muda de natureza. Banheiro dentro do The Land, junto do Sunshine Seasons |
-| **13h00** | **World Showcase — México** | Sentido horário |
-| **13h20** | **Gran Fiesta Tour** | Barquinho dentro da pirâmide. Fila mínima |
-| **13h40** | **Frozen Ever After** | Multi Pass · lista alta |
-| **14h20** | **Food & Wine — volta 1** | China, Alemanha, Itália. **E é isto o almoço** |
-| **15h30** | **Food & Wine — volta 2** | Japão, Marrocos |
-| **16h45** | **Remy's Ratatouille Adventure** | Multi Pass rolando. Sem horário, standby perto de uma hora |
-| **17h30** | **Food & Wine — volta 3** | França, Reino Unido, Canadá. **E é isto o jantar** |
-| **19h00** | **Spaceship Earth** | A fila some à noite |
-| **20h00** | **Food & Wine — última volta** | O que faltou. Comprem a bebida e levem para o lago |
-| **20h30** | Posição para o Luminous | Margem entre México e Noruega |
-| **21h00** | **Luminous: The Symphony of Us** | ~17 min. Roda no fechamento, às 21h — hora a confirmar |
-| **21h20** | Voltar ao hotel | Uber, ~25 min, US$ 20–30 |
-
-### Por que o dia está nesta ordem — a fila típica
-
-| Atração | Quando vocês fazem | Fila aí | No pico |
-|---|---|---|---|
-| **Test Track** | 9h00, rope drop | **~53 min** | **~99** |
-| Mission: SPACE | 9h45, Multi Pass | ~10 min | ~40 |
-| **Cosmic Rewind** | 10h20, Single Pass | ~10 min | **~101** |
-| Soarin' | 11h15, Multi Pass | ~10 min | ~74 |
-| The Seas / Living with the Land | 12h00 | ~10 min | ~25 |
-| Gran Fiesta Tour | 13h20 | ~5 min | ~15 |
-| **Frozen Ever After** | 13h40, Multi Pass | ~10 min | **~75** |
-| **Remy** | 16h45, Multi Pass rolando | ~10 min | **~60** |
-| Spaceship Earth | 19h00, à noite | ~10 min | ~40 |
-
-*Médias publicadas, consultadas em 10/09/2026.*
-
-> **Por que comprar o Multi Pass aqui.** O Epcot é o único parque em que a fila compete com o que vocês vieram fazer. Frozen e Remy são as duas únicas filas do World Showcase — 45–75 e 40–60 minutos parados no meio das barracas do Food & Wine. Nos outros dias a fila compete com outra fila; aqui compete com o dia. Frozen, Remy e Test Track são do nível 1 e a compra leva só um: vai o Frozen. O Remy é reservado rolando na saída do Mission: SPACE, às 9h45, porque o Multi Pass dele costuma esgotar antes das 11h.
-
-> **O Test Track quebra muito.** Em 2026, um ano depois de reabrir: parada de quase 24 horas em 1º de agosto, outra de cinco horas no dia 23 que comeu a tarde inteira, e falhas mecânicas em fevereiro — sem comunicado da Disney em nenhuma delas. É por isso que ele é o rope drop: **se vai cair, cai no meio do dia.** Se estiver fechado às 9h, pivô para o pavilhão do The Land; se voltar, ele entra rolando depois do Soarin'.
-
-### Estratégia do Food & Wine
-Peguem o passaporte na entrada. **Dividam cada prato entre os dois** e provem 8 a 10 barracas ao longo da tarde, em vez de fazer três refeições. É assim que o festival funciona, e é por isso que hoje **não existe bloco de almoço nem de jantar** — o Food & Wine é as duas refeições, servidas em quatro voltas. Destaques que se repetem todo ano: Canadá (sopa de cheddar com bacon), Alemanha, Grécia, Bélgica (waffle).
-
-### Renúncias
-**The American Adventure** — 30 minutos de história americana contada por animatrônicos, numa tarde que é das barracas do Food & Wine e do Remy.
-
-Journey Into Imagination, Awesome Planet, Turtle Talk with Crush, Disney & Pixar Short Film Festival, os filmes 360° da China e do Canadá.
-
----
-
 
 # 🎥 17/11 (terça) — UNIVERSAL STUDIOS FLORIDA
 
@@ -607,7 +607,7 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 
 **2. Não reserve Multi Pass para o que você vai fazer no rope drop.** Erro clássico: reservar a atração que já estaria vazia às 9h e depois enfrentar fila de 80 minutos no resto.
 
-**3. Use a primeira reserva do Multi Pass cedo.** O sistema só libera a próxima depois que você usa a atual. Quem usa às 11h faz o dobro de quem usa às 15h. Nos dias 11 e 16 a primeira é usada às 11h e às 9h45. No dia 15 ela fica para as 13h55, porque a manhã já sai no rope drop, no standby e no Single Pass do Rise.
+**3. Use a primeira reserva do Multi Pass cedo.** O sistema só libera a próxima depois que você usa a atual. Quem usa às 11h faz o dobro de quem usa às 15h. Nos dias 11 e 13 a primeira é usada às 11h e às 9h45. No dia 15 ela fica para as 13h55, porque a manhã já sai no rope drop, no standby e no Single Pass do Rise.
 
 **4. Mobile order em tudo que for balcão.** Disney e Universal permitem pedir pelo app e só buscar. Economiza 20 a 30 minutos por refeição.
 
@@ -631,12 +631,11 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [x] **11/09** — Lombard’s Seafood Grille (17/11, 18h45) — RESERVADO, confirmação 639247504692187392
 - [x] **11/09** — Atlantic (19/11, 17h) — RESERVADO, confirmação 639247233607631616
 - [x] **12/09** — Magic Kingdom — sem reserva: almoço e jantar do dia 11 são de balcão (Columbia Harbour House e Casey’s)
-- [x] **14/09** — Sanaa (13/11, 19h40) — RESERVADO, confirmação 356258407484
-- [x] **14/09** — Animal Kingdom 13/11 — 8h às 18h, confirmado (Early Entry 7h30)
 - [ ] **15/09** — Confirmar com a agência a regra exata de validade do ingresso Disney de 4 dias *(data estimada)*
 - [ ] **16/09, 6h ET** — Hollywood Studios: Oga’s Cantina e Sci-Fi Dine-In — e ajustar os blocos
+- [ ] **17/09, 6h ET** — Sanaa: remarcar para 16/11 às 19h40 e cancelar a mesa de 13/11
 - [ ] **17/09, 6h ET** — Epcot: abrir a janela de mesa só se mudarem de ideia sobre o Food & Wine
-- [ ] **17/09** — A hora do Fantasmic (15/11) e do Luminous (16/11) — os parques já saíram
+- [ ] **17/09** — A hora do Fantasmic (15/11) e do Luminous (13/11) — e confirmar o Epcot de 13/11
 - [ ] **26/09, 6h ET** — Reservar o Homecomin’ para as 19h30 de 25/11 — a janela de 60 dias abre às 6h ET
 
 **Outubro**
@@ -645,6 +644,7 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [ ] **06/10** — Confirmar o transfer gratuito do hotel para Magic Kingdom e Hollywood Studios *(data estimada)*
 - [ ] **06/10** — Reservar o carro na Avis do Old Town: retirada 20/11 às 15h, devolução 25/11 às 15h *(data estimada)*
 - [ ] **10/10** — Conferir os horários oficiais de 17, 22, 23 e 24/11 e ajustar a referência de cada dia *(data estimada)*
+- [ ] **11/10** — Animal Kingdom 16/11 — confirmar 8h às 18h no app da Disney (Early Entry 7h30) *(data estimada)*
 - [ ] **11/10** — Magic Kingdom 11/11: falta a hora do Festival of Fantasy e do desfile noturno *(data estimada)*
 - [ ] **15/10** — Decidir sobre a Power-Up Band do Epic Universe (~US$ 40) *(data estimada)*
 - [ ] **15/10** — Confirmar que 22/11 tem Christmas Celebration (SeaWorld) e 24/11 tem Christmas Town (Busch Gardens) — ambos rodam em datas selecionadas *(data estimada)*
@@ -662,8 +662,8 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 
 **Durante a viagem**
 - [ ] **10/11, 7h ET** — NÃO é compra: o Single Pass do Flight of Passage se decide dentro do parque
+- [ ] **10/11, 7h ET** — Lightning Lane para 13/11 — Multi Pass do dia e Single Pass do Cosmic Rewind
 - [ ] **12/11, 7h ET** — Lightning Lane para 15/11 — Multi Pass do dia e Single Pass do Rise
 - [ ] **12/11** — Conferir quais lands do Epic estão no Early Park Admission em 19/11 *(data estimada)*
-- [ ] **13/11, 7h ET** — Lightning Lane para 16/11 — Multi Pass do dia e Single Pass do Cosmic Rewind
 - [ ] **14/11** — Comprar o Oakley Meta Vanguard no app do Best Buy, com retirada no Best Buy do Millenia (4155 Millenia Blvd)
 - [ ] **19/11** — Reservar o MCO Reserve para a volta de 26/11
