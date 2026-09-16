@@ -1620,7 +1620,7 @@ window.ROTEIRO = {
     },
   },
 
-  /* ===== 12/11 · QUINTA · OUTLET E TARDE LIVRE ============================ */
+  /* ===== 12/11 · QUINTA · OUTLET E BOARDWALK ============================== */
   /* DIA FECHADO — revisado em 16/09/2026. É o dia mais leve da primeira semana:
      outlet de manhã, tarde no hotel e jantar perto, porque o 13 sai às 6h30.  */
   {
@@ -1628,7 +1628,7 @@ window.ROTEIRO = {
     data: '2026-11-12',
     diaSemana: 'quinta',
     emoji: '🛍️',
-    titulo: 'Outlet e tarde livre',
+    titulo: 'Outlet e BoardWalk',
     subtitulo: 'O dia mais leve da primeira semana',
     tipo: 'compras',
     operadora: null,
@@ -1639,9 +1639,9 @@ window.ROTEIRO = {
     referencia: { rotulo: 'Saída do hotel', padrao: '09:30', confirmado: false },
 
     resumo:
-      'O dia inteiro roda no eixo da International Drive. Ele é leve de propósito: vocês vêm ' +
-      'do Magic Kingdom até as 22h e entram numa sequência pesada a partir de amanhã. O ' +
-      'bloco vazio da tarde não é folga, é manutenção.',
+      'Café de diner, outlet de manhã, tarde inteira no hotel e o BoardWalk à noite. Ele é ' +
+      'leve de propósito: vocês vêm do Magic Kingdom até as 22h e entram numa sequência ' +
+      'pesada a partir de amanhã. O bloco vazio da tarde não é folga, é manutenção.',
 
     avisos: [
       'COMPRA ÀS 7H ET HOJE, se ela não saiu em 08/11: o Multi Pass do dia 15 e o Single ' +
@@ -1668,7 +1668,7 @@ window.ROTEIRO = {
           'Outlet de manhã com calma, começando pelo Character Warehouse, que abre 10h.',
           'Almoço no Ford’s Garage, dentro do próprio outlet, sem Uber.',
           'Tarde inteira no hotel. Não preencham esse bloco.',
-          'Jantar de mesa na 192, a minutos do hotel, e noite curta: o dia 13 sai às 6h30.',
+          'BoardWalk às 18h, com jantar de balcão no calçadão e volta às 20h10.',
         ],
       },
       {
@@ -1694,11 +1694,18 @@ window.ROTEIRO = {
                 'vocês já vão estar, então custa só a caminhada. Abre 10h de segunda a ' +
                 'sábado — a mesma hora em que vocês chegam.' },
 
-      { nome: 'Resort hopping nos hotéis Disney', quando: 'descartado', custo: '—',
-        motivo: 'Fica de fora porque, desde junho de 2026, os resorts exigem reserva de ' +
-                'hotel ou de restaurante para o carro do rideshare passar pela guarita, e o ' +
-                'transporte saindo do Disney Springs também checa. Só daria com um jantar ' +
-                'reservado num resort do monotrilho.', pesquisa: '2026-09-10' },
+      { nome: 'A volta do lago no BoardWalk', quando: 'hoje', custo: 'grátis',
+        motivo: 'Calçadão de madeira em volta do Crescent Lake, com os hotéis acesos do outro ' +
+                'lado e barcos passando. A volta inteira dá uns 25 minutos, não tem catraca e ' +
+                'não custa nada. É o oposto de um dia de parque, que é exatamente o que este ' +
+                'dia precisa ser.',
+        pesquisa: '2026-09-16' },
+
+      { nome: 'Mesa com garçom no BoardWalk', quando: 'decidir', custo: 'a partir de US$ 30 por pessoa',
+        motivo: 'A reserva vale duas vezes: garante o jantar e libera a guarita para o Uber ' +
+                'entrar direto, em vez de descer no Swan e caminhar. Reserva pelo My Disney ' +
+                'Experience, janela de 60 dias. Sem ela, os balcões do calçadão resolvem.',
+        pesquisa: '2026-09-16' },
     ],
 
     /* --------------------------------------------------------------------- */
@@ -1772,13 +1779,17 @@ window.ROTEIRO = {
     /* --------------------------------------------------------------------- */
     blocos: [
       { id: 'b-1211-0830', hora: '08:30', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Café da manhã no hotel',
-        descricao: 'Incluso. Sem alarme',
+        titulo: 'Café da manhã — IHOP',
+        descricao: 'A 750 m do hotel, aberto desde as 6h. Sem alarme',
         contexto:
-          'Com o dia 14, é um dos dois dias da primeira semana com tempo para o café do ' +
-          'hotel com calma — nos dias de parque vocês saem antes de ele abrir. Aproveitem, e sem ' +
-          'despertador: nada hoje depende de acordar cedo.',
-        localId: 'hotel-travelodge', acesso: [], duracaoMin: 60 },
+          'O IHOP da 5184 W Irlo Bronson é o mais perto dos três da 192: uns 750 metros a ' +
+          'leste do hotel, três minutos de Uber. Panqueca, ovos e bacon — o café americano ' +
+          'de diner, e é o mesmo do dia 20.\n\n' +
+          'Sem despertador: nada hoje depende de acordar cedo, e o outlet só abre às 10h.\n\n' +
+          'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto. Se preferirem ' +
+          'ficar, o café do hotel é incluso e vai até as 10h.',
+        endereco: '5184 W Irlo Bronson Memorial Hwy', acesso: [], duracaoMin: 60,
+        pesquisa: '2026-09-16' },
 
       { id: 'b-1211-0930', hora: '09:30', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Sair para o outlet',
@@ -1834,20 +1845,56 @@ window.ROTEIRO = {
           'a sequência mais pesada da viagem: Animal Kingdom, Hollywood Studios, Epcot e ' +
           'Universal Studios, de 13 a 17.\n\n' +
           'Este bloco não é folga. É o que faz o resto funcionar.',
-        localId: 'hotel-travelodge', acesso: [], duracaoMin: 270 },
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 180 },
+
+      { id: 'b-1211-1730', hora: '17:30', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Sair para o BoardWalk',
+        descricao: 'Uber até o Swan, ~30 min, US$ 25–35. A pé de lá',
+        contexto:
+          'O DESTINO NO APLICATIVO É O WALT DISNEY WORLD SWAN, não o BoardWalk. Desde junho ' +
+          'de 2026 a guarita dos hotéis Disney só deixa o carro de aplicativo entrar com ' +
+          'reserva de hotel ou de restaurante, e o Swan não tem guarita.\n\n' +
+          'Do Swan até o BoardWalk é uma caminhada de uns dez minutos pela beira do lago, ' +
+          'que já é parte do passeio. Se vocês reservarem mesa num restaurante do BoardWalk, ' +
+          'aí o Uber entra direto — é só mostrar a confirmação na guarita.',
+        localId: 'swan', acesso: [], duracaoMin: 30, pesquisa: '2026-09-16' },
+
+      { id: 'b-1211-1800', hora: '18:00', ancora: 'fixo', tipo: 'livre',
+        titulo: 'BoardWalk — a volta do lago',
+        descricao: 'Calçadão à beira d’água, de graça. Sem catraca e sem fila',
+        contexto:
+          'É o passeio mais barato e mais bonito da primeira semana: um calçadão de madeira ' +
+          'em volta do Crescent Lake, com os hotéis iluminados do outro lado, barcos passando ' +
+          'e o Epcot logo ali.\n\n' +
+          'A volta inteira do lago — BoardWalk, Beach Club, Yacht Club, Swan e Dolphin — dá ' +
+          'uns 25 minutos de caminhada sem pressa. O pôr do sol é às 17h33, então vocês pegam ' +
+          'a luz do fim da tarde e a virada para a noite.\n\n' +
+          'O portão do Epcot pelo International Gateway fica a cinco minutos a pé daqui, mas ' +
+          'hoje ele não serve: o dia de Epcot é 16/11 e o ingresso é por data.',
+        localId: 'boardwalk', acesso: [], duracaoMin: 60, pesquisa: '2026-09-16' },
 
       { id: 'b-1211-1900', hora: '19:00', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar na 192',
-        descricao: 'Black Angus ou Miller’s Ale House, os dois de mesa, a minutos do hotel',
+        titulo: 'Jantar no BoardWalk',
+        descricao: 'Balcão do próprio calçadão. Mesa com garçom só com reserva',
         contexto:
-          'A noite é curta de propósito: o dia 13 é Animal Kingdom com saída às 6h30, a mais ' +
-          'cedo da viagem.\n\n' +
-          'Os dois ficam na própria 192, sem Uber longo, e nenhum dos dois precisa de ' +
-          'reserva. O Black Angus é churrascaria americana clássica; o Miller’s serve até ' +
-          'tarde, se vocês esticarem a tarde no hotel.\n\n' +
-          'Se o corpo pedir cama em vez de mesa, a lista do Walmart cobre o jantar no quarto: ' +
-          'é o único dia da viagem em que isso não custa nada ao roteiro.',
-        localId: 'hotel-travelodge', acesso: [], duracaoMin: 75, pesquisa: '2026-09-16' },
+          'Os balcões do calçadão resolvem sem reserva e sem espera: sanduíche, pizza em ' +
+          'fatia e sobremesa, comidos numa mesa ao ar livre com o lago na frente.\n\n' +
+          'SE QUISEREM MESA COM GARÇOM, ela precisa ser reservada no My Disney Experience, e ' +
+          'a reserva vale duas vezes: garante o jantar e libera a guarita para o Uber entrar ' +
+          'direto no BoardWalk. A janela abre 60 dias antes.\n\n' +
+          'Hoje é o único jantar da viagem sem nada marcado, de propósito: amanhã o Animal ' +
+          'Kingdom sai às 6h30.',
+        localId: 'boardwalk', acesso: [], duracaoMin: 60, pesquisa: '2026-09-16' },
+
+      { id: 'b-1211-2010', hora: '20:10', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voltar ao hotel',
+        descricao: 'Uber do Swan, ~30 min, US$ 25–35. Amanhã sai às 6h30',
+        contexto:
+          'Voltem a pé até o Swan para chamar o carro, pelo mesmo motivo da ida.\n\n' +
+          'Não estiquem. O dia 13 é Animal Kingdom com saída às 6h30 — a mais cedo da viagem ' +
+          '— e abre a sequência pesada: Animal Kingdom, Hollywood Studios, Epcot e Universal ' +
+          'Studios, de 13 a 17.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 40 },
     ],
     renuncias: null,
     ficha: null,
@@ -4524,13 +4571,24 @@ window.ROTEIRO = {
         areaParque: 'Diagon Alley', acesso: [], duracaoMin: 55,
         pesquisa: '2026-09-10' },
 
-      { id: 'b-1711-2100', hora: '21:00', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Voltar ao hotel',
-        descricao: 'Uber. Andem até o CityWalk antes de chamar',
+      { id: 'b-1711-2055', hora: '20:55', ancora: 'fixo', tipo: 'livre',
+        titulo: 'CityWalk na saída',
+        descricao: 'Fora da catraca, não fecha com o parque. Vinte e cinco minutos',
         contexto:
-          'A tarifa dinâmica na porta do parque logo depois do fechamento é brutal. O ' +
-          'CityWalk fica no caminho e tem ponto próprio: o transporte por app sai da área de ' +
-          'estacionamento e ônibus, no extremo sul do CityWalk.\n\n' +
+          'O CityWalk fica entre a catraca e o ponto de aplicativo, então ele não custa ' +
+          'deslocamento nenhum: vocês passam por dentro dele de qualquer jeito.\n\n' +
+          'Ele não fecha junto com o parque, e a essa hora as lojas e as fachadas estão ' +
+          'acesas. É volta de reconhecimento, não programa: amanhã não tem parque, mas hoje ' +
+          'já foram treze horas de pé.',
+        localId: 'citywalk', acesso: [], duracaoMin: 25, pesquisa: '2026-09-16' },
+
+      { id: 'b-1711-2120', hora: '21:20', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voltar ao hotel',
+        descricao: 'Uber do próprio CityWalk',
+        contexto:
+          'A tarifa dinâmica na porta do parque logo depois do fechamento é brutal, e por ' +
+          'isso a volta sai do CityWalk: o transporte por app tem ponto próprio na área de ' +
+          'estacionamento e ônibus, no extremo sul dele.\n\n' +
           'SE O CINESATIONAL RODAR HOJE — o show da lagoa, no fechamento —, a decisão já foi ' +
           'tomada na pendência de 01/11. Ficar para ele é sair com todo mundo.\n\n' +
           'Amanhã não tem parque e não tem alarme: o dia 18 começa às 9h.',
@@ -4753,7 +4811,7 @@ window.ROTEIRO = {
         titulo: 'Café no hotel',
         descricao: 'Sem alarme. Hoje é o dia mais leve da segunda semana',
         contexto:
-          'A manhã é lenta de propósito. Ontem foi Universal Studios das 7h45 às 21h, e ' +
+          'A manhã é lenta de propósito. Ontem foi Universal Studios das 7h45 às 21h20, e ' +
           'amanhã é o Epic Universe com saída às 7h15. Este é o único respiro entre os dois.',
         acesso: [], duracaoMin: 90 },
 
@@ -8968,6 +9026,20 @@ window.ROTEIRO = {
                  uberUSD: null, uberFonte: null },
       nota: 'Abre às 10h, com horário estendido na semana da Black Friday. O Marshalls do ' +
             'Vineland Pointe fica ao lado.' },
+
+    { id: 'boardwalk', nome: 'Disney’s BoardWalk', tipo: 'livre',
+      lat: 28.3672046, lng: -81.5556295, verificado: true, fonteCoord: 'osm', endereco: 'Epcot Resorts Blvd',
+      doHotel: { tempoMin: 30, tempoFonte: 'estimado',
+                 uberUSD: { min: 25, max: 35 }, uberFonte: 'estimado' },
+      nota: 'A guarita só deixa o carro de aplicativo entrar com reserva de hotel ou de ' +
+            'restaurante. Sem reserva, desçam no Swan e façam os dez minutos a pé.' },
+
+    { id: 'swan', nome: 'Walt Disney World Swan', tipo: 'transporte',
+      lat: 28.365308, lng: -81.5598369, verificado: true, fonteCoord: 'osm', endereco: 'Epcot Resorts Blvd',
+      doHotel: { tempoMin: 30, tempoFonte: 'estimado',
+                 uberUSD: { min: 25, max: 35 }, uberFonte: 'estimado' },
+      nota: 'Não tem guarita: é por aqui que se chega ao BoardWalk de aplicativo sem reserva. ' +
+            'Dez minutos a pé pela beira do lago.' },
 
     { id: 'millenia', nome: 'The Mall at Millenia', tipo: 'compras',
       lat: 28.48538, lng: -81.431312, verificado: true, fonteCoord: 'wikipedia', endereco: '4200 Conroy Rd',

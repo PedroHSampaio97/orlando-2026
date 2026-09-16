@@ -35,25 +35,29 @@ Os blocos marcados como **VAZIO PROPOSITAL** não são falha de planejamento. Re
 
 ---
 
-# 🛍️ 12/11 (quinta) — Outlet e tarde livre
+# 🛍️ 12/11 (quinta) — Outlet e BoardWalk
 
-Compra de manhã, hotel à tarde e jantar perto. É o dia que protege o 13, que sai às 6h30.
+Café de diner, compra de manhã, hotel à tarde e o calçadão do BoardWalk à noite. É o dia que protege o 13, que sai às 6h30.
 
 | Hora | O quê | Notas |
 |---|---|---|
-| **8h30** | **Café da manhã no hotel** | Incluso. Aproveitem — nos dias de parque vocês não conseguem |
+| **8h30** | **Café da manhã — IHOP**, 5184 W Irlo Bronson | A 750 m do hotel, aberto desde as 6h. Sem alarme. O do hotel continua incluso |
 | **9h30** | Sair para o outlet | Uber, ~25 min, US$ 20–30. O Character Warehouse abre 10h |
 | **10h00** | **Orlando International Premium Outlets** — 4951 International Dr | ~25 min. O cupom do balcão custa US$ 10; o gratuito é o Savings Passport do Simon VIP Club, cadastrado antes de viajar |
 | | ↳ **Disney’s Character Warehouse**, dentro do mesmo outlet | Outlet oficial da Disney. Sobra de estoque e item descontinuado das lojas dos parques. Abre 10h de seg a sáb |
 | **13h00** | **Almoço — Ford's Garage**, dentro do outlet | Mesa com garçom. Sair da I-Drive para comer custaria dois Ubers e uma hora |
 | **14h30** | **VAZIO PROPOSITAL** — voltar ao hotel, piscina, dormir | Vocês vêm de Magic Kingdom até 22h no dia anterior |
-| **19h00** | **Jantar na 192** — Black Angus ou Miller's Ale House | Os dois de mesa, a minutos do hotel, sem reserva |
+| **17h30** | Sair para o BoardWalk | Uber **até o Swan**, ~30 min, US$ 25–35. A pé de lá |
+| **18h00** | **BoardWalk — a volta do lago** | Calçadão de madeira no Crescent Lake. Sem catraca, de graça |
+| **19h00** | **Jantar no BoardWalk** | Balcões do calçadão, sem reserva. Mesa com garçom só reservada |
+| **20h10** | Voltar ao hotel | Uber do Swan, ~30 min. Amanhã sai às 6h30 |
 
-> **A noite é curta de propósito.** O dia 13 é Animal Kingdom com saída às 6h30, a mais
-> cedo da viagem. Se o corpo pedir cama em vez de mesa, a lista do Walmart cobre o jantar
-> no quarto — é o único dia em que isso não custa nada ao roteiro.
+> **Por que o Uber para no Swan.** Desde junho de 2026 a guarita dos hotéis Disney só deixa
+> o carro de aplicativo entrar com reserva de hotel ou de restaurante. O Swan não tem
+> guarita, e de lá são dez minutos a pé pela beira do lago. Com mesa reservada num
+> restaurante do BoardWalk, o Uber entra direto.
 
-**Sobre resort hopping:** desde junho de 2026 os hotéis Disney deixaram de ser livremente visitáveis. A guarita exige reserva de hotel ou de restaurante para o carro do rideshare entrar, e o transporte que sai do Disney Springs também checa. Ainda é possível com um jantar reservado num resort do monotrilho — Grand Floridian, Polynesian ou Contemporary, que se ligam entre si —, mas a reserva sai com 60 dias de antecedência.
+**Sobre resort hopping:** o BoardWalk desta noite é a exceção, e ela só funciona pela caminhada do Swan. Desde junho de 2026 os hotéis Disney deixaram de ser livremente visitáveis. A guarita exige reserva de hotel ou de restaurante para o carro do rideshare entrar, e o transporte que sai do Disney Springs também checa. Ainda é possível com um jantar reservado num resort do monotrilho — Grand Floridian, Polynesian ou Contemporary, que se ligam entre si —, mas a reserva sai com 60 dias de antecedência.
 
 ---
 
