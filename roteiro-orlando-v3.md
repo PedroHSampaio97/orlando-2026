@@ -222,7 +222,7 @@ O parque mais difícil da Disney, e o único dos três em que o Single Pass se j
 | **16h05** | **Star Tours** | Multi Pass · lista baixa. O roteiro muda a cada visita |
 | **16h50** | **Parada** | Dez minutos. Comam algo da mochila: o Oga's é bebida, não jantar. Banheiro ao lado do Docking Bay 7 |
 | **17h00** | **Oga's Cantina** | Reserva. Limite de 45 min por grupo |
-| **18h00** | **Jantar — Sci-Fi Dine-In** | Reserva. Vocês sentam dentro de um carro dos anos 50 |
+| **18h10** | **Jantar de balcão — Sunset Ranch Market** | Rosie's e vizinhos, sem reserva, ao lado do teatro do Fantasmic |
 | **19h25** | **Sunset Blvd** — Natal e compras | **É o momento de compra do dia.** As lojas fecham com o parque |
 | **19h45** | Posição para o Fantasmic! | Meio e um pouco atrás. O teatro abre às 18h30; as primeiras fileiras molham |
 | **20h00** | **Fantasmic!** | ~26 min. O parque fecha às 21h; a hora do show ainda não saiu |
@@ -246,7 +246,7 @@ O parque mais difícil da Disney, e o único dos três em que o Single Pass se j
 
 > **Por que aqui o Single Pass fica, e nos dias 11 e 16 é plano B.** Nos outros dois o horário resolve: o TRON tem a janela do desfile, o Flight of Passage tem a última hora. Aqui **não existe janela livre** — o Rise faz 100 min na abertura e 63 depois das 19h, e as 19h de vocês já têm Oga's, Sci-Fi e Fantasmic. O plano B de graça existe e está registrado: entrar na fila **depois do Fantasmic**, por volta das 20h35, valendo a regra de que quem está na fila no fechamento anda. Saem por volta das 21h40 — e amanhã é Epcot com saída às 7h45.
 
-> **As duas reservas ainda não existem.** A janela do Oga's e do Sci-Fi abre em **16/09**, e os horários acima são proposta: 17h e 18h fazem a tarde caber sem correria e deixam 20 minutos de Sunset Blvd antes do show. Se conseguirem outros, os blocos da noite acompanham.
+> **O Oga's está reservado para as 17h05**, confirmação 356259476987. O Sci-Fi ficou de fora: na abertura da janela ele só oferecia 16h45, que colide com o Oga's, e 19h40, que colide com o Fantasmic. O jantar passou a ser de balcão no Sunset Ranch Market, que fica ao lado do teatro e deixa 20 minutos de Sunset Blvd antes do show.
 
 ### Renúncias
 Disney Junior, Frozen Sing-Along, Vacation Fun, Walt Disney Presents, Beauty and the Beast Live on Stage e Disney Villains: Unfairly Ever After — o show de 18 minutos da Sunset Blvd cairia na janela da tarde em que o Multi Pass está girando.
@@ -627,12 +627,12 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [x] **11/09, 6h ET** — The Boathouse (10/11) — RESERVADO, confirmação 2111918775
 - [x] **11/09** — Columbia Restaurant (14/11, 12h30) — RESERVADO, confirmação 2110915279
 - [x] **11/09** — Kres Chophouse (18/11, 17h45) — RESERVADO, confirmação 2110248556
-- [x] **11/09** — Mythos (23/11, 19h15) — RESERVADO, confirmação 639247495205005056
+- [x] **11/09** — Mythos (19/11, 19h15) — RESERVADO, confirmação 639251823318530048
 - [x] **11/09** — Lombard’s Seafood Grille (17/11, 18h45) — RESERVADO, confirmação 639247504692187392
-- [x] **11/09** — Atlantic (19/11, 17h) — RESERVADO, confirmação 639247233607631616
+- [x] **11/09** — Atlantic (20/11, 17h) — RESERVADO, confirmação 639251824607987840
 - [x] **12/09** — Magic Kingdom — sem reserva: almoço e jantar do dia 11 são de balcão (Columbia Harbour House e Casey’s)
 - [ ] **15/09** — Confirmar com a agência a regra exata de validade do ingresso Disney de 4 dias *(data estimada)*
-- [ ] **16/09, 6h ET** — Hollywood Studios: Oga’s Cantina e Sci-Fi Dine-In — e ajustar os blocos
+- [x] **16/09** — Oga’s Cantina (15/11, 17h05) — RESERVADO, confirmação 356259476987
 - [ ] **17/09, 6h ET** — Sanaa: remarcar para 16/11 às 19h40 e cancelar a mesa de 13/11
 - [ ] **17/09, 6h ET** — Epcot: abrir a janela de mesa só se mudarem de ideia sobre o Food & Wine
 - [ ] **17/09** — A hora do Fantasmic (15/11) e do Luminous (13/11) — e confirmar o Epcot de 13/11

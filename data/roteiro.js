@@ -2640,7 +2640,7 @@ window.ROTEIRO = {
           motivo: 'Voltando perto das 22h, ninguém monta mochila. Deixem pronta agora, na ' +
                   'hora do descanso da tarde: os soft flasks, barrinhas, protetor solar, power ' +
                   'bank, cabo e uma camada leve para cada um.' },
-        { texto: 'Reservas do Oga’s Cantina e do Sci-Fi Dine-In à mão',
+        { texto: 'Reserva do Oga’s Cantina à mão: 356259476987',
           motivo: 'Os dois são de horário fixo amanhã. Deixem os números acessíveis no ' +
                   'celular hoje.' },
       ],
@@ -2882,7 +2882,7 @@ window.ROTEIRO = {
     avisos: [
       'NÃO VÃO PARA O GALAXY’S EDGE NA ABERTURA. O Early Entry inclui o Rise, o Slinky e a ' +
       'Torre, e a maioria dos hóspedes vai para o Rise. Vocês vão para o Toy Story Land.',
-      'AS DUAS RESERVAS AINDA NÃO EXISTEM. A janela do Oga’s e do Sci-Fi abre em 16/09 e os ' +
+      'O OGA’S ESTÁ RESERVADO PARA AS 17h05. O Sci-Fi ficou de fora: na abertura da janela ' +
       'horários aqui são proposta — 17h e 18h fazem a tarde caber. Se conseguirem outros, ' +
       'ajustem os blocos da noite.',
     ],
@@ -2927,7 +2927,7 @@ window.ROTEIRO = {
           'meio do caminho.',
           'Rock ’n’ Roller com o Multi Pass às 13h55; ao usar, reservem o Runaway Railway. ' +
           'Torre e Star Tours já estão reservados.',
-          'Noite sentada: Oga’s, Sci-Fi, Sunset Blvd e o Fantasmic.',
+          'Noite sentada: Oga’s, jantar de balcão na Sunset Blvd e o Fantasmic.',
         ],
       },
       {
@@ -2963,7 +2963,8 @@ window.ROTEIRO = {
         gatilho: 'Chuva que não passa, cansaço, ou o dia atrasou demais.',
         passos: [
           'Este é o parque MAIS coberto da Disney. Rise, Runaway Railway, Toy Story Mania, ' +
-          'Star Tours e a Torre do Terror são todos internos, e o Oga’s e o Sci-Fi também.',
+          'Star Tours e a Torre do Terror são todos internos, e o Oga’s também. O jantar da ' +
+          'Sunset Blvd é em pátio aberto, com mesas cobertas.',
           'O Slinky e o Rock ’n’ Roller param com raio. Se pararem de manhã, troquem a ordem: ' +
           'Rise e Millennium Falcon primeiro, e voltem ao Toy Story Land depois.',
           'O QUE NÃO SE SACRIFICA: o Fantasmic. Se for para cortar, cortem nesta ordem — ' +
@@ -2996,7 +2997,7 @@ window.ROTEIRO = {
         custo: 'US$ 20–25 por pessoa',
         motivo: 'DIFERENTE DOS DIAS 11 E 13, aqui o passe se justifica. Nos outros dois o ' +
                 'horário resolvia; aqui não existe janela livre — o Rise faz 100 min na ' +
-                'abertura e 63 depois das 19h, e as 19h de vocês já têm Oga’s, Sci-Fi e ' +
+                'abertura e 63 depois das 19h, e as 19h de vocês já têm Oga’s, jantar e ' +
                 'Fantasmic.\n\n' +
                 'O plano B de graça existe e está no bloco: entrar na fila depois do ' +
                 'Fantasmic, por volta das 20h35, com a regra de que quem está na fila no ' +
@@ -3123,7 +3124,7 @@ window.ROTEIRO = {
           'SEJAM HONESTOS COM O NÚMERO: o Slinky faz 97 minutos na abertura, 79 de média no ' +
           'dia e 64 à noite. Não existe janela barata para ele. O rope drop não é o momento ' +
           'em que ele fica de graça, é o momento em que ele custa menos — e a noite de vocês ' +
-          'já está ocupada com Oga’s, Sci-Fi e Fantasmic.\n\n' +
+          'já está ocupada com Oga’s, jantar e Fantasmic.\n\n' +
           'Fazê-lo agora também libera a lista alta do Multi Pass, que de outra forma ele ' +
           'consumiria — e ela vai para o Rock ’n’ Roller Coaster.',
         areaParque: 'Toy Story Land', acesso: ['rope-drop', 'standby'], critico: true,
@@ -3176,7 +3177,7 @@ window.ROTEIRO = {
           'POR QUE AQUI O PASSE FICA, e nos dias 11 e 16 é plano B: nos outros dois o ' +
           'horário resolve — o TRON tem a janela do desfile, o Flight of Passage tem a ' +
           'última hora. Aqui não existe janela livre. O Rise faz 100 minutos na abertura e ' +
-          '63 depois das 19h, e as 19h de vocês já estão com Oga’s, Sci-Fi e Fantasmic.\n\n' +
+          '63 depois das 19h, e as 19h de vocês já estão com Oga’s, jantar e Fantasmic.\n\n' +
           'PLANO B DE GRAÇA, se vocês não comprarem: entrar na fila DEPOIS do Fantasmic, por ' +
           'volta das 20h35. Vale a mesma regra do dia 16 — quem está na fila no fechamento ' +
           'anda. Vocês sairiam por volta das 21h40, e o dia 16 sai às 6h30 para o Animal Kingdom.',
@@ -3334,21 +3335,21 @@ window.ROTEIRO = {
         descricao: 'Dez minutos. Banheiro ao lado do Docking Bay 7; a partir daqui o dia é sentado',
         contexto:
           'Banheiro, flasks e power bank. Daqui até a saída são quatro horas, e três delas ' +
-          'são sentadas: Oga’s, Sci-Fi e Fantasmic.\n\n' +
+          'são sentadas: Oga’s, o jantar na Sunset Blvd e o Fantasmic.\n\n' +
           'COMAM ALGUMA COISA DA MOCHILA se estiverem com fome: o almoço foi 12h20 e o ' +
-          'Oga’s serve bebida, não jantar. A comida de verdade só chega às 18h.',
+          'Oga’s serve bebida, não jantar. A comida de verdade só chega às 18h10.',
         areaParque: 'Galaxy’s Edge', acesso: [], duracaoMin: 10 },
 
-      { id: 'b-1511-1715', hora: '17:00', ancora: 'fixo', tipo: 'refeicao',
+      { id: 'b-1511-1705', hora: '17:05', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Oga’s Cantina',
-        descricao: 'Reserva. Limite de 45 min por grupo',
+        descricao: 'Reservado, 17h05. Limite de 45 min por grupo',
         contexto:
           'Bar temático de Batuu com DJ droide, drinks autorais bem estranhos e limite de ' +
           'tempo de 45 minutos por grupo. É quase impossível entrar sem reserva.\n\n' +
-          'HORÁRIO FIXO de reserva, e ele é PROPOSTA: a janela abre em 16/09 e nada foi ' +
-          'reservado ainda. Pedir 17h faz a tarde caber sem correria e deixa doze minutos ' +
-          'de caminhada até o Sci-Fi. Se só conseguirem outro horário, ajustem os blocos ' +
-          'daqui até o Fantasmic.',
+          'RESERVADO PARA AS 17h05, confirmação 356259476987. São 45 minutos de mesa, e ' +
+          'daqui vocês atravessam para a Sunset Blvd: treze minutos de caminhada, a mais ' +
+          'longa dos parques da Disney. O jantar é no pátio de balcões de lá, já colado no ' +
+          'teatro do Fantasmic.',
         restauranteId: 'r-ogas', areaParque: 'Galaxy’s Edge', acesso: ['reserva'],
         duracaoMin: 45,
         curiosidades: [
@@ -3357,25 +3358,20 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Star Wars: Galaxy’s Edge', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1511-1815', hora: '18:00', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — Sci-Fi Dine-In',
-        descricao: 'Reserva. Vocês sentam dentro de um carro dos anos 50',
+      { id: 'b-1511-1810', hora: '18:10', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Jantar de balcão — Sunset Ranch Market',
+        descricao: 'Rosie’s All-American Café e vizinhos, sem reserva. Mobile order',
         contexto:
-          'Vocês sentam dentro de conversíveis num cinema drive-in cenográfico, assistindo a ' +
-          'trailers de ficção científica ruim em loop, sob um céu estrelado falso. A comida é ' +
-          'americana comum — vocês vão pelo cenário, que não existe em nenhum outro lugar.\n\n' +
-          'É mesa com garçom: 18 a 20% de gorjeta, e o preço da etiqueta não inclui o ' +
-          'imposto.\n\n' +
-          'HORÁRIO FIXO de reserva, também proposta. Janela abre 16/09.',
-        restauranteId: 'r-scifi', areaParque: 'Commissary Lane', acesso: ['reserva'],
-        duracaoMin: 78,
-        curiosidades: [
-          { texto: 'Abriu em 20/04/1991. Os carros são de fibra de vidro, com cromado e pneu ' +
-                   'de faixa branca, e o loop de trailers dura 47 minutos, com Plan 9 from ' +
-                   'Outer Space e o trailer original de Attack of the 50 Foot Woman. Em menos ' +
-                   'de um ano virou o restaurante mais concorrido do parque.',
-            fonte: 'Wikipedia — Sci-Fi Dine-In Theater Restaurant', pesquisa: '2026-09-15' },
-        ] },
+          'O Sunset Ranch Market é o pátio de balcões da Sunset Blvd, a poucos passos do ' +
+          'teatro do Fantasmic: Rosie’s All-American Café para hambúrguer e frango, Catalina ' +
+          'Eddie’s para pizza e Fairfax Fare para churrasco.\n\n' +
+          'PEÇAM PELO MOBILE ORDER no My Disney Experience assim que saírem do Oga’s: o ' +
+          'pátio enche antes do show.\n\n' +
+          'POR QUE AQUI: o jantar fica colado no Fantasmic, sem travessia no escuro e sem ' +
+          'voltar ao Galaxy’s Edge. Confiram os horários no app do dia — os balcões abrem e ' +
+          'fecham conforme a operação.',
+        restauranteId: 'r-sunset-market', areaParque: 'Sunset Blvd', acesso: [],
+        duracaoMin: 60, pesquisa: '2026-09-16' },
 
       { id: 'b-1511-1945', hora: '19:25', ancora: 'fixo', tipo: 'compras',
         titulo: 'Sunset Blvd · decoração de Natal e compras',
@@ -3457,7 +3453,7 @@ window.ROTEIRO = {
           'ESTE É O ÚNICO DOS TRÊS DIAS DE PASSE EM QUE ELE SE JUSTIFICA. No dia 11 o TRON ' +
           'tinha a janela do desfile; no dia 16 o Flight of Passage tem a última hora. ' +
           'Aqui não existe janela livre: o Rise faz 100 min na abertura e 63 depois das ' +
-          '19h, e a noite de vocês já tem Oga’s, Sci-Fi e Fantasmic.\n\n' +
+          '19h, e a noite de vocês já tem Oga’s, jantar e Fantasmic.\n\n' +
           'Peçam janela entre 10h30 e 11h. Se não comprarem, o plano B está no bloco: fila ' +
           'depois do Fantasmic, por volta das 20h35.',
       },
@@ -5437,7 +5433,7 @@ window.ROTEIRO = {
         { texto: 'Guardar o que veio do Islands', critico: false,
           motivo: 'Amanhã a mochila precisa sair leve — o Epic tem locker obrigatório em ' +
                   'três atrações, e detector de metal no Stardust Racers.' },
-        { texto: 'Confirmação do Atlantic à mão: 639247233607631616', critico: false,
+        { texto: 'Confirmação do Atlantic à mão: 639251824607987840', critico: false,
           motivo: 'Jantar às 17h de amanhã. A mesa é segurada só por 15 minutos, então o número ' +
                   'fica no celular, não perdido no e-mail.' },
       ],
@@ -8076,20 +8072,24 @@ window.ROTEIRO = {
       canal: 'Mobile order pelo My Disney Experience', blocoId: 'b-1511-1215',
       nota: 'Balcão temático de Batuu.' },
 
-    { id: 'r-ogas', nome: 'Oga’s Cantina', data: '2026-11-15', hora: '17:00',
+    { id: 'r-ogas', nome: 'Oga’s Cantina', data: '2026-11-15', hora: '17:05',
       refeicao: 'drink', local: 'Hollywood Studios · Galaxy’s Edge',
       alternativas: ['Sem reserva não entra. Se não conseguirem, a Milk Stand da mesma ' +
                      'land serve o leite azul e o verde sem fila de reserva'],
       precisaReserva: true, janelaAbre: '2026-09-16', janelaHora: '06:00 ET',
-      canal: 'My Disney Experience', blocoId: 'b-1511-1715',
-      nota: 'Limite de 45 min por grupo. Quase impossível entrar sem reserva.' },
+      canal: 'My Disney Experience', blocoId: 'b-1511-1705',
+      statusPadrao: 'confirmado', confirmacaoPadrao: '356259476987',
+      nota: 'RESERVADO — confirmação 356259476987, duas pessoas, 17h05. Limite de 45 min ' +
+            'por grupo. Plano de refeição não é aceito.' },
 
-    { id: 'r-scifi', nome: 'Sci-Fi Dine-In Theater', data: '2026-11-15', hora: '18:00',
-      refeicao: 'jantar', local: 'Hollywood Studios · Commissary Lane',
-      alternativas: ['ABC Commissary, ao lado, balcão e sem reserva', 'Mama Melrose, na Grand Avenue'],
-      precisaReserva: true, janelaAbre: '2026-09-16', janelaHora: '06:00 ET',
-      canal: 'My Disney Experience', blocoId: 'b-1511-1815',
-      nota: 'Mesas em formato de carro num drive-in cenográfico.' },
+    { id: 'r-sunset-market', nome: 'Sunset Ranch Market', data: '2026-11-15', hora: '18:10',
+      refeicao: 'jantar', local: 'Hollywood Studios · Sunset Blvd',
+      alternativas: ['Ronto Roasters, no Galaxy’s Edge, antes de atravessar'],
+      precisaReserva: false, janelaAbre: null, janelaHora: null,
+      canal: 'Mobile order no My Disney Experience', blocoId: 'b-1511-1810',
+      nota: 'Pátio de balcões ao ar livre na Sunset Blvd, a poucos passos do teatro do ' +
+            'Fantasmic: Rosie’s All-American Café, Catalina Eddie’s e Fairfax Fare. Sem ' +
+            'reserva, com mobile order. Balcão não leva gorjeta.' },
 
     { id: 'r-epcot-mesa', nome: 'Epcot — mesa (opcional)', data: '2026-11-16', hora: null,
       refeicao: 'jantar', local: 'Epcot · World Showcase', alternativas: [],
@@ -8135,8 +8135,8 @@ window.ROTEIRO = {
       alternativas: ['Three Broomsticks, em Hogsmeade, sem reserva'],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
       canal: 'App / site da Universal Orlando, ou +1 407-224-3663', blocoId: 'b-1911-1915',
-      statusPadrao: 'confirmado', confirmacaoPadrao: '639247495205005056',
-      nota: 'RESERVADO em 11/09 — confirmação 639247495205005056, duas pessoas, 19h15. ' +
+      statusPadrao: 'confirmado', confirmacaoPadrao: '639251823318530048',
+      nota: 'RESERVADO — confirmação 639251823318530048, duas pessoas, 19h15. ' +
             'Cheguem 5 minutos antes: a mesa é segurada por 15 minutos. Dez vezes eleito o ' +
             'melhor restaurante de parque temático. Pratos de US$ 26 a 42. A Universal diz que ' +
             'ele fecha em 2027, com a demolição da Lost Continent, ainda sem data.' },
@@ -8183,8 +8183,8 @@ window.ROTEIRO = {
       alternativas: ['Mead Hall (Isle of Berk, sem reserva)'],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
       canal: 'App / site da Universal Orlando', blocoId: 'b-2011-1700',
-      statusPadrao: 'confirmado', confirmacaoPadrao: '639247233607631616',
-      nota: 'RESERVADO em 11/09 — confirmação 639247233607631616, duas pessoas, 17h. Cheguem ' +
+      statusPadrao: 'confirmado', confirmacaoPadrao: '639251824607987840',
+      nota: 'RESERVADO — confirmação 639251824607987840, duas pessoas, 17h. Cheguem ' +
             '5 minutos antes: a mesa é segurada só por 15 minutos. Às 17h de propósito — o ' +
             'jantar cedo libera as três últimas horas para o Ministry e o Mine-Cart. Pratos de ' +
             'US$ 35 a 48.' },
@@ -8275,16 +8275,19 @@ window.ROTEIRO = {
         'savana. A escolha é pela comida, e a mesa fica na Kidani Village.',
       restauranteIds: ['r-sanaa'] },
 
-    { id: 'ck-1609', dataAlvo: '2026-09-16', validaAte: '2026-11-15', hora: '06:00', fuso: 'ET',
-      janelaReserva: true, critico: false,
-      texto: 'Hollywood Studios: Oga’s Cantina e Sci-Fi Dine-In — e ajustar os blocos',
+    { id: 'ck-1609', dataAlvo: '2026-09-16', dataEstimada: false, hora: null, fuso: null,
+      janelaReserva: false, critico: false, feitoPadrao: true,
+      texto: 'Oga’s Cantina (15/11, 17h05) — RESERVADO, confirmação 356259476987',
       nota:
-        'As 17h do Oga’s e as 18h do Sci-Fi que estão no dia 15 são PROPOSTA, não reserva: ' +
-        'elas fazem a tarde caber e deixam doze minutos de caminhada entre os dois.\n\n' +
-        'Se só conseguirem outros horários, a pendência não acaba na reserva — voltem no ' +
-        'dia 15 e ajustem os dois blocos e o que vem depois deles, até o Fantasmic. Sem ' +
-        'isso o app vai seguir mostrando 17h e 18h o resto da viagem.',
-      restauranteIds: ['r-ogas', 'r-scifi'] },
+        'Limite de 45 minutos por grupo, e o plano de refeição não é aceito.\n\n' +
+        'O SCI-FI DINE-IN FICOU DE FORA. Na abertura da janela o restaurante só oferecia ' +
+        '16h45 e 19h40 para 15/11: o primeiro colide com o Oga’s das 17h05 e o segundo com o ' +
+        'Fantasmic das 20h. O jantar do dia passou a ser de balcão no Sunset Ranch Market, ' +
+        'que fica ao lado do teatro.\n\n' +
+        'Se aparecer horário entre 18h e 18h30 numa conferência futura, ele volta a caber: ' +
+        'são doze minutos de caminhada do Oga’s até a Commissary Lane, e mais sete de lá ' +
+        'até a Sunset Blvd.',
+      restauranteIds: ['r-ogas'] },
 
     { id: 'ck-1709', dataAlvo: '2026-09-17', validaAte: '2026-11-16', hora: '06:00', fuso: 'ET',
       janelaReserva: true, critico: false,
@@ -8439,7 +8442,7 @@ window.ROTEIRO = {
 
     { id: 'ck-mythos', dataAlvo: '2026-09-11', dataEstimada: false, hora: null, fuso: null,
       janelaReserva: false, critico: true, feitoPadrao: true,
-      texto: 'Mythos (23/11, 19h15) — RESERVADO, confirmação 639247495205005056',
+      texto: 'Mythos (19/11, 19h15) — RESERVADO, confirmação 639251823318530048',
       restauranteIds: ['r-mythos'] },
 
     { id: 'ck-lombards', dataAlvo: '2026-09-11', dataEstimada: false, hora: null, fuso: null,
@@ -8460,7 +8463,7 @@ window.ROTEIRO = {
 
     { id: 'ck-atlantic', dataAlvo: '2026-09-11', dataEstimada: false,
       hora: null, fuso: null, janelaReserva: false, critico: true, feitoPadrao: true,
-      texto: 'Atlantic (19/11, 17h) — RESERVADO, confirmação 639247233607631616',
+      texto: 'Atlantic (20/11, 17h) — RESERVADO, confirmação 639251824607987840',
       restauranteIds: ['r-atlantic'] },
 
     { id: 'ck-powerband', dataAlvo: '2026-10-15', validaAte: '2026-11-19', dataEstimada: true, motivoData: 'Prazo de outubro, com folga para o site do parque', hora: null, fuso: null,
@@ -8627,7 +8630,7 @@ window.ROTEIRO = {
         'parque, assim que o Rock ’n’ Roller é usado.\n\n' +
         'SINGLE PASS do Rise of the Resistance — peçam janela entre 10h30 e 11h. Este é o ' +
         'único dos três dias de passe em que o Single se justifica: o Rise faz 100 min na ' +
-        'abertura e 63 depois das 19h, e a noite de vocês já tem Oga’s, Sci-Fi e ' +
+        'abertura e 63 depois das 19h, e a noite de vocês já tem Oga’s, jantar e ' +
         'Fantasmic.',
       restauranteIds: [] },
 
@@ -9336,8 +9339,8 @@ window.ROTEIRO = {
     { id: 'tel-disney-dining', nome: 'Disney — reservas de restaurante',
       numero: '+1 407-939-3463', critico: true,
       quando:
-        'Cancelar ou remarcar o The Boathouse (10/11), o Sanaa (16/11), o Oga’s e o Sci-Fi ' +
-        '(15/11) e o Homecomin’ (25/11). CANCELEM COM PELO MENOS 2 HORAS de antecedência: ' +
+        'Cancelar ou remarcar o The Boathouse (10/11), o Oga’s (15/11), o Sanaa (16/11) ' +
+        'e o Homecomin’ (25/11). CANCELEM COM PELO MENOS 2 HORAS de antecedência: ' +
         'abaixo disso a Disney cobra a taxa de não comparecimento no cartão. Dá para ' +
         'cancelar pelo My Disney Experience também. O Homecomin’ tem linha direta: ' +
         '+1 407-560-0100.',
@@ -9480,7 +9483,7 @@ window.ROTEIRO = {
         'Wine, Leaky Cauldron, Toadstool Cafe, Chick-fil-A, World Food Trucks, ' +
         'Plant Street Market, Sofrito e os restaurantes do plano de refeição do SeaWorld e do ' +
         'Busch Gardens, inclusive o Dragon Fire.\n\n' +
-        'Onde se dá: The Boathouse, Nomad Lounge, Sanaa, Columbia, Oga’s, Sci-Fi Dine-In, ' +
+        'Onde se dá: The Boathouse, Nomad Lounge, Sanaa, Columbia, Oga’s, ' +
         'Lombard’s, Cheesecake Factory, Kres, Atlantic, IHOP, El Cilantrillo, Red Lobster, ' +
         'Confisco Grille, Mythos e Homecomin’ — e o Uber (opcional, mas comum).\n\n' +
         'O FORD’S GARAGE, NO DIA 12, JÁ COBRA 20% DE TAXA DE SERVIÇO NA CONTA, no lugar da ' +
