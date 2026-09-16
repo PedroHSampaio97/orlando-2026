@@ -35,9 +35,9 @@ Os blocos marcados como **VAZIO PROPOSITAL** não são falha de planejamento. Re
 
 ---
 
-# 🛍️ 12/11 (quinta) — Outlet e ICON Park
+# 🛍️ 12/11 (quinta) — Outlet e tarde livre
 
-O dia inteiro roda no eixo da International Drive, economizando Uber.
+Compra de manhã, hotel à tarde e jantar perto. É o dia que protege o 13, que sai às 6h30.
 
 | Hora | O quê | Notas |
 |---|---|---|
@@ -47,17 +47,11 @@ O dia inteiro roda no eixo da International Drive, economizando Uber.
 | | ↳ **Disney’s Character Warehouse**, dentro do mesmo outlet | Outlet oficial da Disney. Sobra de estoque e item descontinuado das lojas dos parques. Abre 10h de seg a sáb |
 | **13h00** | **Almoço — Ford's Garage**, dentro do outlet | Mesa com garçom. Sair da I-Drive para comer custaria dois Ubers e uma hora |
 | **14h30** | **VAZIO PROPOSITAL** — voltar ao hotel, piscina, dormir | Vocês vêm de Magic Kingdom até 22h no dia anterior |
-| **17h05** | Sair para o ICON Park | Uber, ~25 min, US$ 20–30. O pôr do sol é 17h33 |
-| **17h30** | **ICON Park** — 8375 International Dr | Entrada da área é livre; cada atração é paga |
-| **18h00** | **Museum of Illusions** — US$ 26,99 online | A roda-gigante está em manutenção, sem data de volta, e os combos do ICON Park dependem dela |
-| **19h15** | **Madame Tussauds** | Opcional. A partir de US$ 29 online |
-| **20h30** | **Jantar — Shake Shack**, 8359 International Dr | **Dentro** do ICON Park, a 200 m do Tussauds. US$ 30–40 no casal, balcão com pager |
-| **21h30** | Voltar ao hotel | Uber, ~25 min, US$ 20–30. Amanhã sai às 6h30 |
+| **19h00** | **Jantar na 192** — Black Angus ou Miller's Ale House | Os dois de mesa, a minutos do hotel, sem reserva |
 
-> **Tudo que interessa fica dentro do próprio ICON Park.** O Shake Shack está a 200 metros
-> do Madame Tussauds, resolve em meia hora e sai por US$ 30 a 40 no casal. Se a noite
-> pedir mesa, cerveja e música ao vivo, o Yard House e o Tin Roof estão ali do lado, sem
-> reserva. O Cooper's Hawk, esse sim, obrigaria mais um Uber no fim da noite.
+> **A noite é curta de propósito.** O dia 13 é Animal Kingdom com saída às 6h30, a mais
+> cedo da viagem. Se o corpo pedir cama em vez de mesa, a lista do Walmart cobre o jantar
+> no quarto — é o único dia em que isso não custa nada ao roteiro.
 
 **Sobre resort hopping:** desde junho de 2026 os hotéis Disney deixaram de ser livremente visitáveis. A guarita exige reserva de hotel ou de restaurante para o carro do rideshare entrar, e o transporte que sai do Disney Springs também checa. Ainda é possível com um jantar reservado num resort do monotrilho — Grand Floridian, Polynesian ou Contemporary, que se ligam entre si —, mas a reserva sai com 60 dias de antecedência.
 

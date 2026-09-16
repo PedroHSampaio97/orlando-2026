@@ -648,7 +648,6 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [ ] **11/10** — Magic Kingdom 11/11: falta a hora do Festival of Fantasy e do desfile noturno *(data estimada)*
 - [ ] **15/10** — Decidir sobre a Power-Up Band do Epic Universe (~US$ 40) *(data estimada)*
 - [ ] **15/10** — Confirmar que 22/11 tem Christmas Celebration (SeaWorld) e 24/11 tem Christmas Town (Busch Gardens) — ambos rodam em datas selecionadas *(data estimada)*
-- [ ] **15/10** — Conferir se The Wheel do ICON Park voltou a operar (para 12/11) *(data estimada)*
 - [ ] **25/10** — Ingressos Universal aparecendo no app — nos DOIS perfis *(data estimada)*
 - [ ] **25/10** — Ingressos SeaWorld e Busch Gardens (Promo Park) — com o plano de refeição *(data estimada)*
 - [ ] **25/10** — Ativar o roaming nas duas linhas e confirmar a cobertura na Colômbia *(data estimada)*

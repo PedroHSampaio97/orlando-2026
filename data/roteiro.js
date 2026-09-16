@@ -1063,7 +1063,7 @@ window.ROTEIRO = {
     /* --------------------------------------------------------------------- */
     prepararAmanha: {
       paraODia: '2026-11-12',
-      titulo: 'Outlet e ICON Park · café no hotel às 8h30',
+      titulo: 'Outlet e tarde livre · café no hotel às 8h30',
       aviso:
         'O dia 11 sai às 6h45, o parque fecha às 22h e, com o ferry e o Uber, vocês ' +
         'chegam ao hotel perto das 23h. São dezessete horas de pé. O dia 12 é de ' +
@@ -1620,22 +1620,22 @@ window.ROTEIRO = {
     },
   },
 
-  /* ===== 12/11 · QUINTA · OUTLET E ICON PARK ============================== */
-  /* DIA FECHADO — revisado em 10/09/2026. Noite montada sobre o que está
-     comprovadamente aberto no ICON Park; a roda-gigante entra só se voltar.  */
+  /* ===== 12/11 · QUINTA · OUTLET E TARDE LIVRE ============================ */
+  /* DIA FECHADO — revisado em 16/09/2026. É o dia mais leve da primeira semana:
+     outlet de manhã, tarde no hotel e jantar perto, porque o 13 sai às 6h30.  */
   {
     id: 'd-2026-11-12',
     data: '2026-11-12',
     diaSemana: 'quinta',
     emoji: '🛍️',
-    titulo: 'Outlet e ICON Park',
+    titulo: 'Outlet e tarde livre',
     subtitulo: 'O dia mais leve da primeira semana',
     tipo: 'compras',
     operadora: null,
     parqueId: null,
     custoZero: false,
     fechado: true,
-    revisadoEm: '2026-09-10',
+    revisadoEm: '2026-09-16',
     referencia: { rotulo: 'Saída do hotel', padrao: '09:30', confirmado: false },
 
     resumo:
@@ -1652,22 +1652,10 @@ window.ROTEIRO = {
 
     notas: [
       { tipo: 'atencao', texto:
-        'A RODA-GIGANTE PODE NÃO ESTAR FUNCIONANDO. O site oficial dizia, em 09/09, que ' +
-        'The Orlando Eye está fechada para manutenção anual, sem data de reabertura, e ela ' +
-        'já aparecia fechada desde o fim de junho. A noite foi montada sobre o que está ' +
-        'comprovadamente aberto — se ela voltar, entra como bônus. É o plano B.',
-        pesquisa: '2026-09-10' },
-
-      { tipo: 'atencao', texto:
         'O CUPOM DO OUTLET SÓ É GRÁTIS SE VOCÊS SE CADASTRAREM ANTES. O livro físico do ' +
         'balcão custa US$ 10. O gratuito vem do Simon VIP Club, em premiumoutlets.com/vip, ' +
         'e o Savings Passport fica no celular. Está no checklist para 05/11.',
         pesquisa: '2026-09-10' },
-
-      { tipo: 'atencao', texto:
-        'NÃO CONTEM COM FOGOS DAQUI. Em novembro os fogos do Magic Kingdom são às 20h, e ' +
-        '12/11 é noite de Christmas Party, quando os da festa são ainda mais tarde. Às 18h ' +
-        'não há fogo nenhum em lugar nenhum do complexo.', pesquisa: '2026-09-10' },
     ],
 
     /* --------------------------------------------------------------------- */
@@ -1675,35 +1663,20 @@ window.ROTEIRO = {
       {
         letra: 'A',
         titulo: 'Dia normal',
-        gatilho: 'Vocês acordaram bem e a roda continua fechada.',
+        gatilho: 'Vocês acordaram bem e o dia 11 não cobrou caro demais.',
         passos: [
           'Outlet de manhã com calma, começando pelo Character Warehouse, que abre 10h.',
           'Almoço no Ford’s Garage, dentro do próprio outlet, sem Uber.',
           'Tarde inteira no hotel. Não preencham esse bloco.',
-          'ICON Park a partir das 17h30, pegando o pôr do sol na promenade.',
-          'Museum of Illusions, e o Madame Tussauds só se estiverem com pique.',
-          'Jantar no Shake Shack, dentro do próprio ICON Park.',
+          'Jantar de mesa na 192, a minutos do hotel, e noite curta: o dia 13 sai às 6h30.',
         ],
       },
       {
         letra: 'B',
-        titulo: 'A roda reabriu',
-        gatilho: 'Vocês conferem em outubro e ela voltou a operar.',
-        passos: [
-          'A roda passa a ser a atração das 18h e vale mais que qualquer outra do ICON Park.',
-          'O Museum of Illusions desloca para as 19h e o Madame Tussauds cai.',
-          'Subam no fim de tarde, mas sem esperar fogos: em novembro eles só começam às 20h.',
-          'Confiram o preço na hora: a roda estava fora do ar quando este dia foi montado, ' +
-          'então não há valor confirmado.',
-        ],
-      },
-      {
-        letra: 'C',
         titulo: 'Vocês acordaram destruídos',
         gatilho: 'O dia 11 terminou perto das 22h e o corpo não colaborou.',
         passos: [
-          'Cortem o ICON Park inteiro sem culpa. Outlet de manhã, hotel à tarde e à noite, ' +
-          'jantar em qualquer coisa na 192.',
+          'Cortem até o outlet sem culpa: ele é compra, não passeio, e o dia 25 tem outro.',
           'Este é o ÚNICO dia da viagem em que nada é insubstituível. Não há ingresso, não ' +
           'há reserva, não há hora marcada.',
           'O que vocês estão protegendo é o dia 13, que sai às 6h30 e abre a sequência mais ' +
@@ -1720,32 +1693,6 @@ window.ROTEIRO = {
                 'dos parques por uma fração do preço de dentro. Está no mesmo endereço onde ' +
                 'vocês já vão estar, então custa só a caminhada. Abre 10h de segunda a ' +
                 'sábado — a mesma hora em que vocês chegam.' },
-
-      { nome: 'Pôr do sol na promenade do ICON Park', quando: 'hoje', custo: 'grátis',
-        motivo: 'O sol se põe às 17h33 e vocês chegam 17h30. A área do ICON Park é aberta, ' +
-                'sem ingresso e sem catraca — só as atrações são pagas. É o melhor momento ' +
-                'do lugar e não custa nada.' },
-
-      { nome: 'Museum of Illusions', quando: 'hoje', custo: 'US$ 26,99 por pessoa',
-        motivo: 'Salas de ilusão de óptica, quarto invertido, sala de Ames. É participativo ' +
-                'e rende foto, que é exatamente o que serve num dia de descanso. Cerca de ' +
-                'uma hora.', pesquisa: '2026-09-10' },
-
-      { nome: 'Madame Tussauds', quando: 'decidir', custo: 'a partir de US$ 29 por pessoa, online',
-        motivo: 'Museu de cera com mais de 90 figuras. Comprado online sai a partir de US$ 29 ' +
-                'por pessoa, e o preço sobe no dia da visita. Não existe combo com o Museum ' +
-                'of Illusions: os combos do ICON Park exigem a roda, que está fechada.',
-        pesquisa: '2026-09-11' },
-
-      { nome: 'SEA LIFE Orlando Aquarium', quando: 'decidir', custo: 'US$ 33,99 por pessoa',
-        motivo: 'Terceira opção, avulsa — os combos do ICON Park exigem a roda, que está ' +
-                'fechada. Túnel de acrílico de 360°. Vocês já veem tanque de tubarão no ' +
-                'SeaWorld no dia 22 — decidam se vale repetir o tema.', pesquisa: '2026-09-11' },
-
-      { nome: 'The Wheel / Orlando Eye', quando: 'fechada', custo: 'a confirmar',
-        motivo: 'Fechada para manutenção anual desde o fim de junho, sem data de reabertura ' +
-                'anunciada até 09/09. Se voltar, vira a atração das 18h e desloca o resto ' +
-                'da noite — é o plano B. Conferir em outubro.', pesquisa: '2026-09-10' },
 
       { nome: 'Resort hopping nos hotéis Disney', quando: 'descartado', custo: '—',
         motivo: 'Fica de fora porque, desde junho de 2026, os resorts exigem reserva de ' +
@@ -1887,71 +1834,20 @@ window.ROTEIRO = {
           'a sequência mais pesada da viagem: Animal Kingdom, Hollywood Studios, Epcot e ' +
           'Universal Studios, de 13 a 17.\n\n' +
           'Este bloco não é folga. É o que faz o resto funcionar.',
-        localId: 'hotel-travelodge', acesso: [], duracaoMin: 155 },
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 270 },
 
-      { id: 'b-1211-1705', hora: '17:05', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Sair para o ICON Park',
-        descricao: 'Uber, ~25 min, US$ 20–30',
+      { id: 'b-1211-1900', hora: '19:00', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Jantar na 192',
+        descricao: 'Black Angus ou Miller’s Ale House, os dois de mesa, a minutos do hotel',
         contexto:
-          'O pôr do sol é às 17h33 e é o melhor momento do lugar. Para chegar nele, a ' +
-          'saída é 17h05 — não 17h30.',
-        localId: 'icon-park', acesso: [], duracaoMin: 25 },
-
-      { id: 'b-1211-1730', hora: '17:30', ancora: 'fixo', tipo: 'livre',
-        titulo: 'ICON Park — promenade ao pôr do sol',
-        descricao: 'Área aberta, sem ingresso. Pôr do sol às 17h33',
-        contexto:
-          'Complexo aberto na I-Drive: entrar não custa nada, só as atrações são pagas. ' +
-          'Vocês chegam exatamente na hora do pôr do sol, que é o melhor momento do lugar.\n\n' +
-          'Se estiverem cansados, este bloco sozinho já justifica a saída — dá para andar, ' +
-          'jantar e voltar sem pagar atração nenhuma.',
-        endereco: '8375 International Dr', localId: 'icon-park', acesso: [], duracaoMin: 30 },
-
-      { id: 'b-1211-1800', hora: '18:00', ancora: 'fixo', tipo: 'atracao',
-        titulo: 'Museum of Illusions',
-        descricao: 'US$ 26,99 por pessoa. Cerca de 1h',
-        contexto:
-          'Salas de ilusão de óptica, quarto invertido, sala de Ames. É participativo e ' +
-          'rende foto — exatamente o que serve num dia de descanso, sem fila e sem correr.\n\n' +
-          'Comprem online antes: US$ 26,99 por pessoa. Não existe combo com o Madame ' +
-          'Tussauds.',
-        localId: 'icon-park', acesso: [], duracaoMin: 60, pesquisa: '2026-09-11' },
-
-      { id: 'b-1211-1915', hora: '19:15', ancora: 'fixo', tipo: 'atracao',
-        titulo: 'Madame Tussauds',
-        descricao: 'A partir de US$ 29 online. Opcional',
-        contexto:
-          'Museu de cera com mais de 90 figuras. Só façam se estiverem com pique: o valor ' +
-          'do dia está no descanso, não em encaixar mais uma atração.\n\n' +
-          'Online sai a partir de US$ 29 por pessoa; no dia da visita o preço sobe.',
-        localId: 'icon-park', acesso: [], opcional: true, duracaoMin: 60,
-        pesquisa: '2026-09-11' },
-
-      { id: 'b-1211-2000', hora: '20:30', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — Shake Shack',
-        descricao: 'Dentro do próprio ICON Park, a 200 m do Tussauds',
-        contexto:
-          'ShackBurger simples uns US$ 7, duplo US$ 10,29, e com fritas e shake para os dois ' +
-          'a conta fica entre US$ 30 e 40 — bem menos que uma mesa no Yard House.\n\n' +
-          'ELE FICA DENTRO DO ICON PARK, no 8359 International Drive: vocês saem da atração e ' +
-          'sentam, sem Uber no meio da noite. Pedido no balcão ou no totem, e a comida chega à ' +
-          'mesa pelo pager — é balcão, não leva gorjeta.\n\n' +
-          'Na quinta ele vai até as 23h30, segundo o site do ICON Park (o Yelp mostra até 1h; ' +
-          'na dúvida, vale o horário menor).\n\n' +
-          'São 20h30 porque o Madame Tussauds leva uma hora e termina 20h15. Se pularem o ' +
-          'Tussauds, jantem 19h30. E se a noite pedir mesa, cerveja e música ao vivo, o Yard ' +
-          'House e o Tin Roof continuam ali do lado, sem reserva.',
-        endereco: '8359 International Dr', restauranteId: 'r-shake-shack',
-        localId: 'icon-park', acesso: [], pesquisa: '2026-09-11', duracaoMin: 60 },
-
-      { id: 'b-1211-2130', hora: '21:30', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Voltar ao hotel',
-        descricao: 'Uber, ~25 min, US$ 20–30. Amanhã sai às 6h30',
-        contexto:
-          'Não estiquem. O dia 13 é Animal Kingdom com saída às 6h30 — uma hora mais cedo ' +
-          'que nos outros dias de parque, porque ele deve abrir às 8h — e abre a sequência ' +
-          'pesada da viagem.',
-        localId: 'hotel-travelodge', acesso: [], duracaoMin: 30 },
+          'A noite é curta de propósito: o dia 13 é Animal Kingdom com saída às 6h30, a mais ' +
+          'cedo da viagem.\n\n' +
+          'Os dois ficam na própria 192, sem Uber longo, e nenhum dos dois precisa de ' +
+          'reserva. O Black Angus é churrascaria americana clássica; o Miller’s serve até ' +
+          'tarde, se vocês esticarem a tarde no hotel.\n\n' +
+          'Se o corpo pedir cama em vez de mesa, a lista do Walmart cobre o jantar no quarto: ' +
+          'é o único dia da viagem em que isso não custa nada ao roteiro.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 75, pesquisa: '2026-09-16' },
     ],
     renuncias: null,
     ficha: null,
@@ -8097,15 +7993,6 @@ window.ROTEIRO = {
             'antigos. Hambúrgueres, comida americana e cerveja artesanal. Segunda a sábado, ' +
             'das 11h às 22h. A conta já vem com 20% de taxa de serviço, no lugar da gorjeta.' },
 
-    { id: 'r-shake-shack', nome: 'Shake Shack', data: '2026-11-12', hora: '20:30',
-      refeicao: 'jantar', local: 'ICON Park · 8359 International Dr',
-      alternativas: ['Yard House ou Tin Roof, os dois também dentro do ICON Park, com mesa e garçom'],
-      precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Balcão ou totem, sem reserva', blocoId: 'b-1211-2000',
-      nota: 'Dentro do ICON Park, a 200 m do Madame Tussauds. ShackBurger simples uns US$ 7 e ' +
-            'duplo US$ 10,29; com fritas e shake, US$ 30 a 40 no casal. Na quinta vai até as ' +
-            '23h30, pelo site do ICON Park. Balcão com pager: não leva gorjeta.' },
-
     { id: 'r-satuli', nome: 'Satu’li Canteen', data: '2026-11-13', hora: '12:30',
       refeicao: 'almoco', local: 'Animal Kingdom · Pandora', alternativas: ['Flame Tree Barbecue, na Discovery Island', 'Harambe Market, na África'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
@@ -8587,18 +8474,6 @@ window.ROTEIRO = {
         'disso.',
       restauranteIds: [] },
 
-    { id: 'ck-roda-icon', dataAlvo: '2026-10-15', validaAte: '2026-11-12', dataEstimada: true,
-      motivoData: 'O dia 12 manda conferir em outubro, e o plano B depende da resposta',
-      hora: null, fuso: null, janelaReserva: false, critico: false,
-      texto: 'Conferir se The Wheel do ICON Park voltou a operar (para 12/11)',
-      nota:
-        'Ela está fechada para manutenção anual desde o fim de junho, sem data de ' +
-        'reabertura anunciada até 09/09. Se voltar, vira a atração das 18h do dia 12 e ' +
-        'desloca o resto da noite — o plano B daquele dia tem essa conferência como ' +
-        'gatilho declarado. Confiram o preço junto: não há valor confirmado.',
-      restauranteIds: [] },
-
-    /* --- já em Orlando --- */
     { id: 'ck-hotel', dataAlvo: '2026-11-05', validaAte: '2026-11-10', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'Reserva do Travelodge salva OFFLINE nos dois celulares',
@@ -9094,11 +8969,6 @@ window.ROTEIRO = {
       nota: 'Abre às 10h, com horário estendido na semana da Black Friday. O Marshalls do ' +
             'Vineland Pointe fica ao lado.' },
 
-    { id: 'icon-park', nome: 'ICON Park', tipo: 'compras',
-      lat: 28.4432, lng: -81.4693, verificado: true, fonteCoord: 'wikipedia', endereco: '8375 International Dr',
-      doHotel: { tempoMin: 25, tempoFonte: 'estimado',
-                 uberUSD: { min: 20, max: 30 }, uberFonte: 'estimado' } },
-
     { id: 'millenia', nome: 'The Mall at Millenia', tipo: 'compras',
       lat: 28.48538, lng: -81.431312, verificado: true, fonteCoord: 'wikipedia', endereco: '4200 Conroy Rd',
       doHotel: { tempoMin: 25, tempoFonte: 'documento',
@@ -9547,7 +9417,7 @@ window.ROTEIRO = {
         'grupos grandes às vezes têm gratuity incluída — confira antes de somar duas vezes.\n\n' +
         'Onde NÃO se dá gorjeta: balcão e mobile order. Ou seja, Columbia Harbour House, ' +
         'Casey’s, Satu’li Canteen, Three Broomsticks, Docking Bay 7, as barracas do Food & ' +
-        'Wine, Leaky Cauldron, Toadstool Cafe, Shake Shack, Chick-fil-A, World Food Trucks, ' +
+        'Wine, Leaky Cauldron, Toadstool Cafe, Chick-fil-A, World Food Trucks, ' +
         'Plant Street Market, Sofrito e os restaurantes do plano de refeição do SeaWorld e do ' +
         'Busch Gardens, inclusive o Dragon Fire.\n\n' +
         'Onde se dá: The Boathouse, Nomad Lounge, Sanaa, Columbia, Oga’s, Sci-Fi Dine-In, ' +
