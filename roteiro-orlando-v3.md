@@ -3,7 +3,7 @@
 
 **Base:** Travelodge by Wyndham, Kissimmee (US-192) · **Chegada:** 10/11, 12h35 no MCO · **Saída:** 26/11, 14h10 do MCO
 **Perfil:** casal, sem crianças. Prioridade: clássicos + montanhas-russas fortes.
-**Decisões fechadas:** dias 19 Epic Universe, 21 Winter Garden, 22 SeaWorld e 23 Islands of Adventure · **o Epic Universe é um dia só, 19/11** · sem Mickey's Very Merry Christmas Party · sem Express Pass na Universal · carro alugado de 20 a 25/11, **devolvido no dia 25**, para o dia 26 ser só café da manhã e aeroporto · PID já emitida · a última noite é no Disney Springs, 25/11
+**Decisões fechadas:** dias 19 Islands of Adventure, 20 Epic Universe, 21 Winter Garden, 22 SeaWorld e 23 Busch Gardens · **o Epic Universe é um dia só, 20/11** · sem Mickey's Very Merry Christmas Party · sem Express Pass na Universal · carro alugado de 20 a 25/11, **devolvido no dia 25**, para o dia 26 ser só café da manhã e aeroporto · PID já emitida · a última noite é no Disney Springs, 25/11
 
 > **Aviso sobre horários:** os quatro dias de Disney têm **horário publicado**: **Magic Kingdom 9h–22h (11/11)**, **Epcot 9h–21h (13/11)**, **Hollywood Studios 9h–21h (15/11)** e **Animal Kingdom 8h–18h (16/11)**, todos com Early Entry meia hora antes — 7h30 no Animal Kingdom. O horário dos dias 13 e 16 vem do calendário publicado, conferido em 16/09, e não da confirmação oficial de 12/09: confirmem os dois no app da Disney. Ainda são suposição: Universal (17/11), Epic (19/11), SeaWorld (22/11) e Islands (23/11) em 9h, e Busch Gardens (24/11) em 10h. Ajustem a referência do dia no app e os blocos ancorados deslocam junto. **A partir do compromisso de hora marcada — desfile, show, reserva, pôr do sol — os blocos são fixos** e não se mexem com a abertura. Oito dias têm outra referência: a saída do Terminal C no dia 10, a saída do hotel nos dias 12, 20 e 25, a sessão do Grinchmas no dia 14, o início do jogo nos dias 18 e 21 e a decolagem de Orlando no dia 26.
 
@@ -401,7 +401,42 @@ Três atrações de hoje exigem guardar tudo: **Gringotts, Mummy e Men in Black*
 
 ---
 
-# 🌌 19/11 (quinta) — EPIC UNIVERSE
+# ⚡ 19/11 (quinta) — ISLANDS OF ADVENTURE
+
+Hagrid's na abertura, que é a única janela abaixo de uma hora, e depois uma volta inteira no anel do parque sem voltar atrás. À noite, Hogwarts Express, o castelo iluminado e o jantar no Mythos, provavelmente no último Natal dele.
+
+| Hora | O quê | Onde |
+|---|---|---|
+| **7h25** | Sair do hotel de carro — 33 min e uns 20 a pé. Estacionamento US$ 32 pago antes | |
+| **8h15** | Portão — a catraca abre antes das 9h e a espera é na corda da Seuss Landing. Quando soltar, pela esquerda, sentido Hogsmeade | |
+| **9h00** | **Hagrid's** — rope drop. 30–65 min na abertura, mais de 2h depois | Hogsmeade |
+| **10h30** | **Forbidden Journey** — a fila atravessa o castelo | Hogsmeade |
+| **11h40** | **Almoço — Confisco Grille** — mesa com garçom, pratos de US$ 21 a 35 | Port of Entry |
+| **12h45** | **Hulk** — detector de metal | Marvel |
+| **13h35** | **Spider-Man** | Marvel |
+| **14h15** | Parada — dez minutos. Banheiro ao lado do Captain America Diner | Marvel |
+| **14h35** | **Kong** | Skull Island |
+| **15h20** | **Jurassic Park River Adventure** — molha. Reaberto depois da reforma | Jurassic Park |
+| **16h05** | **VelociCoaster** — fila normal, bloco de uma hora e meia | Jurassic Park |
+| **17h40** | **Hogwarts Express** — ida e volta, filmes diferentes. Precisa park-to-park | Hogsmeade |
+| **18h50** | **Hogsmeade à noite · projeção no castelo** — a segunda vez, quinze minutos antes do jantar. A cada 20 min | Hogsmeade |
+| **19h15** | **Jantar — Mythos** — reservado, pratos de US$ 26 a 42. Cheguem às 19h10 | Lost Continent |
+| **20h30** | Saída — hotel por volta das 21h30 | |
+
+**Por que o Hagrid's primeiro:** nos dados de 2026, 30 a 65 minutos na abertura, 120 ao meio-dia e acima de 100 até fechar. Ele saiu do Express em 1º de julho de 2026.
+
+**Por que a VelociCoaster à tarde:** ela fica entre 67 e 102 minutos o dia inteiro — não tem hora boa — e não tem single rider: a Universal fechou essa fila e embarca os grupos em filas de número par e ímpar. Nos dados de 2026, a tarde vai de 72 a 83 minutos, e a noite já é do Hogwarts Express e do Mythos. O bloco tem uma hora e meia, e para caber o Doctor Doom saiu do dia.
+
+**O que mudou no parque:** o Jurassic Park River Adventure reabre em 19–20/11 depois de dez meses de reforma. A Lost Continent está sendo demolida em fases, e a Universal diz que o Mythos fecha em 2027, ainda sem data. O Thunder Falls Terrace fechou em julho.
+
+**Horário:** o de 19/11 ainda não saiu. A referência é 9h; o fechamento tende a 20–21h na semana de Thanksgiving. Se fechar às 20h, remarquem o Mythos para 18h35, o Kong sai e a tarde sobe 40 minutos — River Adventure 14h35, VelociCoaster 15h20, Hogwarts Express 16h55 e a projeção às 18h05, se já tiver escurecido.
+
+### Renúncias
+Grinchmas (visto no dia 14), Flight of the Hippogriff (34 min de fila para um minuto), Beco Diagonal (feito no dia 17), Pteranodon Flyers, os brinquedos da Seuss Landing, Popeye e Dudley Do-Right (molham muito) e Doctor Doom's Fearfall (o tempo dele foi para a fila da VelociCoaster; volta se o River Adventure não tiver reaberto).
+
+---
+
+# 🌌 20/11 (sexta) — EPIC UNIVERSE
 
 O parque mais concorrido de Orlando, **no dia mais vazio da segunda metade da viagem**, e o único dia de Epic. As onze atrações de brinquedo cabem — mas só em uma ordem: começar pelo portal que o Early Park Admission deixa vazio e guardar as duas maiores filas para as horas em que elas despencam.
 
@@ -517,42 +552,7 @@ Infinity Falls (molha demais e a noite esfria), Sesame Street Land, Sky Tower (p
 
 ---
 
-# ⚡ 23/11 (segunda) — ISLANDS OF ADVENTURE
-
-Hagrid's na abertura, que é a única janela abaixo de uma hora, e depois uma volta inteira no anel do parque sem voltar atrás. À noite, Hogwarts Express, o castelo iluminado e o jantar no Mythos, provavelmente no último Natal dele.
-
-| Hora | O quê | Onde |
-|---|---|---|
-| **7h25** | Sair do hotel de carro — 33 min e uns 20 a pé. Estacionamento US$ 32 pago antes | |
-| **8h15** | Portão — a catraca abre antes das 9h e a espera é na corda da Seuss Landing. Quando soltar, pela esquerda, sentido Hogsmeade | |
-| **9h00** | **Hagrid's** — rope drop. 30–65 min na abertura, mais de 2h depois | Hogsmeade |
-| **10h30** | **Forbidden Journey** — a fila atravessa o castelo | Hogsmeade |
-| **11h40** | **Almoço — Confisco Grille** — mesa com garçom, pratos de US$ 21 a 35 | Port of Entry |
-| **12h45** | **Hulk** — detector de metal | Marvel |
-| **13h35** | **Spider-Man** | Marvel |
-| **14h15** | Parada — dez minutos. Banheiro ao lado do Captain America Diner | Marvel |
-| **14h35** | **Kong** | Skull Island |
-| **15h20** | **Jurassic Park River Adventure** — molha. Reaberto depois da reforma | Jurassic Park |
-| **16h05** | **VelociCoaster** — fila normal, bloco de uma hora e meia | Jurassic Park |
-| **17h40** | **Hogwarts Express** — ida e volta, filmes diferentes. Precisa park-to-park | Hogsmeade |
-| **18h50** | **Hogsmeade à noite · projeção no castelo** — a segunda vez, quinze minutos antes do jantar. A cada 20 min | Hogsmeade |
-| **19h15** | **Jantar — Mythos** — reservado, pratos de US$ 26 a 42. Cheguem às 19h10 | Lost Continent |
-| **20h30** | Saída — hotel por volta das 21h30 | |
-
-**Por que o Hagrid's primeiro:** nos dados de 2026, 30 a 65 minutos na abertura, 120 ao meio-dia e acima de 100 até fechar. Ele saiu do Express em 1º de julho de 2026.
-
-**Por que a VelociCoaster à tarde:** ela fica entre 67 e 102 minutos o dia inteiro — não tem hora boa — e não tem single rider: a Universal fechou essa fila e embarca os grupos em filas de número par e ímpar. Nos dados de 2026, a tarde vai de 72 a 83 minutos, e a noite já é do Hogwarts Express e do Mythos. O bloco tem uma hora e meia, e para caber o Doctor Doom saiu do dia.
-
-**O que mudou no parque:** o Jurassic Park River Adventure reabre em 19–20/11 depois de dez meses de reforma. A Lost Continent está sendo demolida em fases, e a Universal diz que o Mythos fecha em 2027, ainda sem data. O Thunder Falls Terrace fechou em julho.
-
-**Horário:** o de 23/11 ainda não saiu. A referência é 9h; o fechamento tende a 20–21h na semana de Thanksgiving. Se fechar às 20h, remarquem o Mythos para 18h35, o Kong sai e a tarde sobe 40 minutos — River Adventure 14h35, VelociCoaster 15h20, Hogwarts Express 16h55 e a projeção às 18h05, se já tiver escurecido.
-
-### Renúncias
-Grinchmas (visto no dia 14), Flight of the Hippogriff (34 min de fila para um minuto), Beco Diagonal (feito no dia 17), Pteranodon Flyers, os brinquedos da Seuss Landing, Popeye e Dudley Do-Right (molham muito) e Doctor Doom's Fearfall (o tempo dele foi para a fila da VelociCoaster; volta se o River Adventure não tiver reaberto).
-
----
-
-# 🎢 24/11 (terça) — BUSCH GARDENS TAMPA
+# 🎢 23/11 (segunda) — BUSCH GARDENS TAMPA
 
 Só de carro, 1h25 de cada lado. Cinco montanhas-russas e a torre de queda até o meio da tarde, o trem pela planície dos animais e o Natal à noite, com mais duas voltas no escuro antes da estrada. O dia mais pesado fisicamente da viagem.
 
@@ -583,7 +583,7 @@ Só de carro, 1h25 de cada lado. Cinco montanhas-russas e a torre de queda até 
 
 **Nada solto:** nove atrações proíbem objeto solto, e o armário avulso custa US$ 4 pelas primeiras duas horas. Levem o mínimo; o resto fica no carro.
 
-**Horário:** o de 24/11 ainda não saiu. A referência é 10h. No Natal de 2025 o parque ia até 22h na maioria dos dias, com alguns dias de semana fechando às 20h — nesse caso, a Iron Gwazi noturna sai.
+**Horário:** o de 23/11 ainda não saiu. A referência é 10h. No Natal de 2025 o parque ia até 22h na maioria dos dias, com alguns dias de semana fechando às 20h — nesse caso, a Iron Gwazi noturna sai.
 
 **Christmas Town:** datas selecionadas de 13/11 a 04/01. Se 24/11 não estiver na lista, saem o show no gelo e as luzes, e a estrada de volta sobe para 19h30.
 
@@ -643,7 +643,7 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [ ] **01/10** — Cartão de crédito salvo no My Disney Experience, nos DOIS perfis *(data estimada)*
 - [ ] **06/10** — Confirmar o transfer gratuito do hotel para Magic Kingdom e Hollywood Studios *(data estimada)*
 - [ ] **06/10** — Reservar o carro na Avis do Old Town: retirada 20/11 às 15h, devolução 25/11 às 15h *(data estimada)*
-- [ ] **10/10** — Conferir os horários oficiais de 17, 22, 23 e 24/11 e ajustar a referência de cada dia *(data estimada)*
+- [ ] **10/10** — Conferir os horários oficiais de 17, 19, 20, 22 e 23/11 e ajustar a referência de cada dia *(data estimada)*
 - [ ] **11/10** — Animal Kingdom 16/11 — confirmar 8h às 18h no app da Disney (Early Entry 7h30) *(data estimada)*
 - [ ] **11/10** — Magic Kingdom 11/11: falta a hora do Festival of Fantasy e do desfile noturno *(data estimada)*
 - [ ] **15/10** — Decidir sobre a Power-Up Band do Epic Universe (~US$ 40) *(data estimada)*
@@ -653,7 +653,7 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [ ] **25/10** — Ativar o roaming nas duas linhas e confirmar a cobertura na Colômbia *(data estimada)*
 
 **Novembro, antes de embarcar**
-- [ ] **01/11** — Horário do Epic Universe em 19/11 — abertura, FECHAMENTO e shows de Natal *(data estimada)*
+- [ ] **01/11** — Horário do Epic Universe em 20/11 — abertura, FECHAMENTO e shows de Natal *(data estimada)*
 - [ ] **01/11** — Confirmar horário do Grinchmas (14/11), do desfile da Macy’s (17/11), do Fantasmic! (15/11) e do CineSational (17/11) — e o fechamento do parque em 17/11 *(data estimada)*
 - [ ] **05/11** — Cadastrar no Simon VIP Club para o cupom do outlet sair de graça *(data estimada)*
 - [ ] **05/11** — Reserva do Travelodge salva OFFLINE nos dois celulares
@@ -664,6 +664,6 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [ ] **10/11, 7h ET** — NÃO é compra: o Single Pass do Flight of Passage se decide dentro do parque
 - [ ] **10/11, 7h ET** — Lightning Lane para 13/11 — Multi Pass do dia e Single Pass do Cosmic Rewind
 - [ ] **12/11, 7h ET** — Lightning Lane para 15/11 — Multi Pass do dia e Single Pass do Rise
-- [ ] **12/11** — Conferir quais lands do Epic estão no Early Park Admission em 19/11 *(data estimada)*
+- [ ] **12/11** — Conferir quais lands do Epic estão no Early Park Admission em 20/11 *(data estimada)*
 - [ ] **14/11** — Comprar o Oakley Meta Vanguard no app do Best Buy, com retirada no Best Buy do Millenia (4155 Millenia Blvd)
 - [ ] **19/11** — Reservar o MCO Reserve para a volta de 26/11

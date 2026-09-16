@@ -7,7 +7,7 @@
 
 ## Antes de tudo: um aviso sobre densidade
 
-Estes são os únicos dias em que vocês podem não fazer nada, e cinco deles têm blocos vazios **de propósito**: 12, 14, 20, 21 e 25. Se vocês preencherem esses buracos, chegam destruídos ao Epic do dia 19, aos três parques seguidos de 22 a 24 e à última noite, no Disney Springs.
+Estes são os únicos dias em que vocês podem não fazer nada, e cinco deles têm blocos vazios **de propósito**: 12, 14, 21, 24 e 25. Se vocês preencherem esses buracos, chegam destruídos ao Epic do dia 19, aos três parques seguidos de 22 a 24 e à última noite, no Disney Springs.
 
 Os blocos marcados como **VAZIO PROPOSITAL** não são falha de planejamento. Resistam à tentação de encaixar coisa ali.
 
@@ -103,7 +103,7 @@ Sábado. O objetivo do dia é ficar longe de parque cheio e chegar inteiro na se
 > de um dia inteiro, é esperar em pé no CityWalk. O Three Broomsticks é balcão dentro da
 > decoração que vocês vieram ver, e não leva gorjeta.
 
-**Não tentem atração grande hoje.** Hagrid's, VelociCoaster e Forbidden Journey são do dia 23,
+**Não tentem atração grande hoje.** Hagrid's, VelociCoaster e Forbidden Journey são do dia 19,
 numa segunda-feira. Hoje é sábado e primeira noite da temporada: o pior momento possível
 para encarar fila.
 
@@ -159,36 +159,6 @@ O **show de luz e música da fonte** do Lake Eola é às 20h e às 21h30 — voc
 
 ---
 
-# 🚗 20/11 (sexta) — Carro e Old Town
-
-O único respiro entre o Epic e cinco dias pesados seguidos. Café sem pressa no IHOP, almoço porto-riquenho no Old Town, o carro às 15h — a tarefa crítica do dia — e, à noite, food trucks e o desfile de muscle cars, a três minutos do hotel.
-
-| Hora | O quê | Notas |
-|---|---|---|
-| **8h30** | **Café da manhã — IHOP**, 5184 W Irlo Bronson | Sem alarme. A 750 m do hotel, aberto desde as 6h. Ou o do hotel, incluso |
-| **10h00** | **Lavanderia** | A única rodada da viagem. Sabão e moedas da lista do Walmart |
-| **12h45** | **Almoço — El Cilantrillo**, dentro do Old Town | Porto-riquenho de mesa: mofongo, pernil. Pratos perto de US$ 20 |
-| **14h00** | **Old Town de dia** · Mine Blower opcional | Montanha-russa de madeira do Fun Spot, ao lado. Paga por brinquedo |
-| **15h00** | **Retirar o carro — Avis do Old Town** | Suíte 434, das 7h às 19h. **Recusem o e-Toll Unlimited** |
-| **15h30** | **VAZIO PROPOSITAL** — descanso no hotel | |
-| **17h20** | **Old Town Kissimmee** — 5770 W Irlo Bronson Memorial Hwy | Muscle cars expostos desde as 15h. Pôr do sol por volta das 17h30 |
-| **18h30** | **Jantar — World Food Trucks**, 5811 W Irlo Bronson | Mais de 100 food trucks, a 300 m do Old Town. Estacionamento grátis |
-| **20h10** | Lugar na calçada | |
-| **20h30** | **Muscle Car Cruise** | Grátis, toda sexta |
-| **21h15** | Voltar | Três minutos. Amanhã a saída é 8h |
-
-**O carro:** a Avis fica dentro do Old Town e conta o aluguel em períodos de 24 horas — retirando às 15h de hoje e devolvendo às 15h do dia 25, são cinco diárias certas. **Pedágio:** o e-Toll Unlimited cobra de US$ 11 a 26 por dia de aluguel, com ou sem pedágio; sem ele, paga-se cada pedágio pela placa, mais US$ 6,95 só nos dias em que houve pedágio.
-
-**O desfile:** o de sexta é o dos muscle cars (1964 em diante). No sábado há outro, dos clássicos anteriores a 1985, também às 20h30 — mas no sábado vocês estão no hóquei.
-
-**As refeições:** dia sem pressa é refeição fora. O IHOP é o café americano de diner; o do hotel é continental e vai até as 10h, segundo os sites de reserva. O World Food Trucks abre das 11h às 2h, e é à noite, com tudo aceso, que ele faz sentido. **Com chuva prevista para a noite, invertam:** food trucks no almoço e El Cilantrillo — salão fechado, aberto até a meia-noite na sexta — no jantar.
-
-**Rede de segurança do Epic:** se o dia 19 der muito errado, esta manhã é o lugar mais barato para voltar ao Epic — se o ingresso tiver um dia sobrando com Epic, o que ainda depende da agência.
-
-**Fica de fora:** o aerobarco do Boggy Creek — US$ 108 a 122 no casal, 38 minutos de estrada, e novembro é a pior época para ver bicho de manhã.
-
----
-
 # 🌻 21/11 (sábado) — Winter Garden e Solar Bears
 
 Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de Orlando à noite, com uma tarde inteira de descanso no meio. O carro leva a Winter Garden; à noite ele fica no hotel e o jogo é de Uber.
@@ -224,6 +194,36 @@ Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de 
 
 ---
 
+# 🚗 24/11 (terça) — Old Town
+
+O respiro depois de cinco dias seguidos fora do hotel. Café sem pressa no IHOP, manhã livre, almoço porto-riquenho no Old Town e, à noite, a rua e os food trucks. Antes disso, nada de tarefa crítica do dia — e, à noite, food trucks e o desfile de muscle cars, a três minutos do hotel.
+
+| Hora | O quê | Notas |
+|---|---|---|
+| **8h30** | **Café da manhã — IHOP**, 5184 W Irlo Bronson | Sem alarme. A 750 m do hotel, aberto desde as 6h. Ou o do hotel, incluso |
+| **9h45** | **VAZIO PROPOSITAL** — manhã livre no hotel | É também a rede de segurança da Universal: o ingresso é de 14 dias com entrada ilimitada |
+| **12h45** | **Almoço — El Cilantrillo**, dentro do Old Town | Porto-riquenho de mesa: mofongo, pernil. Pratos perto de US$ 20 |
+| **14h00** | **Old Town de dia** · Mine Blower opcional | Montanha-russa de madeira do Fun Spot, ao lado. Paga por brinquedo |
+| **15h00** | **Retirar o carro — Avis do Old Town** | Suíte 434, das 7h às 19h. **Recusem o e-Toll Unlimited** |
+| **15h30** | **VAZIO PROPOSITAL** — descanso no hotel | |
+| **17h20** | **Old Town Kissimmee** — 5770 W Irlo Bronson Memorial Hwy | Lojas, bares e Fun Spot. Pôr do sol por volta das 17h30 |
+| **18h30** | **Jantar — World Food Trucks**, 5811 W Irlo Bronson | Mais de 100 food trucks, a 300 m do Old Town. Estacionamento grátis |
+| **20h10** | Lugar na calçada | |
+
+| **21h15** | Voltar | Três minutos. Amanhã a saída é 8h |
+
+**O carro:** ele já está com vocês desde o dia 18. A Avis fica dentro do Old Town e conta o aluguel em períodos de 24 horas — retirado às 10h do dia 18 e devolvido às 15h do dia 25, são cinco diárias certas. **Pedágio:** o e-Toll Unlimited cobra de US$ 11 a 26 por dia de aluguel, com ou sem pedágio; sem ele, paga-se cada pedágio pela placa, mais US$ 6,95 só nos dias em que houve pedágio.
+
+**Os desfiles:** o de sexta é o dos muscle cars (1964 em diante) e o de sábado é o dos clássicos anteriores a 1985, os dois às 20h30 e de graça. Hoje é terça, e nenhum dos dois roda: a Trophy Row fica vazia, e a rua é das lojas, dos bares e do Fun Spot.
+
+**As refeições:** dia sem pressa é refeição fora. O IHOP é o café americano de diner; o do hotel é continental e vai até as 10h, segundo os sites de reserva. O World Food Trucks abre das 11h às 2h, e é à noite, com tudo aceso, que ele faz sentido. **Com chuva prevista para a noite, invertam:** food trucks no almoço e El Cilantrillo — salão fechado, aberto até a meia-noite na sexta — no jantar.
+
+**Rede de segurança da Universal:** se ficou faltando alguma coisa no Islands ou no Epic, esta manhã é o lugar mais barato para voltar — o ingresso é de 14 dias com entrada ilimitada e não gasta dia. O produto exato e a data de início da validade ainda dependem da agência.
+
+**Fica de fora:** o aerobarco do Boggy Creek — US$ 108 a 122 no casal, 38 minutos de estrada, e novembro é a pior época para ver bicho de manhã.
+
+---
+
 # 🛒 25/11 (quarta) — Compras e Disney Springs no Natal
 
 A última noite. De manhã, o outlet do Vineland, Marshalls, Ross e Walgreens. O carro volta à Avis às 15h e as malas fecham no hotel. À noite, o Disney Springs de Natal: árvores, neve na praça, jantar no Homecomin' e o World of Disney com calma.
@@ -248,7 +248,7 @@ A última noite. De manhã, o outlet do Vineland, Marshalls, Ross e Walgreens. O
 
 **A reserva do Homecomin':** restaurante do Disney Springs abre a reserva 60 dias antes, às 6h de Orlando — 7h em Brasília. Para 25/11, isso é **26/09**. Sem mesa, o Polite Pig é churrasco de balcão, no mesmo lugar.
 
-**O carro:** retirado às 15h do dia 20, fecha cinco diárias certas às 15h de hoje. A Avis tolera 29 minutos; depois disso cobra fração de diária.
+**O carro:** retirado às 10h do dia 18, fecha sete diárias certas às 15h de hoje. A Avis tolera 29 minutos; depois disso cobra fração de diária.
 
 **Se o Oakley não foi retirado no dia 18:** Best Buy do Millenia no lugar do outlet — saída às 9h45, com a retirada reservada no app antes de sair.
 

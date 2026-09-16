@@ -562,11 +562,12 @@ window.ROTEIRO = {
             motivo: 'Micro-ondas de quarto de hotel pode vir sem louça. Sem tigela, a aveia, o ' +
                     'arroz e a sopa não servem de nada.' },
           { id: 'sabao', secao: 'Casa', essencial: false,
-            texto: 'Sabão de lavanderia + moedas de 25 centavos',
+            texto: 'Sabão de lavanderia + moedas de 25 centavos, se forem lavar roupa',
             marca: 'Tide Pods, embalagem pequena', alternativaBarata: null,
-            motivo: 'O Travelodge tem lavanderia de moeda, e são 16 dias. A moeda de 25 ' +
-                    'centavos (quarter) é a que a máquina usa. A lavanderia, uma rodada só, tem ' +
-                    'bloco na manhã livre do dia 20.' },
+            motivo: 'O Travelodge tem lavanderia de moeda, e são 16 dias de viagem. A moeda ' +
+                    'de 25 centavos (quarter) é a que a máquina usa. O roteiro não marca dia: ' +
+                    'vocês decidem quando lavar, e as manhãs livres dos dias 18 e 24 são as ' +
+                    'candidatas naturais.' },
           { id: 'ziploc', secao: 'Casa', essencial: false,
             texto: 'Sacos Ziploc grandes',
             marca: 'Ziploc, tamanho gallon', alternativaBarata: 'Great Value',
@@ -4612,6 +4613,10 @@ window.ROTEIRO = {
       aviso: 'Amanhã é o dia mais leve da segunda semana: começa às 9h, sem alarme de parque, ' +
              'e o único compromisso de relógio é o jogo às 19h.',
       itens: [
+        { texto: 'Separar os quatro documentos da retirada do carro', critico: true,
+          motivo: 'Carteira de motorista, PID, passaporte e cartão de CRÉDITO internacional, ' +
+                  'todos em nome do condutor. A retirada é às 10h de amanhã, na Avis do Old ' +
+                  'Town, e sem um deles não sai carro.' },
         { texto: 'Ingresso do jogo do Orlando Magic à mão nos dois celulares', critico: true,
           motivo: 'Jogo às 19h no Kia Center. Confiram o horário: a NBA remarca por TV, e ' +
                   'isso muda perto da data.' },
@@ -4807,12 +4812,31 @@ window.ROTEIRO = {
         descricao: 'Sem alarme. Hoje é o dia mais leve da segunda semana',
         contexto:
           'A manhã é lenta de propósito. Ontem foi Universal Studios das 7h45 às 21h20, e ' +
-          'amanhã é o Epic Universe com saída às 7h15. Este é o único respiro entre os dois.',
-        acesso: [], duracaoMin: 90 },
+          'amanhã é o Islands of Adventure com saída às 7h25. Este é o único respiro entre ' +
+          'os dois, e é por isso que o carro é retirado hoje.',
+        acesso: [], duracaoMin: 60 },
+
+      { id: 'b-1811-1000', hora: '10:00', ancora: 'fixo', tipo: 'tarefa',
+        titulo: 'Retirar o carro — Avis do Old Town',
+        descricao: 'Suíte 434, nos fundos do Old Town. Três minutos do hotel',
+        contexto:
+          'A LOCADORA FICA DENTRO DO OLD TOWN, nos fundos, em frente à montanha-russa, na ' +
+          'suíte 434. Abre das 7h às 19h todos os dias e fica a três minutos do hotel.\n\n' +
+          'É A TAREFA CRÍTICA DE HOJE. A partir de amanhã o carro é o transporte de tudo: ' +
+          'Islands, Epic, Winter Garden, SeaWorld e a estrada de Tampa.\n\n' +
+          'NO BALCÃO, RECUSEM O E-TOLL UNLIMITED. O pacote cobra de US$ 11 a 26 por dia de ' +
+          'aluguel, em todos os dias, com ou sem pedágio. Sem ele, a Avis cobra cada pedágio ' +
+          'pela placa, mais uma taxa de US$ 6,95 só nos dias em que houve pedágio.\n\n' +
+          'O aluguel é contado em períodos de 24 horas: retirado às 10h de hoje e devolvido ' +
+          'às 15h do dia 25, são sete diárias. A tolerância na devolução é de 29 minutos.\n\n' +
+          'HOJE À NOITE O CARRO FICA NO HOTEL: o jogo é no centro, e estacionar lá em noite ' +
+          'de NBA custa caro e complica a saída. O centro é de Uber.',
+        endereco: '5770 W Irlo Bronson Memorial Hwy, suíte 434', localId: 'old-town',
+        acesso: [], critico: true, duracaoMin: 30, pesquisa: '2026-09-16' },
 
       { id: 'b-1811-1030', hora: '10:30', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Sair para o Mall at Millenia',
-        descricao: '~25 min. Uber US$ 28–40',
+        descricao: '~25 min de carro. O estacionamento do shopping é grátis',
         localId: 'millenia', acesso: [], duracaoMin: 30 },
 
       { id: 'b-1811-1100', hora: '11:00', ancora: 'fixo', tipo: 'compras',
@@ -4977,32 +5001,20 @@ window.ROTEIRO = {
     ],
     prepararAmanha: {
       paraODia: '2026-11-19',
-      titulo: 'Epic Universe · saída 7h15, rope drop na Dark Universe',
-      aviso: 'Saída às 7h15 e vocês chegam do jogo por volta das 22h15. São nove horas entre ' +
-             'a volta e a saída — resolvam tudo ANTES de sair para o jogo, não depois.',
+      titulo: 'Islands of Adventure · saída 7h25',
+      aviso: 'Vocês chegam do jogo por volta das 22h15, e amanhã é o dia com mais detector ' +
+             'de metal da viagem. A mochila sai mínima — e o carro já é de vocês desde hoje.',
       itens: [
-        { texto: 'Mochila do Epic montada ANTES de sair para o jogo', critico: true,
-          motivo: 'Hoje vocês saem só com o bolso e voltam depois das 22h. A mochila ' +
-                  'de amanhã tem de estar pronta em cima da cama quando vocês chegarem: os dois ' +
-                  'soft flasks, barrinhas, protetor solar, power bank, cabo e capa de chuva.' },
-        { texto: 'Alarme para 6h15 nos dois celulares', critico: true,
-          motivo: 'Saída 7h15. Depois de uma noite que termina 22h15, um alarme só falha.' },
-        { texto: 'Conferir o horário de abertura do Epic Universe e ajustar a referência',
-          critico: true,
-          motivo: 'Amanhã assume abertura às 9h e entrada às 7h50, quando o Celestial Park ' +
-                  'abre para todos. Se for outro horário, mudem ' +
-                  'a referência e a manhã inteira desloca junto.' },
-        { texto: 'Conferir a lista do Early Park Admission de amanhã no app da Universal',
-          critico: true,
-          motivo: 'O dia assume que a Dark Universe NÃO está no EPA, e por isso começa nela. ' +
-                  'Se ela estiver na lista e o Ministry não, vale o plano B: os dois blocos ' +
-                  'trocam de lugar. É a pendência ck-epa-epic.' },
-        { texto: 'Guardar as compras do Millenia', critico: false,
-          motivo: 'Amanhã a mochila precisa sair leve — o Epic tem locker obrigatório em ' +
-                  'três atrações, e detector de metal no Stardust Racers.' },
-        { texto: 'Confirmação do Atlantic à mão: 639247233607631616', critico: false,
-          motivo: 'Jantar às 17h de amanhã. A mesa é segurada só por 15 minutos, então o número ' +
-                  'fica no celular, não perdido no e-mail.' },
+        { texto: 'Alarme para 6h25 nos dois celulares', critico: true,
+          motivo: 'Saída 7h25 para estar na frente da corda do Hagrid’s às 8h15. Depois de uma noite que termina às ' +
+                  '22h15, um alarme só falha.' },
+        { texto: 'Mochila mínima para o Islands', critico: true,
+          motivo: 'Hulk e VelociCoaster têm detector de metal e não passa nem celular, e quatro ' +
+                  'atrações exigem locker. Quanto menos bagagem, mais atração cabe no dia.' },
+        { texto: 'Conferir o horário de abertura do Islands', critico: true,
+          motivo: 'Amanhã assume abertura às 9h. Se for outro horário, a manhã inteira desloca.' },
+        { texto: 'Capa de chuva e Ziploc para o celular', critico: false,
+          motivo: 'O Jurassic Park River Adventure molha bastante.' },
       ],
     },
     ficha: {
@@ -5035,11 +5047,440 @@ window.ROTEIRO = {
     },
   },
 
-  /* ===== 19/11 · QUINTA · EPIC UNIVERSE ================================= */
+  /* ===== 19/11 · QUINTA · ISLANDS OF ADVENTURE ========================= */
   {
     id: 'd-2026-11-19',
     data: '2026-11-19',
     diaSemana: 'quinta',
+    emoji: '⚡',
+    titulo: 'Islands of Adventure',
+    subtitulo: 'O dia mais forte em montanha-russa da viagem',
+    tipo: 'parque',
+    operadora: 'universal',
+    parqueId: 'islands-of-adventure',
+    custoZero: false,
+    fechado: true,
+    revisadoEm: '2026-09-11',
+    referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: false },
+    resumo:
+      'Hagrid’s na abertura, que é a única janela abaixo de uma hora, e depois uma volta ' +
+      'inteira no anel do parque sem voltar atrás: Marvel, Kong, Jurassic Park e a ' +
+      'VelociCoaster na fila normal. À noite, Hogwarts Express, o castelo iluminado e o ' +
+      'jantar no Mythos, provavelmente no último Natal dele.',
+    avisos: [
+      'O HAGRID’S NÃO ACEITA EXPRESS DESDE 1º DE JULHO DE 2026, e a janela barata dele é a ' +
+      'abertura. Na corda às 8h15 e direto para Hogsmeade quando ela soltar.',
+      'Hoje é o dia com mais detector de metal da viagem: Hulk e VelociCoaster, onde não ' +
+      'passa nem celular. E quatro atrações exigem locker. Levem o mínimo.',
+    ],
+    notas: [
+      { tipo: 'atencao', texto:
+        'O HORÁRIO DE 19/11 AINDA NÃO SAIU. A referência está em 9h, que é a abertura padrão ' +
+        'do Islands; o fechamento na semana de Thanksgiving tende a ficar entre 20h e 21h. A ' +
+        'projeção no castelo e o Mythos estão fixos de propósito. Se o parque fechar às 20h, ' +
+        'vale o plano B2.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'POR QUE O HAGRID’S VEM PRIMEIRO, mesmo sem a entrada antecipada de hotel: nos dados ' +
+        'de março e abril de 2026, a fila média na abertura foi de 30 a 65 minutos. Às 10h já ' +
+        'passava de 65, ao meio-dia chegava a 120, às 13h a 154, e não voltou para baixo de ' +
+        '100 nem na última hora.\n\n' +
+        'A VELOCICOASTER NÃO TEM HORA BOA, e não tem mais single rider: de 67 a 102 minutos ' +
+        'da abertura até a noite, e a Universal fechou a fila de single rider dela. Por isso ' +
+        'ela fica à tarde, com um bloco de uma hora e meia, e o Doctor Doom saiu do dia para ' +
+        'caber.',
+        pesquisa: '2026-09-15' },
+
+      { tipo: 'info', texto:
+        'O QUE MUDOU NO PARQUE EM 2026:\n\n' +
+        'O Jurassic Park River Adventure passou dez meses em reforma e reabre em 19 ou 20/11. ' +
+        'Se atrasar, vale o plano B.\n\n' +
+        'A Lost Continent está sendo demolida em fases. O prédio do Poseidon’s Fury já foi ao ' +
+        'chão. O Mythos continua aberto e, pela Universal, fecha em 2027, ainda sem data.\n\n' +
+        'O Thunder Falls Terrace, no Jurassic Park, fechou em julho e vira o novo restaurante ' +
+        'com mesa do parque em 2027.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'DE CARRO: estacionamento US$ 35 na hora ou US$ 32 pago antes pelo site. Do carro até ' +
+        'o portão são uns 20 minutos a pé, pelo CityWalk — está dentro do bloco de saída. De ' +
+        'Uber seriam US$ 56 a 80 ida e volta.',
+        pesquisa: '2026-09-11' },
+    ],
+    planos: [
+      { letra: 'A', titulo: 'O dia como está escrito',
+        gatilho: 'O parque abre às 9h e o Jurassic Park River Adventure já reabriu.',
+        passos: [
+          'Na corda às 8h15, Hagrid’s na abertura e Forbidden Journey logo depois.',
+          'Almoço no Confisco Grille às 11h40, na entrada do parque.',
+          'Marvel, Kong, Jurassic Park River Adventure e VelociCoaster na fila normal.',
+          'Hogwarts Express ida e volta, projeção no castelo e jantar no Mythos às 19h15.',
+        ] },
+      { letra: 'B', titulo: 'O Jurassic Park River Adventure não reabriu',
+        gatilho: 'A reforma atrasou e ele continua fechado em 19/11.',
+        passos: [
+          'Os 40 minutos dele devolvem o Doctor Doom: ele entra às 14h15, logo depois do ' +
+          'Spider-Man, a parada vai para 14h35 e o Kong para 14h55.',
+          'A VelociCoaster vai às 15h40, e os 25 minutos que sobram antes do Hogwarts Express ' +
+          'são folga. A capa de chuva fica na mochila.',
+        ] },
+      { letra: 'B2', titulo: 'O parque fecha às 20h',
+        gatilho: 'O horário oficial sai com fechamento às 20h.',
+        passos: [
+          'Remarquem o Mythos, reservado para 19h15, para 18h35 — pelo app da Universal ou ' +
+          'pelo +1 407-224-3663.',
+          'O Kong sai, e a tarde sobe 40 minutos: River Adventure às 14h35, VelociCoaster às ' +
+          '15h20 e Hogwarts Express às 16h55.',
+          'A projeção no castelo vai para 18h05, se já tiver escurecido. Senão, fica para ' +
+          'depois do jantar: ela repete a cada 20 minutos até o parque fechar.',
+        ] },
+      { letra: 'C', titulo: 'Cansaço ou atraso',
+        gatilho: 'O Hagrid’s demorou mais que o previsto ou o corpo pediu pausa.',
+        passos: [
+          'O Kong cai primeiro.',
+          'O Hogwarts Express e o Mythos ficam: são a noite do dia.',
+        ] },
+    ],
+    blocos: [
+      { id: 'b-1911-0725', hora: '07:25', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Sair do hotel de carro',
+        descricao: '33 min de estrada e uns 20 a pé. Estacionamento US$ 32 pago antes',
+        contexto:
+          'O estacionamento da Universal fica longe da catraca: do carro até o CityWalk, e do ' +
+          'CityWalk até o portão do Islands, são uns 20 minutos a pé. Pago antes pelo site ' +
+          'custa US$ 32; na hora, US$ 35.',
+        localId: 'islands-of-adventure', acesso: [], duracaoMin: 50, pesquisa: '2026-09-11' },
+
+      { id: 'b-1911-0815', hora: '08:15', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Portão',
+        descricao: 'Pela esquerda, sentido Hogsmeade. Sem parar em nada',
+        contexto:
+          'A CATRACA ABRE ANTES DAS 9H PARA TODO MUNDO: uma hora antes quando o Islands é o ' +
+          'parque da entrada antecipada de hotel do dia, e 15 a 30 minutos antes nos outros. ' +
+          'Quem é de fora anda pelo Port of Entry e é segurado na entrada da Seuss Landing até ' +
+          'poucos minutos antes da abertura. Chegando às 8h15 vocês esperam na frente dessa ' +
+          'corda, e quem sai na frente dela chega primeiro ao Hagrid’s. Se a catraca ainda ' +
+          'estiver fechada, a espera é na fila dela.\n\n' +
+          'Quando a corda soltar, sigam pela esquerda: Seuss Landing, Lost Continent e ' +
+          'Hogsmeade, uns 12 minutos a pé. Pela direita, pela Marvel, é mais longe.\n\n' +
+          'Quem está hospedado na Universal entra uma hora antes, e o Hagrid’s costuma estar ' +
+          'nessa lista. Mesmo assim, a abertura é a hora mais barata dele para vocês.\n\n' +
+          'PONTO DE ENCONTRO DE HOJE: o mesmo do dia 14, o farol do Port of Entry, na beira da ' +
+          'lagoa. É também a foto da manhã, no caminho da corda. Se vocês se perderem, vão ' +
+          'para lá e ESPEREM.',
+        localId: 'islands-of-adventure', acesso: [], duracaoMin: 45, pesquisa: '2026-09-12' },
+
+      { id: 'b-1911-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Hagrid’s Magical Creatures Motorbike Adventure',
+        descricao: 'Rope drop, sem exceção. Na abertura, 30 a 65 min; depois, mais de 2h',
+        contexto:
+          'Montanha-russa de lançamento em motos com sidecar, com sete lançamentos, uma queda ' +
+          'vertical e um trecho de ré. Sem inversões. É considerada a melhor montanha-russa de ' +
+          'Orlando.\n\n' +
+          'POR QUE AGORA: nos dados de 2026, 30 a 65 minutos na abertura, 120 ao meio-dia, 154 ' +
+          'às 13h e acima de 100 até fechar. E ela saiu do Express em 1º de julho: não existe ' +
+          'atalho pago.\n\n' +
+          'SINGLE RIDER: as fontes divergem sobre a fila de single rider daqui continuar ' +
+          'existindo. Não contem com ela; se aparecer a placa, é bônus.',
+        areaParque: 'Hogsmeade', acesso: ['rope-drop', 'standby'],
+        locker: 'obrigatorio',
+        lockerNota: 'Pochete de 3 pontos na cintura costuma ser liberada, a critério do funcionário.',
+        duracaoMin: 90, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu em 13/06/2019, no lugar do Dragon Challenge, e custou cerca de US$ ' +
+                   '300 milhões. Os sete lançamentos eram recorde mundial na inauguração, e na ' +
+                   'queda livre o trilho se solta e desce 5 metros junto com o trem.',
+            fonte: 'Wikipedia — Hagrid’s Magical Creatures Motorbike Adventure', pesquisa: '2026-09-15' },
+          { texto: 'Foi a última vez que o Robbie Coltrane interpretou o Hagrid. Por causa da ' +
+                   'saúde, ele gravou só o rosto e a cabeça, e morreu em 2022.',
+            fonte: 'Wikipedia — Hagrid’s Magical Creatures Motorbike Adventure', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1911-1030', hora: '10:30', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Harry Potter and the Forbidden Journey',
+        descricao: 'Dentro do castelo de Hogwarts, colado no Hagrid’s',
+        contexto:
+          'Braço robótico que carrega vocês por cenários físicos e telas, com voo sobre ' +
+          'Hogwarts. Balança bastante e causa enjoo em parte das pessoas. A fila atravessa o ' +
+          'castelo por dentro — retratos falantes, sala do Dumbledore — e vale a caminhada.\n\n' +
+          'Fila média de 32 minutos. A próxima reforma dele é só em fevereiro de 2027.',
+        areaParque: 'Hogsmeade', acesso: ['standby'],
+        acessoAlt: 'single-rider', locker: 'obrigatorio',
+        acessoAltNota: 'Na primeira visita, não: single rider pula o castelo, e a fila é metade da atração.',
+        duracaoMin: 55, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu com Hogsmeade, em 2010. Daniel Radcliffe, Rupert Grint, Emma Watson ' +
+                   'e Michael Gambon gravaram cenas para a atração, e o braço robótico é da ' +
+                   'KUKA — o mesmo tipo usado depois no Monsters Unchained, do Epic.',
+            fonte: 'Wikipedia — Harry Potter and the Forbidden Journey; Wikipedia — Monsters Unchained', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1911-1140', hora: '11:40', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Almoço — Confisco Grille',
+        descricao: 'Mesa com garçom na entrada do parque. Pratos de US$ 21 a 35',
+        contexto:
+          'O restaurante com mesa da Port of Entry: cozinha internacional, de pad thai e ' +
+          'salmão com missô a churrasco de Angus e massas. Pratos de US$ 21 a 35.\n\n' +
+          'POR QUE AQUI: fica exatamente no caminho de Hogsmeade para a Marvel, e é mesa, não ' +
+          'balcão. No Three Broomsticks vocês já jantam no dia 14.\n\n' +
+          'São 12 minutos a pé do Forbidden Journey, passando pela Lost Continent e pela Seuss ' +
+          'Landing. É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
+        restauranteId: 'r-confisco', areaParque: 'Port of Entry', acesso: [], duracaoMin: 60,
+        pesquisa: '2026-09-11' },
+
+      { id: 'b-1911-1245', hora: '12:45', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'The Incredible Hulk Coaster',
+        descricao: 'Lançamento de 0 a 64 km/h em 2 segundos, sete inversões',
+        contexto:
+          'Lançamento dentro de um túnel, sete inversões e muito barulho. Clássica de 1999, ' +
+          'reconstruída em 2016.\n\n' +
+          'DETECTOR DE METAL: nada nos bolsos, nem celular. Fila média de 32 minutos.',
+        areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
+        acessoAlt: 'single-rider', locker: 'detector', duracaoMin: 45, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu com o parque, em 1999, e foi reconstruída em 2016, com trilho e ' +
+                   'trens novos e som a bordo. Chega a 108 km/h, com sete inversões.',
+            fonte: 'Wikipedia — The Incredible Hulk Coaster', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1911-1335', hora: '13:35', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'The Amazing Adventures of Spider-Man',
+        descricao: 'Clássico. Ainda é referência técnica',
+        contexto:
+          'Veículo em movimento que combina cenário físico, telas 3D e uma simulação de queda ' +
+          'livre de 120 metros que parece real. É de 1999 e continua sendo estudada como ' +
+          'referência de dark ride.\n\n' +
+          'Fila média de 29 minutos.',
+        areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
+        acessoAlt: 'single-rider',
+        acessoAltNota: 'Entrada do single rider pela esquerda, no corredor que liga a saída à loja.',
+        duracaoMin: 35, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Ganhou o Golden Ticket de melhor dark ride por 12 anos seguidos, de 1999 a ' +
+                   '2010. O Stan Lee aparece no clímax e é a voz dos avisos.',
+            fonte: 'Wikipedia — The Amazing Adventures of Spider-Man', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1911-1435', hora: '14:15', ancora: 'referencia', tipo: 'pausa',
+        titulo: 'Parada — água, banheiro e sentar',
+        descricao: 'Dez minutos. Banheiro ao lado do Captain America Diner',
+        contexto:
+          'Do almoço até o Mythos são sete horas, e só o Hogwarts Express senta. Esta é a parada do meio: água, banheiro e dez minutos sentados antes do Kong.',
+        areaParque: 'Marvel Super Hero Island', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
+
+      { id: 'b-1911-1455', hora: '14:35', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Skull Island: Reign of Kong',
+        descricao: 'Caminhão expedicionário, telas 3D e o Kong animatrônico',
+        contexto:
+          'Caminhão expedicionário com telas 3D e um animatrônico enorme do Kong no fim. Tem ' +
+          'atores na fila. Escuro e barulhento, mas sem emoção física forte.\n\n' +
+          'Fila média de 35 minutos.',
+        areaParque: 'Skull Island', acesso: ['standby'],
+        acessoAlt: 'single-rider', duracaoMin: 40, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu em 13/07/2016, com consultoria do Peter Jackson, o diretor do King ' +
+                   'Kong de 2005. O templo da entrada tem 24 metros.',
+            fonte: 'Wikipedia — Skull Island: Reign of Kong', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1911-1540', hora: '15:20', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Jurassic Park River Adventure',
+        descricao: 'Molha. Reaberto depois de dez meses de reforma',
+        contexto:
+          'Passeio de barco que vira ataque de dinossauros e termina numa queda de 26 metros ' +
+          'no escuro. Molha de verdade, principalmente nas primeiras fileiras.\n\n' +
+          'REFORMA: ficou fechado de janeiro a 19 ou 20/11 de 2026, com dinossauros e cenário ' +
+          'sendo refeitos. Se ainda estiver fechado, vale o plano B.\n\n' +
+          'Está às 15h20 porque é a hora mais quente. Capa de chuva e o celular no Ziploc — ou ' +
+          'no armário de aluguel da entrada, que aqui é opcional, pelo mapa oficial. Fila média ' +
+          'de 22 minutos.',
+        areaParque: 'Jurassic Park', acesso: ['standby'],
+        acessoAlt: 'single-rider', molha: true, duracaoMin: 40, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Abriu com o parque, em 1999. A queda final tem 26 metros, a 55 graus.',
+            fonte: 'Wikipedia — Jurassic Park: The Ride', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1911-1625', hora: '16:05', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Jurassic World VelociCoaster',
+        descricao: 'A mais intensa do parque. Fila normal: uma hora e meia de bloco',
+        contexto:
+          'Dois lançamentos, 47 metros de altura, 110 km/h, quatro inversões e um trecho ' +
+          'rasante sobre a água. É consenso como uma das melhores montanhas-russas do mundo.\n\n' +
+          'SEM SINGLE RIDER: a Universal fechou a fila de single rider daqui e passou a ' +
+          'embarcar os grupos em duas filas, de número par e ímpar de pessoas, para não sobrar ' +
+          'lugar vazio. Vocês vão pela fila normal, juntos.\n\n' +
+          'POR QUE ÀS 16H05: ela não tem hora barata. Nos dados de 2026, 85 minutos às 10h, 102 ' +
+          'às 11h, 76 às 14h, 83 às 16h e 72 às 18h. Entre a melhor e a pior hora da tarde são ' +
+          'dez minutos, e as horas da noite já são do Hogwarts Express e do Mythos. O bloco tem ' +
+          'uma hora e meia: fila, locker e detector.\n\n' +
+          'DETECTOR DE METAL: absolutamente nada nos bolsos.',
+        areaParque: 'Jurassic Park', acesso: ['standby'],
+        locker: 'detector', duracaoMin: 90, pesquisa: '2026-09-15',
+        curiosidades: [
+          { texto: 'Abriu em 10/06/2021, no terreno do antigo Triceratops Encounter, e ganhou ' +
+                   'o Golden Ticket de melhor montanha-russa nova. O segundo lançamento vai de ' +
+                   '64 a 113 km/h em 2,4 segundos.',
+            fonte: 'Wikipedia — Jurassic World VelociCoaster', pesquisa: '2026-09-15' },
+          { texto: 'O Chris Pratt e a Bryce Dallas Howard gravaram os vídeos da fila, e o giro ' +
+                   'de cabeça para baixo sobre a lagoa se chama Mosasaurus Roll.',
+            fonte: 'Wikipedia — Jurassic World VelociCoaster', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1911-1720', hora: '17:40', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Hogwarts Express — ida e volta',
+        descricao: 'Quatro minutos em cada sentido, com filmes diferentes. Precisa park-to-park',
+        contexto:
+          'Trem de verdade entre os dois parques, com as janelas virando tela e sombras no ' +
+          'corredor da cabine. A ida e a volta mostram filmes diferentes — por isso os dois ' +
+          'sentidos.\n\n' +
+          'Na chegada a King’s Cross, no Universal Studios, sigam direto para a entrada da ' +
+          'estação e peguem o trem de volta. O Beco Diagonal vocês já fizeram inteiro no dia 17.\n\n' +
+          'Só funciona com ingresso park-to-park, que está na conferência dos ingressos. Fila ' +
+          'média de 22 minutos na estação de Hogsmeade.',
+        areaParque: 'Hogsmeade', acesso: ['standby'], duracaoMin: 70, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'Na estação de King’s Cross, do lado do Universal Studios, dá para ' +
+                   '“atravessar” a parede entre as plataformas 9 e 10, como no primeiro filme.',
+            fonte: 'Wikipedia — The Wizarding World of Harry Potter (Universal Orlando Resort)', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1911-1835', hora: '18:50', ancora: 'fixo', tipo: 'show',
+        titulo: 'Hogsmeade à noite · projeção no castelo',
+        descricao: 'The Magic of Christmas at Hogwarts Castle. Repete a cada 20 min',
+        contexto:
+          'Projeções e efeitos no castelo de Hogwarts com cenas de Natal dos filmes, depois ' +
+          'que escurece. Repete a cada vinte minutos até o parque fechar — não precisa pegar ' +
+          'na hora exata.\n\n' +
+          'É a segunda vez da projeção: a primeira foi no dia 14, na noite de estreia da ' +
+          'temporada, num sábado. Hoje o bloco é de quinze minutos, colado no Hogwarts ' +
+          'Express, que termina aqui mesmo: vejam a sessão que estiver rodando e sigam para o ' +
+          'Mythos, que fica ao lado, na Lost Continent.',
+        areaParque: 'Hogsmeade', acesso: [], duracaoMin: 15, pesquisa: '2026-09-15' },
+
+      { id: 'b-1911-1915', hora: '19:15', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Jantar — Mythos',
+        descricao: 'O melhor restaurante de parque temático, provavelmente no último Natal dele',
+        contexto:
+          'Mesa com garçom dentro de uma caverna cenográfica, com vista para a lagoa. Ganhou ' +
+          'dez vezes o prêmio de melhor restaurante de parque temático do Theme Park Insider. ' +
+          'Pratos de US$ 26 a 42.\n\n' +
+          'PROVAVELMENTE É O ÚLTIMO NATAL DELE: a Lost Continent está sendo demolida em fases, ' +
+          'e a Universal diz que o Mythos fecha em 2027, ainda sem data.\n\n' +
+          'RESERVADO: 19h15, duas pessoas, confirmação 639247495205005056. Cheguem às 19h10 — ' +
+          'a mesa é segurada por 15 minutos depois do horário. É mesa com garçom: 18 a 20% de ' +
+          'gorjeta sobre o valor sem imposto.',
+        restauranteId: 'r-mythos', areaParque: 'Lost Continent', acesso: ['reserva'],
+        duracaoMin: 75, pesquisa: '2026-09-11',
+        curiosidades: [
+          { texto: 'O Mythos venceu o prêmio do Theme Park Insider de 2003 a 2008 e de novo de ' +
+                   '2019 a 2022, e com a décima vitória foi o primeiro a entrar no Hall da ' +
+                   'Fama do prêmio.',
+            fonte: 'Theme Park Insider', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1911-2030', hora: '20:30', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Saída',
+        descricao: 'Uns 20 min a pé até o carro. Hotel por volta das 21h30',
+        contexto:
+          'A volta até o estacionamento é o mesmo caminho da manhã, pelo CityWalk.\n\n' +
+          'AMANHÃ É BUSCH GARDENS, EM TAMPA: estrada às 7h30, alarme às 6h30. Deixem a mochila ' +
+          'pronta antes de dormir.',
+        acesso: [], duracaoMin: 60 },
+    ],
+    naoPerca: [
+      { nome: 'A projeção no castelo de Hogwarts', quando: 'hoje', custo: 'incluso',
+        motivo: 'The Magic of Christmas at Hogwarts Castle, depois que escurece, repetindo a ' +
+                'cada 20 minutos.',
+        pesquisa: '2026-09-11' },
+      { nome: 'Raptor Encounter', quando: 'hoje', custo: 'incluso',
+        motivo: 'Um velociraptor animatrônico com tratador, no Jurassic Park, em sessões curtas ' +
+                'ao longo do dia. Cabe entre o Kong e o River Adventure, sem bloco — está no ' +
+                'mapa oficial.',
+        pesquisa: '2026-09-12' },
+      { nome: 'Frog Choir e Triwizard Spirit Rally', quando: 'hoje', custo: 'incluso',
+        motivo: 'Shows de rua na Hogsmeade, de uns dez minutos, várias vezes ao dia. Se um ' +
+                'estiver começando quando vocês passarem, parem.',
+        pesquisa: '2026-09-12' },
+      { nome: 'Hogwarts Express nos dois sentidos', quando: 'hoje',
+        custo: 'incluso, precisa park-to-park',
+        motivo: 'A ida e a volta têm filmes diferentes.',
+        pesquisa: '2026-09-11' },
+      { nome: 'Mythos', quando: 'hoje', custo: 'US$ 26 a 42 o prato',
+        motivo: 'Dez vezes eleito o melhor restaurante de parque temático. A Universal diz que ' +
+                'ele fecha em 2027.',
+        pesquisa: '2026-09-11' },
+    ],
+    prepararAmanha: {
+      paraODia: '2026-11-20',
+      titulo: 'Epic Universe · saída 7h15, rope drop na Dark Universe',
+      aviso: 'Saída às 7h15 e hoje o Islands termina por volta das 21h30. O Epic é o dia ' +
+             'mais longo da segunda semana: portão às 7h50 e saída às 21h.',
+      itens: [
+        { texto: 'Mochila do Epic montada hoje', critico: true,
+          motivo: 'Vocês voltam do Islands perto das 21h30 e saem às 7h15. Deixem pronta antes ' +
+                  'de dormir: os dois soft flasks, barrinhas, protetor solar, power bank, cabo ' +
+                  'e capa de chuva.' },
+        { texto: 'Alarme para 6h15 nos dois celulares', critico: true,
+          motivo: 'Saída 7h15. Depois de um dia que termina 21h30, um alarme só falha.' },
+        { texto: 'Conferir o horário de abertura do Epic Universe e ajustar a referência',
+          critico: true,
+          motivo: 'Amanhã assume abertura às 9h e entrada às 7h50, quando o Celestial Park ' +
+                  'abre para todos. Se for outro horário, mudem ' +
+                  'a referência e a manhã inteira desloca junto.' },
+        { texto: 'Conferir a lista do Early Park Admission de amanhã no app da Universal',
+          critico: true,
+          motivo: 'O dia assume que a Dark Universe NÃO está no EPA, e por isso começa nela. ' +
+                  'Se ela estiver na lista e o Ministry não, vale o plano B: os dois blocos ' +
+                  'trocam de lugar. É a pendência ck-epa-epic.' },
+        { texto: 'Guardar o que veio do Islands', critico: false,
+          motivo: 'Amanhã a mochila precisa sair leve — o Epic tem locker obrigatório em ' +
+                  'três atrações, e detector de metal no Stardust Racers.' },
+        { texto: 'Confirmação do Atlantic à mão: 639247233607631616', critico: false,
+          motivo: 'Jantar às 17h de amanhã. A mesa é segurada só por 15 minutos, então o número ' +
+                  'fica no celular, não perdido no e-mail.' },
+      ],
+    },
+    ficha: {
+      multiPass: null, singlePass: null,
+      expressPass: {
+        usar: false,
+        motivo:
+          'O Hagrid’s saiu do Express em 1º de julho de 2026, e a fila que mais pesa no dia é ' +
+          'justamente a dele. A segunda, a VelociCoaster, cabe na fila normal à tarde, e nas ' +
+          'outras o single rider resolve sem pagar nada.',
+      },
+      custoEstimadoCasal: { min: 32, max: 35, moeda: 'USD' },
+      extras: [
+        { nome: 'Estacionamento da Universal',
+          custo: { min: 32, max: 35, moeda: 'USD' },
+          texto: 'US$ 32 pago antes pelo site, US$ 35 na hora.' },
+      ],
+    },
+    renuncias: {
+      gerais: [
+        { nome: 'Grinchmas Who-liday Spectacular', motivo: 'Visto no dia 14, que existe para ele.' },
+        { nome: 'Flight of the Hippogriff',
+          motivo: 'Montanha-russa de família de um minuto, com 34 minutos de fila média.' },
+        { nome: 'Beco Diagonal', motivo: 'Feito inteiro no dia 17, inclusive à noite.' },
+        { nome: 'Pteranodon Flyers', motivo: 'Só com criança.' },
+        { nome: 'Seuss Landing', motivo: 'Brinquedos infantis. Vocês atravessam a pé.' },
+        { nome: 'Popeye e Dudley Do-Right',
+          motivo: 'Molham muito, e o Jurassic Park River Adventure já cumpre esse papel.' },
+        { nome: 'Doctor Doom’s Fearfall',
+          motivo: 'Torre de menos de um minuto. O tempo dele foi para a fila da VelociCoaster, ' +
+                  'que não tem single rider. Volta no plano B.' },
+      ],
+      fechado: [],
+    },
+  },
+
+  /* ===== 20/11 · SEXTA · EPIC UNIVERSE ================================= */
+  {
+    id: 'd-2026-11-20',
+    data: '2026-11-20',
+    diaSemana: 'sexta',
     emoji: '🌌',
     titulo: 'Epic Universe',
     subtitulo: 'Dia único · rope drop na Dark Universe e as duas maiores filas no fim',
@@ -5060,9 +5501,9 @@ window.ROTEIRO = {
       'há uma hora no Battle at the Ministry, na Super Nintendo World e em Berk. O portal ' +
       'que abre vazio para vocês é o da Dark Universe. Confiram a lista do Early Park ' +
       'Admission na véspera: ela já mudou três vezes em dezoito meses.',
-      'Hoje não tem carro — ele só é retirado amanhã. É Uber na ida e na volta, e o ponto ' +
-      'de embarque do Epic é próprio, a cinco minutos a pé da entrada.',
-      'É o único dia de Epic da viagem. Se hoje der muito errado, a manhã livre de amanhã é o ' +
+      'HOJE É DE CARRO, e o Epic tem estacionamento próprio: US$ 32 pagos antes pelo site ' +
+      'ou US$ 35 na hora, na entrada da 1222 Epic Blvd.',
+      'É o único dia de Epic da viagem. Se hoje der muito errado, a manhã livre do dia 24 é o ' +
       'lugar mais barato para voltar — se o ingresso tiver um dia sobrando com Epic, o que ' +
       'ainda precisa ser confirmado com a agência.',
     ],
@@ -5105,8 +5546,8 @@ window.ROTEIRO = {
         pesquisa: '2026-09-10' },
 
       { tipo: 'info', texto:
-        'SEM CARRO HOJE. O carro alugado só é retirado amanhã, dia 20, às 15h, na Avis do Old ' +
-        'Town.\n\n' +
+        'DE CARRO HOJE. O Epic tem estacionamento próprio, na 1222 Epic Blvd, por US$ 32 ' +
+        'pagos antes pelo site ou US$ 35 na hora.\n\n' +
         'O Epic não usa o estacionamento da Universal: o ponto de Uber é próprio, na 1222 Epic ' +
         'Blvd, a uns cinco minutos a pé da entrada. É por isso que dá para sair às 7h15 e não ' +
         'às 6h45 — a caminhada longa do estacionamento não existe para quem chega de Uber.',
@@ -5122,9 +5563,12 @@ window.ROTEIRO = {
         pesquisa: '2026-09-10' },
 
       { tipo: 'info', texto:
-        'POR QUE 19/11. A quinta 19/11 é apontada como um dos dois dias mais vazios de toda a ' +
-        'segunda metade de novembro, fora da semana de Thanksgiving, de 23 a 27/11.\n\n' +
-        'O CUSTO: hoje vocês acordam no dia seguinte ao jogo da NBA.',
+        'POR QUE 20/11. A sexta é o dia que sobra para o Epic depois de o Islands ficar com a ' +
+        'quinta, e vale dizer o preço: a quinta 19/11 é apontada como um dos dois dias mais ' +
+        'vazios da segunda metade de novembro, fora da semana de Thanksgiving, e a sexta não ' +
+        'é. O parque mais concorrido de Orlando cai num dia mais cheio.\n\n' +
+        'O QUE COMPENSA: hoje vocês não acordam no dia seguinte ao jogo da NBA, e o dia ' +
+        'anterior termina às 21h30 no Islands, não às 22h15 na arena.',
         pesquisa: '2026-09-10' },
     ],
     planos: [
@@ -5176,17 +5620,18 @@ window.ROTEIRO = {
         ] },
     ],
     blocos: [
-      { id: 'b-1911-0715', hora: '07:15', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-2011-0715', hora: '07:15', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Sair do hotel — Uber',
-        descricao: '~30 min, US$ 25–38. O carro só chega amanhã',
+        descricao: '~30 min de carro. Estacionamento US$ 32 pago antes pelo site',
         contexto:
-          'Hoje é Uber: o carro alugado só é retirado amanhã às 15h, na Avis do Old Town.\n\n' +
+          'De carro, pela 1222 Epic Blvd. Paguem o estacionamento antes pelo site: US$ 32 ' +
+          'contra US$ 35 na hora.\n\n' +
           'O DESTINO NO APP É O PONTO DE EMBARQUE DO EPIC, 1222 Epic Blvd — não é o ' +
           'estacionamento da Universal, que fica em outro lugar. De lá são uns cinco minutos a ' +
           'pé até a entrada.',
         localId: 'epic-universe', acesso: [], duracaoMin: 35, pesquisa: '2026-09-10' },
 
-      { id: 'b-1911-0750', hora: '07:50', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-2011-0750', hora: '07:50', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Entrar no parque — portal da Dark Universe',
         descricao: 'O Celestial Park abre para todos no Early Park Admission. Esperem na porta',
         contexto:
@@ -5202,7 +5647,7 @@ window.ROTEIRO = {
           'É também o café da manhã: comam as barrinhas aqui, parados na porta.',
         localId: 'epic-universe', acesso: [], duracaoMin: 70, pesquisa: '2026-09-10' },
 
-      { id: 'b-1911-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2011-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Monsters Unchained: The Frankenstein Experiment',
         descricao: 'Rope drop. O portal que abre vazio para quem é de fora',
         contexto:
@@ -5228,7 +5673,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Monsters Unchained: The Frankenstein Experiment', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1911-0940', hora: '09:40', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2011-0940', hora: '09:40', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Curse of the Werewolf',
         descricao: 'Montanha-russa giratória, com trechos de ré. Não é "familiar"',
         contexto:
@@ -5249,14 +5694,14 @@ window.ROTEIRO = {
             fonte: 'Coasterpedia; RCDB', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1911-1020', hora: '10:20', ancora: 'referencia', tipo: 'pausa',
+      { id: 'b-2011-1020', hora: '10:20', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
         descricao: 'Dez minutos, na saída da Dark Universe. O mapa não marca banheiros: perguntem',
         contexto:
           'Duas montanhas-russas com armário e o Stardust logo em seguida, e o almoço só às 13h05. Sentem no Celestial Park, encham os flasks, e só então o Stardust.',
         areaParque: 'Celestial Park', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
 
-      { id: 'b-1911-1030', hora: '10:30', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2011-1030', hora: '10:30', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Stardust Racers',
         descricao: 'Celestial Park. Dois trens correndo lado a lado. Detector de metal',
         contexto:
@@ -5278,7 +5723,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Stardust Racers', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1911-1115', hora: '11:15', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2011-1115', hora: '11:15', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mario Kart: Bowser’s Challenge',
         descricao: 'A janela dele é 11h–12h, quando a turma do EPA sai da Nintendo',
         contexto:
@@ -5303,7 +5748,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Mario Kart: Bowser’s Challenge', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1911-1225', hora: '12:25', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2011-1225', hora: '12:25', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Yoshi’s Adventure',
         descricao: 'Lento e elevado. É a única vista da Nintendo de cima',
         contexto:
@@ -5316,7 +5761,7 @@ window.ROTEIRO = {
         fila: { min: 20, quando: 'no meio do dia', pico: 95, media: 34, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
-      { id: 'b-1911-1305', hora: '13:05', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-2011-1305', hora: '13:05', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Toadstool Cafe',
         descricao: 'Não aceita reserva. Confiram a lista no app às 11h',
         contexto:
@@ -5332,7 +5777,7 @@ window.ROTEIRO = {
         restauranteId: 'r-toadstool', areaParque: 'Super Nintendo World', acesso: [],
         duracaoMin: 55, pesquisa: '2026-09-10' },
 
-      { id: 'b-1911-1410', hora: '14:10', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2011-1410', hora: '14:10', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Hiccup’s Wing Gliders',
         descricao: 'Isle of Berk. Lançamento de alta velocidade, com trecho de ré. Locker',
         contexto:
@@ -5353,7 +5798,7 @@ window.ROTEIRO = {
             fonte: 'Coasterpedia', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1911-1500', hora: '15:00', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2011-1500', hora: '15:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Dragon Racer’s Rally',
         descricao: 'Você controla a inclinação — e as inversões',
         contexto:
@@ -5365,7 +5810,7 @@ window.ROTEIRO = {
         fila: { min: 25, quando: 'à tarde', pico: 100, media: 37, fonte: '2026-09-10' },
         pesquisa: '2026-09-10' },
 
-      { id: 'b-1911-1545', hora: '15:45', ancora: 'referencia', tipo: 'pausa',
+      { id: 'b-2011-1545', hora: '15:45', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada em Berk — água, banheiro e sentar',
         descricao: 'Vinte e cinco minutos. Às 16h10, fila do teatro',
         contexto:
@@ -5380,7 +5825,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — DreamWorks Animation', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1911-1610e', hora: '16:10', ancora: 'fixo', tipo: 'espera',
+      { id: 'b-2011-1610e', hora: '16:10', ancora: 'fixo', tipo: 'espera',
         titulo: 'Fila do The Untrainable Dragon',
         descricao: 'Vinte minutos antes da sessão. Meio do teatro',
         contexto:
@@ -5388,7 +5833,7 @@ window.ROTEIRO = {
           'as telas laterais e as projeções saem do campo de visão.',
         areaParque: 'Isle of Berk', acesso: [], duracaoMin: 20, pesquisa: '2026-09-15' },
 
-      { id: 'b-1911-1630s', hora: '16:30', ancora: 'fixo', tipo: 'show',
+      { id: 'b-2011-1630s', hora: '16:30', ancora: 'fixo', tipo: 'show',
         titulo: 'The Untrainable Dragon',
         descricao: 'O maior show do Epic, 20 min. Termina a três minutos do Atlantic',
         contexto:
@@ -5405,7 +5850,7 @@ window.ROTEIRO = {
         areaParque: 'Isle of Berk', acesso: [], duracaoMin: 20, confirmarHorario: true,
         pesquisa: '2026-09-15' },
 
-      { id: 'b-1911-1700', hora: '17:00', ancora: 'fixo', tipo: 'refeicao',
+      { id: 'b-2011-1700', hora: '17:00', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Atlantic',
         descricao: 'Reservado para as 17h. Cheguem 5 min antes: a mesa espera só 15 min',
         contexto:
@@ -5426,7 +5871,7 @@ window.ROTEIRO = {
         restauranteId: 'r-atlantic', areaParque: 'Celestial Park', acesso: ['reserva'],
         duracaoMin: 75, pesquisa: '2026-09-10' },
 
-      { id: 'b-1911-1820', hora: '18:20', ancora: 'fixo', tipo: 'atracao',
+      { id: 'b-2011-1820', hora: '18:20', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Harry Potter and the Battle at the Ministry',
         descricao: 'Nas últimas horas a fila cai para 45–75 min. De manhã, era a fila do EPA',
         contexto:
@@ -5454,7 +5899,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Harry Potter and the Battle at the Ministry', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1911-2000', hora: '20:00', ancora: 'fixo', tipo: 'atracao',
+      { id: 'b-2011-2000', hora: '20:00', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Mine-Cart Madness',
         descricao: 'A maior fila do parque. Na última hora ela cai para 20–30 min',
         contexto:
@@ -5478,7 +5923,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Super Nintendo World', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1911-2100', hora: '21:00', ancora: 'fixo', tipo: 'deslocamento',
+      { id: 'b-2011-2100', hora: '21:00', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Sair — Uber',
         descricao: 'Pelo Celestial Park iluminado. Embarque na 1222 Epic Blvd',
         contexto:
@@ -5513,21 +5958,22 @@ window.ROTEIRO = {
                 'metade da área vira só cenário. A decisão está no checklist de outubro.' },
     ],
     prepararAmanha: {
-      paraODia: '2026-11-20',
-      titulo: 'Carro e Old Town · manhã livre',
-      aviso: 'Amanhã não tem alarme nem parque. O único horário marcado é a retirada do carro, ' +
-             'às 15h, e ela é a tarefa crítica do dia.',
+      paraODia: '2026-11-21',
+      titulo: 'Winter Garden e Solar Bears · saída 8h',
+      aviso: 'Amanhã é o primeiro dia de carro de verdade, mas só até Winter Garden: à noite o ' +
+             'carro fica no hotel e o jogo é de Uber, numa arena que não aceita bolsa.',
       itens: [
-        { texto: 'Separar os quatro documentos da retirada do carro', critico: true,
-          motivo: 'Carteira de motorista, PID, passaporte e cartão de CRÉDITO internacional, ' +
-                  'todos em nome do condutor. A retirada é às 15h, na Avis do Old Town, e sem ' +
-                  'um deles não sai carro.' },
-        { texto: 'Separar a roupa suja', critico: false,
-          motivo: 'Amanhã às 10h é a lavanderia, a única rodada da viagem.' },
-        { texto: 'Guardar as compras e esvaziar a mochila do parque', critico: false,
-          motivo: 'Amanhã é dia de Old Town e de carro. A mochila de parque fica.' },
-        { texto: 'Celular e power bank carregando', critico: false,
-          motivo: 'Hoje foram catorze horas de parque com o app aberto o tempo todo.' },
+        { texto: 'Alarme para 6h45 nos dois celulares', critico: true,
+          motivo: 'Café da manhã do hotel às 7h15 e saída às 8h. O Farmers Market de Winter ' +
+                  'Garden vai das 8h às 13h e só funciona aos sábados.' },
+        { texto: 'A mochila fica no quarto antes do jogo', critico: true,
+          motivo: 'O Kia Center não aceita bolsa, e vocês vão só com o bolso. A volta de ' +
+                  'Winter Garden passa pelo hotel à tarde: a mochila fica lá, junto com o carro.' },
+        { texto: 'Ingresso do Solar Bears nos dois celulares', critico: true,
+          motivo: 'Jogo às 19h no Kia Center.' },
+        { texto: 'Se o GPS escolher a SR-429, deixem', critico: false,
+          motivo: 'É pedágio pela placa, porque o e-Toll foi recusado: poucos dólares mais a taxa ' +
+                  'de US$ 6,95 do dia.' },
       ],
     },
     ficha: {
@@ -5583,300 +6029,6 @@ window.ROTEIRO = {
     },
   },
 
-  /* ===== 20/11 · SEXTA · CARRO E OLD TOWN ================================ */
-  {
-    id: 'd-2026-11-20',
-    data: '2026-11-20',
-    diaSemana: 'sexta',
-    emoji: '🚗',
-    titulo: 'Carro e Old Town',
-    subtitulo: 'Manhã livre · muscle cars à noite',
-    tipo: 'livre',
-    operadora: null,
-    parqueId: null,
-    custoZero: false,
-    fechado: true,
-    revisadoEm: '2026-09-11',
-    referencia: { rotulo: 'Saída do hotel', padrao: '08:30', confirmado: false },
-    resumo:
-      'O único respiro entre o Epic e cinco dias pesados seguidos. Café sem pressa no IHOP, ' +
-      'almoço porto-riquenho no Old Town, o carro às 15h — a tarefa crítica do dia — e, à ' +
-      'noite, food trucks e o desfile de muscle cars, a três minutos do hotel.',
-    avisos: [
-      'O ÚNICO HORÁRIO QUE NÃO PODE FALHAR É A RETIRADA DO CARRO, ÀS 15H. Sem carro, o dia 21 ' +
-      'em Winter Garden cai: o Farmers Market abre às 8h e só funciona aos sábados.',
-      'No balcão da Avis, recusem o pacote de pedágio e-Toll Unlimited. Ele cobra de US$ 11 a ' +
-      '26 por dia de aluguel, mesmo nos dias sem pedágio nenhum.',
-    ],
-    notas: [
-      { tipo: 'info', texto:
-        'A AVIS FICA DENTRO DO OLD TOWN, nos fundos, em frente à montanha-russa — suíte 434. ' +
-        'Abre das 7h às 19h todos os dias, inclusive sábado, e fica a três minutos do hotel.\n\n' +
-        'O ALUGUEL É CONTADO EM PERÍODOS DE 24 HORAS. Retirando às 15h de hoje e devolvendo às ' +
-        '15h do dia 25, são cinco diárias certas. A tolerância na devolução é de 29 minutos; ' +
-        'passou disso, a Avis cobra fração de diária, e com 90 minutos de atraso cobra a ' +
-        'diária inteira.',
-        pesquisa: '2026-09-11' },
-
-      { tipo: 'atencao', texto:
-        'PEDÁGIO: RECUSEM O E-TOLL UNLIMITED. O pacote cobra de US$ 11 a 26 por dia de ' +
-        'aluguel, em todos os dias, com ou sem pedágio. Sem ele, a Avis cobra cada pedágio ' +
-        'pela placa, mais uma taxa de US$ 6,95 só nos dias em que houve pedágio.\n\n' +
-        'A estrada pedagiada que o roteiro provavelmente usa é a SR-429, para Winter Garden, ' +
-        'amanhã — poucos dólares. SeaWorld, Islands e Tampa ficam pela I-4, que é grátis ' +
-        'fora das faixas expressas.',
-        pesquisa: '2026-09-11' },
-
-      { tipo: 'info', texto:
-        'O DESFILE DE SEXTA É O DOS MUSCLE CARS: carros de 1964 em diante e hot rods, expostos ' +
-        'desde as 15h e desfilando às 20h30. No sábado existe outro, dos clássicos anteriores ' +
-        'a 1985, também às 20h30 — mas amanhã vocês estão no hóquei. Os dois são grátis.',
-        pesquisa: '2026-09-11' },
-
-      { tipo: 'info', texto:
-        'A MANHÃ LIVRE TAMBÉM É A REDE DE SEGURANÇA DO EPIC. Se ontem der muito errado — o ' +
-        'Mine-Cart parado a noite inteira, chuva —, esta manhã é o lugar mais barato para ' +
-        'voltar ao Epic, porque não tira nada do roteiro e não gasta dia de ingresso: o de ' +
-        'vocês é de 14 dias com entradas ilimitadas nos três parques. O que a pendência dos ' +
-        'ingressos confirma é o produto e a data de início da validade.',
-        pesquisa: '2026-09-11' },
-    ],
-    planos: [
-      { letra: 'A', titulo: 'O dia como está escrito',
-        gatilho: 'O Epic de ontem correu bem e o carro está reservado para as 15h.',
-        passos: [
-          'Dormir sem alarme. Café da manhã no IHOP da 5184 W Irlo Bronson.',
-          'Lavanderia às 10h, a única rodada da viagem.',
-          'Almoço no El Cilantrillo, dentro do Old Town, e uma volta por lá até o carro.',
-          'Carro às 15h na Avis do Old Town e descanso no hotel.',
-          'Às 17h20, de volta ao Old Town, já de carro. Jantar no World Food Trucks, lugar na ' +
-          'calçada às 20h10 e desfile às 20h30.',
-        ] },
-      { letra: 'B', titulo: 'O Epic de ontem deu errado',
-        gatilho: 'Uma atração grande ficou de fora ontem — o Mine-Cart parado, chuva — e a ' +
-                 'agência confirmou que o ingresso tem um dia sobrando com Epic.',
-        passos: [
-          'Café da manhã do hotel e Uber às 8h15 para o ponto de embarque do Epic, na 1222 ' +
-          'Epic Blvd.',
-          'Só o que ficou de fora. Saída às 13h30, sem esticar.',
-          'Uber direto para a Avis do Old Town: a retirada das 15h não muda.',
-          'A lavanderia passa para as 15h30, no lugar do descanso.',
-        ] },
-      { letra: 'B2', titulo: 'A Avis não tem o carro',
-        gatilho: 'Fila no balcão ou problema com a reserva às 15h.',
-        passos: [
-          'A filial fica aberta até as 19h: há quatro horas de margem, e a noite é ali mesmo.',
-          'Liguem para a filial, +1 321-219-7041, e resolvam antes do jantar.',
-          'Se às 16h ainda não houver solução, a Hertz de 7471 W Irlo Bronson é a próxima — ' +
-          'e ela fecha às 17h.',
-          'O que não pode acontecer é terminar o dia sem carro: amanhã a saída é 8h.',
-        ] },
-      { letra: 'C', titulo: 'Chuva à noite',
-        gatilho: 'A previsão do meio-dia dá chuva para o fim da tarde ou a noite.',
-        passos: [
-          'Invertam as refeições: World Food Trucks no almoço, El Cilantrillo no jantar. Os ' +
-          'trucks são ao ar livre, e o site não diz se há área coberta; o El Cilantrillo é ' +
-          'salão fechado, aberto até a meia-noite na sexta.',
-          'O desfile é ao ar livre, com carro de coleção. Confiram a página de eventos do Old ' +
-          'Town antes de sair do hotel.',
-          'Se o desfile não sair, a noite termina no jantar. Amanhã a saída é 8h.',
-        ] },
-    ],
-    blocos: [
-      { id: 'b-2011-0800', hora: '08:30', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Café da manhã — IHOP',
-        descricao: 'Sem alarme. A 750 m do hotel, aberto desde as 6h. Ou o do hotel, incluso',
-        contexto:
-          'O único respiro entre o Epic de ontem e cinco dias seguidos pesados: Winter Garden ' +
-          'com hóquei, SeaWorld, Islands, Busch Gardens e o último dia de compras. Não é para ' +
-          'encher — é o dia de tomar café fora, sem pressa.\n\n' +
-          'O IHOP da 5184 W Irlo Bronson é o mais perto dos três da 192: uns 750 metros a ' +
-          'leste do hotel, três minutos de Uber. Na sexta abre das 6h à meia-noite. Panqueca, ' +
-          'ovos e bacon — o café americano de diner.\n\n' +
-          'SE NÃO DER VONTADE DE SAIR: o café da manhã do hotel é incluso e continental, e vai ' +
-          'até as 10h segundo os sites de reserva — a Wyndham não publica o horário.\n\n' +
-          'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
-        endereco: '5184 W Irlo Bronson Memorial Hwy', acesso: [], duracaoMin: 75,
-        pesquisa: '2026-09-11' },
-
-      { id: 'b-2011-1000', hora: '10:00', ancora: 'referencia', tipo: 'tarefa',
-        titulo: 'Lavanderia',
-        descricao: 'A única rodada da viagem. Sabão e moedas de 25 centavos vêm da lista do Walmart',
-        contexto:
-          'O Travelodge tem lavanderia de moeda, segundo os sites de reserva. Lavar e secar ' +
-          'leva perto de duas horas — é estimativa, não medida.\n\n' +
-          'É a única rodada da viagem, no meio do caminho: o que sair limpo daqui cobre os ' +
-          'dias 21 a 26.\n\n' +
-          'Se a máquina do hotel não funcionar, procurem uma lavanderia self-service na 192.',
-        localId: 'hotel-travelodge', acesso: [], duracaoMin: 150 },
-
-      { id: 'b-2011-1230', hora: '12:45', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Almoço — El Cilantrillo',
-        descricao: 'Porto-riquenho de mesa, dentro do Old Town. Três minutos de Uber',
-        contexto:
-          'Comida caseira porto-riquenha: mofongo — purê de banana-da-terra com alho — com ' +
-          'churrasco, carne de porco ou frutos do mar por cima; pernil assado devagar; e o ' +
-          'pargo inteiro frito, no estilo boricua.\n\n' +
-          'Pratos da rede perto de US$ 20. Na sexta abre das 11h à meia-noite. Aceita reserva ' +
-          'pelo Yelp ou pelo telefone +1 407-204-9685.\n\n' +
-          'Fica na suíte 130 do Old Town, o mesmo complexo da Avis: daqui, a tarde segue a pé ' +
-          'até a retirada do carro.\n\n' +
-          'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
-        endereco: '5770 W Irlo Bronson Memorial Hwy, Suite 130', restauranteId: 'r-cilantrillo',
-        localId: 'old-town', acesso: [], duracaoMin: 75, pesquisa: '2026-09-11' },
-
-      { id: 'b-2011-1401', hora: '14:00', ancora: 'referencia', tipo: 'livre',
-        titulo: 'Old Town de dia · Mine Blower opcional',
-        descricao: 'Uma volta pela rua de tijolinho. A montanha-russa do Fun Spot, se a comida deixar',
-        contexto:
-          'Uma hora sem roteiro entre o almoço e o carro, no mesmo complexo. De dia dá para ver ' +
-          'as lojas com calma; à noite a rua é do desfile.\n\n' +
-          'MINE BLOWER, no Fun Spot, ao lado do Old Town: montanha-russa de madeira com ' +
-          'inversão. A entrada no Fun Spot é grátis e cada brinquedo é pago à parte, de US$ 3 ' +
-          'a 40. Logo depois de um mofongo, julguem vocês.',
-        localId: 'old-town', acesso: [], duracaoMin: 60, pesquisa: '2026-09-11' },
-
-      { id: 'b-2011-1530', hora: '15:00', ancora: 'fixo', tipo: 'tarefa',
-        titulo: 'Retirar o carro — Avis do Old Town',
-        descricao: 'Suíte 434, nos fundos do Old Town. Recusem o e-Toll Unlimited',
-        contexto:
-          'A TAREFA CRÍTICA DO DIA. Sem carro, o dia 21 em Winter Garden cai — o Farmers Market ' +
-          'abre às 8h e não dá para ir de Uber a esse preço.\n\n' +
-          'ONDE: dentro do Old Town, nos fundos, em frente à montanha-russa — a pé desde o ' +
-          'almoço. Aberta das 7h às 19h, telefone +1 321-219-7041.\n\n' +
-          'QUATRO DOCUMENTOS, todos em nome do condutor: carteira de motorista, PID ' +
-          '(Permissão Internacional para Dirigir, já emitida), passaporte e cartão de CRÉDITO ' +
-          'internacional. Débito costuma não ser aceito para a caução.\n\n' +
-          'NO BALCÃO: recusem o e-Toll Unlimited e fotografem o carro por fora antes de sair.\n\n' +
-          'A DEVOLUÇÃO é no dia 25, às 15h, nesta mesma filial e dentro do horário dela.',
-        endereco: '5770 W Irlo Bronson Memorial Hwy, Suite 434', localId: 'old-town',
-        acesso: [], critico: true, duracaoMin: 30, pesquisa: '2026-09-11' },
-
-      { id: 'b-2011-1400', hora: '15:30', ancora: 'fixo', tipo: 'vazio',
-        titulo: 'VAZIO PROPOSITAL',
-        descricao: 'Descanso no hotel, já com o carro',
-        contexto:
-          'Não preencham. A partir de amanhã são cinco dias seguidos pesados: Winter Garden com ' +
-          'hóquei à noite, SeaWorld, Islands of Adventure, Busch Gardens com 3h de carro e o ' +
-          'último dia de compras, que termina tarde no Disney Springs.',
-        localId: 'hotel-travelodge', acesso: [], duracaoMin: 105 },
-
-      { id: 'b-2011-1630', hora: '17:20', ancora: 'fixo', tipo: 'livre',
-        titulo: 'Old Town Kissimmee',
-        descricao: 'Entrada e estacionamento grátis. Muscle cars expostos desde as 15h',
-        contexto:
-          'Rua de tijolinho com lojas, bares e brinquedos, a três minutos do hotel. Toda sexta ' +
-          'a Trophy Row vira exposição de muscle cars de 1964 em diante e hot rods, e às 20h30 ' +
-          'eles desfilam pela rua principal.\n\n' +
-          'O pôr do sol é por volta das 17h30: vocês chegam na luz baixa e veem as luzes ' +
-          'acendendo.\n\n' +
-          'DECORAÇÃO DE NATAL: o Old Town monta árvore e luzes a partir de meados de novembro. ' +
-          'A data exata do acendimento não saiu.',
-        endereco: '5770 W Irlo Bronson Memorial Hwy', localId: 'old-town',
-        acesso: [], duracaoMin: 70, pesquisa: '2026-09-11' },
-
-      { id: 'b-2011-1830', hora: '18:30', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — World Food Trucks',
-        descricao: 'Mais de 100 food trucks, a 300 m do Old Town. Estacionamento grátis',
-        contexto:
-          'Um estacionamento com mais de cem food trucks: mexicano, venezuelano, colombiano, ' +
-          'cubano, porto-riquenho, brasileiro, coreano, japonês, italiano, caribenho. Cada um ' +
-          'escolhe o seu — e é à noite, com tudo aceso, que o lugar faz sentido.\n\n' +
-          'FICA NA PRÓPRIA 192, a uns 300 metros do Old Town. Vão de carro: são poucos ' +
-          'minutos, o estacionamento é grátis, e às 20h10 vocês voltam para pegar lugar na ' +
-          'calçada.\n\n' +
-          'Aberto das 11h às 2h, todos os dias. O site não diz se há área coberta: com chuva ' +
-          'prevista, vale o plano C.\n\n' +
-          'Food truck é balcão: não leva gorjeta.',
-        endereco: '5811 W Irlo Bronson Memorial Hwy', restauranteId: 'r-world-food-trucks',
-        localId: 'world-food-trucks', acesso: [], duracaoMin: 90, pesquisa: '2026-09-11' },
-
-      { id: 'b-2011-2010', hora: '20:10', ancora: 'fixo', tipo: 'espera',
-        titulo: 'Lugar na calçada',
-        descricao: 'Vinte minutos antes do desfile',
-        contexto:
-          'A calçada da rua principal enche perto das 20h30. Escolham o ponto com calma ' +
-          'enquanto ainda há espaço.',
-        localId: 'old-town', acesso: [], duracaoMin: 20 },
-
-      { id: 'b-2011-2030', hora: '20:30', ancora: 'fixo', tipo: 'show',
-        titulo: 'Muscle Car Cruise',
-        descricao: 'Desfile dos muscle cars pela rua principal. Grátis',
-        contexto:
-          'Toda sexta, os muscle cars expostos na Trophy Row desde a tarde desfilam pela rua ' +
-          'principal do Old Town — carros de 1964 em diante e hot rods. É gratuito, é semanal e ' +
-          'é a coisa mais americana da viagem.\n\n' +
-          'No sábado existe o desfile dos clássicos anteriores a 1985, na mesma hora, mas amanhã ' +
-          'é o hóquei.',
-        localId: 'old-town', acesso: [], duracaoMin: 45, pesquisa: '2026-09-11' },
-
-      { id: 'b-2011-2200', hora: '21:15', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Voltar',
-        descricao: 'Três minutos de carro. Amanhã a saída é 8h',
-        contexto:
-          'O dia 21 começa cedo: Farmers Market de Winter Garden às 8h e hóquei à noite. Durmam.',
-        acesso: [], duracaoMin: 15 },
-    ],
-    naoPerca: [
-      { nome: 'Muscle Car Cruise', quando: 'hoje', custo: 'grátis',
-        motivo: 'Desfile semanal de muscle cars pela rua principal do Old Town, às 20h30.',
-        pesquisa: '2026-09-11' },
-      { nome: 'A decoração de Natal do Old Town', quando: 'hoje',
-        condicao: 'montada a partir de meados de novembro', custo: 'grátis',
-        motivo: 'Árvore e luzes na rua de tijolinho. A data do acendimento ainda não saiu.',
-        pesquisa: '2026-09-11' },
-      { nome: 'Mine Blower, no Fun Spot', quando: 'depois do almoço', custo: 'pago por brinquedo',
-        motivo: 'Montanha-russa de madeira com inversão, ao lado do Old Town. A entrada no Fun ' +
-                'Spot é grátis; cada brinquedo é pago à parte.',
-        pesquisa: '2026-09-11' },
-      { nome: 'Boggy Creek Airboat Adventures', quando: 'descartado', custo: 'US$ 108 a 122 no casal',
-        motivo: 'Passeio de aerobarco de uma hora, a 38 minutos do hotel. Fica de fora: não é ' +
-                'objetivo da viagem, novembro é a pior época para ver bicho de manhã, e ele ' +
-                'obrigaria a pegar o carro cedo, com uma diária a mais. A manhã livre rende mais.',
-        pesquisa: '2026-09-11' },
-    ],
-    prepararAmanha: {
-      paraODia: '2026-11-21',
-      titulo: 'Winter Garden e Solar Bears · saída 8h',
-      aviso: 'Amanhã é o primeiro dia de carro de verdade, mas só até Winter Garden: à noite o ' +
-             'carro fica no hotel e o jogo é de Uber, numa arena que não aceita bolsa.',
-      itens: [
-        { texto: 'Alarme para 6h45 nos dois celulares', critico: true,
-          motivo: 'Café da manhã do hotel às 7h15 e saída às 8h. O Farmers Market de Winter ' +
-                  'Garden vai das 8h às 13h e só funciona aos sábados.' },
-        { texto: 'A mochila fica no quarto antes do jogo', critico: true,
-          motivo: 'O Kia Center não aceita bolsa, e vocês vão só com o bolso. A volta de ' +
-                  'Winter Garden passa pelo hotel à tarde: a mochila fica lá, junto com o carro.' },
-        { texto: 'Ingresso do Solar Bears nos dois celulares', critico: true,
-          motivo: 'Jogo às 19h no Kia Center.' },
-        { texto: 'Se o GPS escolher a SR-429, deixem', critico: false,
-          motivo: 'É pedágio pela placa, porque o e-Toll foi recusado: poucos dólares mais a taxa ' +
-                  'de US$ 6,95 do dia.' },
-      ],
-    },
-    ficha: {
-      multiPass: null, singlePass: null, expressPass: null,
-      custoEstimadoCasal: { min: 0, max: 40, moeda: 'USD' },
-      extras: [
-        { nome: 'e-Toll Unlimited da Avis — recusar',
-          custo: { min: 0, max: 0, moeda: 'USD' },
-          texto: 'O pacote cobra de US$ 11 a 26 por dia de aluguel, todos os dias, e vai até US$ 55 ' +
-                 'a 130 por semana. Sem ele, cada pedágio sai pela placa, mais US$ 6,95 só nos ' +
-                 'dias em que houve pedágio.' },
-        { nome: 'Mine Blower, no Fun Spot',
-          custo: { min: 0, max: 40, moeda: 'USD' },
-          texto: 'Opcional. Cada brinquedo do Fun Spot custa de US$ 3 a 40; o passe do dia é ' +
-                 'US$ 59,95. A entrada é grátis.' },
-      ],
-    },
-    renuncias: {
-      gerais: [
-        { nome: 'Kissimmee Lakefront Park',
-          motivo: 'Sem carro de manhã, são 16 minutos de Uber em cada sentido para ver um lago.' },
-      ],
-      fechado: [],
-    },
-  },
   /* ===== 21/11 · SÁBADO · WINTER GARDEN E SOLAR BEARS ================== */
   {
     id: 'd-2026-11-21',
@@ -6627,20 +6779,23 @@ window.ROTEIRO = {
     ],
     prepararAmanha: {
       paraODia: '2026-11-23',
-      titulo: 'Islands of Adventure · saída 7h25',
-      aviso: 'Vocês chegam do SeaWorld por volta das 22h, e amanhã é o dia com mais detector ' +
-             'de metal da viagem. A mochila sai mínima.',
+      titulo: 'Busch Gardens Tampa · saída 7h30',
+      aviso: 'Amanhã é o dia mais pesado fisicamente da viagem, com 1h25 de estrada para cada ' +
+             'lado. Vocês chegam do Islands por volta das 21h30: durmam cedo.',
       itens: [
-        { texto: 'Alarme para 6h25 nos dois celulares', critico: true,
-          motivo: 'Saída 7h25 para estar na frente da corda do Hagrid’s às 8h15. Depois de uma noite que termina às ' +
-                  '22h, um alarme só falha.' },
-        { texto: 'Mochila mínima para o Islands', critico: true,
-          motivo: 'Hulk e VelociCoaster têm detector de metal e não passa nem celular, e quatro ' +
-                  'atrações exigem locker. Quanto menos bagagem, mais atração cabe no dia.' },
-        { texto: 'Conferir o horário de abertura do Islands', critico: true,
-          motivo: 'Amanhã assume abertura às 9h. Se for outro horário, a manhã inteira desloca.' },
-        { texto: 'Capa de chuva e Ziploc para o celular', critico: false,
-          motivo: 'O Jurassic Park River Adventure molha bastante.' },
+        { texto: 'Alarme para 6h30 nos dois celulares', critico: true,
+          motivo: 'Café do hotel às 7h e estrada às 7h30, para chegar ao portão 45 minutos ' +
+                  'antes da abertura.' },
+        { texto: 'Conferir o horário de abertura do Busch Gardens', critico: true,
+          motivo: 'Amanhã assume abertura às 10h, ainda sem confirmação. Se for outro horário, ' +
+                  'a saída muda junto.' },
+        { texto: 'Ingresso do Busch Gardens e o plano de refeição no celular', critico: true,
+          motivo: 'É o mesmo ingresso do SeaWorld, com o plano de refeição incluso.' },
+        { texto: 'Combustível para 218 km: abaixo da metade do tanque, abasteçam na volta',
+          critico: false,
+          motivo: 'Amanhã são 109 km até Tampa e 109 de volta, com a estrada às 7h30 e sem ' +
+                  'tempo para posto. No posto, paguem dentro da loja: a bomba pede o ZIP code ' +
+                  'do cartão.' },
       ],
     },
     ficha: {
@@ -6678,431 +6833,11 @@ window.ROTEIRO = {
     },
   },
 
-  /* ===== 23/11 · SEGUNDA · ISLANDS OF ADVENTURE ========================= */
+  /* ===== 23/11 · SEGUNDA · BUSCH GARDENS TAMPA ============================ */
   {
     id: 'd-2026-11-23',
     data: '2026-11-23',
     diaSemana: 'segunda',
-    emoji: '⚡',
-    titulo: 'Islands of Adventure',
-    subtitulo: 'O dia mais forte em montanha-russa da viagem',
-    tipo: 'parque',
-    operadora: 'universal',
-    parqueId: 'islands-of-adventure',
-    custoZero: false,
-    fechado: true,
-    revisadoEm: '2026-09-11',
-    referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: false },
-    resumo:
-      'Hagrid’s na abertura, que é a única janela abaixo de uma hora, e depois uma volta ' +
-      'inteira no anel do parque sem voltar atrás: Marvel, Kong, Jurassic Park e a ' +
-      'VelociCoaster na fila normal. À noite, Hogwarts Express, o castelo iluminado e o ' +
-      'jantar no Mythos, provavelmente no último Natal dele.',
-    avisos: [
-      'O HAGRID’S NÃO ACEITA EXPRESS DESDE 1º DE JULHO DE 2026, e a janela barata dele é a ' +
-      'abertura. Na corda às 8h15 e direto para Hogsmeade quando ela soltar.',
-      'Hoje é o dia com mais detector de metal da viagem: Hulk e VelociCoaster, onde não ' +
-      'passa nem celular. E quatro atrações exigem locker. Levem o mínimo.',
-    ],
-    notas: [
-      { tipo: 'atencao', texto:
-        'O HORÁRIO DE 23/11 AINDA NÃO SAIU. A referência está em 9h, que é a abertura padrão ' +
-        'do Islands; o fechamento na semana de Thanksgiving tende a ficar entre 20h e 21h. A ' +
-        'projeção no castelo e o Mythos estão fixos de propósito. Se o parque fechar às 20h, ' +
-        'vale o plano B2.',
-        pesquisa: '2026-09-11' },
-
-      { tipo: 'info', texto:
-        'POR QUE O HAGRID’S VEM PRIMEIRO, mesmo sem a entrada antecipada de hotel: nos dados ' +
-        'de março e abril de 2026, a fila média na abertura foi de 30 a 65 minutos. Às 10h já ' +
-        'passava de 65, ao meio-dia chegava a 120, às 13h a 154, e não voltou para baixo de ' +
-        '100 nem na última hora.\n\n' +
-        'A VELOCICOASTER NÃO TEM HORA BOA, e não tem mais single rider: de 67 a 102 minutos ' +
-        'da abertura até a noite, e a Universal fechou a fila de single rider dela. Por isso ' +
-        'ela fica à tarde, com um bloco de uma hora e meia, e o Doctor Doom saiu do dia para ' +
-        'caber.',
-        pesquisa: '2026-09-15' },
-
-      { tipo: 'info', texto:
-        'O QUE MUDOU NO PARQUE EM 2026:\n\n' +
-        'O Jurassic Park River Adventure passou dez meses em reforma e reabre em 19 ou 20/11. ' +
-        'Se atrasar, vale o plano B.\n\n' +
-        'A Lost Continent está sendo demolida em fases. O prédio do Poseidon’s Fury já foi ao ' +
-        'chão. O Mythos continua aberto e, pela Universal, fecha em 2027, ainda sem data.\n\n' +
-        'O Thunder Falls Terrace, no Jurassic Park, fechou em julho e vira o novo restaurante ' +
-        'com mesa do parque em 2027.',
-        pesquisa: '2026-09-11' },
-
-      { tipo: 'info', texto:
-        'DE CARRO: estacionamento US$ 35 na hora ou US$ 32 pago antes pelo site. Do carro até ' +
-        'o portão são uns 20 minutos a pé, pelo CityWalk — está dentro do bloco de saída. De ' +
-        'Uber seriam US$ 56 a 80 ida e volta.',
-        pesquisa: '2026-09-11' },
-    ],
-    planos: [
-      { letra: 'A', titulo: 'O dia como está escrito',
-        gatilho: 'O parque abre às 9h e o Jurassic Park River Adventure já reabriu.',
-        passos: [
-          'Na corda às 8h15, Hagrid’s na abertura e Forbidden Journey logo depois.',
-          'Almoço no Confisco Grille às 11h40, na entrada do parque.',
-          'Marvel, Kong, Jurassic Park River Adventure e VelociCoaster na fila normal.',
-          'Hogwarts Express ida e volta, projeção no castelo e jantar no Mythos às 19h15.',
-        ] },
-      { letra: 'B', titulo: 'O Jurassic Park River Adventure não reabriu',
-        gatilho: 'A reforma atrasou e ele continua fechado em 23/11.',
-        passos: [
-          'Os 40 minutos dele devolvem o Doctor Doom: ele entra às 14h15, logo depois do ' +
-          'Spider-Man, a parada vai para 14h35 e o Kong para 14h55.',
-          'A VelociCoaster vai às 15h40, e os 25 minutos que sobram antes do Hogwarts Express ' +
-          'são folga. A capa de chuva fica na mochila.',
-        ] },
-      { letra: 'B2', titulo: 'O parque fecha às 20h',
-        gatilho: 'O horário oficial sai com fechamento às 20h.',
-        passos: [
-          'Remarquem o Mythos, reservado para 19h15, para 18h35 — pelo app da Universal ou ' +
-          'pelo +1 407-224-3663.',
-          'O Kong sai, e a tarde sobe 40 minutos: River Adventure às 14h35, VelociCoaster às ' +
-          '15h20 e Hogwarts Express às 16h55.',
-          'A projeção no castelo vai para 18h05, se já tiver escurecido. Senão, fica para ' +
-          'depois do jantar: ela repete a cada 20 minutos até o parque fechar.',
-        ] },
-      { letra: 'C', titulo: 'Cansaço ou atraso',
-        gatilho: 'O Hagrid’s demorou mais que o previsto ou o corpo pediu pausa.',
-        passos: [
-          'O Kong cai primeiro.',
-          'O Hogwarts Express e o Mythos ficam: são a noite do dia.',
-        ] },
-    ],
-    blocos: [
-      { id: 'b-2311-0725', hora: '07:25', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Sair do hotel de carro',
-        descricao: '33 min de estrada e uns 20 a pé. Estacionamento US$ 32 pago antes',
-        contexto:
-          'O estacionamento da Universal fica longe da catraca: do carro até o CityWalk, e do ' +
-          'CityWalk até o portão do Islands, são uns 20 minutos a pé. Pago antes pelo site ' +
-          'custa US$ 32; na hora, US$ 35.',
-        localId: 'islands-of-adventure', acesso: [], duracaoMin: 50, pesquisa: '2026-09-11' },
-
-      { id: 'b-2311-0815', hora: '08:15', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Portão',
-        descricao: 'Pela esquerda, sentido Hogsmeade. Sem parar em nada',
-        contexto:
-          'A CATRACA ABRE ANTES DAS 9H PARA TODO MUNDO: uma hora antes quando o Islands é o ' +
-          'parque da entrada antecipada de hotel do dia, e 15 a 30 minutos antes nos outros. ' +
-          'Quem é de fora anda pelo Port of Entry e é segurado na entrada da Seuss Landing até ' +
-          'poucos minutos antes da abertura. Chegando às 8h15 vocês esperam na frente dessa ' +
-          'corda, e quem sai na frente dela chega primeiro ao Hagrid’s. Se a catraca ainda ' +
-          'estiver fechada, a espera é na fila dela.\n\n' +
-          'Quando a corda soltar, sigam pela esquerda: Seuss Landing, Lost Continent e ' +
-          'Hogsmeade, uns 12 minutos a pé. Pela direita, pela Marvel, é mais longe.\n\n' +
-          'Quem está hospedado na Universal entra uma hora antes, e o Hagrid’s costuma estar ' +
-          'nessa lista. Mesmo assim, a abertura é a hora mais barata dele para vocês.\n\n' +
-          'PONTO DE ENCONTRO DE HOJE: o mesmo do dia 14, o farol do Port of Entry, na beira da ' +
-          'lagoa. É também a foto da manhã, no caminho da corda. Se vocês se perderem, vão ' +
-          'para lá e ESPEREM.',
-        localId: 'islands-of-adventure', acesso: [], duracaoMin: 45, pesquisa: '2026-09-12' },
-
-      { id: 'b-2311-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Hagrid’s Magical Creatures Motorbike Adventure',
-        descricao: 'Rope drop, sem exceção. Na abertura, 30 a 65 min; depois, mais de 2h',
-        contexto:
-          'Montanha-russa de lançamento em motos com sidecar, com sete lançamentos, uma queda ' +
-          'vertical e um trecho de ré. Sem inversões. É considerada a melhor montanha-russa de ' +
-          'Orlando.\n\n' +
-          'POR QUE AGORA: nos dados de 2026, 30 a 65 minutos na abertura, 120 ao meio-dia, 154 ' +
-          'às 13h e acima de 100 até fechar. E ela saiu do Express em 1º de julho: não existe ' +
-          'atalho pago.\n\n' +
-          'SINGLE RIDER: as fontes divergem sobre a fila de single rider daqui continuar ' +
-          'existindo. Não contem com ela; se aparecer a placa, é bônus.',
-        areaParque: 'Hogsmeade', acesso: ['rope-drop', 'standby'],
-        locker: 'obrigatorio',
-        lockerNota: 'Pochete de 3 pontos na cintura costuma ser liberada, a critério do funcionário.',
-        duracaoMin: 90, pesquisa: '2026-09-11',
-        curiosidades: [
-          { texto: 'Abriu em 13/06/2019, no lugar do Dragon Challenge, e custou cerca de US$ ' +
-                   '300 milhões. Os sete lançamentos eram recorde mundial na inauguração, e na ' +
-                   'queda livre o trilho se solta e desce 5 metros junto com o trem.',
-            fonte: 'Wikipedia — Hagrid’s Magical Creatures Motorbike Adventure', pesquisa: '2026-09-15' },
-          { texto: 'Foi a última vez que o Robbie Coltrane interpretou o Hagrid. Por causa da ' +
-                   'saúde, ele gravou só o rosto e a cabeça, e morreu em 2022.',
-            fonte: 'Wikipedia — Hagrid’s Magical Creatures Motorbike Adventure', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-2311-1030', hora: '10:30', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Harry Potter and the Forbidden Journey',
-        descricao: 'Dentro do castelo de Hogwarts, colado no Hagrid’s',
-        contexto:
-          'Braço robótico que carrega vocês por cenários físicos e telas, com voo sobre ' +
-          'Hogwarts. Balança bastante e causa enjoo em parte das pessoas. A fila atravessa o ' +
-          'castelo por dentro — retratos falantes, sala do Dumbledore — e vale a caminhada.\n\n' +
-          'Fila média de 32 minutos. A próxima reforma dele é só em fevereiro de 2027.',
-        areaParque: 'Hogsmeade', acesso: ['standby'],
-        acessoAlt: 'single-rider', locker: 'obrigatorio',
-        acessoAltNota: 'Na primeira visita, não: single rider pula o castelo, e a fila é metade da atração.',
-        duracaoMin: 55, pesquisa: '2026-09-11',
-        curiosidades: [
-          { texto: 'Abriu com Hogsmeade, em 2010. Daniel Radcliffe, Rupert Grint, Emma Watson ' +
-                   'e Michael Gambon gravaram cenas para a atração, e o braço robótico é da ' +
-                   'KUKA — o mesmo tipo usado depois no Monsters Unchained, do Epic.',
-            fonte: 'Wikipedia — Harry Potter and the Forbidden Journey; Wikipedia — Monsters Unchained', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-2311-1140', hora: '11:40', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Almoço — Confisco Grille',
-        descricao: 'Mesa com garçom na entrada do parque. Pratos de US$ 21 a 35',
-        contexto:
-          'O restaurante com mesa da Port of Entry: cozinha internacional, de pad thai e ' +
-          'salmão com missô a churrasco de Angus e massas. Pratos de US$ 21 a 35.\n\n' +
-          'POR QUE AQUI: fica exatamente no caminho de Hogsmeade para a Marvel, e é mesa, não ' +
-          'balcão. No Three Broomsticks vocês já jantam no dia 14.\n\n' +
-          'São 12 minutos a pé do Forbidden Journey, passando pela Lost Continent e pela Seuss ' +
-          'Landing. É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
-        restauranteId: 'r-confisco', areaParque: 'Port of Entry', acesso: [], duracaoMin: 60,
-        pesquisa: '2026-09-11' },
-
-      { id: 'b-2311-1245', hora: '12:45', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'The Incredible Hulk Coaster',
-        descricao: 'Lançamento de 0 a 64 km/h em 2 segundos, sete inversões',
-        contexto:
-          'Lançamento dentro de um túnel, sete inversões e muito barulho. Clássica de 1999, ' +
-          'reconstruída em 2016.\n\n' +
-          'DETECTOR DE METAL: nada nos bolsos, nem celular. Fila média de 32 minutos.',
-        areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
-        acessoAlt: 'single-rider', locker: 'detector', duracaoMin: 45, pesquisa: '2026-09-11',
-        curiosidades: [
-          { texto: 'Abriu com o parque, em 1999, e foi reconstruída em 2016, com trilho e ' +
-                   'trens novos e som a bordo. Chega a 108 km/h, com sete inversões.',
-            fonte: 'Wikipedia — The Incredible Hulk Coaster', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-2311-1335', hora: '13:35', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'The Amazing Adventures of Spider-Man',
-        descricao: 'Clássico. Ainda é referência técnica',
-        contexto:
-          'Veículo em movimento que combina cenário físico, telas 3D e uma simulação de queda ' +
-          'livre de 120 metros que parece real. É de 1999 e continua sendo estudada como ' +
-          'referência de dark ride.\n\n' +
-          'Fila média de 29 minutos.',
-        areaParque: 'Marvel Super Hero Island', acesso: ['standby'],
-        acessoAlt: 'single-rider',
-        acessoAltNota: 'Entrada do single rider pela esquerda, no corredor que liga a saída à loja.',
-        duracaoMin: 35, pesquisa: '2026-09-11',
-        curiosidades: [
-          { texto: 'Ganhou o Golden Ticket de melhor dark ride por 12 anos seguidos, de 1999 a ' +
-                   '2010. O Stan Lee aparece no clímax e é a voz dos avisos.',
-            fonte: 'Wikipedia — The Amazing Adventures of Spider-Man', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-2311-1435', hora: '14:15', ancora: 'referencia', tipo: 'pausa',
-        titulo: 'Parada — água, banheiro e sentar',
-        descricao: 'Dez minutos. Banheiro ao lado do Captain America Diner',
-        contexto:
-          'Do almoço até o Mythos são sete horas, e só o Hogwarts Express senta. Esta é a parada do meio: água, banheiro e dez minutos sentados antes do Kong.',
-        areaParque: 'Marvel Super Hero Island', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
-
-      { id: 'b-2311-1455', hora: '14:35', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Skull Island: Reign of Kong',
-        descricao: 'Caminhão expedicionário, telas 3D e o Kong animatrônico',
-        contexto:
-          'Caminhão expedicionário com telas 3D e um animatrônico enorme do Kong no fim. Tem ' +
-          'atores na fila. Escuro e barulhento, mas sem emoção física forte.\n\n' +
-          'Fila média de 35 minutos.',
-        areaParque: 'Skull Island', acesso: ['standby'],
-        acessoAlt: 'single-rider', duracaoMin: 40, pesquisa: '2026-09-11',
-        curiosidades: [
-          { texto: 'Abriu em 13/07/2016, com consultoria do Peter Jackson, o diretor do King ' +
-                   'Kong de 2005. O templo da entrada tem 24 metros.',
-            fonte: 'Wikipedia — Skull Island: Reign of Kong', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-2311-1540', hora: '15:20', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Jurassic Park River Adventure',
-        descricao: 'Molha. Reaberto depois de dez meses de reforma',
-        contexto:
-          'Passeio de barco que vira ataque de dinossauros e termina numa queda de 26 metros ' +
-          'no escuro. Molha de verdade, principalmente nas primeiras fileiras.\n\n' +
-          'REFORMA: ficou fechado de janeiro a 19 ou 20/11 de 2026, com dinossauros e cenário ' +
-          'sendo refeitos. Se ainda estiver fechado, vale o plano B.\n\n' +
-          'Está às 15h20 porque é a hora mais quente. Capa de chuva e o celular no Ziploc — ou ' +
-          'no armário de aluguel da entrada, que aqui é opcional, pelo mapa oficial. Fila média ' +
-          'de 22 minutos.',
-        areaParque: 'Jurassic Park', acesso: ['standby'],
-        acessoAlt: 'single-rider', molha: true, duracaoMin: 40, pesquisa: '2026-09-11',
-        curiosidades: [
-          { texto: 'Abriu com o parque, em 1999. A queda final tem 26 metros, a 55 graus.',
-            fonte: 'Wikipedia — Jurassic Park: The Ride', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-2311-1625', hora: '16:05', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Jurassic World VelociCoaster',
-        descricao: 'A mais intensa do parque. Fila normal: uma hora e meia de bloco',
-        contexto:
-          'Dois lançamentos, 47 metros de altura, 110 km/h, quatro inversões e um trecho ' +
-          'rasante sobre a água. É consenso como uma das melhores montanhas-russas do mundo.\n\n' +
-          'SEM SINGLE RIDER: a Universal fechou a fila de single rider daqui e passou a ' +
-          'embarcar os grupos em duas filas, de número par e ímpar de pessoas, para não sobrar ' +
-          'lugar vazio. Vocês vão pela fila normal, juntos.\n\n' +
-          'POR QUE ÀS 16H05: ela não tem hora barata. Nos dados de 2026, 85 minutos às 10h, 102 ' +
-          'às 11h, 76 às 14h, 83 às 16h e 72 às 18h. Entre a melhor e a pior hora da tarde são ' +
-          'dez minutos, e as horas da noite já são do Hogwarts Express e do Mythos. O bloco tem ' +
-          'uma hora e meia: fila, locker e detector.\n\n' +
-          'DETECTOR DE METAL: absolutamente nada nos bolsos.',
-        areaParque: 'Jurassic Park', acesso: ['standby'],
-        locker: 'detector', duracaoMin: 90, pesquisa: '2026-09-15',
-        curiosidades: [
-          { texto: 'Abriu em 10/06/2021, no terreno do antigo Triceratops Encounter, e ganhou ' +
-                   'o Golden Ticket de melhor montanha-russa nova. O segundo lançamento vai de ' +
-                   '64 a 113 km/h em 2,4 segundos.',
-            fonte: 'Wikipedia — Jurassic World VelociCoaster', pesquisa: '2026-09-15' },
-          { texto: 'O Chris Pratt e a Bryce Dallas Howard gravaram os vídeos da fila, e o giro ' +
-                   'de cabeça para baixo sobre a lagoa se chama Mosasaurus Roll.',
-            fonte: 'Wikipedia — Jurassic World VelociCoaster', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-2311-1720', hora: '17:40', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Hogwarts Express — ida e volta',
-        descricao: 'Quatro minutos em cada sentido, com filmes diferentes. Precisa park-to-park',
-        contexto:
-          'Trem de verdade entre os dois parques, com as janelas virando tela e sombras no ' +
-          'corredor da cabine. A ida e a volta mostram filmes diferentes — por isso os dois ' +
-          'sentidos.\n\n' +
-          'Na chegada a King’s Cross, no Universal Studios, sigam direto para a entrada da ' +
-          'estação e peguem o trem de volta. O Beco Diagonal vocês já fizeram inteiro no dia 17.\n\n' +
-          'Só funciona com ingresso park-to-park, que está na conferência dos ingressos. Fila ' +
-          'média de 22 minutos na estação de Hogsmeade.',
-        areaParque: 'Hogsmeade', acesso: ['standby'], duracaoMin: 70, pesquisa: '2026-09-11',
-        curiosidades: [
-          { texto: 'Na estação de King’s Cross, do lado do Universal Studios, dá para ' +
-                   '“atravessar” a parede entre as plataformas 9 e 10, como no primeiro filme.',
-            fonte: 'Wikipedia — The Wizarding World of Harry Potter (Universal Orlando Resort)', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-2311-1835', hora: '18:50', ancora: 'fixo', tipo: 'show',
-        titulo: 'Hogsmeade à noite · projeção no castelo',
-        descricao: 'The Magic of Christmas at Hogwarts Castle. Repete a cada 20 min',
-        contexto:
-          'Projeções e efeitos no castelo de Hogwarts com cenas de Natal dos filmes, depois ' +
-          'que escurece. Repete a cada vinte minutos até o parque fechar — não precisa pegar ' +
-          'na hora exata.\n\n' +
-          'É a segunda vez da projeção: a primeira foi no dia 14, na noite de estreia da ' +
-          'temporada, num sábado. Hoje o bloco é de quinze minutos, colado no Hogwarts ' +
-          'Express, que termina aqui mesmo: vejam a sessão que estiver rodando e sigam para o ' +
-          'Mythos, que fica ao lado, na Lost Continent.',
-        areaParque: 'Hogsmeade', acesso: [], duracaoMin: 15, pesquisa: '2026-09-15' },
-
-      { id: 'b-2311-1915', hora: '19:15', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — Mythos',
-        descricao: 'O melhor restaurante de parque temático, provavelmente no último Natal dele',
-        contexto:
-          'Mesa com garçom dentro de uma caverna cenográfica, com vista para a lagoa. Ganhou ' +
-          'dez vezes o prêmio de melhor restaurante de parque temático do Theme Park Insider. ' +
-          'Pratos de US$ 26 a 42.\n\n' +
-          'PROVAVELMENTE É O ÚLTIMO NATAL DELE: a Lost Continent está sendo demolida em fases, ' +
-          'e a Universal diz que o Mythos fecha em 2027, ainda sem data.\n\n' +
-          'RESERVADO: 19h15, duas pessoas, confirmação 639247495205005056. Cheguem às 19h10 — ' +
-          'a mesa é segurada por 15 minutos depois do horário. É mesa com garçom: 18 a 20% de ' +
-          'gorjeta sobre o valor sem imposto.',
-        restauranteId: 'r-mythos', areaParque: 'Lost Continent', acesso: ['reserva'],
-        duracaoMin: 75, pesquisa: '2026-09-11',
-        curiosidades: [
-          { texto: 'O Mythos venceu o prêmio do Theme Park Insider de 2003 a 2008 e de novo de ' +
-                   '2019 a 2022, e com a décima vitória foi o primeiro a entrar no Hall da ' +
-                   'Fama do prêmio.',
-            fonte: 'Theme Park Insider', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-2311-2030', hora: '20:30', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Saída',
-        descricao: 'Uns 20 min a pé até o carro. Hotel por volta das 21h30',
-        contexto:
-          'A volta até o estacionamento é o mesmo caminho da manhã, pelo CityWalk.\n\n' +
-          'AMANHÃ É BUSCH GARDENS, EM TAMPA: estrada às 7h30, alarme às 6h30. Deixem a mochila ' +
-          'pronta antes de dormir.',
-        acesso: [], duracaoMin: 60 },
-    ],
-    naoPerca: [
-      { nome: 'A projeção no castelo de Hogwarts', quando: 'hoje', custo: 'incluso',
-        motivo: 'The Magic of Christmas at Hogwarts Castle, depois que escurece, repetindo a ' +
-                'cada 20 minutos.',
-        pesquisa: '2026-09-11' },
-      { nome: 'Raptor Encounter', quando: 'hoje', custo: 'incluso',
-        motivo: 'Um velociraptor animatrônico com tratador, no Jurassic Park, em sessões curtas ' +
-                'ao longo do dia. Cabe entre o Kong e o River Adventure, sem bloco — está no ' +
-                'mapa oficial.',
-        pesquisa: '2026-09-12' },
-      { nome: 'Frog Choir e Triwizard Spirit Rally', quando: 'hoje', custo: 'incluso',
-        motivo: 'Shows de rua na Hogsmeade, de uns dez minutos, várias vezes ao dia. Se um ' +
-                'estiver começando quando vocês passarem, parem.',
-        pesquisa: '2026-09-12' },
-      { nome: 'Hogwarts Express nos dois sentidos', quando: 'hoje',
-        custo: 'incluso, precisa park-to-park',
-        motivo: 'A ida e a volta têm filmes diferentes.',
-        pesquisa: '2026-09-11' },
-      { nome: 'Mythos', quando: 'hoje', custo: 'US$ 26 a 42 o prato',
-        motivo: 'Dez vezes eleito o melhor restaurante de parque temático. A Universal diz que ' +
-                'ele fecha em 2027.',
-        pesquisa: '2026-09-11' },
-    ],
-    prepararAmanha: {
-      paraODia: '2026-11-24',
-      titulo: 'Busch Gardens Tampa · saída 7h30',
-      aviso: 'Amanhã é o dia mais pesado fisicamente da viagem, com 1h25 de estrada para cada ' +
-             'lado. Vocês chegam do Islands por volta das 21h30: durmam cedo.',
-      itens: [
-        { texto: 'Alarme para 6h30 nos dois celulares', critico: true,
-          motivo: 'Café do hotel às 7h e estrada às 7h30, para chegar ao portão 45 minutos ' +
-                  'antes da abertura.' },
-        { texto: 'Conferir o horário de abertura do Busch Gardens', critico: true,
-          motivo: 'Amanhã assume abertura às 10h, ainda sem confirmação. Se for outro horário, ' +
-                  'a saída muda junto.' },
-        { texto: 'Ingresso do Busch Gardens e o plano de refeição no celular', critico: true,
-          motivo: 'É o mesmo ingresso do SeaWorld, com o plano de refeição incluso.' },
-        { texto: 'Combustível para 218 km: abaixo da metade do tanque, abasteçam na volta',
-          critico: false,
-          motivo: 'Amanhã são 109 km até Tampa e 109 de volta, com a estrada às 7h30 e sem ' +
-                  'tempo para posto. No posto, paguem dentro da loja: a bomba pede o ZIP code ' +
-                  'do cartão.' },
-      ],
-    },
-    ficha: {
-      multiPass: null, singlePass: null,
-      expressPass: {
-        usar: false,
-        motivo:
-          'O Hagrid’s saiu do Express em 1º de julho de 2026, e a fila que mais pesa no dia é ' +
-          'justamente a dele. A segunda, a VelociCoaster, cabe na fila normal à tarde, e nas ' +
-          'outras o single rider resolve sem pagar nada.',
-      },
-      custoEstimadoCasal: { min: 32, max: 35, moeda: 'USD' },
-      extras: [
-        { nome: 'Estacionamento da Universal',
-          custo: { min: 32, max: 35, moeda: 'USD' },
-          texto: 'US$ 32 pago antes pelo site, US$ 35 na hora.' },
-      ],
-    },
-    renuncias: {
-      gerais: [
-        { nome: 'Grinchmas Who-liday Spectacular', motivo: 'Visto no dia 14, que existe para ele.' },
-        { nome: 'Flight of the Hippogriff',
-          motivo: 'Montanha-russa de família de um minuto, com 34 minutos de fila média.' },
-        { nome: 'Beco Diagonal', motivo: 'Feito inteiro no dia 17, inclusive à noite.' },
-        { nome: 'Pteranodon Flyers', motivo: 'Só com criança.' },
-        { nome: 'Seuss Landing', motivo: 'Brinquedos infantis. Vocês atravessam a pé.' },
-        { nome: 'Popeye e Dudley Do-Right',
-          motivo: 'Molham muito, e o Jurassic Park River Adventure já cumpre esse papel.' },
-        { nome: 'Doctor Doom’s Fearfall',
-          motivo: 'Torre de menos de um minuto. O tempo dele foi para a fila da VelociCoaster, ' +
-                  'que não tem single rider. Volta no plano B.' },
-      ],
-      fechado: [],
-    },
-  },
-
-  /* ===== 24/11 · TERÇA · BUSCH GARDENS TAMPA ============================ */
-  {
-    id: 'd-2026-11-24',
-    data: '2026-11-24',
-    diaSemana: 'terça',
     emoji: '🎢',
     titulo: 'Busch Gardens Tampa',
     subtitulo: 'O melhor conjunto de montanhas-russas da Flórida',
@@ -7121,7 +6856,8 @@ window.ROTEIRO = {
       'OBJETO SOLTO É PROIBIDO EM NOVE ATRAÇÕES, entre elas todas as montanhas-russas do dia, ' +
       'e a Iron Gwazi tem detector de metal. O armário custa US$ 4 por duas horas, ou US$ 12 ' +
       'o dia inteiro trocando de atração. Levem o mínimo: o resto fica no carro.',
-      'Vocês chegam ao hotel por volta das 22h15, e amanhã o carro volta à Avis às 15h.',
+      'Vocês chegam ao hotel por volta das 22h15, e amanhã é o único dia sem hora marcada ' +
+      'da segunda semana.',
     ],
     notas: [
       { tipo: 'atencao', texto:
@@ -7159,7 +6895,7 @@ window.ROTEIRO = {
     ],
     planos: [
       { letra: 'A', titulo: 'O dia como está escrito',
-        gatilho: 'O parque abre às 10h, fecha depois das 20h30 e 24/11 tem Christmas Town.',
+        gatilho: 'O parque abre às 10h, fecha depois das 20h30 e 23/11 tem Christmas Town.',
         passos: [
           'Café do hotel às 7h, estrada às 7h30 e portão às 9h15.',
           'Iron Gwazi, Cheetah Hunt e Montu de manhã; Falcon’s Fury e SheiKra antes do almoço.',
@@ -7194,7 +6930,7 @@ window.ROTEIRO = {
         ] },
     ],
     blocos: [
-      { id: 'b-2411-0700', hora: '07:00', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-2311-0700', hora: '07:00', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Café da manhã do hotel',
         descricao: 'Rápido: a estrada é às 7h30',
         contexto:
@@ -7203,7 +6939,7 @@ window.ROTEIRO = {
           'seguram até o parque.',
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 25 },
 
-      { id: 'b-2411-0730', hora: '07:30', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-2311-0730', hora: '07:30', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Estrada para Tampa',
         descricao: '1h25, 109 km pela I-4. Estacionamento US$ 32 + imposto',
         contexto:
@@ -7214,7 +6950,7 @@ window.ROTEIRO = {
           'Custa US$ 32 mais imposto.',
         localId: 'busch-gardens', acesso: [], duracaoMin: 105, pesquisa: '2026-09-11' },
 
-      { id: 'b-2411-0915', hora: '09:15', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-2311-0915', hora: '09:15', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Portão',
         descricao: '45 min antes. A Iron Gwazi fica logo depois da entrada',
         contexto:
@@ -7226,7 +6962,7 @@ window.ROTEIRO = {
           'custa US$ 4 pelas primeiras duas horas.',
         localId: 'busch-gardens', acesso: [], duracaoMin: 45, pesquisa: '2026-09-11' },
 
-      { id: 'b-2411-1000', hora: '10:00', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1000', hora: '10:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Iron Gwazi',
         descricao: 'Rope drop. Híbrida de 63 m, queda de 91°, 122 km/h',
         contexto:
@@ -7252,7 +6988,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Iron Gwazi', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2411-1045', hora: '10:45', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1045', hora: '10:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Cheetah Hunt',
         descricao: 'Três lançamentos e 1,3 km de percurso. A maior fila média do parque',
         contexto:
@@ -7268,7 +7004,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Cheetah Hunt', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2411-1135', hora: '11:35', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1135', hora: '11:35', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Montu',
         descricao: 'Invertida, pés soltos, sete inversões. Clássica de 1996',
         contexto:
@@ -7285,7 +7021,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Montu (roller coaster)', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2411-1220', hora: '12:20', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1220', hora: '12:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Falcon’s Fury',
         descricao: 'Torre de 102 m. No topo, o assento inclina e vocês caem olhando o chão',
         contexto:
@@ -7302,14 +7038,14 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Falcon’s Fury', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2411-1240', hora: '12:40', ancora: 'referencia', tipo: 'pausa',
+      { id: 'b-2311-1240', hora: '12:40', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
         descricao: 'Dez minutos. Banheiro ao lado do Dragon Fire Grill',
         contexto:
           'Cinco montanhas-russas seguidas desde as 10h, cada uma com armário. Dez minutos sentados em Pantopia antes do SheiKra e do almoço.',
         areaParque: 'Pantopia', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
 
-      { id: 'b-2411-1255', hora: '12:55', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1255', hora: '12:55', ancora: 'referencia', tipo: 'atracao',
         titulo: 'SheiKra',
         descricao: 'Para quatro segundos na beirada e cai a 90°',
         contexto:
@@ -7326,7 +7062,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — SheiKra', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2411-1325', hora: '13:25', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-2311-1325', hora: '13:25', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Zambia Smokehouse',
         descricao: 'Churrasco, ao lado do SheiKra. Plano de refeição',
         contexto:
@@ -7337,7 +7073,7 @@ window.ROTEIRO = {
         restauranteId: 'r-zambia', areaParque: 'Stanleyville', acesso: [], duracaoMin: 55,
         pesquisa: '2026-09-11' },
 
-      { id: 'b-2411-1420', hora: '14:20', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1420', hora: '14:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Tigris',
         descricao: 'Três lançamentos, para frente e para trás, até 100 km/h',
         contexto:
@@ -7353,7 +7089,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Tigris (roller coaster)', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2411-1455', hora: '14:55', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1455', hora: '14:55', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Serengeti Express',
         descricao: 'O trem dá a volta de 3,5 km pela planície dos animais',
         contexto:
@@ -7368,7 +7104,7 @@ window.ROTEIRO = {
             fonte: 'Busch Gardens; Orlando Informer', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2411-1540', hora: '15:40', ancora: 'referencia', tipo: 'pausa',
+      { id: 'b-2311-1540', hora: '15:40', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Pausa e lanche',
         descricao: 'Segunda refeição do plano, em Stanleyville. Banheiro ao lado da estação do trem',
         contexto:
@@ -7377,7 +7113,7 @@ window.ROTEIRO = {
           'É a última parada antes da noite, que termina com a estrada de volta.',
         areaParque: 'Stanleyville', acesso: [], duracaoMin: 20, pesquisa: '2026-09-11' },
 
-      { id: 'b-2411-1605', hora: '16:05', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-2311-1605', hora: '16:05', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Skyride — de Stanleyville ao Edge of Africa',
         descricao: 'Teleférico por cima do parque. Desce ao lado do Cheetah Hunt',
         contexto:
@@ -7388,7 +7124,7 @@ window.ROTEIRO = {
           'de sempre, e o show das 16h20 fica apertado: cheguem como der.',
         areaParque: 'Edge of Africa', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
 
-      { id: 'b-2411-1620', hora: '16:20', ancora: 'fixo', tipo: 'show',
+      { id: 'b-2311-1620', hora: '16:20', ancora: 'fixo', tipo: 'show',
         titulo: 'Christmas on Ice',
         descricao: 'Show de patinação de 30 min no Moroccan Palace. Cheguem cedo',
         contexto:
@@ -7402,7 +7138,7 @@ window.ROTEIRO = {
         areaParque: 'Morocco', acesso: [], confirmarHorario: true, duracaoMin: 45,
         pesquisa: '2026-09-11' },
 
-      { id: 'b-2411-1720', hora: '17:20', ancora: 'fixo', tipo: 'refeicao',
+      { id: 'b-2311-1720', hora: '17:20', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Dragon Fire Grill & Pub',
         descricao: 'Salão coberto, de balcão. Dentro do plano de refeição',
         contexto:
@@ -7416,7 +7152,7 @@ window.ROTEIRO = {
         restauranteId: 'r-dragonfire', areaParque: 'Pantopia', acesso: [], duracaoMin: 60,
         pesquisa: '2026-09-11' },
 
-      { id: 'b-2411-1825', hora: '18:25', ancora: 'fixo', tipo: 'show',
+      { id: 'b-2311-1825', hora: '18:25', ancora: 'fixo', tipo: 'show',
         titulo: 'Show de luzes no Serengeti e o parque aceso',
         descricao: 'Luzes coreografadas na planície, com "Carol of the Bells"',
         contexto:
@@ -7428,7 +7164,7 @@ window.ROTEIRO = {
         areaParque: 'Pantopia', acesso: [], confirmarHorario: true, duracaoMin: 35,
         pesquisa: '2026-09-11' },
 
-      { id: 'b-2411-1910', hora: '19:10', ancora: 'fixo', tipo: 'atracao',
+      { id: 'b-2311-1910', hora: '19:10', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Cheetah Hunt à noite',
         descricao: 'A segunda volta, no escuro',
         contexto:
@@ -7438,7 +7174,7 @@ window.ROTEIRO = {
         areaParque: 'Edge of Africa', acesso: ['standby'], locker: true, duracaoMin: 40,
         pesquisa: '2026-09-11' },
 
-      { id: 'b-2411-1955', hora: '19:55', ancora: 'fixo', tipo: 'atracao',
+      { id: 'b-2311-1955', hora: '19:55', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Iron Gwazi à noite',
         descricao: 'Opcional. Ao lado da saída',
         contexto:
@@ -7449,7 +7185,7 @@ window.ROTEIRO = {
         duracaoMin: 30,
         pesquisa: '2026-09-11' },
 
-      { id: 'b-2411-2030', hora: '20:30', ancora: 'fixo', tipo: 'deslocamento',
+      { id: 'b-2311-2030', hora: '20:30', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Estrada de volta',
         descricao: '1h25 até o hotel. Chegada por volta das 22h15',
         contexto:
@@ -7473,16 +7209,15 @@ window.ROTEIRO = {
         pesquisa: '2026-09-11' },
     ],
     prepararAmanha: {
-      paraODia: '2026-11-25',
-      titulo: 'Compras, devolução do carro e Disney Springs',
-      aviso: 'O último dia inteiro. O único horário que não pode falhar é a devolução do carro, ' +
-             'às 15h, na mesma Avis do Old Town.',
+      paraODia: '2026-11-24',
+      titulo: 'Old Town · manhã livre',
+      aviso: 'Amanhã não tem alarme, nem parque, nem hora marcada. É o respiro entre a ' +
+             'estrada de Tampa e o último dia inteiro.',
       itens: [
-        { texto: 'Tanque cheio antes das 15h', critico: true,
-          motivo: 'O carro volta à Avis com o tanque cheio. A tolerância na devolução é de 29 ' +
-                  'minutos; passou disso, a Avis cobra fração de diária.' },
-        { texto: 'Malas amanhã às 15h15, depois da devolução do carro', critico: false,
-          motivo: 'Com todas as compras do dia dentro. Só o World of Disney, à noite, vai por cima.' },
+        { texto: 'Guardar as compras e esvaziar a mochila do parque', critico: false,
+          motivo: 'Amanhã é dia de Old Town e de carro. A mochila de parque fica.' },
+        { texto: 'Celular e power bank carregando', critico: false,
+          motivo: 'Hoje foram catorze horas de parque com o app aberto o tempo todo.' },
       ],
     },
     ficha: {
@@ -7525,6 +7260,251 @@ window.ROTEIRO = {
     },
   },
 
+  /* ===== 24/11 · TERÇA · OLD TOWN ================================ */
+  {
+    id: 'd-2026-11-24',
+    data: '2026-11-24',
+    diaSemana: 'terça',
+    emoji: '🚗',
+    titulo: 'Old Town',
+    subtitulo: 'Manhã livre · a última noite de Kissimmee',
+    tipo: 'livre',
+    operadora: null,
+    parqueId: null,
+    custoZero: false,
+    fechado: true,
+    revisadoEm: '2026-09-11',
+    referencia: { rotulo: 'Saída do hotel', padrao: '08:30', confirmado: false },
+    resumo:
+      'O respiro depois de cinco dias seguidos fora do hotel. Café sem pressa no IHOP, ' +
+      'manhã livre, almoço porto-riquenho no Old Town e, à noite, a rua de tijolinho e os ' +
+      'food trucks, a três minutos do hotel.',
+    avisos: [
+      'NÃO EXISTE HORÁRIO CRÍTICO HOJE. É o último dia sem hora marcada da viagem, e ele ' +
+      'está aqui para vocês chegarem inteiros no dia 25.',
+      'O DESFILE DE MUSCLE CARS É ÀS SEXTAS, e hoje é terça: o Old Town de hoje é a rua, as ' +
+      'lojas, o Fun Spot e os food trucks.',
+    ],
+    notas: [
+      { tipo: 'info', texto:
+        'A AVIS FICA DENTRO DO OLD TOWN, nos fundos, em frente à montanha-russa — suíte 434. ' +
+        'Abre das 7h às 19h todos os dias, inclusive sábado, e fica a três minutos do hotel.\n\n' +
+        'O ALUGUEL É CONTADO EM PERÍODOS DE 24 HORAS. Retirando às 15h de hoje e devolvendo às ' +
+        '15h do dia 25, são sete diárias certas. A tolerância na devolução é de 29 minutos; ' +
+        'passou disso, a Avis cobra fração de diária, e com 90 minutos de atraso cobra a ' +
+        'diária inteira.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'atencao', texto:
+        'PEDÁGIO: RECUSEM O E-TOLL UNLIMITED. O pacote cobra de US$ 11 a 26 por dia de ' +
+        'aluguel, em todos os dias, com ou sem pedágio. Sem ele, a Avis cobra cada pedágio ' +
+        'pela placa, mais uma taxa de US$ 6,95 só nos dias em que houve pedágio.\n\n' +
+        'A estrada pedagiada que o roteiro provavelmente usa é a SR-429, para Winter Garden, ' +
+        'amanhã — poucos dólares. SeaWorld, Islands e Tampa ficam pela I-4, que é grátis ' +
+        'fora das faixas expressas.',
+        pesquisa: '2026-09-11' },
+
+      { tipo: 'info', texto:
+        'OS DESFILES DE CARRO DO OLD TOWN SÃO DE SEXTA E DE SÁBADO: muscle cars de 1964 em ' +
+        'diante na sexta e clássicos anteriores a 1985 no sábado, os dois às 20h30 e de ' +
+        'graça. Hoje é terça, então a Trophy Row está vazia e a rua é só das lojas, dos ' +
+        'bares e do Fun Spot.',
+        pesquisa: '2026-09-16' },
+
+      { tipo: 'info', texto:
+        'A MANHÃ LIVRE É A REDE DE SEGURANÇA DA UNIVERSAL. Se ficou faltando alguma coisa no ' +
+        'Islands ou no Epic, esta manhã é o lugar mais barato para voltar: não tira nada do ' +
+        'roteiro e não gasta dia de ingresso, porque o de vocês é de 14 dias com entradas ' +
+        'ilimitadas nos três parques. O que a pendência dos ingressos confirma é o produto e ' +
+        'a data de início da validade.',
+        pesquisa: '2026-09-11' },
+    ],
+    planos: [
+      { letra: 'A', titulo: 'O dia como está escrito',
+        gatilho: 'Vocês chegaram inteiros da estrada de Tampa e não falta nada da Universal.',
+        passos: [
+          'Dormir sem alarme. Café da manhã no IHOP da 5184 W Irlo Bronson.',
+          'Manhã livre no hotel. Não preencham.',
+          'Almoço no El Cilantrillo, dentro do Old Town, e uma volta por lá de dia.',
+          'Descanso no hotel à tarde.',
+          'Às 17h20, de volta ao Old Town. Jantar no World Food Trucks e noite curta.',
+        ] },
+      { letra: 'B', titulo: 'Ficou faltando alguma coisa da Universal',
+        gatilho: 'Uma atração grande ficou de fora no Islands ou no Epic.',
+        passos: [
+          'O ingresso é de 14 dias com entrada ilimitada: a manhã de hoje cabe um retorno.',
+          'Café da manhã do hotel e saída de carro às 8h15, direto para o parque que ficou ' +
+          'devendo.',
+          'Só o que ficou de fora. Voltem até as 13h30, sem esticar.',
+          'A noite no Old Town não muda.',
+        ] },
+      { letra: 'C', titulo: 'Chuva à noite',
+        gatilho: 'A previsão do meio-dia dá chuva para o fim da tarde ou a noite.',
+        passos: [
+          'Invertam as refeições: World Food Trucks no almoço, El Cilantrillo no jantar. Os ' +
+          'trucks são ao ar livre, e o site não diz se há área coberta; o El Cilantrillo é ' +
+          'salão fechado.',
+          'Se a chuva não passar, a noite termina no jantar e vocês dormem cedo: amanhã é o ' +
+          'último dia inteiro, com as malas às 15h15.',
+        ] },
+    ],
+    blocos: [
+      { id: 'b-2411-0800', hora: '08:30', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Café da manhã — IHOP',
+        descricao: 'Sem alarme. A 750 m do hotel, aberto desde as 6h. Ou o do hotel, incluso',
+        contexto:
+          'O único respiro entre o Epic de ontem e cinco dias seguidos pesados: Winter Garden ' +
+          'com hóquei, SeaWorld, Islands, Busch Gardens e o último dia de compras. Não é para ' +
+          'encher — é o dia de tomar café fora, sem pressa.\n\n' +
+          'O IHOP da 5184 W Irlo Bronson é o mais perto dos três da 192: uns 750 metros a ' +
+          'leste do hotel, três minutos de Uber. Na sexta abre das 6h à meia-noite. Panqueca, ' +
+          'ovos e bacon — o café americano de diner.\n\n' +
+          'SE NÃO DER VONTADE DE SAIR: o café da manhã do hotel é incluso e continental, e vai ' +
+          'até as 10h segundo os sites de reserva — a Wyndham não publica o horário.\n\n' +
+          'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
+        endereco: '5184 W Irlo Bronson Memorial Hwy', acesso: [], duracaoMin: 75,
+        pesquisa: '2026-09-11' },
+
+      { id: 'b-2411-0945', hora: '09:45', ancora: 'referencia', tipo: 'vazio',
+        titulo: 'VAZIO PROPOSITAL',
+        descricao: 'Manhã sem nada marcado, a última da viagem',
+        contexto:
+          'Não preencham. Vocês vêm de cinco dias seguidos fora do hotel, com a estrada de ' +
+          'Tampa ontem, e amanhã é o último dia inteiro: compras de manhã, malas às 15h15 e ' +
+          'Disney Springs à noite.\n\n' +
+          'É TAMBÉM A REDE DE SEGURANÇA DA UNIVERSAL. Se faltou alguma coisa no Islands ou no ' +
+          'Epic, o ingresso de 14 dias tem entrada ilimitada e o carro está com vocês: dá ' +
+          'para voltar numa manhã sem tirar nada do roteiro.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 180 },
+
+      { id: 'b-2411-1230', hora: '12:45', ancora: 'referencia', tipo: 'refeicao',
+        titulo: 'Almoço — El Cilantrillo',
+        descricao: 'Porto-riquenho de mesa, dentro do Old Town. Três minutos de Uber',
+        contexto:
+          'Comida caseira porto-riquenha: mofongo — purê de banana-da-terra com alho — com ' +
+          'churrasco, carne de porco ou frutos do mar por cima; pernil assado devagar; e o ' +
+          'pargo inteiro frito, no estilo boricua.\n\n' +
+          'Pratos da rede perto de US$ 20. Na sexta abre das 11h à meia-noite. Aceita reserva ' +
+          'pelo Yelp ou pelo telefone +1 407-204-9685.\n\n' +
+          'Fica na suíte 130 do Old Town, o mesmo complexo da Avis: daqui, a tarde segue a pé ' +
+          'pela rua de tijolinho.\n\n' +
+          'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
+        endereco: '5770 W Irlo Bronson Memorial Hwy, Suite 130', restauranteId: 'r-cilantrillo',
+        localId: 'old-town', acesso: [], duracaoMin: 75, pesquisa: '2026-09-11' },
+
+      { id: 'b-2411-1401', hora: '14:00', ancora: 'referencia', tipo: 'livre',
+        titulo: 'Old Town de dia · Mine Blower opcional',
+        descricao: 'Uma volta pela rua de tijolinho. A montanha-russa do Fun Spot, se a comida deixar',
+        contexto:
+          'Uma hora sem roteiro depois do almoço, no mesmo complexo. De dia dá para ver as ' +
+          'lojas com calma e sem multidão.\n\n' +
+          'MINE BLOWER, no Fun Spot, ao lado do Old Town: montanha-russa de madeira com ' +
+          'inversão. A entrada no Fun Spot é grátis e cada brinquedo é pago à parte, de US$ 3 ' +
+          'a 40. Logo depois de um mofongo, julguem vocês.',
+        localId: 'old-town', acesso: [], duracaoMin: 60, pesquisa: '2026-09-11' },
+
+      { id: 'b-2411-1400', hora: '15:30', ancora: 'fixo', tipo: 'vazio',
+        titulo: 'VAZIO PROPOSITAL',
+        descricao: 'Descanso no hotel antes da última noite de Kissimmee',
+        contexto:
+          'Não preencham. Vocês vêm de cinco dias seguidos fora do hotel e amanhã é o último ' +
+          'dia inteiro: compras de manhã, malas às 15h15 e Disney Springs à noite, que ' +
+          'termina tarde.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 105 },
+
+      { id: 'b-2411-1630', hora: '17:20', ancora: 'fixo', tipo: 'livre',
+        titulo: 'Old Town Kissimmee',
+        descricao: 'Entrada e estacionamento grátis. A três minutos do hotel',
+        contexto:
+          'Rua de tijolinho com lojas, bares e brinquedos, a três minutos do hotel. Os desfiles ' +
+          'de carro são de sexta e de sábado: numa terça a Trophy Row está vazia e a rua é ' +
+          'das lojas e do Fun Spot.\n\n' +
+          'O pôr do sol é por volta das 17h30: vocês chegam na luz baixa e veem as luzes ' +
+          'acendendo.\n\n' +
+          'DECORAÇÃO DE NATAL: o Old Town monta árvore e luzes a partir de meados de novembro. ' +
+          'A data exata do acendimento não saiu.',
+        endereco: '5770 W Irlo Bronson Memorial Hwy', localId: 'old-town',
+        acesso: [], duracaoMin: 70, pesquisa: '2026-09-11' },
+
+      { id: 'b-2411-1830', hora: '18:30', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Jantar — World Food Trucks',
+        descricao: 'Mais de 100 food trucks, a 300 m do Old Town. Estacionamento grátis',
+        contexto:
+          'Um estacionamento com mais de cem food trucks: mexicano, venezuelano, colombiano, ' +
+          'cubano, porto-riquenho, brasileiro, coreano, japonês, italiano, caribenho. Cada um ' +
+          'escolhe o seu — e é à noite, com tudo aceso, que o lugar faz sentido.\n\n' +
+          'FICA NA PRÓPRIA 192, a uns 300 metros do Old Town. Vão de carro: são poucos ' +
+          'minutos, o estacionamento é grátis, e às 20h10 vocês voltam para pegar lugar na ' +
+          'calçada.\n\n' +
+          'Aberto das 11h às 2h, todos os dias. O site não diz se há área coberta: com chuva ' +
+          'prevista, vale o plano C.\n\n' +
+          'Food truck é balcão: não leva gorjeta.',
+        endereco: '5811 W Irlo Bronson Memorial Hwy', restauranteId: 'r-world-food-trucks',
+        localId: 'world-food-trucks', acesso: [], duracaoMin: 90, pesquisa: '2026-09-11' },
+
+      { id: 'b-2411-2000', hora: '20:00', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voltar',
+        descricao: 'Três minutos de carro. Amanhã a saída é 10h',
+        contexto:
+          'Noite curta de propósito. O dia 25 é o último inteiro: compras de manhã, malas às ' +
+          '15h15 e a última noite no Disney Springs, que termina perto das 22h.',
+        acesso: [], duracaoMin: 15 },
+    ],
+    naoPerca: [
+      { nome: 'Muscle Car Cruise', quando: 'descartado', custo: 'grátis',
+        motivo: 'O desfile do Old Town é de sexta, com os muscle cars, e de sábado, com os ' +
+                'clássicos até 1985. A noite de vocês lá é numa terça, e nenhum dos dois roda.',
+        pesquisa: '2026-09-16' },
+      { nome: 'A decoração de Natal do Old Town', quando: 'hoje',
+        condicao: 'montada a partir de meados de novembro', custo: 'grátis',
+        motivo: 'Árvore e luzes na rua de tijolinho. A data do acendimento ainda não saiu.',
+        pesquisa: '2026-09-11' },
+      { nome: 'Mine Blower, no Fun Spot', quando: 'depois do almoço', custo: 'pago por brinquedo',
+        motivo: 'Montanha-russa de madeira com inversão, ao lado do Old Town. A entrada no Fun ' +
+                'Spot é grátis; cada brinquedo é pago à parte.',
+        pesquisa: '2026-09-11' },
+      { nome: 'Boggy Creek Airboat Adventures', quando: 'descartado', custo: 'US$ 108 a 122 no casal',
+        motivo: 'Passeio de aerobarco de uma hora, a 38 minutos do hotel. Fica de fora: não é ' +
+                'objetivo da viagem, novembro é a pior época para ver bicho de manhã, e ele ' +
+                'obrigaria a pegar o carro cedo, com uma diária a mais. A manhã livre rende mais.',
+        pesquisa: '2026-09-11' },
+    ],
+    prepararAmanha: {
+      paraODia: '2026-11-25',
+      titulo: 'Compras, devolução do carro e Disney Springs',
+      aviso: 'O último dia inteiro. O único horário que não pode falhar é a devolução do carro, ' +
+             'às 15h, na mesma Avis do Old Town.',
+      itens: [
+        { texto: 'Tanque cheio antes das 15h', critico: true,
+          motivo: 'O carro volta à Avis com o tanque cheio. A tolerância na devolução é de 29 ' +
+                  'minutos; passou disso, a Avis cobra fração de diária.' },
+        { texto: 'Malas amanhã às 15h15, depois da devolução do carro', critico: false,
+          motivo: 'Com todas as compras do dia dentro. Só o World of Disney, à noite, vai por cima.' },
+      ],
+    },
+    ficha: {
+      multiPass: null, singlePass: null, expressPass: null,
+      custoEstimadoCasal: { min: 0, max: 40, moeda: 'USD' },
+      extras: [
+        { nome: 'e-Toll Unlimited da Avis — recusar',
+          custo: { min: 0, max: 0, moeda: 'USD' },
+          texto: 'O pacote cobra de US$ 11 a 26 por dia de aluguel, todos os dias, e vai até US$ 55 ' +
+                 'a 130 por semana. Sem ele, cada pedágio sai pela placa, mais US$ 6,95 só nos ' +
+                 'dias em que houve pedágio.' },
+        { nome: 'Mine Blower, no Fun Spot',
+          custo: { min: 0, max: 40, moeda: 'USD' },
+          texto: 'Opcional. Cada brinquedo do Fun Spot custa de US$ 3 a 40; o passe do dia é ' +
+                 'US$ 59,95. A entrada é grátis.' },
+      ],
+    },
+    renuncias: {
+      gerais: [
+        { nome: 'Kissimmee Lakefront Park',
+          motivo: 'Sem carro de manhã, são 16 minutos de Uber em cada sentido para ver um lago.' },
+      ],
+      fechado: [],
+    },
+  },
   /* ===== 25/11 · QUARTA · COMPRAS E DISNEY SPRINGS NO NATAL ============= */
   {
     id: 'd-2026-11-25',
@@ -7683,7 +7663,7 @@ window.ROTEIRO = {
         descricao: 'Tanque cheio. Tolerância de 29 minutos',
         contexto:
           'A TAREFA CRÍTICA DO DIA. A mesma Avis da retirada, na suíte 434, nos fundos do Old ' +
-          'Town, aberta das 7h às 19h. Retirado às 15h do dia 20, o carro fecha cinco diárias ' +
+          'Town, aberta das 7h às 19h. Retirado às 10h do dia 18, o carro fecha sete diárias ' +
           'certas às 15h de hoje; a tolerância é de 29 minutos.\n\n' +
           'Fotografem o carro por fora e o painel com o combustível, e guardem o comprovante do ' +
           'posto.\n\n' +
@@ -8134,10 +8114,10 @@ window.ROTEIRO = {
             'Frutos do mar e carnes, com aquário no meio do salão. Pratos principais de ' +
             'US$ 35 a 49, nos preços de 2025.' },
 
-    { id: 'r-confisco', nome: 'Confisco Grille', data: '2026-11-23', hora: '11:40',
+    { id: 'r-confisco', nome: 'Confisco Grille', data: '2026-11-19', hora: '11:40',
       refeicao: 'almoco', local: 'Islands of Adventure · Port of Entry', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Chegar direto', blocoId: 'b-2311-1140',
+      canal: 'Chegar direto', blocoId: 'b-1911-1140',
       nota: 'Mesa com garçom na entrada do parque, cozinha internacional. Pratos de US$ 21 a 35.' },
 
     { id: 'r-kres', nome: 'Kres Chophouse', data: '2026-11-18', hora: '17:45',
@@ -8150,11 +8130,11 @@ window.ROTEIRO = {
             'Orlando: do prato à catraca do Kia Center são cinco minutos a pé. Avisem na ' +
             'chegada que vocês têm hora.' },
 
-    { id: 'r-mythos', nome: 'Mythos', data: '2026-11-23', hora: '19:15',
+    { id: 'r-mythos', nome: 'Mythos', data: '2026-11-19', hora: '19:15',
       refeicao: 'jantar', local: 'Islands of Adventure · Lost Continent',
       alternativas: ['Three Broomsticks, em Hogsmeade, sem reserva'],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
-      canal: 'App / site da Universal Orlando, ou +1 407-224-3663', blocoId: 'b-2311-1915',
+      canal: 'App / site da Universal Orlando, ou +1 407-224-3663', blocoId: 'b-1911-1915',
       statusPadrao: 'confirmado', confirmacaoPadrao: '639247495205005056',
       nota: 'RESERVADO em 11/09 — confirmação 639247495205005056, duas pessoas, 19h15. ' +
             'Cheguem 5 minutos antes: a mesa é segurada por 15 minutos. Dez vezes eleito o ' +
@@ -8190,38 +8170,38 @@ window.ROTEIRO = {
       nota: 'Churrasco grelhado, frango com sofrito e pernil. Coberto pelo plano de refeição. ' +
             'É onde o Papai Noel recebe visitas no Natal.' },
 
-    { id: 'r-toadstool', nome: 'Toadstool Cafe', data: '2026-11-19', hora: '13:05',
+    { id: 'r-toadstool', nome: 'Toadstool Cafe', data: '2026-11-20', hora: '13:05',
       refeicao: 'almoco', local: 'Epic Universe · Super Nintendo World', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Sem reserva — conferir lista de espera no app da Universal', blocoId: 'b-1911-1305',
+      canal: 'Sem reserva — conferir lista de espera no app da Universal', blocoId: 'b-2011-1305',
       nota: 'Não aceita reserva. As fontes divergem entre lista de espera pelo app e ordem de ' +
             'chegada: confiram no app ao entrar na Super Nintendo World, às 11h. Pico do ' +
             'almoço das 11h30 às 13h30. Faixa $ no mapa oficial: até US$ 15 por pessoa.' },
 
-    { id: 'r-atlantic', nome: 'Atlantic', data: '2026-11-19', hora: '17:00',
+    { id: 'r-atlantic', nome: 'Atlantic', data: '2026-11-20', hora: '17:00',
       refeicao: 'jantar', local: 'Epic Universe · Celestial Park',
       alternativas: ['Mead Hall (Isle of Berk, sem reserva)'],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
-      canal: 'App / site da Universal Orlando', blocoId: 'b-1911-1700',
+      canal: 'App / site da Universal Orlando', blocoId: 'b-2011-1700',
       statusPadrao: 'confirmado', confirmacaoPadrao: '639247233607631616',
       nota: 'RESERVADO em 11/09 — confirmação 639247233607631616, duas pessoas, 17h. Cheguem ' +
             '5 minutos antes: a mesa é segurada só por 15 minutos. Às 17h de propósito — o ' +
             'jantar cedo libera as três últimas horas para o Ministry e o Mine-Cart. Pratos de ' +
             'US$ 35 a 48.' },
 
-    { id: 'r-cilantrillo', nome: 'El Cilantrillo', data: '2026-11-20', hora: '12:45',
+    { id: 'r-cilantrillo', nome: 'El Cilantrillo', data: '2026-11-24', hora: '12:45',
       refeicao: 'almoco', local: 'Old Town Kissimmee',
       alternativas: ['World Food Trucks, trocando com o jantar se houver chuva prevista à noite'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Chegar direto — aceita reserva pelo Yelp ou +1 407-204-9685', blocoId: 'b-2011-1230',
+      canal: 'Chegar direto — aceita reserva pelo Yelp ou +1 407-204-9685', blocoId: 'b-2411-1230',
       nota: 'Porto-riquenho de mesa, dentro do Old Town: mofongo, pernil, pargo frito. Pratos ' +
             'da rede perto de US$ 20. Na sexta, das 11h à meia-noite.' },
 
-    { id: 'r-world-food-trucks', nome: 'World Food Trucks', data: '2026-11-20', hora: '18:30',
+    { id: 'r-world-food-trucks', nome: 'World Food Trucks', data: '2026-11-24', hora: '18:30',
       refeicao: 'jantar', local: 'W Irlo Bronson, a 300 m do Old Town',
       alternativas: ['El Cilantrillo, trocando com o almoço se houver chuva prevista à noite'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Chegar direto', blocoId: 'b-2011-1830',
+      canal: 'Chegar direto', blocoId: 'b-2411-1830',
       nota: 'Mais de 100 food trucks, das 11h às 2h todos os dias. Estacionamento grátis. ' +
             'Balcão: não leva gorjeta.' },
 
@@ -8251,16 +8231,16 @@ window.ROTEIRO = {
             'saindo da arena às 21h30, vocês chegam por volta das 22h05 e têm quase uma hora. ' +
             'Se o jogo esticar, o Miller’s Ale House fica aberto até as 2h.' },
 
-    { id: 'r-zambia', nome: 'Zambia Smokehouse', data: '2026-11-24', hora: '13:25',
+    { id: 'r-zambia', nome: 'Zambia Smokehouse', data: '2026-11-23', hora: '13:25',
       refeicao: 'almoco', local: 'Busch Gardens Tampa · Stanleyville', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Plano de refeição (All-Day Dining Deal)', blocoId: 'b-2411-1325',
+      canal: 'Plano de refeição (All-Day Dining Deal)', blocoId: 'b-2311-1325',
       nota: 'Churrasco: costela, brisket e frango defumado. Coberto pelo plano de refeição.' },
 
-    { id: 'r-dragonfire', nome: 'Dragon Fire Grill & Pub', data: '2026-11-24', hora: '17:20',
+    { id: 'r-dragonfire', nome: 'Dragon Fire Grill & Pub', data: '2026-11-23', hora: '17:20',
       refeicao: 'jantar', local: 'Busch Gardens Tampa · Pantopia', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Plano de refeição (All-Day Dining Deal)', blocoId: 'b-2411-1720',
+      canal: 'Plano de refeição (All-Day Dining Deal)', blocoId: 'b-2311-1720',
       nota: 'Salão em estilo market, de balcão: frango, hambúrguer e cozinha asiática. O pub ' +
             'tem cerveja artesanal e drinques, pagos à parte. Coberto pelo plano de refeição.' },
   ],
@@ -8346,7 +8326,7 @@ window.ROTEIRO = {
       nota:
         'A Avis fica dentro do Old Town (5770 W Irlo Bronson, suíte 434), a três minutos do ' +
         'hotel, aberta das 7h às 19h todos os dias. Reservem das 15h às 15h: o aluguel é ' +
-        'contado em períodos de 24 horas, e assim são cinco diárias certas.\n\n' +
+        'contado em períodos de 24 horas, e assim são sete diárias certas.\n\n' +
         'Na reserva e no balcão, RECUSEM o e-Toll Unlimited: ele cobra de US$ 11 a 26 por dia ' +
         'de aluguel, com ou sem pedágio.',
       pesquisa: '2026-09-11',
@@ -8387,7 +8367,7 @@ window.ROTEIRO = {
     { id: 'ck-horarios-epic', dataAlvo: '2026-11-01', validaAte: '2026-11-19', dataEstimada: true,
       motivoData: 'Horários de show de Natal só saem perto da temporada, que começa em 14/11',
       hora: null, fuso: null, janelaReserva: false, critico: true,
-      texto: 'Horário do Epic Universe em 19/11 — abertura, FECHAMENTO e shows de Natal',
+      texto: 'Horário do Epic Universe em 20/11 — abertura, FECHAMENTO e shows de Natal',
       nota:
         'A ABERTURA move a manhã inteira: é a referência do dia. O roteiro assume 9h.\n\n' +
         'O FECHAMENTO é o que importa mais. O Battle at the Ministry e o Mine-Cart Madness ' +
@@ -8401,7 +8381,7 @@ window.ROTEIRO = {
     { id: 'ck-epa-epic', dataAlvo: '2026-11-12', validaAte: '2026-11-19', dataEstimada: true,
       motivoData: 'A lista muda por temporada: uma semana antes, e de novo na véspera',
       hora: null, fuso: null, janelaReserva: false, critico: true,
-      texto: 'Conferir quais lands do Epic estão no Early Park Admission em 19/11',
+      texto: 'Conferir quais lands do Epic estão no Early Park Admission em 20/11',
       nota:
         'O MECANISMO JÁ ESTÁ RESOLVIDO: durante o Early Park Admission o Celestial Park fica ' +
         'aberto para todo mundo, e a checagem de hóspede de hotel é feita na porta de cada ' +
@@ -8422,7 +8402,7 @@ window.ROTEIRO = {
       hora: null, fuso: null, janelaReserva: false, critico: false,
       texto: 'Ingressos Universal aparecendo no app — nos DOIS perfis',
       nota:
-        'Cobre os dias 14, 17, 19 e 23. Confiram especificamente que é PARK-TO-PARK e que o ' +
+        'Cobre os dias 14, 17, 19 e 20. Confiram especificamente que é PARK-TO-PARK e que o ' +
         'Epic Universe está incluído: o Hogwarts Express do dia 23 só funciona com ' +
         'park-to-park, e o Epic é ingresso à parte em muitas combinações.\n\n' +
         'O QUE A BIANCA APUROU: 14 dias de validade, com entradas ilimitadas no período. É a ' +
@@ -8727,7 +8707,7 @@ window.ROTEIRO = {
     { id: 'ck-horarios', dataAlvo: '2026-10-10', validaAte: '2026-11-24', dataEstimada: true,
       motivoData: 'Universal, SeaWorld e Busch Gardens publicam novembro sem data fixa: confiram em outubro e de novo na semana da viagem',
       hora: null, fuso: null, janelaReserva: false, critico: true,
-      texto: 'Conferir os horários oficiais de 17, 22, 23 e 24/11 e ajustar a referência de cada dia',
+      texto: 'Conferir os horários oficiais de 17, 19, 20, 22 e 23/11 e ajustar a referência de cada dia',
       nota: 'É só editar o horário de abertura no dia — os blocos ancorados deslocam sozinhos.',
       restauranteIds: [] },
 
@@ -9087,7 +9067,7 @@ window.ROTEIRO = {
       endereco: '5770 W Irlo Bronson Memorial Hwy',
       doHotel: { tempoMin: 3, tempoFonte: 'estimado',
                  uberUSD: { min: 7, max: 10 }, uberFonte: 'estimado' },
-      nota: 'Entrada e estacionamento gratuitos. A Avis do dia 20 fica aqui dentro, na suíte ' +
+      nota: 'Entrada e estacionamento gratuitos. A Avis do dia 18 fica aqui dentro, na suíte ' +
             '434, das 7h às 19h.' },
 
     { id: 'winter-garden', nome: 'Winter Garden — Downtown Pavilion', tipo: 'livre',
@@ -9437,7 +9417,7 @@ window.ROTEIRO = {
       id: 'dica-lockers',
       categoria: 'geral',
       momento: 'dia-especifico',
-      dias: ['d-2026-11-11', 'd-2026-11-16', 'd-2026-11-17', 'd-2026-11-19', 'd-2026-11-22',
+      dias: ['d-2026-11-11', 'd-2026-11-16', 'd-2026-11-17', 'd-2026-11-19', 'd-2026-11-20', 'd-2026-11-22',
              'd-2026-11-23', 'd-2026-11-24'],
       titulo: 'Lockers obrigatórios: reserve 10 a 15 min a mais',
       corpo:
@@ -9465,7 +9445,7 @@ window.ROTEIRO = {
       id: 'dica-molha',
       categoria: 'geral',
       momento: 'dia-especifico',
-      dias: ['d-2026-11-16', 'd-2026-11-22', 'd-2026-11-23'],
+      dias: ['d-2026-11-16', 'd-2026-11-19', 'd-2026-11-22'],
       titulo: 'O que molha de verdade',
       corpo:
         'Novembro em Orlando é ameno, e roupa molhada às 17h fica desconfortável rápido quando ' +
@@ -9558,7 +9538,7 @@ window.ROTEIRO = {
         'para o Christmas Tree Stroll — de graça, e literalmente outro lugar. É a última ' +
         'noite da viagem, 25/11.\n\n' +
         'SEAWORLD e BUSCH: Christmas Celebration e Christmas Town rodam em datas selecionadas ' +
-        'a partir de 06/11 e 13/11. Confirmem que 22/11 e 24/11 estão na lista.',
+        'a partir de 06/11 e 13/11. Confirmem que 22/11 e 23/11 estão na lista.',
       pesquisa: '2026-09-08',
     },
     {
@@ -9613,8 +9593,8 @@ window.ROTEIRO = {
       momento: 'antes-de-viajar',
       titulo: 'Os blocos VAZIO PROPOSITAL não são falha de planejamento',
       corpo:
-        'Existem seis blocos assim no roteiro: 12/11 às 14h30, 14/11 às 9h, 14/11 às 14h30, ' +
-        '20/11 às 15h30, 21/11 às 13h45 e 25/11 às 16h15.\n\n' +
+        'Existem sete blocos assim no roteiro: 12/11 às 14h30, 14/11 às 9h, 14/11 às 14h30, ' +
+        '21/11 às 13h45, 24/11 às 9h45, 24/11 às 15h30 e 25/11 às 16h15.\n\n' +
         'Eles estão ali porque a segunda metade da viagem é mais pesada que a primeira: ' +
         '19/11 Epic, 21/11 Winter Garden e hóquei, 22/11 SeaWorld, 23/11 Islands e 24/11 ' +
         'Busch Gardens com 3h de carro. Chegar destruído no dia 19 transforma o melhor ' +
