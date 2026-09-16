@@ -5364,7 +5364,7 @@ window.ROTEIRO = {
           'Pratos de US$ 26 a 42.\n\n' +
           'PROVAVELMENTE É O ÚLTIMO NATAL DELE: a Lost Continent está sendo demolida em fases, ' +
           'e a Universal diz que o Mythos fecha em 2027, ainda sem data.\n\n' +
-          'RESERVADO: 19h15, duas pessoas, confirmação 639247495205005056. Cheguem às 19h10 — ' +
+          'RESERVADO: 19h15, duas pessoas, confirmação 639251823318530048. Cheguem às 19h10 — ' +
           'a mesa é segurada por 15 minutos depois do horário. É mesa com garçom: 18 a 20% de ' +
           'gorjeta sobre o valor sem imposto.',
         restauranteId: 'r-mythos', areaParque: 'Lost Continent', acesso: ['reserva'],
@@ -5855,7 +5855,7 @@ window.ROTEIRO = {
           'POR QUE ÀS 17H: é o jantar cedo que paga o dia. As duas maiores filas do parque só ' +
           'ficam razoáveis no fim — o Ministry nas últimas duas ou três horas, o Mine-Cart na ' +
           'última — e as duas precisam de todo o tempo depois daqui.\n\n' +
-          'RESERVADO: confirmação 639247233607631616, duas pessoas, 17h. A Universal pede ' +
+          'RESERVADO: confirmação 639251824607987840, duas pessoas, 17h. A Universal pede ' +
           'chegada 5 minutos antes e segura a mesa só por 15 minutos — às 17h15 a reserva é ' +
           'liberada. O The Untrainable Dragon termina por volta das 16h50, em Berk, a três ' +
           'minutos daqui: é exatamente a folga pedida.\n\n' +
