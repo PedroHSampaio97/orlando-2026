@@ -1340,6 +1340,7 @@ window.ROTEIRO = {
         ] },
 
       { id: 'b-1111-1500', hora: '15:00', ancora: 'fixo', tipo: 'show',
+        confirmarAPartirDe: '2026-11-11',
         titulo: 'Festival of Fantasy Parade',
         descricao: 'Da Liberty Square. Doze minutos',
         contexto:
@@ -1374,6 +1375,8 @@ window.ROTEIRO = {
         pesquisa: '2026-09-10' },
 
       { id: 'b-1111-1530', hora: '15:30', ancora: 'fixo', tipo: 'atracao',
+        planoBFila: 'Saiam da fila e voltem às 21h25, na última hora — é a outra janela boa do dia. Com o Single Pass comprado em 08/11, este limiar só vale se o passe falhar.',
+        limiarFila: 60,
         titulo: 'TRON Lightcycle / Run',
         descricao: 'A janela do desfile. Standby',
         contexto:
@@ -1523,6 +1526,8 @@ window.ROTEIRO = {
         ] },
 
       { id: 'b-1111-2125', hora: '21:25', ancora: 'fixo', tipo: 'atracao',
+        planoBFila: 'Saiam. Vocês já fizeram o TRON à tarde, e a saída das 22h pelo ferry não espera.',
+        limiarFila: 60,
         titulo: 'TRON de novo, se ainda tiverem pique',
         descricao: 'Opcional. A outra janela boa do dia',
         contexto:
@@ -2407,6 +2412,7 @@ window.ROTEIRO = {
         ] },
 
       { id: 'b-1311-2100', hora: '21:00', ancora: 'fixo', tipo: 'show',
+        confirmarAPartirDe: '2026-11-13',
         titulo: 'Luminous: The Symphony of Us',
         descricao: '~17 min. Fogos, fontes e projeção nas telas dos barcos',
         contexto:
@@ -2765,6 +2771,7 @@ window.ROTEIRO = {
         ] },
 
       { id: 'b-1411-1845', hora: '17:30', ancora: 'referencia', tipo: 'show',
+        confirmarAPartirDe: '2026-11-14',
         titulo: 'Grinchmas Who-liday Spectacular',
         descricao: 'O motivo de vocês estarem aqui hoje',
         contexto:
@@ -2802,6 +2809,7 @@ window.ROTEIRO = {
         areaParque: 'Hogsmeade', acesso: [], duracaoMin: 30 },
 
       { id: 'b-1411-2015', hora: '18:40', ancora: 'fixo', tipo: 'show',
+        confirmarAPartirDe: '2026-11-14',
         titulo: 'The Magic of Christmas at Hogwarts Castle',
         descricao: 'Projeção no castelo, 7 min. Repete a cada 20 minutos',
         contexto:
@@ -2816,6 +2824,8 @@ window.ROTEIRO = {
         confirmarHorario: true, pesquisa: '2026-09-10' },
 
       { id: 'b-1411-1950', hora: '19:15', ancora: 'fixo', tipo: 'atracao',
+        planoBFila: 'Fiquem em Hogsmeade: o que vale a noite é a decoração e a cerveja amanteigada, não uma montanha-russa infantil de um minuto.',
+        limiarFila: 20,
         titulo: 'Flight of the Hippogriff — ou mais Hogsmeade',
         descricao: 'Opcional. Ele não volta em outro dia',
         contexto:
@@ -3294,6 +3304,7 @@ window.ROTEIRO = {
         ] },
 
       { id: 'b-1511-1525s', hora: '15:25', ancora: 'fixo', tipo: 'show',
+        confirmarAPartirDe: '2026-11-15',
         titulo: 'Indiana Jones Epic Stunt Spectacular',
         descricao: 'Show de dublês de 30 min, sentados, no caminho para a Sunset Blvd',
         contexto:
@@ -3383,6 +3394,7 @@ window.ROTEIRO = {
         ] },
 
       { id: 'b-1511-2000', hora: '20:00', ancora: 'fixo', tipo: 'show',
+        confirmarAPartirDe: '2026-11-15',
         titulo: 'Fantasmic!',
         descricao: '~26 min. O fecho do dia',
         contexto:
@@ -3853,6 +3865,7 @@ window.ROTEIRO = {
         ] },
 
       { id: 'b-1611-1315', hora: '11:30', ancora: 'fixo', tipo: 'show',
+        confirmarAPartirDe: '2026-11-16',
         titulo: 'Festival of the Lion King — chegar 11h30, show 11h50',
         descricao: 'Os 20 min de chegar antes estão dentro deste bloco',
         contexto:
@@ -4506,6 +4519,7 @@ window.ROTEIRO = {
         ] },
 
       { id: 'b-1711-1630', hora: '16:30', ancora: 'fixo', tipo: 'show',
+        confirmarAPartirDe: '2026-11-17',
         titulo: 'The Bourne Stuntacular',
         descricao: 'O melhor show de Orlando. Puramente visual',
         contexto:
@@ -4525,6 +4539,7 @@ window.ROTEIRO = {
         ] },
 
       { id: 'b-1711-1730', hora: '17:30', ancora: 'fixo', tipo: 'show',
+        confirmarAPartirDe: '2026-11-17',
         titulo: 'Universal’s Holiday Parade featuring Macy’s',
         descricao: 'HORA A CONFIRMAR — pode ser 17h30 ou 19h30',
         contexto:
@@ -4965,6 +4980,7 @@ window.ROTEIRO = {
         localId: 'kia-center', acesso: [], duracaoMin: 10 },
 
       { id: 'b-1811-1900', hora: '19:00', ancora: 'referencia', tipo: 'show',
+        confirmarAPartirDe: '2026-11-18',
         titulo: 'Orlando Magic × Philadelphia 76ers',
         descricao: 'Temporada regular da NBA. ~2h30 com os intervalos',
         contexto:
@@ -5806,6 +5822,7 @@ window.ROTEIRO = {
         areaParque: 'Isle of Berk', acesso: [], duracaoMin: 20, pesquisa: '2026-09-15' },
 
       { id: 'b-2011-1630s', hora: '16:30', ancora: 'fixo', tipo: 'show',
+        confirmarAPartirDe: '2026-11-20',
         titulo: 'The Untrainable Dragon',
         descricao: 'O maior show do Epic, 20 min. Termina a três minutos do Atlantic',
         contexto:
@@ -5844,6 +5861,7 @@ window.ROTEIRO = {
         duracaoMin: 75, pesquisa: '2026-09-10' },
 
       { id: 'b-2011-1830', hora: '18:30', ancora: 'fixo', tipo: 'atracao',
+        confirmarAPartirDe: '2026-11-20',
         titulo: 'Harry Potter and the Battle at the Ministry',
         descricao: 'Nas últimas horas a fila cai para 45–75 min. De manhã, era a fila do EPA',
         contexto:
@@ -6639,6 +6657,7 @@ window.ROTEIRO = {
         areaParque: 'Waterfront e Sky Tower', acesso: [], duracaoMin: 35, pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1710', hora: '17:10', ancora: 'fixo', tipo: 'show',
+        confirmarAPartirDe: '2026-11-22',
         titulo: 'Orca Encounter',
         descricao: 'O show das orcas. Cheguem 20 min antes; as primeiras fileiras molham',
         contexto:
@@ -6669,6 +6688,7 @@ window.ROTEIRO = {
         pesquisa: '2026-09-11' },
 
       { id: 'b-2211-1910', hora: '19:10', ancora: 'fixo', tipo: 'show',
+        confirmarAPartirDe: '2026-11-22',
         titulo: 'Winter Wonderland on Ice',
         descricao: 'Show de patinação no Bayside Stadium, de frente para a lagoa',
         contexto:
@@ -6700,6 +6720,7 @@ window.ROTEIRO = {
         areaParque: 'Waterfront e Sky Tower', acesso: [], duracaoMin: 20 },
 
       { id: 'b-2211-2100', hora: '21:00', ancora: 'fixo', tipo: 'show',
+        confirmarAPartirDe: '2026-11-22',
         titulo: 'Holiday Reflections',
         descricao: 'Fogos de Natal no fechamento, sobre a lagoa',
         contexto:
@@ -7086,6 +7107,7 @@ window.ROTEIRO = {
         areaParque: 'Edge of Africa', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
 
       { id: 'b-2311-1620', hora: '16:20', ancora: 'fixo', tipo: 'show',
+        confirmarAPartirDe: '2026-11-23',
         titulo: 'Christmas on Ice',
         descricao: 'Show de patinação de 30 min no Moroccan Palace. Cheguem cedo',
         contexto:
@@ -7114,6 +7136,7 @@ window.ROTEIRO = {
         pesquisa: '2026-09-11' },
 
       { id: 'b-2311-1825', hora: '18:25', ancora: 'fixo', tipo: 'show',
+        confirmarAPartirDe: '2026-11-23',
         titulo: 'Show de luzes no Serengeti e o parque aceso',
         descricao: 'Luzes coreografadas na planície, com "Carol of the Bells"',
         contexto:

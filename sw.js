@@ -10,14 +10,21 @@
    Depois de editar qualquer arquivo do app:  node tools/checar.js --selar
    ========================================================================== */
 
-const VERSAO = 'orlando2026-0b20a39c';
+const VERSAO = 'orlando2026-9c35aec2';
 const CACHE = VERSAO;
 
+// As fontes ficam locais e no precache: a regra é zero rede em runtime, e um
+// @font-face fora daqui renderizaria em serifa de sistema no meio do parque.
 const ARQUIVOS = [
   './',
   './index.html',
+  './folha.html',
   './manifest.json',
   './css/app.css',
+  './fonts/cormorant-garamond.woff2',
+  './fonts/cormorant-garamond-italic.woff2',
+  './fonts/lora.woff2',
+  './fonts/lora-italic.woff2',
   './data/roteiro.js',
   './js/estado.js',
   './js/busca.js',

@@ -115,6 +115,19 @@ const PARES_TEXTO = [
   ['--acento-texto', '--superficie'], ['--acento-texto', '--fundo'],
   ['--texto', '--fundo'], ['--texto', '--superficie'],
   ['--texto-fraco', '--fundo'], ['--texto-fraco', '--superficie'], ['--texto-fraco', '--superficie-2'],
+  // Classical: a cor da operadora deixou de ser bloco chapado e virou TINTA —
+  // numeral, kicker, filete — então cada uma precisa ler sobre o pergaminho.
+  ['--op-disney', '--fundo'], ['--op-universal', '--fundo'], ['--op-seaworld', '--fundo'],
+  ['--op-busch', '--fundo'], ['--op-livre', '--fundo'], ['--op-logistica', '--fundo'],
+  ['--op-disney', '--superficie'], ['--op-universal', '--superficie'], ['--op-seaworld', '--superficie'],
+  ['--op-busch', '--superficie'], ['--op-livre', '--superficie'], ['--op-logistica', '--superficie'],
+  // estados como traço e texto, não como preenchimento
+  ['--ok', '--fundo'], ['--perigo', '--fundo'], ['--alerta', '--fundo'], ['--ouro', '--fundo'],
+  ['--acento-texto', '--superficie-2'], ['--marca', '--fundo'],
+  // a etiqueta do agora: papel sobre ouro escuro
+  ['--fundo', '--acento-texto'],
+  // tinta de estado ativo (selo/pill com fundo levemente tingido)
+  ['--texto', '--marca-fundo'], ['--texto-fraco', '--marca-fundo'], ['--acento-texto', '--marca-fundo'],
 ];
 [['claro', temaClaro], ['escuro', temaEscuro]].forEach(function (par) {
   const t = par[1];
@@ -145,6 +158,9 @@ const CAMPOS_BLOCO = [
   'acessoAlt', 'condicao', 'confirmarHorario', 'molha', 'locker', 'critico',
   'duracaoMin', 'areaParque', 'endereco', 'localId', 'restauranteId', 'pesquisa',
   'nota', 'opcional', 'fila', 'acessoAltNota', 'curiosidades',
+  // restyle Classical: o selo "confirmar horário" sabe QUANDO cobrar, e o bloco
+  // com limiar de fila responde "vale a fila?" de pé, na frente do painel.
+  'confirmarAPartirDe', 'limiarFila', 'planoBFila',
 ];
 /* Campos que existem de proposito sem uso na tela. Cada um precisa de motivo. */
 const MORTOS_DE_PROPOSITO = {
@@ -204,11 +220,13 @@ const reais = [];
 (function anda(d) {
   fs.readdirSync(path.join(raiz, d), { withFileTypes: true }).forEach(function (e) {
     if (e.name.startsWith('.') || e.name === 'node_modules' || e.name === 'tools') return;
-    // na raiz, só o index.html pertence ao app; o resto é avulso
-    if (!d && /\.html$/.test(e.name) && e.name !== 'index.html') return;
+    // pacotes de design (mockups em HTML) não são código servido
+    if (e.name.startsWith('design_handoff')) return;
+    // na raiz, só o index.html e a folha do dia pertencem ao app; o resto é avulso
+    if (!d && /\.html$/.test(e.name) && e.name !== 'index.html' && e.name !== 'folha.html') return;
     const p = d ? d + '/' + e.name : e.name;
     if (e.isDirectory()) anda(p);
-    else if (/\.(js|css|html|json|png)$/.test(p) && p !== 'sw.js') reais.push(p);
+    else if (/\.(js|css|html|json|png|woff2)$/.test(p) && p !== 'sw.js') reais.push(p);
   });
 })('');
 const foraDaCache = reais.filter((p) => !naCache.has(p));

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0E4C5E">
+<meta name="theme-color" content="#f3f2f2">
 <meta name="description" content="Roteiro de viagem offline para Orlando, 10 a 26 de novembro de 2026.">
 <title>Orlando 2026</title>
 
@@ -44,6 +44,12 @@
 
 <!-- ====================== HOME ====================== -->
 <main class="tela oculto" id="tela-home">
+  <!-- página de rosto -->
+  <div class="rosto">
+    <div class="rosto-kicker">Roteiro de viagem</div>
+    <h1 class="rosto-titulo">Orlando 2026</h1>
+    <p class="rosto-sub">10 a 26 de novembro · dezessete dias</p>
+  </div>
   <div class="faixa-viagem" id="faixa-viagem"></div>
   <section id="cartao-acao"></section>
 
@@ -52,7 +58,7 @@
   <h2 class="secao-rotulo" id="rot-pendencias">Precisa de atenção</h2>
   <div id="home-pendencias"></div>
 
-  <h2 class="secao-rotulo">Os 17 dias</h2>
+  <h2 class="secao-rotulo">Sumário · os 17 dias</h2>
   <div id="lista-dias"></div>
 
   <h2 class="secao-rotulo">A viagem em números</h2>
@@ -61,27 +67,28 @@
 
 <!-- ====================== DIA ====================== -->
 <main class="tela oculto" id="tela-dia">
+  <!-- faixa "agora" fixa: só aparece quando o dia é hoje -->
+  <button class="faixa-agora oculto" id="faixa-agora" type="button"
+    aria-label="Ir para o agora na linha do tempo"></button>
+
   <nav class="nav-dias" id="nav-dias" aria-label="Navegação entre dias"></nav>
+  <div class="dia-pontos" id="dia-pontos" aria-hidden="true"></div>
 
   <section class="cabeca-dia" id="cabeca-dia">
-    <div class="cabeca-topo">
-      <span class="cabeca-emoji" id="dia-emoji"></span>
-      <div style="min-width:0">
-        <h1 id="dia-titulo"></h1>
-        <p class="cabeca-meta" id="dia-data"></p>
-      </div>
-    </div>
+    <div class="dia-kicker" id="dia-kicker"></div>
+    <h1 id="dia-titulo"></h1>
+    <p class="cabeca-meta" id="dia-data"></p>
 
     <div id="dia-selos" class="selos-dia"></div>
     <p class="dia-resumo" id="dia-resumo"></p>
     <div id="dia-rota"></div>
 
     <div class="referencia" id="referencia">
-      <label for="inp-referencia" id="lbl-referencia">Abertura do parque</label>
-      <div class="referencia-controle">
+      <div class="referencia-txt">
+        <label for="inp-referencia" id="lbl-referencia">Abertura do parque</label>
         <input type="time" id="inp-referencia" step="300">
-        <button class="btn-secundario" id="btn-ref-reset">Reverter</button>
       </div>
+      <button class="btn-secundario" id="btn-ref-reset">Reverter</button>
       <p class="referencia-ajuda" id="referencia-ajuda"></p>
     </div>
 
@@ -108,8 +115,11 @@
 
 <!-- ====================== RESTAURANTES ====================== -->
 <main class="tela oculto" id="tela-comer">
-  <h1 class="tela-titulo">Comer</h1>
-  <p class="tela-sub" id="comer-sub"></p>
+  <div class="cabecalho">
+    <div class="rosto-kicker">Orlando 2026</div>
+    <h1 class="tela-titulo">Comer</h1>
+    <p class="tela-sub" id="comer-sub"></p>
+  </div>
   <div id="janelas-reserva"></div>
   <div id="gastronomia-hoje"></div>
   <div id="lista-restaurantes"></div>
@@ -120,8 +130,11 @@
 
 <!-- ====================== GUIA ====================== -->
 <main class="tela oculto" id="tela-guia">
-  <h1 class="tela-titulo">Guia</h1>
-  <p class="tela-sub">Tudo o que vale saber na viagem, pelo momento em que se usa.</p>
+  <div class="cabecalho">
+    <div class="rosto-kicker">Orlando 2026</div>
+    <h1 class="tela-titulo">Guia</h1>
+    <p class="tela-sub">Tudo o que vale saber na viagem, pelo momento em que se usa.</p>
+  </div>
   <div class="ligar-rapido" id="guia-ligar"></div>
   <input class="guia-filtro" id="guia-filtro" type="search" autocomplete="off"
     placeholder="Filtrar: gorjeta, farmácia, Uber…" aria-label="Filtrar o Guia">
@@ -152,8 +165,11 @@
 
 <!-- ====================== PENDÊNCIAS ====================== -->
 <main class="tela oculto" id="tela-pendencias">
-  <h1 class="tela-titulo">Pendências</h1>
-  <p class="tela-sub" id="pend-sub"></p>
+  <div class="cabecalho">
+    <div class="rosto-kicker">Orlando 2026</div>
+    <h1 class="tela-titulo">Pendências</h1>
+    <p class="tela-sub" id="pend-sub"></p>
+  </div>
   <div class="progresso">
     <div class="progresso-barra"><div class="progresso-fill" id="pend-fill"></div></div>
     <div class="progresso-info">
@@ -169,11 +185,23 @@
 
 <!-- ====================== AJUSTES ====================== -->
 <main class="tela oculto" id="tela-ajustes">
-  <h1 class="tela-titulo">Ajustes</h1>
-  <p class="tela-sub">Offline, sincronização entre os dois celulares e dados do app.</p>
+  <div class="cabecalho">
+    <div class="rosto-kicker">Orlando 2026</div>
+    <h1 class="tela-titulo">Ajustes</h1>
+    <p class="tela-sub">Offline, sincronização entre os dois celulares e dados do app.</p>
+  </div>
 
   <h2 class="secao-rotulo">Estado offline</h2>
   <div id="status-offline"></div>
+
+  <h2 class="secao-rotulo">Papel</h2>
+  <div class="painel-sync">
+    <p class="sync-ajuda">
+      Uma meia-folha por dia: horários em duas colunas, telefones, confirmações e o que
+      fazer se o dia virar. O app é offline, mas não é à prova de bateria às 21h.
+    </p>
+    <a class="btn-secundario link-folha" href="folha.html">Abrir as folhas do dia para imprimir</a>
+  </div>
 
   <h2 class="secao-rotulo">Sincronizar com o outro celular</h2>
   <div class="painel-sync" id="painel-nuvem"></div>

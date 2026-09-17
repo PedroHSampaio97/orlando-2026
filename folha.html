@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f3f2f2">
+<title>Folha do dia</title>
+<link rel="stylesheet" href="css/app.css">
+<style>
+  /* =========================================================================
+     Folha do dia — meia-folha por dia, para dobrar e levar no bolso.
+     O app é offline, mas não é à prova de bateria às 21h. A folha lê o mesmo
+     estado do app neste aparelho: hora confirmada, referência ajustada, reserva.
+     ====================================================================== */
+  body { padding: 0; }
+  .fo-topo {
+    position: sticky; top: 0; z-index: 10; background: var(--fundo);
+    border-bottom: 1px solid var(--fio); padding: 12px 20px;
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  }
+  .fo-topo strong { font-family: var(--font-heading); font-size: 20px; font-weight: 600; flex: 1; }
+  .fo-topo .btn-secundario { min-height: 40px; }
+  .fo-ajuda { max-width: 760px; margin: 0 auto; padding: 14px 20px 0; font-style: italic;
+    font-size: 12.5px; color: var(--texto-fraco); line-height: 1.55; text-wrap: pretty; }
+  .folhas { max-width: 760px; margin: 0 auto; padding: 8px 20px 40px; }
+
+  .folha {
+    border: 1px solid var(--fio); border-radius: var(--r-card); background: var(--superficie);
+    padding: 14px 16px; margin: 16px 0; break-inside: avoid; page-break-inside: avoid;
+    color: var(--texto);
+  }
+  .fo-cab { display: flex; gap: 14px; align-items: flex-start; padding-bottom: 8px;
+    border-bottom: 1px solid var(--fio); }
+  .fo-num { font-family: var(--font-heading); font-weight: 600; font-size: 34px; line-height: .9;
+    font-variant-numeric: tabular-nums; color: var(--op); flex: 0 0 auto; padding-top: 3px; }
+  .fo-cab-txt { flex: 1; min-width: 0; }
+  .fo-kicker { font-size: 9.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--op); }
+  .fo-titulo { font-family: var(--font-heading); font-weight: 600; font-size: 19px; line-height: 1.1;
+    margin-top: 2px; }
+  .fo-meta { font-style: italic; font-size: 11px; color: var(--texto-fraco); margin-top: 3px;
+    line-height: 1.45; }
+  .fo-marca { text-align: right; font-size: 9px; font-weight: 600; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--texto-suave); white-space: nowrap; line-height: 1.5; }
+  .fo-marca b { display: block; font-family: var(--font-heading); font-size: 16px; font-weight: 600;
+    letter-spacing: 0; color: var(--texto-fraco); font-variant-numeric: tabular-nums; }
+
+  .fo-horas { columns: 2; column-gap: 18px; column-rule: 1px solid var(--fio-fraco);
+    padding: 8px 0; list-style: none; margin: 0; }
+  .fo-hora { display: flex; gap: 8px; align-items: baseline; font-size: 10.5px; line-height: 1.35;
+    padding: 2px 0; break-inside: avoid; }
+  .fo-hora b { flex: 0 0 34px; font-family: var(--font-heading); font-weight: 600; font-size: 13px;
+    font-variant-numeric: tabular-nums; color: var(--texto-fraco); text-align: right; }
+  .fo-hora.t-atracao b, .fo-hora.t-show b { color: var(--op); }
+  .fo-hora.t-refeicao b, .fo-hora.t-compras b { color: var(--acento-texto); }
+  .fo-hora.t-vazio { color: var(--texto-suave); font-style: italic; }
+  .fo-hora.t-vazio b { color: var(--texto-suave); }
+  .fo-hora span { min-width: 0; }
+  .fo-hora i { font-style: normal; font-size: 9px; color: var(--texto-suave);
+    font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .fo-hora .fo-conf { font-style: italic; color: var(--ok); font-size: 9.5px; }
+  .fo-hora .fo-pede { font-style: italic; color: var(--acento-texto); font-size: 9.5px; }
+
+  .fo-pe { display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: 0 14px;
+    border-top: 1px solid var(--fio); padding-top: 8px; }
+  .fo-rot { font-size: 8.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--texto-fraco); margin-bottom: 4px; }
+  .fo-lista { list-style: none; margin: 0; padding: 0; font-size: 10px; line-height: 1.45; }
+  .fo-lista li { padding: 1px 0; break-inside: avoid; }
+  .fo-lista b { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .fo-lista .fo-tel { font-family: var(--font-heading); font-size: 12.5px; font-weight: 600;
+    color: var(--acento-texto); white-space: nowrap; }
+  .fo-lista .fo-letra { font-family: var(--font-heading); font-size: 13px; font-weight: 600;
+    color: var(--acento-texto); margin-right: 4px; }
+  .fo-lista .fo-nada { font-style: italic; color: var(--texto-suave); }
+  .fo-vazio { font-style: italic; color: var(--texto-fraco); padding: 30px 0; text-align: center; }
+
+  @media (max-width: 520px) {
+    .fo-pe { grid-template-columns: 1fr; gap: 10px 0; }
+  }
+
+  @media print {
+    @page { size: A4; margin: 9mm 10mm; }
+    :root { --fundo: #fff; --superficie: #fff; --texto: #000; --texto-corpo: #222;
+      --texto-fraco: #444; --texto-suave: #777; --fio: #bbb; --fio-fraco: #ccc; --fio-forte: #999; }
+    body { background: #fff; color: #000; }
+    .fo-topo, .fo-ajuda { display: none; }
+    .folhas { max-width: none; padding: 0; margin: 0; }
+    /* duas folhas por página: dobra no meio, uma vai no bolso de cada um */
+    .folha { height: 134mm; margin: 0; border: 0; border-bottom: 1px dashed #999;
+      border-radius: 0; padding: 4mm 3mm; overflow: hidden; box-sizing: border-box; }
+    .folha:nth-child(2n) { border-bottom: 0; }
+    .folha:nth-child(2n+1) { page-break-before: auto; }
+    .folha:nth-child(2n+2) { page-break-after: always; }
+    .fo-num, .fo-kicker, .fo-hora.t-atracao b, .fo-hora.t-show b { color: #000; }
+    .fo-hora.t-refeicao b, .fo-hora.t-compras b, .fo-lista .fo-tel, .fo-lista .fo-letra,
+    .fo-hora .fo-pede { color: #000; }
+    .fo-hora .fo-conf { color: #000; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<header class="fo-topo">
+  <strong>Folhas do dia</strong>
+  <a class="btn-secundario" href="./">Voltar ao app</a>
+  <button class="btn-secundario destaque" id="btn-imprimir" type="button">Imprimir</button>
+</header>
+<p class="fo-ajuda">
+  Meia-folha por dia, duas por página: dobrem no meio e cada um leva a sua. Os horários
+  saem como estão no app deste aparelho — hora confirmada, referência ajustada e reserva
+  marcada entram; o que ainda não foi confirmado sai como previsão.
+</p>
+<main class="folhas" id="folhas"></main>
+
+<script src="data/roteiro.js"></script>
+<script src="js/estado.js"></script>
+<script>
+(function () {
+  'use strict';
+  const R = window.ROTEIRO;
+  const alvo = document.getElementById('folhas');
+  if (!R || !R.dias) {
+    alvo.innerHTML = '<p class="fo-vazio">O roteiro não carregou. Abram o app uma vez com internet.</p>';
+    return;
+  }
+  const estado = window.Estado || null;
+
+  const el = function (tag, cls, txt) {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (txt != null) n.textContent = txt;
+    return n;
+  };
+  const paraMin = (h) => { const p = h.split(':'); return (+p[0]) * 60 + (+p[1]); };
+  const paraHora = (m) => {
+    m = ((m % 1440) + 1440) % 1440;
+    return String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0');
+  };
+  const ddmm = (iso) => iso.slice(8, 10) + '/' + iso.slice(5, 7);
+  const OP = { disney: 'Disney', universal: 'Universal', seaworld: 'SeaWorld',
+               busch: 'Busch Gardens', livre: 'dia livre', logistica: 'logística' };
+  function chaveOp(dia) {
+    const o = (dia.operadora || '').toLowerCase();
+    if (o.indexOf('disney') >= 0) return 'disney';
+    if (o.indexOf('universal') >= 0) return 'universal';
+    if (o.indexOf('sea') >= 0) return 'seaworld';
+    if (o.indexOf('busch') >= 0) return 'busch';
+    return dia.tipo === 'logistica' || dia.tipo === 'compras' ? 'logistica' : 'livre';
+  }
+
+  // A referência do dia como o app a vê: o padrão do roteiro, ou o que foi ajustado.
+  function refDoDia(dia) {
+    if (!dia.referencia) return null;
+    let r = estado && estado.referencia ? estado.referencia(dia.id) : null;
+    if (r && typeof r === 'object') r = r.hora;
+    return r || dia.referencia.padrao;
+  }
+  // Hora efetiva de um bloco: confirmada à mão > deslocada pela referência > prevista.
+  function horaEfetiva(dia, b, delta) {
+    const conf = estado && estado.horaBloco ? estado.horaBloco(b.id) : null;
+    if (conf) return { hora: conf, confirmada: true };
+    if (delta && b.ancora === 'referencia') return { hora: paraHora(paraMin(b.hora) + delta) };
+    return { hora: b.hora };
+  }
+  function statusReserva(r) {
+    const s = estado && estado.reserva ? estado.reserva(r.id) : null;
+    return { status: (s && s.status) || r.statusPadrao || null,
+             conf: (s && s.confirmacao) || r.confirmacaoPadrao || null };
+  }
+
+  // Telefones que valem em qualquer dia: os críticos, com número.
+  const telefones = (R.contatos || []).filter((c) => c.critico && c.numero);
+
+  R.dias.forEach(function (dia, idx) {
+    const sec = el('section', 'folha');
+    sec.setAttribute('data-op', chaveOp(dia));
+
+    /* cabeçalho */
+    const cab = el('div', 'fo-cab');
+    cab.appendChild(el('div', 'fo-num', String(+dia.data.slice(8, 10))));
+    const txt = el('div', 'fo-cab-txt');
+    txt.appendChild(el('div', 'fo-kicker',
+      'Dia ' + (idx + 1) + ' de ' + R.dias.length + ' · ' + OP[chaveOp(dia)]));
+    txt.appendChild(el('div', 'fo-titulo', dia.titulo));
+    const ref = refDoDia(dia);
+    const meta = [dia.diaSemana + ', ' + ddmm(dia.data)];
+    if (dia.referencia) meta.push(dia.referencia.rotulo.toLowerCase() + ' ' + ref);
+    if (dia.subtitulo) meta.push(dia.subtitulo);
+    txt.appendChild(el('div', 'fo-meta', meta.join(' · ')));
+    cab.appendChild(txt);
+    const marca = el('div', 'fo-marca', 'Orlando 2026');
+    marca.appendChild(el('b', null, (idx + 1) + ' / ' + R.dias.length));
+    cab.appendChild(marca);
+    sec.appendChild(cab);
+
+    /* horários em duas colunas */
+    const delta = dia.referencia ? paraMin(ref) - paraMin(dia.referencia.padrao) : 0;
+    const ul = el('ul', 'fo-horas');
+    const blocos = (dia.blocos || []).map(function (b) {
+      const h = horaEfetiva(dia, b, delta);
+      return { b: b, hora: h.hora, confirmada: h.confirmada, min: paraMin(h.hora) };
+    }).sort((a, b) => a.min - b.min);
+    blocos.forEach(function (it) {
+      const b = it.b;
+      const li = el('li', 'fo-hora t-' + b.tipo);
+      li.appendChild(el('b', null, it.hora));
+      const s = el('span', null, b.titulo);
+      if (b.fuso) s.appendChild(el('i', null, ' ' + b.fuso));
+      if (b.duracaoMin && b.duracaoMin >= 60) {
+        s.appendChild(el('i', null, ' · ' + Math.floor(b.duracaoMin / 60) + 'h' +
+          (b.duracaoMin % 60 ? String(b.duracaoMin % 60).padStart(2, '0') : '')));
+      }
+      if (it.confirmada) s.appendChild(el('span', 'fo-conf', ' · confirmado'));
+      else if (b.confirmarHorario) s.appendChild(el('span', 'fo-pede', ' · conferir no app do parque'));
+      li.appendChild(s);
+      ul.appendChild(li);
+    });
+    sec.appendChild(ul);
+
+    /* pé: telefones · confirmações · se o dia virar */
+    const pe = el('div', 'fo-pe');
+
+    const t = el('div');
+    t.appendChild(el('div', 'fo-rot', 'Telefones'));
+    const tl = el('ul', 'fo-lista');
+    telefones.forEach(function (c) {
+      const li = el('li');
+      li.appendChild(el('span', 'fo-tel', c.numero));
+      li.appendChild(document.createTextNode(' ' + c.nome.split('—')[0].trim()));
+      tl.appendChild(li);
+    });
+    t.appendChild(tl);
+    pe.appendChild(t);
+
+    const c = el('div');
+    c.appendChild(el('div', 'fo-rot', 'Confirmações'));
+    const cl = el('ul', 'fo-lista');
+    (R.restaurantes || []).filter((r) => r.data === dia.data && r.precisaReserva)
+      .sort((a, b) => String(a.hora || '').localeCompare(String(b.hora || '')))
+      .forEach(function (r) {
+        const st = statusReserva(r);
+        const li = el('li');
+        li.appendChild(el('b', null, (r.hora || '—') + ' '));
+        li.appendChild(document.createTextNode(r.nome + ' — '));
+        if ((st.status === 'confirmado' || st.status === 'reservado') && st.conf) {
+          li.appendChild(el('b', null, st.conf));
+        } else if (st.status === 'cancelado') {
+          li.appendChild(el('span', 'fo-nada', 'cancelado'));
+        } else {
+          li.appendChild(el('span', 'fo-nada', 'sem reserva'));
+        }
+        cl.appendChild(li);
+      });
+    blocos.filter((it) => (it.b.acesso || []).some((a) => a === 'multi-pass' || a === 'single-pass'))
+      .forEach(function (it) {
+        const li = el('li');
+        li.appendChild(el('b', null, it.hora + '–' + paraHora(it.min + 60) + ' '));
+        li.appendChild(document.createTextNode('Lightning Lane · ' + it.b.titulo));
+        cl.appendChild(li);
+      });
+    if (!cl.children.length) cl.appendChild(el('li', 'fo-nada', 'nada com hora marcada'));
+    c.appendChild(cl);
+    pe.appendChild(c);
+
+    const v = el('div');
+    v.appendChild(el('div', 'fo-rot', 'Se o dia virar'));
+    const vl = el('ul', 'fo-lista');
+    (dia.planos || []).filter((p) => p.letra !== 'A').forEach(function (p) {
+      const li = el('li');
+      li.appendChild(el('span', 'fo-letra', p.letra));
+      li.appendChild(document.createTextNode(p.gatilho ? p.gatilho + ' → ' + p.titulo : p.titulo));
+      vl.appendChild(li);
+    });
+    blocos.filter((it) => it.b.limiarFila).forEach(function (it) {
+      const li = el('li');
+      li.appendChild(el('b', null, it.b.titulo + ' acima de ' + it.b.limiarFila + ' min: '));
+      li.appendChild(document.createTextNode(
+        (it.b.planoBFila || 'plano B').split(/(?<=[.!?])\s/)[0]));
+      vl.appendChild(li);
+    });
+    if (!vl.children.length) vl.appendChild(el('li', 'fo-nada', 'sem plano B escrito'));
+    v.appendChild(vl);
+    pe.appendChild(v);
+
+    sec.appendChild(pe);
+    alvo.appendChild(sec);
+  });
+
+  document.getElementById('btn-imprimir').addEventListener('click', function () { window.print(); });
+})();
+</script>
+</body>
+</html>

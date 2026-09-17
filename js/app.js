@@ -63,7 +63,11 @@
   }
   const corOp = (dia) =>
     getComputedStyle(document.documentElement)
-      .getPropertyValue('--op-' + chaveOp(dia)).trim() || '#0E4C5E';
+      .getPropertyValue('--op-' + chaveOp(dia)).trim() || '#7d5411';
+  const ROTULO_OP = { disney: 'Disney', universal: 'Universal', seaworld: 'SeaWorld',
+                      busch: 'Busch Gardens', livre: 'dia livre', logistica: 'logística' };
+  const rotuloOp = (dia) => ROTULO_OP[chaveOp(dia)] || chaveOp(dia);
+  const numeroDoDia = (dia) => diasEntre(R.viagem.inicio, dia.data) + 1;
 
   /* ---------------------------------------------------------------------------
      Horário efetivo dos blocos
@@ -174,8 +178,9 @@
     const raiz = $('#topo');
     raiz.setAttribute('data-op', dia ? chaveOp(dia) : 'logistica');
     const m = document.querySelector('meta[name="theme-color"]');
-    // A barra do sistema acompanha o topo, e o topo muda de cor com o tema.
-    if (m) m.setAttribute('content', corOp(dia || { tipo: 'logistica' }));
+    // O topo é pergaminho nos dois temas: a barra do sistema segue o papel, não a operadora.
+    if (m) m.setAttribute('content',
+      getComputedStyle(document.documentElement).getPropertyValue('--fundo').trim() || '#f3f2f2');
     // No dia, o topo diz em que dia se está: "Dom 22 · SeaWorld".
     const nome = $('#topo-nome'), sub = $('#topo-sub');
     if (dia) {
@@ -276,20 +281,23 @@
     const dHoje = diaDeHoje();
     const faltamViagem = diasEntre(hoje, R.viagem.inicio);
 
-    /* faixa fina */
+    /* contagem: numeral ouro + o que ele conta */
     const f = $('#faixa-viagem');
     f.innerHTML = '';
     if (dHoje) {
       const n = diasEntre(R.viagem.inicio, hoje) + 1;
-      f.appendChild(el('b', null, 'Dia ' + n + ' de ' + R.dias.length));
-      f.appendChild(document.createTextNode('· ' + dHoje.titulo));
+      f.appendChild(el('b', null, n));
+      f.appendChild(el('span', 'fv-txt', 'de ' + R.dias.length + ' · ' + dHoje.titulo));
+      f.appendChild(el('span', 'fv-data', 'hoje'));
     } else if (faltamViagem > 0) {
-      f.appendChild(el('b', null, 'faltam ' + faltamViagem));
-      f.appendChild(document.createTextNode(faltamViagem === 1 ? 'dia' : 'dias'));
+      f.appendChild(el('b', null, faltamViagem));
+      f.appendChild(el('span', 'fv-txt', faltamViagem === 1 ? 'dia até o embarque' : 'dias até o embarque'));
+      f.appendChild(el('span', 'fv-data', '10 nov'));
     } else {
-      f.appendChild(el('b', null, 'viagem concluída'));
+      f.appendChild(el('b', null, R.dias.length));
+      f.appendChild(el('span', 'fv-txt', 'dias vividos · viagem concluída'));
+      f.appendChild(el('span', 'fv-data', '26 nov'));
     }
-    f.appendChild(el('span', null, '10 a 26 nov 2026'));
 
     pintarCartaoAcao(dHoje);
     pintarSaude();
@@ -310,9 +318,10 @@
       const total = contaveis(dHoje).length, feitos = contarFeitos(dHoje);
       const m = momentosDoDia(dHoje);
 
-      const rot = el('div', 'acao-rot');
-      rot.appendChild(document.createTextNode('hoje · ' + dHoje.emoji + ' ' + dHoje.titulo));
-      card.appendChild(rot);
+      const topo = el('div', 'acao-topo');
+      topo.appendChild(el('div', 'acao-rot', 'hoje · ' + dHoje.titulo));
+      topo.appendChild(el('span', 'acao-quando', 'dia ' + numeroDoDia(dHoje) + ' de ' + R.dias.length));
+      card.appendChild(topo);
 
       // Durante a viagem o cartão responde três perguntas: o que é agora, o que
       // vem depois e qual é a próxima mesa com hora marcada.
@@ -322,11 +331,16 @@
       }
       if (m.aSeguir) {
         const falta = m.aSeguir.min - agoraMin();
-        card.appendChild(el('div', 'acao-prazo', m.aSeguir.hora));
+        const num = el('div', 'acao-numero');
+        num.appendChild(el('span', 'acao-prazo', m.aSeguir.hora));
+        num.appendChild(el('span', 'acao-unidade', falta <= 0 ? 'agora' : 'em ' + intervaloTexto(falta)));
+        card.appendChild(num);
         card.appendChild(el('div', 'acao-titulo', 'A seguir · ' + m.aSeguir.dados.titulo));
-        card.appendChild(el('div', 'acao-meta', falta <= 0 ? 'agora' : 'em ' + intervaloTexto(falta)));
       } else if (!m.emCurso) {
-        card.appendChild(el('div', 'acao-prazo', feitos + '/' + total));
+        const num = el('div', 'acao-numero');
+        num.appendChild(el('span', 'acao-prazo', feitos + '/' + total));
+        num.appendChild(el('span', 'acao-unidade', 'blocos'));
+        card.appendChild(num);
         card.appendChild(el('div', 'acao-titulo', 'Nada mais marcado para hoje'));
       }
       const res = proximaReserva();
@@ -351,24 +365,38 @@
 
       if (!prox) {
         card.appendChild(el('div', 'acao-rot', 'tudo em ordem'));
-        card.appendChild(el('div', 'acao-prazo', '✓'));
+        const num = el('div', 'acao-numero');
+        num.appendChild(el('span', 'acao-prazo', '✓'));
+        card.appendChild(num);
         card.appendChild(el('div', 'acao-titulo', 'Nenhuma pendência aberta'));
       } else {
-        card.setAttribute('data-op', prox.faltam < 0 ? 'universal' : 'logistica');
-        card.appendChild(el('div', 'acao-rot',
-          prox.faltam < 0 ? 'atrasada' : 'próxima pendência'));
+        const topo = el('div', 'acao-topo');
+        topo.appendChild(el('div', 'acao-rot', prox.faltam < 0 ? 'atrasada' : 'próxima pendência'));
+        topo.appendChild(el('span', 'acao-quando',
+          dataExtenso(prox.data) + (prox.c.dataEstimada ? ' · estimada' : '')));
+        card.appendChild(topo);
         // No dia, com hora marcada, a conta é em minutos no relógio de Orlando.
         const minHoje = prox.faltam === 0 && prox.c.hora
           ? Fase3.minutosAte(prox.data, prox.c.hora, prox.c.fuso) : null;
-        card.appendChild(el('div', 'acao-prazo',
-          prox.faltam < 0 ? plural(-prox.faltam, 'dia', 'dias') :
-          minHoje !== null ? (minHoje >= 0 ? 'em ' + intervaloTexto(minHoje) : 'venceu') :
-          prox.faltam === 0 ? 'hoje' : plural(prox.faltam, 'dia', 'dias')));
+        const num = el('div', 'acao-numero');
+        if (prox.faltam < 0) {
+          num.appendChild(el('span', 'acao-prazo', -prox.faltam));
+          num.appendChild(el('span', 'acao-unidade', (-prox.faltam === 1 ? 'dia' : 'dias') + ' atrás'));
+        } else if (minHoje !== null) {
+          num.appendChild(el('span', 'acao-prazo', minHoje >= 0 ? intervaloTexto(minHoje) : 'venceu'));
+          if (minHoje >= 0) num.appendChild(el('span', 'acao-unidade', 'restantes'));
+        } else if (prox.faltam === 0) {
+          num.appendChild(el('span', 'acao-prazo', 'hoje'));
+        } else {
+          num.appendChild(el('span', 'acao-prazo', prox.faltam));
+          num.appendChild(el('span', 'acao-unidade', prox.faltam === 1 ? 'dia' : 'dias'));
+        }
+        card.appendChild(num);
         card.appendChild(el('div', 'acao-titulo', prox.c.texto));
-        card.appendChild(el('div', 'acao-meta',
-          dataExtenso(prox.data) + (prox.c.hora ? ' às ' +
-            Fase3.rotuloHora(prox.data, prox.c.hora, prox.c.fuso) : '') +
-          (atrasadas ? '  ·  ' + plural(atrasadas, 'atrasada', 'atrasadas') : '')));
+        const meta = [];
+        if (prox.c.hora) meta.push('às ' + Fase3.rotuloHora(prox.data, prox.c.hora, prox.c.fuso));
+        if (atrasadas) meta.push(plural(atrasadas, 'atrasada', 'atrasadas'));
+        if (meta.length) card.appendChild(el('div', 'acao-meta', meta.join('  ·  ')));
         const b = el('button', 'acao-botao', 'Ver todas as pendências');
         b.addEventListener('click', function () {
           mostrarTela('pendencias');
@@ -475,18 +503,15 @@
       const feitos = contarFeitos(dia);
       const pct = total ? Math.round((feitos / total) * 100) : 0;
 
+      // Índice de livro: numeral do dia na cor da operadora, semana em caps, título,
+      // subtítulo em itálico e a operadora à direita. Sem emoji — a cor já diz.
       const b = el('button', 'linha-dia' + (dia.data === hoje ? ' e-hoje' : ''));
       b.setAttribute('data-op', chaveOp(dia));
-      b.appendChild(el('div', 'ld-faixa'));
-
-      const d = el('div', 'ld-data');
-      d.appendChild(el('b', null, +dia.data.split('-')[2]));
-      d.appendChild(el('span', null, dia.diaSemana.slice(0, 3)));
-      b.appendChild(d);
+      b.appendChild(el('span', 'ld-num', +dia.data.split('-')[2]));
+      b.appendChild(el('span', 'ld-sem', dia.diaSemana.slice(0, 3)));
 
       const c = el('div', 'ld-corpo');
       const topo = el('div', 'ld-topo');
-      topo.appendChild(el('span', 'ld-emoji', dia.emoji));
       topo.appendChild(el('span', 'ld-nome', dia.titulo));
       if (dia.data === hoje) topo.appendChild(el('span', 'ld-hoje', 'hoje'));
       else if (dia.custoZero) topo.appendChild(el('span', 'ld-zero', 'custo zero'));
@@ -498,6 +523,7 @@
         c.appendChild(p);
       }
       b.appendChild(c);
+      b.appendChild(el('span', 'ld-op', rotuloOp(dia)));
       b.addEventListener('click', function () { irParaDia(dia); });
       alvo.appendChild(b);
     });
@@ -548,16 +574,29 @@
         });
       }
     });
+    pintarPontos();
+  }
+
+  // Os 17 pontos sob a régua: onde o gesto de deslizar está, sem ler a régua.
+  function pintarPontos() {
+    const cx = $('#dia-pontos');
+    cx.innerHTML = '';
+    R.dias.forEach(function (d) {
+      cx.appendChild(el('i', d.id === diaAtual.id ? 'dp-ativo' : null));
+    });
   }
 
   function pintarDia() {
     const dia = diaAtual;
     $('#tela-dia').setAttribute('data-op', chaveOp(dia));
 
-    $('#dia-emoji').textContent = dia.emoji;
+    // Capítulo: kicker com o número do dia, data e operadora; título grande;
+    // subtítulo em itálico. O emoji saiu — a cor da operadora já situa.
+    $('#dia-kicker').textContent = 'Dia ' + numeroDoDia(dia) + ' de ' + R.dias.length +
+      ' · ' + dia.diaSemana.split('-')[0] + ', ' + ddmm(dia.data) + ' · ' + rotuloOp(dia);
     $('#dia-titulo').textContent = dia.titulo;
-    $('#dia-data').textContent = dia.diaSemana + ', ' + dataExtenso(dia.data) +
-      (dia.subtitulo ? ' · ' + dia.subtitulo : '');
+    $('#dia-data').textContent = dia.subtitulo || '';
+    $('#dia-data').hidden = !dia.subtitulo;
     $('#dia-resumo').textContent = dia.resumo || '';
     $('#dia-resumo').hidden = !dia.resumo;
 
@@ -596,7 +635,7 @@
     const hoje = diaDeHoje();
     const mostrar = !!hoje && hoje.id !== diaAtual.id;
     b.classList.toggle('oculto', !mostrar);
-    if (mostrar) b.textContent = 'Voltar para hoje · ' + hoje.emoji + ' ' + hoje.titulo;
+    if (mostrar) b.textContent = 'Voltar para hoje · ' + hoje.titulo;
   }
 
   /* Rota do dia inteiro no Maps — conceito do Wanderlog */
@@ -808,8 +847,14 @@
       // 11 abertos empurravam a linha do tempo para fora da primeira tela.
       const urgentes = itens.filter((i) => i.resolver);
       if (urgentes.length) {
-        const res = el('ul', 'avisos-resumo');
-        urgentes.forEach((i) => res.appendChild(el('li', null, primeiraFrase(i.texto))));
+        // Filete ouro, um kicker com a conta e as primeiras frases emendadas: três à
+        // vista; o resto fica no acordeão logo abaixo.
+        const res = el('div', 'avisos-resumo');
+        res.appendChild(el('div', 'avisos-rot',
+          'Avisos do dia · ' + urgentes.length + ' de ' + itens.length));
+        const frases = urgentes.slice(0, 3).map((i) => primeiraFrase(i.texto));
+        if (urgentes.length > 3) frases.push('mais ' + (urgentes.length - 3) + ' abaixo');
+        res.appendChild(el('p', null, frases.join(' · ')));
         alvo.appendChild(res);
       }
       const det = el('details', 'acordeao avisos-todos');
@@ -1047,8 +1092,45 @@
     requestAnimationFrame(function () {
       const marca = document.querySelector('#linha-tempo .agora');
       if (!marca) return;
-      marca.scrollIntoView({ block: 'center' });
+      // Pela geometria, não por scrollIntoView: o topo e a faixa do agora são fixos
+      // e cobririam a linha. Ela vai para o centro do que sobra da tela.
+      const faixa = $('#faixa-agora');
+      const fixo = $('.topo').getBoundingClientRect().height +
+        (faixa.classList.contains('oculto') ? 0 : faixa.getBoundingClientRect().height);
+      const r = marca.getBoundingClientRect();
+      const alvo = window.scrollY + r.top - fixo - (window.innerHeight - fixo) / 2 + r.height / 2;
+      window.scrollTo(0, Math.max(0, alvo));
     });
+  }
+
+  /* Faixa "agora" fixa (A). No meio da tarde, com a lista rolada, a pergunta é
+     sempre a mesma — o que é agora e o que vem depois — e a resposta estava a três
+     telas de distância. Só no dia de hoje; tocar nela leva à linha do agora. */
+  function pintarFaixaAgora(dia) {
+    const f = $('#faixa-agora');
+    if (dia.data !== hojeISO()) { f.classList.add('oculto'); return; }
+    const m = momentosDoDia(dia);
+    if (!m.emCurso && !m.aSeguir) { f.classList.add('oculto'); return; }
+    f.innerHTML = '';
+    f.classList.remove('oculto');
+    if (m.emCurso) {
+      f.appendChild(el('span', 'fa-rot', 'agora'));
+      const t = el('span', 'fa-titulo', m.emCurso.dados.titulo);
+      t.appendChild(el('span', 'fa-ate', ' · até ' +
+        paraHora(m.emCurso.min + (m.emCurso.dados.duracaoMin || 0))));
+      f.appendChild(t);
+      if (m.aSeguir) {
+        const s = el('span', 'fa-seguir');
+        s.appendChild(el('b', null, m.aSeguir.hora));
+        s.appendChild(document.createTextNode(' ' + m.aSeguir.dados.titulo));
+        f.appendChild(s);
+      }
+    } else {
+      f.appendChild(el('span', 'fa-rot', 'a seguir'));
+      const t = el('span', 'fa-titulo', m.aSeguir.dados.titulo);
+      t.appendChild(el('span', 'fa-ate', ' · ' + m.aSeguir.hora));
+      f.appendChild(t);
+    }
   }
 
   /* Caminho mais curto entre duas areas do parque. Sao sete nos: qualquer coisa
@@ -1088,7 +1170,7 @@
 
   function linhaAgora(min) {
     const li = el('li', 'agora');
-    li.appendChild(el('span', 'agora-rot', paraHora(min)));
+    li.appendChild(el('span', 'agora-rot', 'agora · ' + paraHora(min)));
     li.appendChild(el('div', 'agora-linha'));
     return li;
   }
@@ -1113,6 +1195,8 @@
       const r = li.querySelector('.ct-momento');
       if (r) r.remove();
     });
+    // A faixa fixa acompanha: mesma conta, mesmo instante.
+    pintarFaixaAgora(dia);
     if (dia.data !== hojeISO()) return;
     const m = momentosDoDia(dia);
     [[m.emCurso, 'pa-em-curso', 'agora'], [m.aSeguir, 'pa-a-seguir', 'a seguir']].forEach(function (x) {
@@ -1121,7 +1205,7 @@
       if (!li) return;
       li.classList.add(x[1]);
       const cab = li.querySelector('.cartao-cabeca');
-      cab.insertBefore(el('span', 'ct-momento', x[2]), cab.querySelector('.ct-check'));
+      cab.insertBefore(el('span', 'ct-momento', x[2]), cab.firstChild);
     });
   }
 
@@ -1185,7 +1269,7 @@
     const marca = ol.querySelector('.agora');
     if (!marca) { pintarLinhaTempo(dia); return; }
     const agora = agoraMin();
-    marca.querySelector('.agora-rot').textContent = paraHora(agora);
+    marca.querySelector('.agora-rot').textContent = 'agora · ' + paraHora(agora);
     const porId = {};
     blocosDoDia(dia).forEach(function (it) { porId[it.dados.id] = it; });
     const antesDe = [].find.call(ol.querySelectorAll('.parada'), function (li) {
@@ -1259,26 +1343,33 @@
       (E.feito(b.id) ? ' feita' : '') + (item.colisao ? ' colide' : ''));
     li.dataset.bloco = b.id;
 
-    const marca = el('div', 'marcador');
-    marca.appendChild(svg(ICONES[b.tipo] || ICONES.livre));
-    li.appendChild(marca);
-
-    const card = el('div', 'cartao');
-    const cab = el('div', 'cartao-cabeca');
-    cab.appendChild(el('span', 'ct-hora', item.hora));
-    if (item.deslocado) {
-      cab.appendChild(el('span', 'ct-pin'));
-      cab.appendChild(el('span', 'ct-hora-antiga', horaDe(b)));
-    }
-    if (b.fuso) cab.appendChild(el('span', 'ct-fuso', b.fuso));
+    // Coluna da hora: numeral tabular na cor do tipo, duração e "fixo" embaixo. É a
+    // régua do dia — o ícone por tipo saiu, a cor da hora diz o que o bloco é.
+    const hora = el('div', 'pa-hora');
+    hora.appendChild(el('span', 'pa-hora-num', item.hora));
+    if (item.deslocado) hora.appendChild(el('span', 'pa-hora-antiga', horaDe(b)));
     if (b.duracaoMin) {
       const h = Math.floor(b.duracaoMin / 60), m = b.duracaoMin % 60;
-      cab.appendChild(el('span', 'ct-dur', '· ' +
-        (h ? h + 'h' + (m ? String(m).padStart(2, '0') : '') : m + ' min')));
+      hora.appendChild(el('span', 'pa-dur',
+        h ? h + 'h' + (m ? String(m).padStart(2, '0') : '') : m + ' min'));
     }
+    // "fixo" só diz algo em dia com referência: é o bloco que não desloca com ela.
+    if (dia.referencia && ancoraDe(b) === 'fixo' && b.tipo !== 'vazio') {
+      hora.appendChild(el('span', 'pa-fixo', 'fixo'));
+    }
+    li.appendChild(hora);
+    li.appendChild(el('div', 'pa-fio'));
 
+    // O cartão é conteúdo + coluna do check (E): o alvo do polegar cresce com o bloco.
+    const wrap = el('div', 'cartao');
+    const card = el('div', 'ct-corpo');
+    const cab = el('div', 'cartao-cabeca');
+    if (item.deslocado) cab.appendChild(el('span', 'ct-pin'));
+    if (b.fuso) cab.appendChild(el('span', 'ct-fuso', b.fuso));
+
+    let chk = null;
     if (b.tipo !== 'vazio') {
-      const chk = el('button', 'ct-check');
+      chk = el('button', 'ct-check');
       chk.setAttribute('aria-pressed', E.feito(b.id) ? 'true' : 'false');
       chk.setAttribute('aria-label', 'Marcar como feito: ' + b.titulo);
       chk.appendChild(svg('M4 12l6 6L20 6'));
@@ -1301,7 +1392,6 @@
           aoFechar: function () { if (soFalta && E.feito(b.id)) pintarLinhaTempo(dia); },
         });
       });
-      cab.appendChild(chk);
     }
     card.appendChild(cab);
     card.appendChild(el('div', 'ct-titulo', b.titulo));
@@ -1323,9 +1413,19 @@
     if (b.acessoAlt) selos.appendChild(el('span', 'selo selo-' + b.acessoAlt,
       'ou ' + (ROTULO_ACESSO[b.acessoAlt] || b.acessoAlt)));
     if (b.confirmarHorario) {
+      // Três estados (F): dormindo, na janela e confirmado. O selo diz QUANDO cobrar —
+      // pela regra da casa, hora de show só sai no app do parque no próprio dia, então
+      // antes disso ele não grita.
       const conf = E.horaBloco(b.id);
-      const bt = el('button', 'selo selo-confirmar',
-        conf ? '✓ horário confirmado ' + conf : '⚠ confirmar horário');
+      const desde = b.confirmarAPartirDe || dia.data;
+      const faltam = diasEntre(hojeISO(), desde);
+      let cls, txt;
+      if (conf) { cls = 'selo-confirmado'; txt = '✓ horário confirmado · ' + conf; }
+      else if (faltam > 0) {
+        cls = 'selo-dormindo';
+        txt = 'confirmar a partir de ' + ddmm(desde) + ' · em ' + plural(faltam, 'dia', 'dias');
+      } else { cls = 'selo-confirmar'; txt = '⚠ confirmar horário — já deve ter saído'; }
+      const bt = el('button', 'selo ' + cls, txt);
       bt.addEventListener('click', function () { abrirEditorHora(b, dia); });
       selos.appendChild(bt);
     }
@@ -1354,6 +1454,58 @@
       if (b.fila.media) f.appendChild(el('span', 'ct-fila-pico', 'média ' + b.fila.media));
       if (b.fila.estimado) f.appendChild(el('span', 'selo-estimativa', 'estimado'));
       card.appendChild(f);
+    }
+
+    // VALE A FILA? (B) O roteiro já escrevia o limiar em prosa; agora é uma conta que
+    // se faz de pé, na frente do painel: digita o que o painel diz, o app responde
+    // "entrem" ou "saiam" — e, saindo, o que fazer no lugar.
+    if (b.limiarFila && b.fila) {
+      const fq = el('details', 'fq');
+      fq.dataset.chave = 'fila:' + b.id;
+      fq.appendChild(el('summary', 'fq-rot', 'Vale a fila?'));
+      const corpo = el('div', 'fq-corpo');
+      const prev = el('p', 'fq-previsto');
+      prev.appendChild(document.createTextNode('O roteiro prevê '));
+      prev.appendChild(el('b', null, b.fila.min + ' min'));
+      prev.appendChild(document.createTextNode(
+        (b.fila.quando ? ' ' + b.fila.quando : '') + '. Entrem até '));
+      prev.appendChild(el('b', null, b.limiarFila + ' min'));
+      prev.appendChild(document.createTextNode('; acima disso, o plano B.'));
+      corpo.appendChild(prev);
+      corpo.appendChild(el('div', 'fq-label', 'Fila no painel, em minutos'));
+      const linha = el('div', 'fq-linha');
+      const inp = document.createElement('input');
+      inp.type = 'number'; inp.inputMode = 'numeric'; inp.min = 0; inp.max = 300;
+      inp.className = 'fq-campo';
+      inp.placeholder = String(b.fila.min);
+      inp.setAttribute('aria-label', 'Fila no painel, em minutos');
+      linha.appendChild(inp);
+      const ver = el('div', 'fq-veredito oculto');
+      ver.setAttribute('aria-live', 'polite');
+      const decidir = function () {
+        const v = parseInt(inp.value, 10);
+        if (isNaN(v)) { ver.classList.add('oculto'); return; }
+        const entra = v <= b.limiarFila;
+        ver.className = 'fq-veredito ' + (entra ? 'fq-entra' : 'fq-sai');
+        ver.innerHTML = '';
+        ver.appendChild(el('div', 'fq-veredito-rot', entra ? 'Entrem' : 'Saiam'));
+        ver.appendChild(el('p', null, entra
+          ? v + ' min cabe no limiar de ' + b.limiarFila + '. Entrem agora.'
+          : v + ' min passa do limiar de ' + b.limiarFila + '. ' +
+            (b.planoBFila || 'Sigam o plano B do dia.')));
+      };
+      [b.limiarFila - 15, b.limiarFila, b.limiarFila + 30].filter((n) => n > 0)
+        .forEach(function (n) {
+          const a = el('button', 'fq-atalho', String(n));
+          a.type = 'button';
+          a.addEventListener('click', function () { inp.value = n; decidir(); });
+          linha.appendChild(a);
+        });
+      inp.addEventListener('input', decidir);
+      corpo.appendChild(linha);
+      corpo.appendChild(ver);
+      fq.appendChild(corpo);
+      card.appendChild(fq);
     }
 
     // JANELA DE RETORNO. O Lightning Lane vale por uma hora a partir do horario
@@ -1447,7 +1599,9 @@
       card.appendChild(mais);
     }
 
-    li.appendChild(card);
+    wrap.appendChild(card);
+    if (chk) wrap.appendChild(chk);
+    li.appendChild(wrap);
     return li;
   }
 
@@ -1484,6 +1638,29 @@
     const d = diaDeHoje();
     if (d) irParaDia(d);
   });
+  $('#faixa-agora').addEventListener('click', function () { rolarAteAgora(); });
+
+  /* Deslizar para o lado vira a página (C). A régua de pílulas continua para quem
+     prefere apontar; o gesto não nasce nela, nem em campo de texto. */
+  (function ligarSwipe() {
+    const tela = $('#tela-dia');
+    let x0 = null, y0 = 0;
+    tela.addEventListener('touchstart', function (e) {
+      if (e.touches.length !== 1 ||
+          e.target.closest('.nav-dias, input, textarea, .editor-hora')) { x0 = null; return; }
+      x0 = e.touches[0].clientX; y0 = e.touches[0].clientY;
+    }, { passive: true });
+    tela.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+      x0 = null;
+      // 40px na horizontal e mais deitado que em pé: rolar a lista não vira o dia.
+      if (Math.abs(dx) < 40 || Math.abs(dy) > Math.abs(dx) * 0.8) return;
+      const i = R.dias.indexOf(diaAtual);
+      const prox = R.dias[i + (dx < 0 ? 1 : -1)];
+      if (prox) irParaDia(prox);
+    }, { passive: true });
+  })();
   $('#btn-ajustes').addEventListener('click', function () { mostrarTela('ajustes'); });
   $('#btn-busca').addEventListener('click', function () { Busca.abrir(); });
 

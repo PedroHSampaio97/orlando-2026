@@ -597,6 +597,19 @@ window.Fase3 = (function () {
     alvo.appendChild(cx);
   }
 
+  // Cabeçalho de dia nas listas do Comer: numeral na cor da operadora, semana e
+  // título em caps, fio até a margem. O mesmo índice do sumário da Home.
+  function cabDia(data, dia) {
+    const cab = el('div', 'rest-dia');
+    // a mesma chave de operadora do app.js, que carrega depois desta fase
+    if (dia) cab.setAttribute('data-op',
+      dia.operadora || (dia.tipo === 'logistica' ? 'logistica' : 'livre'));
+    cab.appendChild(el('span', 'rd-num', String(+data.slice(8, 10))));
+    cab.appendChild(el('span', 'rd-rot',
+      dia ? dia.diaSemana.slice(0, 3) + '  ·  ' + dia.titulo : ddmm(data)));
+    return cab;
+  }
+
   function pintarGastronomia() {
     const lista = R.gastronomia || [];
     const sub = $("#gastro-sub");
@@ -626,8 +639,7 @@ window.Fase3 = (function () {
     R.dias.forEach(function (d) {
       const itens = gastroDoDia(d.id);
       if (!itens.length) return;
-      const cab = el("div", "rest-dia", ddmm(d.data) + "  ·  " + d.diaSemana + "  ·  " + d.titulo);
-      alvo.appendChild(cab);
+      alvo.appendChild(cabDia(d.data, d));
       const ul = el("ul", "gastos");
       itens.forEach((g) => ul.appendChild(cartaoGastro(g, null)));
       alvo.appendChild(ul);
@@ -654,8 +666,7 @@ window.Fase3 = (function () {
 
     Object.keys(porDia).sort().forEach(function (data) {
       const dia = R.dias.find((d) => d.data === data);
-      const cab = el('div', 'rest-dia',
-        ddmm(data) + '  ·  ' + (dia ? dia.diaSemana + '  ·  ' + dia.titulo : ''));
+      const cab = cabDia(data, dia);
       cab.dataset.data = data;
       alvo.appendChild(cab);
       porDia[data]
