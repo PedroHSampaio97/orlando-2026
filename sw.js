@@ -10,7 +10,7 @@
    Depois de editar qualquer arquivo do app:  node tools/checar.js --selar
    ========================================================================== */
 
-const VERSAO = 'orlando2026-9c35aec2';
+const VERSAO = 'orlando2026-8b493090';
 const CACHE = VERSAO;
 
 // As fontes ficam locais e no precache: a regra é zero rede em runtime, e um

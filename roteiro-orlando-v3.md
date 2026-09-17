@@ -3,9 +3,9 @@
 
 **Base:** Travelodge by Wyndham, Kissimmee (US-192) · **Chegada:** 10/11, 12h35 no MCO · **Saída:** 26/11, 14h10 do MCO
 **Perfil:** casal, sem crianças. Prioridade: clássicos + montanhas-russas fortes.
-**Decisões fechadas:** dias 19 Islands of Adventure, 20 Epic Universe, 21 Winter Garden, 22 SeaWorld e 23 Busch Gardens · **o Epic Universe é um dia só, 20/11** · sem Mickey's Very Merry Christmas Party · sem Express Pass na Universal · carro alugado de 20 a 25/11, **devolvido no dia 25**, para o dia 26 ser só café da manhã e aeroporto · PID já emitida · a última noite é no Disney Springs, 25/11
+**Decisões fechadas:** dias 19 Islands of Adventure, 20 Epic Universe, 21 Winter Garden, 22 SeaWorld e 23 Busch Gardens · **o Epic Universe é um dia só, 20/11** · sem Mickey's Very Merry Christmas Party · sem Express Pass na Universal · carro alugado de 18 a 25/11, **devolvido no dia 25**, para o dia 26 ser só café da manhã e aeroporto · PID já emitida · a última noite é no Disney Springs, 25/11
 
-> **Aviso sobre horários:** os quatro dias de Disney têm **horário publicado**: **Magic Kingdom 9h–22h (11/11)**, **Epcot 9h–21h (13/11)**, **Hollywood Studios 9h–21h (15/11)** e **Animal Kingdom 8h–18h (16/11)**, todos com Early Entry meia hora antes — 7h30 no Animal Kingdom. O horário dos dias 13 e 16 vem do calendário publicado, conferido em 16/09, e não da confirmação oficial de 12/09: confirmem os dois no app da Disney. Ainda são suposição: Universal (17/11), Epic (19/11), SeaWorld (22/11) e Islands (23/11) em 9h, e Busch Gardens (24/11) em 10h. Ajustem a referência do dia no app e os blocos ancorados deslocam junto. **A partir do compromisso de hora marcada — desfile, show, reserva, pôr do sol — os blocos são fixos** e não se mexem com a abertura. Oito dias têm outra referência: a saída do Terminal C no dia 10, a saída do hotel nos dias 12, 20 e 25, a sessão do Grinchmas no dia 14, o início do jogo nos dias 18 e 21 e a decolagem de Orlando no dia 26.
+> **Aviso sobre horários:** os quatro dias de Disney têm **horário publicado**: **Magic Kingdom 9h–22h (11/11)**, **Epcot 9h–21h (13/11)**, **Hollywood Studios 9h–21h (15/11)** e **Animal Kingdom 8h–18h (16/11)**, todos com Early Entry meia hora antes — 7h30 no Animal Kingdom. O horário dos dias 13 e 16 vem do calendário publicado, conferido em 16/09, e não da confirmação oficial de 12/09: confirmem os dois no app da Disney. Horários oficiais conferidos nos apps em 17/09: **Universal Studios 10h–19h (17/11)**, **Islands of Adventure 9h–19h (19/11)**, **Epic Universe 10h–20h (20/11)**, **SeaWorld 9h–21h (22/11)** e **Busch Gardens 10h–20h (23/11)**. O **CityWalk funciona das 8h à meia-noite**. **A partir do compromisso de hora marcada — desfile, show, reserva, pôr do sol — os blocos são fixos** e não se mexem com a abertura. Sete dias têm outra referência: a saída do Terminal C no dia 10, a saída do hotel nos dias 12 e 25, a sessão do Grinchmas no dia 14, o início do jogo nos dias 18 e 21 e a decolagem de Orlando no dia 26.
 
 ---
 
@@ -340,24 +340,23 @@ O parque de rua, não de castelo: quarteirões de Nova York e São Francisco mon
 
 | Hora | O quê | Como |
 |---|---|---|
-| **7h45** | Sair do hotel | 30–35 min de Kissimmee. Uber US$ 25–35 |
-| **8h30** | Portão | Meia hora antes. **Não parem na Minion Land**, à esquerda da catraca — ela entope no rope drop. Se o parque tiver a entrada antecipada de hotel, a catraca abre uma hora antes para todos e a espera é na frente do parque |
-| **9h00** | **Escape from Gringotts** | Rope drop. Locker obrigatório |
-| **9h50** | **Transformers: The Ride 3D** | Walk-on na 1ª hora, 30 min na 2ª. A janela fecha às 11h |
-| **10h30** | **Revenge of the Mummy** | Locker obrigatório, sem detector de metal |
-| **11h05** | **Parada** | Dez minutos. Banheiro na New York, perto do Mummy |
-| **11h25** | **Despicable Me Minion Mayhem** | A 3ª maior fila do parque |
-| **12h00** | **Villain-Con Minion Blast** | Mesma land, sem caminhada |
-| **12h40** | **Beco Diagonal** | Ollivanders, o dragão do Gringotts, Knockturn Alley. Meia hora |
-| **13h15** | **Almoço — Leaky Cauldron** | Balcão. Mobile order pelo app da Universal |
-| **14h15** | **Men in Black: Alien Attack** | Vocês disputam pontuação |
-| **15h00** | **The Simpsons Ride** | A Springfield inteira está reconstruída em volta |
+| **8h45** | Sair do hotel | 30–35 min de Kissimmee. Uber US$ 25–35 |
+| **9h30** | Portão | Meia hora antes. **Não parem na Minion Land**, à esquerda da catraca — ela entope no rope drop. Se o parque tiver a entrada antecipada de hotel, a catraca abre uma hora antes para todos e a espera é na frente do parque |
+| **10h00** | **Escape from Gringotts** | Rope drop. Locker obrigatório |
+| **10h45** | **Transformers: The Ride 3D** | Walk-on na 1ª hora, 30 min na 2ª. A janela fecha às 11h |
+| **11h25** | **Revenge of the Mummy** | Locker obrigatório, sem detector de metal |
+| **12h00** | **Parada** | Dez minutos. Banheiro na New York, perto do Mummy |
+| **12h15** | **Despicable Me Minion Mayhem** | A 3ª maior fila do parque |
+| **12h50** | **Villain-Con Minion Blast** | Mesma land, sem caminhada |
+| **13h30** | **Beco Diagonal** | Ollivanders, o dragão do Gringotts, Knockturn Alley. Meia hora |
+| **14h00** | **Almoço — Leaky Cauldron** | Balcão. Mobile order pelo app da Universal |
+| **15h00** | **Men in Black: Alien Attack** | Vocês disputam pontuação |
 | **15h50** | **E.T. Adventure** | Meio-período desde maio de 2026 — confiram se está operando |
 | **16h30** | **The Bourne Stuntacular** | O melhor show de Orlando. Sessão marcada |
 | **17h30** | **Holiday Parade featuring Macy's** | ⚠️ **HORA A CONFIRMAR** — pode ser 17h30 ou 19h30 |
 | **18h45** | **Jantar — Lombard's Seafood Grille** | Reservado. Frutos do mar na San Francisco, a dois minutos do Beco |
-| **20h00** | **Beco Diagonal à noite** | A land no escuro. O dragão cospe fogo |
-| **21h00** | Voltar | Andem até o CityWalk antes de chamar o Uber |
+| **20h00** | **CityWalk** | Funciona das 8h à meia-noite. Vinte e cinco minutos na saída |
+| **20h25** | Voltar | Chamem o Uber no ponto próprio do CityWalk |
 
 ### Filas
 
@@ -373,7 +372,7 @@ O parque de rua, não de castelo: quarteirões de Nova York e São Francisco mon
 
 ### O desfile é o maior risco do dia
 
-O roteiro assume **17h30**, mas em anos anteriores ele rodou tanto às 17h30 quanto às 19h30. São duas horas no bloco que ancora a noite inteira. O desfile, o jantar e o Beco à noite estão como **âncora fixa** — não deslocam com a abertura do parque, e se a hora mudar é preciso mexer nos três. Está no checklist de 01/11.
+O roteiro assume **17h30**, mas em anos anteriores ele rodou tanto às 17h30 quanto às 19h30. O funcionamento oficial de 17/11 termina às 19h: se o app mostrar uma sessão incompatível, reconfirmem também o horário do parque. O desfile e o jantar estão como **âncora fixa** — não deslocam com a abertura, e se a hora mudar é preciso mexer nos dois.
 
 A temporada de Natal da Universal vai de **14/11 a 03/01**. Vocês pegaram a primeira noite dela no Islands, no dia 14.
 
@@ -390,7 +389,7 @@ Nenhuma delas é escolha de vocês:
 
 ### Renúncias
 
-Race Through New York (Jimmy Fallon), Kang & Kodos, DreamWorks Land, Animal Actors e DreamWorks Imagination Celebration (infantis). Hogwarts Express fica para o **dia 23**, quando dá para fazer ida e volta.
+The Simpsons Ride (saiu quando a abertura oficial passou para 10h), Race Through New York (Jimmy Fallon), Kang & Kodos, DreamWorks Land, Animal Actors e DreamWorks Imagination Celebration (infantis). Hogwarts Express fica para o **dia 19**, quando dá para fazer ida e volta.
 
 *O Bourne Stuntacular é o show do dia porque é ação de ponta a ponta; os outros shows do parque são infantis ou estão fechados.*
 
@@ -428,7 +427,7 @@ Hagrid's na abertura, que é a única janela abaixo de uma hora, e depois uma vo
 
 **O que mudou no parque:** o Jurassic Park River Adventure reabre em 19–20/11 depois de dez meses de reforma. A Lost Continent está sendo demolida em fases, e a Universal diz que o Mythos fecha em 2027, ainda sem data. O Thunder Falls Terrace fechou em julho.
 
-**Horário:** o de 19/11 ainda não saiu. A referência é 9h; o fechamento tende a 20–21h na semana de Thanksgiving. Se fechar às 20h, remarquem o Mythos para 18h35, o Kong sai e a tarde sobe 40 minutos — River Adventure 14h35, VelociCoaster 15h20, Hogwarts Express 16h55 e a projeção às 18h05, se já tiver escurecido.
+**Horário oficial:** **9h às 19h**, conferido no app da Universal em 17/09. A reserva oficial do Mythos continua às 19h15: entrem no restaurante logo depois da projeção e saiam com o parque vazio.
 
 ### Renúncias
 Grinchmas (visto no dia 14), Flight of the Hippogriff (34 min de fila para um minuto), Beco Diagonal (feito no dia 17), Pteranodon Flyers, os brinquedos da Seuss Landing, Popeye e Dudley Do-Right (molham muito) e Doctor Doom's Fearfall (o tempo dele foi para a fila da VelociCoaster; volta se o River Adventure não tiver reaberto).
@@ -437,35 +436,35 @@ Grinchmas (visto no dia 14), Flight of the Hippogriff (34 min de fila para um mi
 
 # 🌌 20/11 (sexta) — EPIC UNIVERSE
 
-O parque mais concorrido de Orlando, **no dia mais vazio da segunda metade da viagem**, e o único dia de Epic. **As onze atrações não cabem.** Sem Early Park Admission e sem Express, as quatro filas grandes do parque somam mais tempo do que o dia inteiro tem — Mine-Cart 165 min de média, Battle at the Ministry 135, Mario Kart 125 à noite, Hiccup's 90. O que cabe são três terras feitas de verdade: **Dark Universe** de manhã, porque é a única que abre limpa às 9h; **Isle of Berk** à tarde, com o show; e o **Ministry** na noite inteira, que é quando a fila dele despenca. A Super Nintendo World fica só com o almoço.
+O parque mais concorrido de Orlando, **no dia mais vazio da segunda metade da viagem**, e o único dia de Epic. **As onze atrações não cabem.** Sem Early Park Admission e sem Express, as quatro filas grandes do parque somam mais tempo do que o dia inteiro tem — Mine-Cart 165 min de média, Battle at the Ministry 135, Mario Kart 125 à noite, Hiccup's 90. O que cabe são três terras feitas de verdade: **Dark Universe** de manhã, porque é a única que abre limpa às 10h; **Isle of Berk** à tarde, com o show; e o **Ministry** na reta final, que é quando a fila dele despenca. A Super Nintendo World fica só com o almoço.
 
-**Hoje não tem carro** — ele só chega amanhã. É Uber, e o ponto de embarque do Epic é próprio (1222 Epic Blvd), a cinco minutos a pé da entrada.
+**Hoje é de carro** — retirado no dia 18. O estacionamento do Epic é próprio (1222 Epic Blvd), separado do complexo antigo da Universal.
 
 | Hora | O quê | Como |
 |---|---|---|
-| **7h15** | Sair do hotel — Uber | ~30 min, US$ 25–38 |
-| **7h50** | **Entrar e ir para a porta da Dark Universe** | O Celestial Park abre para todos no Early Park Admission |
-| **9h00** | **Monsters Unchained** | **Rope drop.** A Dark Universe é a única terra fora do Early Park Admission. Locker obrigatório |
-| **9h50** | **Curse of the Werewolf** | Montanha-russa giratória, com trechos de ré |
-| **10h50** | **Parada** | Na saída da Dark Universe. O mapa não marca banheiros: perguntem |
-| **11h10** | **Stardust Racers** | Detector de metal. A mais forte do parque |
-| **11h55** | **Almoço — Toadstool Cafe** | Sem reserva. É a única passagem do dia pela Super Nintendo World — atravessem devagar, ela está decorada pela primeira vez |
-| **13h00** | **Hiccup’s Wing Gliders** | Lançamento de alta velocidade. Locker obrigatório. **90 min de média** — a janela é larga de propósito |
-| **14h45** | **Dragon Racer’s Rally** | Você controla a inclinação e as inversões |
-| **15h45** | **Parada em Berk** | 25 min. Água, banheiro, sentar |
+| **8h15** | Sair do hotel — carro | ~30 min. Estacionamento US$ 32 pago antes |
+| **8h50** | **Entrar e ir para a porta da Dark Universe** | O Celestial Park abre para todos no Early Park Admission |
+| **10h00** | **Monsters Unchained** | **Rope drop.** A Dark Universe é a única terra fora do Early Park Admission. Locker obrigatório |
+| **10h50** | **Curse of the Werewolf** | Montanha-russa giratória, com trechos de ré |
+| **11h50** | **Parada** | Na saída da Dark Universe. O mapa não marca banheiros: perguntem |
+| **12h10** | **Stardust Racers** | Detector de metal. A mais forte do parque |
+| **12h55** | **Almoço — Toadstool Cafe** | Sem reserva. É a única passagem do dia pela Super Nintendo World — atravessem devagar, ela está decorada pela primeira vez |
+| **14h00** | **Hiccup’s Wing Gliders** | Lançamento de alta velocidade. Locker obrigatório. **90 min de média** — a janela é larga de propósito |
+| **14h50** | **Dragon Racer’s Rally** | Você controla a inclinação e as inversões |
+| **15h35** | **Parada em Berk** | 25 min. Água, banheiro, sentar |
 | **16h10** | Fila do teatro | Plateia por ordem de chegada. Meio do teatro |
 | **16h30** | **The Untrainable Dragon** | O maior show do Epic, 20 min. Horário sai no app no próprio dia |
 | **17h00** | **Jantar — Atlantic** | **Reservado.** A mesa espera só 15 min — cheguem 16h55 |
 | **18h30** | **Harry Potter and the Battle at the Ministry** | **A noite inteira é dele.** Mede 135 min às 18h e cai para 45–75 nas últimas duas ou três horas. Na saída vocês caem na Place Cachée já escura e decorada |
-| **21h00** | Sair — Uber | Pelo Celestial Park iluminado |
+| **20h00** | Sair — carro | Pelo Celestial Park iluminado até o estacionamento |
 
 ### O rope drop é na Dark Universe
 
 Durante o **Early Park Admission** o Celestial Park fica aberto para todo mundo, e a checagem de hóspede de hotel é feita **na porta de cada land**. Desde fevereiro de 2026 (conferido de novo em 16/06/2026) participam **Ministry of Magic, Super Nintendo World e Isle of Berk** — a Dark Universe saiu.
 
-Ou seja: às 9h os hóspedes de hotel já estão há uma hora no Battle at the Ministry. **O portal que abre vazio para vocês é o da Dark Universe.** A lista já mudou três vezes em dezoito meses: se em novembro a Dark Universe voltar e o Ministry sair, **troquem os dois blocos**.
+Ou seja: às 10h os hóspedes de hotel já estão há uma hora no Battle at the Ministry. **O portal que abre vazio para vocês é o da Dark Universe.** A lista já mudou três vezes em dezoito meses: se em novembro a Dark Universe voltar e o Ministry sair, **troquem os dois blocos**.
 
-### As duas maiores filas querem a mesma hora
+### As duas maiores filas querem a mesma hora — e só uma cabe
 
 | Atração | Média | Janela barata |
 |---|---|---|
@@ -476,11 +475,11 @@ Ou seja: às 9h os hóspedes de hotel já estão há uma hora no Battle at the M
 | Hiccup's Wing Gliders | 35–41 min | cedo; pior por volta das 17h |
 | Dragon Racer's Rally · Yoshi · Stardust | 18–37 min | meio do dia |
 | Monsters Unchained | 13–15 min | enche logo depois da abertura |
-É isso que obriga o **jantar às 17h**: as três últimas horas são das duas maiores filas. O Atlantic está **reservado** para as 17h, duas pessoas. A Universal pede chegada 5 minutos antes e **segura a mesa só por 15 minutos** — o The Untrainable Dragon termina por volta das 16h50, em Berk, a três minutos do Atlantic, exatamente a folga pedida.
+Com o fechamento oficial às 20h, o **Battle at the Ministry** ocupa a reta final, das 18h30 até a saída. O Mine-Cart fica nas renúncias: tentar encaixar os dois eliminaria a tarde em Berk. O Atlantic está **reservado** para as 17h, duas pessoas. A Universal pede chegada 5 minutos antes e **segura a mesa só por 15 minutos** — o The Untrainable Dragon termina por volta das 16h50, em Berk, a três minutos do Atlantic, exatamente a folga pedida.
 
 ### O show da tarde
 
-**The Untrainable Dragon** é o maior show do Epic: atores, bonecos enormes e um Banguela mecânico de meia tonelada e oito metros de envergadura voando por cima da plateia, em 20 minutos. A sessão das 16h30 é a última antes do jantar. Em setembro de 2026 as sessões iam das 11h10 às 19h, a cada 50 minutos; se em novembro não houver sessão entre 16h15 e 16h35, a parada das 15h45 vira a pausa inteira e o show fica de fora. Remarcar ou cancelar: app da Universal ou **+1 407-224-3663**. Se perderem a mesa, o **Mead Hall** (Isle of Berk) não aceita reserva e entra no lugar.
+**The Untrainable Dragon** é o maior show do Epic: atores, bonecos enormes e um Banguela mecânico de meia tonelada e oito metros de envergadura voando por cima da plateia, em 20 minutos. A sessão das 16h30 é a última antes do jantar. Em setembro de 2026 as sessões iam das 11h10 às 19h, a cada 50 minutos; se em novembro não houver sessão entre 16h15 e 16h35, a parada das 15h35 vira a pausa inteira e o show fica de fora. Remarcar ou cancelar: app da Universal ou **+1 407-224-3663**. Se perderem a mesa, o **Mead Hall** (Isle of Berk) não aceita reserva e entra no lugar.
 
 ### O guia oficial da Universal
 
@@ -492,14 +491,12 @@ A Super Nintendo World ganha decoração **pela primeira vez**, Berk faz o **Sno
 
 ### Planos
 
-- **B — a Dark Universe voltou para o EPA.** Battle at the Ministry às 9h; Monsters e Curse às 18h20.
-- **B2 — o parque não fecha às 21h.** Ministry, Mine-Cart e saída acompanham o fechamento. Às 22h, o jantar das 17h fica; às 20h, o Ministry sobe para 17h20, o Atlantic é remarcado para perto das 15h45 e o The Untrainable Dragon sai.
-- **C — Mine-Cart parado às 20h.** Ele quebra com frequência. Se voltar antes das 21h, entrem na fila antes de fechar.
+- **B — a Dark Universe voltou para o EPA.** Battle at the Ministry às 10h; Monsters e Curse depois do jantar.
 - **C2 — chuva ou frio.** Monsters, Ministry, o teatro do Untrainable Dragon, Toadstool e Atlantic são cobertos.
 
 ### Renúncias
 
-**Le Cirque Arcanus** (circo de Animais Fantásticos, 23 minutos e 10 de pré-show; resenhas divididas, e a noite no Ministry é da fila do Battle), **Fyre Drill** (encharca, e depois vêm o show e o jantar de mesa), **Constellation Carousel**, **Astronomica** e **Viking Training Camp** (áreas de brincar), **Bowser Jr. Shadow Showdown** (desafio da Power-Up Band, voltado a criança). As 11 atrações de brinquedo do parque estão todas no dia.
+**Mine-Cart Madness** (fila média de 165 minutos; custaria a reta final do Battle at the Ministry), **Le Cirque Arcanus** (circo de Animais Fantásticos, 23 minutos e 10 de pré-show; resenhas divididas), **Fyre Drill** (encharca, e depois vêm o show e o jantar de mesa), **Constellation Carousel**, **Astronomica** e **Viking Training Camp** (áreas de brincar), **Bowser Jr. Shadow Showdown** (desafio da Power-Up Band, voltado a criança).
 
 **Power-Up Band:** comprem se quiserem jogar os desafios interativos da Super Nintendo World. ~US$ 40. Decisão no checklist de outubro.
 
@@ -533,7 +530,7 @@ As montanhas-russas grandes e o simulador novo até as 15h30, os animais e o Orc
 | **21h00** | **Holiday Reflections** — fogos no fechamento | Lagoa |
 | **21h15** | Saída — hotel por volta das 22h | |
 
-**O horário é previsão:** 9h às 21h, pelo calendário do Queue-Times. O site oficial ainda não publicou novembro. Se mudar, a manhã desloca; o Orca e a noite são fixos.
+**Horário oficial:** **9h às 21h**, conferido no app do SeaWorld em 17/09. O Orca e a noite continuam com grade a confirmar no próprio dia.
 
 **A ordem é um anel:** a Pipeline fica colada na entrada, e o dia dá a volta na lagoa sem voltar atrás. As três filas longas do parque — Expedition Odyssey (46 min de média), Penguin Trek (35) e Pipeline (27) — caem na manhã. Mako (13), Kraken (10) e Manta (19) ficam para a tarde.
 
@@ -579,9 +576,9 @@ Só de carro, 1h25 de cada lado. Cinco montanhas-russas e a torre de queda até 
 
 **Nada solto:** nove atrações proíbem objeto solto, e o armário avulso custa US$ 4 pelas primeiras duas horas. Levem o mínimo; o resto fica no carro.
 
-**Horário:** o de 23/11 ainda não saiu. A referência é 10h. No Natal de 2025 o parque ia até 22h na maioria dos dias, com alguns dias de semana fechando às 20h — nesse caso, a Iron Gwazi noturna sai.
+**Horário oficial:** **10h às 20h**, conferido no app do Busch Gardens em 17/09. Entrem na fila da Iron Gwazi até 19h55; quem já está na fila continua depois do fechamento.
 
-**Christmas Town:** datas selecionadas de 13/11 a 04/01. Se 24/11 não estiver na lista, saem o show no gelo e as luzes, e a estrada de volta sobe para 19h30.
+**Christmas Town:** datas selecionadas de 13/11 a 04/01. Se 23/11 não estiver na lista, saem o show no gelo e as luzes, e a estrada de volta sobe para 19h30.
 
 ### Renúncias
 Cobra's Curse e Phoenix Rising (montanhas-russas de família), Serengeti Flyer, Congo River Rapids (molha), Serengeti Safari (pago à parte; o trem atravessa a mesma planície) e as áreas infantis.
@@ -639,17 +636,17 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [ ] **01/10** — Ingressos Disney aparecendo no My Disney Experience — nos DOIS perfis *(data estimada)*
 - [ ] **01/10** — Cartão de crédito salvo no My Disney Experience, nos DOIS perfis *(data estimada)*
 - [ ] **06/10** — Confirmar o transfer gratuito do hotel para Magic Kingdom e Hollywood Studios *(data estimada)*
-- [ ] **06/10** — Reservar o carro na Avis do Old Town: retirada 20/11 às 15h, devolução 25/11 às 15h *(data estimada)*
-- [ ] **10/10** — Conferir os horários oficiais de 17, 19, 20, 22 e 23/11 e ajustar a referência de cada dia *(data estimada)*
+- [ ] **06/10** — Reservar o carro na Avis do Old Town: retirada 18/11 às 10h, devolução 25/11 às 15h *(data estimada)*
+- [x] **17/09** — Horários oficiais conferidos e aplicados: Universal Studios 17/11, 10h–19h; Islands 19/11, 9h–19h; Epic 20/11, 10h–20h; SeaWorld 22/11, 9h–21h; Busch Gardens 23/11, 10h–20h; CityWalk, 8h–00h
 - [ ] **11/10** — Animal Kingdom 16/11 — confirmar 8h às 18h no app da Disney (Early Entry 7h30) *(data estimada)*
 - [ ] **15/10** — Decidir sobre a Power-Up Band do Epic Universe (~US$ 40) *(data estimada)*
-- [ ] **15/10** — Confirmar que 22/11 tem Christmas Celebration (SeaWorld) e 24/11 tem Christmas Town (Busch Gardens) — ambos rodam em datas selecionadas *(data estimada)*
+- [ ] **15/10** — Confirmar que 22/11 tem Christmas Celebration (SeaWorld) e 23/11 tem Christmas Town (Busch Gardens) — ambos rodam em datas selecionadas *(data estimada)*
 - [ ] **25/10** — Ingressos Universal aparecendo no app — nos DOIS perfis *(data estimada)*
 - [ ] **25/10** — Ingressos SeaWorld e Busch Gardens (Promo Park) — com o plano de refeição *(data estimada)*
 - [ ] **25/10** — Ativar o roaming nas duas linhas e confirmar a cobertura na Colômbia *(data estimada)*
 
 **Novembro, antes de embarcar**
-- [ ] **01/11** — Horário do Epic Universe em 20/11 — abertura e FECHAMENTO *(data estimada)*
+- [x] **17/09** — Epic Universe em 20/11 — 10h às 20h, confirmado no app oficial
 - [ ] **05/11** — Cadastrar no Simon VIP Club para o cupom do outlet sair de graça *(data estimada)*
 - [ ] **05/11** — Reserva do Travelodge salva OFFLINE nos dois celulares
 - [ ] **05/11** — Apólice do seguro salva OFFLINE nos dois celulares, e banco avisado
@@ -664,10 +661,10 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [ ] **14/11** — Comprar o Oakley Meta Vanguard no app do Best Buy, com retirada no Best Buy do Millenia (4155 Millenia Blvd)
 - [ ] **15/11, 8h** — HOJE, no portão: a hora do Fantasmic!
 - [ ] **16/11, 7h15** — HOJE, no portão: a grade do Festival of the Lion King
-- [ ] **17/11, 8h30** — HOJE, no portão: o desfile da Macy’s, o CineSational e o fechamento do parque
+- [ ] **17/11, 9h30** — HOJE, no portão: a grade do desfile da Macy’s, do CineSational e do Bourne
 - [ ] **19/11, 8h15** — HOJE, no portão: a hora da projeção no castelo de Hogwarts
 - [ ] **19/11** — Reservar o MCO Reserve para a volta de 26/11
-- [ ] **20/11, 7h50** — HOJE, no portão: a grade do The Untrainable Dragon e das festas de Natal
+- [ ] **20/11, 8h50** — HOJE, no portão: a grade do The Untrainable Dragon e das festas de Natal
 - [ ] **22/11, 8h15** — HOJE, no portão: a grade dos quatro shows do SeaWorld
 - [ ] **23/11, 9h15** — HOJE, no portão: o Christmas on Ice e o show de luzes do Serengeti
 

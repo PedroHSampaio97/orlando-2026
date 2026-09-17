@@ -1,13 +1,13 @@
 # Roteiro Orlando — Complemento: dias sem parque
 ### Anexo ao roteiro-orlando-v3.md · mesmo formato, mesmas regras
 
-> Este arquivo complementa o `roteiro-orlando-v3.md` com os dias sem parque — 10, 12, 14, 18, 20, 21, 25 e 26 —, no mesmo formato e com as mesmas regras.
+> Este arquivo complementa o `roteiro-orlando-v3.md` com os dias sem parque — 10, 12, 14, 18, 21, 24, 25 e 26 —, no mesmo formato e com as mesmas regras.
 
 ---
 
 ## Antes de tudo: um aviso sobre densidade
 
-Estes são os únicos dias em que vocês podem não fazer nada, e cinco deles têm blocos vazios **de propósito**: 12, 14, 21, 24 e 25. Se vocês preencherem esses buracos, chegam destruídos ao Epic do dia 19, aos três parques seguidos de 22 a 24 e à última noite, no Disney Springs.
+Estes são os únicos dias em que vocês podem não fazer nada, e cinco deles têm blocos vazios **de propósito**: 12, 14, 21, 24 e 25. Se vocês preencherem esses buracos, chegam destruídos ao Islands do dia 19, ao Epic do dia 20, aos parques dos dias 22 e 23 e à última noite, no Disney Springs.
 
 Os blocos marcados como **VAZIO PROPOSITAL** não são falha de planejamento. Resistam à tentação de encaixar coisa ali.
 
@@ -104,19 +104,20 @@ Sábado. O objetivo do dia é ficar longe de parque cheio e chegar inteiro na se
 > decoração que vocês vieram ver, e não leva gorjeta.
 
 **Não tentem atração grande hoje.** Hagrid's, VelociCoaster e Forbidden Journey são do dia 19,
-numa segunda-feira. Hoje é sábado e primeira noite da temporada: o pior momento possível
+numa quinta-feira. Hoje é sábado e primeira noite da temporada: o pior momento possível
 para encarar fila.
 
 ---
 
 # 🏀 18/11 (quarta) — Compras, Lake Eola e NBA
 
-Dia de cidade, não de parque. É também **a véspera do Epic Universe** — a saída é às 7h15 e vocês chegam do jogo por volta das 22h15. Por isso a manhã é lenta de propósito.
+Dia de cidade, não de parque. É também **a véspera do Islands of Adventure** — a saída é às 7h25 e vocês chegam do jogo por volta das 22h15. Por isso a manhã é lenta de propósito.
 
 | Hora | O quê | Notas |
 |---|---|---|
 | **9h00** | Café no hotel | Sem alarme |
-| **10h30** | Sair para o Millenia | ~25 min. Uber US$ 28–40 |
+| **10h00** | **Retirar o carro — Avis do Old Town** | Suíte 434. Carteira, PID, passaporte e cartão de crédito do condutor |
+| **10h30** | Sair para o Millenia | ~25 min de carro. Estacionamento grátis |
 | **11h00** | **The Mall at Millenia** — 4200 Conroy Rd | **Abre 11h.** Primeira parada: balcão da Macy's, **com passaporte** |
 | **13h00** | **Almoço no mall** | *The Cheesecake Factory* na entrada principal |
 | **14h15** | **Best Buy do Millenia — retirar o Oakley** — 4155 Millenia Blvd | Pedido feito no app. Menos de 1 km do mall |
@@ -204,7 +205,6 @@ O respiro depois de cinco dias seguidos fora do hotel. Café sem pressa no IHOP,
 | **9h45** | **VAZIO PROPOSITAL** — manhã livre no hotel | É também a rede de segurança da Universal: o ingresso é de 14 dias com entrada ilimitada |
 | **12h45** | **Almoço — El Cilantrillo**, dentro do Old Town | Porto-riquenho de mesa: mofongo, pernil. Pratos perto de US$ 20 |
 | **14h00** | **Old Town de dia** · Mine Blower opcional | Montanha-russa de madeira do Fun Spot, ao lado. Paga por brinquedo |
-| **15h00** | **Retirar o carro — Avis do Old Town** | Suíte 434, das 7h às 19h. **Recusem o e-Toll Unlimited** |
 | **15h30** | **VAZIO PROPOSITAL** — descanso no hotel | |
 | **17h20** | **Old Town Kissimmee** — 5770 W Irlo Bronson Memorial Hwy | Lojas, bares e Fun Spot. Pôr do sol por volta das 17h30 |
 | **18h30** | **Jantar — World Food Trucks**, 5811 W Irlo Bronson | Mais de 100 food trucks, a 300 m do Old Town. Estacionamento grátis |
@@ -212,7 +212,7 @@ O respiro depois de cinco dias seguidos fora do hotel. Café sem pressa no IHOP,
 
 | **21h15** | Voltar | Três minutos. Amanhã a saída é 8h |
 
-**O carro:** ele já está com vocês desde o dia 18. A Avis fica dentro do Old Town e conta o aluguel em períodos de 24 horas — retirado às 10h do dia 18 e devolvido às 15h do dia 25, são cinco diárias certas. **Pedágio:** o e-Toll Unlimited cobra de US$ 11 a 26 por dia de aluguel, com ou sem pedágio; sem ele, paga-se cada pedágio pela placa, mais US$ 6,95 só nos dias em que houve pedágio.
+**O carro:** ele já está com vocês desde o dia 18. A Avis fica dentro do Old Town e conta o aluguel em períodos de 24 horas — retirado às 10h do dia 18 e devolvido às 15h do dia 25, são sete diárias. **Pedágio:** o e-Toll Unlimited cobra de US$ 11 a 26 por dia de aluguel, com ou sem pedágio; sem ele, paga-se cada pedágio pela placa, mais US$ 6,95 só nos dias em que houve pedágio.
 
 **Os desfiles:** o de sexta é o dos muscle cars (1964 em diante) e o de sábado é o dos clássicos anteriores a 1985, os dois às 20h30 e de graça. Hoje é terça, e nenhum dos dois roda: a Trophy Row fica vazia, e a rua é das lojas, dos bares e do Fun Spot.
 
