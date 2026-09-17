@@ -633,8 +633,8 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [x] **12/09** — Magic Kingdom — sem reserva: almoço e jantar do dia 11 são de balcão (Columbia Harbour House e Casey’s)
 - [ ] **15/09** — Confirmar com a agência a regra exata de validade do ingresso Disney de 4 dias *(data estimada)*
 - [x] **16/09** — Oga’s Cantina (15/11, 17h05) — RESERVADO, confirmação 356259476987
-- [ ] **17/09, 6h ET** — Sanaa: remarcar para 16/11 às 19h40 e cancelar a mesa de 13/11
-- [ ] **17/09, 6h ET** — Epcot: abrir a janela de mesa só se mudarem de ideia sobre o Food & Wine
+- [x] **17/09** — Sanaa (16/11, 19h40) — RESERVADO, confirmação 356258407484
+- [x] **17/09** — Epcot (13/11): sem mesa — a tarde e a noite são as barracas do Food & Wine
 - [ ] **17/09** — A hora do Fantasmic (15/11) e do Luminous (13/11) — e confirmar o Epcot de 13/11
 - [ ] **26/09, 6h ET** — Reservar o Homecomin’ para as 19h30 de 25/11 — a janela de 60 dias abre às 6h ET
 

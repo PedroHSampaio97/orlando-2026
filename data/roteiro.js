@@ -8036,12 +8036,12 @@ window.ROTEIRO = {
 
     { id: 'r-sanaa', nome: 'Sanaa', data: '2026-11-16', hora: '19:40',
       refeicao: 'jantar', local: 'Animal Kingdom Villas · Kidani Village', alternativas: ['The Mara, balcão no Animal Kingdom Lodge', 'Boma, bufe no Animal Kingdom Lodge'],
-      precisaReserva: true, janelaAbre: '2026-09-17', janelaHora: '06:00 ET',
+      precisaReserva: true, janelaAbre: null, janelaHora: null,
       canal: 'My Disney Experience', blocoId: 'b-1611-1940',
-      nota: 'A MESA É 16/11 ÀS 19h40 e precisa ser remarcada: a janela de 60 dias abre em ' +
-            '17/09, às 6h ET, e a reserva de 13/11 (confirmação 356258407484) tem de ser ' +
-            'cancelada no mesmo dia, pelo My Disney Experience ou pelo +1 407-939-3463. ' +
-            'Fica na Kidani ' +
+      statusPadrao: 'confirmado', confirmacaoPadrao: '356258407484',
+      nota: 'RESERVADO — confirmação 356258407484, duas pessoas, 19h40. O número é o mesmo ' +
+            'desde a primeira reserva: o My Disney Experience mantém a confirmação quando a ' +
+            'data é alterada. Fica na Kidani ' +
             'Village, a ala de villas do Animal Kingdom Lodge, e não dentro do parque. Vão ' +
             'pela comida, não pela janela: às 19h40 de novembro está escuro há mais de duas ' +
             'horas e não se vê a savana. Peçam o Bread Service, cinco pães com nove ' +
@@ -8091,11 +8091,13 @@ window.ROTEIRO = {
             'Fantasmic: Rosie’s All-American Café, Catalina Eddie’s e Fairfax Fare. Sem ' +
             'reserva, com mobile order. Balcão não leva gorjeta.' },
 
-    { id: 'r-epcot-mesa', nome: 'Epcot — mesa (opcional)', data: '2026-11-16', hora: null,
+    { id: 'r-epcot-mesa', nome: 'Epcot — mesa (opcional)', data: '2026-11-13', hora: null,
       refeicao: 'jantar', local: 'Epcot · World Showcase', alternativas: [],
-      precisaReserva: true, janelaAbre: '2026-09-17', janelaHora: '06:00 ET',
+      precisaReserva: true, janelaAbre: null, janelaHora: null,
       canal: 'My Disney Experience', blocoId: null,
-      nota: 'Só se quiserem mesa em vez das barracas do Food & Wine. O plano do dia é barraca.' },
+      statusPadrao: 'cancelado',
+      nota: 'FICA DE FORA por decisão de vocês: o almoço e o jantar do dia 13 são as barracas ' +
+            'do Food & Wine, em quatro voltas ao longo da tarde e da noite.' },
 
     { id: 'r-leaky', nome: 'Leaky Cauldron', data: '2026-11-17', hora: '13:15',
       refeicao: 'almoco', local: 'Universal Studios · Diagon Alley', alternativas: [],
@@ -8262,17 +8264,14 @@ window.ROTEIRO = {
              '(Columbia Harbour House e Casey’s)',
       restauranteIds: ['r-columbia-harbour'] },
 
-    { id: 'ck-1409', dataAlvo: '2026-09-17', validaAte: '2026-11-16', hora: '06:00', fuso: 'ET',
-      janelaReserva: true, critico: true,
-      texto: 'Sanaa: remarcar para 16/11 às 19h40 e cancelar a mesa de 13/11',
+    { id: 'ck-1409', dataAlvo: '2026-09-17', hora: null, fuso: null,
+      janelaReserva: false, critico: false, feitoPadrao: true,
+      texto: 'Sanaa (16/11, 19h40) — RESERVADO, confirmação 356258407484',
       nota:
-        'SÃO DUAS COISAS NO MESMO DIA. A janela de 60 dias para 16/11 abre em 17/09, entre ' +
-        '5h45 e 6h ET — entrem 5h45. E a reserva de 13/11, confirmação 356258407484, tem de ' +
-        'ser cancelada, senão a Disney cobra a taxa de não comparecimento.\n\n' +
-        'O Sanaa é considerado fácil a moderado de conseguir. Se o app não mostrar mesa, ' +
-        'tentem o OpenTable, que às vezes tem o que o app não mostra.\n\n' +
-        'Reservem 19h40 e NÃO peçam mesa na janela: a essa hora está escuro e não se vê a ' +
-        'savana. A escolha é pela comida, e a mesa fica na Kidani Village.',
+        'A mesa fica na Kidani Village, a ala de villas do Animal Kingdom Lodge, e não dentro ' +
+        'do parque. NÃO peçam mesa na janela: às 19h40 está escuro e não se vê a savana.\n\n' +
+        'A Disney cobra taxa de não comparecimento e exige cancelamento com 2 horas de ' +
+        'antecedência, pelo My Disney Experience ou pelo +1 407-939-3463.',
       restauranteIds: ['r-sanaa'] },
 
     { id: 'ck-1609', dataAlvo: '2026-09-16', dataEstimada: false, hora: null, fuso: null,
@@ -8289,15 +8288,14 @@ window.ROTEIRO = {
         'até a Sunset Blvd.',
       restauranteIds: ['r-ogas'] },
 
-    { id: 'ck-1709', dataAlvo: '2026-09-17', validaAte: '2026-11-16', hora: '06:00', fuso: 'ET',
-      janelaReserva: true, critico: false,
-      texto: 'Epcot: abrir a janela de mesa só se mudarem de ideia sobre o Food & Wine',
+    { id: 'ck-1709', dataAlvo: '2026-09-17', hora: null, fuso: null,
+      janelaReserva: false, critico: false, feitoPadrao: true,
+      texto: 'Epcot (13/11): sem mesa — a tarde e a noite são as barracas do Food & Wine',
       nota:
         'O JANTAR DO DIA 13 É O FOOD & WINE — quatro voltas de barracas ao longo da tarde e ' +
         'da noite, a última às 20h, antes de pegar lugar para o Luminous.\n\n' +
-        'Esta janela fica registrada porque hoje é o único dia em que ela abre. Se em ' +
-        'algum momento vocês decidirem que querem uma mesa de verdade no Epcot, é hoje ' +
-        'ou nunca. Não decidindo nada, não façam nada — e risquem.',
+        'A janela de mesa do dia 13 fica registrada aqui como decisão tomada: o dia segue ' +
+        'sem reserva, com as barracas.',
       restauranteIds: ['r-epcot-mesa'] },
 
     { id: 'ck-ingresso', dataAlvo: '2026-09-15', validaAte: '2026-11-08', dataEstimada: true, motivoData: 'Bloqueia o plano de Lightning Lane inteiro', hora: null, fuso: null,
