@@ -3040,7 +3040,7 @@ window.ROTEIRO = {
                   'ainda houver janela de retorno.' },
 
         { texto: 'Reserva do Sanaa: número de confirmação à mão', critico: false,
-          motivo: 'Jantar às 19h40, confirmação 356258407484, na Kidani Village do Animal ' +
+          motivo: 'Jantar às 19h50, confirmação 356258407484, na Kidani Village do Animal ' +
                   'Kingdom Lodge — OUTRO endereço, não é dentro do parque. Deixem o número acessível no celular hoje, não procurando ' +
                   'e-mail amanhã com o Uber esperando. O telefone da Disney está no Guia, ' +
                   'se precisarem remarcar: +1 407-939-3463, com 2h de antecedência.' },
@@ -3524,7 +3524,7 @@ window.ROTEIRO = {
         'O FECHAMENTO ÀS 18H É O QUE COREOGRAFA A RETA FINAL: o safári ao entardecer, o Na’vi ' +
         'e a fila do Flight of Passage no último minuto estão encaixados nele — e o ' +
         'horário oficial de 12/09 confirmou os 18h. O plano A vale como está, e o Sanaa ' +
-        'das 19h40 deixa de ter risco de colisão.',
+        'das 19h50 deixa de ter risco de colisão.',
         pesquisa: '2026-09-12' },
 
       { tipo: 'bom', texto:
@@ -3594,11 +3594,11 @@ window.ROTEIRO = {
           'inclusive a saída do hotel. Os shows têm sessão própria — confiram a grade e ' +
           'ajustem no selo de horário de cada um.',
           'FECHOU MAIS TARDE (19h ou 20h): o dia respira, MAS CUIDADO COM O SANAA. A mesa é ' +
-          'às 19h40 e a Disney cobra taxa de não comparecimento, com cancelamento exigido ' +
+          'às 19h50 e a Disney cobra taxa de não comparecimento, com cancelamento exigido ' +
           'com 2 horas de antecedência (+1 407-939-3463).\n\n' +
           'Com fechamento às 19h ou às 20h, NÃO dá para fazer as duas coisas: a fila do ' +
           'Flight of Passage no último minuto termina depois das 19h30, e ainda são 25 ' +
-          'minutos saindo de Pandora e 25 de Uber até a mesa das 19h40. Ou vocês remarcam o ' +
+          'minutos saindo de Pandora e 25 de Uber até a mesa das 19h50. Ou vocês remarcam o ' +
           'Sanaa para as 21h logo de manhã, pelo My Disney Experience, ou mantêm a fila do ' +
           'Flight of Passage às 17h45 como está no plano A e usam a folga que sobrou para ' +
           'o Everest. A segunda opção é a segura.',
@@ -3621,7 +3621,7 @@ window.ROTEIRO = {
           'entardecer. Se for para cortar, cortem nesta ordem: o Everest de novo (15h45), ' +
           'o Kali (9h15) e as trilhas. Os três são opcionais de propósito e existem ' +
           'justamente para serem a margem.',
-          'Se vocês estiverem destruídos, o Sanaa às 19h40 tem tolerância curta e taxa por ' +
+          'Se vocês estiverem destruídos, o Sanaa às 19h50 tem tolerância curta e taxa por ' +
           'não comparecimento: cancelem com 2 horas de antecedência pelo My Disney Experience ' +
           'ou pelo +1 407-939-3463.',
         ],
@@ -3942,7 +3942,7 @@ window.ROTEIRO = {
         contexto:
           'A reta final começa agora e é coreografada minuto a minuto.\n\n' +
           'COMAM ALGUMA COISA DA MOCHILA. Os petiscos do Nomad foram às 14h25 e o Sanaa é ' +
-          'às 19h40 — cinco horas, com o safári, o Na’vi e 55 minutos de fila do ' +
+          'às 19h50 — cinco horas, com o safári, o Na’vi e 55 minutos de fila do ' +
           'Flight of Passage no meio. Entrar naquela fila com fome é o erro mais fácil de ' +
           'evitar do dia.\n\n' +
           'E duas conferências antes de tudo:\n\n' +
@@ -4072,18 +4072,18 @@ window.ROTEIRO = {
           'Kingdom Lodge, em 3701 Osceola Pkwy. No Uber, o destino é "Disney’s Animal ' +
           'Kingdom Villas – Kidani Village", e não o parque nem o prédio principal do Lodge, ' +
           'que tem outra entrada.\n\n' +
-          'Levem o número da reserva à mão: 356258407484. Chegando 19h30, vocês têm ' +
-          'dez minutos de folga antes da mesa.',
+          'Levem o número da reserva à mão: 356258407484. Chegando 19h30, vocês têm vinte ' +
+          'minutos de folga antes da mesa.',
         localId: 'ak-lodge', acesso: [], duracaoMin: 25, pesquisa: '2026-09-15' },
 
-      { id: 'b-1611-1940', hora: '19:40', ancora: 'fixo', tipo: 'refeicao',
+      { id: 'b-1611-1950', hora: '19:50', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Sanaa',
         descricao: 'Vão pela comida, não pela janela',
         contexto:
           'Cozinha indiana com influência africana; o nome quer dizer “obra de arte” em ' +
           'suaíli.\n\n' +
           'NÃO PEÇAM MESA NA JANELA. O pôr do sol em 16/11 é por volta das 17h30 e vocês ' +
-          'chegam às 19h40 — está escuro há mais de duas horas. A savana tem iluminação ' +
+          'chegam às 19h50 — está escuro há mais de duas horas. A savana tem iluminação ' +
           'fraca e, de dentro, o vidro vira espelho. A promessa de girafas e zebras na ' +
           'janela é real, mas só de dia. E hoje vocês já viram os bichos duas vezes, no ' +
           'safári.\n\n' +
@@ -4101,7 +4101,7 @@ window.ROTEIRO = {
             fonte: 'D23; Wikipedia — Disney’s Animal Kingdom Lodge', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1611-2115', hora: '21:15', ancora: 'fixo', tipo: 'deslocamento',
+      { id: 'b-1611-2125', hora: '21:25', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel',
         descricao: 'Uber, ~25 min, US$ 20–30',
         contexto:
@@ -8034,16 +8034,16 @@ window.ROTEIRO = {
       nota: 'Não aceita reserva. Entrem na lista de espera pelo app da Disney, ou no balcão, ' +
             'e passeiem enquanto esperam. Mesa com garçom: leva gorjeta.' },
 
-    { id: 'r-sanaa', nome: 'Sanaa', data: '2026-11-16', hora: '19:40',
+    { id: 'r-sanaa', nome: 'Sanaa', data: '2026-11-16', hora: '19:50',
       refeicao: 'jantar', local: 'Animal Kingdom Villas · Kidani Village', alternativas: ['The Mara, balcão no Animal Kingdom Lodge', 'Boma, bufe no Animal Kingdom Lodge'],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
-      canal: 'My Disney Experience', blocoId: 'b-1611-1940',
+      canal: 'My Disney Experience', blocoId: 'b-1611-1950',
       statusPadrao: 'confirmado', confirmacaoPadrao: '356258407484',
-      nota: 'RESERVADO — confirmação 356258407484, duas pessoas, 19h40. O número é o mesmo ' +
+      nota: 'RESERVADO — confirmação 356258407484, duas pessoas, 19h50. O número é o mesmo ' +
             'desde a primeira reserva: o My Disney Experience mantém a confirmação quando a ' +
             'data é alterada. Fica na Kidani ' +
             'Village, a ala de villas do Animal Kingdom Lodge, e não dentro do parque. Vão ' +
-            'pela comida, não pela janela: às 19h40 de novembro está escuro há mais de duas ' +
+            'pela comida, não pela janela: às 19h50 de novembro está escuro há mais de duas ' +
             'horas e não se vê a savana. Peçam o Bread Service, cinco pães com nove ' +
             'acompanhamentos (~US$ 23), que é o motivo real de vir aqui.' },
 
@@ -8266,10 +8266,10 @@ window.ROTEIRO = {
 
     { id: 'ck-1409', dataAlvo: '2026-09-17', hora: null, fuso: null,
       janelaReserva: false, critico: false, feitoPadrao: true,
-      texto: 'Sanaa (16/11, 19h40) — RESERVADO, confirmação 356258407484',
+      texto: 'Sanaa (16/11, 19h50) — RESERVADO, confirmação 356258407484',
       nota:
         'A mesa fica na Kidani Village, a ala de villas do Animal Kingdom Lodge, e não dentro ' +
-        'do parque. NÃO peçam mesa na janela: às 19h40 está escuro e não se vê a savana.\n\n' +
+        'do parque. NÃO peçam mesa na janela: às 19h50 está escuro e não se vê a savana.\n\n' +
         'A Disney cobra taxa de não comparecimento e exige cancelamento com 2 horas de ' +
         'antecedência, pelo My Disney Experience ou pelo +1 407-939-3463.',
       restauranteIds: ['r-sanaa'] },
@@ -8549,7 +8549,7 @@ window.ROTEIRO = {
         'O CALENDÁRIO PUBLICADO DÁ 8h ÀS 18h PARA 16/11, com Early Entry às 7h30, conferido ' +
         'em 16/09. É o que o dia assume — a referência está em 8h, a saída é 6h30 e a reta ' +
         'final do fim da tarde está encaixada nesse fechamento. Confirmem no app da Disney.\n\n' +
-        'O Sanaa das 19h40 deixa de ter risco: com o parque fechando às 18h, a fila do ' +
+        'O Sanaa das 19h50 deixa de ter risco: com o parque fechando às 18h, a fila do ' +
         'Flight of Passage no último minuto termina a tempo da mesa.\n\n' +
         'Confiram também o horário de fechamento do KILIMANJARO SAFARIS, que fecha 30 a 60 ' +
         'minutos antes do parque e sustenta o bloco das 16h30.',
