@@ -4284,11 +4284,20 @@ window.ROTEIRO = {
           'POR QUE AGORA E NÃO DEPOIS: 15 minutos na primeira hora contra 83 às 15h, com pico ' +
           'de 190. Não existe segunda chance barata neste dia — a outra janela é depois das ' +
           '21h, e às 21h vocês já estão saindo do parque.\n\n' +
-          'LOCKER OBRIGATÓRIO. Deixem os bolsos vazios antes de entrar na fila.',
+          'MAS OS 15 MINUTOS TÊM UMA CONDIÇÃO: eles valem se hoje o Universal Studios ' +
+          'NÃO for o parque da entrada antecipada de hotel. O Gringotts é uma das ' +
+          'atrações que essa entrada abre — se hoje for a vez daqui, às 9h ele já rodou ' +
+          'uma hora com hóspedes e chega perto de 60 minutos.' +
+          '\n\nREGRA DE PORTÃO, decidida na hora: olhem a fila postada do Gringotts ao ' +
+          'entrar. Até 30 minutos, sigam o roteiro. Acima disso, hoje é dia de entrada ' +
+          'antecipada aqui — virem à direita para o Transformers e o Mummy, que não estão ' +
+          'na lista dela, e voltem ao Beco no bloco das 12h40, antes do almoço no Leaky ' +
+          'Cauldron. O Minion Mayhem, que também é da entrada antecipada, anda junto.' +
+          '\n\nLOCKER OBRIGATÓRIO. Deixem os bolsos vazios antes de entrar na fila.',
         areaParque: 'Diagon Alley', acesso: ['rope-drop', 'standby'], acessoAlt: 'single-rider',
         acessoAltNota: 'Não na primeira vez: single rider pula o saguão dos duendes e os dois pré-shows.',
         critico: true, locker: true, duracaoMin: 40,
-        fila: { min: 60, quando: 'às 9h, já carregado', pico: 190, media: 60, fonte: '2026-09-17' },
+        fila: { min: 15, quando: 'na primeira hora, se o USF não for o parque da entrada antecipada hoje', pico: 190, media: 60, fonte: '2026-09-17' },
         pesquisa: '2026-09-10',
         curiosidades: [
           { texto: 'O dragão em cima do banco é um Ironbelly ucraniano de 18 metros.',
