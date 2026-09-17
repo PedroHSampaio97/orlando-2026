@@ -275,5 +275,49 @@ const historiasSemDia = historias.filter(l =>
 ok(historiasSemDia.length === 0, 'toda historia aparece na ficha de algum dia',
    historiasSemDia.map(l => l.id).join(', '));
 
+/* ========================= o que nao se volta sem comer ========================= */
+console.log('\n--- gastronomia ---');
+const gastro = R.gastronomia || [];
+ok(gastro.length >= 30, 'a lista de comer tem tamanho de viagem inteira (' + gastro.length + ')');
+const idsGastro = gastro.map(g => g.id);
+ok(new Set(idsGastro).size === idsGastro.length, 'nenhum id de comer duplicado');
+ok(idsGastro.every(id => /^g-[a-z0-9-]+$/.test(id)), 'todo id de comer segue o padrao g-',
+   idsGastro.filter(id => !/^g-[a-z0-9-]+$/.test(id)).join(', '));
+
+const idsDiaSet = new Set(R.dias.map(d => d.id));
+const diaRuim = gastro.filter(g => !(g.dias || []).length ||
+  (g.dias || []).some(id => !idsDiaSet.has(id)));
+ok(diaRuim.length === 0, 'todo item de comer cai em dia que existe',
+   diaRuim.map(g => g.id).join(', '));
+
+const semFonte = gastro.filter(g => !ISO.test(g.pesquisa || ''));
+ok(semFonte.length === 0, 'todo item de comer tem data de pesquisa',
+   semFonte.map(g => g.id).join(', '));
+const semPreco = gastro.filter(g => !/US\$|incluíd|gratuito|sem tabela publicada/i.test(g.preco || ''));
+ok(semPreco.length === 0, 'todo item de comer diz quanto custa', semPreco.map(g => g.id).join(', '));
+const textoCurto = gastro.filter(g => (g.porque || '').length < 40 || (g.onde || '').length < 8 ||
+  (g.quando || '').length < 8);
+ok(textoCurto.length === 0, 'todo item de comer diz onde, quando e por que',
+   textoCurto.map(g => g.id).join(', '));
+
+const diasComGastro = new Set(gastro.flatMap(g => g.dias || []));
+const parquesSemGastro = R.dias.filter(d => d.parqueId && !diasComGastro.has(d.id));
+ok(parquesSemGastro.length === 0, 'todo dia de parque tem ao menos um item de comer',
+   parquesSemGastro.map(d => d.id).join(', '));
+
+const localRuim = gastro.filter(g => g.localId && !R.locais.some(l => l.id === g.localId));
+ok(localRuim.length === 0, 'todo item de comer aponta para local que existe',
+   localRuim.map(g => g.id).join(', '));
+const restRuim = gastro.filter(g => g.restauranteId &&
+  !R.restaurantes.some(r => r.id === g.restauranteId));
+ok(restRuim.length === 0, 'todo item de comer aponta para restaurante que existe',
+   restRuim.map(g => g.id).join(', '));
+
+const excesso = R.dias.map(d => ({ d: d.id,
+  n: gastro.filter(g => (g.dias || []).indexOf(d.id) >= 0 && g.prioridade === 'imperdivel').length }))
+  .filter(x => x.n > 6);
+ok(excesso.length === 0, 'nenhum dia com mais de seis imperdiveis de comer',
+   excesso.map(x => x.d + ' (' + x.n + ')').join(', '));
+
 console.log(falhas ? '\n>>> ' + falhas + ' FALHA(S)' : '\n>>> TUDO OK');
 process.exit(falhas ? 1 : 0);

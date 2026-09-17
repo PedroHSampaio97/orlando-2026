@@ -9662,6 +9662,183 @@ window.ROTEIRO = {
      tipo: doce | salgado | lanche | bebida        prioridade: imperdivel | se-der
      ------------------------------------------------------------------------ */
   gastronomia: [
+    /* ---- 10 e 25/11 · Disney Springs ---- */
+    { id: 'g-gideons', nome: 'Cookie de meia libra da Gideon’s Bakehouse', tipo: 'doce',
+      onde: 'Disney Springs · The Landing', localId: 'disney-springs',
+      dias: ['d-2026-11-10', 'd-2026-11-25'],
+      quando: 'na volta pelo Disney Springs, para comer no hotel',
+      preco: 'US$ 7–8 por cookie', prioridade: 'imperdivel',
+      porque: 'Quase meia libra de cookie, com 24 horas de preparo, e a fila mais ' +
+              'comentada do Disney Springs. O sabor fixo é o chocolate chip; há um ' +
+              'sabor do mês que muda.',
+      dica: 'Em fim de semana e feriado a casa usa fila virtual: você se cadastra na ' +
+            'porta e recebe mensagem para voltar. Vale entrar na fila ao chegar e ' +
+            'passear enquanto espera.',
+      pesquisa: '2026-09-17' },
+
+    /* ---- 11/11 · Magic Kingdom ---- */
+    { id: 'g-dole-whip', nome: 'Dole Whip float de abacaxi', tipo: 'doce',
+      onde: 'Magic Kingdom · Adventureland, na Aloha Isle', localId: 'magic-kingdom',
+      dias: ['d-2026-11-11'],
+      quando: 'na manhã da Adventureland, entre os Piratas e o Jungle Cruise',
+      preco: 'US$ 6–8 — copo US$ 5,99, float com suco US$ 7,29', prioridade: 'imperdivel',
+      porque: 'O sorvete de abacaxi que virou símbolo da Disney nasceu aqui, ao lado do ' +
+              'Tiki Room. Gelado, sem lactose e servido em minutos.',
+      dica: 'Peçam o Swirl, que mistura abacaxi e baunilha, no float. Usem o mobile order ' +
+            'do My Disney Experience: a fila de balcão da Aloha Isle é das piores do parque. ' +
+            'A trinta segundos dali, o Sunshine Tree Terrace faz a versão de laranja.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-egg-roll', nome: 'Cheeseburger Spring Roll', tipo: 'lanche',
+      onde: 'Magic Kingdom · carrinho Egg Roll Wagon, na entrada da Adventureland',
+      localId: 'magic-kingdom', dias: ['d-2026-11-11'],
+      quando: 'na passagem pelo arco da Adventureland, antes do almoço',
+      preco: 'US$ 9–11 pelos dois rolinhos', prioridade: 'imperdivel',
+      porque: 'Rolinho primavera frito recheado de carne, queijo, picles e molho de ' +
+              'hambúrguer. A piada culinária virou culto e é o único salgado de verdade ' +
+              'da Adventureland.',
+      dica: 'Vem dois por porção, do tamanho exato de dividir. É carrinho sem mobile order ' +
+            'e com horário instável, que costuma abrir no fim da manhã e fechar cedo em dia ' +
+            'fraco: se estiver aberto na passagem, comprem ali — não voltem depois.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-lobster-roll', nome: 'Lobster Roll do Columbia Harbour House', tipo: 'salgado',
+      onde: 'Magic Kingdom · Liberty Square, no Columbia Harbour House',
+      localId: 'magic-kingdom', restauranteId: 'r-columbia-harbour',
+      dias: ['d-2026-11-11'],
+      quando: 'no almoço das 11h50, que já está no roteiro',
+      preco: 'US$ 18–20, com fritas', prioridade: 'imperdivel',
+      porque: 'Lagosta gelada em pão de New England. É o prato que tirou o Columbia Harbour ' +
+              'House da categoria de praça de alimentação e o único lugar do parque onde se ' +
+              'come lagosta por menos de US$ 20.',
+      dica: 'Façam mobile order e subam para o segundo andar, que quase ninguém acha: salão ' +
+            'silencioso com janelas para a Fantasyland e para a Mansão. A clam chowder ' +
+            '(US$ 6–7) e as fritas de alho negro e trufa (US$ 7) são melhores que as comuns.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-waffle-mickey', nome: 'Waffle do Mickey com Nutella e frutas', tipo: 'doce',
+      onde: 'Magic Kingdom · Liberty Square, no Sleepy Hollow Refreshments',
+      localId: 'magic-kingdom', dias: ['d-2026-11-11'],
+      quando: 'no fim da tarde, entre as voltas da Tomorrowland e o jantar',
+      preco: 'US$ 9–10', prioridade: 'imperdivel',
+      porque: 'Waffle em formato do Mickey feito na hora, dobrado sobre creme de avelã, ' +
+              'banana e frutas vermelhas. A varanda do Sleepy Hollow tem a vista frontal do ' +
+              'castelo: é sobremesa e foto no mesmo movimento.',
+      dica: 'Mobile order e comam na varanda lateral, virada para o castelo. Cedo demais ' +
+            'estraga o almoço; depois das 19h a varanda vira arquibancada de fogos. O funnel ' +
+            'cake da mesma casa é o melhor do parque, mas o waffle se come andando.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-corn-dogs', nome: 'Mini corn dogs do Casey’s Corner', tipo: 'lanche',
+      onde: 'Magic Kingdom · Main Street, no Casey’s Corner', localId: 'magic-kingdom',
+      restauranteId: 'r-caseys', dias: ['d-2026-11-11'],
+      quando: 'no jantar das 17h55, que já está no roteiro',
+      preco: 'US$ 10–12', prioridade: 'imperdivel',
+      porque: 'Bolinhos de salsicha empanados em fubá, servidos aos punhados. São o pedido ' +
+              'mais comum da casa e a coisa mais de beisebol americano que existe no parque, ' +
+              'que é justamente o tema do Casey’s.',
+      dica: 'Mobile order com antecedência: entre 18h30 e 20h o Casey’s engarrafa por causa ' +
+            'dos fogos. Peçam os mini corn dogs e um foot-long com chili e queijo para ' +
+            'dividir, e comam no meio-fio da Main Street — comer ali já garante lugar.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-turkey-leg', nome: 'Coxa de peru defumada', tipo: 'salgado',
+      onde: 'Magic Kingdom · Liberty Square Market, o carrinho depois do Hall of Presidents',
+      localId: 'magic-kingdom', dias: ['d-2026-11-11'],
+      quando: 'só se pularem o almoço sentado — é refeição, não petisco',
+      preco: 'US$ 14–16', prioridade: 'se-der',
+      porque: 'Coxa gigante, curada e defumada, com gosto mais de presunto do que de peru. ' +
+              'É o lanche mais reconhecível da Disney desde os anos 1980 e o único que vocês ' +
+              'vão ver todo mundo carregando.',
+      dica: 'Só sai depois das 11h e é enorme: uma para os dois, comida em pé. Não faz sentido ' +
+            'depois do almoço no Columbia Harbour House, que fica a cinquenta metros — ou uma ' +
+            'coisa ou outra.',
+      pesquisa: '2026-09-17' },
+
+    /* ---- 13/11 · Epcot, no Food & Wine (27/08 a 21/11 de 2026) ---- */
+    { id: 'g-cheddar-soup', nome: 'Sopa de cheddar com bacon e pão pretzel', tipo: 'salgado',
+      onde: 'Epcot · barraca do Canadá, no Food & Wine', localId: 'epcot',
+      dias: ['d-2026-11-13'],
+      quando: 'na primeira volta do Food & Wine, às 14h20',
+      preco: 'US$ 6–7', prioridade: 'imperdivel',
+      porque: 'A sopa de cheddar do Canadá é o prato mais tradicional do festival e a barraca ' +
+              'mais movimentada todo ano. Em 2026 ela volta na versão com bacon.',
+      dica: 'É a fila mais longa do World Showcase depois das 16h. O Canadá é o primeiro ' +
+            'pavilhão saindo pela esquerda: comecem por ele e pulem a fila da noite. Peçam ' +
+            'junto o filé mignon com purê de Boursin (US$ 10–11) e resolvem a barraca de uma vez.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-poutine', nome: 'Poutine de porco bo ssam com kimchi', tipo: 'salgado',
+      onde: 'Epcot · Canadá, na La Poutinerie', localId: 'epcot',
+      dias: ['d-2026-11-13'],
+      quando: 'na mesma parada do Canadá, na primeira volta',
+      preco: 'US$ 11–13', prioridade: 'imperdivel',
+      porque: 'É a novidade de 2026 do Epcot e o prato mais elogiado do festival este ano: ' +
+              'batata, queijo coalho, porco bo ssam, gravy de gochujang e kimchi. O balcão ' +
+              'abriu em julho de 2026, no lugar do Refreshment Port.',
+      dica: 'A versão com kimchi só existe durante o festival; as poutines de Québec e ' +
+            'Montréal ficam o ano todo. É o item mais pesado da lista — dividam, senão a volta ' +
+            'seguinte não desce.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-school-bread', nome: 'School Bread da Noruega', tipo: 'doce',
+      onde: 'Epcot · pavilhão da Noruega, na Kringla Bakeri Og Kafe', localId: 'epcot',
+      dias: ['d-2026-11-13'],
+      quando: 'na volta da tarde, logo depois do Frozen Ever After',
+      preco: 'US$ 5–6', prioridade: 'imperdivel',
+      porque: 'Pão doce macio recheado de creme de baunilha e coberto de coco. É o lanche ' +
+              'mais citado do World Showcase há décadas e o único item obrigatório da Noruega — ' +
+              'e é da padaria fixa, não some quando o festival acaba.',
+      dica: 'A fila da Kringla estoura entre 12h e 15h; o Frozen Ever After deixa vocês na ' +
+            'porta às 14h. Divide bem entre dois.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-temaki', nome: 'Temaki picante de atum', tipo: 'salgado',
+      onde: 'Epcot · barraca do Japão, no Food & Wine', localId: 'epcot',
+      dias: ['d-2026-11-13'],
+      quando: 'na segunda volta, às 15h30',
+      preco: 'US$ 9–10 — a versão wagyu sai por US$ 10–11', prioridade: 'imperdivel',
+      porque: 'Eleito um dos três melhores itens novos de 2026, com arroz crocante e pimenta ' +
+              'de verdade. É raro num festival em que quase tudo é adocicado.',
+      dica: 'O Japão fica na volta da lagoa oposta ao Canadá, então encaixa na segunda volta. ' +
+            'Peçam o Sapporo Reserve no copo de 6 oz (US$ 5) junto.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-cookie-pistache', nome: 'Cookie de chocolate com pistache', tipo: 'doce',
+      onde: 'Epcot · Marrocos, na barraca Tangierine Café', localId: 'epcot',
+      dias: ['d-2026-11-13'],
+      quando: 'na volta de beliscar, às 17h30',
+      preco: 'US$ 4–5', prioridade: 'imperdivel',
+      porque: 'Eleito o melhor item novo de 2026 pela Attractions Magazine: massa recheada ' +
+              'com centro cremoso de pistache. É também o mais barato entre os premiados.',
+      dica: 'É o item mais fácil de carregar comendo enquanto anda — bom justamente para a ' +
+            'volta em que vocês só querem beliscar.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-vinho-grecia', nome: 'Flight de vinhos gregos', tipo: 'bebida',
+      onde: 'Epcot · barraca da Grécia, no Food & Wine', localId: 'epcot',
+      dias: ['d-2026-11-13'],
+      quando: 'em qualquer volta — é a melhor conta do festival',
+      preco: 'US$ 7–8 pelas três taças', prioridade: 'imperdivel',
+      porque: 'Três taças — branco, rosé e tinto — pelo preço de meia taça avulsa da Itália, ' +
+              'que sai por US$ 12. É o melhor custo-benefício alcoólico do festival inteiro.',
+      dica: 'Se quiserem variar nas quatro voltas: caipirinha frozen no Brasil (US$ 12–13), ' +
+            'Amaretto Bellini na Itália (US$ 16) e flight de três cervejas na Alemanha ou na ' +
+            'Bélgica (US$ 12–13). Cerveja avulsa fica entre US$ 6 e US$ 10.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-waffle-belga', nome: 'Waffle belga com cookie butter', tipo: 'doce',
+      onde: 'Epcot · barraca da Bélgica, entre a China e a Alemanha', localId: 'epcot',
+      dias: ['d-2026-11-13'],
+      quando: 'na última volta, às 20h, antes de pegar lugar para o Luminous',
+      preco: 'US$ 5–6', prioridade: 'se-der',
+      porque: 'É um dos trinta pratos-legado trazidos de volta pelos trinta anos do festival ' +
+              'e o doce com melhor conta de todo o World Showcase.',
+      dica: 'A mesma barraca tem o flight de três cervejas belgas por US$ 12–13: é a melhor ' +
+            'parada única de doce com bebida na volta da noite.',
+      pesquisa: '2026-09-17' },
+
+    /* ---- 14, 17 e 19/11 · o Mundo Mágico, nos dois parques ---- */
     { id: 'g-butterbeer', nome: 'Cerveja amanteigada frozen', tipo: 'bebida',
       onde: 'Hogsmeade e Beco Diagonal · Universal', localId: null,
       dias: ['d-2026-11-14', 'd-2026-11-17', 'd-2026-11-19'],
@@ -9675,28 +9852,591 @@ window.ROTEIRO = {
             'calor; a quente só compensa em manhã fria.',
       pesquisa: '2026-09-17' },
 
-    { id: 'g-gideons', nome: 'Cookie de meia libra da Gideon’s Bakehouse', tipo: 'doce',
-      onde: 'Disney Springs · The Landing', localId: 'disney-springs',
-      dias: ['d-2026-11-10', 'd-2026-11-25'],
-      quando: 'na volta pelo Disney Springs, para comer no hotel',
-      preco: 'US$ 7 por cookie', prioridade: 'imperdivel',
-      porque: 'Quase meia libra de cookie, com 24 horas de preparo, e a fila mais ' +
-              'comentada do Disney Springs. O sabor fixo é o chocolate chip; há um ' +
-              'sabor do mês que muda.',
-      dica: 'Em fim de semana e feriado a casa usa fila virtual: você se cadastra na ' +
-            'porta e recebe mensagem para voltar. Vale entrar na fila ao chegar e ' +
-            'passear enquanto espera.',
+    { id: 'g-butterbeer-sorvete', nome: 'Sorvete de cerveja amanteigada', tipo: 'doce',
+      onde: 'Balcão do Three Broomsticks, em Hogsmeade, e The Hopping Pot, no Beco',
+      localId: null, dias: ['d-2026-11-14', 'd-2026-11-19'],
+      quando: 'de sobremesa no jantar do Three Broomsticks, em 14/11',
+      preco: 'US$ 7–8 — no Hopping Pot sai um pouco mais barato', prioridade: 'imperdivel',
+      porque: 'É a variação que mais gente diz superar a frozen: mesma nota de butterscotch, ' +
+              'em textura de sorvete macio com chantilly. Existe o ano inteiro, não é sazonal.',
+      dica: 'Pedir no balcão do próprio Three Broomsticks no jantar de 14/11 não custa fila ' +
+            'nenhuma. A terceira variação da casa é o potted cream, a versão de colher, que ' +
+            'divide bem junto. O waffle de cerveja amanteigada NÃO existe em novembro: ele ' +
+            'é da Butterbeer Season, que roda de março a maio.',
       pesquisa: '2026-09-17' },
 
-    { id: 'g-dole-whip', nome: 'Dole Whip de abacaxi', tipo: 'doce',
-      onde: 'Magic Kingdom · Adventureland, na Aloha Isle', localId: 'magic-kingdom',
-      dias: ['d-2026-11-11'],
-      quando: 'na manhã da Adventureland, entre os Piratas e o Jungle Cruise',
-      preco: 'US$ 6 o copo, US$ 7,29 com suco', prioridade: 'imperdivel',
-      porque: 'O sorvete de abacaxi que virou símbolo do parque, ao lado do Tiki Room. ' +
-              'Gelado, sem lactose e servido em minutos.',
-      dica: 'A versão com suco de abacaxi é a clássica. A Aloha Isle fica na saída do ' +
-            'Tiki Room, a dois minutos do Jungle Cruise.',
+    { id: 'g-hogs-head', nome: 'Hog’s Head Brew', tipo: 'bebida',
+      onde: 'Islands of Adventure · Hogsmeade, no Hog’s Head Pub',
+      localId: 'islands-of-adventure', dias: ['d-2026-11-14', 'd-2026-11-19'],
+      quando: 'no mesmo prédio do jantar de 14/11 — entrem pelo pub antes de sentar',
+      preco: 'US$ 13–17 o chope', prioridade: 'se-der',
+      porque: 'Cerveja feita só para a Universal e vendida só ali, e o javali empalhado atrás ' +
+              'do balcão rosna quando alguém deixa gorjeta. É pub dentro de parque, que é o ' +
+              'formato que vocês aceitam.',
+      dica: 'O pub é o fundo do próprio Three Broomsticks: não é desvio nenhum no jantar das ' +
+            '20h. Dragon Scale e Dark Forest Ale são as outras duas exclusivas, e dá para ' +
+            'pedir uma prova dos rótulos da casa.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-cauldron-cake', nome: 'Cauldron Cake', tipo: 'doce',
+      onde: 'Sugarplum’s Sweet Shop, no Beco · e Honeydukes, em Hogsmeade',
+      localId: null, dias: ['d-2026-11-17', 'd-2026-11-19'],
+      quando: 'numa das duas passagens — é o mesmo bolo, comprem uma vez só',
+      preco: 'US$ 11–13', prioridade: 'se-der',
+      porque: 'Bolo de chocolate com buttercream imitando chamas, servido dentro de um ' +
+              'caldeirãozinho de silicone que vai embora com vocês. É doce e souvenir pelo ' +
+              'mesmo preço.',
+      dica: 'O caldeirão é o motivo de comprar: um só, para dividir. O produto do Beco e o do ' +
+            'Honeydukes são idênticos — não comprem nos dois.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-butterbeer-fudge', nome: 'Butterbeer Fudge', tipo: 'doce',
+      onde: 'Islands of Adventure · Hogsmeade, no Honeydukes',
+      localId: 'islands-of-adventure', dias: ['d-2026-11-19'],
+      quando: 'na manhã de Hogsmeade, para levar na mala',
+      preco: 'US$ 5–7 a fatia', prioridade: 'se-der',
+      porque: 'É a terceira variação permanente da cerveja amanteigada, com o sabor ' +
+              'concentrado em doce de leite — e a única que viaja: aguenta a mala e vira ' +
+              'lembrança comestível.',
+      dica: 'Comprem em 19/11, o último dia no Islands, e não em 14/11, para não carregar nem ' +
+            'derreter. A fatia inteira é enorme; peçam meia se o atendente deixar.',
+      pesquisa: '2026-09-17' },
+
+    /* ---- 15/11 · Hollywood Studios ---- */
+    { id: 'g-wookiee', nome: 'Wookiee Cookie', tipo: 'doce',
+      onde: 'Hollywood Studios · Echo Lake, no Backlot Express', localId: 'hollywood-studios',
+      dias: ['d-2026-11-15'],
+      quando: 'na passagem do Toy Story Land para o Galaxy’s Edge, de manhã',
+      preco: 'US$ 7–8', prioridade: 'imperdivel',
+      porque: 'Dois cookies de aveia recheados com creme branco de baunilha e marshmallow, ' +
+              'com uma bandoleira de chocolate ao leite atravessada por cima. Estreou em 2019 ' +
+              'e é o cookie mais fotografado do parque — é o biscoito recheado que vocês lembravam.',
+      dica: 'Fica no balcão de sobremesas do Backlot Express e dá para comprar só a sobremesa, ' +
+            'sem pedir refeição. O Backlot fica ao lado do Star Tours, no caminho.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-leite-azul', nome: 'Leite azul e leite verde', tipo: 'bebida',
+      onde: 'Hollywood Studios · Galaxy’s Edge, no Milk Stand', localId: 'hollywood-studios',
+      dias: ['d-2026-11-15'],
+      quando: 'ao entrar no Galaxy’s Edge, antes do Rise',
+      preco: 'US$ 9–10 cada · US$ 18 a versão com destilado', prioridade: 'imperdivel',
+      porque: 'É o ícone gastronômico do Galaxy’s Edge: bebida gelada tipo smoothie à base de ' +
+              'arroz e coco, vegana. O azul é pitaya, abacaxi, limão e melancia; o verde é ' +
+              'tangerina, maracujá, toranja e flor de laranjeira.',
+      dica: 'Um de cada e troquem: o azul é doce e frutado, o verde é ácido e cítrico. As ' +
+            'versões com álcool levam rum no azul e tequila no verde. Derrete rápido no calor ' +
+            'da Flórida — bebam na sombra ali mesmo.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-kaadu-ribs', nome: 'Smoked Kaadu Pork Ribs', tipo: 'salgado',
+      onde: 'Hollywood Studios · Galaxy’s Edge, no Docking Bay 7', localId: 'hollywood-studios',
+      restauranteId: 'r-docking-bay', dias: ['d-2026-11-15'],
+      quando: 'no almoço das 12h20, que já está no roteiro',
+      preco: 'US$ 16–18', prioridade: 'imperdivel',
+      porque: 'Costela que desmancha, com muffin de milho e blueberry e salada de repolho ' +
+              'roxo. É o prato mais citado do Docking Bay 7 e um dos melhores balcões da ' +
+              'Disney World.',
+      dica: 'O Docking Bay 7 só tem fila de mobile order: abram o app por volta das 11h para ' +
+            'garantir a janela de retirada. A segunda opção é o frango frito Tip Yip, e a ' +
+            'sobremesa da casa é o Black Spire Mousse.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-ronto-wrap', nome: 'Ronto Wrap', tipo: 'salgado',
+      onde: 'Hollywood Studios · Galaxy’s Edge, no Ronto Roasters', localId: 'hollywood-studios',
+      dias: ['d-2026-11-15'],
+      quando: 'como lanche ao entrar no Galaxy’s Edge, junto do leite',
+      preco: 'US$ 13–15', prioridade: 'imperdivel',
+      porque: 'Porco assado, linguiça grelhada, molho de pimenta-do-reino e slaw na pita. É o ' +
+              'prato mais vendido e mais bem avaliado do Hollywood Studios inteiro.',
+      dica: 'Peçam no Ronto Roasters, não no Docking Bay 7: sai dois dólares mais barato e em ' +
+            'minutos. Como o almoço já é no Docking Bay, este é o extra da manhã, para dividir.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-fuzzy-tauntaun', nome: 'Fuzzy Tauntaun', tipo: 'bebida',
+      onde: 'Hollywood Studios · Galaxy’s Edge, no Oga’s Cantina', localId: 'hollywood-studios',
+      restauranteId: 'r-ogas', dias: ['d-2026-11-15'],
+      quando: 'na primeira rodada do Oga’s, às 17h05',
+      preco: 'US$ 19–21', prioridade: 'imperdivel',
+      porque: 'É o drink do Oga’s: vodca de pêssego e laranja, schnapps e suco, coroado por ' +
+              'uma espuma de buzz button que formiga e adormece os lábios por alguns ' +
+              'segundos. Não existe igual em nenhum outro bar.',
+      dica: 'Bebam os primeiros goles direto pela espuma, sem canudo, senão o efeito se perde. ' +
+            'É o que todo mundo pede — peçam logo na primeira rodada.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-jedi-mind', nome: 'Jedi Mind Trick', tipo: 'bebida',
+      onde: 'Hollywood Studios · Galaxy’s Edge, no Oga’s Cantina', localId: 'hollywood-studios',
+      restauranteId: 'r-ogas', dias: ['d-2026-11-15'],
+      quando: 'logo depois do Fuzzy Tauntaun, como contraponto',
+      preco: 'US$ 18–20', prioridade: 'se-der',
+      porque: 'O mais forte do cardápio — vodca de toranja e rosa, falernum e curaçau azul — ' +
+              'e o contraponto seco e cítrico do Fuzzy Tauntaun, que é doce.',
+      dica: 'Dois drinks por pessoa é o limite prático em quarenta e cinco minutos de reserva. ' +
+            'Fujam do Yub Nub: os US$ 49 são pela caneca de souvenir, não pela bebida.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-cheese-roll', nome: 'Umbaran Cheese Roll', tipo: 'lanche',
+      onde: 'Hollywood Studios · Galaxy’s Edge, no Oga’s Cantina', localId: 'hollywood-studios',
+      restauranteId: 'r-ogas', dias: ['d-2026-11-15'],
+      quando: 'junto dos drinks das 17h05, um só para dividir',
+      preco: 'US$ 12–14', prioridade: 'imperdivel',
+      porque: 'Pão de pretzel com especiarias recheado de queijo com ervas. É o único petisco ' +
+              'do Oga’s que vale o preço e entrou na lista dos dez melhores lanches do parque ' +
+              'em 2026.',
+      dica: 'Como o jantar é logo depois, às 18h10, peçam UM para dividir — não o Happabore ' +
+            'Sampler nem o flatbread. Os Batuu Bits são só salgadinho crocante; pulem.',
+      pesquisa: '2026-09-17' },
+
+    /* ---- 16/11 · Animal Kingdom ---- */
+    { id: 'g-satuli-bowl', nome: 'Bowl de carne com chimichurri', tipo: 'salgado',
+      onde: 'Animal Kingdom · Pandora, no Satu’li Canteen', localId: 'animal-kingdom',
+      restauranteId: 'r-satuli', dias: ['d-2026-11-16'],
+      quando: 'no almoço das 12h30, que já está no roteiro',
+      preco: 'US$ 13–19 conforme a proteína', prioridade: 'imperdivel',
+      porque: 'Bowl montado por vocês: proteína grelhada sobre quinoa, arroz integral, salada ' +
+              'ou batata-doce, com molhos de ervas, chimichurri ou feijão preto. É reconhecido ' +
+              'há anos como o melhor balcão da Disney World.',
+      dica: 'Mobile order é obrigatório — escolham a janela de retirada logo ao entrar no ' +
+            'parque, porque entre 12h e 13h30 o Satu’li lota. A combinação que ganha é carne ' +
+            'com chimichurri sobre quinoa e legumes. A base de batata-doce é adocicada.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-cheeseburger-pods', nome: 'Cheeseburger Steamed Pods', tipo: 'lanche',
+      onde: 'Animal Kingdom · Pandora, no Satu’li Canteen', localId: 'animal-kingdom',
+      restauranteId: 'r-satuli', dias: ['d-2026-11-16'],
+      quando: 'no mesmo pedido do almoço, de entrada para dividir',
+      preco: 'US$ 13–15', prioridade: 'se-der',
+      porque: 'Dois pães bao no vapor recheados de cheeseburger, com salada de couve ' +
+              'crocante. É o melhor lanche de mão do parque: come-se na fila do Flight of ' +
+              'Passage sem talher.',
+      dica: 'É lanche, não almoço: se vocês vão de bowl, uma porção só para dividir. Também ' +
+            'serve de reserva para a volta à Pandora no fim do dia, se a fome bater antes do ' +
+            'Sanaa das 19h50.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-nomad-ribs', nome: 'Sticky Pork Ribs do Nomad Lounge', tipo: 'salgado',
+      onde: 'Animal Kingdom · Discovery Island, no Nomad Lounge', localId: 'animal-kingdom',
+      restauranteId: 'r-nomad', dias: ['d-2026-11-16'],
+      quando: 'na varanda das 14h25, que já está no roteiro',
+      preco: 'US$ 16–18 — os outros pratinhos ficam entre US$ 16 e US$ 23',
+      prioridade: 'imperdivel',
+      porque: 'O Nomad serve pratinhos com o padrão da cozinha do Tiffins, o restaurante de ' +
+              'assinatura do parque, pela metade do preço, numa varanda de ventilador de teto ' +
+              'sobre o rio.',
+      dica: 'O Nomad não aceita reserva, é só walk-up: entrem na lista de espera pelo My ' +
+            'Disney Experience assim que passarem pela Discovery Island de manhã. Em dia cheio ' +
+            'a lista fecha no meio da tarde; aí tentem banco no bar. Dois pratinhos bastam.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-lamu', nome: 'Lamu Libation', tipo: 'bebida',
+      onde: 'Animal Kingdom · Discovery Island, no Nomad Lounge', localId: 'animal-kingdom',
+      restauranteId: 'r-nomad', dias: ['d-2026-11-16'],
+      quando: 'com os pratinhos das 14h25',
+      preco: 'US$ 15–19 os coquetéis · US$ 11–13 a Kungaloosh Ale', prioridade: 'se-der',
+      porque: 'É o coquetel-assinatura do bar mais querido do parque — rum, curaçau de ' +
+              'laranja, limão e gengibre. Cada drink do Nomad tem nome e história de uma ' +
+              'expedição, e o teto é coberto de lenços de viajante assinados por hóspedes.',
+      dica: 'Um Lamu Libation e uma Kungaloosh Ale, a cerveja artesanal exclusiva do parque: ' +
+            'provam o doce e o amargo por metade do preço de dois coquetéis. Não vale beber ' +
+            'dois de US$ 17 antes de um jantar como o do Sanaa.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-night-blossom', nome: 'Night Blossom', tipo: 'bebida',
+      onde: 'Animal Kingdom · Pandora, no Pongu Pongu', localId: 'animal-kingdom',
+      dias: ['d-2026-11-16'],
+      quando: 'no fim do dia, com a Pandora já acendendo, por volta das 17h',
+      preco: 'US$ 7–8', prioridade: 'imperdivel',
+      porque: 'Limonada em camadas de maçã verde e pera-do-deserto, com bolinhas de boba de ' +
+              'maçã no fundo, montada num degradê rosa e verde. É a bebida-símbolo da Pandora ' +
+              'e o item mais fotografado do parque.',
+      dica: 'Ela é feita para ser vista contra a bioluminescência: peçam depois de escurecer, ' +
+            'não de manhã. Não mexam antes de fotografar, que as camadas somem. O boba no ' +
+            'canudo grosso pega desprevenido quem não espera mastigar.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-pongu-lumpia', nome: 'Pongu Lumpia', tipo: 'doce',
+      onde: 'Animal Kingdom · Pandora, no Pongu Pongu', localId: 'animal-kingdom',
+      dias: ['d-2026-11-16'],
+      quando: 'no mesmo balcão e na mesma parada do Night Blossom',
+      preco: 'US$ 3–5', prioridade: 'imperdivel',
+      porque: 'Rolinho quente recheado de abacaxi com cream cheese, açucarado por fora. É o ' +
+              'lanche com a melhor relação de prazer por dólar do parque inteiro, por menos de ' +
+              'US$ 4.',
+      dica: 'O contraste com o Night Blossom gelado é o ponto: peçam os dois juntos. Sai ' +
+            'quentíssimo por dentro, esperem um minuto. Um por pessoa — é pequeno, e dividir ' +
+            'um só frustra.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-dole-rum', nome: 'Dole Whip com rum de coco', tipo: 'bebida',
+      onde: 'Animal Kingdom · África, no Tamu Tamu Refreshments', localId: 'animal-kingdom',
+      dias: ['d-2026-11-16'],
+      quando: 'na volta para a Discovery Island, por volta das 14h — não de manhã',
+      preco: 'US$ 14–16 com rum · US$ 5–7 sem', prioridade: 'se-der',
+      porque: 'É o único lugar da Disney World onde o Dole Whip vem com rum de coco. O lanche ' +
+              'mais famoso da Disney na versão adulta que só existe aqui.',
+      dica: 'Vocês passam pela África às 8h, cedo demais para rum: o Tamu Tamu fica no caminho ' +
+            'entre a África e a Discovery Island, então encaixa perto do Nomad. Se o álcool ' +
+            'ficar todo no Nomad, a versão sem rum sai por um terço do preço.',
+      pesquisa: '2026-09-17' },
+
+    /* ---- 17/11 · Universal Studios e CityWalk ---- */
+    { id: 'g-fishy-green-ale', nome: 'Fishy Green Ale', tipo: 'bebida',
+      onde: 'Universal Studios · Beco Diagonal, no The Hopping Pot, em Carkitt Market',
+      localId: 'universal-studios', dias: ['d-2026-11-17'],
+      quando: 'na volta ao Beco às 12h40, antes do almoço no Leaky Cauldron',
+      preco: 'US$ 7–8', prioridade: 'imperdivel',
+      porque: 'Creme gelado de menta e canela com ovas de blueberry que estouram no canudo ' +
+              'grosso. É a bebida mais estranha e mais fotografada do Beco, e não existe em ' +
+              'nenhum outro lugar de Orlando.',
+      dica: 'É doce e cremosa: tomem antes do almoço, não depois, senão estraga o apetite. O ' +
+            'canudo largo vem junto e é parte do brinquedo.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-big-pink', nome: 'The Big Pink, a rosquinha do Homer', tipo: 'doce',
+      onde: 'Universal Studios · Springfield, no Lard Lad Donuts', localId: 'universal-studios',
+      dias: ['d-2026-11-17'],
+      quando: 'na passagem por Springfield, entre o Simpsons Ride e o desfile',
+      preco: 'US$ 11–13', prioridade: 'imperdivel',
+      porque: 'Vinte centímetros de diâmetro e quatrocentos gramas: a rosquinha rosa do Homer ' +
+              'feita de verdade. É o item mais icônico do parque fora do mundo do Harry Potter ' +
+              'e a foto de Springfield.',
+      dica: 'Uma para o casal, jamais duas. Não comam perto do jantar no Lombard’s às 18h45 — ' +
+            'ela mata a fome dos dois. A licença dos Simpsons vence por volta de 2027: vale ' +
+            'reconferir perto da viagem se Springfield ainda está de pé.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-flaming-moe', nome: 'Flaming Moe', tipo: 'bebida',
+      onde: 'Universal Studios · Springfield, no Moe’s Tavern', localId: 'universal-studios',
+      dias: ['d-2026-11-17'],
+      quando: 'na mesma parada de Springfield, no balcão do Moe’s',
+      preco: 'US$ 8–10', prioridade: 'imperdivel',
+      porque: 'Refrigerante de laranja servido num copo de fundo duplo com gelo seco: sai ' +
+              'fumaça de verdade da borda por alguns minutos. É o drink-espetáculo do parque ' +
+              'e não tem álcool, então serve para os dois.',
+      dica: 'A fumaça dura pouco — a foto é nos primeiros sessenta segundos. O copo é ' +
+            'reutilizável e pode ser levado. Peçam junto com a Duff, no mesmo balcão.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-duff', nome: 'Duff Beer no Moe’s Tavern', tipo: 'bebida',
+      onde: 'Universal Studios · Springfield, no Moe’s Tavern e no Duff Brewery',
+      localId: 'universal-studios', dias: ['d-2026-11-17'],
+      quando: 'junto do Flaming Moe',
+      preco: 'US$ 11–14 o chope · US$ 9–12 a garrafa', prioridade: 'se-der',
+      porque: 'É a cerveja do desenho existindo de verdade, servida dentro da réplica exata do ' +
+              'bar do Moe, com o telefone do Bart e o Barney no banco. Existem Duff, Duff Lite ' +
+              'e Duff Dry.',
+      dica: 'O valor ali é o cenário, não o líquido — a cerveja é fraca. O Moe’s é balcão em ' +
+            'pé e entra rápido; o Duff Brewery tem mesas ao ar livre e é melhor para o casal.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-florean', nome: 'Sorvete do Florean Fortescue’s', tipo: 'doce',
+      onde: 'Universal Studios · Beco Diagonal, no Florean Fortescue’s Ice-Cream Parlour',
+      localId: 'universal-studios', dias: ['d-2026-11-17'],
+      quando: 'na volta ao Beco à noite, às 20h, antes do CityWalk',
+      preco: 'US$ 7–8 na casquinha · US$ 10–11 o sundae na taça', prioridade: 'imperdivel',
+      porque: 'Sabores que só existem ali: Earl Grey com lavanda, sticky toffee pudding, ' +
+              'chocolate com pimenta, salted caramel blondie e maçã verde. É sorveteria de ' +
+              'verdade, com mesas, não quiosque.',
+      dica: 'De dia a fila toma a rua: por isso está na volta das 20h. Earl Grey com lavanda e ' +
+            'sticky toffee são os dois que ninguém acha fora dali — peçam uma casquinha de ' +
+            'dois sabores em vez de duas.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-voodoo', nome: 'Voodoo Doll doughnut', tipo: 'doce',
+      onde: 'CityWalk · Voodoo Doughnut, ao lado do NBC Sports Grill & Brew',
+      localId: 'citywalk', dias: ['d-2026-11-17'],
+      quando: 'na saída pelo CityWalk, às 20h55',
+      preco: 'US$ 5–7 a unidade · US$ 26–35 a caixa de doze', prioridade: 'imperdivel',
+      porque: 'A marca de Portland que virou culto. O boneco de vodu recheado de geleia de ' +
+              'framboesa com a estaca de pretzel é o doce mais reconhecível do CityWalk.',
+      dica: 'Encaixa exatamente na saída das 20h55. Façam o pedido pelo app da Universal de ' +
+            'dentro do parque e retirem na janela expressa: a fila do balcão à noite é longa. ' +
+            'O Bacon Maple Bar é o sabor que mais divide opinião e vale provar junto.',
+      pesquisa: '2026-09-17' },
+
+    /* ---- 20/11 · Epic Universe ---- */
+    { id: 'g-crepe-bierraubeurre', nome: 'Crepe de cerveja amanteigada', tipo: 'doce',
+      onde: 'Epic Universe · Ministry of Magic, no Café L’air de la Sirène',
+      localId: 'epic-universe', dias: ['d-2026-11-20'],
+      quando: 'na passagem pelo Ministry, às 18h20',
+      preco: 'US$ 19–22', prioridade: 'imperdivel',
+      porque: 'É o item-assinatura do Wizarding World francês e o único lugar do mundo onde a ' +
+              'cerveja amanteigada vira crepe. A porção é grande, feita para dividir.',
+      dica: 'Peçam pelo app da Universal: o balcão do Café é o pior gargalo da área. Um crepe ' +
+            'para os dois — o jantar no Atlantic é às 17h e não sobra espaço para mais.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-giggle-water', nome: 'Giggle Water', tipo: 'bebida',
+      onde: 'Epic Universe · Ministry of Magic, no Café L’air de la Sirène e no Le Gobelet Noir',
+      localId: 'epic-universe', dias: ['d-2026-11-20'],
+      quando: 'na mesma passagem pelo Ministry',
+      preco: 'US$ 13–15', prioridade: 'imperdivel',
+      porque: 'Spritz de prosecco com flor de sabugueiro e brilho âmbar: é a champanhe bruxa ' +
+              'do cânone, criada para o Epic e sem equivalente nos outros parques.',
+      dica: 'Sai mais rápido no Le Gobelet Noir, o bar escondido no Quartier de Nicolas ' +
+            'Flamel, que quase sempre tem menos gente que o Café. Lá o Breuvage Sombre, de ' +
+            'fruta escura com pérolas de iogurte, sai pela metade do preço e é sem álcool.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-hidromel-berk', nome: 'Hidromel do Gobber e Stoik’s Ale', tipo: 'bebida',
+      onde: 'Epic Universe · Isle of Berk, no Mead Hall', localId: 'epic-universe',
+      dias: ['d-2026-11-20'],
+      quando: 'na parada de Berk das 15h45, antes do show',
+      preco: 'US$ 13–15 cada · Yaknog US$ 7–8', prioridade: 'imperdivel',
+      porque: 'A hidromel servida no salão viking é a única do resort, e o Stoik’s Ale é o ' +
+              'chope de casa criado para Berk. O Mead Hall é coberto e com ar-condicionado.',
+      dica: 'No mesmo balcão peçam o Yaknog, a bebida de chocolate maltado com canela do ' +
+            'cânone de Como Treinar Seu Dragão: é barata, gelada e a melhor foto da área. O ' +
+            'salão é o refúgio do meio do dia.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-dk-float', nome: 'DK Crush Float', tipo: 'doce',
+      onde: 'Epic Universe · Super Nintendo World, no The Bubbly Barrel',
+      localId: 'epic-universe', dias: ['d-2026-11-20'],
+      quando: 'depois do Mine-Cart Madness, às 20h — não antes do almoço',
+      preco: 'US$ 12–14 · US$ 18–20 com a caneca-barril', prioridade: 'se-der',
+      porque: 'Sorvete de banana com soda de abacaxi, casquinha, toffee e pipoca caramelizada. ' +
+              'É o que vale parar em Super Nintendo World fora do Toadstool, e é diferente da ' +
+              'versão do Japão.',
+      dica: 'Mesmo sem a caneca vem uma colher do Donkey Kong. Como o almoço já é no Toadstool, ' +
+            'deixem o float para depois da atração da noite.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-bar-zenith', nome: 'Coquetel do Bar Zenith', tipo: 'bebida',
+      onde: 'Epic Universe · Celestial Park, no Bar Zenith, de frente para as fontes',
+      localId: 'epic-universe', dias: ['d-2026-11-20'],
+      quando: 'no fim da tarde, a dois minutos do jantar no Atlantic',
+      preco: 'US$ 15–17 os coquetéis · US$ 7–8 o mocktail', prioridade: 'se-der',
+      porque: 'É o bar mais bonito do parque, e o Meteor Strike vem com brilho de ouro ' +
+              'comestível e um cubo de açúcar flamejante. O brinde do casal, com as fontes ' +
+              'coreografadas ao fundo.',
+      dica: 'Fica a dois minutos a pé do Atlantic: sentem ali antes de entrar para o jantar. O ' +
+            'Eccentric Orbit é a alternativa barata e foi eleito o melhor sem álcool do parque.',
+      pesquisa: '2026-09-17' },
+
+    /* ---- 22/11 · SeaWorld, com o All-Day Dining do ingresso ---- */
+    { id: 'g-brisket-voyagers', nome: 'Brisket defumado do Voyager’s Smokehouse',
+      tipo: 'salgado', onde: 'SeaWorld · em frente ao Seaport Theater, no Voyager’s Smokehouse',
+      localId: 'seaworld', restauranteId: 'r-voyagers', dias: ['d-2026-11-22'],
+      quando: 'no almoço das 12h55, que já está no roteiro',
+      preco: 'incluído no All-Day Dining do ingresso', prioridade: 'imperdivel',
+      porque: 'É a marca da casa do SeaWorld e o consenso de que é a melhor comida do parque. ' +
+              'Fora do plano, é o prato que mais paga o All-Day Dining.',
+      dica: 'O All-Day Dining libera uma rodada a cada noventa minutos e para trinta minutos ' +
+            'antes de o restaurante fechar. Façam a primeira rodada cedo no Voyager’s e ' +
+            'cronometrem as seguintes.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-cheesecake-natal', nome: 'Cheesecake de peppermint da temporada', tipo: 'doce',
+      onde: 'SeaWorld · quiosque Sweet Sailings e nos restaurantes do plano',
+      localId: 'seaworld', dias: ['d-2026-11-22'],
+      quando: 'de sobremesa na rodada do Voyager’s',
+      preco: 'incluído na rodada do All-Day Dining quando pedido dentro do restaurante',
+      prioridade: 'imperdivel',
+      porque: 'É o doce oficial da temporada de Natal do SeaWorld, de 16/11 a 05/01, e o único ' +
+              'item natalino que sai sem pagar nada além do ingresso — os restaurantes que o ' +
+              'vendem são justamente os do plano.',
+      dica: 'Peçam como a sobremesa da rodada, não na cabana. O peppermint é o sabor que só ' +
+            'existe no Natal; há também cookies and cream, caramelo, butter pecan e cenoura. ' +
+            'Confirmem no balcão: o cheesecake fica fora do Festive Food and Sip Sampler.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-cocoa-claus', nome: 'Chocolate quente e cookie do Claus Cookie Co.',
+      tipo: 'bebida', onde: 'SeaWorld · cabanas do Christmas Celebration, no Claus Cookie Co.',
+      localId: 'seaworld', dias: ['d-2026-11-22'],
+      quando: 'na pausa do Waterfront das 16h20, com o parque já aceso',
+      preco: 'US$ 9–10 o chocolate especial · US$ 8–16 os itens de cabana · pago à parte',
+      prioridade: 'imperdivel',
+      porque: 'É o par de chocolate quente com biscoito que só existe na temporada de Natal, e ' +
+              'a versão frozen s’mores é a mais fotografada do evento. O cookie deep-dish é ' +
+              'grande o bastante para dividir.',
+      dica: 'ATENÇÃO: as cabanas de evento estão explicitamente fora do All-Day Dining — isto ' +
+            'é pago à parte. Se forem querer só duas ou três coisas de Natal, NÃO comprem o ' +
+            'lanyard de amostras: sai mais caro que pagar avulso.',
+      pesquisa: '2026-09-17' },
+
+    /* ---- 23/11 · Busch Gardens, com o All-Day Dining e o Christmas Town ---- */
+    { id: 'g-zambia', nome: 'Costela do Zambia Smokehouse', tipo: 'salgado',
+      onde: 'Busch Gardens · Stanleyville, no Zambia Smokehouse', localId: 'busch-gardens', restauranteId: 'r-zambia',
+      dias: ['d-2026-11-23'],
+      quando: 'no almoço das 13h25, que já está no roteiro',
+      preco: 'incluído no All-Day Dining do ingresso', prioridade: 'imperdivel',
+      porque: 'É a casa de churrasco do parque, com grelha de lenha de carvalho à vista, e o ' +
+              'melhor uso do plano de refeição: porções grandes de costela, frango e brisket ' +
+              'defumados na hora.',
+      dica: 'Peçam costela ou frango, não o brisket — é ele o alvo das reclamações de ' +
+            'ressecamento. O plano cobre Zagora, Zambia, Dragon Fire, Oasis Pizza, BG Cuban, ' +
+            'SheiKra Eats, Tot Topia e Twisted Tails, e NÃO cobre álcool.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-cocoa-christmastown', nome: 'Chocolate quente e biscoitos do Christmas Town',
+      tipo: 'doce', onde: 'Busch Gardens · Christmas Town Village, nas cabanas do mercado',
+      localId: 'busch-gardens', dias: ['d-2026-11-23'],
+      quando: 'depois das 16h, quando as cabanas abrem — na volta do Christmas on Ice',
+      preco: 'pago à parte · lanyard de amostras US$ 45 por cinco itens ou US$ 65 por dez',
+      prioridade: 'imperdivel',
+      porque: 'É o coração do Christmas Town: um mercado de Natal europeu de cabanas de ' +
+              'madeira. O chocolate em caneca de souvenir, nas versões chocolate, peppermint e ' +
+              'gingerbread, com os biscoitos de snickerdoodle e árvore de Natal, define a noite.',
+      dica: 'As cabanas SÓ ABREM ÀS 16h, e o All-Day Dining encerra trinta minutos antes de os ' +
+            'restaurantes fecharem. O plano é: almoço e lanche no plano até as 16h, e daí em ' +
+            'diante só as cabanas. Cabana de evento não entra no plano de refeição.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-mistletoe', nome: 'Mistletoe Margarita', tipo: 'bebida',
+      onde: 'Busch Gardens · Christmas Town Village, na cabana Caroler’s Table',
+      localId: 'busch-gardens', dias: ['d-2026-11-23'],
+      quando: 'caminhando pelo mercado de luzes, depois das 16h',
+      preco: 'sem valor por item divulgado · lanyard de amostras US$ 45 por cinco ' +
+             'itens ou US$ 65 por dez', prioridade: 'se-der',
+      porque: 'É a linha de coquetéis criada só para a temporada, e caminhar pelo mercado ' +
+              'aceso com um drink na mão é o programa de casal sem criança do Busch.',
+      dica: 'Se forem beber mais de dois drinks cada, o lanyard de dez itens compensa, porque ' +
+            'bebida e comida entram no mesmo cartão. A cerveja grátis do Serengeti Overlook é ' +
+            'promoção de verão e não estará rodando em novembro.',
+      pesquisa: '2026-09-17' },
+    /* ---- 19/11 · Islands of Adventure, fora de Hogsmeade ---- */
+    { id: 'g-chicken-stingers', nome: 'Chicken Stingers do Fire-Eater’s Grill', tipo: 'salgado',
+      onde: 'Islands of Adventure · Lost Continent, no Fire-Eater’s Grill',
+      localId: 'islands-of-adventure', dias: ['d-2026-11-19'],
+      quando: 'por volta das 17h30, antes do Mythos — o balcão fecha às 20h',
+      preco: 'US$ 13–15 o platter', prioridade: 'imperdivel',
+      porque: 'Frango empanado envolto em molho apimentado, servido com hummus no lugar das ' +
+              'fritas. É o petisco cult do Islands há mais de vinte anos e não existe em ' +
+              'nenhum outro parque de Orlando.',
+      dica: 'Um platter para dividir, com a troca para hummus, que não custa nada. Fica a três ' +
+            'minutos do Mythos, ao lado da Mystic Fountain — mas depois das 18h vira jantar em ' +
+            'cima do jantar das 19h15.',
+      pesquisa: '2026-09-17' },
+
+    /* ---- 14/11 · Seuss Landing, na noite do Grinchmas ---- */
+    { id: 'g-who-hash', nome: 'Who Hash na lata', tipo: 'salgado',
+      onde: 'Islands of Adventure · Seuss Landing, no Green Eggs and Ham Cafe',
+      localId: 'islands-of-adventure', dias: ['d-2026-11-14'],
+      quando: 'antes do Grinchmas das 17h30 — é a única passagem de vocês pelo Seuss Landing',
+      preco: 'US$ 16–18 · os tots saem por US$ 11–14', prioridade: 'se-der',
+      porque: 'A casa serve tudo sobre uma cama de tater tots, e o Who Hash vem dentro de uma ' +
+              'lata colecionável — a piada é exatamente o que o Grinch rouba dos Whos. É o ' +
+              'item mais natalino que o Islands tem o ano inteiro.',
+      dica: 'O café só abre em dia de movimento: confiram no app da Universal no próprio dia ' +
+            'antes de contar com ele. Um pedido serve os dois, e a lata vai embora com vocês.',
+      pesquisa: '2026-09-17' },
+    /* ---- 10 e 25/11 · o resto do Disney Springs ---- */
+    { id: 'g-everglazed', nome: 'Donut da Everglazed', tipo: 'doce',
+      onde: 'Disney Springs · West Side, entre o AMC e o Splitsville',
+      localId: 'disney-springs', dias: ['d-2026-11-10', 'd-2026-11-25'],
+      quando: 'na volta pelo Disney Springs, nas duas noites',
+      preco: 'US$ 5–7 a unidade', prioridade: 'imperdivel',
+      porque: 'É o contraponto exato do Gideon’s: donut brioche quente, coberto na hora. A ' +
+              'linha de sabores gira, e em novembro sempre entra uma leva de fim de ano.',
+      dica: 'Peçam da linha Super Funky — Cinnamon Toast Crunch, Brooklyn Blackout ou Dulce ' +
+            'de Leche. A fila é pequena perto da do Gideon’s e aceita mobile order. Evitem a ' +
+            'noite de 25/11 entre 19h e 21h, que é véspera de Thanksgiving.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-vivoli', nome: 'Bombolonis da Vivoli il Gelato', tipo: 'doce',
+      onde: 'Disney Springs · The Landing, ao lado do Morimoto', localId: 'disney-springs',
+      dias: ['d-2026-11-10', 'd-2026-11-25'],
+      quando: 'em qualquer das duas noites — a casa fica aberta até 23h',
+      preco: 'US$ 6 os quatro bombolonis · US$ 8–10 a bola de gelato', prioridade: 'imperdivel',
+      porque: 'Quatro bombas fritas na hora — creme, Nutella, goiaba e natural — por US$ 6. É ' +
+              'a melhor conta doce do Disney Springs inteiro, e a Vivoli é a gelateria ' +
+              'florentina de 1930, não uma marca licenciada.',
+      dica: 'O bomboloni sai quente e não viaja: comam ali, não levem para o hotel. Se ' +
+            'quiserem o exagero, o Bombolato é a bomba quente recheada de gelato.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-dockside', nome: 'Margarita do Dockside Margaritas', tipo: 'bebida',
+      onde: 'Disney Springs · Marketplace, na beira da Buena Vista Cove',
+      localId: 'disney-springs', dias: ['d-2026-11-10', 'd-2026-11-25'],
+      quando: 'antes do jantar, com o lago na frente',
+      preco: 'US$ 17–20', prioridade: 'imperdivel',
+      porque: 'Bar aberto à beira d’água, num quiosque com cara de banca de frutas dos anos ' +
+              '60. É o lugar de sentar com o lago na frente sem entrar em restaurante, e as ' +
+              'margaritas são feitas na hora, não de máquina.',
+      dica: 'Abre ao meio-dia e FECHA ÀS 22h: se a chegada de 10/11 atrasar, ele já fechou e ' +
+            'sobram a Everglazed e a Vivoli. Mesas por ordem de chegada — em 25/11, véspera de ' +
+            'Thanksgiving, cheguem antes das 18h.',
+      pesquisa: '2026-09-17' },
+
+    /* ---- 12/11 · BoardWalk ---- */
+    { id: 'g-pizza-window', nome: 'Super Slice da janela de pizza', tipo: 'salgado',
+      onde: 'Disney’s BoardWalk · a janela no calçadão, ao lado do BoardWalk Deli',
+      localId: 'boardwalk', dias: ['d-2026-11-12'],
+      quando: 'no jantar das 19h, que já está no roteiro sem reserva',
+      preco: 'US$ 10–11 a fatia · US$ 12–13 a cerveja de 20 oz', prioridade: 'imperdivel',
+      porque: 'É o jeito certo de fazer a noite de 12/11 sem reserva: uma fatia gigante na ' +
+              'janela com uma Cigar City Jai Alai, a IPA de Tampa, andando à beira do lago. É ' +
+              'o único balcão do BoardWalk aberto até tarde.',
+      dica: 'Funciona do meio-dia à meia-noite. Não tem mesa própria: paguem na janela e ' +
+            'sentem nos bancos do calçadão. A fatia é uma refeição inteira para uma pessoa.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-boardwalk-sorvete', nome: 'Sundae do BoardWalk Ice Cream', tipo: 'doce',
+      onde: 'Disney’s BoardWalk · a sorveteria do calçadão', localId: 'boardwalk',
+      dias: ['d-2026-11-12'],
+      quando: 'de sobremesa, na volta do lago',
+      preco: 'US$ 5–7 a casquinha · US$ 7–9 o sundae', prioridade: 'imperdivel',
+      porque: 'É a sobremesa natural do passeio à beira do lago, no formato de sorveteria de ' +
+              'calçadão americano, e fica aberta quando o resto do BoardWalk já fechou.',
+      dica: 'A Ample Hills não existe mais — este é o balcão que ficou no lugar dela. O ' +
+            'carrinho de funnel cake do BoardWalk está fora de operação em 2026: não contem ' +
+            'com ele. O BoardWalk Deli ao lado vende o Mickey Cinnamon Roll até tarde.',
+      pesquisa: '2026-09-17' },
+
+    /* ---- 14/11 · Celebration ---- */
+    { id: 'g-kilwins', nome: 'Fudge da Kilwins', tipo: 'doce',
+      onde: 'Celebration · Front Street, na esquina do Market Street, de frente para o lago',
+      localId: 'celebration', dias: ['d-2026-11-14'],
+      quando: 'na parada das 14h, que já está no roteiro',
+      preco: 'venda por peso, sem tabela publicada — confiram no balcão',
+      prioridade: 'imperdivel',
+      porque: 'Fudge feito na pedra de mármore dentro da loja e casquinha de waffle assada na ' +
+              'hora. É o doce de centrinho americano que Celebration existe para vender.',
+      dica: 'Dá para provar o fudge antes de comprar, e a venda é por peso. As especialidades ' +
+            'da casa são o de caramelo com flor de sal e a maçã do amor com chocolate. Sábado ' +
+            'abre às 11h e fecha às 22h.',
+      pesquisa: '2026-09-17' },
+
+    /* ---- 21/11 · Winter Garden ---- */
+    { id: 'g-feira-winter-garden', nome: 'Café da Axum e os assados da feira', tipo: 'lanche',
+      onde: 'Winter Garden · Axum Coffee, na Plant Street, e a feira no Downtown Pavilion',
+      localId: 'winter-garden', dias: ['d-2026-11-21'],
+      quando: 'na manhã da feira, das 8h45 às 10h15 — ela fecha às 13h',
+      preco: 'US$ 4–5 o café · a feira não tem tabela e a entrada é gratuita',
+      prioridade: 'imperdivel',
+      porque: 'A feira de sábado de Winter Garden é eleita repetidamente a melhor da Flórida, ' +
+              'com mais de cem barracas de produtor, assados e delicatessen, e música ao vivo. ' +
+              'A Axum é a torrefação local e abre cedo o bastante para começar por ela.',
+      dica: 'A matriz da Axum abre sábado às 7h30; a filial de dentro do Plant Street Market só ' +
+            'às 10h — comecem pela matriz. Levem dinheiro: parte dos barraqueiros não passa cartão.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-crooked-can', nome: 'Flight da Crooked Can Brewing', tipo: 'bebida',
+      onde: 'Winter Garden · dentro do Plant Street Market, no taproom da cervejaria',
+      localId: 'winter-garden', dias: ['d-2026-11-21'],
+      quando: 'no almoço do Plant Street Market, às 11h45',
+      preco: 'sem tabela publicada para pint nem para flight', prioridade: 'se-der',
+      porque: 'É a cervejaria artesanal local servida no próprio tanque, dentro do mercado — e ' +
+              'a mesma casa tem torneira no Club Level do Kia Center, onde vocês vão ver o ' +
+              'Solar Bears à noite.',
+      dica: 'O taproom abre às 10h, antes das barracas de comida do mercado, que só abrem entre ' +
+            '11h e 11h30. Peçam o flight para provar quatro sem se comprometer: High Stepper é ' +
+            'a IPA, Cloud Chaser a de trigo e Florida Sunshine a lager.',
+      pesquisa: '2026-09-17' },
+
+    /* ---- 24/11 · Old Town ---- */
+    { id: 'g-root-beer', nome: 'Root beer float do A&W', tipo: 'bebida',
+      onde: 'Old Town · no meio do calçadão, na loja do A&W', localId: 'old-town',
+      dias: ['d-2026-11-24'],
+      quando: 'na volta ao Old Town às 17h20, antes do jantar',
+      preco: 'US$ 4–5', prioridade: 'imperdivel',
+      porque: 'Root beer tirada na torneira com bola de sorvete em caneca gelada, receita de ' +
+              '1919. É o clássico americano que não se encontra no Brasil e combina exatamente ' +
+              'com o cenário retrô do Old Town.',
+      dica: 'Terça o Old Town fecha às 21h e não tem desfile de carros — o cruise é sexta e ' +
+            'sábado. Cheguem antes das 19h30. A casa também é conhecida pelo hambúrguer e pelos ' +
+            'chicken tenders empanados à mão. O Fat Boy’s não está mais no diretório do Old Town.',
       pesquisa: '2026-09-17' },
   ],
 
