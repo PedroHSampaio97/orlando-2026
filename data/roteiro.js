@@ -155,17 +155,20 @@ window.ROTEIRO = {
         nota: 'Vocês têm cerca de 5 minutos para concluir antes de o sistema soltar as seleções.',
         alerta: {
           gravidade: 'alta',
-          titulo: 'A compra provavelmente não é uma só',
+          titulo: 'Uma compra só: 7h ET de 08/11 — é a ação mais crítica da viagem',
           texto:
-            'A antecedência depende de onde vocês estão hospedados. No Travelodge, que é ' +
-            'fora dos hotéis Disney, a janela é de 3 dias, não 7 — e a regra muda com o tipo ' +
-            'de ingresso.\n\n' +
-            'INGRESSO DE DATAS FIXAS (date-based): a compra abre 3 dias antes do PRIMEIRO dia ' +
-            'do ingresso e cobre todos os dias de uma vez, Multi Pass e Single Pass. Aí 08/11 ' +
-            'resolve os quatro dias.\n\n' +
-            'INGRESSO SEM DATA FIXA: 3 dias antes de CADA visita — 08/11 para o dia 11, 10/11 ' +
-            'para o dia 13 e 12/11 para o dia 15. O dia 16 não usa Multi Pass.\n\n' +
-            'MULTI PASS, dia a dia: 11/11 Peter Pan / Mansão / Buzz. 13/11 Frozen / ' +
+            'A REGRA DO INGRESSO ESTÁ CONFIRMADA. A agência confirmou em 17/09/2026: são 4 ' +
+            'dias de parque, válidos por 7 DIAS CORRIDOS a partir da data de início. É ingresso ' +
+            'de datas fixas (date-based).\n\n' +
+            'COM ISSO, A COMPRA É UMA SÓ. Fora dos hotéis Disney a janela é de 3 dias, e num ' +
+            'ingresso de datas fixas ela abre 3 dias antes do PRIMEIRO dia e cobre todos os ' +
+            'dias de uma vez, Multi Pass e Single Pass. Começando em 11/11, isso é 08/11 às ' +
+            '7h ET, e resolve os quatro dias.\n\n' +
+            'A JANELA DE 7 DIAS AMARRA O ROTEIRO: começando em 11/11, o ingresso vale até ' +
+            '17/11. Os quatro dias de Disney — 11, 13, 15 e 16 — cabem com um dia de folga. ' +
+            'Qualquer remanejamento que jogue um dia de Disney para depois de 17/11 quebra o ' +
+            'ingresso.\n\n' +
+                        'MULTI PASS, dia a dia: 11/11 Peter Pan / Mansão / Buzz. 13/11 Frozen / ' +
             'Mission: SPACE / Soarin’, com o Remy rolando. 15/11 Rock ’n’ Roller Coaster / ' +
             'Torre do Terror / Star Tours, com o Runaway Railway rolando. 16/11 nenhum, o ' +
             'Animal Kingdom não usa.\n\n' +
@@ -178,9 +181,7 @@ window.ROTEIRO = {
             '  · Cosmic Rewind (13/11) → janela entre 10h15 e 10h45\n\n' +
             'PREÇO: dinâmico. Em setembro de 2026 o Multi Pass custava US$ 15–37 no Epcot e ' +
             'US$ 20–39 no Hollywood Studios, por pessoa; o Single Pass, US$ 14–17 no Cosmic ' +
-            'Rewind e US$ 15–25 no Rise. Novembro tende a ser mais caro.\n\n' +
-            'É por isso que a pendência de 15/09 — confirmar com a agência a regra de validade ' +
-            'do ingresso — define quantas compras são.',
+            'Rewind e US$ 15–25 no Rise. Novembro tende a ser mais caro.',
           pesquisa: '2026-09-11',
           verificado: true,
         },
@@ -652,8 +653,8 @@ window.ROTEIRO = {
                   'Buzz na baixa. Single Pass nenhum — os dois ficam como plano B pago. ' +
                   'Big Thunder, Jungle Cruise e Space Mountain não estão aí de propósito: ' +
                   'os dois primeiros vocês fazem no standby antes das 11h, e o Space entra ' +
-                  'rolando depois que usarem a Mansão. Com ingresso de datas fixas, as ' +
-                  'reservas dos dias 15 e 16 também aparecem. Se alguma faltar, hoje ainda ' +
+                  'rolando depois que usarem a Mansão. As reservas dos dias 13 e 15 também ' +
+                  'aparecem, porque tudo saiu na mesma compra. Se alguma faltar, hoje ainda ' +
                   'dá tempo de rever o plano. Amanhã às 9h, não.' },
 
         { texto: 'Conferir que a referência do dia 11 continua em 9h — o oficial é 9h às 22h',
@@ -1073,10 +1074,10 @@ window.ROTEIRO = {
         'propósito o mais leve da primeira semana, e a lista é curta porque tem que ser.',
       itens: [
         { texto: 'Conferir se o Lightning Lane do dia 15 já está no app', critico: true,
-          motivo: 'Com ingresso de datas fixas, o Multi Pass do dia 15 e o Single Pass do ' +
-                  'Rise saíram em 08/11 — confiram que as reservas estão lá. Se não ' +
-                  'estiverem, ou se o ingresso não for de datas fixas, a compra é amanhã às ' +
-                  '7h ET e PRECISA de alarme. Decidam isso hoje, não às 6h59.' },
+          motivo: 'O Multi Pass do dia 15 e o Single Pass do Rise saíram em 08/11, na ' +
+                  'compra única — confiram que as reservas estão lá, nos dois perfis. Se ' +
+                  'faltar alguma, comprem hoje mesmo: a janela do dia 15 segue aberta, e ' +
+                  'não existe alarme de 7h amanhã.' },
         { texto: 'Se não houver compra, dormir até acordar', critico: true,
           motivo: 'O café do hotel vai até tarde e o outlet abre às 10h. Fora a compra ' +
                   'das 7h, nada no dia 12 depende de vocês acordarem cedo.' },
@@ -1647,9 +1648,8 @@ window.ROTEIRO = {
       'pesada a partir de amanhã. O bloco vazio da tarde não é folga, é manutenção.',
 
     avisos: [
-      'COMPRA ÀS 7H ET HOJE, se ela não saiu em 08/11: o Multi Pass do dia 15 e o Single ' +
-      'Pass do Rise of the Resistance. Com ingresso de datas fixas, os dois saíram em ' +
-      '08/11 — confiram no app e voltem a dormir. Está nas pendências.',
+      'NÃO HÁ COMPRA HOJE. O Multi Pass do dia 15 e o Single Pass do Rise saíram em 08/11, ' +
+      'na compra única — é só conferir no app. Não existe alarme de 7h neste dia.',
       'Fora isso, nada hoje depende de acordar cedo — como no dia 14.',
     ],
 
@@ -1725,8 +1725,8 @@ window.ROTEIRO = {
         { texto: 'Conferir se as reservas de Lightning Lane do dia 13 aparecem no app',
           critico: true,
           motivo: 'O Multi Pass do dia 13 (Mission: SPACE, Soarin’ e Frozen) e o Single Pass ' +
-                  'do Cosmic Rewind saíram em 10/11, ou em 08/11 com ingresso de datas fixas. ' +
-                  'Se algo falhou, hoje ainda dá para replanejar a manhã do Epcot.' },
+                  'do Cosmic Rewind saíram em 08/11, na compra única. Se algo falhou, hoje ' +
+                  'ainda dá para comprar ou para replanejar a manhã do Epcot.' },
         { texto: 'Conferir o horário de abertura do Epcot e ajustar a referência',
           critico: true,
           motivo: 'O dia 13 assume 9h. Se for outro, mudem a referência e a manhã desloca ' +
@@ -2629,8 +2629,8 @@ window.ROTEIRO = {
           critico: true,
           motivo: 'Multi Pass: Rock ’n’ Roller Coaster na lista alta, Torre do Terror e ' +
                   'Star Tours na baixa — o Runaway Railway se reserva lá dentro. Single ' +
-                  'Pass do Rise of the Resistance. Tudo sai em 12/11, ou em 08/11 com ' +
-                  'ingresso de datas fixas. Se faltar alguma, hoje ainda dá para replanejar.' },
+                  'Pass do Rise of the Resistance. Tudo saiu em 08/11, na compra única. Se ' +
+                  'faltar alguma, hoje ainda dá para comprar ou para replanejar.' },
         { texto: 'Conferir o horário de abertura do Hollywood Studios', critico: true,
           motivo: 'O dia 15 assume 9h. Se for outro, mudem a referência e a manhã inteira ' +
                   'desloca junto, inclusive a saída das 7h.' },
@@ -8298,14 +8298,21 @@ window.ROTEIRO = {
         'sem reserva, com as barracas.',
       restauranteIds: ['r-epcot-mesa'] },
 
-    { id: 'ck-ingresso', dataAlvo: '2026-09-15', validaAte: '2026-11-08', dataEstimada: true, motivoData: 'Bloqueia o plano de Lightning Lane inteiro', hora: null, fuso: null,
-      janelaReserva: false, critico: true,
-      texto: 'Confirmar com a agência a regra exata de validade do ingresso Disney de 4 dias',
+    { id: 'ck-ingresso', dataAlvo: '2026-09-17', validaAte: '2026-11-11',
+      hora: null, fuso: null, janelaReserva: false, critico: false, feitoPadrao: true,
+      texto: 'Ingresso Disney de 4 dias — válido por 7 dias corridos a partir da data de início',
       nota:
-        'É a pendência mais importante da lista. Se o ingresso for de datas fixas, o ' +
-        'Lightning Lane dos três dias de passe — Multi Pass e Single Pass — sai numa compra ' +
-        'só, em 08/11. Se não for, são três compras: 08/11, 10/11 e 12/11. Isso muda as ' +
-        'quatro pendências de Lightning Lane deste checklist.',
+        'CONFIRMADO COM A AGÊNCIA em 17/09/2026: são 4 dias de parque, válidos por 7 DIAS ' +
+        'CORRIDOS contados da data de início. Ou seja, é ingresso de DATAS FIXAS.\n\n' +
+        'CONSEQUÊNCIA 1 — A COMPRA DE LIGHTNING LANE É UMA SÓ, em 08/11 às 7h ET, e cobre os ' +
+        'quatro dias, Multi Pass e Single Pass. Some o cenário de três compras separadas, ' +
+        'que incluía uma às 7h ET de 10/11, com vocês no ar entre o Rio e Bogotá.\n\n' +
+        'CONSEQUÊNCIA 2 — A JANELA AMARRA O ROTEIRO. Começando em 11/11, o ingresso vale até ' +
+        '17/11. Os quatro dias de Disney são 11, 13, 15 e 16: cabem, com um dia de folga. Se ' +
+        'algum dia de Disney for remanejado para depois de 17/11, o ingresso não cobre.\n\n' +
+        'CONFIRAM A DATA DE INÍCIO NO VOUCHER. Ela é o que dispara a contagem, e é ela que ' +
+        'tem de ser 11/11.',
+      pesquisa: '2026-09-17',
       restauranteIds: [] },
 
     { id: 'ck-shuttle', dataAlvo: '2026-10-06', validaAte: '2026-11-15', dataEstimada: true,
@@ -8576,38 +8583,39 @@ window.ROTEIRO = {
       pesquisa: '2026-09-10',
       restauranteIds: [] },
 
-    { id: 'ck-ll-0811', dataAlvo: '2026-11-08', validaAte: '2026-11-11', hora: '07:00', fuso: 'ET',
+    { id: 'ck-ll-0811', dataAlvo: '2026-11-08', validaAte: '2026-11-15', hora: '07:00', fuso: 'ET',
       janelaReserva: false, critico: true,
-      texto: 'Lightning Lane — Multi Pass do Magic Kingdom (11/11) e, com ingresso de datas fixas, dos quatro dias',
+      texto: 'Lightning Lane — A COMPRA: os quatro dias de Disney de uma vez',
       nota:
-        'Cinco minutos antes de o sistema soltar as seleções. Cheguem decididos:\n\n' +
-        'DIA 11, MAGIC KINGDOM — Multi Pass: lista alta Peter Pan; lista baixa Mansão e ' +
-        'Buzz. Single Pass: nenhum.\n\n' +
-        'SE O INGRESSO FOR DE DATAS FIXAS, HOJE ABRE A COMPRA DOS QUATRO DIAS — Multi Pass ' +
-        'e Single Pass. Escolham agora também:\n' +
-        '  · 15/11 Hollywood Studios — Multi Pass: alta Rock ’n’ Roller Coaster; baixa Torre ' +
-        'do Terror e Star Tours. Single Pass do Rise of the Resistance, janela entre 10h30 e ' +
-        '11h.\n' +
-        '  · 13/11 Epcot — Multi Pass: alta Frozen Ever After; baixa Mission: SPACE e ' +
-        'Soarin’. Single Pass do Cosmic Rewind, janela entre 10h15 e 10h45.\n' +
-        '  · 16/11 Animal Kingdom — nada. O dia não usa Multi Pass, e o Single Pass do ' +
-        'Flight of Passage se decide dentro do parque.\n\n' +
-        'Se o ingresso NÃO for de datas fixas, hoje só abre o dia 11 — e os dias 13 e 15 ' +
-        'têm data própria, 10/11 e 12/11, já nas pendências. O 10/11 é o dia do voo: ' +
-        'às 7h ET vocês estão no ar, então esse é o cenário em que o ingresso de datas ' +
-        'fixas vale ouro.\n\n' +
+        'É A AÇÃO MAIS CRÍTICA DA VIAGEM e acontece uma vez só. O ingresso é de datas fixas, ' +
+        'confirmado com a agência em 17/09: a janela abre 3 dias antes do primeiro dia e cobre ' +
+        'todos os dias do ingresso, Multi Pass e Single Pass. Vocês têm cerca de 5 minutos ' +
+        'antes de o sistema soltar as seleções. Cheguem decididos:\n\n' +
+        'DIA 11, MAGIC KINGDOM — Multi Pass: lista alta Peter Pan; lista baixa Mansão e Buzz. ' +
+        'Single Pass: nenhum.\n\n' +
+        'DIA 13, EPCOT — Multi Pass: lista alta Frozen Ever After; lista baixa Mission: SPACE ' +
+        'e Soarin’. Single Pass do Cosmic Rewind, janela entre 10h15 e 10h45.\n\n' +
+        'DIA 15, HOLLYWOOD STUDIOS — Multi Pass: lista alta Rock ’n’ Roller Coaster; lista ' +
+        'baixa Torre do Terror e Star Tours. Single Pass do Rise of the Resistance, janela ' +
+        'entre 10h30 e 11h.\n\n' +
+        'DIA 16, ANIMAL KINGDOM — nada. O dia não usa Multi Pass, e o Single Pass do Flight ' +
+        'of Passage se decide dentro do parque.\n\n' +
         'NÃO peçam o Big Thunder nem o Jungle Cruise: os dois são lista alta e vocês vão ' +
         'fazer os dois de graça, no standby, antes das 11h. O Space Mountain entra rolando ' +
-        'dentro do parque, assim que vocês usarem a Mansão às 11h.',
+        'dentro do parque, assim que vocês usarem a Mansão. O Remy entra rolando no dia 13, na ' +
+        'saída do Mission: SPACE, e o Runaway Railway no dia 15, depois do Rock ’n’ Roller.\n\n' +
+        'SE ALGUMA SELEÇÃO NÃO SAIR HOJE, ela não está perdida: a janela do dia continua ' +
+        'aberta depois. A pendência de 10/11 é justamente para conferir isso ao pousar.',
+      pesquisa: '2026-09-17',
       restauranteIds: [] },
 
-    { id: 'ck-ll-1011', dataAlvo: '2026-11-10', validaAte: '2026-11-13', hora: '07:00', fuso: 'ET',
+    { id: 'ck-ll-fop', dataAlvo: '2026-11-08', validaAte: '2026-11-16', hora: null, fuso: null,
       janelaReserva: false, critico: false,
       texto: 'NÃO é compra: o Single Pass do Flight of Passage se decide dentro do parque',
       nota:
-        'ESTA PENDÊNCIA EXISTE PARA VOCÊS NÃO FAZEREM NADA HOJE. Ela está em 10/11 porque ' +
-        'é a data em que a compra antecipada seria possível — às 7h ET, no meio da conexão ' +
-        'em Bogotá, que é o pior momento da viagem para depender de internet.\n\n' +
+        'ESTA PENDÊNCIA EXISTE PARA VOCÊS NÃO COMPRAREM NADA. Ela está em 08/11 porque é o ' +
+        'dia da compra única: com o ingresso de datas fixas, o Single Pass do Flight of ' +
+        'Passage também estaria à venda ali, junto com o resto. NÃO comprem.\n\n' +
         'E não precisa. O Single Pass do Flight of Passage se compra NA HORA, pelo app, de ' +
         'pé dentro do Animal Kingdom, se ainda houver janela de retorno. A decisão é das ' +
         '17h30 do dia 16, olhando a fila — não das 7h de hoje, olhando um portão de ' +
@@ -8618,35 +8626,19 @@ window.ROTEIRO = {
         'demais no dia.',
       restauranteIds: [] },
 
-    { id: 'ck-ll-1211', dataAlvo: '2026-11-12', validaAte: '2026-11-15', hora: '07:00', fuso: 'ET',
-      janelaReserva: false, critico: true,
-      texto: 'Lightning Lane para 15/11 — Multi Pass do dia e Single Pass do Rise',
+    { id: 'ck-ll-1011', dataAlvo: '2026-11-10', validaAte: '2026-11-13',
+      hora: null, fuso: null, janelaReserva: false, critico: false,
+      texto: 'Ao pousar: conferir no app que as seleções de 08/11 estão todas lá',
       nota:
-        'SÃO DUAS COISAS, e a segunda é a que some quando ninguém escreve. Com ingresso de ' +
-        'datas fixas, as duas saíram em 08/11: confiram no app que estão lá e risquem.\n\n' +
-        'MULTI PASS do dia 15 — lista alta: Rock ’n’ Roller Coaster. Lista baixa: Torre do ' +
-        'Terror e Star Tours. O Runaway Railway não entra aqui: ele é reservado dentro do ' +
-        'parque, assim que o Rock ’n’ Roller é usado.\n\n' +
-        'SINGLE PASS do Rise of the Resistance — peçam janela entre 10h30 e 11h. Este é o ' +
-        'único dos três dias de passe em que o Single se justifica: o Rise faz 100 min na ' +
-        'abertura e 63 depois das 19h, e a noite de vocês já tem Oga’s, jantar e ' +
-        'Fantasmic.',
-      restauranteIds: [] },
-
-    { id: 'ck-ll-1011', dataAlvo: '2026-11-10', validaAte: '2026-11-13', hora: '07:00', fuso: 'ET',
-      janelaReserva: false, critico: true,
-      texto: 'Lightning Lane para 13/11 — Multi Pass do dia e Single Pass do Cosmic Rewind',
-      nota:
-        'ATENÇÃO À HORA: às 7h ET de hoje vocês estão no voo entre o Rio e Bogotá. Se o ' +
-        'ingresso for de datas fixas, isto já saiu em 08/11 e hoje é só conferir no app ao ' +
-        'pousar. Se NÃO for, a compra tem de sair do wifi de bordo ou logo depois do pouso, ' +
-        'às 12h35 — e quanto mais tarde, pior a disponibilidade.\n\n' +
-        'MULTI PASS do dia 13 — lista alta: Frozen Ever After. Lista baixa: Mission: SPACE e ' +
-        'Soarin’. Frozen, Remy e Test Track são todos do nível 1, e a compra leva só um. O ' +
-        'Remy é reservado dentro do parque, na saída do Mission: SPACE, às 9h45.\n\n' +
-        'SINGLE PASS do Cosmic Rewind — peçam janela entre 10h15 e 10h45. Ele faz 101 min de ' +
-        'média e passa de uma hora mesmo às 8h: não existe janela barata em hora nenhuma ' +
-        'do dia.',
+        'NÃO É COMPRA E NÃO TEM HORA. Com o ingresso de datas fixas, tudo saiu numa vez só em ' +
+        '08/11 — isto aqui é a rede de segurança.\n\n' +
+        'Abram o My Disney Experience depois do pouso, às 12h35, e confiram que estão lá, nos ' +
+        'DOIS perfis: o Multi Pass dos dias 11, 13 e 15, o Single Pass do Cosmic Rewind (13) e ' +
+        'o do Rise of the Resistance (15).\n\n' +
+        'Se faltar alguma, comprem na hora: a janela de cada dia segue aberta depois de 08/11, ' +
+        'só com pior disponibilidade. Quanto mais cedo resolverem, melhor — e é muito melhor ' +
+        'descobrir hoje do que na véspera de cada parque.',
+      pesquisa: '2026-09-17',
       restauranteIds: [] },
 
     { id: 'ck-oakley', dataAlvo: '2026-11-14', validaAte: '2026-11-25', hora: null, fuso: null,

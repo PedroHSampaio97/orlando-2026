@@ -275,6 +275,18 @@ const historiasSemDia = historias.filter(l =>
 ok(historiasSemDia.length === 0, 'toda historia aparece na ficha de algum dia',
    historiasSemDia.map(l => l.id).join(', '));
 
+/* ========================= pendencias: ids e datas ========================= */
+console.log('\n--- pendencias ---');
+const idsCk = R.checklist.map(c => c.id);
+const ckDup = idsCk.filter((x, i) => idsCk.indexOf(x) !== i);
+ok(ckDup.length === 0, 'nenhum id de pendencia duplicado (' + idsCk.length + ')',
+   [...new Set(ckDup)].join(', '));
+const ckSemData = R.checklist.filter(c => !ISO.test(c.dataAlvo || ''));
+ok(ckSemData.length === 0, 'toda pendencia tem data alvo valida', ckSemData.map(c => c.id).join(', '));
+const ckValida = R.checklist.filter(c => c.validaAte && c.validaAte < c.dataAlvo);
+ok(ckValida.length === 0, 'nenhuma pendencia vence antes de comecar',
+   ckValida.map(c => c.id).join(', '));
+
 /* ========================= o que nao se volta sem comer ========================= */
 console.log('\n--- gastronomia ---');
 const gastro = R.gastronomia || [];

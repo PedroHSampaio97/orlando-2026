@@ -22,7 +22,9 @@
 
 Seven Dwarfs Mine Train e Flight of Passage **não estão no Multi Pass**. São Single Pass, compra separada, no máximo duas por dia.
 
-**Compra:** fora dos hotéis Disney, 3 dias antes, às 7h ET (horário da Flórida). Com ingresso de **datas fixas**, 08/11 abre os quatro dias de uma vez, Multi Pass e Single Pass; sem data fixa, é 08/11 para o dia 11, 12/11 para o dia 15 e 13/11 para o dia 16. Vocês têm 5 minutos para concluir antes de o sistema soltar as seleções. O preço é dinâmico: em setembro de 2026, US$ 15–37 por pessoa no Epcot e US$ 20–39 no Hollywood Studios.
+**Compra: uma só, em 08/11 às 7h ET** (horário da Flórida). O ingresso é de **datas fixas** — 4 dias de parque válidos por 7 dias corridos a partir da data de início, confirmado com a agência em 17/09/2026. Fora dos hotéis Disney a janela é de 3 dias, e num ingresso de datas fixas ela abre 3 dias antes do primeiro dia e cobre todos os dias de uma vez, Multi Pass e Single Pass. Vocês têm 5 minutos para concluir antes de o sistema soltar as seleções. O preço é dinâmico: em setembro de 2026, US$ 15–37 por pessoa no Epcot e US$ 20–39 no Hollywood Studios.
+
+**A janela de 7 dias amarra o roteiro:** começando em 11/11, o ingresso vale até 17/11. Os quatro dias de Disney — 11, 13, 15 e 16 — cabem com um dia de folga.
 
 **Como funcionam as listas:** no Magic Kingdom, Epcot e Hollywood Studios vocês escolhem **1 do nível 1 (lista alta) e 2 do nível 2 (lista baixa)**. O Animal Kingdom não tem listas. As listas abaixo seguem os níveis de maio de 2026; se o app mostrar outra divisão no dia da compra, vale a do app.
 
@@ -632,11 +634,11 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [x] **11/09** — Atlantic (20/11, 17h) — RESERVADO, confirmação 639251824607987840
 - [x] **12/09** — Magic Kingdom — sem reserva: almoço e jantar do dia 11 são de balcão (Columbia Harbour House e Casey’s)
 - [x] **12/09** — Magic Kingdom 11/11 — 9h às 22h, Early Entry 8h30 e os fogos às 20h
-- [ ] **15/09** — Confirmar com a agência a regra exata de validade do ingresso Disney de 4 dias *(data estimada)*
 - [x] **16/09** — Oga’s Cantina (15/11, 17h05) — RESERVADO, confirmação 356259476987
 - [x] **16/09** — Epcot 13/11 e Hollywood Studios 15/11 — 9h às 21h nos dois, Early Entry 8h30
 - [x] **17/09** — Sanaa (16/11, 19h50) — RESERVADO, confirmação 356258407484
 - [x] **17/09** — Epcot (13/11): sem mesa — a tarde e a noite são as barracas do Food & Wine
+- [x] **17/09** — Ingresso Disney de 4 dias — válido por 7 dias corridos a partir da data de início
 - [ ] **26/09, 6h ET** — Reservar o Homecomin’ para as 19h30 de 25/11 — a janela de 60 dias abre às 6h ET
 
 **Outubro**
@@ -657,13 +659,12 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [ ] **05/11** — Cadastrar no Simon VIP Club para o cupom do outlet sair de graça *(data estimada)*
 - [ ] **05/11** — Reserva do Travelodge salva OFFLINE nos dois celulares
 - [ ] **05/11** — Apólice do seguro salva OFFLINE nos dois celulares, e banco avisado
-- [ ] **08/11, 7h ET** — Lightning Lane — Multi Pass do Magic Kingdom (11/11) e, com ingresso de datas fixas, dos quatro dias
+- [ ] **08/11, 7h ET** — Lightning Lane — A COMPRA: os quatro dias de Disney de uma vez
+- [ ] **08/11** — NÃO é compra: o Single Pass do Flight of Passage se decide dentro do parque
 
 **Durante a viagem**
-- [ ] **10/11, 7h ET** — NÃO é compra: o Single Pass do Flight of Passage se decide dentro do parque
-- [ ] **10/11, 7h ET** — Lightning Lane para 13/11 — Multi Pass do dia e Single Pass do Cosmic Rewind
+- [ ] **10/11** — Ao pousar: conferir no app que as seleções de 08/11 estão todas lá
 - [ ] **11/11, 7h45** — HOJE, no portão: a hora do Festival of Fantasy e do desfile noturno
-- [ ] **12/11, 7h ET** — Lightning Lane para 15/11 — Multi Pass do dia e Single Pass do Rise
 - [ ] **12/11** — Conferir quais lands do Epic estão no Early Park Admission em 20/11 *(data estimada)*
 - [ ] **13/11, 8h15** — HOJE, no portão: a hora do Luminous
 - [ ] **14/11, 9h** — HOJE, antes de sair: a hora do Grinchmas e da projeção no castelo
