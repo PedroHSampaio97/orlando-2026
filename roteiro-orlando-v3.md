@@ -660,7 +660,6 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [ ] **05/11** — Reserva do Travelodge salva OFFLINE nos dois celulares
 - [ ] **05/11** — Apólice do seguro salva OFFLINE nos dois celulares, e banco avisado
 - [ ] **08/11, 7h ET** — Lightning Lane — A COMPRA: os quatro dias de Disney de uma vez
-- [ ] **08/11** — NÃO é compra: o Single Pass do Flight of Passage se decide dentro do parque
 
 **Durante a viagem**
 - [ ] **10/11** — Ao pousar: conferir no app que as seleções de 08/11 estão todas lá

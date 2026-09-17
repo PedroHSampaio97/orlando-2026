@@ -172,13 +172,15 @@ window.ROTEIRO = {
             'Mission: SPACE / Soarin’, com o Remy rolando. 15/11 Rock ’n’ Roller Coaster / ' +
             'Torre do Terror / Star Tours, com o Runaway Railway rolando. 16/11 nenhum, o ' +
             'Animal Kingdom não usa.\n\n' +
-            'SINGLE PASS: dois dias compram.\n' +
-            '  · Seven Dwarfs e TRON (11/11) → NÃO COMPRAR. São plano B pago, resolvidos por ' +
-            'janela de horário dentro do parque.\n' +
-            '  · Flight of Passage (16/11) → NÃO COMPRAR antes. Se for preciso, compra-se ' +
-            'dentro do parque às 17h30, se ainda houver janela.\n' +
+            'SINGLE PASS: quatro compras, todas em 08/11.\n' +
+            '  · TRON (11/11) → COMPRAR, ~US$ 20–23 por pessoa. Sem Early Entry o TRON não ' +
+            'é opção de rope drop e o standby fica em 50–90 minutos.\n' +
+            '  · Cosmic Rewind (13/11) → janela entre 10h15 e 10h45\n' +
             '  · Rise of the Resistance (15/11) → janela entre 10h30 e 11h\n' +
-            '  · Cosmic Rewind (13/11) → janela entre 10h15 e 10h45\n\n' +
+            '  · Flight of Passage (16/11) → COMPRAR, ~US$ 18–20 por pessoa. Ele esgota ' +
+            'antes da data: não dá para deixar para decidir dentro do parque.\n' +
+            '  · Seven Dwarfs (11/11) → NÃO COMPRAR. Segue como plano B pago, resolvido por ' +
+            'janela de horário dentro do parque.\n\n' +
             'PREÇO: dinâmico. Em setembro de 2026 o Multi Pass custava US$ 15–37 no Epcot e ' +
             'US$ 20–39 no Hollywood Studios, por pessoa; o Single Pass, US$ 14–17 no Cosmic ' +
             'Rewind e US$ 15–25 no Rise. Novembro tende a ser mais caro.',
@@ -1044,12 +1046,12 @@ window.ROTEIRO = {
         motivo: 'Doze minutos sentados, com ar-condicionado. É o melhor bloco de descanso do ' +
                 'parque na pior hora de calor, e ainda é bom de verdade.' },
 
-      { nome: 'Single Pass do TRON', quando: 'decidir', custo: 'US$ 20–23 por pessoa',
-        motivo: 'PLANO B PAGO, não compra antecipada. O roteiro tem duas janelas de graça — ' +
-                '15h30 no desfile e 21h25 na última hora. Só se as duas falharem é que vale ' +
-                'sacar o cartão, e aí dá para comprar na hora pelo app, de pé na frente da ' +
-                'atração. Não comprem em 08/11.',
-        pesquisa: '2026-09-10' },
+      { nome: 'Single Pass do TRON', quando: 'comprado', custo: 'US$ 20–23 por pessoa',
+        motivo: 'COMPRADO EM 08/11, junto do resto. Sem Early Entry o TRON não é opção de ' +
+                'rope drop — ele abre com o parque, já com todo mundo dentro — e o standby ' +
+                'fica em 50 a 90 minutos. Com o passe, a janela das 15h30 vira 10 a 15 ' +
+                'minutos e a repescagem das 21h25 deixa de ser necessária.',
+        pesquisa: '2026-09-17' },
 
       { nome: 'Single Pass do Seven Dwarfs', quando: 'decidir', custo: 'US$ 15–20 por pessoa',
         motivo: 'PLANO B PAGO, mesma lógica. A fila dele é a mais persistente do parque, ' +
@@ -1285,7 +1287,7 @@ window.ROTEIRO = {
           'Cruise, que também são lista alta, vocês fizeram de graça na abertura. O Peter Pan ' +
           'não tem essa saída: ele é ruim de fila o dia inteiro, de manhã à noite.',
         areaParque: 'Fantasyland', acesso: ['multi-pass'], critico: true, duracaoMin: 30,
-        fila: { min: 10, quando: 'com o Multi Pass', pico: 70, fonte: '2026-09-10' } },
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 120, fonte: '2026-09-17' } },
 
       { id: 'b-1111-1630', hora: '13:50', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Mickey’s PhilharMagic',
@@ -3031,13 +3033,10 @@ window.ROTEIRO = {
                   'estão coreografados minuto a minuto. Com 19h ou 20h o dia respira. A ' +
                   'reta final é fixa e NÃO desloca com a abertura — ela segue o sol.' },
 
-        { texto: 'Decidir sobre o Single Pass do Flight of Passage', critico: false,
-          motivo: 'NÃO é compra pendente, é decisão. O dia foi montado para pegar a fila ' +
-                  'de 40 a 65 minutos do fim da tarde em vez dos 100 a 180 do pico. Só ' +
-                  'vale comprar se o fechamento não deixar o plano caber, ou se vocês ' +
-                  'decidirem que não querem 50 minutos de fila no fim de dez horas de ' +
-                  'parque. Se decidirem comprar, é na hora, pelo app, dentro do parque — se ' +
-                  'ainda houver janela de retorno.' },
+        { texto: 'Conferir que o Single Pass do Flight of Passage está no app', critico: true,
+          motivo: 'Ele foi comprado em 08/11 com o resto. Confiram nos DOIS perfis que a ' +
+                  'janela de retorno está lá e anotem a hora — a reta final do dia 16 é ' +
+                  'montada em cima dela.' },
 
         { texto: 'Reserva do Sanaa: número de confirmação à mão', critico: false,
           motivo: 'Jantar às 19h50, confirmação 356258407484, na Kidani Village do Animal ' +
@@ -3657,14 +3656,13 @@ window.ROTEIRO = {
                 'pular ganha 35 minutos e evita passar o resto do dia com roupa molhada. Se ' +
                 'estiver quente, é diversão barata e sem fila naquela hora.' },
 
-      { nome: 'Single Pass do Flight of Passage', quando: 'decidir',
+      { nome: 'Single Pass do Flight of Passage', quando: 'comprado',
         custo: 'US$ 18–20 por pessoa',
-        motivo: 'PLANO B PAGO, não compra antecipada. O dia foi montado para pegar a fila de ' +
-                '40–65 minutos do fim da tarde em vez dos 100–180 do pico. Só vale comprar ' +
-                'se o parque fechar cedo demais para o plano caber, ou se vocês decidirem ' +
-                'que não querem encarar 50 minutos de fila no fim de um dia de dez horas. ' +
-                'A compra é na hora, pelo app, dentro do parque — se ainda houver janela.',
-        pesquisa: '2026-09-10' },
+        motivo: 'COMPRADO EM 08/11, junto do resto. Ele é o Single Pass que mais esgota antes ' +
+                'da data, e a única janela de compra de vocês é 08/11: deixar para decidir ' +
+                'dentro do parque é apostar que ainda vai existir. Sem ele, o fim do dia só ' +
+                'fechava se as quatro filas da reta final dessem todas o mínimo.',
+        pesquisa: '2026-09-17' },
 
       { nome: 'Starlight Safari', quando: 'descartado',
         custo: 'US$ 75 a 89 por pessoa · US$ 150 a 178 no casal',
@@ -4123,17 +4121,14 @@ window.ROTEIRO = {
         itens: [],
         opcionais: ['Avatar Flight of Passage'],
         nota:
-          'NÃO COMPREM EM 10/11. O Flight of Passage fica como plano B pago: o dia foi montado ' +
-          'para pegar a fila de 40 a 65 minutos do fim da tarde em vez dos 100 a 180 do ' +
-          'pico, e para sair de Pandora no escuro em vez de na fila.\n\n' +
-          'A compra só se justifica se o parque fechar cedo demais para o plano caber, ou ' +
-          'se vocês decidirem que não querem 50 minutos de fila no fim de um dia de dez ' +
-          'horas.\n\n' +
-          'E NÃO PRECISA DECIDIR EM BOGOTÁ. Como o TRON no dia 11, o Single Pass do Flight ' +
-          'of Passage se compra NA HORA, pelo app, de pé dentro do parque — se ainda houver ' +
-          'janela de retorno. É por isso que ele é plano B e não compra antecipada: vocês ' +
-          'decidem às 17h30, olhando a fila, e não às 7h da manhã de 10/11 no meio de uma ' +
-          'conexão.',
+          'COMPRADO EM 08/11. O Flight of Passage é o Single Pass que mais esgota antes da ' +
+          'data, e a janela de compra de vocês é uma só. Sem ele, a reta final do dia ' +
+          'dependia de as quatro filas — Everest, safári, Na’vi e Flight of Passage — darem ' +
+          'todas o mínimo, e qualquer uma acima disso derrubava o Uber das 19h05 e o Sanaa.\n\n' +
+          'COM A JANELA MARCADA, a reta final passa a ser construída em volta dela. Anotem a ' +
+          'hora de retorno na véspera e confiram o encaixe com o safári do fim da tarde e o ' +
+          'Na’vi.\n\n' +
+          'O locker continua obrigatório: nada solto entra na atração.',
       },
       expressPass: null,
       custoEstimadoCasal: { min: 0, max: 40, moeda: 'USD' },
@@ -4310,7 +4305,7 @@ window.ROTEIRO = {
         areaParque: 'Diagon Alley', acesso: ['rope-drop', 'standby'], acessoAlt: 'single-rider',
         acessoAltNota: 'Não na primeira vez: single rider pula o saguão dos duendes e os dois pré-shows.',
         critico: true, locker: true, duracaoMin: 40,
-        fila: { min: 15, quando: 'na primeira hora', pico: 190, media: 57, fonte: '2026-09-10' },
+        fila: { min: 60, quando: 'às 9h, já carregado', pico: 190, media: 60, fonte: '2026-09-17' },
         pesquisa: '2026-09-10',
         curiosidades: [
           { texto: 'O dragão em cima do banco é um Ironbelly ucraniano de 18 metros.',
@@ -5656,7 +5651,7 @@ window.ROTEIRO = {
           'LOCKER OBRIGATÓRIO. Bolsos vazios antes de entrar na fila.',
         areaParque: 'Dark Universe', acesso: ['rope-drop', 'standby'], acessoAlt: 'single-rider',
         locker: 'obrigatorio', critico: true, duracaoMin: 35,
-        fila: { min: 10, quando: 'na abertura', pico: 45, media: 14, fonte: '2026-09-10' },
+        fila: { min: 10, quando: 'na abertura', pico: 45, media: 30, fonte: '2026-09-17' },
         pesquisa: '2026-09-10',
         curiosidades: [
           { texto: 'A Dra. Victoria Frankenstein da história é tataraneta do Henry ' +
@@ -5680,7 +5675,7 @@ window.ROTEIRO = {
           'depois da abertura, ela ainda não montou.\n\n' +
           'Sem locker obrigatório, mas prendam tudo que estiver solto.',
         areaParque: 'Dark Universe', acesso: ['standby'], acessoAlt: 'single-rider', duracaoMin: 35,
-        fila: { min: 20, quando: 'logo depois da abertura', pico: 75, media: 46, fonte: '2026-09-10' },
+        fila: { min: 20, quando: 'logo depois da abertura', pico: 100, media: 46, fonte: '2026-09-17' },
         pesquisa: '2026-09-10',
         curiosidades: [
           { texto: 'É uma montanha-russa giratória da Mack, inspirada no filme O Lobisomem, de ' +
@@ -5737,7 +5732,7 @@ window.ROTEIRO = {
           'E reparem na decoração: é o primeiro Natal da Super Nintendo World.',
         areaParque: 'Super Nintendo World', acesso: ['standby'], acessoAlt: 'single-rider',
         critico: true, duracaoMin: 70,
-        fila: { min: 60, quando: 'entre 11h e 12h', pico: 170, media: 72, fonte: '2026-09-10' },
+        fila: { min: 60, quando: 'entre 11h e 12h', pico: 170, media: 85, fonte: '2026-09-17' },
         pesquisa: '2026-09-10',
         curiosidades: [
           { texto: 'A atração estreou no Japão em 2021, e a fila é o castelo do Bowser.',
@@ -5786,7 +5781,7 @@ window.ROTEIRO = {
           'LOCKER OBRIGATÓRIO.',
         areaParque: 'Isle of Berk', acesso: ['standby'], acessoAlt: 'single-rider', locker: 'obrigatorio',
         duracaoMin: 45,
-        fila: { min: 30, quando: 'no começo da tarde', pico: 120, media: 38, fonte: '2026-09-10' },
+        fila: { min: 30, quando: 'no começo da tarde', pico: 120, media: 90, fonte: '2026-09-17' },
         pesquisa: '2026-09-10',
         curiosidades: [
           { texto: 'É da Intamin, a mesma fabricante da VelociCoaster: dois lançamentos até 72 ' +
@@ -5882,7 +5877,7 @@ window.ROTEIRO = {
           'HORA A CONFIRMAR: este bloco segue o fechamento do parque. O roteiro assume 21h.',
         areaParque: 'Ministry of Magic', acesso: ['standby'], acessoAlt: 'single-rider', critico: true,
         confirmarHorario: true, duracaoMin: 90,
-        fila: { min: 45, quando: 'nas últimas 2–3 horas', pico: 185, media: 76, fonte: '2026-09-10' },
+        fila: { min: 45, quando: 'nas últimas 2–3 horas', pico: 185, media: 135, fonte: '2026-09-17' },
         pesquisa: '2026-09-10',
         curiosidades: [
           { texto: 'Vocês entram pela Paris bruxa dos anos 1920 e chegam à Londres dos anos ' +
@@ -5910,7 +5905,7 @@ window.ROTEIRO = {
           'Sem locker obrigatório, mas prendam tudo que estiver solto.',
         areaParque: 'Super Nintendo World', acesso: ['standby'], acessoAlt: 'single-rider',
         critico: true, confirmarHorario: true, duracaoMin: 50,
-        fila: { min: 20, quando: 'na última hora', pico: 205, media: 113, fonte: '2026-09-10' },
+        fila: { min: 20, quando: 'na última hora', pico: 205, media: 165, fonte: '2026-09-17' },
         pesquisa: '2026-09-10',
         curiosidades: [
           { texto: 'O truque do trilho que falta é um braço: as rodas correm num trilho ' +
@@ -8592,14 +8587,16 @@ window.ROTEIRO = {
         'todos os dias do ingresso, Multi Pass e Single Pass. Vocês têm cerca de 5 minutos ' +
         'antes de o sistema soltar as seleções. Cheguem decididos:\n\n' +
         'DIA 11, MAGIC KINGDOM — Multi Pass: lista alta Peter Pan; lista baixa Mansão e Buzz. ' +
-        'Single Pass: nenhum.\n\n' +
+        'SINGLE PASS DO TRON, ~US$ 20–23 por pessoa: sem Early Entry ele não é opção de rope ' +
+        'drop e o standby fica em 50 a 90 minutos. O do Seven Dwarfs NÃO entra.\n\n' +
         'DIA 13, EPCOT — Multi Pass: lista alta Frozen Ever After; lista baixa Mission: SPACE ' +
         'e Soarin’. Single Pass do Cosmic Rewind, janela entre 10h15 e 10h45.\n\n' +
         'DIA 15, HOLLYWOOD STUDIOS — Multi Pass: lista alta Rock ’n’ Roller Coaster; lista ' +
         'baixa Torre do Terror e Star Tours. Single Pass do Rise of the Resistance, janela ' +
         'entre 10h30 e 11h.\n\n' +
-        'DIA 16, ANIMAL KINGDOM — nada. O dia não usa Multi Pass, e o Single Pass do Flight ' +
-        'of Passage se decide dentro do parque.\n\n' +
+        'DIA 16, ANIMAL KINGDOM — Multi Pass nenhum, o dia não usa. Mas SINGLE PASS DO ' +
+        'FLIGHT OF PASSAGE, ~US$ 18–20 por pessoa: é o que mais esgota antes da data, e ' +
+        'esta é a única janela de compra de vocês. Anotem a hora de retorno.\n\n' +
         'NÃO peçam o Big Thunder nem o Jungle Cruise: os dois são lista alta e vocês vão ' +
         'fazer os dois de graça, no standby, antes das 11h. O Space Mountain entra rolando ' +
         'dentro do parque, assim que vocês usarem a Mansão. O Remy entra rolando no dia 13, na ' +
@@ -8607,23 +8604,6 @@ window.ROTEIRO = {
         'SE ALGUMA SELEÇÃO NÃO SAIR HOJE, ela não está perdida: a janela do dia continua ' +
         'aberta depois. A pendência de 10/11 é justamente para conferir isso ao pousar.',
       pesquisa: '2026-09-17',
-      restauranteIds: [] },
-
-    { id: 'ck-ll-fop', dataAlvo: '2026-11-08', validaAte: '2026-11-16', hora: null, fuso: null,
-      janelaReserva: false, critico: false,
-      texto: 'NÃO é compra: o Single Pass do Flight of Passage se decide dentro do parque',
-      nota:
-        'ESTA PENDÊNCIA EXISTE PARA VOCÊS NÃO COMPRAREM NADA. Ela está em 08/11 porque é o ' +
-        'dia da compra única: com o ingresso de datas fixas, o Single Pass do Flight of ' +
-        'Passage também estaria à venda ali, junto com o resto. NÃO comprem.\n\n' +
-        'E não precisa. O Single Pass do Flight of Passage se compra NA HORA, pelo app, de ' +
-        'pé dentro do Animal Kingdom, se ainda houver janela de retorno. A decisão é das ' +
-        '17h30 do dia 16, olhando a fila — não das 7h de hoje, olhando um portão de ' +
-        'embarque.\n\n' +
-        'O plano do dia 16 é fazer a atração no fim do dia, quando a fila cai para 40 a 65 ' +
-        'minutos contra 100 a 180 no pico. Comprem só se o parque fechar cedo demais para ' +
-        'esse plano caber, ou se 50 minutos de fila no fim de dez horas de parque for ' +
-        'demais no dia.',
       restauranteIds: [] },
 
     { id: 'ck-ll-1011', dataAlvo: '2026-11-10', validaAte: '2026-11-13',
@@ -8637,7 +8617,11 @@ window.ROTEIRO = {
         'o do Rise of the Resistance (15).\n\n' +
         'Se faltar alguma, comprem na hora: a janela de cada dia segue aberta depois de 08/11, ' +
         'só com pior disponibilidade. Quanto mais cedo resolverem, melhor — e é muito melhor ' +
-        'descobrir hoje do que na véspera de cada parque.',
+        'descobrir hoje do que na véspera de cada parque.\n\n' +
+        'E SE EM 08/11 SÓ O DIA 11 TIVER APARECIDO — ou seja, se o sistema tratar vocês pela ' +
+        'regra de 3 dias por visita e não pela do ingresso datado — então a janela do dia 13 ' +
+        'é HOJE às 7h ET e a do dia 15 é 12/11 às 7h ET. Nesse caso ponham alarme para as ' +
+        'duas. É o único cenário em que a compra volta a ser fracionada.',
       pesquisa: '2026-09-17',
       restauranteIds: [] },
 
