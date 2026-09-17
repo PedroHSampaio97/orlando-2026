@@ -153,8 +153,9 @@ async function main() {
     const carga2 = a.S.cargaLocal();
     ok(!('notas' in carga2), 'grupo morto de versao antiga NAO sobe');
     ok(!('segredoFuturo' in carga2), 'e chave desconhecida tambem nao sobe');
-    ok(Object.keys(carga2).length === 11,
-       'a carga tem exatamente os 11 campos previstos', Object.keys(carga2).join(','));
+    ok(Object.keys(carga2).length === 12,
+       'a carga tem exatamente os 12 campos previstos', Object.keys(carga2).join(','));
+    ok('provados' in carga2, 'o que ja foi provado sobe junto');
   }
 
   /* --- 2. dois aparelhos, atraves do servidor --- */

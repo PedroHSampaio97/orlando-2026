@@ -128,5 +128,20 @@ console.log('\n=== a apolice do seguro chega no outro aparelho ===');
   ok(q.pessoal('seguro-apolice') === null, 'e apagar tambem atravessa');
 }
 
+/* --- 7. o que um provou aparece no outro --- */
+console.log('\n=== a marca de provado atravessa ===');
+{
+  const p = Aparelho('p'), q = Aparelho('q');
+  p.marcarProvado('g-butterbeer', true);
+  q.marcarProvado('g-dole-whip', true);
+  q.importar(p.exportar(), 'mesclar');
+  p.importar(q.exportar(), 'mesclar');
+  ok(q.provado('g-butterbeer'), 'a cerveja amanteigada do Pedro chegou na Bianca');
+  ok(p.provado('g-dole-whip'), 'e o Dole Whip da Bianca chegou no Pedro');
+  p.marcarProvado('g-butterbeer', false);
+  q.importar(p.exportar(), 'mesclar');
+  ok(!q.provado('g-butterbeer'), 'desmarcar tambem atravessa');
+}
+
 console.log('\n' + (falhas ? '>>> ' + falhas + ' FALHA(S)' : '>>> TUDO OK') + '\n');
 process.exit(falhas ? 1 : 0);

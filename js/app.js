@@ -580,6 +580,7 @@
     pintarReferencia(dia);
     pintarVenceHoje(dia);
     pintarAvisos(dia);
+    Fase3.pintarGastronomiaDia(dia);
     pintarLinhaTempo(dia);
     pintarProgresso(dia);
     Fase3.pintarFicha(dia);

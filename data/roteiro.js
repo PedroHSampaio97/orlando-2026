@@ -9654,6 +9654,52 @@ window.ROTEIRO = {
     },
   ],
 
+  /* ---------------------------------------------------------------------------
+     GASTRONOMIA — o que não se volta sem comer
+     Itens ligados aos dias em que estão ao alcance, não à linha do tempo: não
+     têm hora e não disputam espaço com atração. A tela do dia mostra os do dia;
+     a aba Comer mostra todos, agrupados.
+     tipo: doce | salgado | lanche | bebida        prioridade: imperdivel | se-der
+     ------------------------------------------------------------------------ */
+  gastronomia: [
+    { id: 'g-butterbeer', nome: 'Cerveja amanteigada frozen', tipo: 'bebida',
+      onde: 'Hogsmeade e Beco Diagonal · Universal', localId: null,
+      dias: ['d-2026-11-14', 'd-2026-11-17', 'd-2026-11-19'],
+      quando: 'na primeira passagem por qualquer das duas áreas',
+      preco: 'US$ 9–10 no copo comum', prioridade: 'imperdivel',
+      porque: 'É a bebida que define o Wizarding World, e a versão frozen é a que ' +
+              'os dois parques vendem mais. Sem álcool, doce, com espuma de creme ' +
+              'de manteiga por cima.',
+      dica: 'O preço é o mesmo nos dois parques. O copo de souvenir custa mais que o ' +
+            'dobro e a bebida é a mesma — peçam no copo comum. Frozen é a versão de ' +
+            'calor; a quente só compensa em manhã fria.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-gideons', nome: 'Cookie de meia libra da Gideon’s Bakehouse', tipo: 'doce',
+      onde: 'Disney Springs · The Landing', localId: 'disney-springs',
+      dias: ['d-2026-11-10', 'd-2026-11-25'],
+      quando: 'na volta pelo Disney Springs, para comer no hotel',
+      preco: 'US$ 7 por cookie', prioridade: 'imperdivel',
+      porque: 'Quase meia libra de cookie, com 24 horas de preparo, e a fila mais ' +
+              'comentada do Disney Springs. O sabor fixo é o chocolate chip; há um ' +
+              'sabor do mês que muda.',
+      dica: 'Em fim de semana e feriado a casa usa fila virtual: você se cadastra na ' +
+            'porta e recebe mensagem para voltar. Vale entrar na fila ao chegar e ' +
+            'passear enquanto espera.',
+      pesquisa: '2026-09-17' },
+
+    { id: 'g-dole-whip', nome: 'Dole Whip de abacaxi', tipo: 'doce',
+      onde: 'Magic Kingdom · Adventureland, na Aloha Isle', localId: 'magic-kingdom',
+      dias: ['d-2026-11-11'],
+      quando: 'na manhã da Adventureland, entre os Piratas e o Jungle Cruise',
+      preco: 'US$ 6 o copo, US$ 7,29 com suco', prioridade: 'imperdivel',
+      porque: 'O sorvete de abacaxi que virou símbolo do parque, ao lado do Tiki Room. ' +
+              'Gelado, sem lactose e servido em minutos.',
+      dica: 'A versão com suco de abacaxi é a clássica. A Aloha Isle fica na saída do ' +
+            'Tiki Room, a dois minutos do Jungle Cruise.',
+      pesquisa: '2026-09-17' },
+  ],
+
 };
 
 /* =============================================================================
@@ -9664,6 +9710,8 @@ window.ROTEIRO = {
 (function validarRoteiro(R) {
   'use strict';
   const erros = [];
+  const TIPOS_GASTRO = ['doce', 'salgado', 'lanche', 'bebida'];
+  const PRIORIDADES_GASTRO = ['imperdivel', 'se-der'];
   const M = R.meta;
 
   const paraMin = (h) => {
@@ -9672,6 +9720,7 @@ window.ROTEIRO = {
     return a * 60 + b;
   };
 
+  const idsGastro = new Set();
   const idsDia = new Set();
   const idsBloco = new Set();
   const idsLocal = new Set(R.locais.map((l) => l.id));
@@ -9814,6 +9863,29 @@ window.ROTEIRO = {
     }
     (x.dias || []).forEach((id) => {
       if (!idsDia.has(id)) erros.push(`${nome}: dia "${id}" não existe`);
+    });
+  });
+
+  (R.gastronomia || []).forEach((g) => {
+    if (!g.id || !g.nome) { erros.push(`gastronomia: item sem id ou nome`); return; }
+    if (idsGastro.has(g.id)) erros.push(`gastronomia ${g.id}: id repetido`);
+    idsGastro.add(g.id);
+    if (!TIPOS_GASTRO.includes(g.tipo)) erros.push(`gastronomia ${g.id}: tipo "${g.tipo}"`);
+    if (!PRIORIDADES_GASTRO.includes(g.prioridade)) {
+      erros.push(`gastronomia ${g.id}: prioridade "${g.prioridade}"`);
+    }
+    if (!(g.dias || []).length) erros.push(`gastronomia ${g.id}: sem dias`);
+    (g.dias || []).forEach((id) => {
+      if (!idsDia.has(id)) erros.push(`gastronomia ${g.id}: dia "${id}" nao existe`);
+    });
+    if (g.localId && !idsLocal.has(g.localId)) {
+      erros.push(`gastronomia ${g.id}: local "${g.localId}" nao existe`);
+    }
+    if (g.restauranteId && !idsRest.has(g.restauranteId)) {
+      erros.push(`gastronomia ${g.id}: restaurante "${g.restauranteId}" nao existe`);
+    }
+    ['onde', 'quando', 'preco', 'porque', 'pesquisa'].forEach((campo) => {
+      if (!g[campo]) erros.push(`gastronomia ${g.id}: falta ${campo}`);
     });
   });
 

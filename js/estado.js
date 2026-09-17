@@ -24,6 +24,7 @@ window.Estado = (function () {
     checklist:   {},  // ckId   -> { feito, em }
     datasCheck:  {},  // ckId   -> { data, em }
     coordsLocal: {},  // localId-> { lat, lng, em }
+    provados:    {},  // gastroId-> { provado, em }  o que já foi comido
     pessoais:    {},  // chave  -> { valor, em }  apólice do seguro: fica no aparelho, nunca no site
   });
 
@@ -81,6 +82,7 @@ window.Estado = (function () {
 
   /* ---- leitura ---- */
   const feito       = (id) => !!(dados.feitos[id] && dados.feitos[id].feito);
+  const provado     = (id) => !!(dados.provados[id] && dados.provados[id].provado);
   const referencia  = (id) => (dados.referencias[id] ? dados.referencias[id].hora : null);
   const ancora      = (id) => (dados.ancoras[id] ? dados.ancoras[id].ancora : null);
   const reserva     = (id) => dados.reservas[id] || null;
@@ -105,6 +107,10 @@ window.Estado = (function () {
   /* ---- escrita ---- */
   function marcarFeito(id, valor) {
     dados.feitos[id] = { feito: !!valor, em: agora() };
+    salvar();
+  }
+  function marcarProvado(id, valor) {
+    dados.provados[id] = { provado: !!valor, em: agora() };
     salvar();
   }
   function definirReferencia(diaId, hora) {
@@ -171,7 +177,7 @@ window.Estado = (function () {
   // Merge por campo, vencendo o timestamp mais recente. É isto que evita que o
   // import de um celular apague o trabalho feito no outro.
   const GRUPOS = ['referencias', 'ancoras', 'horas', 'feitos', 'reservas',
-                  'checklist', 'datasCheck', 'coordsLocal', 'pessoais'];
+                  'checklist', 'datasCheck', 'coordsLocal', 'provados', 'pessoais'];
 
   // Grupos cujo registro tem mais de um campo editavel de forma independente.
   // Nestes o merge desce ao campo; nos outros o registro inteiro e a unidade.
@@ -248,6 +254,7 @@ window.Estado = (function () {
 
   return {
     feito: feito, marcarFeito: marcarFeito,
+    provado: provado, marcarProvado: marcarProvado,
     referencia: referencia, definirReferencia: definirReferencia,
     ancora: ancora, definirAncora: definirAncora,
     horaBloco: horaBloco, definirHoraBloco: definirHoraBloco,

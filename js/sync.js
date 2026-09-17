@@ -37,7 +37,7 @@ window.Sync = (function () {
   // `pessoais` fica de fora por decisão de 11/09: telefone e apólice do seguro
   // não saem do aparelho, e cruzam só pelo exportar/importar.
   const GRUPOS_QUE_SOBEM = ['referencias', 'ancoras', 'horas', 'feitos', 'reservas',
-                            'checklist', 'datasCheck', 'coordsLocal'];
+                            'checklist', 'datasCheck', 'coordsLocal', 'provados'];
   const CAMPOS_QUE_SOBEM = ['versao', 'dispositivo', 'atualizadoEm'];
 
   const E = window.Estado;

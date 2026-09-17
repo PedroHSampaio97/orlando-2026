@@ -518,6 +518,121 @@ window.Fase3 = (function () {
     return r.confirmacaoPadrao || '';
   };
 
+  /* ---------------------------------------------------------------------------
+     GASTRONOMIA — o que não se volta sem comer.
+     Sem hora e fora da linha do tempo: aparece no dia como bloco recolhível e
+     na aba Comer como lista da viagem inteira. A marca de provado sincroniza.
+     ------------------------------------------------------------------------ */
+  const gastroDoDia = (diaId) =>
+    (R.gastronomia || []).filter((g) => (g.dias || []).indexOf(diaId) >= 0);
+
+  function contarGastro(itens) {
+    return itens.filter((g) => E.provado(g.id)).length;
+  }
+
+  function cartaoGastro(g, aoMudar) {
+    const li = el("li", "gasto");
+    li.dataset.id = g.id;
+    if (E.provado(g.id)) li.classList.add("provado");
+
+    const chk = document.createElement("input");
+    chk.type = "checkbox";
+    chk.id = "gasto-" + g.id + "-" + (aoMudar ? "dia" : "lista");
+    chk.checked = E.provado(g.id);
+    chk.addEventListener("change", function () {
+      E.marcarProvado(g.id, chk.checked);
+      li.classList.toggle("provado", chk.checked);
+      document.querySelectorAll(".gasto[data-id='" + g.id + "'] input").forEach(function (outro) {
+        outro.checked = chk.checked;
+        outro.closest(".gasto").classList.toggle("provado", chk.checked);
+      });
+      if (aoMudar) aoMudar();
+    });
+    li.appendChild(chk);
+
+    const corpo = el("div", "gasto-corpo");
+    const topo = el("div", "gasto-topo");
+    const nome = el("label", "gasto-nome", g.nome);
+    nome.setAttribute("for", chk.id);
+    topo.appendChild(nome);
+    topo.appendChild(el("span", "gasto-tipo t-" + g.tipo, g.tipo));
+    if (g.prioridade === "se-der") topo.appendChild(el("span", "gasto-tipo t-seder", "se der"));
+    corpo.appendChild(topo);
+    corpo.appendChild(el("p", "gasto-onde", g.onde + "  ·  " + g.preco));
+
+    const det = document.createElement("details");
+    det.className = "gasto-mais";
+    det.appendChild(el("summary", null, g.quando));
+    det.appendChild(el("p", "gasto-porque", g.porque));
+    if (g.dica) det.appendChild(el("p", "gasto-dica", g.dica));
+    corpo.appendChild(det);
+
+    li.appendChild(corpo);
+    return li;
+  }
+
+  function pintarGastronomiaDia(dia) {
+    const alvo = $("#gastronomia-dia");
+    if (!alvo) return;
+    alvo.innerHTML = "";
+    const itens = gastroDoDia(dia.id);
+    if (!itens.length) return;
+
+    const cx = document.createElement("details");
+    cx.className = "gastro-dia";
+    const sum = document.createElement("summary");
+    const rotulo = el("span", "gastro-dia-titulo", "Comer hoje");
+    const conta = el("span", "gastro-dia-conta", "");
+    const atualizar = function () {
+      conta.textContent = contarGastro(itens) + " de " + itens.length;
+    };
+    atualizar();
+    sum.appendChild(rotulo);
+    sum.appendChild(conta);
+    cx.appendChild(sum);
+
+    const ul = el("ul", "gastos");
+    itens.forEach((g) => ul.appendChild(cartaoGastro(g, atualizar)));
+    cx.appendChild(ul);
+    alvo.appendChild(cx);
+  }
+
+  function pintarGastronomia() {
+    const lista = R.gastronomia || [];
+    const sub = $("#gastro-sub");
+    if (sub) {
+      sub.textContent = lista.length + " itens mapeados  ·  " +
+        contarGastro(lista) + " já provados";
+    }
+
+    const hojeAlvo = $("#gastronomia-hoje");
+    if (hojeAlvo) {
+      hojeAlvo.innerHTML = "";
+      const diaHoje = R.dias.find((d) => d.data === hojeISO());
+      if (diaHoje) {
+        const itens = gastroDoDia(diaHoje.id);
+        if (itens.length) {
+          hojeAlvo.appendChild(el("h2", "comer-secao", "Imperdíveis de hoje"));
+          const ul = el("ul", "gastos");
+          itens.forEach((g) => ul.appendChild(cartaoGastro(g, null)));
+          hojeAlvo.appendChild(ul);
+        }
+      }
+    }
+
+    const alvo = $("#lista-gastronomia");
+    if (!alvo) return;
+    alvo.innerHTML = "";
+    R.dias.forEach(function (d) {
+      const itens = gastroDoDia(d.id);
+      if (!itens.length) return;
+      const cab = el("div", "rest-dia", ddmm(d.data) + "  ·  " + d.diaSemana + "  ·  " + d.titulo);
+      alvo.appendChild(cab);
+      const ul = el("ul", "gastos");
+      itens.forEach((g) => ul.appendChild(cartaoGastro(g, null)));
+      alvo.appendChild(ul);
+    });
+  }
   function pintarRestaurantes(opcoes) {
     const comReserva = R.restaurantes.filter((r) => r.precisaReserva);
     const pendentes = comReserva.filter((r) => statusDe(r) === 'a-reservar').length;
@@ -526,6 +641,7 @@ window.Fase3 = (function () {
       ' precisam de reserva · ' + pendentes + ' ainda a reservar';
 
     pintarJanelas();
+    pintarGastronomia();
 
     const alvo = $('#lista-restaurantes');
     alvo.innerHTML = '';
@@ -846,6 +962,7 @@ window.Fase3 = (function () {
     minutosAte: minutosAte, rotuloHora: rotuloHora, fusoDoAparelho: fusoDoAparelho,
     pintarFicha: pintarFicha, pintarFechamento: pintarFechamento,
     pintarRestaurantes: pintarRestaurantes,
+    pintarGastronomia: pintarGastronomia, pintarGastronomiaDia: pintarGastronomiaDia,
     pintarPendencias: pintarPendencias,
     statusDe: statusDe, confirmacaoDe: confirmacaoDe,
     acharRestaurante: (id) => R.restaurantes.find((r) => r.id === id) || null,

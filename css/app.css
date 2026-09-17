@@ -1046,6 +1046,41 @@ button.selo::after { content: ''; position: absolute; left: 0; right: 0; top: -6
 .janela-falta { font-size: 12px; color: var(--texto-fraco); margin-top: 4px;
   font-weight: 650; }
 
+/* ---- Gastronomia: imperdíveis do dia e da viagem ---- */
+.gastro-dia { margin: 0 0 18px; border: 1px solid var(--borda); border-radius: 12px;
+  background: var(--superficie); overflow: hidden; }
+.gastro-dia > summary { display: flex; align-items: center; gap: 10px; padding: 14px 16px;
+  cursor: pointer; font-weight: 700; min-height: 48px; }
+.gastro-dia > summary::-webkit-details-marker { display: none; }
+.gastro-dia-titulo { flex: 1; }
+.gastro-dia-conta { font-size: 13px; font-weight: 600; color: var(--texto-fraco);
+  font-variant-numeric: tabular-nums; }
+.comer-secao { font-size: 15px; font-weight: 800; letter-spacing: -.01em; margin: 26px 0 10px; }
+.gastos { list-style: none; margin: 0; padding: 0 16px 14px; }
+.gastro-dia .gastos { padding-top: 4px; }
+#lista-gastronomia .gastos, #gastronomia-hoje .gastos { padding: 0; }
+.gasto { display: grid; grid-template-columns: 28px 1fr; gap: 0 12px; align-items: start;
+  padding: 12px 0; border-bottom: 1px solid var(--borda); }
+.gasto:last-child { border-bottom: none; }
+.gasto input[type="checkbox"] { width: 24px; height: 24px; margin: 2px 0 0;
+  accent-color: var(--marca); }
+.gasto-topo { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+.gasto-nome { font-size: 15px; font-weight: 700; line-height: 1.3; cursor: pointer; }
+.gasto-tipo { font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .06em; padding: 2px 7px; border-radius: 999px;
+  background: var(--marca-fundo); color: var(--texto-fraco); }
+.gasto-tipo.t-doce { color: var(--marca); }
+.gasto-tipo.t-bebida { color: var(--acento-texto); }
+.gasto-tipo.t-seder { color: var(--texto-fraco); }
+.gasto-onde { font-size: 13px; color: var(--texto-fraco); margin: 4px 0 0; }
+.gasto-mais { margin-top: 8px; }
+.gasto-mais > summary { font-size: 13px; color: var(--marca); cursor: pointer;
+  min-height: 32px; display: flex; align-items: center; }
+.gasto-porque, .gasto-dica { font-size: 13.5px; line-height: 1.55; margin: 8px 0 0; }
+.gasto-dica { color: var(--texto-fraco); }
+.gasto.provado .gasto-nome { text-decoration: line-through; color: var(--texto-fraco); }
+.gasto.provado .gasto-onde, .gasto.provado .gasto-tipo { opacity: .6; }
+
 .rest-dia {
   font-size: 12px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
   color: var(--texto-fraco); margin: 24px 0 10px;
