@@ -5474,7 +5474,7 @@ window.ROTEIRO = {
     diaSemana: 'sexta',
     emoji: '🌌',
     titulo: 'Epic Universe',
-    subtitulo: 'Dia único · rope drop na Dark Universe e as duas maiores filas no fim',
+    subtitulo: 'Dia único · três terras de verdade, não cinco pela metade',
     tipo: 'parque',
     operadora: 'universal',
     parqueId: 'epic-universe',
@@ -5484,9 +5484,12 @@ window.ROTEIRO = {
     referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: false },
     resumo:
       'O parque mais concorrido de Orlando, no dia mais vazio da segunda metade da viagem, ' +
-      'e o único dia de Epic. As onze atrações de brinquedo cabem — mas só em uma ordem: ' +
-      'começar pelo portal que o Early Park Admission deixa vazio e guardar as duas maiores ' +
-      'filas do parque para as horas em que elas despencam.',
+      'e o único dia de Epic. AS ONZE ATRAÇÕES NÃO CABEM: sem Early Park Admission e sem ' +
+      'Express, as quatro filas grandes do parque somam mais tempo do que o dia inteiro ' +
+      'tem. O que cabe são três terras feitas de verdade — Dark Universe de manhã, porque ' +
+      'é a única que abre limpa às 9h; Isle of Berk à tarde, com o show; e o Ministry na ' +
+      'noite inteira, que é quando a fila dele despenca. A Super Nintendo World fica só ' +
+      'com o almoço.',
     avisos: [
       'O ROPE DROP É NA DARK UNIVERSE, NÃO NO MINISTRY. Às 9h os hóspedes de hotel já estão ' +
       'há uma hora no Battle at the Ministry, na Super Nintendo World e em Berk. O portal ' +
@@ -5664,7 +5667,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Monsters Unchained: The Frankenstein Experiment', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2011-0940', hora: '09:40', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2011-0950', hora: '09:50', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Curse of the Werewolf',
         descricao: 'Montanha-russa giratória, com trechos de ré. Não é "familiar"',
         contexto:
@@ -5685,14 +5688,14 @@ window.ROTEIRO = {
             fonte: 'Coasterpedia; RCDB', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2011-1020', hora: '10:20', ancora: 'referencia', tipo: 'pausa',
+      { id: 'b-2011-1050', hora: '10:50', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
         descricao: 'Dez minutos, na saída da Dark Universe. O mapa não marca banheiros: perguntem',
         contexto:
           'Duas montanhas-russas com armário e o Stardust logo em seguida, e o almoço só às 13h05. Sentem no Celestial Park, encham os flasks, e só então o Stardust.',
         areaParque: 'Celestial Park', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
 
-      { id: 'b-2011-1030', hora: '10:30', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2011-1110', hora: '11:10', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Stardust Racers',
         descricao: 'Celestial Park. Dois trens correndo lado a lado. Detector de metal',
         contexto:
@@ -5714,45 +5717,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Stardust Racers', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2011-1115', hora: '11:15', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Mario Kart: Bowser’s Challenge',
-        descricao: 'A janela dele é 11h–12h, quando a turma do EPA sai da Nintendo',
-        contexto:
-          'Corrida de kart em realidade aumentada: vocês usam um visor acoplado ao boné. É um ' +
-          'jogo, não emoção física.\n\n' +
-          'COMO JOGAR: a mira é com a cabeça — o casco vai para onde vocês olham — e ele sai ' +
-          'com o botão do volante. O volante só gira quando aparece uma seta na frente, e isso ' +
-          'dá moedas. Cada um vê as próprias moedas no volante, mas quem ganha é o time: são ' +
-          'necessárias 100 moedas para vencer o Bowser.\n\n' +
-          'POR QUE AGORA: ele é a terceira maior fila do parque, 67 a 78 minutos de média, e a ' +
-          'janela menos ruim dele é entre 11h e 12h, quando quem entrou no Early Park Admission ' +
-          'já andou nele e seguiu adiante.\n\n' +
-          'AO ENTRAR NA SUPER NINTENDO WORLD, ABRAM O APP DA UNIVERSAL e vejam se o Toadstool ' +
-          'Cafe está com lista de espera. Se estiver, entrem nela agora, para o almoço das 13h.\n\n' +
-          'E reparem na decoração: é o primeiro Natal da Super Nintendo World.',
-        areaParque: 'Super Nintendo World', acesso: ['standby'], acessoAlt: 'single-rider',
-        critico: true, duracaoMin: 70,
-        fila: { min: 60, quando: 'entre 11h e 12h', pico: 170, media: 85, fonte: '2026-09-17' },
-        pesquisa: '2026-09-10',
-        curiosidades: [
-          { texto: 'A atração estreou no Japão em 2021, e a fila é o castelo do Bowser.',
-            fonte: 'Wikipedia — Mario Kart: Bowser’s Challenge', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-2011-1225', hora: '12:25', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Yoshi’s Adventure',
-        descricao: 'Lento e elevado. É a única vista da Nintendo de cima',
-        contexto:
-          'Passeio lento em cima de um Yoshi, pelos trilhos elevados da área. É brinquedo de ' +
-          'criança, mas é a única forma de ver a Super Nintendo World inteira de cima — e ela ' +
-          'está decorada.\n\n' +
-          'O meio do dia é a hora mais baixa das filas médias: quando as grandes estão no pico, ' +
-          'as pequenas esvaziam.',
-        areaParque: 'Super Nintendo World', acesso: ['standby'], duracaoMin: 40,
-        fila: { min: 20, quando: 'no meio do dia', pico: 95, media: 34, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10' },
-
-      { id: 'b-2011-1305', hora: '13:05', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-2011-1155', hora: '11:55', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Toadstool Cafe',
         descricao: 'Não aceita reserva. Confiram a lista no app às 11h',
         contexto:
@@ -5768,7 +5733,7 @@ window.ROTEIRO = {
         restauranteId: 'r-toadstool', areaParque: 'Super Nintendo World', acesso: [],
         duracaoMin: 55, pesquisa: '2026-09-10' },
 
-      { id: 'b-2011-1410', hora: '14:10', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2011-1300', hora: '13:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Hiccup’s Wing Gliders',
         descricao: 'Isle of Berk. Lançamento de alta velocidade, com trecho de ré. Locker',
         contexto:
@@ -5789,7 +5754,7 @@ window.ROTEIRO = {
             fonte: 'Coasterpedia', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2011-1500', hora: '15:00', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2011-1445', hora: '14:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Dragon Racer’s Rally',
         descricao: 'Você controla a inclinação — e as inversões',
         contexto:
@@ -5862,7 +5827,7 @@ window.ROTEIRO = {
         restauranteId: 'r-atlantic', areaParque: 'Celestial Park', acesso: ['reserva'],
         duracaoMin: 75, pesquisa: '2026-09-10' },
 
-      { id: 'b-2011-1820', hora: '18:20', ancora: 'fixo', tipo: 'atracao',
+      { id: 'b-2011-1830', hora: '18:30', ancora: 'fixo', tipo: 'atracao',
         titulo: 'Harry Potter and the Battle at the Ministry',
         descricao: 'Nas últimas horas a fila cai para 45–75 min. De manhã, era a fila do EPA',
         contexto:
@@ -5890,30 +5855,6 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Harry Potter and the Battle at the Ministry', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2011-2000', hora: '20:00', ancora: 'fixo', tipo: 'atracao',
-        titulo: 'Mine-Cart Madness',
-        descricao: 'A maior fila do parque. Na última hora ela cai para 20–30 min',
-        contexto:
-          'Montanha-russa em carrinho de mina do Donkey Kong, com uma ilusão muito boa: o ' +
-          'carrinho parece saltar trechos de trilho que faltam. Alta velocidade, sem inversão.\n\n' +
-          'POR QUE NO FIM: é a maior fila do parque, 113 a 114 minutos de média e pico de 205. ' +
-          'Fora do Early Park Admission, a única janela barata é a última hora antes de fechar, ' +
-          'quando cai para 20 a 30 minutos. É a mesma manobra do Flight of Passage no dia 16.\n\n' +
-          'QUEM ESTÁ NA FILA NO FECHAMENTO ANDA. Entrem antes das 21h e não saiam dela.\n\n' +
-          'ELE QUEBRA COM FREQUÊNCIA. Se estiver parado, acompanhem pelo app e fiquem por ' +
-          'perto — o plano C trata disso.\n\n' +
-          'Sem locker obrigatório, mas prendam tudo que estiver solto.',
-        areaParque: 'Super Nintendo World', acesso: ['standby'], acessoAlt: 'single-rider',
-        critico: true, confirmarHorario: true, duracaoMin: 50,
-        fila: { min: 20, quando: 'na última hora', pico: 205, media: 165, fonte: '2026-09-17' },
-        pesquisa: '2026-09-10',
-        curiosidades: [
-          { texto: 'O truque do trilho que falta é um braço: as rodas correm num trilho ' +
-                   'embaixo e sustentam o carrinho por cima. A atração estreou no Japão em ' +
-                   '11/12/2024, e o Donkey Kong Country daqui é a maior versão da área.',
-            fonte: 'Wikipedia — Super Nintendo World', pesquisa: '2026-09-15' },
-        ] },
-
       { id: 'b-2011-2100', hora: '21:00', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Sair — Uber',
         descricao: 'Pelo Celestial Park iluminado. Embarque na 1222 Epic Blvd',
@@ -5932,8 +5873,9 @@ window.ROTEIRO = {
                 'Cinco minutos andando antes de seguir para a Nintendo.',
         pesquisa: '2026-09-10' },
       { nome: 'O primeiro Natal da Super Nintendo World', quando: 'hoje', custo: 'grátis',
-        motivo: 'É a primeira temporada em que a área ganha decoração. A vista de cima, no ' +
-                'Yoshi’s Adventure, é a melhor forma de ver.',
+        motivo: 'É a primeira temporada em que a área ganha decoração. Vocês entram nela ' +
+                'para o almoço no Toadstool: vale atravessar a área devagar na ida e na ' +
+                'volta, porque é a única passagem do dia por ali.',
         pesquisa: '2026-09-10' },
       { nome: 'Show natalino das fontes do Celestial Park', quando: 'hoje',
         condicao: 'grade sai no app no próprio dia', custo: 'grátis',
@@ -6002,6 +5944,18 @@ window.ROTEIRO = {
                   'vezes no dia — se der vontade, é parar cinco minutos, não é bloco.' },
         { nome: 'Viking Training Camp',
           motivo: 'Área de brincar infantil da Isle of Berk, com torres e escorregadores.' },
+        { nome: 'Mario Kart: Bowser’s Challenge',
+          motivo: 'CORTADO EM 17/09 pela conta de tempo. Faz 85 minutos de média já às 9h40 e ' +
+                  '125 às 18h, e a Super Nintendo World está no Early Park Admission: não ' +
+                  'existe hora barata nela. Manter Mario Kart custava a Isle of Berk inteira.' },
+        { nome: 'Mine-Cart Madness',
+          motivo: 'CORTADO EM 17/09, e dói: os dois guias o chamam de melhor atração do ' +
+                  'parque. Mas ele mede 165 minutos de média e 205 de pico. Só caberia ' +
+                  'ocupando a noite toda, no lugar do Battle at the Ministry, que é a melhor ' +
+                  'atração pelo consenso e cuja fila despenca justamente nas últimas horas.' },
+        { nome: 'Yoshi’s Adventure',
+          motivo: 'CORTADO EM 17/09. Passeio lento de 34 minutos de fila média, sem inversão ' +
+                  'e sem velocidade — o mais fraco do dia para um casal adulto.' },
         { nome: 'Bowser Jr. Shadow Showdown',
           motivo: 'Desafio interativo da Super Nintendo World que depende da Power-Up Band. ' +
                   'Menor fila do parque, e é voltado a criança.' },
@@ -8167,10 +8121,10 @@ window.ROTEIRO = {
       nota: 'Churrasco grelhado, frango com sofrito e pernil. Coberto pelo plano de refeição. ' +
             'É onde o Papai Noel recebe visitas no Natal.' },
 
-    { id: 'r-toadstool', nome: 'Toadstool Cafe', data: '2026-11-20', hora: '13:05',
+    { id: 'r-toadstool', nome: 'Toadstool Cafe', data: '2026-11-20', hora: '11:55',
       refeicao: 'almoco', local: 'Epic Universe · Super Nintendo World', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Sem reserva — conferir lista de espera no app da Universal', blocoId: 'b-2011-1305',
+      canal: 'Sem reserva — conferir lista de espera no app da Universal', blocoId: 'b-2011-1155',
       nota: 'Não aceita reserva. As fontes divergem entre lista de espera pelo app e ordem de ' +
             'chegada: confiram no app ao entrar na Super Nintendo World, às 11h. Pico do ' +
             'almoço das 11h30 às 13h30. Faixa $ no mapa oficial: até US$ 15 por pessoa.' },

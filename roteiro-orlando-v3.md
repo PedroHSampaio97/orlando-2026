@@ -440,7 +440,7 @@ Grinchmas (visto no dia 14), Flight of the Hippogriff (34 min de fila para um mi
 
 # 🌌 20/11 (sexta) — EPIC UNIVERSE
 
-O parque mais concorrido de Orlando, **no dia mais vazio da segunda metade da viagem**, e o único dia de Epic. As onze atrações de brinquedo cabem — mas só em uma ordem: começar pelo portal que o Early Park Admission deixa vazio e guardar as duas maiores filas para as horas em que elas despencam.
+O parque mais concorrido de Orlando, **no dia mais vazio da segunda metade da viagem**, e o único dia de Epic. **As onze atrações não cabem.** Sem Early Park Admission e sem Express, as quatro filas grandes do parque somam mais tempo do que o dia inteiro tem — Mine-Cart 165 min de média, Battle at the Ministry 135, Mario Kart 125 à noite, Hiccup's 90. O que cabe são três terras feitas de verdade: **Dark Universe** de manhã, porque é a única que abre limpa às 9h; **Isle of Berk** à tarde, com o show; e o **Ministry** na noite inteira, que é quando a fila dele despenca. A Super Nintendo World fica só com o almoço.
 
 **Hoje não tem carro** — ele só chega amanhã. É Uber, e o ponto de embarque do Epic é próprio (1222 Epic Blvd), a cinco minutos a pé da entrada.
 
@@ -448,21 +448,18 @@ O parque mais concorrido de Orlando, **no dia mais vazio da segunda metade da vi
 |---|---|---|
 | **7h15** | Sair do hotel — Uber | ~30 min, US$ 25–38 |
 | **7h50** | **Entrar e ir para a porta da Dark Universe** | O Celestial Park abre para todos no Early Park Admission |
-| **9h00** | **Monsters Unchained** | **Rope drop.** Locker obrigatório |
-| **9h40** | **Curse of the Werewolf** | Montanha-russa giratória, com trechos de ré |
-| **10h20** | **Parada** | Dez minutos, na saída da Dark Universe. O mapa não marca banheiros: perguntem |
-| **10h30** | **Stardust Racers** | Detector de metal. A mais forte do parque |
-| **11h15** | **Mario Kart: Bowser's Challenge** | A janela dele é 11h–12h. Conferir a lista do Toadstool no app |
-| **12h25** | **Yoshi's Adventure** | A única vista da Nintendo de cima — e ela está decorada |
-| **13h05** | **Almoço — Toadstool Cafe** | Sem reserva |
-| **14h10** | **Hiccup's Wing Gliders** | Lançamento de alta velocidade. Locker obrigatório |
-| **15h00** | **Dragon Racer's Rally** | Você controla a inclinação e as inversões |
+| **9h00** | **Monsters Unchained** | **Rope drop.** A Dark Universe é a única terra fora do Early Park Admission. Locker obrigatório |
+| **9h50** | **Curse of the Werewolf** | Montanha-russa giratória, com trechos de ré |
+| **10h50** | **Parada** | Na saída da Dark Universe. O mapa não marca banheiros: perguntem |
+| **11h10** | **Stardust Racers** | Detector de metal. A mais forte do parque |
+| **11h55** | **Almoço — Toadstool Cafe** | Sem reserva. É a única passagem do dia pela Super Nintendo World — atravessem devagar, ela está decorada pela primeira vez |
+| **13h00** | **Hiccup’s Wing Gliders** | Lançamento de alta velocidade. Locker obrigatório. **90 min de média** — a janela é larga de propósito |
+| **14h45** | **Dragon Racer’s Rally** | Você controla a inclinação e as inversões |
 | **15h45** | **Parada em Berk** | 25 min. Água, banheiro, sentar |
 | **16h10** | Fila do teatro | Plateia por ordem de chegada. Meio do teatro |
-| **16h30** | **The Untrainable Dragon** | O maior show do Epic, 20 min. Horário a confirmar |
+| **16h30** | **The Untrainable Dragon** | O maior show do Epic, 20 min. Horário sai no app no próprio dia |
 | **17h00** | **Jantar — Atlantic** | **Reservado.** A mesa espera só 15 min — cheguem 16h55 |
-| **18h20** | **Harry Potter and the Battle at the Ministry** | Nas últimas horas cai para 45–75 min |
-| **20h00** | **Mine-Cart Madness** | Na última hora cai para 20–30 min. Quem está na fila no fechamento anda |
+| **18h30** | **Harry Potter and the Battle at the Ministry** | **A noite inteira é dele.** Mede 135 min às 18h e cai para 45–75 nas últimas duas ou três horas. Na saída vocês caem na Place Cachée já escura e decorada |
 | **21h00** | Sair — Uber | Pelo Celestial Park iluminado |
 
 ### O rope drop é na Dark Universe
