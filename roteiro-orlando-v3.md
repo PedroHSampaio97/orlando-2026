@@ -200,34 +200,31 @@ com a manhã e a noite juntas.
 
 O parque mais difícil da Disney, e o único dos três em que o Single Pass se justifica.
 
-**Multi Pass:** lista alta → **Rock 'n' Roller Coaster** · lista baixa → **Torre do Terror** e **Star Tours** · rolando → **Runaway Railway**, reservado às 13h55
+**Multi Pass:** lista alta → **Slinky Dog Dash** · lista baixa → **Toy Story Mania** · rolando → **Runaway Railway**, reservado assim que o Slinky for usado
 **Single Pass:** **Rise of the Resistance** — peçam janela entre 10h30 e 11h
 
-> **NÃO VÃO PARA O GALAXY'S EDGE NA ABERTURA.** Pela terceira vez o ponto certo é o contraintuitivo, e aqui o motivo tem nome: o Early Entry do Hollywood Studios inclui o **Rise, o Slinky e a Torre**, e a grande maioria dos hóspedes vai para o **Rise**. Quem entra às 9h e caminha para o Galaxy's Edge está indo para dentro da multidão que já está na fila há meia hora. A recomendação para quem está fora dos hotéis é o **Toy Story Land**.
+> **O ROPE DROP É NA SUNSET BLVD, NÃO NO TOY STORY LAND.** Sem Early Entry não existe rope drop barato aqui: às 9h o parque já rodou meia hora com hóspedes de hotel, e o Early Entry abre justamente o **Rise, o Slinky e a Torre**. A recomendação para quem está fora dos hotéis é comprar o Slinky no Multi Pass e enfrentar no portão a menor fila entre **Torre do Terror, Rock 'n' Roller Coaster e Millennium Falcon** — e as duas primeiras ficam na Sunset Blvd, que é na entrada, não no fundo.
 
-> **O Slinky Dog não tem hora barata.** 97 min na abertura, 79 de média, 64 à noite — ele nunca cede. O rope drop nele não é quando ele fica de graça, é quando custa menos, porque a noite de vocês está ocupada. E fazê-lo às 9h **libera a lista alta do Multi Pass** para o Rock 'n' Roller Coaster.
+> **O Slinky Dog não tem hora barata.** 97 min na abertura, 79 de média, 64 à noite — ele nunca cede. Por isso ele **leva o nível 1 do Multi Pass**: é o único dos quatro do nível 1 que não tem fila de single rider. O Rock 'n' Roller tem, o Falcon tem. Gastar o passe no Rock 'n' Roller era comprar a porta que já abria de outro jeito.
 
 | Hora | O quê | Como |
 |---|---|---|
 | **7h00** | Sair do hotel | Uber, ~30 min, US$ 22–32. A segurança daqui é lenta |
-| **8h00** | Portão · posicionar para o **Toy Story Land** | A catraca abre ~8h para todos e a Hollywood Blvd é de vocês; esperem no checkpoint do corredor do Toy Story Land. Não para o Galaxy's Edge |
-| **9h00** | **Slinky Dog Dash** | Rope drop. A fila mais teimosa do parque |
-| **9h40** | **Toy Story Mania** | Standby, mesma land |
-| **10h15** | **Alien Swirling Saucers** | Opcional. Só se a fila estiver abaixo de 15 min |
-| **10h45** | **Rise of the Resistance** | Single Pass |
-| **11h35** | **Millennium Falcon: Smugglers Run** | Standby. **Peçam para ser PILOTOS** |
-| **12h20** | **Almoço — Docking Bay 7** | 40 min. Mobile order, pedido na fila do Falcon. Banheiro antes de sair de Batuu |
-| **13h15** | **Indiana Jones Epic Stunt Spectacular** | 30 min sentados, na Echo Lake, no meio da travessia até a Sunset Blvd. Horário a confirmar |
-| **13h55** | **Rock 'n' Roller Coaster (Muppets)** | Multi Pass · lista alta. **Ao usar, reservem o Runaway Railway** |
-| **14h35** | **Torre do Terror** | Multi Pass · lista baixa |
-| **15h20** | **Mickey & Minnie's Runaway Railway** | Multi Pass rolando. Sem horário, standby |
-| **16h05** | **Star Tours** | Multi Pass · lista baixa. O roteiro muda a cada visita |
-| **16h50** | **Parada** | Dez minutos. Comam algo da mochila: o Oga's é bebida, não jantar. Banheiro ao lado do Docking Bay 7 |
-| **17h00** | **Oga's Cantina** | Reserva. Limite de 45 min por grupo |
-| **18h10** | **Jantar de balcão — Sunset Ranch Market** | Rosie's e vizinhos, sem reserva, ao lado do teatro do Fantasmic |
-| **19h25** | **Sunset Blvd** — Natal e compras | **É o momento de compra do dia.** As lojas fecham com o parque |
-| **19h45** | Posição para o Fantasmic! | Meio e um pouco atrás. O teatro abre às 18h30; as primeiras fileiras molham |
-| **20h00** | **Fantasmic!** | ~26 min. O parque fecha às 21h; a hora do show ainda não saiu |
+| **8h00** | Portão · posicionar para a **Sunset Blvd** | A catraca abre ~8h para todos e a Hollywood Blvd é de vocês. Perto da entrada, não no fundo |
+| **9h00** | **Rock 'n' Roller Coaster (Muppets)** | **Rope drop.** Tem fila de single rider se a normal estiver feia |
+| **9h45** | **Torre do Terror** | Standby, ao lado. Pico de 35 — é barata em qualquer hora |
+| **10h40** | **Rise of the Resistance** | Single Pass |
+| **11h30** | **Millennium Falcon: Smugglers Run** | Standby. **Peçam para ser PILOTOS** — no single rider vocês quase sempre viram engenheiros |
+| **12h15** | **Almoço — Docking Bay 7** | Mobile order, pedido na fila do Falcon. Banheiro antes de sair de Batuu |
+| **13h15** | **Slinky Dog Dash** | **Multi Pass · lista alta.** Ao usar, reservem o Runaway Railway |
+| **13h55** | **Toy Story Mania** | Multi Pass · lista baixa, mesma land |
+| **14h40** | **Mickey & Minnie's Runaway Railway** | Multi Pass rolando. Sem horário, standby |
+| **15h25** | **Indiana Jones Epic Stunt Spectacular** | 30 min sentados, na Echo Lake. Horário sai no app no próprio dia |
+| **16h30** | **Parada** | Comam algo da mochila: o Oga's é bebida, não jantar |
+| **17h05** | **Oga's Cantina** | Reserva. Limite de 45 min por grupo |
+| **18h10** | **Jantar de balcão — Sunset Ranch Market** | Rosie's e vizinhos, sem reserva, ao lado do teatro do Fantasmic. É aqui que roda o **Sunset Seasons Greetings**, com projeção e neve na Torre do Terror — ele começa assim que escurece, por volta das 17h35 |
+| **19h20** | Posição para o Fantasmic! | **40 min antes**, não 15. O teatro abre às 18h30; as primeiras fileiras molham |
+| **20h00** | **Fantasmic!** | ~26 min. O parque fecha às 21h; a hora do show sai no app no próprio dia |
 | **20h35** | Voltar ao hotel | Uber, ~30 min, US$ 22–32. Amanhã sai às 6h30 |
 
 ### Por que o dia está nesta ordem — a fila típica

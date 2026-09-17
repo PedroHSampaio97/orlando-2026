@@ -2866,7 +2866,7 @@ window.ROTEIRO = {
     diaSemana: 'domingo',
     emoji: '🎬',
     titulo: 'Hollywood Studios',
-    subtitulo: 'O dia mais caro em passes · e o mais justificado',
+    subtitulo: 'Rope drop na Sunset, o Slinky comprado e a noite inteira no Fantasmic',
     tipo: 'parque',
     operadora: 'disney',
     parqueId: 'hollywood-studios',
@@ -3083,8 +3083,8 @@ window.ROTEIRO = {
         localId: 'hollywood-studios', acesso: [], critico: true, duracaoMin: 60 },
 
       { id: 'b-1511-0800', hora: '08:00', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Portão · posicionar para o TOY STORY LAND',
-        descricao: 'Não para o Galaxy’s Edge',
+        titulo: 'Portão · posicionar para a SUNSET BLVD',
+        descricao: 'Perto da entrada, não no fundo do parque',
         contexto:
           'PELA TERCEIRA VEZ, O PONTO CERTO É O CONTRAINTUITIVO — e aqui o motivo está ' +
           'documentado com nome e sobrenome.\n\n' +
@@ -3114,59 +3114,49 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Disney’s Hollywood Studios', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1511-1115', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Slinky Dog Dash — rope drop',
-        descricao: 'A fila mais teimosa do parque. Não existe hora barata para ela',
+      { id: 'b-1511-0900', hora: '09:00', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Rock ’n’ Roller Coaster (Muppets)',
+        descricao: 'Multi Pass · lista alta. Ao usar, reservem o Runaway Railway',
         contexto:
-          'Montanha-russa familiar ao ar livre, com dois lançamentos suaves. Não é intensa — ' +
-          'o que ela é, é sempre cheia.\n\n' +
-          'SEJAM HONESTOS COM O NÚMERO: o Slinky faz 97 minutos na abertura, 79 de média no ' +
-          'dia e 64 à noite. Não existe janela barata para ele. O rope drop não é o momento ' +
-          'em que ele fica de graça, é o momento em que ele custa menos — e a noite de vocês ' +
-          'já está ocupada com Oga’s, jantar e Fantasmic.\n\n' +
-          'Fazê-lo agora também libera a lista alta do Multi Pass, que de outra forma ele ' +
-          'consumiria — e ela vai para o Rock ’n’ Roller Coaster.',
-        areaParque: 'Toy Story Land', acesso: ['rope-drop', 'standby'], critico: true,
-        duracaoMin: 40,
-        fila: { min: 40, quando: 'no rope drop', pico: 97, estimado: true, fonte: '2026-09-10' },
+          'Montanha-russa fechada, no escuro, com lançamento de 0 a 90 km/h em menos de três ' +
+          'segundos e três inversões. É a mais intensa da Disney em Orlando.\n\n' +
+          'Tem temática dos Muppets, com o Dr. Teeth and the Electric Mayhem, desde ' +
+          '26/05/2026 — em novembro ainda é atração nova. Ela leva a lista alta do Multi Pass ' +
+          'porque o Slinky vai no rope drop.\n\n' +
+          'AO USAR, RESERVEM O RUNAWAY RAILWAY no app, ainda na saída. Cada reserva usada ' +
+          'libera a próxima.',
+        areaParque: 'Sunset Blvd', acesso: ['rope-drop', 'standby'], acessoAlt: 'single-rider', duracaoMin: 40,
+        fila: { min: 20, quando: 'no rope drop', pico: 75, estimado: true, fonte: '2026-09-17' },
         pesquisa: '2026-09-10',
         curiosidades: [
-          { texto: 'O Toy Story Land de Orlando é o maior da Disney. A ideia é que vocês ' +
-                   'encolheram ao tamanho de um brinquedo no quintal do Andy — por isso as ' +
-                   'cercas de Lincoln Logs, os Tinkertoys e as pegadas gigantes do Andy no ' +
-                   'chão.',
-            fonte: 'Wikipedia — Toy Story Land', pesquisa: '2026-09-15' },
-          { texto: 'No fim do percurso, um Wheezy animatrônico canta para quem passa.',
-            fonte: 'Wikipedia — Toy Story Land', pesquisa: '2026-09-15' },
+          { texto: 'Abriu em 29/07/1999 com o Aerosmith, que ficou até 02/03/2026. Cada ' +
+                   'assento tem cinco alto-falantes, com um subwoofer embaixo, e o carrinho ' +
+                   'agora se chama L.I.M.O.',
+            fonte: 'Wikipedia — Rock ’n’ Roller Coaster', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1511-1545', hora: '09:40', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Toy Story Mania',
-        descricao: 'Standby, ainda cedo. Mesma land',
+      { id: 'b-1511-0945', hora: '09:45', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Torre do Terror',
+        descricao: 'Multi Pass · lista baixa',
         contexto:
-          'Jogo de tiro em 3D com óculos, em cabines giratórias — vocês competem por ' +
-          'pontuação. Puxem o gatilho o mais rápido possível: a pontuação premia volume de ' +
-          'tiros, não pontaria.',
-        areaParque: 'Toy Story Land', acesso: ['standby'], duracaoMin: 35,
-        fila: { min: 25, quando: 'de manhã', pico: 55, estimado: true, fonte: '2026-09-10' },
+          'Queda livre dentro de um hotel abandonado cenográfico, com sequência aleatória de ' +
+          'subidas e quedas que muda a cada volta. A ambientação é a melhor da Disney.\n\n' +
+          'Sensação de estômago forte — se algum dos dois tem medo de queda, é esta e não as ' +
+          'montanhas-russas.',
+        areaParque: 'Sunset Blvd', acesso: ['standby'], duracaoMin: 40,
+        fila: { min: 20, quando: 'logo depois da abertura', pico: 35, fonte: '2026-09-17' },
         curiosidades: [
-          { texto: 'Abriu em 31/05/2008, em outra área do parque, e ganhou esta entrada nova ' +
-                   'quando o Toy Story Land abriu, em 2018.',
-            fonte: 'Wikipedia — Toy Story Midway Mania!; Wikipedia — Toy Story Land', pesquisa: '2026-09-15' },
+          { texto: 'Abriu em 22/07/1994, junto com a Sunset Blvd. Tem 199 pés, só meio pé a ' +
+                   'menos que o Everest. Na história, o raio atinge o hotel em 31/10/1939.',
+            fonte: 'Wikipedia — The Twilight Zone Tower of Terror', pesquisa: '2026-09-15' },
+          { texto: 'O Rod Serling da abertura é imagem real, tirada do episódio “It’s a Good ' +
+                   'Life”, de Além da Imaginação. Desde 2003 as quedas são sorteadas por ' +
+                   'computador, e no meio do passeio o elevador sai do poço e anda na ' +
+                   'horizontal.',
+            fonte: 'Wikipedia — The Twilight Zone Tower of Terror', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1511-1145', hora: '10:15', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Alien Swirling Saucers',
-        descricao: 'Opcional. Só se a fila estiver abaixo de 15 min',
-        contexto:
-          'Xícaras giratórias temáticas, 90 segundos. Leve, e o valor está em já estarem na ' +
-          'land. Se a fila passar de 15 minutos, sigam direto para o Rise — vocês têm hora ' +
-          'marcada com o Single Pass.',
-        areaParque: 'Toy Story Land', acesso: ['standby'], opcional: true, duracaoMin: 24,
-        condicao: 'Só se a fila estiver abaixo de 15 min',
-        fila: { min: 15, quando: 'de manhã', pico: 35, estimado: true, fonte: '2026-09-10' } },
-
-      { id: 'b-1511-1030', hora: '10:45', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1511-1040', hora: '10:40', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Rise of the Resistance',
         descricao: 'Single Pass. E aqui ele se justifica',
         contexto:
@@ -3191,7 +3181,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Star Wars: Rise of the Resistance', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1511-0900', hora: '11:35', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1511-1130', hora: '11:30', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Millennium Falcon: Smugglers Run',
         descricao: 'Standby. Peçam para ser PILOTOS',
         contexto:
@@ -3209,7 +3199,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Star Wars: Galaxy’s Edge', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1511-1215', hora: '12:20', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-1511-1215', hora: '12:15', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Docking Bay 7',
         descricao: 'Balcão, dentro de Galaxy’s Edge. Mobile order',
         contexto:
@@ -3227,7 +3217,67 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Star Wars: Galaxy’s Edge', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1511-1315s', hora: '13:15', ancora: 'fixo', tipo: 'show',
+      { id: 'b-1511-1315', hora: '13:15', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Slinky Dog Dash',
+        descricao: 'A fila mais teimosa do parque. Não existe hora barata para ela',
+        contexto:
+          'Montanha-russa familiar ao ar livre, com dois lançamentos suaves. Não é intensa — ' +
+          'o que ela é, é sempre cheia.\n\n' +
+          'SEJAM HONESTOS COM O NÚMERO: o Slinky faz 97 minutos na abertura, 79 de média no ' +
+          'dia e 64 à noite. Não existe janela barata para ele, e é exatamente por isso que ' +
+          'ele leva o nível 1 do Multi Pass em vez de ir para o rope drop.' +
+          '\n\nENCARÁ-LO NO STANDBY seria o gesto mais caro do dia: sem Early Entry, às 9h o ' +
+          'parque já rodou meia hora com hóspedes de hotel, e o Slinky é justamente uma das ' +
+          'atrações que o Early Entry abre. O rope drop dele custaria os 97 minutos cheios.' +
+          '\n\nE ele é o único dos quatro do nível 1 que NÃO tem fila de single rider: o Rock ' +
+          '’n’ Roller tem, o Falcon tem. Gastar o passe nele é comprar a única porta que não ' +
+          'abre de outro jeito.',        areaParque: 'Toy Story Land', acesso: ['multi-pass'], critico: true,
+        duracaoMin: 40,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 97, estimado: true, fonte: '2026-09-17' },
+        pesquisa: '2026-09-10',
+        curiosidades: [
+          { texto: 'O Toy Story Land de Orlando é o maior da Disney. A ideia é que vocês ' +
+                   'encolheram ao tamanho de um brinquedo no quintal do Andy — por isso as ' +
+                   'cercas de Lincoln Logs, os Tinkertoys e as pegadas gigantes do Andy no ' +
+                   'chão.',
+            fonte: 'Wikipedia — Toy Story Land', pesquisa: '2026-09-15' },
+          { texto: 'No fim do percurso, um Wheezy animatrônico canta para quem passa.',
+            fonte: 'Wikipedia — Toy Story Land', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1511-1355', hora: '13:55', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Toy Story Mania',
+        descricao: 'Standby, ainda cedo. Mesma land',
+        contexto:
+          'Jogo de tiro em 3D com óculos, em cabines giratórias — vocês competem por ' +
+          'pontuação. Puxem o gatilho o mais rápido possível: a pontuação premia volume de ' +
+          'tiros, não pontaria.',
+        areaParque: 'Toy Story Land', acesso: ['multi-pass'], duracaoMin: 35,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 55, estimado: true, fonte: '2026-09-17' },
+        curiosidades: [
+          { texto: 'Abriu em 31/05/2008, em outra área do parque, e ganhou esta entrada nova ' +
+                   'quando o Toy Story Land abriu, em 2018.',
+            fonte: 'Wikipedia — Toy Story Midway Mania!; Wikipedia — Toy Story Land', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1511-1440', hora: '14:40', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Mickey & Minnie’s Runaway Railway',
+        descricao: 'Multi Pass rolando — reservado às 13h55',
+        contexto:
+          'Dark ride sem trilhos visíveis onde vocês entram literalmente dentro de um ' +
+          'desenho. Colorido, rápido, sem emoção forte.\n\n' +
+          'É A RESERVA ROLANDO, feita às 13h55, assim que o Rock ’n’ Roller é usado. Se não ' +
+          'houver horário perto das 15h20, façam no standby — a fila chega a uns 50 minutos ' +
+          'no pico.',
+        areaParque: 'Hollywood Blvd', acesso: ['multi-pass'], duracaoMin: 40,
+        fila: { min: 10, quando: 'com o Multi Pass', pico: 50, estimado: true, fonte: '2026-09-10' },
+        curiosidades: [
+          { texto: 'Ocupa o prédio onde funcionava a Great Movie Ride e abriu em 04/03/2020 — ' +
+                   'a primeira atração de passeio da Disney estrelada pelo Mickey.',
+            fonte: 'Wikipedia — Mickey & Minnie’s Runaway Railway', pesquisa: '2026-09-15' },
+        ] },
+
+      { id: 'b-1511-1525s', hora: '15:25', ancora: 'fixo', tipo: 'show',
         titulo: 'Indiana Jones Epic Stunt Spectacular',
         descricao: 'Show de dublês de 30 min, sentados, no caminho para a Sunset Blvd',
         contexto:
@@ -3255,81 +3305,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Indiana Jones Epic Stunt Spectacular!; WDWNT; BlogMickey', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1511-0945', hora: '13:55', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Rock ’n’ Roller Coaster (Muppets)',
-        descricao: 'Multi Pass · lista alta. Ao usar, reservem o Runaway Railway',
-        contexto:
-          'Montanha-russa fechada, no escuro, com lançamento de 0 a 90 km/h em menos de três ' +
-          'segundos e três inversões. É a mais intensa da Disney em Orlando.\n\n' +
-          'Tem temática dos Muppets, com o Dr. Teeth and the Electric Mayhem, desde ' +
-          '26/05/2026 — em novembro ainda é atração nova. Ela leva a lista alta do Multi Pass ' +
-          'porque o Slinky vai no rope drop.\n\n' +
-          'AO USAR, RESERVEM O RUNAWAY RAILWAY no app, ainda na saída. Cada reserva usada ' +
-          'libera a próxima.',
-        areaParque: 'Sunset Blvd', acesso: ['multi-pass'], acessoAlt: 'single-rider', duracaoMin: 40,
-        fila: { min: 10, quando: 'com o Multi Pass', pico: 75, estimado: true, fonte: '2026-09-10' },
-        pesquisa: '2026-09-10',
-        curiosidades: [
-          { texto: 'Abriu em 29/07/1999 com o Aerosmith, que ficou até 02/03/2026. Cada ' +
-                   'assento tem cinco alto-falantes, com um subwoofer embaixo, e o carrinho ' +
-                   'agora se chama L.I.M.O.',
-            fonte: 'Wikipedia — Rock ’n’ Roller Coaster', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1511-1315', hora: '14:35', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Torre do Terror',
-        descricao: 'Multi Pass · lista baixa',
-        contexto:
-          'Queda livre dentro de um hotel abandonado cenográfico, com sequência aleatória de ' +
-          'subidas e quedas que muda a cada volta. A ambientação é a melhor da Disney.\n\n' +
-          'Sensação de estômago forte — se algum dos dois tem medo de queda, é esta e não as ' +
-          'montanhas-russas.',
-        areaParque: 'Sunset Blvd', acesso: ['multi-pass'], duracaoMin: 40,
-        fila: { min: 10, quando: 'com o Multi Pass', pico: 35, fonte: '2026-09-10' },
-        curiosidades: [
-          { texto: 'Abriu em 22/07/1994, junto com a Sunset Blvd. Tem 199 pés, só meio pé a ' +
-                   'menos que o Everest. Na história, o raio atinge o hotel em 31/10/1939.',
-            fonte: 'Wikipedia — The Twilight Zone Tower of Terror', pesquisa: '2026-09-15' },
-          { texto: 'O Rod Serling da abertura é imagem real, tirada do episódio “It’s a Good ' +
-                   'Life”, de Além da Imaginação. Desde 2003 as quedas são sorteadas por ' +
-                   'computador, e no meio do passeio o elevador sai do poço e anda na ' +
-                   'horizontal.',
-            fonte: 'Wikipedia — The Twilight Zone Tower of Terror', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1511-1400', hora: '15:20', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Mickey & Minnie’s Runaway Railway',
-        descricao: 'Multi Pass rolando — reservado às 13h55',
-        contexto:
-          'Dark ride sem trilhos visíveis onde vocês entram literalmente dentro de um ' +
-          'desenho. Colorido, rápido, sem emoção forte.\n\n' +
-          'É A RESERVA ROLANDO, feita às 13h55, assim que o Rock ’n’ Roller é usado. Se não ' +
-          'houver horário perto das 15h20, façam no standby — a fila chega a uns 50 minutos ' +
-          'no pico.',
-        areaParque: 'Hollywood Blvd', acesso: ['multi-pass'], duracaoMin: 40,
-        fila: { min: 10, quando: 'com o Multi Pass', pico: 50, estimado: true, fonte: '2026-09-10' },
-        curiosidades: [
-          { texto: 'Ocupa o prédio onde funcionava a Great Movie Ride e abriu em 04/03/2020 — ' +
-                   'a primeira atração de passeio da Disney estrelada pelo Mickey.',
-            fonte: 'Wikipedia — Mickey & Minnie’s Runaway Railway', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1511-1630', hora: '16:05', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Star Tours',
-        descricao: 'Multi Pass · lista baixa. O roteiro muda a cada visita',
-        contexto:
-          'Simulador de cabine com tela e movimento. O sistema sorteia destinos e ' +
-          'personagens a cada sessão, então duas voltas quase nunca são iguais.',
-        areaParque: 'Echo Lake', acesso: ['multi-pass'], duracaoMin: 39,
-        fila: { min: 10, quando: 'com o Multi Pass', pico: 45, estimado: true, fonte: '2026-09-10' },
-        curiosidades: [
-          { texto: 'A versão atual é de 20/05/2011, com 3D e cenas sorteadas, em cerca de ' +
-                   '1.500 combinações. O C-3PO tem a voz e os movimentos do Anthony Daniels, o ' +
-                   'ator dos filmes.',
-            fonte: 'Wikipedia — Star Tours – The Adventures Continue', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1511-1645p', hora: '16:50', ancora: 'referencia', tipo: 'pausa',
+      { id: 'b-1511-1630p', hora: '16:30', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — antes da noite',
         descricao: 'Dez minutos. Banheiro ao lado do Docking Bay 7; a partir daqui o dia é sentado',
         contexto:
@@ -3358,7 +3334,7 @@ window.ROTEIRO = {
         ] },
 
       { id: 'b-1511-1810', hora: '18:10', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar de balcão — Sunset Ranch Market',
+        titulo: 'Jantar de balcão — Sunset Ranch Market, no Natal da Sunset',
         descricao: 'Rosie’s All-American Café e vizinhos, sem reserva. Mobile order',
         contexto:
           'O Sunset Ranch Market é o pátio de balcões da Sunset Blvd, a poucos passos do ' +
@@ -3372,19 +3348,7 @@ window.ROTEIRO = {
         restauranteId: 'r-sunset-market', areaParque: 'Sunset Blvd', acesso: [],
         duracaoMin: 60, pesquisa: '2026-09-16' },
 
-      { id: 'b-1511-1945', hora: '19:25', ancora: 'fixo', tipo: 'compras',
-        titulo: 'Sunset Blvd · decoração de Natal e compras',
-        descricao: 'A caminho do Fantasmic, sem voltar depois',
-        contexto:
-          'A Sunset Blvd é a rua mais bonita do parque à noite e no Natal ganha luz quente e ' +
-          'música ao vivo. O teatro do Fantasmic fica no fim dela — vocês passam por aqui de ' +
-          'qualquer jeito.\n\n' +
-          'É O MOMENTO DE COMPRA DO DIA, e é agora e não depois: as lojas fecham com o ' +
-          'parque, e depois do Fantasmic vocês vão direto para a saída no meio de dez mil ' +
-          'pessoas. A Tower of Terror Gift Shop e a Legends of Hollywood ficam nesta rua.',
-        areaParque: 'Sunset Blvd', acesso: [], duracaoMin: 20 },
-
-      { id: 'b-1511-2000p', hora: '19:45', ancora: 'fixo', tipo: 'espera',
+      { id: 'b-1511-1920p', hora: '19:20', ancora: 'fixo', tipo: 'espera',
         titulo: 'Posição para o Fantasmic!',
         descricao: 'Quinze minutos antes. O teatro abre às 18h30 e enche',
         contexto:
@@ -3402,7 +3366,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Fantasmic!; Disney Tourist Blog', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1511-2015', hora: '20:00', ancora: 'fixo', tipo: 'show',
+      { id: 'b-1511-2000', hora: '20:00', ancora: 'fixo', tipo: 'show',
         titulo: 'Fantasmic!',
         descricao: '~26 min. O fecho do dia',
         contexto:
@@ -3419,7 +3383,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Fantasmic!', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1511-2050', hora: '20:35', ancora: 'fixo', tipo: 'deslocamento',
+      { id: 'b-1511-2035', hora: '20:35', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel',
         descricao: 'Uber, ~30 min, US$ 22–32. Amanhã sai às 6h30',
         contexto:
@@ -3433,18 +3397,28 @@ window.ROTEIRO = {
     ficha: {
       multiPass: {
         usar: true, opcional: false,
-        listaAlta: ['Rock ’n’ Roller Coaster'],
-        listaBaixa: ['Torre do Terror', 'Star Tours'],
+        listaAlta: ['Slinky Dog Dash'],
+        listaBaixa: ['Toy Story Mania'],
         rolando: ['Mickey & Minnie’s Runaway Railway'],
         planoB:
-          'Se o Slinky passar de 60 minutos na abertura, troquem no app a reserva do Rock ’n’ ' +
-          'Roller pelo Slinky — os dois são do nível 1 — e façam o Rock ’n’ Roller pela fila ' +
-          'de single rider.',
+          'Se o Slinky não sair na compra de 08/11, o nível 1 vai para o Rock ’n’ Roller ' +
+          'Coaster e o rope drop passa a ser a Torre do Terror, que é a mais barata das ' +
+          'três da Sunset. O Slinky então fica de fora do dia: com 97 minutos na abertura ' +
+          'e 79 de média, ele não cabe em standby nenhum.',
         nota:
           'Nível 1 no Hollywood Studios: Slinky Dog Dash, Runaway Railway, Rock ’n’ Roller ' +
-          'Coaster e Millennium Falcon — só um entra na compra antecipada. O Slinky vai no ' +
-          'rope drop e o Falcon no standby; o Rock ’n’ Roller leva o nível 1, e o Runaway ' +
-          'Railway é reservado rolando assim que ele é usado, às 13h55.',
+          'Coaster e Millennium Falcon — só um entra na compra antecipada, e vai o SLINKY.' +
+          '\n\nPOR QUE ELE E NÃO O ROCK ’N’ ROLLER: sem Early Entry o rope drop daqui não ' +
+          'é barato em lugar nenhum — às 9h o parque já rodou meia hora com hóspedes de ' +
+          'hotel. O Slinky faz 97 minutos na abertura e 79 de média: é a fila mais cara do ' +
+          'parque em qualquer hora. E o Rock ’n’ Roller tem fila de single rider, o Slinky ' +
+          'não — gastar o nível 1 nele era comprar justamente o que já tinha saída.' +
+          '\n\nA SUNSET BLVD É O ROPE DROP, e ela fica na entrada, não no fundo. Rock ’n’ ' +
+          'Roller às 9h e Torre do Terror em seguida — a ordem entre os dois se decide no ' +
+          'portão, pela fila postada. A Torre é barata de qualquer jeito, pico de 35.' +
+          '\n\nO terceiro slot da lista baixa fica LIVRE de propósito: o que sobra se ' +
+          'reserva rolando dentro do parque, assim que o primeiro for usado. O alvo é o ' +
+          'Runaway Railway, às 14h40.',
       },
       singlePass: {
         itens: ['Rise of the Resistance'], opcionais: [],
@@ -3467,6 +3441,15 @@ window.ROTEIRO = {
     },
     renuncias: {
       gerais: [
+        { nome: 'Alien Swirling Saucers',
+          motivo: 'CORTADO EM 17/09. É o mesmo sistema das xícaras e o guia de adultos do ' +
+                  'mousehacking o chama de dispensável para adulto. Custava 30 minutos na ' +
+                  'melhor hora da manhã.' },
+        { nome: 'Star Tours',
+          motivo: 'CORTADO EM 17/09. Ele só estava no dia porque ocupava um slot de Multi ' +
+                  'Pass, e o guia diz que é das atrações mais fáceis de pegar do resort — ' +
+                  'gastar um passe nele bloqueava uma reposição que vale muito mais. Sem o ' +
+                  'passe, ele perde para o Indiana Jones na mesma janela.' },
         { nome: 'Disney Junior' }, { nome: 'Frozen Sing-Along' }, { nome: 'Vacation Fun' },
         { nome: 'Walt Disney Presents' }, { nome: 'Beauty and the Beast Live on Stage' },
         { nome: 'Disney Villains: Unfairly Ever After',
@@ -8014,7 +7997,7 @@ window.ROTEIRO = {
       nota: 'Balcão dentro da Hogsmeade decorada — não leva gorjeta. Faixa $ no mapa oficial: ' +
             'até US$ 15 por pessoa.' },
 
-    { id: 'r-docking-bay', nome: 'Docking Bay 7', data: '2026-11-15', hora: '12:20',
+    { id: 'r-docking-bay', nome: 'Docking Bay 7', data: '2026-11-15', hora: '12:15',
       refeicao: 'almoco', local: 'Hollywood Studios · Galaxy’s Edge',
       alternativas: ['Ronto Roasters, na mesma land, sem mesa', 'Woody’s Lunch Box, no Toy Story Land'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
@@ -8684,7 +8667,9 @@ window.ROTEIRO = {
         'Se o Fantasmic for em outra hora, ajustem o bloco do show. A posição das 19h45, as ' +
         'compras da Sunset às 19h25 e o jantar de balcão das 18h10 NÃO andam junto: ajustem à ' +
         'mão, nessa ordem, de trás para frente.\n\n' +
-        'Confiram na mesma tela a grade do INDIANA JONES EPIC STUNT SPECTACULAR, que o dia assume às 13h15. Ele tem poucas sessões por dia e cai entre o almoço no Docking Bay e o Rock ’n’ Roller Coaster.',
+        'Confiram na mesma tela a grade do INDIANA JONES EPIC STUNT SPECTACULAR, que o dia ' +
+        'assume às 15h25. Ele tem poucas sessões por dia e é a última coisa antes da parada ' +
+        'e do Oga’s — se a sessão for outra, é ele que anda, não o Oga’s, que tem reserva.',
       restauranteIds: [] },
 
     { id: 'ck-show-1611', dataAlvo: '2026-11-16', validaAte: '2026-11-16', hora: '07:15',
