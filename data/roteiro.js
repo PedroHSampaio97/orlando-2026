@@ -5941,9 +5941,9 @@ window.ROTEIRO = {
                 'Yoshi’s Adventure, é a melhor forma de ver.',
         pesquisa: '2026-09-10' },
       { nome: 'Show natalino das fontes do Celestial Park', quando: 'hoje',
-        condicao: 'horário ainda não anunciado', custo: 'grátis',
-        motivo: 'As fontes do Celestial Park ganham show de Natal na temporada. A Universal ' +
-                'anuncia os horários perto do início dela.',
+        condicao: 'grade sai no app no próprio dia', custo: 'grátis',
+        motivo: 'As fontes do Celestial Park ganham show de Natal na temporada. A grade sai ' +
+                'no app da Universal no próprio dia — está na pendência da manhã de hoje.',
         pesquisa: '2026-09-10' },
       { nome: 'Snoggletog na Isle of Berk', quando: 'hoje', custo: 'grátis',
         motivo: 'O Natal de Como Treinar o Seu Dragão, na vila viking. Vocês passam a tarde ' +
@@ -8368,15 +8368,16 @@ window.ROTEIRO = {
     { id: 'ck-horarios-epic', dataAlvo: '2026-11-01', validaAte: '2026-11-19', dataEstimada: true,
       motivoData: 'Horários de show de Natal só saem perto da temporada, que começa em 14/11',
       hora: null, fuso: null, janelaReserva: false, critico: true,
-      texto: 'Horário do Epic Universe em 20/11 — abertura, FECHAMENTO e shows de Natal',
+      texto: 'Horário do Epic Universe em 20/11 — abertura e FECHAMENTO',
       nota:
         'A ABERTURA move a manhã inteira: é a referência do dia. O roteiro assume 9h.\n\n' +
         'O FECHAMENTO é o que importa mais. O Battle at the Ministry e o Mine-Cart Madness ' +
         'estão colados nele, porque as duas maiores filas do parque só ficam razoáveis nas ' +
         'últimas horas. O roteiro assume 21h, o típico de quinta em meados de novembro. Se ' +
         'for outro, vale o plano B2 do dia 19.\n\n' +
-        'OS SHOWS DE NATAL: fontes do Celestial Park e as celebrações de Berk e da Place ' +
-        'Cachée. A Universal anuncia os horários perto do início da temporada.',
+        'A GRADE DE SHOW NÃO CABE AQUI: o Untrainable Dragon, as fontes do Celestial ' +
+        'Park e as celebrações de Berk e da Place Cachée só aparecem no app no próprio ' +
+        'dia, e viraram tarefa da manhã de 20/11.',
       restauranteIds: [] },
 
     { id: 'ck-epa-epic', dataAlvo: '2026-11-12', validaAte: '2026-11-19', dataEstimada: true,
@@ -8662,76 +8663,180 @@ window.ROTEIRO = {
       pesquisa: '2026-09-11',
       restauranteIds: [] },
 
-    { id: 'ck-horarios-mk', dataAlvo: '2026-10-11', validaAte: '2026-11-11', dataEstimada: true,
-      motivoData: 'Um mês antes do dia 11. Em 15/09 a agenda da Disney não mostrava nenhum desfile a partir de 08/11, quando começa a temporada da festa de Natal',
-      hora: null, fuso: null, janelaReserva: false, critico: true,
-      texto: 'Magic Kingdom 11/11: falta a hora do Festival of Fantasy e do desfile noturno',
+    { id: 'ck-horarios-mk', dataAlvo: '2026-09-12', validaAte: '2026-11-11',
+      hora: null, fuso: null, janelaReserva: false, critico: false, feitoPadrao: true,
+      texto: 'Magic Kingdom 11/11 — 9h às 22h, Early Entry 8h30 e os fogos às 20h',
       nota:
         'O PARQUE SAIU EM 12/09: 9h às 22h, com Early Entry às 8h30. É exatamente o que o ' +
         'dia assumia, então a referência já está certa e nenhum bloco mudou.\n\n' +
         'OS FOGOS TAMBÉM SAÍRAM: Happily Ever After às 20h, exatamente o que o dia assumia.\n\n' +
-        'FALTA SÓ O DESFILE, E ELE AINDA NÃO SAIU PARA NINGUÉM. Em 15/09 a agenda da Disney ' +
-        'não mostrava nenhum desfile a partir de 08/11, que é quando começa a temporada da ' +
-        'Mickey’s Very Merry Christmas Party: os horários dessa temporada ainda não foram ' +
-        'carregados. Confiram de novo daqui a um mês, e se não tiver saído até a véspera, a ' +
-        'hora do dia estará no app da Disney na manhã do dia 11.\n\n' +
-        'O Festival of Fantasy assume 15h, que é o padrão, e é a hora ' +
-        'que ancora a tarde inteira: a travessia para a Tomorrowland às 15h12 e a janela do ' +
-        'TRON andam com ele. Se sair outra, mexam no bloco do desfile — nada disso desloca ' +
-        'com a abertura.\n\n' +
-        'E O DESFILE NOTURNO, Disney Starlight: Dream the Night Away, que o mapa oficial ' +
-        'destaca. Ele não roda nas noites de festa de Natal e segue normal nas outras, e ' +
-        '11/11 não é noite de festa. Mesma rota do diurno, mesmo corte do parque. Se rodar perto das 21h, a Main ' +
-        'Street estará tomada na saída das 22h — e o Seven Dwarfs e o TRON ficam ainda mais ' +
-        'vazios enquanto ele passa. Anotem a hora na nota do dia 11.\n\n' +
-        'Confiram na mesma visita se a Tiana’s voltou da reforma antes do previsto.',
+        'A HORA DOS DESFILES NÃO CABE AQUI. O app da Disney só mostra a grade de show e ' +
+        'desfile do dia em que você está: data futura mostra apenas o horário de ' +
+        'funcionamento do parque. Por isso o Festival of Fantasy e o Disney Starlight viraram ' +
+        'tarefa da manhã do dia 11.',
       pesquisa: '2026-09-15',
       restauranteIds: [] },
 
-    { id: 'ck-horarios-dhs-epcot', dataAlvo: '2026-09-17', validaAte: '2026-11-16', hora: null, fuso: null,
-      janelaReserva: false, critico: true,
-      texto: 'A hora do Fantasmic (15/11) e do Luminous (13/11) — e confirmar o Epcot de 13/11',
+    { id: 'ck-horarios-dhs-epcot', dataAlvo: '2026-09-16', validaAte: '2026-11-16',
+      hora: null, fuso: null, janelaReserva: false, critico: false, feitoPadrao: true,
+      texto: 'Epcot 13/11 e Hollywood Studios 15/11 — 9h às 21h nos dois, Early Entry 8h30',
       nota:
         'HOLLYWOOD STUDIOS, 15/11: 9h às 21h, oficial desde 12/09, com Early Entry às 8h30.\n\n' +
         'EPCOT, 13/11: 9h às 21h com Early Entry às 8h30, pelo calendário publicado, ' +
-        'conferido em 16/09. Confirmem no app da Disney.\n\n' +
-        'As manhãs estão certas; falta a hora dos dois shows, que seguem o FECHAMENTO do ' +
-        'parque, não a abertura.\n\n' +
-        'FANTASMIC (15/11): com o parque fechando às 21h, o padrão é 20h — que é o que o ' +
-        'roteiro assume.\n\n' +
-        'LUMINOUS (13/11): roda junto do fechamento, às 21h — que é o que o roteiro ' +
-        'assume.\n\n' +
-        'Se algum for outro, ajustem a hora no bloco do show. A posição para o show, o ' +
-        'bloco antes dela e a volta ao hotel não andam junto: ajustem à mão.',
+        'conferido em 16/09.\n\n' +
+        'As duas manhãs estão certas. A HORA DO LUMINOUS E DO FANTASMIC segue o FECHAMENTO ' +
+        'do parque, não a abertura, e só aparece no app no próprio dia — por isso virou ' +
+        'tarefa da manhã de 13/11 e de 15/11. O roteiro assume o padrão: Luminous às 21h e ' +
+        'Fantasmic às 20h.',
+      pesquisa: '2026-09-16',
       restauranteIds: [] },
 
     { id: 'ck-horarios', dataAlvo: '2026-10-10', validaAte: '2026-11-24', dataEstimada: true,
       motivoData: 'Universal, SeaWorld e Busch Gardens publicam novembro sem data fixa: confiram em outubro e de novo na semana da viagem',
       hora: null, fuso: null, janelaReserva: false, critico: true,
       texto: 'Conferir os horários oficiais de 17, 19, 20, 22 e 23/11 e ajustar a referência de cada dia',
-      nota: 'É só editar o horário de abertura no dia — os blocos ancorados deslocam sozinhos.',
+      nota:
+        'É só editar o horário de abertura no dia — os blocos ancorados deslocam sozinhos.\n\n' +
+        'AQUI É SÓ ABERTURA E FECHAMENTO. A grade de show e desfile desses parques é tarefa ' +
+        'da manhã de cada dia: 14, 17, 22 e 23/11 têm pendência própria.',
       restauranteIds: [] },
 
-    { id: 'ck-shows', dataAlvo: '2026-11-01', validaAte: '2026-11-17', dataEstimada: true, motivoData: 'Horários de show só saem perto da data', hora: null, fuso: null,
-      janelaReserva: false, critico: false,
-      texto: 'Confirmar horário do Grinchmas (14/11), do desfile da Macy’s (17/11), do ' +
-             'Fantasmic! (15/11) e do CineSational (17/11) — e o fechamento do parque em 17/11',
+    { id: 'ck-show-1111', dataAlvo: '2026-11-11', validaAte: '2026-11-11', hora: '07:45',
+      fuso: null, janelaReserva: false, critico: true,
+      texto: 'HOJE, no portão: a hora do Festival of Fantasy e do desfile noturno',
       nota:
-        'O Grinchmas é a referência do dia 14: ajustando ele, deslocam a saída, a fila e a ' +
-        'Hogsmeade decorada. A projeção no castelo, o Hippogriff, o jantar e a volta são ' +
+        'O app da Disney só mostra a grade de desfile do dia em que vocês estão. Abram o My ' +
+        'Disney Experience ainda na fila do portão e leiam a grade de hoje.\n\n' +
+        'O FESTIVAL OF FANTASY ANCORA A TARDE INTEIRA. O roteiro assume 15h, que é o padrão. ' +
+        'A travessia para a Tomorrowland às 15h12 e a janela do TRON andam com ele: se sair ' +
+        'outra hora, mexam no bloco do desfile — nada disso desloca com a abertura.\n\n' +
+        'O DESFILE NOTURNO, Disney Starlight: Dream the Night Away, não roda em noite de festa ' +
+        'de Natal, e 11/11 não é noite de festa. Mesma rota do diurno, mesmo corte do parque. ' +
+        'Se rodar perto das 21h, a Main Street estará tomada na saída das 22h — e o Seven ' +
+        'Dwarfs e o TRON ficam ainda mais vazios enquanto ele passa.\n\n' +
+        'O parque e os fogos já estão confirmados: 9h às 22h, Early Entry 8h30 e Happily Ever ' +
+        'After às 20h. Na mesma tela, vejam se a Tiana’s voltou da reforma.',
+      restauranteIds: [] },
+
+    { id: 'ck-show-1311', dataAlvo: '2026-11-13', validaAte: '2026-11-13', hora: '08:15',
+      fuso: null, janelaReserva: false, critico: false,
+      texto: 'HOJE, no portão: a hora do Luminous',
+      nota:
+        'O Luminous roda junto do fechamento e o roteiro assume 21h. O parque é 9h às 21h com ' +
+        'Early Entry às 8h30, já confirmado — o que falta é só a hora do show, que o app ' +
+        'publica no próprio dia.\n\n' +
+        'Se o show for em outra hora, ajustem o bloco dele. A posição das 20h30, a última ' +
+        'volta do Food & Wine às 20h e a volta ao hotel NÃO andam junto: ajustem à mão.',
+      restauranteIds: [] },
+
+    { id: 'ck-show-1411', dataAlvo: '2026-11-14', validaAte: '2026-11-14', hora: '09:00',
+      fuso: null, janelaReserva: false, critico: true,
+      texto: 'HOJE, antes de sair: a hora do Grinchmas e da projeção no castelo',
+      nota:
+        'É no app da Universal, não no da Disney. Confiram de manhã, com folga, porque o ' +
+        'Grinchmas é a REFERÊNCIA do dia: ajustando ele, deslocam a saída das 16h, a entrada ' +
+        'no parque e a fila das 17h.\n\n' +
+        'A projeção no castelo, o Hippogriff, o jantar no Three Broomsticks e a volta são ' +
         'fixos e se ajustam à mão.\n\n' +
-        'O DESFILE DA MACY’S É O MAIS INCERTO DOS TRÊS. O dia 17 assume 17h30, mas em anos ' +
-        'anteriores ele rodou tanto às 17h30 quanto às 19h30 — duas horas de diferença. ' +
-        'Três blocos dependem dele e se ajustam à mão: o desfile, o jantar no Lombard’s — com ' +
-        'reserva, remarcada ' +
-        'pelo app da Universal — e o Beco Diagonal à ' +
-        'noite.\n\n' +
-        'CONFIRAM TAMBÉM O FECHAMENTO DE 17/11. O parque fecha entre 19h e 22h conforme a ' +
-        'época, e a temporada de Natal estica. Se fechar às 19h, o Beco à noite não existe ' +
-        'e o jantar vira CityWalk, que fica fora da catraca.\n\n' +
-        'E O CINESATIONAL: o show noturno da lagoa do Universal Studios, que o mapa oficial ' +
-        'lista e o roteiro não usa, costuma rodar no fechamento — a hora em que vocês saem. ' +
-        'Se estiver na grade de 17/11, decidam antes: ficar para ele custa a saída no pico.',
+        '14/11/2026 É O DIA DE ESTREIA da temporada de Natal da Universal: o Grinchmas e o ' +
+        'Christmas in The Wizarding World começam exatamente hoje e vão até 03/01. Contem com ' +
+        'casa cheia de estreia, e confiram a grade com atenção — primeiro dia é o menos ' +
+        'previsível de todos.',
+      pesquisa: '2026-09-17',
+      restauranteIds: [] },
+
+    { id: 'ck-show-1511', dataAlvo: '2026-11-15', validaAte: '2026-11-15', hora: '08:00',
+      fuso: null, janelaReserva: false, critico: false,
+      texto: 'HOJE, no portão: a hora do Fantasmic!',
+      nota:
+        'Com o parque fechando às 21h, o padrão é 20h, que é o que o roteiro assume. O parque ' +
+        'está oficial desde 12/09: 9h às 21h, Early Entry 8h30.\n\n' +
+        'Se o Fantasmic for em outra hora, ajustem o bloco do show. A posição das 19h45, as ' +
+        'compras da Sunset às 19h25 e o jantar de balcão das 18h10 NÃO andam junto: ajustem à ' +
+        'mão, nessa ordem, de trás para frente.\n\n' +
+        'Confiram na mesma tela a grade do INDIANA JONES EPIC STUNT SPECTACULAR, que o dia assume às 13h15. Ele tem poucas sessões por dia e cai entre o almoço no Docking Bay e o Rock ’n’ Roller Coaster.',
+      restauranteIds: [] },
+
+    { id: 'ck-show-1611', dataAlvo: '2026-11-16', validaAte: '2026-11-16', hora: '07:15',
+      fuso: null, janelaReserva: false, critico: false,
+      texto: 'HOJE, no portão: a grade do Festival of the Lion King',
+      nota:
+        'O Festival of the Lion King tem poucas sessões por dia e a grade sai no app da Disney ' +
+        'no próprio dia. O roteiro assume chegar às 11h30 para o show das 11h50.\n\n' +
+        'Ele cai entre o Gorilla Falls e o almoço no Satu’li das 12h30, que tem mobile order: ' +
+        'se a sessão for outra, é a janela de retirada do almoço que se ajusta, não o show.\n\n' +
+        'O parque está no calendário como 8h às 18h, com Early Entry às 7h30 — isso é outra ' +
+        'pendência e já foi conferido.',
+      restauranteIds: [] },
+
+    { id: 'ck-show-1711', dataAlvo: '2026-11-17', validaAte: '2026-11-17', hora: '08:30',
+      fuso: null, janelaReserva: false, critico: true,
+      texto: 'HOJE, no portão: o desfile da Macy’s, o CineSational e o fechamento do parque',
+      nota:
+        'O DESFILE DA MACY’S É O MAIS INCERTO DA VIAGEM. O dia assume 17h30, mas em anos ' +
+        'anteriores ele rodou tanto às 17h30 quanto às 19h30 — duas horas de diferença. Três ' +
+        'blocos dependem dele e se ajustam à mão: o desfile, o jantar no Lombard’s, que tem ' +
+        'reserva e se remarca pelo app da Universal, e o Beco Diagonal à noite.\n\n' +
+        'CONFIRAM TAMBÉM O FECHAMENTO DE HOJE. O parque fecha entre 19h e 22h conforme a ' +
+        'época, e a temporada de Natal estica. Se fechar às 19h, o Beco à noite não existe e ' +
+        'o jantar vira CityWalk, que fica fora da catraca.\n\n' +
+        'E O CINESATIONAL: o show noturno da lagoa, que o mapa oficial lista e o roteiro não ' +
+        'usa, costuma rodar no fechamento — a hora em que vocês saem. Se estiver na grade de ' +
+        'hoje, decidam de manhã: ficar para ele custa a saída no pico.\n\n' +
+        'Confiram também a grade do BOURNE STUNTACULAR, que o dia assume às 16h30, logo antes do desfile. São poucas sessões por dia e as duas coisas são seguidas.',
+      restauranteIds: [] },
+
+    { id: 'ck-show-1911', dataAlvo: '2026-11-19', validaAte: '2026-11-19', hora: '08:15',
+      fuso: null, janelaReserva: false, critico: false,
+      texto: 'HOJE, no portão: a hora da projeção no castelo de Hogwarts',
+      nota:
+        'A projeção de Hogsmeade à noite é o único bloco de show do dia e o roteiro assume ' +
+        '18h50. Na temporada de Natal ela roda em sessões curtas e repetidas, com a grade ' +
+        'publicada no app da Universal no próprio dia.\n\n' +
+        'ATENÇÃO À COLISÃO COM O MYTHOS: o jantar é às 19h15, com reserva e tolerância curta. ' +
+        'Se a sessão da projeção for depois das 19h, vejam uma sessão mais cedo ou deixem a ' +
+        'projeção para depois do jantar — a saída é só às 20h30.',
+      restauranteIds: [] },
+
+    { id: 'ck-show-2011', dataAlvo: '2026-11-20', validaAte: '2026-11-20', hora: '07:50',
+      fuso: null, janelaReserva: false, critico: true,
+      texto: 'HOJE, no portão: a grade do The Untrainable Dragon e das festas de Natal',
+      nota:
+        'O UNTRAINABLE DRAGON É O ÚNICO SHOW DE TEATRO DO DIA e o roteiro assume 16h30, com a ' +
+        'fila às 16h10. Ele está colado no jantar do Atlantic às 17h, que tem reserva: se a ' +
+        'sessão for mais tarde, ou vocês pegam uma sessão anterior, ou o show sai do dia. ' +
+        'Decidam de manhã, não às 16h.\n\n' +
+        'CONFIRAM TAMBÉM as fontes coreografadas do Celestial Park e as celebrações de Natal ' +
+        'de Berk e da Place Cachée, que estreiam com a temporada em 14/11. A Universal publica ' +
+        'a grade delas no app no próprio dia.\n\n' +
+        'A abertura e o fechamento do parque são outra pendência, conferida em outubro.',
+      restauranteIds: [] },
+
+    { id: 'ck-show-2211', dataAlvo: '2026-11-22', validaAte: '2026-11-22', hora: '08:15',
+      fuso: null, janelaReserva: false, critico: false,
+      texto: 'HOJE, no portão: a grade dos quatro shows do SeaWorld',
+      nota:
+        'Quatro blocos da noite são show e só a grade do dia confirma a hora: o Orca Encounter ' +
+        'às 17h10, o Winter Wonderland on Ice às 19h10, o Sea of Trees às 20h e o Holiday ' +
+        'Reflections às 21h.\n\n' +
+        'O Orca Encounter é o que mais arrasta: ele fica entre a pausa do Waterfront e o ' +
+        'jantar no Waterway Grill das 18h05. Se mudar, os dois andam junto — ajustem à mão.\n\n' +
+        'A temporada de Natal do SeaWorld roda de 16/11 a 05/01, então os três shows de Natal ' +
+        'estarão na grade. Peguem o mapa de papel na entrada: ele traz a grade impressa do dia.',
+      pesquisa: '2026-09-17',
+      restauranteIds: [] },
+
+    { id: 'ck-show-2311', dataAlvo: '2026-11-23', validaAte: '2026-11-23', hora: '09:15',
+      fuso: null, janelaReserva: false, critico: false,
+      texto: 'HOJE, no portão: o Christmas on Ice e o show de luzes do Serengeti',
+      nota:
+        'O Christmas on Ice às 16h20 e o show de luzes das 18h25 são as duas horas do dia que ' +
+        'dependem da grade. O Christmas on Ice fica entre o Skyride das 16h05 e o jantar no ' +
+        'Dragon Fire das 17h20: se mudar, esses dois andam à mão.\n\n' +
+        'CONFIRAM NA MESMA TELA O HORÁRIO DAS CABANAS DO CHRISTMAS TOWN. Elas abrem às 16h e ' +
+        'o All-Day Dining encerra trinta minutos antes de os restaurantes fecharem: a ordem ' +
+        'do dia depende disso.',
+      pesquisa: '2026-09-17',
       restauranteIds: [] },
   ],
 

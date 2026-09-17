@@ -631,11 +631,12 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [x] **11/09** — Lombard’s Seafood Grille (17/11, 18h45) — RESERVADO, confirmação 639247504692187392
 - [x] **11/09** — Atlantic (20/11, 17h) — RESERVADO, confirmação 639251824607987840
 - [x] **12/09** — Magic Kingdom — sem reserva: almoço e jantar do dia 11 são de balcão (Columbia Harbour House e Casey’s)
+- [x] **12/09** — Magic Kingdom 11/11 — 9h às 22h, Early Entry 8h30 e os fogos às 20h
 - [ ] **15/09** — Confirmar com a agência a regra exata de validade do ingresso Disney de 4 dias *(data estimada)*
 - [x] **16/09** — Oga’s Cantina (15/11, 17h05) — RESERVADO, confirmação 356259476987
+- [x] **16/09** — Epcot 13/11 e Hollywood Studios 15/11 — 9h às 21h nos dois, Early Entry 8h30
 - [x] **17/09** — Sanaa (16/11, 19h50) — RESERVADO, confirmação 356258407484
 - [x] **17/09** — Epcot (13/11): sem mesa — a tarde e a noite são as barracas do Food & Wine
-- [ ] **17/09** — A hora do Fantasmic (15/11) e do Luminous (13/11) — e confirmar o Epcot de 13/11
 - [ ] **26/09, 6h ET** — Reservar o Homecomin’ para as 19h30 de 25/11 — a janela de 60 dias abre às 6h ET
 
 **Outubro**
@@ -645,7 +646,6 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [ ] **06/10** — Reservar o carro na Avis do Old Town: retirada 20/11 às 15h, devolução 25/11 às 15h *(data estimada)*
 - [ ] **10/10** — Conferir os horários oficiais de 17, 19, 20, 22 e 23/11 e ajustar a referência de cada dia *(data estimada)*
 - [ ] **11/10** — Animal Kingdom 16/11 — confirmar 8h às 18h no app da Disney (Early Entry 7h30) *(data estimada)*
-- [ ] **11/10** — Magic Kingdom 11/11: falta a hora do Festival of Fantasy e do desfile noturno *(data estimada)*
 - [ ] **15/10** — Decidir sobre a Power-Up Band do Epic Universe (~US$ 40) *(data estimada)*
 - [ ] **15/10** — Confirmar que 22/11 tem Christmas Celebration (SeaWorld) e 24/11 tem Christmas Town (Busch Gardens) — ambos rodam em datas selecionadas *(data estimada)*
 - [ ] **25/10** — Ingressos Universal aparecendo no app — nos DOIS perfis *(data estimada)*
@@ -653,8 +653,7 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [ ] **25/10** — Ativar o roaming nas duas linhas e confirmar a cobertura na Colômbia *(data estimada)*
 
 **Novembro, antes de embarcar**
-- [ ] **01/11** — Horário do Epic Universe em 20/11 — abertura, FECHAMENTO e shows de Natal *(data estimada)*
-- [ ] **01/11** — Confirmar horário do Grinchmas (14/11), do desfile da Macy’s (17/11), do Fantasmic! (15/11) e do CineSational (17/11) — e o fechamento do parque em 17/11 *(data estimada)*
+- [ ] **01/11** — Horário do Epic Universe em 20/11 — abertura e FECHAMENTO *(data estimada)*
 - [ ] **05/11** — Cadastrar no Simon VIP Club para o cupom do outlet sair de graça *(data estimada)*
 - [ ] **05/11** — Reserva do Travelodge salva OFFLINE nos dois celulares
 - [ ] **05/11** — Apólice do seguro salva OFFLINE nos dois celulares, e banco avisado
@@ -663,10 +662,20 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 **Durante a viagem**
 - [ ] **10/11, 7h ET** — NÃO é compra: o Single Pass do Flight of Passage se decide dentro do parque
 - [ ] **10/11, 7h ET** — Lightning Lane para 13/11 — Multi Pass do dia e Single Pass do Cosmic Rewind
+- [ ] **11/11, 7h45** — HOJE, no portão: a hora do Festival of Fantasy e do desfile noturno
 - [ ] **12/11, 7h ET** — Lightning Lane para 15/11 — Multi Pass do dia e Single Pass do Rise
 - [ ] **12/11** — Conferir quais lands do Epic estão no Early Park Admission em 20/11 *(data estimada)*
+- [ ] **13/11, 8h15** — HOJE, no portão: a hora do Luminous
+- [ ] **14/11, 9h** — HOJE, antes de sair: a hora do Grinchmas e da projeção no castelo
 - [ ] **14/11** — Comprar o Oakley Meta Vanguard no app do Best Buy, com retirada no Best Buy do Millenia (4155 Millenia Blvd)
+- [ ] **15/11, 8h** — HOJE, no portão: a hora do Fantasmic!
+- [ ] **16/11, 7h15** — HOJE, no portão: a grade do Festival of the Lion King
+- [ ] **17/11, 8h30** — HOJE, no portão: o desfile da Macy’s, o CineSational e o fechamento do parque
+- [ ] **19/11, 8h15** — HOJE, no portão: a hora da projeção no castelo de Hogwarts
 - [ ] **19/11** — Reservar o MCO Reserve para a volta de 26/11
+- [ ] **20/11, 7h50** — HOJE, no portão: a grade do The Untrainable Dragon e das festas de Natal
+- [ ] **22/11, 8h15** — HOJE, no portão: a grade dos quatro shows do SeaWorld
+- [ ] **23/11, 9h15** — HOJE, no portão: o Christmas on Ice e o show de luzes do Serengeti
 
 
 ---
