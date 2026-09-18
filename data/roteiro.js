@@ -5018,8 +5018,9 @@ window.ROTEIRO = {
                   'atrações exigem locker. Quanto menos bagagem, mais atração cabe no dia.' },
         { texto: 'Horário do Islands confirmado: 9h às 19h', critico: false,
           motivo: 'Conferido no app oficial em 17/09. A linha do tempo já está ajustada.' },
-        { texto: 'Capa de chuva e Ziploc para o celular', critico: false,
-          motivo: 'O Jurassic Park River Adventure molha bastante.' },
+        { texto: 'River Adventure confirmado fechado em 19/11', critico: false,
+          motivo: 'A reforma vai até 19/11, inclusive. A reabertura anunciada é em 20/11; ' +
+                  'se ele for prioridade, a manhã livre de 24/11 é a janela de retorno.' },
       ],
     },
     ficha: {
@@ -5076,7 +5077,7 @@ window.ROTEIRO = {
       'O HAGRID’S NÃO ACEITA EXPRESS DESDE 1º DE JULHO DE 2026, e a janela barata dele é a ' +
       'abertura. Na corda às 8h15 e direto para Hogsmeade quando ela soltar.',
       'Hoje é o dia com mais detector de metal da viagem: Hulk e VelociCoaster, onde não ' +
-      'passa nem celular. E quatro atrações exigem locker. Levem o mínimo.',
+      'passa nem celular. E cinco atrações exigem locker. Levem o mínimo.',
     ],
     notas: [
       { tipo: 'info', texto:
@@ -5092,14 +5093,15 @@ window.ROTEIRO = {
         '100 nem na última hora.\n\n' +
         'A VELOCICOASTER NÃO TEM HORA BOA, e não tem mais single rider: de 67 a 102 minutos ' +
         'da abertura até a noite, e a Universal fechou a fila de single rider dela. Por isso ' +
-        'ela fica à tarde, com um bloco de uma hora e meia, e o Doctor Doom saiu do dia para ' +
-        'caber.',
+        'ela fica à tarde, com um bloco de uma hora e meia. O fechamento do River Adventure ' +
+        'devolveu espaço para o Doctor Doom.',
         pesquisa: '2026-09-15' },
 
       { tipo: 'info', texto:
         'O QUE MUDOU NO PARQUE EM 2026:\n\n' +
-        'O Jurassic Park River Adventure passou dez meses em reforma e reabre em 19 ou 20/11. ' +
-        'Se atrasar, vale o plano B.\n\n' +
+        'O Jurassic Park River Adventure fica fechado de 05/01 a 19/11, inclusive, e a ' +
+        'reabertura anunciada é em 20/11. Portanto ele não entra neste dia. Se for prioridade, ' +
+        'a manhã livre de 24/11 é a janela de retorno.\n\n' +
         'A Lost Continent está sendo demolida em fases. O prédio do Poseidon’s Fury já foi ao ' +
         'chão. O Mythos continua aberto e, pela Universal, fecha em 2027, ainda sem data.\n\n' +
         'O Thunder Falls Terrace, no Jurassic Park, fechou em julho e vira o novo restaurante ' +
@@ -5114,20 +5116,19 @@ window.ROTEIRO = {
     ],
     planos: [
       { letra: 'A', titulo: 'O dia como está escrito',
-        gatilho: 'O parque funciona das 9h às 19h e o Jurassic Park River Adventure já reabriu.',
+        gatilho: 'O parque funciona das 9h às 19h; o River Adventure continua fechado neste dia.',
         passos: [
           'Na corda às 8h15, Hagrid’s na abertura e Forbidden Journey logo depois.',
           'Lanche salgado rápido às 11h40, sem restaurante de mesa e sem reserva.',
-          'Marvel, Kong, Jurassic Park River Adventure e VelociCoaster na fila normal.',
+          'Marvel, Doctor Doom, Kong e VelociCoaster na fila normal.',
           'Hogwarts Express ida e volta, projeção no castelo e jantar no Mythos às 19h15.',
         ] },
-      { letra: 'B', titulo: 'O Jurassic Park River Adventure não reabriu',
-        gatilho: 'A reforma atrasou e ele continua fechado em 19/11.',
+      { letra: 'B', titulo: 'O River Adventure é prioridade',
+        gatilho: 'Vocês querem fazer a atração depois da reabertura anunciada para 20/11.',
         passos: [
-          'Os 40 minutos dele devolvem o Doctor Doom: ele entra às 13h45, logo depois do ' +
-          'Spider-Man, a parada vai para 14h05 e o Kong para 14h25.',
-          'A VelociCoaster vai às 15h10, e o tempo que sobra antes do Hogwarts Express vira ' +
-          'folga em Hogsmeade. A capa de chuva fica na mochila.',
+          'Não tentem encaixar no Epic em 20/11: esse dia já termina no Celestial Goodnight.',
+          'Usem apenas a manhã livre de 24/11: entrada, River Adventure e volta até 13h30.',
+          'O restante do dia 19 continua como está escrito.',
         ] },
       { letra: 'C', titulo: 'Cansaço ou atraso',
         gatilho: 'O Hagrid’s demorou mais que o previsto ou o corpo pediu pausa.',
@@ -5255,14 +5256,25 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — The Amazing Adventures of Spider-Man', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1911-1435', hora: '13:45', ancora: 'referencia', tipo: 'pausa',
+      { id: 'b-1911-1345-doom', hora: '13:45', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Doctor Doom’s Fearfall',
+        descricao: 'Torre de lançamento. Entra no lugar do River Adventure, fechado neste dia',
+        contexto:
+          'Duas torres que lançam vocês para cima e deixam o carrinho quicar até a base. É ' +
+          'curta, mas fica ao lado do Spider-Man e aproveita os 40 minutos liberados pelo ' +
+          'fechamento confirmado do River Adventure.\n\n' +
+          'Fila geralmente curta. Guardem os objetos soltos no armário da área.',
+        areaParque: 'Marvel Super Hero Island', acesso: ['standby'], locker: true,
+        acessoAlt: 'single-rider', duracaoMin: 20, pesquisa: '2026-09-18' },
+
+      { id: 'b-1911-1435', hora: '14:05', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
         descricao: 'Dez minutos. Banheiro ao lado do Captain America Diner',
         contexto:
           'Do lanche até o Mythos são mais de sete horas, e só o Hogwarts Express senta. Esta é a parada do meio: água, banheiro e dez minutos sentados antes do Kong.',
         areaParque: 'Marvel Super Hero Island', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
 
-      { id: 'b-1911-1455', hora: '14:05', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1911-1455', hora: '14:25', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Skull Island: Reign of Kong',
         descricao: 'Caminhão expedicionário, telas 3D e o Kong animatrônico',
         contexto:
@@ -5277,25 +5289,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Skull Island: Reign of Kong', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1911-1540', hora: '14:50', ancora: 'referencia', tipo: 'atracao',
-        titulo: 'Jurassic Park River Adventure',
-        descricao: 'Molha. Reaberto depois de dez meses de reforma',
-        contexto:
-          'Passeio de barco que vira ataque de dinossauros e termina numa queda de 26 metros ' +
-          'no escuro. Molha de verdade, principalmente nas primeiras fileiras.\n\n' +
-          'REFORMA: ficou fechado de janeiro a 19 ou 20/11 de 2026, com dinossauros e cenário ' +
-          'sendo refeitos. Se ainda estiver fechado, vale o plano B.\n\n' +
-          'Está às 14h50 porque ainda é uma das horas mais quentes. Capa de chuva e o celular no Ziploc — ou ' +
-          'no armário de aluguel da entrada, que aqui é opcional, pelo mapa oficial. Fila média ' +
-          'de 22 minutos.',
-        areaParque: 'Jurassic Park', acesso: ['standby'],
-        acessoAlt: 'single-rider', molha: true, duracaoMin: 40, pesquisa: '2026-09-11',
-        curiosidades: [
-          { texto: 'Abriu com o parque, em 1999. A queda final tem 26 metros, a 55 graus.',
-            fonte: 'Wikipedia — Jurassic Park: The Ride', pesquisa: '2026-09-15' },
-        ] },
-
-      { id: 'b-1911-1625', hora: '15:35', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1911-1625', hora: '15:10', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Jurassic World VelociCoaster',
         descricao: 'A mais intensa do parque. Fila normal: uma hora e meia de bloco',
         contexto:
@@ -5304,7 +5298,7 @@ window.ROTEIRO = {
           'SEM SINGLE RIDER: a Universal fechou a fila de single rider daqui e passou a ' +
           'embarcar os grupos em duas filas, de número par e ímpar de pessoas, para não sobrar ' +
           'lugar vazio. Vocês vão pela fila normal, juntos.\n\n' +
-          'POR QUE ÀS 15H35: ela não tem hora barata. Nos dados de 2026, 85 minutos às 10h, 102 ' +
+          'POR QUE ÀS 15H10: ela não tem hora barata. Nos dados de 2026, 85 minutos às 10h, 102 ' +
           'às 11h, 76 às 14h, 83 às 16h e 72 às 18h. Entre a melhor e a pior hora da tarde são ' +
           'dez minutos, e as horas da noite já são do Hogwarts Express e do Mythos. O bloco tem ' +
           'uma hora e meia: fila, locker e detector.\n\n' +
@@ -5378,8 +5372,8 @@ window.ROTEIRO = {
         descricao: 'Uns 20 min a pé até o carro. Hotel por volta das 21h30',
         contexto:
           'A volta até o estacionamento é o mesmo caminho da manhã, pelo CityWalk.\n\n' +
-          'AMANHÃ É BUSCH GARDENS, EM TAMPA: estrada às 7h30, alarme às 6h30. Deixem a mochila ' +
-          'pronta antes de dormir.',
+          'AMANHÃ É EPIC UNIVERSE: saída às 8h15, com rope drop na Dark Universe. Deixem a ' +
+          'mochila pronta antes de dormir.',
         acesso: [], duracaoMin: 60 },
     ],
     naoPerca: [
@@ -5389,8 +5383,8 @@ window.ROTEIRO = {
         pesquisa: '2026-09-11' },
       { nome: 'Raptor Encounter', quando: 'hoje', custo: 'incluso',
         motivo: 'Um velociraptor animatrônico com tratador, no Jurassic Park, em sessões curtas ' +
-                'ao longo do dia. Cabe entre o Kong e o River Adventure, sem bloco — está no ' +
-                'mapa oficial.',
+                'ao longo do dia. Se uma sessão casar com a passagem entre o Kong e a ' +
+                'VelociCoaster, parem; não há bloco reservado.',
         pesquisa: '2026-09-12' },
       { nome: 'Frog Choir e Triwizard Spirit Rally', quando: 'hoje', custo: 'incluso',
         motivo: 'Shows de rua na Hogsmeade, de uns dez minutos, várias vezes ao dia. Se um ' +
@@ -5457,12 +5451,12 @@ window.ROTEIRO = {
         { nome: 'Pteranodon Flyers', motivo: 'Só com criança.' },
         { nome: 'Seuss Landing', motivo: 'Brinquedos infantis. Vocês atravessam a pé.' },
         { nome: 'Popeye e Dudley Do-Right',
-          motivo: 'Molham muito, e o Jurassic Park River Adventure já cumpre esse papel.' },
-        { nome: 'Doctor Doom’s Fearfall',
-          motivo: 'Torre de menos de um minuto. O tempo dele foi para a fila da VelociCoaster, ' +
-                  'que não tem single rider. Volta no plano B.' },
+          motivo: 'Molham demais para uma tarde de novembro, e o dia já está cheio.' },
       ],
-      fechado: [],
+      fechado: [
+        'Jurassic Park River Adventure — reforma programada até 19/11, inclusive; reabertura ' +
+        'anunciada para 20/11. Se for prioridade, usem a manhã livre de 24/11.',
+      ],
     },
   },
 
@@ -5524,7 +5518,8 @@ window.ROTEIRO = {
         'num dia de 10 horas, ele tomaria a janela do Battle at the Ministry.\n\n' +
         'BATTLE AT THE MINISTRY: 76 a 109 minutos de média. Nas últimas duas ou três horas ' +
         'cai para 45 a 75, e na última hora a mediana cai 74%.\n\n' +
-        'O Battle entra às 18h30, depois de um bloco flexível sem mesa, e termina no fechamento.\n\n' +
+        'O Battle entra às 18h, depois de um bloco flexível sem mesa, e a saída prevista às ' +
+        '19h30 preserva o Universal Celestial Goodnight no fechamento.\n\n' +
         'AS TRÊS MAIORES FILAS são Mine-Cart, Ministry e Mario Kart. O Monsters Unchained é ' +
         'uma das MENORES, 13 a 15 minutos.',
         pesquisa: '2026-09-10' },
@@ -5550,11 +5545,19 @@ window.ROTEIRO = {
       { tipo: 'info', texto:
         'NATAL NO EPIC, de 14/11 a 03/01. A Super Nintendo World ganha decoração pela primeira ' +
         'vez, a Isle of Berk faz o Snoggletog, a Place Cachée do Ministry entra no Natal do ' +
-        'mundo bruxo, e o Celestial Park vira paisagem de inverno com show natalino nas ' +
-        'fontes.\n\n' +
-        'Os horários dos shows ainda não saíram — a Universal anuncia perto da temporada. Está ' +
-        'no checklist.',
-        pesquisa: '2026-09-10' },
+        'mundo bruxo, e o Celestial Park vira paisagem de inverno.\n\n' +
+        'UNIVERSAL CELESTIAL GOODNIGHT: apresentação noturna diária no fechamento, com fontes, ' +
+        'luzes, projeções e fogos. Como o parque fecha às 20h, o roteiro trata 20h como hora ' +
+        'fixa e antecipa o Battle at the Ministry para 18h.',
+        pesquisa: '2026-09-18' },
+
+      { tipo: 'alerta', texto:
+        'UNIVERSAL NIGHTS acontece hoje, das 21h à meia-noite, com entrada dos participantes ' +
+        'a partir das 19h. É um evento separado, não incluído no ingresso comum.\n\n' +
+        'Não entra no roteiro: custa outra entrada e amanhã já existe um compromisso à noite. ' +
+        'Contem apenas com um possível aumento de movimento entre 19h e 20h; depois do ' +
+        'Celestial Goodnight, sigam para o Cane’s.',
+        pesquisa: '2026-09-18' },
 
       { tipo: 'info', texto:
         'POR QUE 20/11. A sexta é o dia que sobra para o Epic depois de o Islands ficar com a ' +
@@ -5575,8 +5578,8 @@ window.ROTEIRO = {
           'Stardust Racers no meio da manhã, e Super Nintendo World perto das 13h, quando a turma do ' +
           'EPA sai de lá.',
           'Tarde em Berk, com o The Untrainable Dragon às 16h30.',
-          'Celestial Park e lanche flexível às 17h, Battle at the Ministry às 18h30, Cane’s ' +
-          'depois do fechamento.',
+          'Celestial Park e lanche flexível às 17h, Battle at the Ministry às 18h e Universal ' +
+          'Celestial Goodnight às 20h; Cane’s depois do fechamento.',
         ] },
       { letra: 'B', titulo: 'A Dark Universe voltou para o Early Park Admission',
         gatilho: 'A lista de novembro inclui a Dark Universe, e o Ministry saiu dela.',
@@ -5791,18 +5794,18 @@ window.ROTEIRO = {
 
       { id: 'b-2011-1700', hora: '17:00', ancora: 'fixo', tipo: 'livre',
         titulo: 'Celestial Park e lanche flexível',
-        descricao: 'Sem mesa: fontes, Bar Zenith ou um item rápido. Às 18h20, sigam ao Ministry',
+        descricao: 'Sem mesa: fontes, Bar Zenith ou um item rápido. Às 17h50, sigam ao Ministry',
         contexto:
           'Este era o bloco do Atlantic. Ao tirar a refeição de mesa, vocês recuperam mais de ' +
           'uma hora de Epic e ainda têm uma pausa real antes da maior fila do dia.\n\n' +
           'Escolham conforme a fome criada pelos doces e bebidas do parque: um salgado no ' +
           'Mead Hall, um drink no Bar Zenith ou apenas água e banco diante das fontes. Não ' +
           'criem outra refeição completa — o jantar será no Raising Cane’s ao sair.\n\n' +
-          'Às 18h20, levantem e sigam para o portal do Ministry. A flexibilidade deste bloco ' +
+          'Às 17h50, levantem e sigam para o portal do Ministry. A flexibilidade deste bloco ' +
           'é também a proteção se alguma atração da tarde atrasar.',
-        areaParque: 'Celestial Park', acesso: [], duracaoMin: 80, pesquisa: '2026-09-18' },
+        areaParque: 'Celestial Park', acesso: [], duracaoMin: 50, pesquisa: '2026-09-18' },
 
-      { id: 'b-2011-1830', hora: '18:30', ancora: 'fixo', tipo: 'atracao',
+      { id: 'b-2011-1830', hora: '18:00', ancora: 'fixo', tipo: 'atracao',
         confirmarAPartirDe: '2026-11-20',
         titulo: 'Harry Potter and the Battle at the Ministry',
         descricao: 'Nas últimas horas a fila cai para 45–75 min. De manhã, era a fila do EPA',
@@ -5813,9 +5816,10 @@ window.ROTEIRO = {
           'POR QUE AGORA E NÃO ÀS 10H: o Ministry está no Early Park Admission. Às 10h, quem é de ' +
           'hotel já está nele há uma hora. Ele faz 76 a 109 minutos de média, e só nas últimas ' +
           'duas ou três horas cai para 45 a 75 — na última, a mediana cai 74%.\n\n' +
-          'Na saída vocês estão na Place Cachée à noite, decorada para o Natal do mundo bruxo. ' +
-          'Vale andar cinco minutos por ela antes de seguir para a Nintendo.\n\n' +
-          'O bloco termina no fechamento oficial das 20h.',
+          'Na saída prevista, por volta das 19h30, vocês estão na Place Cachée à noite, decorada ' +
+          'para o Natal do mundo bruxo. Andem cinco minutos e sigam direto ao Celestial Park.\n\n' +
+          'Se a fila estourar, o Battle continua sendo a prioridade; o Celestial Goodnight é o ' +
+          'primeiro bloco a cair.',
         areaParque: 'Ministry of Magic', acesso: ['standby'], acessoAlt: 'single-rider', critico: true,
         confirmarHorario: true, duracaoMin: 90,
         fila: { min: 45, quando: 'nas últimas 2–3 horas', pico: 185, media: 135, fonte: '2026-09-17' },
@@ -5831,18 +5835,39 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Harry Potter and the Battle at the Ministry', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2011-2100', hora: '20:00', ancora: 'fixo', tipo: 'deslocamento',
+      { id: 'b-2011-1930-goodnight', hora: '19:30', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Place Cachée e volta ao Celestial Park',
+        descricao: 'Cinco minutos na Paris bruxa iluminada; depois, posição diante das fontes',
+        contexto:
+          'A saída do Ministry cai na Place Cachée. Curtam a decoração de Natal por poucos ' +
+          'minutos e voltem pelo portal sem desvio: às 19h45 vocês já devem estar no Celestial ' +
+          'Park.\n\n' +
+          'Os participantes do Universal Nights podem entrar desde as 19h, então a área pode ' +
+          'estar mais movimentada do que numa sexta comum.',
+        areaParque: 'Ministry of Magic → Celestial Park', acesso: [], duracaoMin: 30,
+        pesquisa: '2026-09-18' },
+
+      { id: 'b-2011-2000-goodnight', hora: '20:00', ancora: 'fixo', tipo: 'show',
+        titulo: 'Universal Celestial Goodnight',
+        descricao: 'No fechamento: fontes, luzes, projeções e fogos no Celestial Park',
+        contexto:
+          'A despedida noturna do Epic acontece diariamente no fechamento. Com o horário oficial ' +
+          'de hoje, tratem 20h como compromisso fixo e cheguem diante das fontes até 19h45.\n\n' +
+          'O Universal Nights começa às 21h e exige ingresso separado; vocês não ficam para o ' +
+          'evento.',
+        areaParque: 'Celestial Park', acesso: [], duracaoMin: 10, pesquisa: '2026-09-18' },
+
+      { id: 'b-2011-2100', hora: '20:10', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Sair e dirigir ao Raising Cane’s',
         descricao: 'Pelo Celestial Park iluminado; depois, cerca de 15 min até a International Dr',
         contexto:
-          'A saída atravessa o Celestial Park de noite, com a decoração de Natal acesa — é o ' +
-          'parque no seu melhor, e vocês passam por ele de qualquer jeito. Se o show natalino ' +
-          'das fontes estiver na grade perto das 20h, é aqui que ele entra.\n\n' +
+          'Saiam assim que o Celestial Goodnight terminar. O parque estará esvaziando enquanto ' +
+          'os participantes do Universal Nights aguardam o evento das 21h.\n\n' +
           'O estacionamento esvazia junto no fechamento; contem alguns minutos para sair do ' +
           'complexo. O destino seguinte é 8718 International Dr.',
         localId: 'epic-universe', acesso: [], duracaoMin: 40 },
 
-      { id: 'b-2011-2025-canes', hora: '20:40', ancora: 'fixo', tipo: 'refeicao',
+      { id: 'b-2011-2025-canes', hora: '20:50', ancora: 'fixo', tipo: 'refeicao',
         titulo: 'Jantar — Raising Cane’s',
         descricao: 'Chicken fingers, fritas, Texas toast e Cane’s Sauce. Balcão ou drive-thru',
         contexto:
@@ -5853,7 +5878,7 @@ window.ROTEIRO = {
         restauranteId: 'r-canes', endereco: '8718 International Dr', acesso: [],
         duracaoMin: 45, pesquisa: '2026-09-18' },
 
-      { id: 'b-2011-2110-hotel', hora: '21:25', ancora: 'fixo', tipo: 'deslocamento',
+      { id: 'b-2011-2110-hotel', hora: '21:35', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel',
         descricao: 'De carro. Amanhã a manhã é livre, sem alarme',
         acesso: [], duracaoMin: 30 },
@@ -5861,18 +5886,17 @@ window.ROTEIRO = {
     naoPerca: [
       { nome: 'Place Cachée à noite, no Natal do mundo bruxo', quando: 'hoje', custo: 'grátis',
         motivo: 'Vocês saem do Battle at the Ministry direto nela, já escuro e decorada. ' +
-                'Cinco minutos andando antes de seguir para a Nintendo.',
+                'Cinco minutos andando antes de voltar ao Celestial Park.',
         pesquisa: '2026-09-10' },
       { nome: 'O primeiro Natal da Super Nintendo World', quando: 'hoje', custo: 'grátis',
         motivo: 'É a primeira temporada em que a área ganha decoração. Vocês entram nela ' +
                 'para o almoço no Toadstool: vale atravessar a área devagar na ida e na ' +
                 'volta, porque é a única passagem do dia por ali.',
         pesquisa: '2026-09-10' },
-      { nome: 'Show natalino das fontes do Celestial Park', quando: 'hoje',
-        condicao: 'grade sai no app no próprio dia', custo: 'grátis',
-        motivo: 'As fontes do Celestial Park ganham show de Natal na temporada. A grade sai ' +
-                'no app da Universal no próprio dia — está na pendência da manhã de hoje.',
-        pesquisa: '2026-09-10' },
+      { nome: 'Universal Celestial Goodnight', quando: 'hoje', custo: 'incluso',
+        motivo: 'A despedida noturna diária no fechamento, com fontes, luzes, projeções e fogos. ' +
+                'Com o parque fechando às 20h, esse é o horário fixo do roteiro.',
+        pesquisa: '2026-09-18' },
       { nome: 'Snoggletog na Isle of Berk', quando: 'hoje', custo: 'grátis',
         motivo: 'O Natal de Como Treinar o Seu Dragão, na vila viking. Vocês passam a tarde ' +
                 'inteira em Berk.',
@@ -5978,7 +6002,7 @@ window.ROTEIRO = {
     parqueId: null,
     custoZero: false,
     fechado: true,
-    revisadoEm: '2026-09-11',
+    revisadoEm: '2026-09-18',
     referencia: { rotulo: 'Início do jogo', padrao: '19:00', confirmado: true },
     resumo:
       'Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de Orlando ' +
@@ -6005,6 +6029,15 @@ window.ROTEIRO = {
         'pelo hotel. Celular, cartão e documento no bolso, ingresso no celular dos dois.',
         pesquisa: '2026-09-11' },
 
+      { tipo: 'alerta', texto:
+        'FLORIDA CLASSIC ÀS 15H30 NO CAMPING WORLD STADIUM: o futebol universitário termina ' +
+        'perto da hora em que vocês chegam ao centro. Os estacionamentos do estádio estão ' +
+        'esgotados e o público será direcionado a shuttles do downtown, aumentando o trânsito ' +
+        'e a procura por Uber.\n\n' +
+        'Por isso a saída do hotel foi antecipada para 16h45 e o Uber final para 17h50. A meta ' +
+        'é chegar ao Kia Center por volta das 18h15, com margem antes do jogo das 19h.',
+        pesquisa: '2026-09-18' },
+
       { tipo: 'info', texto:
         'WINTER GARDEN DE CARRO: uns 40 minutos pela SR-429, pedágio sem cabine cobrado pela ' +
         'placa — poucos dólares, mais a taxa de US$ 6,95 da Avis no dia.\n\n' +
@@ -6025,7 +6058,7 @@ window.ROTEIRO = {
           'Café do hotel às 7h15 e saída às 8h.',
           'Feira às 8h45, museu ferroviário às 10h15 e Plant Street a pé até o almoço.',
           'Almoço no Plant Street Market às 11h45 e volta ao hotel às 13h.',
-          'Descanso até 17h05, Chick-fil-A às 17h35 e Uber para a arena às 18h10.',
+          'Descanso até 16h45, Chick-fil-A às 17h20 e Uber para a arena às 17h50.',
           'Jogo às 19h e Uber na esquina da Hughey com a Pine, na saída.',
         ] },
       { letra: 'B', titulo: 'Chuva de manhã',
@@ -6143,22 +6176,24 @@ window.ROTEIRO = {
         descricao: 'Quase três horas de descanso no hotel',
         contexto:
           'Não preencham. A noite termina perto das 23h, com o jantar depois do jogo, e amanhã ' +
-          'começam três dias de parque seguidos: SeaWorld, Islands of Adventure e Busch ' +
-          'Gardens.\n\n' +
+          'começam dois dias de parque seguidos: SeaWorld e Busch Gardens.\n\n' +
           'É também a hora de deixar a mochila de Winter Garden no quarto e montar a do ' +
           'SeaWorld. Para o jogo, vocês saem só com o bolso.',
-        localId: 'hotel-travelodge', acesso: [], duracaoMin: 195 },
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 180 },
 
-      { id: 'b-2111-1730', hora: '17:05', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-2111-1730', hora: '16:45', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Uber para o Chick-fil-A da S Orange Ave',
-        descricao: '30 km, ~29 min, US$ 32–45. O carro fica no hotel',
+        descricao: '30 km, ~35 min com margem para o Florida Classic. O carro fica no hotel',
         contexto:
           'O carro fica no hotel e a noite é de Uber, ida e volta.\n\n' +
+          'O Florida Classic começou às 15h30 no Camping World Stadium. A saída do público e ' +
+          'os shuttles do downtown podem pressionar o trânsito; não devolvam esta margem.\n\n' +
           'ANTES DE SAIR: nada de bolsa. Celular, cartão e documento no bolso. Ingresso do jogo ' +
           'no celular dos dois.',
-        endereco: '2885 S Orange Ave', localId: 'kia-center', acesso: [], duracaoMin: 30 },
+        endereco: '2885 S Orange Ave', localId: 'kia-center', acesso: [], duracaoMin: 35,
+        pesquisa: '2026-09-18' },
 
-      { id: 'b-2111-1735', hora: '17:35', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-2111-1735', hora: '17:20', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Jantar — Chick-fil-A',
         descricao: 'Balcão, na 2885 S Orange Ave. A 8 minutos de carro da arena',
         contexto:
@@ -6167,21 +6202,21 @@ window.ROTEIRO = {
           'arena, oito minutos de carro, e fica no caminho de quem vem de Kissimmee.\n\n' +
           'Combo de sanduíche com waffle fries e bebida sai por uns US$ 11 por pessoa. No ' +
           'sábado ele abre das 6h às 22h — e fecha aos domingos, o que não afeta hoje.\n\n' +
-          'É balcão: não leva gorjeta. Comam com calma, que às 18h10 vocês pedem o Uber ' +
-          'para a arena e ainda chegam antes dos portões, que abrem às 18h.',
+          'É balcão: não leva gorjeta. Às 17h50 vocês pedem o Uber para absorver o trânsito do ' +
+          'Florida Classic e chegar por volta das 18h15; os portões abrem às 18h.',
         restauranteId: 'r-chickfila', endereco: '2885 S Orange Ave', localId: 'kia-center',
-        acesso: [], duracaoMin: 35, pesquisa: '2026-09-11' },
+        acesso: [], duracaoMin: 30, pesquisa: '2026-09-18' },
 
-      { id: 'b-2111-1810', hora: '18:10', ancora: 'referencia', tipo: 'deslocamento',
+      { id: 'b-2111-1810', hora: '17:50', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Uber até o Kia Center',
-        descricao: '7 km, 8 minutos. Portões abertos desde as 18h',
+        descricao: '7 km; reservem 25 min por causa do Florida Classic. Meta: 18h15',
         contexto:
-          'Do Chick-fil-A até a arena são 7 quilômetros pela Orange Ave, uns oito minutos. ' +
-          'Peçam o carro ainda sentados: em noite de jogo o entorno da arena congestiona, e o ' +
-          'ponto de desembarque fica a um quarteirão da catraca.\n\n' +
+          'Do Chick-fil-A até a arena são 7 quilômetros pela Orange Ave, uns oito minutos sem ' +
+          'trânsito. Hoje reservem 25: a saída do Florida Classic pode congestionar o downtown. ' +
+          'Peçam o carro ainda sentados; o ponto de desembarque fica a um quarteirão da catraca.\n\n' +
           'ÚLTIMA CONFERÊNCIA ANTES DA CATRACA: nada de bolsa, ingresso no celular dos dois, ' +
           'cada um com o seu.',
-        localId: 'kia-center', acesso: [], duracaoMin: 20, pesquisa: '2026-09-11' },
+        localId: 'kia-center', acesso: [], duracaoMin: 25, pesquisa: '2026-09-18' },
 
       { id: 'b-2111-1900', hora: '19:00', ancora: 'referencia', tipo: 'show',
         titulo: 'Orlando Solar Bears × Jacksonville Icemen',
@@ -6217,7 +6252,7 @@ window.ROTEIRO = {
         titulo: 'Jantar — Red Lobster',
         descricao: 'O jantar de verdade da noite. No sábado, até as 23h',
         contexto:
-          'O Chick-fil-A das 17h35 foi para aguentar o jogo; o jantar é este. No sábado a casa ' +
+          'O Chick-fil-A das 17h20 foi para aguentar o jogo; o jantar é este. No sábado a casa ' +
           'vai até as 23h, então vocês têm quase uma hora — peçam logo, sem estudar o cardápio ' +
           'na mesa.\n\n' +
           'Ultimate Feast US$ 32,99, pratos simples a partir de uns US$ 20, e os Cheddar Bay ' +
@@ -6306,7 +6341,7 @@ window.ROTEIRO = {
     parqueId: 'seaworld',
     custoZero: false,
     fechado: true,
-    revisadoEm: '2026-09-17',
+    revisadoEm: '2026-09-18',
     referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: true },
     resumo:
       'As montanhas-russas grandes e o simulador novo até as 15h30, os animais e o Orca ' +
@@ -6323,6 +6358,14 @@ window.ROTEIRO = {
         'HORÁRIO OFICIAL DE 22/11: 9h às 21h, conferido no app do SeaWorld em 17/09. A linha ' +
         'do tempo já usa essa abertura; o Orca e a noite são fixos de propósito.',
         pesquisa: '2026-09-17' },
+
+      { tipo: 'alerta', texto:
+        'SEAQUEST: LEGENDS OF THE DEEP É TRATADO COMO FECHADO. A página oficial continua apenas ' +
+        'com “Coming Soon”, sem data de abertura. O roteiro não reserva tempo para ele e não ' +
+        'depende de uma inauguração até 22/11.\n\n' +
+        'Se o app oficial mostrar a atração operando no próprio dia, usem o plano B como uma ' +
+        'exceção — não como expectativa.',
+        pesquisa: '2026-09-18' },
 
       { tipo: 'info', texto:
         'CHRISTMAS CELEBRATION: roda em datas selecionadas, do começo de novembro ao começo de ' +
@@ -6360,8 +6403,8 @@ window.ROTEIRO = {
           'Orca Encounter às 17h30, jantar no Waterway Grill e o show no gelo.',
           'Sea of Trees, fogos às 21h e saída.',
         ] },
-      { letra: 'B', titulo: 'O SEAQuest abriu',
-        gatilho: 'O dark ride novo, ainda sem data anunciada, já está funcionando em 22/11.',
+      { letra: 'B', titulo: 'Exceção: o SEAQuest abriu de surpresa',
+        gatilho: 'Somente se o app oficial mostrar a atração operando em 22/11; não contem com isso.',
         passos: [
           'Ele vira a maior fila do parque. Pipeline no rope drop e o SEAQuest logo depois: ele ' +
           'fica atrás do Expedition Odyssey, na mesma direção.',
@@ -6758,7 +6801,10 @@ window.ROTEIRO = {
           motivo: 'Show de corais no Nautilus Theater, na mesma faixa da noite que o show no ' +
                   'gelo.' },
       ],
-      fechado: [],
+      fechado: [
+        'SEAQuest: Legends of the Deep — ainda anunciado apenas como “Coming Soon”, sem data; ' +
+        'o roteiro de 22/11 assume que não estará operando.',
+      ],
     },
   },
 
@@ -6775,12 +6821,12 @@ window.ROTEIRO = {
     parqueId: 'busch-gardens',
     custoZero: false,
     fechado: true,
-    revisadoEm: '2026-09-17',
+    revisadoEm: '2026-09-18',
     referencia: { rotulo: 'Abertura do parque', padrao: '10:00', confirmado: true },
     resumo:
-      'Só de carro, 1h25 de cada lado. Cinco montanhas-russas e a torre de queda até o meio ' +
-      'da tarde, o trem pela planície dos animais e o Natal à noite, com mais duas voltas no ' +
-      'escuro antes da estrada. O dia mais pesado fisicamente da viagem.',
+      'Só de carro, 1h25 de cada lado. Cinco montanhas-russas, a torre de queda e o novo Lion ' +
+      '& Hyena Ridge até o meio da tarde, o trem pela planície dos animais e o Natal à noite, ' +
+      'com mais duas voltas no escuro antes da estrada. O dia mais pesado fisicamente da viagem.',
     avisos: [
       'OBJETO SOLTO É PROIBIDO EM NOVE ATRAÇÕES, entre elas todas as montanhas-russas do dia, ' +
       'e a Iron Gwazi tem detector de metal. O armário custa US$ 4 por duas horas, ou US$ 12 ' +
@@ -6796,6 +6842,12 @@ window.ROTEIRO = {
         pesquisa: '2026-09-17' },
 
       { tipo: 'info', texto:
+        'LION & HYENA RIDGE: o novo hábitat do Edge of Africa entra logo depois do Cheetah Hunt, ' +
+        'no caminho para o Montu. A área abriu em julho de 2026, com cinco leões machos jovens, ' +
+        'duas hienas-malhadas e mirantes de até 270 graus. O bloco reserva 15 minutos.',
+        pesquisa: '2026-09-18' },
+
+      { tipo: 'info', texto:
         'CHRISTMAS TOWN: datas selecionadas de 13/11/2026 a 04/01/2027, incluso no ingresso. ' +
         'Em 2025 teve Christmas on Ice no Moroccan Palace, show de luzes no Serengeti e um show ' +
         'de drones, o Holiday Skies Spectacular. Os horários do dia só saem perto da data, e a ' +
@@ -6806,7 +6858,7 @@ window.ROTEIRO = {
         'AS FILAS DO BUSCH SÃO CURTAS. A média de 2026 vai de 33 minutos no Cheetah Hunt a 7 ' +
         'na Falcon’s Fury — por isso não há Quick Queue. A previsão de lotação para 23/11 é ' +
         'de 66%, ' +
-        'alta para uma terça, por ser semana de Thanksgiving.\n\n' +
+        'alta para uma segunda, por ser semana de Thanksgiving.\n\n' +
         'O QUE FECHOU: o Kumba parou em 02/08/2026, e o Kumba’s Revenge, que vai no lugar, não ' +
         'tem data. A Stanley Falls fechou em setembro de 2025 e a Scorpion em 2024.',
         pesquisa: '2026-09-11' },
@@ -6826,7 +6878,8 @@ window.ROTEIRO = {
         gatilho: 'O parque funciona das 10h às 20h e 23/11 tem Christmas Town.',
         passos: [
           'Café do hotel às 7h, estrada às 7h30 e portão às 9h15.',
-          'Iron Gwazi, Cheetah Hunt e Montu de manhã; Falcon’s Fury e SheiKra antes do almoço.',
+          'Iron Gwazi, Cheetah Hunt, Lion & Hyena Ridge e Montu de manhã; Falcon’s Fury e ' +
+          'SheiKra antes do almoço.',
           'Almoço no Zambia Smokehouse, Tigris, o trem pelo Serengeti e um lanche.',
           'Christmas on Ice, jantar no Dragon Fire e o show de luzes no Serengeti.',
           'Cheetah Hunt e entrada na fila da Iron Gwazi até 19h55; estrada às 20h30.',
@@ -6926,7 +6979,18 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Cheetah Hunt', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2311-1135', hora: '11:35', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1130-lion-hyena', hora: '11:30', ancora: 'referencia', tipo: 'atracao',
+        titulo: 'Lion & Hyena Ridge',
+        descricao: 'Novo hábitat: cinco leões jovens e duas hienas-malhadas, com visão de 270°',
+        contexto:
+          'O hábitat de 35 mil pés quadrados abriu em julho de 2026 no Edge of Africa. Reúne ' +
+          'cinco leões machos jovens e duas hienas-malhadas, com paredes de vidro, mirantes ' +
+          'amplos e visão de até 270 graus.\n\n' +
+          'Fica no caminho do Cheetah Hunt para o Montu, então entra sem retorno pelo parque. ' +
+          'Quinze minutos bastam para os principais pontos de observação.',
+        areaParque: 'Edge of Africa', acesso: [], duracaoMin: 15, pesquisa: '2026-09-18' },
+
+      { id: 'b-2311-1135', hora: '12:00', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Montu',
         descricao: 'Invertida, pés soltos, sete inversões. Clássica de 1996',
         contexto:
@@ -6943,7 +7007,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Montu (roller coaster)', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2311-1220', hora: '12:20', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1220', hora: '12:45', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Falcon’s Fury',
         descricao: 'Torre de 102 m. No topo, o assento inclina e vocês caem olhando o chão',
         contexto:
@@ -6960,14 +7024,15 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Falcon’s Fury', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2311-1240', hora: '12:40', ancora: 'referencia', tipo: 'pausa',
+      { id: 'b-2311-1240', hora: '13:05', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
         descricao: 'Dez minutos. Banheiro ao lado do Dragon Fire Grill',
         contexto:
-          'Cinco montanhas-russas seguidas desde as 10h, cada uma com armário. Dez minutos sentados em Pantopia antes do SheiKra e do almoço.',
+          'Três montanhas-russas e a torre de queda desde as 10h, todas com armário. Dez ' +
+          'minutos sentados em Pantopia antes do SheiKra e do almoço.',
         areaParque: 'Pantopia', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
 
-      { id: 'b-2311-1255', hora: '12:55', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1255', hora: '13:20', ancora: 'referencia', tipo: 'atracao',
         titulo: 'SheiKra',
         descricao: 'Para quatro segundos na beirada e cai a 90°',
         contexto:
@@ -6984,7 +7049,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — SheiKra', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2311-1325', hora: '13:25', ancora: 'referencia', tipo: 'refeicao',
+      { id: 'b-2311-1325', hora: '13:50', ancora: 'referencia', tipo: 'refeicao',
         titulo: 'Almoço — Zambia Smokehouse',
         descricao: 'Churrasco, ao lado do SheiKra. Plano de refeição',
         contexto:
@@ -6992,10 +7057,10 @@ window.ROTEIRO = {
           'Stanleyville, ao lado do SheiKra.\n\n' +
           'PLANO DE REFEIÇÃO: um prato, um acompanhamento ou sobremesa e um refrigerante. A ' +
           'próxima refeição do plano só libera 90 minutos depois.',
-        restauranteId: 'r-zambia', areaParque: 'Stanleyville', acesso: [], duracaoMin: 55,
+        restauranteId: 'r-zambia', areaParque: 'Stanleyville', acesso: [], duracaoMin: 45,
         pesquisa: '2026-09-11' },
 
-      { id: 'b-2311-1420', hora: '14:20', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1420', hora: '14:35', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Tigris',
         descricao: 'Três lançamentos, para frente e para trás, até 100 km/h',
         contexto:
@@ -7011,7 +7076,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Tigris (roller coaster)', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2311-1455', hora: '14:55', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-2311-1455', hora: '15:10', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Serengeti Express',
         descricao: 'O trem dá a volta de 3,5 km pela planície dos animais',
         contexto:
@@ -7026,14 +7091,14 @@ window.ROTEIRO = {
             fonte: 'Busch Gardens; Orlando Informer', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-2311-1540', hora: '15:40', ancora: 'referencia', tipo: 'pausa',
+      { id: 'b-2311-1540', hora: '15:50', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Pausa e lanche',
         descricao: 'Segunda refeição do plano, em Stanleyville. Banheiro ao lado da estação do trem',
         contexto:
           'Os 90 minutos do almoço já passaram: o lanche entra no plano. O SheiKra Eats e o ' +
           'Zambia ficam aqui.\n\n' +
           'É a última parada antes da noite, que termina com a estrada de volta.',
-        areaParque: 'Stanleyville', acesso: [], duracaoMin: 20, pesquisa: '2026-09-11' },
+        areaParque: 'Stanleyville', acesso: [], duracaoMin: 10, pesquisa: '2026-09-11' },
 
       { id: 'b-2311-1605', hora: '16:05', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Skyride — de Stanleyville ao Edge of Africa',
@@ -7121,6 +7186,10 @@ window.ROTEIRO = {
         acesso: [], duracaoMin: 105 },
     ],
     naoPerca: [
+      { nome: 'Lion & Hyena Ridge', quando: 'hoje', custo: 'incluso',
+        motivo: 'Novo hábitat do Edge of Africa, com cinco leões machos jovens, duas ' +
+                'hienas-malhadas e mirantes de até 270 graus.',
+        pesquisa: '2026-09-18' },
       { nome: 'Show de luzes no Serengeti', quando: 'hoje', custo: 'incluso',
         motivo: 'Luzes de Natal coreografadas sobre a planície dos animais, depois que escurece.',
         pesquisa: '2026-09-11' },
@@ -7254,12 +7323,14 @@ window.ROTEIRO = {
           'Às 17h20, de volta ao Old Town. Jantar no World Food Trucks e noite curta.',
         ] },
       { letra: 'B', titulo: 'Ficou faltando alguma coisa da Universal',
-        gatilho: 'Uma atração grande ficou de fora no Islands ou no Epic.',
+        gatilho: 'Uma atração grande ficou de fora no Islands ou no Epic — inclusive o River ' +
+                 'Adventure, fechado em 19/11 e com reabertura anunciada para 20/11.',
         passos: [
           'O ingresso é de 14 dias com entrada ilimitada: a manhã de hoje cabe um retorno.',
           'Café da manhã do hotel e saída de carro às 8h15, direto para o parque que ficou ' +
           'devendo.',
-          'Só o que ficou de fora. Voltem até as 13h30, sem esticar.',
+          'Só o que ficou de fora. Se a prioridade for o River Adventure, façam a atração e ' +
+          'voltem até as 13h30, sem esticar.',
           'A noite no Old Town não muda.',
         ] },
       { letra: 'C', titulo: 'Chuva à noite',
@@ -8122,7 +8193,7 @@ window.ROTEIRO = {
             'chegada: confiram no app antes de entrar na Super Nintendo World. Pico do ' +
             'almoço das 11h30 às 13h30. Faixa $ no mapa oficial: até US$ 15 por pessoa.' },
 
-    { id: 'r-canes', nome: 'Raising Cane’s', data: '2026-11-20', hora: '20:40',
+    { id: 'r-canes', nome: 'Raising Cane’s', data: '2026-11-20', hora: '20:50',
       refeicao: 'jantar', local: 'International Drive · 8718 International Dr',
       alternativas: ['Drive-thru da mesma unidade se a saída do Ministry atrasar'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
@@ -8160,12 +8231,13 @@ window.ROTEIRO = {
       nota: 'Mercado gastronômico com 17 balcões — churrasco, ostras, empanadas, pizza a ' +
             'carvão, ceviche — e a cervejaria Crooked Can. Balcão: não leva gorjeta.' },
 
-    { id: 'r-chickfila', nome: 'Chick-fil-A', data: '2026-11-21', hora: '17:35',
+    { id: 'r-chickfila', nome: 'Chick-fil-A', data: '2026-11-21', hora: '17:20',
       refeicao: 'jantar', local: 'Orlando · 2885 S Orange Ave',
       alternativas: ['Comer dentro da arena: o Kia Center tem o Orlando Table, com balcões de restaurantes locais'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Balcão ou drive-thru, sem reserva', blocoId: 'b-2111-1735',
-      nota: 'A rede clássica mais perto do Kia Center: 7 km, oito minutos de carro. Combo de ' +
+      nota: 'A rede clássica mais perto do Kia Center: 7 km, oito minutos sem trânsito. O ' +
+            'horário foi antecipado por causa da saída do Florida Classic no downtown. Combo de ' +
             'sanduíche com waffle fries e bebida por uns US$ 11 por pessoa. Sábado das 6h às ' +
             '22h; fecha aos domingos. Balcão: não leva gorjeta.' },
 
@@ -8178,7 +8250,7 @@ window.ROTEIRO = {
             'saindo da arena às 21h30, vocês chegam por volta das 22h05 e têm quase uma hora. ' +
             'Se o jogo esticar, o Miller’s Ale House fica aberto até as 2h.' },
 
-    { id: 'r-zambia', nome: 'Zambia Smokehouse', data: '2026-11-23', hora: '13:25',
+    { id: 'r-zambia', nome: 'Zambia Smokehouse', data: '2026-11-23', hora: '13:50',
       refeicao: 'almoco', local: 'Busch Gardens Tampa · Stanleyville', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Plano de refeição (All-Day Dining Deal)', blocoId: 'b-2311-1325',
@@ -8323,12 +8395,12 @@ window.ROTEIRO = {
       texto: 'Epic Universe em 20/11 — 10h às 20h, CONFIRMADO no app oficial',
       nota:
         'A abertura oficial às 10h já deslocou a manhã, inclusive saída do hotel e portão. ' +
-        'O fechamento oficial às 20h já levou a saída para as 20h; o Battle at the Ministry ' +
-        'fica na reta final.\n\n' +
-        'A GRADE DE SHOW NÃO CABE AQUI: o Untrainable Dragon, as fontes do Celestial ' +
-        'Park e as celebrações de Berk e da Place Cachée só aparecem no app no próprio ' +
-        'dia, e viraram tarefa da manhã de 20/11.',
-      pesquisa: '2026-09-17',
+        'O fechamento oficial às 20h fixa o Universal Celestial Goodnight nesse horário; o ' +
+        'Battle at the Ministry foi antecipado para 18h.\n\n' +
+        'A GRADE DE SHOW NÃO CABE AQUI: o Untrainable Dragon e as celebrações de Berk e da ' +
+        'Place Cachée só aparecem no app perto do dia e viraram tarefa da manhã de 20/11. O ' +
+        'Universal Nights das 21h é separado e não entra no roteiro.',
+      pesquisa: '2026-09-18',
       restauranteIds: [] },
 
     { id: 'ck-epa-epic', dataAlvo: '2026-11-12', validaAte: '2026-11-19', dataEstimada: true,
@@ -8487,9 +8559,9 @@ window.ROTEIRO = {
         'O calendário do Queue-Times já marca 22/11 com a Christmas Celebration e horário ' +
         'das 9h às 21h. É previsão de terceiro: a confirmação é o calendário oficial do ' +
         'SeaWorld, e com ela a referência do dia 22.\n\n' +
-        'E CONFIRAM SE O SEAQUEST: LEGENDS OF THE DEEP JÁ ABRIU. O mapa de julho o marca como ' +
-        '"all-new, coming 2026", a leste, perto do Sea Harbor. O plano B do dia 22 depende ' +
-        'disso.',
+        'SEAQUEST: LEGENDS OF THE DEEP NÃO É PENDÊNCIA DO PLANO BASE. A página oficial segue ' +
+        'apenas com “Coming Soon”, sem data, então o roteiro assume que ele estará fechado. ' +
+        'No dia 22, só acionem o plano B se o app mostrar a atração operando.',
       restauranteIds: [] },
 
     { id: 'ck-hotel', dataAlvo: '2026-11-05', validaAte: '2026-11-10', hora: null, fuso: null,
@@ -8758,11 +8830,11 @@ window.ROTEIRO = {
       nota:
         'O UNTRAINABLE DRAGON É O ÚNICO SHOW DE TEATRO DO DIA e o roteiro assume 16h30, com a ' +
         'fila às 16h10. Depois dele existe um bloco flexível até o Ministry: se a sessão mudar, ' +
-        'absorvam o atraso nesse bloco, sem mexer no Battle das 18h30. Decidam de manhã, não ' +
+        'absorvam o atraso nesse bloco, sem mexer no Battle das 18h. Decidam de manhã, não ' +
         'às 16h.\n\n' +
-        'CONFIRAM TAMBÉM as fontes coreografadas do Celestial Park e as celebrações de Natal ' +
-        'de Berk e da Place Cachée, que estreiam com a temporada em 14/11. A Universal publica ' +
-        'a grade delas no app no próprio dia.\n\n' +
+        'CONFIRAM TAMBÉM as celebrações de Natal de Berk e da Place Cachée, que estreiam com ' +
+        'a temporada em 14/11. O Universal Celestial Goodnight já está fixado às 20h, no ' +
+        'fechamento; basta confirmar no app que ele está operando normalmente.\n\n' +
         'A abertura e o fechamento já estão confirmados: 10h às 20h.',
       restauranteIds: [] },
 
@@ -9507,14 +9579,13 @@ window.ROTEIRO = {
       id: 'dica-molha',
       categoria: 'geral',
       momento: 'dia-especifico',
-      dias: ['d-2026-11-16', 'd-2026-11-19', 'd-2026-11-22'],
+      dias: ['d-2026-11-16', 'd-2026-11-22'],
       titulo: 'O que molha de verdade',
       corpo:
         'Novembro em Orlando é ameno, e roupa molhada às 17h fica desconfortável rápido quando ' +
         'escurece. As atrações marcadas com o selo "molha" neste app são:\n\n' +
         'Kali River Rapids (16/11) — não é respingo, é balde. E é às 9h15, com nove ' +
         'horas de parque pela frente\n' +
-        'Jurassic Park River Adventure (19/11) — molha bastante, levem capa\n' +
         'Journey to Atlantis (22/11) — molha bastante\n' +
         '\n' +
         'Ficam de fora por molharem demais: Fyre Drill (Epic), Infinity Falls (SeaWorld), ' +
@@ -9654,7 +9725,7 @@ window.ROTEIRO = {
       momento: 'antes-de-viajar',
       titulo: 'Os blocos VAZIO PROPOSITAL não são falha de planejamento',
       corpo:
-        'Existem sete blocos assim no roteiro: 12/11 às 14h30, 14/11 às 9h, 14/11 às 14h30, ' +
+        'Existem sete blocos assim no roteiro: 12/11 às 13h45, 14/11 às 9h, 14/11 às 14h30, ' +
         '21/11 às 13h45, 24/11 às 9h45, 24/11 às 15h30 e 25/11 às 16h15.\n\n' +
         'Eles estão ali porque a segunda metade da viagem é mais pesada que a primeira: ' +
         '19/11 Islands, 20/11 Epic, 21/11 Winter Garden e hóquei, 22/11 SeaWorld e 23/11 ' +

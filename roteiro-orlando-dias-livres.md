@@ -174,14 +174,16 @@ Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de 
 | **11h45** | **Almoço — Plant Street Market**, 426 W Plant St | 17 balcões e a cervejaria Crooked Can. Quem dirige não bebe |
 | **13h00** | Voltar ao hotel | ~40 min |
 | **13h45** | **VAZIO PROPOSITAL** | Quase três horas de descanso. Montem a mochila do SeaWorld |
-| **17h05** | Uber para o Chick-fil-A da S Orange Ave | 30 km, ~29 min, US$ 32–45. Sem bolsa. O carro fica no hotel |
-| **17h35** | **Chick-fil-A**, 2885 S Orange Ave | Balcão, uns US$ 11 por pessoa. Sábado até as 22h |
-| **18h10** | Uber até o Kia Center | 7 km, 8 min. Portões desde as 18h |
+| **16h45** | Uber para o Chick-fil-A da S Orange Ave | 30 km, ~35 min com margem para o Florida Classic. Sem bolsa. O carro fica no hotel |
+| **17h20** | **Chick-fil-A**, 2885 S Orange Ave | Balcão, uns US$ 11 por pessoa. Sábado até as 22h |
+| **17h50** | Uber até o Kia Center | 7 km; reservem 25 min por causa da saída do Florida Classic. Meta: 18h15 |
 | **19h00** | **Orlando Solar Bears × Jacksonville Icemen** | Hóquei da ECHL. **Ingresso já comprado.** Noite de Food Drive. Cowbell liberado |
 | **21h30** | Uber da esquina da **Hughey Ave com a Pine St** | Zona oficial de rideshare. Destino: Red Lobster, ~31 min |
 | **22h05** | **Jantar — Red Lobster**, 5690 W Irlo Bronson | O jantar de verdade da noite. Sábado até as 23h. Do restaurante ao hotel, 3 min |
 
 **A noite anda com o jogo:** o início às 19h é a referência. Se ele mudar, o Uber, o Chick-fil-A e a chegada à arena deslocam junto.
+
+**Margem do Florida Classic:** o jogo no Camping World Stadium começa às 15h30, e os estacionamentos do estádio estão esgotados; o público será direcionado a shuttles do downtown. A saída pode cruzar com a chegada de vocês ao Kia Center. Por isso o hotel ficou às 16h45 e o segundo Uber às 17h50 — não devolvam essa margem.
 
 **Por que o jantar ficou partido em dois:** nenhuma rede americana clássica ficou a pé do Kia Center — o Five Guys da 55 W Church St fechou, e o mais próximo hoje é este Chick-fil-A, a 3,9 km. Então a noite come leve antes do jogo, de balcão, e janta de verdade na volta, no Red Lobster da 192, que no sábado vai até as 23h. Se o jogo esticar além das 22h20, o Miller's Ale House fica aberto até as 2h.
 

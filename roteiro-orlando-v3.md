@@ -413,10 +413,10 @@ Hagrid's na abertura, que é a única janela abaixo de uma hora, e depois uma vo
 | **11h40** | **Lanche salgado rápido** — escolham o balcão com menor fila no caminho | Seuss Landing / Port of Entry |
 | **12h15** | **Hulk** — detector de metal | Marvel |
 | **13h05** | **Spider-Man** | Marvel |
-| **13h45** | Parada — dez minutos. Banheiro ao lado do Captain America Diner | Marvel |
-| **14h05** | **Kong** | Skull Island |
-| **14h50** | **Jurassic Park River Adventure** — molha. Reaberto depois da reforma | Jurassic Park |
-| **15h35** | **VelociCoaster** — fila normal, bloco de uma hora e meia | Jurassic Park |
+| **13h45** | **Doctor Doom’s Fearfall** — entra no lugar do River Adventure, fechado neste dia | Marvel |
+| **14h05** | Parada — dez minutos. Banheiro ao lado do Captain America Diner | Marvel |
+| **14h25** | **Kong** | Skull Island |
+| **15h10** | **VelociCoaster** — fila normal, bloco de uma hora e meia | Jurassic Park |
 | **17h15** | **Hogwarts Express** — ida e volta, filmes diferentes. Precisa park-to-park | Hogsmeade |
 | **18h30** | **Hogsmeade à noite · projeção no castelo** — a segunda vez, quinze minutos. A cada 20 min | Hogsmeade |
 | **19h15** | **Jantar — Mythos** — reservado, pratos de US$ 26 a 42. Cheguem às 19h10 | Lost Continent |
@@ -424,14 +424,14 @@ Hagrid's na abertura, que é a única janela abaixo de uma hora, e depois uma vo
 
 **Por que o Hagrid's primeiro:** nos dados de 2026, 30 a 65 minutos na abertura, 120 ao meio-dia e acima de 100 até fechar. Ele saiu do Express em 1º de julho de 2026.
 
-**Por que a VelociCoaster à tarde:** ela fica entre 67 e 102 minutos o dia inteiro — não tem hora boa — e não tem single rider: a Universal fechou essa fila e embarca os grupos em filas de número par e ímpar. Nos dados de 2026, a tarde vai de 72 a 83 minutos, e a noite já é do Hogwarts Express e do Mythos. O bloco tem uma hora e meia, e para caber o Doctor Doom saiu do dia.
+**Por que a VelociCoaster à tarde:** ela fica entre 67 e 102 minutos o dia inteiro — não tem hora boa — e não tem single rider: a Universal fechou essa fila e embarca os grupos em filas de número par e ímpar. Nos dados de 2026, a tarde vai de 72 a 83 minutos, e a noite já é do Hogwarts Express e do Mythos. O bloco tem uma hora e meia.
 
-**O que mudou no parque:** o Jurassic Park River Adventure reabre em 19–20/11 depois de dez meses de reforma. A Lost Continent está sendo demolida em fases, e a Universal diz que o Mythos fecha em 2027, ainda sem data. O Thunder Falls Terrace fechou em julho.
+**O que mudou no parque:** o Jurassic Park River Adventure fica fechado até **19/11, inclusive**, e tem reabertura anunciada para 20/11. Portanto ele está definitivamente fora deste dia; se for prioridade, usem a manhã livre de 24/11. A Lost Continent está sendo demolida em fases, e a Universal diz que o Mythos fecha em 2027, ainda sem data. O Thunder Falls Terrace fechou em julho.
 
 **Horário oficial:** **9h às 19h**, conferido no app da Universal em 17/09. A reserva oficial do Mythos continua às 19h15: entrem no restaurante logo depois da projeção e saiam com o parque vazio.
 
 ### Renúncias
-Grinchmas (visto no dia 14), Flight of the Hippogriff (34 min de fila para um minuto), Beco Diagonal (feito no dia 17), Pteranodon Flyers, os brinquedos da Seuss Landing, Popeye e Dudley Do-Right (molham muito) e Doctor Doom's Fearfall (o tempo dele foi para a fila da VelociCoaster; volta se o River Adventure não tiver reaberto).
+Grinchmas (visto no dia 14), Flight of the Hippogriff (34 min de fila para um minuto), Beco Diagonal (feito no dia 17), Pteranodon Flyers, os brinquedos da Seuss Landing, Popeye e Dudley Do-Right (molham muito). **Fechado:** Jurassic Park River Adventure.
 
 ---
 
@@ -455,11 +455,13 @@ O parque mais concorrido de Orlando, **no dia mais vazio da segunda metade da vi
 | **15h35** | **Parada em Berk** | 25 min. Água, banheiro, sentar |
 | **16h10** | Fila do teatro | Plateia por ordem de chegada. Meio do teatro |
 | **16h30** | **The Untrainable Dragon** | O maior show do Epic, 20 min. Horário sai no app no próprio dia |
-| **17h00** | **Celestial Park e lanche flexível** | Sem mesa: fontes, Bar Zenith ou um item rápido. Às 18h20, sigam ao Ministry |
-| **18h30** | **Harry Potter and the Battle at the Ministry** | **A noite inteira é dele.** Mede 135 min às 18h e cai para 45–75 nas últimas duas ou três horas. Na saída vocês caem na Place Cachée já escura e decorada |
-| **20h00** | Sair e dirigir ao Raising Cane’s | Pelo Celestial Park iluminado; depois, cerca de 15 min até 8718 International Dr |
-| **20h40** | **Jantar — Raising Cane’s** | Balcão ou drive-thru. Entra depois do fechamento e não consome tempo de parque |
-| **21h25** | Voltar ao hotel | De carro. Amanhã a manhã é livre |
+| **17h00** | **Celestial Park e lanche flexível** | Sem mesa: fontes, Bar Zenith ou um item rápido. Às 17h50, sigam ao Ministry |
+| **18h00** | **Harry Potter and the Battle at the Ministry** | Mede 135 min às 18h e cai para 45–75 nas últimas horas. Saída prevista às 19h30 |
+| **19h30** | **Place Cachée e volta ao Celestial Park** | Cinco minutos na Paris bruxa iluminada; posição diante das fontes até 19h45 |
+| **20h00** | **Universal Celestial Goodnight** | No fechamento: fontes, luzes, projeções e fogos |
+| **20h10** | Sair e dirigir ao Raising Cane’s | Cerca de 15 min até 8718 International Dr |
+| **20h50** | **Jantar — Raising Cane’s** | Balcão ou drive-thru. Entra depois do fechamento e não consome tempo de parque |
+| **21h35** | Voltar ao hotel | De carro. Amanhã a manhã é livre |
 
 ### O rope drop é na Dark Universe
 
@@ -478,11 +480,11 @@ Ou seja: às 10h os hóspedes de hotel já estão há uma hora no Battle at the 
 | Hiccup's Wing Gliders | 35–41 min | cedo; pior por volta das 17h |
 | Dragon Racer's Rally · Yoshi · Stardust | 18–37 min | meio do dia |
 | Monsters Unchained | 13–15 min | enche logo depois da abertura |
-Com o fechamento oficial às 20h, o **Battle at the Ministry** ocupa a reta final, das 18h30 até a saída. O Mine-Cart fica nas renúncias: tentar encaixar os dois eliminaria a tarde em Berk. O antigo jantar de mesa das 17h virou um bloco flexível no Celestial Park: é pausa, lanche e proteção contra atrasos. O jantar de verdade passa para o **Raising Cane’s depois do fechamento**.
+Com o fechamento oficial às 20h, o **Battle at the Ministry** entra às 18h e preserva o **Universal Celestial Goodnight** no fechamento. O Mine-Cart fica nas renúncias: tentar encaixar os dois eliminaria a tarde em Berk. O antigo jantar de mesa das 17h virou um bloco flexível no Celestial Park: é pausa, lanche e proteção contra atrasos. O jantar de verdade passa para o **Raising Cane’s depois do fechamento**.
 
 ### O show da tarde
 
-**The Untrainable Dragon** é o maior show do Epic: atores, bonecos enormes e um Banguela mecânico de meia tonelada e oito metros de envergadura voando por cima da plateia, em 20 minutos. Em setembro de 2026 as sessões iam das 11h10 às 19h, a cada 50 minutos. Se a sessão de novembro mudar, o bloco flexível das 17h absorve o atraso; o compromisso que não deve andar é o Battle às 18h30.
+**The Untrainable Dragon** é o maior show do Epic: atores, bonecos enormes e um Banguela mecânico de meia tonelada e oito metros de envergadura voando por cima da plateia, em 20 minutos. Em setembro de 2026 as sessões iam das 11h10 às 19h, a cada 50 minutos. Se a sessão de novembro mudar, o bloco flexível das 17h absorve o atraso; o compromisso que não deve andar é o Battle às 18h.
 
 ### O guia oficial da Universal
 
@@ -490,7 +492,7 @@ Locker obrigatório só em **três**: Stardust Racers, Monsters Unchained e Hicc
 
 ### Natal no Epic
 
-A Super Nintendo World ganha decoração **pela primeira vez**, Berk faz o **Snoggletog**, a Place Cachée entra no Natal do mundo bruxo e o Celestial Park vira paisagem de inverno com **show natalino nas fontes**. Horários dos shows só saem perto da temporada.
+A Super Nintendo World ganha decoração **pela primeira vez**, Berk faz o **Snoggletog**, a Place Cachée entra no Natal do mundo bruxo e o Celestial Park vira paisagem de inverno. O **Universal Celestial Goodnight** acontece diariamente no fechamento, com fontes, luzes, projeções e fogos. O **Universal Nights** ocorre hoje das 21h à meia-noite, com entrada desde as 19h, mas exige ingresso separado e não entra no roteiro; contem apenas com mais movimento na última hora do parque.
 
 ### Planos
 
@@ -543,14 +545,16 @@ As montanhas-russas grandes e o simulador novo até as 15h30, os animais e o Orc
 
 **Christmas Celebration:** datas selecionadas; o Queue-Times marca 22/11 com o evento. Os horários dos shows de Natal só saem no app.
 
+**SEAQuest: Legends of the Deep:** tratem como fechado. A página oficial continua apenas com “Coming Soon”, sem data de abertura, e nenhum bloco depende dele. Só mudem a ordem se o app oficial mostrar a atração operando no próprio dia.
+
 ### Renúncias
-Infinity Falls (molha demais e a noite esfria), Sesame Street Land, Sky Tower (pago à parte), O Wondrous Night (mesma faixa da noite que o show no gelo), Quick Queue (as filas longas caem no rope drop) e o Sharks Underwater Grill (fora do plano de refeição).
+Infinity Falls (molha demais e a noite esfria), Sesame Street Land, Sky Tower (pago à parte), O Wondrous Night (mesma faixa da noite que o show no gelo), Quick Queue (as filas longas caem no rope drop) e o Sharks Underwater Grill (fora do plano de refeição). **Tratado como fechado:** SEAQuest: Legends of the Deep.
 
 ---
 
 # 🎢 23/11 (segunda) — BUSCH GARDENS TAMPA
 
-Só de carro, 1h25 de cada lado. Cinco montanhas-russas e a torre de queda até o meio da tarde, o trem pela planície dos animais e o Natal à noite, com mais duas voltas no escuro antes da estrada. O dia mais pesado fisicamente da viagem.
+Só de carro, 1h25 de cada lado. Cinco montanhas-russas, a torre de queda e o novo Lion & Hyena Ridge até o meio da tarde, o trem pela planície dos animais e o Natal à noite, com mais duas voltas no escuro antes da estrada. O dia mais pesado fisicamente da viagem.
 
 | Hora | O quê | Onde |
 |---|---|---|
@@ -559,14 +563,15 @@ Só de carro, 1h25 de cada lado. Cinco montanhas-russas e a torre de queda até 
 | **9h15** | Portão — 45 min antes | |
 | **10h00** | **Iron Gwazi** — rope drop. 63 m, queda de 91°, 122 km/h | Morocco |
 | **10h45** | **Cheetah Hunt** — a maior fila média do parque | Edge of Africa |
-| **11h35** | **Montu** — invertida, sete inversões | Egypt |
-| **12h20** | **Falcon's Fury** — torre de 102 m, cai olhando o chão | Pantopia |
-| **12h40** | Parada — dez minutos. Banheiro ao lado do Dragon Fire Grill | Pantopia |
-| **12h55** | **SheiKra** — para na beirada e cai a 90° | Stanleyville |
-| **13h25** | **Almoço — Zambia Smokehouse** — plano de refeição | Stanleyville |
-| **14h20** | **Tigris** — três lançamentos, 100 km/h | Stanleyville |
-| **14h55** | Serengeti Express — o trem pela planície dos animais | Stanleyville |
-| **15h40** | Pausa e lanche — plano de refeição. Banheiro ao lado da estação do trem | Stanleyville |
+| **11h30** | **Lion & Hyena Ridge** — cinco leões jovens, duas hienas-malhadas e mirantes de 270° | Edge of Africa |
+| **12h00** | **Montu** — invertida, sete inversões | Egypt |
+| **12h45** | **Falcon's Fury** — torre de 102 m, cai olhando o chão | Pantopia |
+| **13h05** | Parada — dez minutos. Banheiro ao lado do Dragon Fire Grill | Pantopia |
+| **13h20** | **SheiKra** — para na beirada e cai a 90° | Stanleyville |
+| **13h50** | **Almoço — Zambia Smokehouse** — plano de refeição, 45 min | Stanleyville |
+| **14h35** | **Tigris** — três lançamentos, 100 km/h | Stanleyville |
+| **15h10** | Serengeti Express — o trem pela planície dos animais | Stanleyville |
+| **15h50** | Pausa e lanche — plano de refeição. Banheiro ao lado da estação do trem | Stanleyville |
 | **16h05** | **Skyride** — teleférico de Stanleyville ao Edge of Africa, por cima do parque. Parado por vento, a pé são 14 min | Stanleyville → Edge of Africa |
 | **16h20** | **Christmas on Ice** — horário a confirmar | Morocco |
 | **17h20** | **Jantar — Dragon Fire Grill & Pub** — salão de balcão, plano de refeição | Pantopia |
@@ -576,6 +581,8 @@ Só de carro, 1h25 de cada lado. Cinco montanhas-russas e a torre de queda até 
 | **20h30** | Estrada de volta — hotel por volta das 22h15 | |
 
 **As filas são curtas:** a média de 2026 vai de 33 minutos no Cheetah Hunt a 7 na Falcon's Fury. Sem Quick Queue.
+
+**Lion & Hyena Ridge:** o hábitat abriu em julho de 2026 no Edge of Africa, no caminho entre o Cheetah Hunt e o Montu. O roteiro reserva 15 minutos no hábitat e a caminhada até o Montu, sem criar retorno pelo parque.
 
 **Nada solto:** nove atrações proíbem objeto solto, e o armário avulso custa US$ 4 pelas primeiras duas horas. Levem o mínimo; o resto fica no carro.
 
@@ -670,7 +677,7 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [ ] **17/11, 9h30** — HOJE, no portão: a grade do desfile da Macy’s, do CineSational e do Bourne
 - [ ] **19/11, 8h15** — HOJE, no portão: a hora da projeção no castelo de Hogwarts
 - [ ] **19/11** — Reservar o MCO Reserve para a volta de 26/11
-- [ ] **20/11, 8h50** — HOJE, no portão: a grade do The Untrainable Dragon e das festas de Natal
+- [ ] **20/11, 8h50** — HOJE, no portão: a grade do The Untrainable Dragon e das festas de Natal; confirmar o Celestial Goodnight das 20h
 - [ ] **22/11, 8h15** — HOJE, no portão: a grade dos quatro shows do SeaWorld
 - [ ] **23/11, 9h15** — HOJE, no portão: o Christmas on Ice e o show de luzes do Serengeti
 
