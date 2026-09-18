@@ -282,7 +282,7 @@ window.ROTEIRO = {
     historiaLocalId: 'disney-springs',
     custoZero: false,
     fechado: true,
-    revisadoEm: '2026-09-09',
+    revisadoEm: '2026-09-18',
 
     // A âncora é a SAÍDA DO TERMINAL C, não o pouso. O que decide o dia não é a
     // hora em que o avião toca o chão: é a hora em que eles saem com as malas na
@@ -795,26 +795,30 @@ window.ROTEIRO = {
           'deli que faz sanduíche na hora.',
         endereco: '3250 Vineland Rd', localId: 'walmart-vineland', acesso: [], duracaoMin: 45 },
 
-      { id: 'b-1011-1645', hora: '16:25', ancora: 'referencia', tipo: 'deslocamento',
-        titulo: 'Voltar ao hotel e guardar as compras',
-        descricao: '4 min, US$ 7–10. Fardo de água não vai para o Disney Springs',
+      { id: 'b-1011-1645', hora: '16:20', ancora: 'referencia', tipo: 'deslocamento',
+        titulo: 'Retirar o Wendy’s e voltar ao hotel',
+        descricao: 'Pedido móvel no caminho. Guardem as compras e comam no quarto',
         contexto:
           'Esta volta existe por um motivo só: ninguém anda pelo Disney Springs com uma ' +
-          'caixa de 24 garrafas. Guardem tudo, separem só o que vai para o dia 11 — os soft ' +
+          'caixa de 24 garrafas. Façam o pedido móvel do Wendy’s ao sair do Walmart e peçam ' +
+          'uma parada rápida na unidade da 4755 W Irlo antes do hotel. Guardem tudo, separem ' +
+          'só o que vai para o dia 11 — os soft ' +
           'flasks cheios, protetor solar e barrinhas na mochila — e saiam de novo.\n\n' +
-          'Essa ida e volta custa ~US$ 16 no total e come 8 minutos de carro.',
-        localId: 'hotel-travelodge', acesso: [], duracaoMin: 5 },
+          'A parada só cabe porque o pedido já está pago e pronto. Se houver fila, usem o ' +
+          'drive-thru ou deixem o Wendy’s para outro momento: o Boathouse é fixo às 19h.',
+        localId: 'hotel-travelodge', acesso: [], duracaoMin: 10 },
 
       { id: 'b-1011-1625', hora: '16:30', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Comer alguma coisa',
-        descricao: 'Do que acabou de ser comprado. 6h desde o pouso',
+        titulo: 'Lanche leve — Wendy’s',
+        descricao: 'Perto do hotel. Pedido pequeno: o jantar no Boathouse é às 19h',
         contexto:
           'Vocês pousam 12h35 e só sentam para jantar às 19h. Descontando a refeição do ' +
           'avião, são seis a oito horas sem comer, num dia em que já estão sem dormir.\n\n' +
-          'Não é refeição — é não chegar no Disney Springs irritado às 17h20 com o jantar ' +
-          'ainda a duas horas de distância. Barrinha, fruta, o que for, do que acabou de ' +
-          'sair da sacola. Comam enquanto guardam as compras.',
-        localId: 'hotel-travelodge', acesso: [], duracaoMin: 20 },
+          'NÃO É JANTAR: dividam batata ou peguem um sanduíche pequeno. O pedido foi retirado ' +
+          'no caminho de volta do Walmart; comam enquanto guardam as compras, antes de chamar ' +
+          'o Uber para o Disney Springs.',
+        restauranteId: 'r-wendys', endereco: '4755 W Irlo Bronson Memorial Hwy',
+        acesso: [], duracaoMin: 20, pesquisa: '2026-09-18' },
 
       { id: 'b-1011-1710', hora: '16:55', ancora: 'referencia', tipo: 'deslocamento',
         titulo: 'Sair para o Disney Springs',
@@ -1664,7 +1668,7 @@ window.ROTEIRO = {
     parqueId: null,
     custoZero: false,
     fechado: true,
-    revisadoEm: '2026-09-16',
+    revisadoEm: '2026-09-18',
     referencia: { rotulo: 'Saída do hotel', padrao: '09:30', confirmado: false },
 
     resumo:
@@ -1694,7 +1698,7 @@ window.ROTEIRO = {
         gatilho: 'Vocês acordaram bem e o dia 11 não cobrou caro demais.',
         passos: [
           'Outlet de manhã com calma, começando pelo Character Warehouse, que abre 10h.',
-          'Almoço no Ford’s Garage, dentro do próprio outlet, sem Uber.',
+          'Almoço no Five Guys, dentro do próprio outlet, sem Uber e sem serviço de mesa.',
           'Tarde inteira no hotel. Não preencham esse bloco.',
           'BoardWalk às 18h, com jantar de balcão no calçadão e volta às 20h10.',
         ],
@@ -1772,11 +1776,12 @@ window.ROTEIRO = {
         contexto:
           'O IHOP da 5184 W Irlo Bronson é o mais perto dos três da 192: uns 750 metros a ' +
           'leste do hotel, três minutos de Uber. Panqueca, ovos e bacon — o café americano ' +
-          'de diner, e é o mesmo do dia 20.\n\n' +
+          'de diner. É a visita ao IHOP da viagem; no dia 24, o café será no Denny’s.\n\n' +
           'Sem despertador: nada hoje depende de acordar cedo, e o outlet só abre às 10h.\n\n' +
           'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto. Se preferirem ' +
           'ficar, o café do hotel é incluso e vai até as 10h.',
-        endereco: '5184 W Irlo Bronson Memorial Hwy', acesso: [], duracaoMin: 60,
+        endereco: '5184 W Irlo Bronson Memorial Hwy', restauranteId: 'r-ihop',
+        acesso: [], duracaoMin: 60,
         pesquisa: '2026-09-16' },
 
       { id: 'b-1211-0930', hora: '09:30', ancora: 'referencia', tipo: 'deslocamento',
@@ -1812,19 +1817,18 @@ window.ROTEIRO = {
         pesquisa: '2026-09-09', duracaoMin: 170 },
 
       { id: 'b-1211-1300', hora: '13:00', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Almoço — Ford’s Garage',
-        descricao: 'Mesa com garçom, dentro do próprio outlet',
+        titulo: 'Almoço — Five Guys',
+        descricao: 'Balcão dentro do próprio outlet. Rápido e sem reserva',
         contexto:
-          'Salão de oficina dos anos 1920, com Fords antigos, hambúrgueres, comida americana ' +
-          'e cerveja artesanal na torneira. Fica dentro do outlet: sair da I-Drive para ' +
-          'almoçar custaria dois Ubers e uma hora, num dia cujo objetivo é descansar.\n\n' +
-          'A CONTA JÁ VEM COM 20% DE TAXA DE SERVIÇO, no lugar da gorjeta — não somem outra ' +
-          'por cima. O preço da etiqueta não inclui o imposto. Dá para reservar ou entrar na ' +
-          'fila de espera pelo site do restaurante.',
-        restauranteId: 'r-fords-garage', localId: 'premium-outlets', acesso: [],
-        pesquisa: '2026-09-11', duracaoMin: 90 },
+          'Hambúrguer montado na hora, batata abundante e refil de bebida. A unidade fica no ' +
+          'Orlando International Premium Outlets, então não exige Uber nem quebra a manhã de ' +
+          'compras.\n\n' +
+          'É balcão: peçam, sentem e saiam. Não leva gorjeta de garçom e devolve 45 minutos ' +
+          'para a tarde de descanso em comparação com uma refeição de mesa.',
+        endereco: '4969 International Dr', restauranteId: 'r-five-guys',
+        localId: 'premium-outlets', acesso: [], pesquisa: '2026-09-18', duracaoMin: 45 },
 
-      { id: 'b-1211-1430', hora: '14:30', ancora: 'fixo', tipo: 'vazio',
+      { id: 'b-1211-1430', hora: '13:45', ancora: 'fixo', tipo: 'vazio',
         titulo: 'VAZIO PROPOSITAL',
         descricao: 'Voltar ao hotel, piscina, dormir',
         contexto:
@@ -4190,7 +4194,7 @@ window.ROTEIRO = {
     parqueId: 'universal-studios',
     custoZero: false,
     fechado: true,
-    revisadoEm: '2026-09-17',
+    revisadoEm: '2026-09-18',
     referencia: { rotulo: 'Abertura do parque', padrao: '10:00', confirmado: true },
     resumo:
       'O parque de rua, não de castelo: quarteirões de Nova York e São Francisco montados ' +
@@ -4261,7 +4265,7 @@ window.ROTEIRO = {
           'Mummy, Minion Land e o Beco com calma até o almoço.',
           'A tarde é a metade de baixo do anel: Men in Black, E.T. e o Bourne. O Simpsons ' +
           'saiu para o dia caber entre a abertura às 10h e o desfile.',
-          'Desfile, jantar no Lombard’s e CityWalk na saída.',
+          'Desfile, última meia hora de parque e jantar no Bubba Gump, já no CityWalk.',
         ] },
       { letra: 'B', titulo: 'O desfile não é às 17h30',
         gatilho: 'Vocês conferem no app a hora do desfile.',
@@ -4269,8 +4273,8 @@ window.ROTEIRO = {
           'Às 17h30 é o cenário que o roteiro assume. Não muda nada.',
           'O Bourne termina 17h20 e vocês vão direto para o lugar do desfile, na própria ' +
           'Hollywood.',
-          'Se o app mostrar outra sessão antes das 19h, ajustem o desfile sem perder a ' +
-          'reserva do Lombard’s às 18h45.',
+          'Se o app mostrar outra sessão antes das 19h, ajustem o desfile e conservem o ' +
+          'jantar para depois do fechamento: ele não rouba mais tempo de parque.',
           'Se aparecer 19h30, reconfirmem também o fechamento: esse horário não combina com ' +
           'o funcionamento oficial até as 19h.',
         ] },
@@ -4529,8 +4533,9 @@ window.ROTEIRO = {
           'carro final. A temporada começou em 14/11 e vai até 03/01.\n\n' +
           'ESTE É O BLOCO MAIS INCERTO DO DIA. A hora aqui é proposta: em anos anteriores o ' +
           'desfile rodou tanto às 17h30 quanto às 19h30, e são duas horas de diferença. ' +
-          'CONFIRAM NO APP DA UNIVERSAL e mexam daqui para a frente — este bloco e o jantar ' +
-          'andam juntos. O parque fecha às 19h.\n\n' +
+          'CONFIRAM NO APP DA UNIVERSAL e mexam daqui para a frente. O parque fecha às 19h, ' +
+          'e o jantar agora fica fora da catraca, então a prioridade é usar até o último ' +
+          'minuto disponível.\n\n' +
           'Peguem lugar assim que o Bourne acabar, por volta das 17h20, na Hollywood, perto ' +
           'do Mel’s. É onde o desfile ' +
           'passa mais devagar e onde dá para sair rápido no fim.',
@@ -4542,32 +4547,40 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Macy’s Thanksgiving Day Parade', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1711-1845', hora: '18:45', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — Lombard’s Seafood Grille',
-        descricao: 'Reservado. Frutos do mar na San Francisco',
+      { id: 'b-1711-1830-livre', hora: '18:30', ancora: 'fixo', tipo: 'livre',
+        titulo: 'Última meia hora dentro do parque',
+        descricao: 'Springfield, Beco Diagonal ou uma repetição curta. Saiam só no fechamento',
         contexto:
-          'O restaurante de mesa do parque, na San Francisco, a dois minutos do Beco ' +
-          'Diagonal. Frutos do mar e carnes, com um aquário grande no meio do salão. Pratos ' +
-          'principais de US$ 35 a 49, nos preços de 2025.\n\n' +
-          'RESERVADO: 18h45, duas pessoas, confirmação 639247504692187392. Remarcar ou ' +
-          'cancelar é pelo app da Universal ou pelo telefone de reservas nos Contatos.\n\n' +
-          'É mesa com garçom: 18 a 20% de gorjeta, e o preço da etiqueta não inclui o imposto.\n\n' +
-          'O parque fecha às 19h, mas a reserva oficial das 18h45 continua válida: entrem no ' +
-          'restaurante antes do fechamento e saiam direto para o CityWalk.',
-        restauranteId: 'r-lombards', areaParque: 'San Francisco', acesso: ['reserva'],
-        duracaoMin: 70, pesquisa: '2026-09-11' },
+          'O antigo jantar às 18h45 entregava os últimos quinze minutos do parque. Com o Bubba ' +
+          'Gump do lado de fora, esta meia hora volta para vocês. Fiquem na área em que o ' +
+          'desfile terminar ou retornem ao Beco, sem atravessar o parque atrás de fila longa.',
+        areaParque: 'Universal Studios Florida', acesso: [], duracaoMin: 30,
+        pesquisa: '2026-09-18' },
 
-      { id: 'b-1711-2055', hora: '20:00', ancora: 'fixo', tipo: 'livre',
+      { id: 'b-1711-1845', hora: '19:20', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Jantar — Bubba Gump Shrimp Co.',
+        descricao: 'CityWalk, depois do fechamento. Rede must-go sem gastar tempo de parque',
+        contexto:
+          'Camarão, peixe e pratos americanos no restaurante temático de Forrest Gump. Ele ' +
+          'fica no CityWalk, no caminho natural entre a catraca e o transporte por aplicativo.\n\n' +
+          'Cheguem direto ao sair do parque. Não há reserva a proteger dentro da catraca; se ' +
+          'o desfile mudar, o jantar pode deslizar alguns minutos. É mesa com garçom: 18 a ' +
+          '20% de gorjeta sobre o valor sem imposto.',
+        restauranteId: 'r-bubba', endereco: '6000 Universal Blvd, Suite 735',
+        localId: 'citywalk', acesso: [], duracaoMin: 80, pesquisa: '2026-09-18' },
+
+      { id: 'b-1711-2055', hora: '20:45', ancora: 'fixo', tipo: 'livre',
         titulo: 'CityWalk na saída',
         descricao: 'Fora da catraca · horário oficial: 8h à meia-noite',
         contexto:
           'O CityWalk fica entre a catraca e o ponto de aplicativo, então ele não custa ' +
           'deslocamento nenhum: vocês passam por dentro dele de qualquer jeito.\n\n' +
           'Ele não fecha junto com o parque: o horário oficial é das 8h à meia-noite. A essa ' +
-          'hora as lojas e as fachadas estão acesas. É volta de reconhecimento, não programa.',
-        localId: 'citywalk', acesso: [], duracaoMin: 25, pesquisa: '2026-09-17' },
+          'hora as lojas e as fachadas estão acesas. É a janela da Voodoo Doughnut e uma volta ' +
+          'curta, não outro programa longo.',
+        localId: 'citywalk', acesso: [], duracaoMin: 25, pesquisa: '2026-09-18' },
 
-      { id: 'b-1711-2120', hora: '20:25', ancora: 'fixo', tipo: 'deslocamento',
+      { id: 'b-1711-2120', hora: '21:10', ancora: 'fixo', tipo: 'deslocamento',
         titulo: 'Voltar ao hotel',
         descricao: 'Uber do próprio CityWalk',
         contexto:
@@ -4697,7 +4710,7 @@ window.ROTEIRO = {
     parqueId: null,
     custoZero: false,
     fechado: true,
-    revisadoEm: '2026-09-17',
+    revisadoEm: '2026-09-18',
     referencia: { rotulo: 'Início do jogo', padrao: '19:00', confirmado: false },
     resumo:
       'Dia de cidade, não de parque: shopping de manhã, o cartão-postal de Orlando no fim ' +
@@ -4846,14 +4859,17 @@ window.ROTEIRO = {
         pesquisa: '2026-09-10' },
 
       { id: 'b-1811-1300', hora: '13:00', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Almoço no mall',
-        descricao: 'The Cheesecake Factory fica na entrada principal. Sem reserva',
+        titulo: 'Almoço — Panda Express',
+        descricao: 'Balcão na Millenia Blvd. Confirmar a inauguração antes da viagem',
         contexto:
-          'Porções absurdamente grandes — uma entrada dividida entre dois costuma bastar, e ' +
-          'quase todo mundo sai com caixinha. Se quiserem o cheesecake, peçam para viagem: ' +
-          'a fatia é enorme e não desce depois do prato.\n\n' +
-          'É mesa com garçom: 18 a 20% de gorjeta, e o preço da etiqueta não inclui o imposto.',
-        localId: 'millenia', acesso: [], duracaoMin: 75 },
+          'A rede chinesa-americana da lista, com pedido no balcão e serviço rápido. A unidade ' +
+          'da 4064 Millenia Blvd fica no mesmo corredor do shopping e do Best Buy.\n\n' +
+          'ATENÇÃO: na pesquisa de 18/09, a página oficial ainda marcava esta unidade como ' +
+          '“coming soon”. A pendência de 25/10 confirma se abriu. Se não tiver aberto, usem ' +
+          'a praça de alimentação do mall e mantenham o horário — não atravessem Orlando por ' +
+          'causa da rede. É balcão e não leva gorjeta de garçom.',
+        endereco: '4064 Millenia Blvd', restauranteId: 'r-panda', localId: 'millenia',
+        acesso: [], duracaoMin: 45, pesquisa: '2026-09-18' },
 
       { id: 'b-1811-1415', hora: '14:15', ancora: 'fixo', tipo: 'tarefa',
         titulo: 'Best Buy do Millenia — retirar o Oakley',
@@ -5049,7 +5065,7 @@ window.ROTEIRO = {
     parqueId: 'islands-of-adventure',
     custoZero: false,
     fechado: true,
-    revisadoEm: '2026-09-17',
+    revisadoEm: '2026-09-18',
     referencia: { rotulo: 'Abertura do parque', padrao: '09:00', confirmado: true },
     resumo:
       'Hagrid’s na abertura, que é a única janela abaixo de uma hora, e depois uma volta ' +
@@ -5101,17 +5117,17 @@ window.ROTEIRO = {
         gatilho: 'O parque funciona das 9h às 19h e o Jurassic Park River Adventure já reabriu.',
         passos: [
           'Na corda às 8h15, Hagrid’s na abertura e Forbidden Journey logo depois.',
-          'Almoço no Confisco Grille às 11h40, na entrada do parque.',
+          'Lanche salgado rápido às 11h40, sem restaurante de mesa e sem reserva.',
           'Marvel, Kong, Jurassic Park River Adventure e VelociCoaster na fila normal.',
           'Hogwarts Express ida e volta, projeção no castelo e jantar no Mythos às 19h15.',
         ] },
       { letra: 'B', titulo: 'O Jurassic Park River Adventure não reabriu',
         gatilho: 'A reforma atrasou e ele continua fechado em 19/11.',
         passos: [
-          'Os 40 minutos dele devolvem o Doctor Doom: ele entra às 14h15, logo depois do ' +
-          'Spider-Man, a parada vai para 14h35 e o Kong para 14h55.',
-          'A VelociCoaster vai às 15h40, e os 25 minutos que sobram antes do Hogwarts Express ' +
-          'são folga. A capa de chuva fica na mochila.',
+          'Os 40 minutos dele devolvem o Doctor Doom: ele entra às 13h45, logo depois do ' +
+          'Spider-Man, a parada vai para 14h05 e o Kong para 14h25.',
+          'A VelociCoaster vai às 15h10, e o tempo que sobra antes do Hogwarts Express vira ' +
+          'folga em Hogsmeade. A capa de chuva fica na mochila.',
         ] },
       { letra: 'C', titulo: 'Cansaço ou atraso',
         gatilho: 'O Hagrid’s demorou mais que o previsto ou o corpo pediu pausa.',
@@ -5195,19 +5211,18 @@ window.ROTEIRO = {
         ] },
 
       { id: 'b-1911-1140', hora: '11:40', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Almoço — Confisco Grille',
-        descricao: 'Mesa com garçom na entrada do parque. Pratos de US$ 21 a 35',
+        titulo: 'Lanche salgado rápido — no caminho para a Marvel',
+        descricao: 'Balcão em Seuss Landing ou Port of Entry. Trinta minutos, sem mesa marcada',
         contexto:
-          'O restaurante com mesa da Port of Entry: cozinha internacional, de pad thai e ' +
-          'salmão com missô a churrasco de Angus e massas. Pratos de US$ 21 a 35.\n\n' +
-          'POR QUE AQUI: fica exatamente no caminho de Hogsmeade para a Marvel, e é mesa, não ' +
-          'balcão. No Three Broomsticks vocês já jantam no dia 14.\n\n' +
-          'São 12 minutos a pé do Forbidden Journey, passando pela Lost Continent e pela Seuss ' +
-          'Landing. É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
-        restauranteId: 'r-confisco', areaParque: 'Port of Entry', acesso: [], duracaoMin: 60,
-        pesquisa: '2026-09-11' },
+          'Vocês já têm vários doces e bebidas para provar, então o objetivo aqui é só colocar ' +
+          'algo salgado no corpo sem parar uma hora no Confisco. Escolham o balcão com menor ' +
+          'fila no caminho por Lost Continent, Seuss Landing e Port of Entry.\n\n' +
+          'A regra é simples: um item rápido para cada um, água e seguir. O ganho de trinta ' +
+          'minutos antecipa toda a Marvel e abre folga antes do Hogwarts Express.',
+        areaParque: 'Seuss Landing / Port of Entry', acesso: [], duracaoMin: 30,
+        pesquisa: '2026-09-18' },
 
-      { id: 'b-1911-1245', hora: '12:45', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1911-1245', hora: '12:15', ancora: 'referencia', tipo: 'atracao',
         titulo: 'The Incredible Hulk Coaster',
         descricao: 'Lançamento de 0 a 64 km/h em 2 segundos, sete inversões',
         contexto:
@@ -5222,7 +5237,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — The Incredible Hulk Coaster', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1911-1335', hora: '13:35', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1911-1335', hora: '13:05', ancora: 'referencia', tipo: 'atracao',
         titulo: 'The Amazing Adventures of Spider-Man',
         descricao: 'Clássico. Ainda é referência técnica',
         contexto:
@@ -5240,14 +5255,14 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — The Amazing Adventures of Spider-Man', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1911-1435', hora: '14:15', ancora: 'referencia', tipo: 'pausa',
+      { id: 'b-1911-1435', hora: '13:45', ancora: 'referencia', tipo: 'pausa',
         titulo: 'Parada — água, banheiro e sentar',
         descricao: 'Dez minutos. Banheiro ao lado do Captain America Diner',
         contexto:
-          'Do almoço até o Mythos são sete horas, e só o Hogwarts Express senta. Esta é a parada do meio: água, banheiro e dez minutos sentados antes do Kong.',
+          'Do lanche até o Mythos são mais de sete horas, e só o Hogwarts Express senta. Esta é a parada do meio: água, banheiro e dez minutos sentados antes do Kong.',
         areaParque: 'Marvel Super Hero Island', acesso: [], duracaoMin: 10, pesquisa: '2026-09-12' },
 
-      { id: 'b-1911-1455', hora: '14:35', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1911-1455', hora: '14:05', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Skull Island: Reign of Kong',
         descricao: 'Caminhão expedicionário, telas 3D e o Kong animatrônico',
         contexto:
@@ -5262,7 +5277,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Skull Island: Reign of Kong', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1911-1540', hora: '15:20', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1911-1540', hora: '14:50', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Jurassic Park River Adventure',
         descricao: 'Molha. Reaberto depois de dez meses de reforma',
         contexto:
@@ -5270,7 +5285,7 @@ window.ROTEIRO = {
           'no escuro. Molha de verdade, principalmente nas primeiras fileiras.\n\n' +
           'REFORMA: ficou fechado de janeiro a 19 ou 20/11 de 2026, com dinossauros e cenário ' +
           'sendo refeitos. Se ainda estiver fechado, vale o plano B.\n\n' +
-          'Está às 15h20 porque é a hora mais quente. Capa de chuva e o celular no Ziploc — ou ' +
+          'Está às 14h50 porque ainda é uma das horas mais quentes. Capa de chuva e o celular no Ziploc — ou ' +
           'no armário de aluguel da entrada, que aqui é opcional, pelo mapa oficial. Fila média ' +
           'de 22 minutos.',
         areaParque: 'Jurassic Park', acesso: ['standby'],
@@ -5280,7 +5295,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Jurassic Park: The Ride', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1911-1625', hora: '16:05', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1911-1625', hora: '15:35', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Jurassic World VelociCoaster',
         descricao: 'A mais intensa do parque. Fila normal: uma hora e meia de bloco',
         contexto:
@@ -5289,7 +5304,7 @@ window.ROTEIRO = {
           'SEM SINGLE RIDER: a Universal fechou a fila de single rider daqui e passou a ' +
           'embarcar os grupos em duas filas, de número par e ímpar de pessoas, para não sobrar ' +
           'lugar vazio. Vocês vão pela fila normal, juntos.\n\n' +
-          'POR QUE ÀS 16H05: ela não tem hora barata. Nos dados de 2026, 85 minutos às 10h, 102 ' +
+          'POR QUE ÀS 15H35: ela não tem hora barata. Nos dados de 2026, 85 minutos às 10h, 102 ' +
           'às 11h, 76 às 14h, 83 às 16h e 72 às 18h. Entre a melhor e a pior hora da tarde são ' +
           'dez minutos, e as horas da noite já são do Hogwarts Express e do Mythos. O bloco tem ' +
           'uma hora e meia: fila, locker e detector.\n\n' +
@@ -5306,7 +5321,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — Jurassic World VelociCoaster', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1911-1720', hora: '17:40', ancora: 'referencia', tipo: 'atracao',
+      { id: 'b-1911-1720', hora: '17:15', ancora: 'referencia', tipo: 'atracao',
         titulo: 'Hogwarts Express — ida e volta',
         descricao: 'Quatro minutos em cada sentido, com filmes diferentes. Precisa park-to-park',
         contexto:
@@ -5324,7 +5339,7 @@ window.ROTEIRO = {
             fonte: 'Wikipedia — The Wizarding World of Harry Potter (Universal Orlando Resort)', pesquisa: '2026-09-15' },
         ] },
 
-      { id: 'b-1911-1835', hora: '18:50', ancora: 'fixo', tipo: 'show',
+      { id: 'b-1911-1835', hora: '18:30', ancora: 'fixo', tipo: 'show',
         titulo: 'Hogsmeade à noite · projeção no castelo',
         descricao: 'The Magic of Christmas at Hogwarts Castle. Repete a cada 20 min',
         contexto:
@@ -5412,9 +5427,9 @@ window.ROTEIRO = {
         { texto: 'Guardar o que veio do Islands', critico: false,
           motivo: 'Amanhã a mochila precisa sair leve — o Epic tem locker obrigatório em ' +
                   'três atrações, e detector de metal no Stardust Racers.' },
-        { texto: 'Confirmação do Atlantic à mão: 639251824607987840', critico: false,
-          motivo: 'Jantar às 17h de amanhã. A mesa é segurada só por 15 minutos, então o número ' +
-                  'fica no celular, não perdido no e-mail.' },
+        { texto: 'Pedido móvel da Universal funcionando', critico: false,
+          motivo: 'A reta final do Epic usa lanches rápidos dentro do parque e deixa o jantar ' +
+                  'para o Cane’s depois do fechamento. Login e cartão salvos evitam fila de balcão.' },
       ],
     },
     ficha: {
@@ -5464,7 +5479,7 @@ window.ROTEIRO = {
     parqueId: 'epic-universe',
     custoZero: false,
     fechado: true,
-    revisadoEm: '2026-09-17',
+    revisadoEm: '2026-09-18',
     referencia: { rotulo: 'Abertura do parque', padrao: '10:00', confirmado: true },
     resumo:
       'O parque mais concorrido de Orlando, no dia mais vazio da segunda metade da viagem, ' +
@@ -5509,7 +5524,7 @@ window.ROTEIRO = {
         'num dia de 10 horas, ele tomaria a janela do Battle at the Ministry.\n\n' +
         'BATTLE AT THE MINISTRY: 76 a 109 minutos de média. Nas últimas duas ou três horas ' +
         'cai para 45 a 75, e na última hora a mediana cai 74%.\n\n' +
-        'O Battle entra às 18h30, depois do jantar das 17h, e termina no fechamento.\n\n' +
+        'O Battle entra às 18h30, depois de um bloco flexível sem mesa, e termina no fechamento.\n\n' +
         'AS TRÊS MAIORES FILAS são Mine-Cart, Ministry e Mario Kart. O Monsters Unchained é ' +
         'uma das MENORES, 13 a 15 minutos.',
         pesquisa: '2026-09-10' },
@@ -5559,21 +5574,22 @@ window.ROTEIRO = {
           'Monsters Unchained às 10h e Curse of the Werewolf em seguida.',
           'Stardust Racers no meio da manhã, e Super Nintendo World perto das 13h, quando a turma do ' +
           'EPA sai de lá.',
-          'Tarde em Berk, com o The Untrainable Dragon às 16h30, antes do jantar.',
-          'Jantar às 17h, Battle at the Ministry às 18h30 e saída no fechamento, às 20h.',
+          'Tarde em Berk, com o The Untrainable Dragon às 16h30.',
+          'Celestial Park e lanche flexível às 17h, Battle at the Ministry às 18h30, Cane’s ' +
+          'depois do fechamento.',
         ] },
       { letra: 'B', titulo: 'A Dark Universe voltou para o Early Park Admission',
         gatilho: 'A lista de novembro inclui a Dark Universe, e o Ministry saiu dela.',
         passos: [
           'Era assim até janeiro de 2026. Aí o portal vazio às 10h é o do Ministry.',
-          'TROQUEM OS DOIS BLOCOS: Battle at the Ministry às 10h, e Monsters mais Curse depois do jantar.',
+          'TROQUEM OS DOIS BLOCOS: Battle at the Ministry às 10h, e Monsters mais Curse na reta final.',
           'O Curse é justamente o que despenca no fim do dia, então a troca não custa nada.',
         ] },
       { letra: 'C2', titulo: 'Chuva ou frio',
         gatilho: 'Chove, ou a tarde está fria.',
         passos: [
-          'Monsters Unchained, Battle at the Ministry, o teatro do Untrainable Dragon, Toadstool ' +
-          'e Atlantic são cobertos.',
+          'Monsters Unchained, Battle at the Ministry, o teatro do Untrainable Dragon e ' +
+          'Toadstool são cobertos; o bloco das 17h pode ser feito sob cobertura.',
           'As montanhas-russas param com raio. Se pararem, adiantem o que é coberto e voltem.',
         ] },
     ],
@@ -5758,41 +5774,33 @@ window.ROTEIRO = {
       { id: 'b-2011-1630s', hora: '16:30', ancora: 'fixo', tipo: 'show',
         confirmarAPartirDe: '2026-11-20',
         titulo: 'The Untrainable Dragon',
-        descricao: 'O maior show do Epic, 20 min. Termina a três minutos do Atlantic',
+        descricao: 'O maior show do Epic, 20 min. A reta final começa na saída do teatro',
         contexto:
           'Musical de palco com atores, bonecos enormes e efeitos em cima da plateia, contando ' +
           'a chegada de um dragão novo à vila de Berk. O Banguela mecânico pesa mais de meia ' +
           'tonelada, tem oito metros de envergadura e voa por cima do público. Muitas resenhas ' +
           'o apontam como o melhor show do parque.\n\n' +
-          'POR QUE ÀS 16H30: é a última sessão antes do jantar das 17h, e a Isle of Berk fica a ' +
-          'três minutos do Atlantic. Ele termina por volta das 16h50, e vocês chegam à mesa às ' +
-          '16h55, que é a antecedência que a Universal pede.\n\n' +
+          'POR QUE ÀS 16H30: ele termina por volta das 16h50 e deixa 1h40 para curtir o ' +
+          'Celestial Park, provar um lanche e chegar ao Ministry sem sacrificar atração por ' +
+          'restaurante de mesa.\n\n' +
           'HORÁRIO A CONFIRMAR: em setembro de 2026 as sessões iam das 11h10 às 19h, a cada 50 ' +
           'minutos — 15h40, 16h30, 17h20. Se em novembro não houver sessão entre 16h15 e 16h35, ' +
           'a parada das 15h45 vira a pausa inteira até as 16h50 e o show fica de fora.',
         areaParque: 'Isle of Berk', acesso: [], duracaoMin: 20, confirmarHorario: true,
         pesquisa: '2026-09-15' },
 
-      { id: 'b-2011-1700', hora: '17:00', ancora: 'fixo', tipo: 'refeicao',
-        titulo: 'Jantar — Atlantic',
-        descricao: 'Reservado para as 17h. Cheguem 5 min antes: a mesa espera só 15 min',
+      { id: 'b-2011-1700', hora: '17:00', ancora: 'fixo', tipo: 'livre',
+        titulo: 'Celestial Park e lanche flexível',
+        descricao: 'Sem mesa: fontes, Bar Zenith ou um item rápido. Às 18h20, sigam ao Ministry',
         contexto:
-          'Restaurante de frutos do mar e carnes no Celestial Park, o mais formal do parque. ' +
-          'Pratos principais de US$ 35 a 48.\n\n' +
-          'POR QUE ÀS 17H: é o jantar cedo que paga o dia. As duas maiores filas do parque só ' +
-          'ficam razoáveis no fim — o Ministry nas últimas duas ou três horas, o Mine-Cart na ' +
-          'última — e as duas precisam de todo o tempo depois daqui.\n\n' +
-          'RESERVADO: confirmação 639251824607987840, duas pessoas, 17h. A Universal pede ' +
-          'chegada 5 minutos antes e segura a mesa só por 15 minutos — às 17h15 a reserva é ' +
-          'liberada. O The Untrainable Dragon termina por volta das 16h50, em Berk, a três ' +
-          'minutos daqui: é exatamente a folga pedida.\n\n' +
-          'Para remarcar ou cancelar: pela conta da Universal no app, ou +1 407-224-3663.\n\n' +
-          'SE PERDEREM A MESA: o Mead Hall, salão viking da Isle of Berk, não aceita reserva — ' +
-          'é mais barato e mais temático. Berk fica do outro lado do Ministry: contem a ' +
-          'caminhada de volta para as 18h20.\n\n' +
-          'É mesa com garçom: 18 a 20% de gorjeta, e o preço da etiqueta não inclui o imposto.',
-        restauranteId: 'r-atlantic', areaParque: 'Celestial Park', acesso: ['reserva'],
-        duracaoMin: 75, pesquisa: '2026-09-10' },
+          'Este era o bloco do Atlantic. Ao tirar a refeição de mesa, vocês recuperam mais de ' +
+          'uma hora de Epic e ainda têm uma pausa real antes da maior fila do dia.\n\n' +
+          'Escolham conforme a fome criada pelos doces e bebidas do parque: um salgado no ' +
+          'Mead Hall, um drink no Bar Zenith ou apenas água e banco diante das fontes. Não ' +
+          'criem outra refeição completa — o jantar será no Raising Cane’s ao sair.\n\n' +
+          'Às 18h20, levantem e sigam para o portal do Ministry. A flexibilidade deste bloco ' +
+          'é também a proteção se alguma atração da tarde atrasar.',
+        areaParque: 'Celestial Park', acesso: [], duracaoMin: 80, pesquisa: '2026-09-18' },
 
       { id: 'b-2011-1830', hora: '18:30', ancora: 'fixo', tipo: 'atracao',
         confirmarAPartirDe: '2026-11-20',
@@ -5824,16 +5832,31 @@ window.ROTEIRO = {
         ] },
 
       { id: 'b-2011-2100', hora: '20:00', ancora: 'fixo', tipo: 'deslocamento',
-        titulo: 'Sair — carro',
-        descricao: 'Pelo Celestial Park iluminado até o estacionamento',
+        titulo: 'Sair e dirigir ao Raising Cane’s',
+        descricao: 'Pelo Celestial Park iluminado; depois, cerca de 15 min até a International Dr',
         contexto:
           'A saída atravessa o Celestial Park de noite, com a decoração de Natal acesa — é o ' +
           'parque no seu melhor, e vocês passam por ele de qualquer jeito. Se o show natalino ' +
           'das fontes estiver na grade perto das 20h, é aqui que ele entra.\n\n' +
           'O estacionamento esvazia junto no fechamento; contem alguns minutos para sair do ' +
-          'complexo.\n\n' +
-          'Amanhã a manhã é livre, sem alarme.',
-        localId: 'epic-universe', acesso: [], duracaoMin: 45 },
+          'complexo. O destino seguinte é 8718 International Dr.',
+        localId: 'epic-universe', acesso: [], duracaoMin: 40 },
+
+      { id: 'b-2011-2025-canes', hora: '20:40', ancora: 'fixo', tipo: 'refeicao',
+        titulo: 'Jantar — Raising Cane’s',
+        descricao: 'Chicken fingers, fritas, Texas toast e Cane’s Sauce. Balcão ou drive-thru',
+        contexto:
+          'A rede must-go entra depois do fechamento e não consome um minuto de parque. A ' +
+          'unidade da International Drive fica no caminho de volta para Kissimmee.\n\n' +
+          'O cardápio é curto e o pedido sai rápido. É balcão: não leva gorjeta de garçom. ' +
+          'Se a fila do Ministry estourar e vocês saírem mais tarde, usem o drive-thru.',
+        restauranteId: 'r-canes', endereco: '8718 International Dr', acesso: [],
+        duracaoMin: 45, pesquisa: '2026-09-18' },
+
+      { id: 'b-2011-2110-hotel', hora: '21:25', ancora: 'fixo', tipo: 'deslocamento',
+        titulo: 'Voltar ao hotel',
+        descricao: 'De carro. Amanhã a manhã é livre, sem alarme',
+        acesso: [], duracaoMin: 30 },
     ],
     naoPerca: [
       { nome: 'Place Cachée à noite, no Natal do mundo bruxo', quando: 'hoje', custo: 'grátis',
@@ -5929,7 +5952,7 @@ window.ROTEIRO = {
                   'Menor fila do parque, e é voltado a criança.' },
         { nome: 'Fyre Drill',
           motivo: 'Barcos com canhões de água: o guia oficial diz que os passageiros podem ' +
-                  'encharcar. Depois dele viriam um show sentado e um jantar de mesa.' },
+                  'encharcar. Depois dele vêm o show, a pausa curta e a reta final no Ministry.' },
         { nome: 'Constellation Carousel',
           motivo: 'Carrossel com criaturas que giram sozinhas, 21 minutos de fila média. A ' +
                   'pausa da tarde agora é em Berk, antes do show.' },
@@ -7174,11 +7197,11 @@ window.ROTEIRO = {
     parqueId: null,
     custoZero: false,
     fechado: true,
-    revisadoEm: '2026-09-11',
+    revisadoEm: '2026-09-18',
     referencia: { rotulo: 'Saída do hotel', padrao: '08:30', confirmado: false },
     resumo:
-      'O respiro depois de cinco dias seguidos fora do hotel. Café sem pressa no IHOP, ' +
-      'manhã livre, almoço porto-riquenho no Old Town e, à noite, a rua de tijolinho e os ' +
+      'O respiro depois de cinco dias seguidos fora do hotel. Café sem pressa no Denny’s, ' +
+      'manhã livre, almoço no Olive Garden e, à noite, a rua de tijolinho e os ' +
       'food trucks, a três minutos do hotel.',
     avisos: [
       'NÃO EXISTE HORÁRIO CRÍTICO HOJE. É o último dia sem hora marcada da viagem, e ele ' +
@@ -7190,8 +7213,8 @@ window.ROTEIRO = {
       { tipo: 'info', texto:
         'A AVIS FICA DENTRO DO OLD TOWN, nos fundos, em frente à montanha-russa — suíte 434. ' +
         'Abre das 7h às 19h todos os dias, inclusive sábado, e fica a três minutos do hotel.\n\n' +
-        'O ALUGUEL É CONTADO EM PERÍODOS DE 24 HORAS. Retirando às 15h de hoje e devolvendo às ' +
-        '15h do dia 25, são sete diárias certas. A tolerância na devolução é de 29 minutos; ' +
+        'O CARRO JÁ ESTÁ COM VOCÊS DESDE 18/11, quando foi retirado às 10h. A devolução é às ' +
+        '15h do dia 25, na mesma Avis. A tolerância na devolução é de 29 minutos; ' +
         'passou disso, a Avis cobra fração de diária, e com 90 minutos de atraso cobra a ' +
         'diária inteira.',
         pesquisa: '2026-09-11' },
@@ -7224,9 +7247,9 @@ window.ROTEIRO = {
       { letra: 'A', titulo: 'O dia como está escrito',
         gatilho: 'Vocês chegaram inteiros da estrada de Tampa e não falta nada da Universal.',
         passos: [
-          'Dormir sem alarme. Café da manhã no IHOP da 5184 W Irlo Bronson.',
+          'Dormir sem alarme. Café da manhã no Denny’s da 4783 W Irlo Bronson.',
           'Manhã livre no hotel. Não preencham.',
-          'Almoço no El Cilantrillo, dentro do Old Town, e uma volta por lá de dia.',
+          'Almoço no Olive Garden, perto do hotel, e uma volta pelo Old Town depois.',
           'Descanso no hotel à tarde.',
           'Às 17h20, de volta ao Old Town. Jantar no World Food Trucks e noite curta.',
         ] },
@@ -7242,8 +7265,8 @@ window.ROTEIRO = {
       { letra: 'C', titulo: 'Chuva à noite',
         gatilho: 'A previsão do meio-dia dá chuva para o fim da tarde ou a noite.',
         passos: [
-          'Invertam as refeições: World Food Trucks no almoço, El Cilantrillo no jantar. Os ' +
-          'trucks são ao ar livre, e o site não diz se há área coberta; o El Cilantrillo é ' +
+          'Invertam as refeições: World Food Trucks no almoço, Olive Garden no jantar. Os ' +
+          'trucks são ao ar livre, e o site não diz se há área coberta; o Olive Garden é ' +
           'salão fechado.',
           'Se a chuva não passar, a noite termina no jantar e vocês dormem cedo: amanhã é o ' +
           'último dia inteiro, com as malas às 15h15.',
@@ -7251,20 +7274,20 @@ window.ROTEIRO = {
     ],
     blocos: [
       { id: 'b-2411-0800', hora: '08:30', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Café da manhã — IHOP',
-        descricao: 'Sem alarme. A 750 m do hotel, aberto desde as 6h. Ou o do hotel, incluso',
+        titulo: 'Café da manhã — Denny’s',
+        descricao: 'Sem alarme. Perto do hotel e aberto 24 horas. Ou o do hotel, incluso',
         contexto:
           'O único respiro entre o Epic de ontem e cinco dias seguidos pesados: Winter Garden ' +
           'com hóquei, SeaWorld, Islands, Busch Gardens e o último dia de compras. Não é para ' +
           'encher — é o dia de tomar café fora, sem pressa.\n\n' +
-          'O IHOP da 5184 W Irlo Bronson é o mais perto dos três da 192: uns 750 metros a ' +
-          'leste do hotel, três minutos de Uber. Na sexta abre das 6h à meia-noite. Panqueca, ' +
-          'ovos e bacon — o café americano de diner.\n\n' +
+          'O Denny’s da 4783 W Irlo Bronson fica a poucos minutos do hotel. Panquecas, ovos, ' +
+          'bacon e os Grand Slams: outro clássico de diner da lista, sem repetir o IHOP do ' +
+          'dia 12.\n\n' +
           'SE NÃO DER VONTADE DE SAIR: o café da manhã do hotel é incluso e continental, e vai ' +
           'até as 10h segundo os sites de reserva — a Wyndham não publica o horário.\n\n' +
           'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
-        endereco: '5184 W Irlo Bronson Memorial Hwy', acesso: [], duracaoMin: 75,
-        pesquisa: '2026-09-11' },
+        endereco: '4783 W Irlo Bronson Memorial Hwy', restauranteId: 'r-dennys',
+        acesso: [], duracaoMin: 75, pesquisa: '2026-09-18' },
 
       { id: 'b-2411-0945', hora: '09:45', ancora: 'referencia', tipo: 'vazio',
         titulo: 'VAZIO PROPOSITAL',
@@ -7279,19 +7302,16 @@ window.ROTEIRO = {
         localId: 'hotel-travelodge', acesso: [], duracaoMin: 180 },
 
       { id: 'b-2411-1230', hora: '12:45', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Almoço — El Cilantrillo',
-        descricao: 'Porto-riquenho de mesa, dentro do Old Town. Três minutos de Uber',
+        titulo: 'Almoço — Olive Garden',
+        descricao: 'Rede must-go perto do hotel. Mesa num dia sem parque',
         contexto:
-          'Comida caseira porto-riquenha: mofongo — purê de banana-da-terra com alho — com ' +
-          'churrasco, carne de porco ou frutos do mar por cima; pernil assado devagar; e o ' +
-          'pargo inteiro frito, no estilo boricua.\n\n' +
-          'Pratos da rede perto de US$ 20. Na sexta abre das 11h à meia-noite. Aceita reserva ' +
-          'pelo Yelp ou pelo telefone +1 407-204-9685.\n\n' +
-          'Fica na suíte 130 do Old Town, o mesmo complexo da Avis: daqui, a tarde segue a pé ' +
-          'pela rua de tijolinho.\n\n' +
+          'Massas, sopas, saladas e breadsticks. É a rede de mesa que faz sentido manter fora ' +
+          'dos parques: hoje não existe ingresso correndo enquanto vocês comem.\n\n' +
+          'Peçam a conta junto com o prato para sair em uma hora. Da 5021 W Irlo Bronson ao ' +
+          'Old Town são poucos minutos de carro; o bloco seguinte começa às 14h.\n\n' +
           'É mesa com garçom: 18 a 20% de gorjeta sobre o valor sem imposto.',
-        endereco: '5770 W Irlo Bronson Memorial Hwy, Suite 130', restauranteId: 'r-cilantrillo',
-        localId: 'old-town', acesso: [], duracaoMin: 75, pesquisa: '2026-09-11' },
+        endereco: '5021 W Irlo Bronson Memorial Hwy', restauranteId: 'r-olive-garden',
+        acesso: [], duracaoMin: 60, pesquisa: '2026-09-18' },
 
       { id: 'b-2411-1401', hora: '14:00', ancora: 'referencia', tipo: 'livre',
         titulo: 'Old Town de dia · Mine Blower opcional',
@@ -7301,7 +7321,7 @@ window.ROTEIRO = {
           'lojas com calma e sem multidão.\n\n' +
           'MINE BLOWER, no Fun Spot, ao lado do Old Town: montanha-russa de madeira com ' +
           'inversão. A entrada no Fun Spot é grátis e cada brinquedo é pago à parte, de US$ 3 ' +
-          'a 40. Logo depois de um mofongo, julguem vocês.',
+          'a 40. Logo depois do almoço, julguem vocês.',
         localId: 'old-town', acesso: [], duracaoMin: 60, pesquisa: '2026-09-11' },
 
       { id: 'b-2411-1400', hora: '15:30', ancora: 'fixo', tipo: 'vazio',
@@ -7420,7 +7440,7 @@ window.ROTEIRO = {
     historiaLocalId: 'disney-springs',
     custoZero: false,
     fechado: true,
-    revisadoEm: '2026-09-11',
+    revisadoEm: '2026-09-18',
     referencia: { rotulo: 'Saída do hotel', padrao: '10:00', confirmado: false },
     resumo:
       'De manhã, o outlet do Vineland, Marshalls, Ross e Walgreens. O carro volta à Avis às ' +
@@ -7460,7 +7480,7 @@ window.ROTEIRO = {
         gatilho: 'O Oakley foi retirado no dia 18 e a reserva do Homecomin’ saiu.',
         passos: [
           'Café do hotel às 9h, outlet do Vineland às 10h15 e o Marshalls ao lado.',
-          'Almoço no Sofrito, Ross na Vineland Rd, e Walgreens e posto antes da Avis.',
+          'Almoço no Shake Shack do próprio outlet, Ross na Vineland Rd, e Walgreens e posto antes da Avis.',
           'Carro devolvido às 15h, malas no hotel e descanso.',
           'Uber às 17h45: Christmas Tree Stroll, Homecomin’ às 19h30 e World of Disney.',
         ] },
@@ -7529,14 +7549,16 @@ window.ROTEIRO = {
         pesquisa: '2026-09-11' },
 
       { id: 'b-2511-1235', hora: '12:35', ancora: 'referencia', tipo: 'refeicao',
-        titulo: 'Almoço — Sofrito Latin Cafe',
-        descricao: 'Cozinha latina de balcão, na Palm Pkwy. Leve: o jantar é o Homecomin’',
+        titulo: 'Almoço — Shake Shack',
+        descricao: 'Balcão no próprio outlet. Leve: o jantar é o Homecomin’',
         contexto:
-          'Frango assado ao estilo peruano, pernil cubano, empanadas venezuelanas, colombianas e ' +
-          'argentinas, sanduíche cubano. Faixa de preço de US$ 3 a 15.\n\n' +
-          'É balcão: pede no caixa e senta. Não leva gorjeta.',
-        endereco: '8607 Palm Pkwy', restauranteId: 'r-sofrito', localId: 'vineland-outlets',
-        acesso: [], duracaoMin: 45, pesquisa: '2026-09-11' },
+          'Hambúrguer, crinkle fries e shake da rede. A unidade fica no Orlando Vineland ' +
+          'Premium Outlets, então vocês não gastam tempo nem combustível procurando outro ' +
+          'almoço entre o outlet e o Marshalls.\n\n' +
+          'Façam um pedido contido: o Homecomin’ às 19h30 é o jantar de despedida. É balcão ' +
+          'e não leva gorjeta de garçom.',
+        endereco: '8200 Vineland Ave', restauranteId: 'r-shake-shack', localId: 'vineland-outlets',
+        acesso: [], duracaoMin: 45, pesquisa: '2026-09-18' },
 
       { id: 'b-2511-1335', hora: '13:35', ancora: 'referencia', tipo: 'compras',
         titulo: 'Ross — Vineland Rd',
@@ -7892,6 +7914,14 @@ window.ROTEIRO = {
      confirmação são estado do usuário, não vivem aqui.
      ------------------------------------------------------------------------ */
   restaurantes: [
+    { id: 'r-wendys', nome: 'Wendy’s', data: '2026-11-10', hora: '16:30',
+      refeicao: 'lanche', local: 'US-192 · 4755 W Irlo Bronson Memorial Hwy',
+      alternativas: ['Barrinha ou fruta das compras do Walmart, se o desembarque atrasar'],
+      precisaReserva: false, janelaAbre: null, janelaHora: null,
+      canal: 'Balcão, app ou drive-thru', blocoId: 'b-1011-1625',
+      nota: 'Lanche leve antes do Disney Springs, não refeição completa: o Boathouse é às ' +
+            '19h. Rede must-go encaixada sem criar um deslocamento próprio.' },
+
     { id: 'r-boathouse', nome: 'The Boathouse', data: '2026-11-10', hora: '19:00',
       refeicao: 'jantar', local: 'Disney Springs · The Landing', alternativas: ['Black Angus ou Miller’s Ale House, na 192, se o dia virar plano C'],
       precisaReserva: true, janelaAbre: null, janelaHora: null,
@@ -7917,14 +7947,21 @@ window.ROTEIRO = {
             'ao ar livre. Usem mobile order e comam nas mesas de fora, de frente para o ' +
             'piano — comer dentro perde o motivo da escolha.' },
 
-    { id: 'r-fords-garage', nome: 'Ford’s Garage', data: '2026-11-12', hora: '13:00',
-      refeicao: 'almoco', local: 'Orlando International Premium Outlets · 4971 International Dr',
+    { id: 'r-ihop', nome: 'IHOP', data: '2026-11-12', hora: '08:30',
+      refeicao: 'cafe', local: 'US-192 · 5184 W Irlo Bronson Memorial Hwy',
       alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Site do restaurante: reserva ou fila de espera', blocoId: 'b-1211-1300',
-      nota: 'Mesa com garçom dentro do outlet, num salão de oficina dos anos 1920 com Fords ' +
-            'antigos. Hambúrgueres, comida americana e cerveja artesanal. Segunda a sábado, ' +
-            'das 11h às 22h. A conta já vem com 20% de taxa de serviço, no lugar da gorjeta.' },
+      canal: 'Chegar direto', blocoId: 'b-1211-0830',
+      nota: 'O café de diner da lista: panquecas, ovos e bacon. A visita fica só neste dia; ' +
+            'o café de 24/11 foi trocado por Denny’s para não repetir a rede.' },
+
+    { id: 'r-five-guys', nome: 'Five Guys', data: '2026-11-12', hora: '13:00',
+      refeicao: 'almoco', local: 'Orlando International Premium Outlets · 4969 International Dr',
+      alternativas: [],
+      precisaReserva: false, janelaAbre: null, janelaHora: null,
+      canal: 'Balcão, sem reserva', blocoId: 'b-1211-1300',
+      nota: 'Hambúrguer e batata no próprio outlet. Substitui uma refeição de mesa e devolve ' +
+            '45 minutos para a tarde de descanso.' },
 
     { id: 'r-satuli', nome: 'Satu’li Canteen', data: '2026-11-16', hora: '12:30',
       refeicao: 'almoco', local: 'Animal Kingdom · Pandora', alternativas: ['Flame Tree Barbecue, na Discovery Island', 'Harambe Market, na África'],
@@ -8011,21 +8048,13 @@ window.ROTEIRO = {
       nota: 'Bangers and mash, fish and chips. O melhor quick service da Universal. Faixa $ ' +
             'no mapa oficial: até US$ 15 por pessoa.' },
 
-    { id: 'r-lombards', nome: 'Lombard’s Seafood Grille', data: '2026-11-17', hora: '18:45',
-      refeicao: 'jantar', local: 'Universal Studios · San Francisco',
+    { id: 'r-bubba', nome: 'Bubba Gump Shrimp Co.', data: '2026-11-17', hora: '19:20',
+      refeicao: 'jantar', local: 'Universal CityWalk · 6000 Universal Blvd, Suite 735',
       alternativas: [],
-      precisaReserva: true, janelaAbre: null, janelaHora: null,
-      canal: 'App / site da Universal Orlando', blocoId: 'b-1711-1845',
-      statusPadrao: 'confirmado', confirmacaoPadrao: '639247504692187392',
-      nota: 'RESERVADO em 11/09 — confirmação 639247504692187392, duas pessoas, 18h45. ' +
-            'Frutos do mar e carnes, com aquário no meio do salão. Pratos principais de ' +
-            'US$ 35 a 49, nos preços de 2025.' },
-
-    { id: 'r-confisco', nome: 'Confisco Grille', data: '2026-11-19', hora: '11:40',
-      refeicao: 'almoco', local: 'Islands of Adventure · Port of Entry', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Chegar direto', blocoId: 'b-1911-1140',
-      nota: 'Mesa com garçom na entrada do parque, cozinha internacional. Pratos de US$ 21 a 35.' },
+      canal: 'Chegar direto após o fechamento do parque', blocoId: 'b-1711-1845',
+      nota: 'Rede must-go encaixada no caminho natural da saída. Substitui o Lombard’s e ' +
+            'recupera a última meia hora do Universal Studios.' },
 
     { id: 'r-kres', nome: 'Kres Chophouse', data: '2026-11-18', hora: '17:45',
       refeicao: 'jantar', local: 'Centro de Orlando · 17 W Church St',
@@ -8036,6 +8065,14 @@ window.ROTEIRO = {
       nota: 'RESERVADO — confirmação 2110248556, duas pessoas, 17h45. Steakhouse no centro de ' +
             'Orlando: do prato à catraca do Kia Center são cinco minutos a pé. Avisem na ' +
             'chegada que vocês têm hora.' },
+
+    { id: 'r-panda', nome: 'Panda Express', data: '2026-11-18', hora: '13:00',
+      refeicao: 'almoco', local: 'Millenia · 4064 Millenia Blvd',
+      alternativas: ['Praça de alimentação do Mall at Millenia, se a unidade ainda não tiver aberto'],
+      precisaReserva: false, janelaAbre: null, janelaHora: null,
+      canal: 'Balcão, sem reserva', blocoId: 'b-1811-1300',
+      nota: 'A página oficial ainda marcava a unidade como “coming soon” em 18/09. A ' +
+            'pendência de 25/10 confirma a inauguração sem comprometer o restante do dia.' },
 
     { id: 'r-mythos', nome: 'Mythos', data: '2026-11-19', hora: '19:15',
       refeicao: 'jantar', local: 'Islands of Adventure · Lost Continent',
@@ -8048,12 +8085,12 @@ window.ROTEIRO = {
             'melhor restaurante de parque temático. Pratos de US$ 26 a 42. A Universal diz que ' +
             'ele fecha em 2027, com a demolição da Lost Continent, ainda sem data.' },
 
-    { id: 'r-sofrito', nome: 'Sofrito Latin Cafe', data: '2026-11-25', hora: '12:35',
-      refeicao: 'almoco', local: 'Lake Buena Vista · 8607 Palm Pkwy', alternativas: [],
+    { id: 'r-shake-shack', nome: 'Shake Shack', data: '2026-11-25', hora: '12:35',
+      refeicao: 'almoco', local: 'Orlando Vineland Premium Outlets · 8200 Vineland Ave', alternativas: [],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Balcão, sem reserva', blocoId: 'b-2511-1235',
-      nota: 'Cozinha latina: frango assado, pernil, empanadas, sanduíche cubano. Faixa de US$ ' +
-            '3 a 15. Balcão: não leva gorjeta.' },
+      nota: 'Hambúrguer, crinkle fries e shake no próprio outlet. Pedido leve porque o ' +
+            'Homecomin’ é o jantar de despedida às 19h30.' },
 
     { id: 'r-homecomin', nome: 'Homecomin’', data: '2026-11-25', hora: '19:30',
       refeicao: 'jantar', local: 'Disney Springs · Town Center',
@@ -8085,28 +8122,31 @@ window.ROTEIRO = {
             'chegada: confiram no app antes de entrar na Super Nintendo World. Pico do ' +
             'almoço das 11h30 às 13h30. Faixa $ no mapa oficial: até US$ 15 por pessoa.' },
 
-    { id: 'r-atlantic', nome: 'Atlantic', data: '2026-11-20', hora: '17:00',
-      refeicao: 'jantar', local: 'Epic Universe · Celestial Park',
-      alternativas: ['Mead Hall (Isle of Berk, sem reserva)'],
-      precisaReserva: true, janelaAbre: null, janelaHora: null,
-      canal: 'App / site da Universal Orlando', blocoId: 'b-2011-1700',
-      statusPadrao: 'confirmado', confirmacaoPadrao: '639251824607987840',
-      nota: 'RESERVADO — confirmação 639251824607987840, duas pessoas, 17h. Cheguem ' +
-            '5 minutos antes: a mesa é segurada só por 15 minutos. Às 17h de propósito — o ' +
-            'jantar cedo libera as três últimas horas para o Ministry e o Mine-Cart. Pratos de ' +
-            'US$ 35 a 48.' },
+    { id: 'r-canes', nome: 'Raising Cane’s', data: '2026-11-20', hora: '20:40',
+      refeicao: 'jantar', local: 'International Drive · 8718 International Dr',
+      alternativas: ['Drive-thru da mesma unidade se a saída do Ministry atrasar'],
+      precisaReserva: false, janelaAbre: null, janelaHora: null,
+      canal: 'Balcão ou drive-thru', blocoId: 'b-2011-2025-canes',
+      nota: 'Chicken fingers, fritas, Texas toast e Cane’s Sauce depois do fechamento. ' +
+            'Substitui o Atlantic e devolve o bloco das 17h ao Epic.' },
 
-    { id: 'r-cilantrillo', nome: 'El Cilantrillo', data: '2026-11-24', hora: '12:45',
-      refeicao: 'almoco', local: 'Old Town Kissimmee',
+    { id: 'r-dennys', nome: 'Denny’s', data: '2026-11-24', hora: '08:30',
+      refeicao: 'cafe', local: 'US-192 · 4783 W Irlo Bronson Memorial Hwy', alternativas: ['Café do hotel'],
+      precisaReserva: false, janelaAbre: null, janelaHora: null,
+      canal: 'Chegar direto', blocoId: 'b-2411-0800',
+      nota: 'Segundo diner clássico da viagem, sem repetir o IHOP. Aberto 24 horas e perto do hotel.' },
+
+    { id: 'r-olive-garden', nome: 'Olive Garden', data: '2026-11-24', hora: '12:45',
+      refeicao: 'almoco', local: 'US-192 · 5021 W Irlo Bronson Memorial Hwy',
       alternativas: ['World Food Trucks, trocando com o jantar se houver chuva prevista à noite'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
-      canal: 'Chegar direto — aceita reserva pelo Yelp ou +1 407-204-9685', blocoId: 'b-2411-1230',
-      nota: 'Porto-riquenho de mesa, dentro do Old Town: mofongo, pernil, pargo frito. Pratos ' +
-            'da rede perto de US$ 20. Na sexta, das 11h à meia-noite.' },
+      canal: 'Chegar direto ou entrar na lista pelo app', blocoId: 'b-2411-1230',
+      nota: 'Massas, sopas, saladas e breadsticks. A rede de mesa fica no dia sem parque, ' +
+            'quando uma hora sentados não consome ingresso.' },
 
     { id: 'r-world-food-trucks', nome: 'World Food Trucks', data: '2026-11-24', hora: '18:30',
       refeicao: 'jantar', local: 'W Irlo Bronson, a 300 m do Old Town',
-      alternativas: ['El Cilantrillo, trocando com o almoço se houver chuva prevista à noite'],
+      alternativas: ['Olive Garden, trocando com o almoço se houver chuva prevista à noite'],
       precisaReserva: false, janelaAbre: null, janelaHora: null,
       canal: 'Chegar direto', blocoId: 'b-2411-1830',
       nota: 'Mais de 100 food trucks, das 11h às 2h todos os dias. Estacionamento grátis. ' +
@@ -8357,8 +8397,16 @@ window.ROTEIRO = {
 
     { id: 'ck-lombards', dataAlvo: '2026-09-11', dataEstimada: false, hora: null, fuso: null,
       janelaReserva: false, critico: true, feitoPadrao: true,
-      texto: 'Lombard’s Seafood Grille (17/11, 18h45) — RESERVADO, confirmação 639247504692187392',
-      restauranteIds: ['r-lombards'] },
+      texto: 'Lombard’s Seafood Grille (17/11, 18h45) — reserva anterior, substituída por Bubba Gump',
+      nota: 'Confirmação 639247504692187392. A reserva foi feita em 11/09 e agora precisa ser cancelada no item separado.',
+      restauranteIds: [] },
+
+    { id: 'ck-cancel-lombards', dataAlvo: '2026-09-18', validaAte: '2026-11-17', dataEstimada: false,
+      hora: null, fuso: null, janelaReserva: false, critico: true,
+      texto: 'Cancelar o Lombard’s de 17/11 às 18h45 — confirmação 639247504692187392',
+      nota: 'O roteiro agora usa até o fechamento do Universal Studios e janta no Bubba Gump, ' +
+            'no CityWalk. Cancelar pelo app/conta da Universal ou pelo +1 407-224-3663.',
+      restauranteIds: [] },
 
     { id: 'ck-homecomin', dataAlvo: '2026-09-26', validaAte: '2026-11-25', dataEstimada: false,
       hora: '06:00', fuso: 'ET', janelaReserva: true, critico: true,
@@ -8373,8 +8421,24 @@ window.ROTEIRO = {
 
     { id: 'ck-atlantic', dataAlvo: '2026-09-11', dataEstimada: false,
       hora: null, fuso: null, janelaReserva: false, critico: true, feitoPadrao: true,
-      texto: 'Atlantic (20/11, 17h) — RESERVADO, confirmação 639251824607987840',
-      restauranteIds: ['r-atlantic'] },
+      texto: 'Atlantic (20/11, 17h) — reserva anterior, substituída por Raising Cane’s após o parque',
+      nota: 'Confirmação 639251824607987840. A reserva agora precisa ser cancelada no item separado.',
+      restauranteIds: [] },
+
+    { id: 'ck-cancel-atlantic', dataAlvo: '2026-09-18', validaAte: '2026-11-20', dataEstimada: false,
+      hora: null, fuso: null, janelaReserva: false, critico: true,
+      texto: 'Cancelar o Atlantic de 20/11 às 17h — confirmação 639251824607987840',
+      nota: 'O bloco das 17h voltou para o Epic e o jantar passa a ser no Raising Cane’s após ' +
+            'o fechamento. Cancelar pelo app/conta da Universal ou pelo +1 407-224-3663.',
+      restauranteIds: [] },
+
+    { id: 'ck-panda-millenia', dataAlvo: '2026-10-25', validaAte: '2026-11-18', dataEstimada: true,
+      motivoData: 'A página oficial ainda mostrava “coming soon” em 18/09',
+      hora: null, fuso: null, janelaReserva: false, critico: false,
+      texto: 'Confirmar que o Panda Express da 4064 Millenia Blvd já abriu',
+      nota: 'Se ainda não tiver aberto, almocem na praça de alimentação do Mall at Millenia. ' +
+            'Não mudem o restante do dia nem atravessem Orlando por outra unidade.',
+      restauranteIds: ['r-panda'] },
 
     { id: 'ck-powerband', dataAlvo: '2026-10-15', validaAte: '2026-11-19', dataEstimada: true, motivoData: 'Prazo de outubro, com folga para o site do parque', hora: null, fuso: null,
       janelaReserva: false, critico: false,
@@ -8666,9 +8730,10 @@ window.ROTEIRO = {
       texto: 'HOJE, no portão: a grade do desfile da Macy’s, do CineSational e do Bourne',
       nota:
         'O DESFILE DA MACY’S É O MAIS INCERTO DA VIAGEM. O dia assume 17h30, mas em anos ' +
-        'anteriores ele rodou tanto às 17h30 quanto às 19h30 — duas horas de diferença. Três ' +
-        'blocos dependem dele e se ajustam à mão: o desfile e o jantar no Lombard’s, que tem ' +
-        'reserva e se remarca pelo app da Universal. O fechamento já está confirmado às 19h.\n\n' +
+        'anteriores ele rodou tanto às 17h30 quanto às 19h30 — duas horas de diferença. A ' +
+        'reta final depende dele e se ajusta à mão: desfile, últimos minutos de parque e ' +
+        'Bubba Gump. O jantar fica fora da catraca e não tem reserva, então protejam primeiro ' +
+        'o fechamento já confirmado às 19h.\n\n' +
         'E O CINESATIONAL: o show noturno da lagoa, que o mapa oficial lista e o roteiro não ' +
         'usa, costuma rodar no fechamento — a hora em que vocês saem. Se estiver na grade de ' +
         'hoje, decidam de manhã: ficar para ele custa a saída no pico.\n\n' +
@@ -8680,11 +8745,11 @@ window.ROTEIRO = {
       texto: 'HOJE, no portão: a hora da projeção no castelo de Hogwarts',
       nota:
         'A projeção de Hogsmeade à noite é o único bloco de show do dia e o roteiro assume ' +
-        '18h50. Na temporada de Natal ela roda em sessões curtas e repetidas, com a grade ' +
+        '18h30. Na temporada de Natal ela roda em sessões curtas e repetidas, com a grade ' +
         'publicada no app da Universal no próprio dia.\n\n' +
         'ATENÇÃO À COLISÃO COM O MYTHOS: o jantar é às 19h15, com reserva e tolerância curta. ' +
         'Se a sessão da projeção for depois das 19h, vejam uma sessão mais cedo ou deixem a ' +
-        'projeção para depois do jantar — a saída é só às 20h30.',
+        'projeção de fora — o parque fecha às 19h e o jantar não pode esperar.',
       restauranteIds: [] },
 
     { id: 'ck-show-2011', dataAlvo: '2026-11-20', validaAte: '2026-11-20', hora: '08:50',
@@ -8692,9 +8757,9 @@ window.ROTEIRO = {
       texto: 'HOJE, no portão: a grade do The Untrainable Dragon e das festas de Natal',
       nota:
         'O UNTRAINABLE DRAGON É O ÚNICO SHOW DE TEATRO DO DIA e o roteiro assume 16h30, com a ' +
-        'fila às 16h10. Ele está colado no jantar do Atlantic às 17h, que tem reserva: se a ' +
-        'sessão for mais tarde, ou vocês pegam uma sessão anterior, ou o show sai do dia. ' +
-        'Decidam de manhã, não às 16h.\n\n' +
+        'fila às 16h10. Depois dele existe um bloco flexível até o Ministry: se a sessão mudar, ' +
+        'absorvam o atraso nesse bloco, sem mexer no Battle das 18h30. Decidam de manhã, não ' +
+        'às 16h.\n\n' +
         'CONFIRAM TAMBÉM as fontes coreografadas do Celestial Park e as celebrações de Natal ' +
         'de Berk e da Place Cachée, que estreiam com a temporada em 14/11. A Universal publica ' +
         'a grade delas no app no próprio dia.\n\n' +
@@ -9342,10 +9407,11 @@ window.ROTEIRO = {
     { id: 'tel-universal-dining', nome: 'Universal — reservas de restaurante',
       numero: '+1 407-224-3663',
       quando:
-        'Remarcar ou cancelar o Lombard’s (17/11, 18h45), o Atlantic (19/11, 17h) e o Mythos ' +
-        '(23/11, 19h15). Dá para fazer pela conta da Universal no app também. No Atlantic e ' +
-        'no Mythos, a mesa é segurada só por 15 minutos depois do horário.',
-      verificado: '2026-09-11', fonte: 'confirmações das reservas do Atlantic e do Mythos' },
+        'Cancelar as reservas antigas do Lombard’s (17/11, 18h45) e do Atlantic (20/11, 17h), ' +
+        'que foram substituídas no roteiro; e remarcar ou cancelar o Mythos (19/11, 19h15). ' +
+        'Dá para fazer pela conta da Universal no app também. No Mythos, a mesa é segurada ' +
+        'só por 15 minutos depois do horário.',
+      verificado: '2026-09-18', fonte: 'confirmações das reservas da Universal' },
 
     { id: 'tel-boathouse', nome: 'The Boathouse — direto',
       numero: '+1 407-939-2628',
@@ -9473,15 +9539,14 @@ window.ROTEIRO = {
         'grupos grandes às vezes têm gratuity incluída — confira antes de somar duas vezes.\n\n' +
         'Onde NÃO se dá gorjeta: balcão e mobile order. Ou seja, Columbia Harbour House, ' +
         'Casey’s, Satu’li Canteen, Three Broomsticks, Docking Bay 7, as barracas do Food & ' +
-        'Wine, Leaky Cauldron, Toadstool Cafe, Chick-fil-A, World Food Trucks, ' +
-        'Plant Street Market, Sofrito e os restaurantes do plano de refeição do SeaWorld e do ' +
+        'Wine, Leaky Cauldron, Toadstool Cafe, Wendy’s, Five Guys, Panda Express, Raising ' +
+        'Cane’s, Shake Shack, Chick-fil-A, World Food Trucks, Plant Street Market e os ' +
+        'restaurantes do plano de refeição do SeaWorld e do ' +
         'Busch Gardens, inclusive o Dragon Fire.\n\n' +
         'Onde se dá: The Boathouse, Nomad Lounge, Sanaa, Columbia, Oga’s, ' +
-        'Lombard’s, Cheesecake Factory, Kres, Atlantic, IHOP, El Cilantrillo, Red Lobster, ' +
-        'Confisco Grille, Mythos e Homecomin’ — e o Uber (opcional, mas comum).\n\n' +
-        'O FORD’S GARAGE, NO DIA 12, JÁ COBRA 20% DE TAXA DE SERVIÇO NA CONTA, no lugar da ' +
-        'gorjeta: não somem outra por cima.',
-      pesquisa: '2026-09-11',
+        'Bubba Gump, Kres, IHOP, Denny’s, Olive Garden, Red Lobster, Mythos e Homecomin’ — e ' +
+        'o Uber (opcional, mas comum).',
+      pesquisa: '2026-09-18',
     },
     {
       id: 'dica-rope-drop',
@@ -10096,8 +10161,8 @@ window.ROTEIRO = {
       porque: 'Vinte centímetros de diâmetro e quatrocentos gramas: a rosquinha rosa do Homer ' +
               'feita de verdade. É o item mais icônico do parque fora do mundo do Harry Potter ' +
               'e a foto de Springfield.',
-      dica: 'Uma para o casal, jamais duas. Não comam perto do jantar no Lombard’s às 18h45 — ' +
-            'ela mata a fome dos dois. A licença dos Simpsons vence por volta de 2027: vale ' +
+      dica: 'Uma para o casal, jamais duas. Ela é enorme e o jantar no Bubba Gump vem logo ' +
+            'depois do fechamento — provem cedo ou guardem parte. A licença dos Simpsons vence por volta de 2027: vale ' +
             'reconferir perto da viagem se Springfield ainda está de pé.',
       pesquisa: '2026-09-17' },
 
@@ -10141,12 +10206,12 @@ window.ROTEIRO = {
     { id: 'g-voodoo', nome: 'Voodoo Doll doughnut', tipo: 'doce',
       onde: 'CityWalk · Voodoo Doughnut, ao lado do NBC Sports Grill & Brew',
       localId: 'citywalk', dias: ['d-2026-11-17'],
-      quando: 'na saída pelo CityWalk, às 20h',
+      quando: 'na saída pelo CityWalk, depois do Bubba Gump, por volta das 20h45',
       preco: 'US$ 5–7 a unidade · US$ 26–35 a caixa de doze', prioridade: 'imperdivel',
       porque: 'A marca de Portland que virou culto. O boneco de vodu recheado de geleia de ' +
               'framboesa com a estaca de pretzel é o doce mais reconhecível do CityWalk.',
-      dica: 'Encaixa exatamente na saída das 20h. Façam o pedido pelo app da Universal de ' +
-            'dentro do parque e retirem na janela expressa: a fila do balcão à noite é longa. ' +
+      dica: 'Façam o pedido pelo app da Universal durante o jantar e retirem na janela ' +
+            'expressa ao sair: a fila do balcão à noite é longa. ' +
             'O Bacon Maple Bar é o sabor que mais divide opinião e vale provar junto.',
       pesquisa: '2026-09-17' },
 
@@ -10154,12 +10219,13 @@ window.ROTEIRO = {
     { id: 'g-crepe-bierraubeurre', nome: 'Crepe de cerveja amanteigada', tipo: 'doce',
       onde: 'Epic Universe · Ministry of Magic, no Café L’air de la Sirène',
       localId: 'epic-universe', dias: ['d-2026-11-20'],
-      quando: 'na passagem pelo Ministry, às 18h20',
+      quando: 'na entrada da Place Cachée, antes do Battle, somente se o mobile order estiver pronto',
       preco: 'US$ 19–22', prioridade: 'imperdivel',
       porque: 'É o item-assinatura do Wizarding World francês e o único lugar do mundo onde a ' +
               'cerveja amanteigada vira crepe. A porção é grande, feita para dividir.',
       dica: 'Peçam pelo app da Universal: o balcão do Café é o pior gargalo da área. Um crepe ' +
-            'para os dois — o jantar no Atlantic é às 17h e não sobra espaço para mais.',
+            'para os dois; se a retirada ameaçar a entrada no Battle às 18h30, deixem passar. ' +
+            'O jantar no Cane’s fica para depois do fechamento.',
       pesquisa: '2026-09-17' },
 
     { id: 'g-giggle-water', nome: 'Giggle Water', tipo: 'bebida',
@@ -10201,13 +10267,13 @@ window.ROTEIRO = {
     { id: 'g-bar-zenith', nome: 'Coquetel do Bar Zenith', tipo: 'bebida',
       onde: 'Epic Universe · Celestial Park, no Bar Zenith, de frente para as fontes',
       localId: 'epic-universe', dias: ['d-2026-11-20'],
-      quando: 'no fim da tarde, a dois minutos do jantar no Atlantic',
+      quando: 'no bloco flexível das 17h, diante das fontes do Celestial Park',
       preco: 'US$ 15–17 os coquetéis · US$ 7–8 o mocktail', prioridade: 'se-der',
       porque: 'É o bar mais bonito do parque, e o Meteor Strike vem com brilho de ouro ' +
               'comestível e um cubo de açúcar flamejante. O brinde do casal, com as fontes ' +
               'coreografadas ao fundo.',
-      dica: 'Fica a dois minutos a pé do Atlantic: sentem ali antes de entrar para o jantar. O ' +
-            'Eccentric Orbit é a alternativa barata e foi eleito o melhor sem álcool do parque.',
+      dica: 'Use como pausa curta no bloco das 17h, antes de seguir ao Ministry. O Eccentric ' +
+            'Orbit é a alternativa barata e foi eleito o melhor sem álcool do parque.',
       pesquisa: '2026-09-17' },
 
     /* ---- 22/11 · SeaWorld, com o All-Day Dining do ingresso ---- */

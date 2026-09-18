@@ -354,9 +354,10 @@ O parque de rua, não de castelo: quarteirões de Nova York e São Francisco mon
 | **15h50** | **E.T. Adventure** | Meio-período desde maio de 2026 — confiram se está operando |
 | **16h30** | **The Bourne Stuntacular** | O melhor show de Orlando. Sessão marcada |
 | **17h30** | **Holiday Parade featuring Macy's** | ⚠️ **HORA A CONFIRMAR** — pode ser 17h30 ou 19h30 |
-| **18h45** | **Jantar — Lombard's Seafood Grille** | Reservado. Frutos do mar na San Francisco, a dois minutos do Beco |
-| **20h00** | **CityWalk** | Funciona das 8h à meia-noite. Vinte e cinco minutos na saída |
-| **20h25** | Voltar | Chamem o Uber no ponto próprio do CityWalk |
+| **18h30** | **Última meia hora dentro do parque** | Springfield, Beco Diagonal ou uma repetição curta; saiam só no fechamento |
+| **19h20** | **Jantar — Bubba Gump Shrimp Co.** | No CityWalk, já fora da catraca. A rede must-go não toma tempo de parque |
+| **20h45** | **CityWalk** | Voodoo Doughnut e volta curta. Funciona das 8h à meia-noite |
+| **21h10** | Voltar | Chamem o Uber no ponto próprio do CityWalk |
 
 ### Filas
 
@@ -409,15 +410,15 @@ Hagrid's na abertura, que é a única janela abaixo de uma hora, e depois uma vo
 | **8h15** | Portão — a catraca abre antes das 9h e a espera é na corda da Seuss Landing. Quando soltar, pela esquerda, sentido Hogsmeade | |
 | **9h00** | **Hagrid's** — rope drop. 30–65 min na abertura, mais de 2h depois | Hogsmeade |
 | **10h30** | **Forbidden Journey** — a fila atravessa o castelo | Hogsmeade |
-| **11h40** | **Almoço — Confisco Grille** — mesa com garçom, pratos de US$ 21 a 35 | Port of Entry |
-| **12h45** | **Hulk** — detector de metal | Marvel |
-| **13h35** | **Spider-Man** | Marvel |
-| **14h15** | Parada — dez minutos. Banheiro ao lado do Captain America Diner | Marvel |
-| **14h35** | **Kong** | Skull Island |
-| **15h20** | **Jurassic Park River Adventure** — molha. Reaberto depois da reforma | Jurassic Park |
-| **16h05** | **VelociCoaster** — fila normal, bloco de uma hora e meia | Jurassic Park |
-| **17h40** | **Hogwarts Express** — ida e volta, filmes diferentes. Precisa park-to-park | Hogsmeade |
-| **18h50** | **Hogsmeade à noite · projeção no castelo** — a segunda vez, quinze minutos antes do jantar. A cada 20 min | Hogsmeade |
+| **11h40** | **Lanche salgado rápido** — escolham o balcão com menor fila no caminho | Seuss Landing / Port of Entry |
+| **12h15** | **Hulk** — detector de metal | Marvel |
+| **13h05** | **Spider-Man** | Marvel |
+| **13h45** | Parada — dez minutos. Banheiro ao lado do Captain America Diner | Marvel |
+| **14h05** | **Kong** | Skull Island |
+| **14h50** | **Jurassic Park River Adventure** — molha. Reaberto depois da reforma | Jurassic Park |
+| **15h35** | **VelociCoaster** — fila normal, bloco de uma hora e meia | Jurassic Park |
+| **17h15** | **Hogwarts Express** — ida e volta, filmes diferentes. Precisa park-to-park | Hogsmeade |
+| **18h30** | **Hogsmeade à noite · projeção no castelo** — a segunda vez, quinze minutos. A cada 20 min | Hogsmeade |
 | **19h15** | **Jantar — Mythos** — reservado, pratos de US$ 26 a 42. Cheguem às 19h10 | Lost Continent |
 | **20h30** | Saída — hotel por volta das 21h30 | |
 
@@ -454,9 +455,11 @@ O parque mais concorrido de Orlando, **no dia mais vazio da segunda metade da vi
 | **15h35** | **Parada em Berk** | 25 min. Água, banheiro, sentar |
 | **16h10** | Fila do teatro | Plateia por ordem de chegada. Meio do teatro |
 | **16h30** | **The Untrainable Dragon** | O maior show do Epic, 20 min. Horário sai no app no próprio dia |
-| **17h00** | **Jantar — Atlantic** | **Reservado.** A mesa espera só 15 min — cheguem 16h55 |
+| **17h00** | **Celestial Park e lanche flexível** | Sem mesa: fontes, Bar Zenith ou um item rápido. Às 18h20, sigam ao Ministry |
 | **18h30** | **Harry Potter and the Battle at the Ministry** | **A noite inteira é dele.** Mede 135 min às 18h e cai para 45–75 nas últimas duas ou três horas. Na saída vocês caem na Place Cachée já escura e decorada |
-| **20h00** | Sair — carro | Pelo Celestial Park iluminado até o estacionamento |
+| **20h00** | Sair e dirigir ao Raising Cane’s | Pelo Celestial Park iluminado; depois, cerca de 15 min até 8718 International Dr |
+| **20h40** | **Jantar — Raising Cane’s** | Balcão ou drive-thru. Entra depois do fechamento e não consome tempo de parque |
+| **21h25** | Voltar ao hotel | De carro. Amanhã a manhã é livre |
 
 ### O rope drop é na Dark Universe
 
@@ -475,11 +478,11 @@ Ou seja: às 10h os hóspedes de hotel já estão há uma hora no Battle at the 
 | Hiccup's Wing Gliders | 35–41 min | cedo; pior por volta das 17h |
 | Dragon Racer's Rally · Yoshi · Stardust | 18–37 min | meio do dia |
 | Monsters Unchained | 13–15 min | enche logo depois da abertura |
-Com o fechamento oficial às 20h, o **Battle at the Ministry** ocupa a reta final, das 18h30 até a saída. O Mine-Cart fica nas renúncias: tentar encaixar os dois eliminaria a tarde em Berk. O Atlantic está **reservado** para as 17h, duas pessoas. A Universal pede chegada 5 minutos antes e **segura a mesa só por 15 minutos** — o The Untrainable Dragon termina por volta das 16h50, em Berk, a três minutos do Atlantic, exatamente a folga pedida.
+Com o fechamento oficial às 20h, o **Battle at the Ministry** ocupa a reta final, das 18h30 até a saída. O Mine-Cart fica nas renúncias: tentar encaixar os dois eliminaria a tarde em Berk. O antigo jantar de mesa das 17h virou um bloco flexível no Celestial Park: é pausa, lanche e proteção contra atrasos. O jantar de verdade passa para o **Raising Cane’s depois do fechamento**.
 
 ### O show da tarde
 
-**The Untrainable Dragon** é o maior show do Epic: atores, bonecos enormes e um Banguela mecânico de meia tonelada e oito metros de envergadura voando por cima da plateia, em 20 minutos. A sessão das 16h30 é a última antes do jantar. Em setembro de 2026 as sessões iam das 11h10 às 19h, a cada 50 minutos; se em novembro não houver sessão entre 16h15 e 16h35, a parada das 15h35 vira a pausa inteira e o show fica de fora. Remarcar ou cancelar: app da Universal ou **+1 407-224-3663**. Se perderem a mesa, o **Mead Hall** (Isle of Berk) não aceita reserva e entra no lugar.
+**The Untrainable Dragon** é o maior show do Epic: atores, bonecos enormes e um Banguela mecânico de meia tonelada e oito metros de envergadura voando por cima da plateia, em 20 minutos. Em setembro de 2026 as sessões iam das 11h10 às 19h, a cada 50 minutos. Se a sessão de novembro mudar, o bloco flexível das 17h absorve o atraso; o compromisso que não deve andar é o Battle às 18h30.
 
 ### O guia oficial da Universal
 
@@ -491,12 +494,12 @@ A Super Nintendo World ganha decoração **pela primeira vez**, Berk faz o **Sno
 
 ### Planos
 
-- **B — a Dark Universe voltou para o EPA.** Battle at the Ministry às 10h; Monsters e Curse depois do jantar.
-- **C2 — chuva ou frio.** Monsters, Ministry, o teatro do Untrainable Dragon, Toadstool e Atlantic são cobertos.
+- **B — a Dark Universe voltou para o EPA.** Battle at the Ministry às 10h; Monsters e Curse na reta final.
+- **C2 — chuva ou frio.** Monsters, Ministry, o teatro do Untrainable Dragon e Toadstool são cobertos; o bloco das 17h pode ser feito sob cobertura.
 
 ### Renúncias
 
-**Mine-Cart Madness** (fila média de 165 minutos; custaria a reta final do Battle at the Ministry), **Le Cirque Arcanus** (circo de Animais Fantásticos, 23 minutos e 10 de pré-show; resenhas divididas), **Fyre Drill** (encharca, e depois vêm o show e o jantar de mesa), **Constellation Carousel**, **Astronomica** e **Viking Training Camp** (áreas de brincar), **Bowser Jr. Shadow Showdown** (desafio da Power-Up Band, voltado a criança).
+**Mine-Cart Madness** (fila média de 165 minutos; custaria a reta final do Battle at the Ministry), **Le Cirque Arcanus** (circo de Animais Fantásticos, 23 minutos e 10 de pré-show; resenhas divididas), **Fyre Drill** (encharca antes do show e da reta final), **Constellation Carousel**, **Astronomica** e **Viking Training Camp** (áreas de brincar), **Bowser Jr. Shadow Showdown** (desafio da Power-Up Band, voltado a criança).
 
 **Power-Up Band:** comprem se quiserem jogar os desafios interativos da Super Nintendo World. ~US$ 40. Decisão no checklist de outubro.
 
@@ -621,8 +624,10 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [x] **11/09** — Columbia Restaurant (14/11, 12h30) — RESERVADO, confirmação 2110915279
 - [x] **11/09** — Kres Chophouse (18/11, 17h45) — RESERVADO, confirmação 2110248556
 - [x] **11/09** — Mythos (19/11, 19h15) — RESERVADO, confirmação 639251823318530048
-- [x] **11/09** — Lombard’s Seafood Grille (17/11, 18h45) — RESERVADO, confirmação 639247504692187392
-- [x] **11/09** — Atlantic (20/11, 17h) — RESERVADO, confirmação 639251824607987840
+- [x] **11/09** — Lombard’s Seafood Grille (17/11, 18h45) — reserva feita, depois substituída pelo Bubba Gump
+- [x] **11/09** — Atlantic (20/11, 17h) — reserva feita, depois substituída pelo Raising Cane’s após o parque
+- [ ] **18/09** — Cancelar o Lombard’s — confirmação 639247504692187392
+- [ ] **18/09** — Cancelar o Atlantic — confirmação 639251824607987840
 - [x] **12/09** — Magic Kingdom — sem reserva: almoço e jantar do dia 11 são de balcão (Columbia Harbour House e Casey’s)
 - [x] **12/09** — Magic Kingdom 11/11 — 9h às 22h, Early Entry 8h30 e os fogos às 20h
 - [x] **16/09** — Oga’s Cantina (15/11, 17h05) — RESERVADO, confirmação 356259476987
@@ -644,6 +649,7 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 - [ ] **25/10** — Ingressos Universal aparecendo no app — nos DOIS perfis *(data estimada)*
 - [ ] **25/10** — Ingressos SeaWorld e Busch Gardens (Promo Park) — com o plano de refeição *(data estimada)*
 - [ ] **25/10** — Ativar o roaming nas duas linhas e confirmar a cobertura na Colômbia *(data estimada)*
+- [ ] **25/10** — Confirmar que o Panda Express da 4064 Millenia Blvd já abriu *(data estimada)*
 
 **Novembro, antes de embarcar**
 - [x] **17/09** — Epic Universe em 20/11 — 10h às 20h, confirmado no app oficial
@@ -755,11 +761,11 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 | **Cerveja amanteigada frozen** | bebida | Hogsmeade e Beco Diagonal · Universal | US$ 9–10 no copo comum | É a bebida que define o Wizarding World, e a versão frozen é a que os dois parques vendem mais. Sem álcool, doce, com espuma de creme de manteiga por cima. O preço é o mesmo nos dois parques. O copo de souvenir custa mais que o dobro e a bebida é a mesma — peçam no copo comum. Frozen é a versão de calor; a quente só compensa em manhã fria. |
 | Cauldron Cake *(se der)* | doce | Sugarplum’s Sweet Shop, no Beco · e Honeydukes, em Hogsmeade | US$ 11–13 | Bolo de chocolate com buttercream imitando chamas, servido dentro de um caldeirãozinho de silicone que vai embora com vocês. É doce e souvenir pelo mesmo preço. O caldeirão é o motivo de comprar: um só, para dividir. O produto do Beco e o do Honeydukes são idênticos — não comprem nos dois. |
 | **Fishy Green Ale** | bebida | Universal Studios · Beco Diagonal, no The Hopping Pot, em Carkitt Market | US$ 7–8 | Creme gelado de menta e canela com ovas de blueberry que estouram no canudo grosso. É a bebida mais estranha e mais fotografada do Beco, e não existe em nenhum outro lugar de Orlando. É doce e cremosa: tomem antes do almoço, não depois, senão estraga o apetite. O canudo largo vem junto e é parte do brinquedo. |
-| **The Big Pink, a rosquinha do Homer** | doce | Universal Studios · Springfield, no Lard Lad Donuts | US$ 11–13 | Vinte centímetros de diâmetro e quatrocentos gramas: a rosquinha rosa do Homer feita de verdade. É o item mais icônico do parque fora do mundo do Harry Potter e a foto de Springfield. Uma para o casal, jamais duas. Não comam perto do jantar no Lombard’s às 18h45 — ela mata a fome dos dois. A licença dos Simpsons vence por volta de 2027: vale reconferir perto da viagem se Springfield ainda está de pé. |
+| **The Big Pink, a rosquinha do Homer** | doce | Universal Studios · Springfield, no Lard Lad Donuts | US$ 11–13 | Vinte centímetros de diâmetro e quatrocentos gramas: a rosquinha rosa do Homer feita de verdade. É o item mais icônico do parque fora do mundo do Harry Potter e a foto de Springfield. Uma para o casal, jamais duas. Ela é enorme e o jantar no Bubba Gump vem logo depois do fechamento — provem cedo ou guardem parte. A licença dos Simpsons vence por volta de 2027: vale reconferir perto da viagem se Springfield ainda está de pé. |
 | **Flaming Moe** | bebida | Universal Studios · Springfield, no Moe’s Tavern | US$ 8–10 | Refrigerante de laranja servido num copo de fundo duplo com gelo seco: sai fumaça de verdade da borda por alguns minutos. É o drink-espetáculo do parque e não tem álcool, então serve para os dois. A fumaça dura pouco — a foto é nos primeiros sessenta segundos. O copo é reutilizável e pode ser levado. Peçam junto com a Duff, no mesmo balcão. |
 | Duff Beer no Moe’s Tavern *(se der)* | bebida | Universal Studios · Springfield, no Moe’s Tavern e no Duff Brewery | US$ 11–14 o chope · US$ 9–12 a garrafa | É a cerveja do desenho existindo de verdade, servida dentro da réplica exata do bar do Moe, com o telefone do Bart e o Barney no banco. Existem Duff, Duff Lite e Duff Dry. O valor ali é o cenário, não o líquido — a cerveja é fraca. O Moe’s é balcão em pé e entra rápido; o Duff Brewery tem mesas ao ar livre e é melhor para o casal. |
-| **Sorvete do Florean Fortescue’s** | doce | Universal Studios · Beco Diagonal, no Florean Fortescue’s Ice-Cream Parlour | US$ 7–8 na casquinha · US$ 10–11 o sundae na taça | Sabores que só existem ali: Earl Grey com lavanda, sticky toffee pudding, chocolate com pimenta, salted caramel blondie e maçã verde. É sorveteria de verdade, com mesas, não quiosque. De dia a fila toma a rua: por isso está na volta das 20h. Earl Grey com lavanda e sticky toffee são os dois que ninguém acha fora dali — peçam uma casquinha de dois sabores em vez de duas. |
-| **Voodoo Doll doughnut** | doce | CityWalk · Voodoo Doughnut, ao lado do NBC Sports Grill & Brew | US$ 5–7 a unidade · US$ 26–35 a caixa de doze | A marca de Portland que virou culto. O boneco de vodu recheado de geleia de framboesa com a estaca de pretzel é o doce mais reconhecível do CityWalk. Encaixa exatamente na saída das 20h55. Façam o pedido pelo app da Universal de dentro do parque e retirem na janela expressa: a fila do balcão à noite é longa. O Bacon Maple Bar é o sabor que mais divide opinião e vale provar junto. |
+| **Sorvete do Florean Fortescue’s** | doce | Universal Studios · Beco Diagonal, no Florean Fortescue’s Ice-Cream Parlour | US$ 7–8 na casquinha · US$ 10–11 o sundae na taça | Sabores que só existem ali: Earl Grey com lavanda, sticky toffee pudding, chocolate com pimenta, salted caramel blondie e maçã verde. É sorveteria de verdade, com mesas, não quiosque. De dia a fila toma a rua: por isso a última meia hora de parque pode voltar ao Beco. Earl Grey com lavanda e sticky toffee são os dois que ninguém acha fora dali — peçam uma casquinha de dois sabores em vez de duas. |
+| **Voodoo Doll doughnut** | doce | CityWalk · Voodoo Doughnut, ao lado do NBC Sports Grill & Brew | US$ 5–7 a unidade · US$ 26–35 a caixa de doze | A marca de Portland que virou culto. O boneco de vodu recheado de geleia de framboesa com a estaca de pretzel é o doce mais reconhecível do CityWalk. Façam o pedido pelo app da Universal durante o jantar no Bubba Gump e retirem na janela expressa por volta das 20h45: a fila do balcão à noite é longa. O Bacon Maple Bar é o sabor que mais divide opinião e vale provar junto. |
 
 ### 19/11 (qui) — Islands of Adventure
 
@@ -776,11 +782,11 @@ Kumba (02/08/2026 — o Kumba's Revenge ainda não tem data), Stanley Falls (202
 
 | O quê | Tipo | Onde | Quanto | Por que e como |
 |---|---|---|---|---|
-| **Crepe de cerveja amanteigada** | doce | Epic Universe · Ministry of Magic, no Café L’air de la Sirène | US$ 19–22 | É o item-assinatura do Wizarding World francês e o único lugar do mundo onde a cerveja amanteigada vira crepe. A porção é grande, feita para dividir. Peçam pelo app da Universal: o balcão do Café é o pior gargalo da área. Um crepe para os dois — o jantar no Atlantic é às 17h e não sobra espaço para mais. |
+| **Crepe de cerveja amanteigada** | doce | Epic Universe · Ministry of Magic, no Café L’air de la Sirène | US$ 19–22 | É o item-assinatura do Wizarding World francês e o único lugar do mundo onde a cerveja amanteigada vira crepe. A porção é grande, feita para dividir. Peçam pelo app da Universal e só retirem se estiver pronto antes do Battle: o balcão é o pior gargalo da área. Um crepe para os dois; o jantar no Cane’s fica para depois do fechamento. |
 | **Giggle Water** | bebida | Epic Universe · Ministry of Magic, no Café L’air de la Sirène e no Le Gobelet Noir | US$ 13–15 | Spritz de prosecco com flor de sabugueiro e brilho âmbar: é a champanhe bruxa do cânone, criada para o Epic e sem equivalente nos outros parques. Sai mais rápido no Le Gobelet Noir, o bar escondido no Quartier de Nicolas Flamel, que quase sempre tem menos gente que o Café. Lá o Breuvage Sombre, de fruta escura com pérolas de iogurte, sai pela metade do preço e é sem álcool. |
 | **Hidromel do Gobber e Stoik’s Ale** | bebida | Epic Universe · Isle of Berk, no Mead Hall | US$ 13–15 cada · Yaknog US$ 7–8 | A hidromel servida no salão viking é a única do resort, e o Stoik’s Ale é o chope de casa criado para Berk. O Mead Hall é coberto e com ar-condicionado. No mesmo balcão peçam o Yaknog, a bebida de chocolate maltado com canela do cânone de Como Treinar Seu Dragão: é barata, gelada e a melhor foto da área. O salão é o refúgio do meio do dia. |
 | DK Crush Float *(se der)* | doce | Epic Universe · Super Nintendo World, no The Bubbly Barrel | US$ 12–14 · US$ 18–20 com a caneca-barril | Sorvete de banana com soda de abacaxi, casquinha, toffee e pipoca caramelizada. É o que vale parar em Super Nintendo World fora do Toadstool, e é diferente da versão do Japão. Mesmo sem a caneca vem uma colher do Donkey Kong. Como o almoço já é no Toadstool, deixem o float para depois da atração da noite. |
-| Coquetel do Bar Zenith *(se der)* | bebida | Epic Universe · Celestial Park, no Bar Zenith, de frente para as fontes | US$ 15–17 os coquetéis · US$ 7–8 o mocktail | É o bar mais bonito do parque, e o Meteor Strike vem com brilho de ouro comestível e um cubo de açúcar flamejante. O brinde do casal, com as fontes coreografadas ao fundo. Fica a dois minutos a pé do Atlantic: sentem ali antes de entrar para o jantar. O Eccentric Orbit é a alternativa barata e foi eleito o melhor sem álcool do parque. |
+| Coquetel do Bar Zenith *(se der)* | bebida | Epic Universe · Celestial Park, no Bar Zenith, de frente para as fontes | US$ 15–17 os coquetéis · US$ 7–8 o mocktail | É o bar mais bonito do parque, e o Meteor Strike vem com brilho de ouro comestível e um cubo de açúcar flamejante. O brinde do casal, com as fontes coreografadas ao fundo. Entra como pausa curta no bloco flexível das 17h, antes do Ministry. O Eccentric Orbit é a alternativa barata e foi eleito o melhor sem álcool do parque. |
 
 ### 21/11 (sáb) — Winter Garden e Solar Bears
 

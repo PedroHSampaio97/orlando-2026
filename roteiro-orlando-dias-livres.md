@@ -22,8 +22,8 @@ Os blocos marcados como **VAZIO PROPOSITAL** não são falha de planejamento. Re
 | **14h45** | Uber para o hotel · check-in | ~30 min, US$ 35–45 |
 | **15h15** | Check-in e largar as malas | O check-in abre às 15h; vocês chegam 15h15 |
 | **15h35** | **Walmart Supercenter** — 3250 Vineland Rd | 4 min do hotel, US$ 7–10. A lista completa, com marca e na ordem da loja, está no app. O Publix de 3221 Vineland Rd fica a 600 m, com deli |
-| **16h25** | Voltar ao hotel e guardar as compras | Caixa de 24 garrafas não atravessa o Disney Springs |
-| **16h30** | Comer alguma coisa | Seis horas desde o pouso |
+| **16h20** | Retirar o Wendy’s e voltar ao hotel | Pedido móvel no caminho. Caixa de 24 garrafas não atravessa o Disney Springs |
+| **16h30** | **Lanche leve — Wendy’s**, 4755 W Irlo Bronson | Pedido pequeno: o jantar no Boathouse é às 19h |
 | **16h55** | **Disney Springs** | Uber, ~20 min, US$ 15–25 |
 | | The Landing → Marketplace → Town Center | World of Disney é a maior loja Disney do mundo |
 | **19h00** | **Jantar — The Boathouse** (reserva) | |
@@ -45,8 +45,8 @@ Café de diner, compra de manhã, hotel à tarde e o calçadão do BoardWalk à 
 | **9h30** | Sair para o outlet | Uber, ~25 min, US$ 20–30. O Character Warehouse abre 10h |
 | **10h00** | **Orlando International Premium Outlets** — 4951 International Dr | ~25 min. O cupom do balcão custa US$ 10; o gratuito é o Savings Passport do Simon VIP Club, cadastrado antes de viajar |
 | | ↳ **Disney’s Character Warehouse**, dentro do mesmo outlet | Outlet oficial da Disney. Sobra de estoque e item descontinuado das lojas dos parques. Abre 10h de seg a sáb |
-| **13h00** | **Almoço — Ford's Garage**, dentro do outlet | Mesa com garçom. Sair da I-Drive para comer custaria dois Ubers e uma hora |
-| **14h30** | **VAZIO PROPOSITAL** — voltar ao hotel, piscina, dormir | Vocês vêm de Magic Kingdom até 22h no dia anterior |
+| **13h00** | **Almoço — Five Guys**, 4969 International Dr, dentro do outlet | Balcão, sem reserva e sem deslocamento extra |
+| **13h45** | **VAZIO PROPOSITAL** — voltar ao hotel, piscina, dormir | Vocês vêm de Magic Kingdom até 22h no dia anterior |
 | **17h30** | Sair para o BoardWalk | Uber **até o Swan**, ~30 min, US$ 25–35. A pé de lá |
 | **18h00** | **BoardWalk — a volta do lago** | Calçadão de madeira no Crescent Lake. Sem catraca, de graça |
 | **19h00** | **Jantar no BoardWalk** | Balcões do calçadão, sem reserva. Mesa com garçom só reservada |
@@ -119,7 +119,7 @@ Dia de cidade, não de parque. É também **a véspera do Islands of Adventure**
 | **10h00** | **Retirar o carro — Avis do Old Town** | Suíte 434. Carteira, PID, passaporte e cartão de crédito do condutor |
 | **10h30** | Sair para o Millenia | ~25 min de carro. Estacionamento grátis |
 | **11h00** | **The Mall at Millenia** — 4200 Conroy Rd | **Abre 11h.** Primeira parada: balcão da Macy's, **com passaporte** |
-| **13h00** | **Almoço no mall** | *The Cheesecake Factory* na entrada principal |
+| **13h00** | **Almoço — Panda Express**, 4064 Millenia Blvd | Balcão. A página oficial ainda marcava “coming soon” em 18/09; confirmar a inauguração em 25/10 |
 | **14h15** | **Best Buy do Millenia — retirar o Oakley** — 4155 Millenia Blvd | Pedido feito no app. Menos de 1 km do mall |
 | **14h40** | **Voltar ao hotel — deixar as compras** | **Não é descanso.** É a única janela de largar sacola antes da arena |
 | **16h00** | Sair para o centro | ~30 min |
@@ -197,26 +197,24 @@ Feira de sábado numa cidadezinha histórica pela manhã e hóquei no centro de 
 
 # 🚗 24/11 (terça) — Old Town
 
-O respiro depois de cinco dias seguidos fora do hotel. Café sem pressa no IHOP, manhã livre, almoço porto-riquenho no Old Town e, à noite, a rua e os food trucks. Antes disso, nada de tarefa crítica do dia — e, à noite, food trucks e o desfile de muscle cars, a três minutos do hotel.
+O respiro depois de cinco dias seguidos fora do hotel. Café sem pressa no Denny’s, manhã livre, almoço no Olive Garden e, à noite, a rua e os food trucks. Nada hoje consome tempo de parque.
 
 | Hora | O quê | Notas |
 |---|---|---|
-| **8h30** | **Café da manhã — IHOP**, 5184 W Irlo Bronson | Sem alarme. A 750 m do hotel, aberto desde as 6h. Ou o do hotel, incluso |
+| **8h30** | **Café da manhã — Denny’s**, 4783 W Irlo Bronson | Sem alarme. Aberto 24 horas. Ou o café do hotel, incluso |
 | **9h45** | **VAZIO PROPOSITAL** — manhã livre no hotel | É também a rede de segurança da Universal: o ingresso é de 14 dias com entrada ilimitada |
-| **12h45** | **Almoço — El Cilantrillo**, dentro do Old Town | Porto-riquenho de mesa: mofongo, pernil. Pratos perto de US$ 20 |
+| **12h45** | **Almoço — Olive Garden**, 5021 W Irlo Bronson | Massas, sopas, saladas e breadsticks. Mesa num dia sem parque |
 | **14h00** | **Old Town de dia** · Mine Blower opcional | Montanha-russa de madeira do Fun Spot, ao lado. Paga por brinquedo |
 | **15h30** | **VAZIO PROPOSITAL** — descanso no hotel | |
 | **17h20** | **Old Town Kissimmee** — 5770 W Irlo Bronson Memorial Hwy | Lojas, bares e Fun Spot. Pôr do sol por volta das 17h30 |
 | **18h30** | **Jantar — World Food Trucks**, 5811 W Irlo Bronson | Mais de 100 food trucks, a 300 m do Old Town. Estacionamento grátis |
-| **20h10** | Lugar na calçada | |
-
-| **21h15** | Voltar | Três minutos. Amanhã a saída é 8h |
+| **20h00** | Voltar | Três minutos. Amanhã a saída é 10h |
 
 **O carro:** ele já está com vocês desde o dia 18. A Avis fica dentro do Old Town e conta o aluguel em períodos de 24 horas — retirado às 10h do dia 18 e devolvido às 15h do dia 25, são sete diárias. **Pedágio:** o e-Toll Unlimited cobra de US$ 11 a 26 por dia de aluguel, com ou sem pedágio; sem ele, paga-se cada pedágio pela placa, mais US$ 6,95 só nos dias em que houve pedágio.
 
 **Os desfiles:** o de sexta é o dos muscle cars (1964 em diante) e o de sábado é o dos clássicos anteriores a 1985, os dois às 20h30 e de graça. Hoje é terça, e nenhum dos dois roda: a Trophy Row fica vazia, e a rua é das lojas, dos bares e do Fun Spot.
 
-**As refeições:** dia sem pressa é refeição fora. O IHOP é o café americano de diner; o do hotel é continental e vai até as 10h, segundo os sites de reserva. O World Food Trucks abre das 11h às 2h, e é à noite, com tudo aceso, que ele faz sentido. **Com chuva prevista para a noite, invertam:** food trucks no almoço e El Cilantrillo — salão fechado, aberto até a meia-noite na sexta — no jantar.
+**As refeições:** o Denny’s evita repetir o IHOP do dia 12; o Olive Garden fica no almoço, quando uma refeição de mesa não consome ingresso. O World Food Trucks abre das 11h às 2h e é à noite, com tudo aceso, que faz sentido. **Com chuva prevista para a noite, invertam:** food trucks no almoço e Olive Garden, em salão fechado, no jantar.
 
 **Rede de segurança da Universal:** se ficou faltando alguma coisa no Islands ou no Epic, esta manhã é o lugar mais barato para voltar — o ingresso é de 14 dias com entrada ilimitada e não gasta dia. O produto exato e a data de início da validade ainda dependem da agência.
 
@@ -234,7 +232,7 @@ A última noite. De manhã, o outlet do Vineland, Marshalls, Ross e Walgreens. O
 | **10h00** | De carro para o Vineland | ~15 min |
 | **10h15** | **Orlando Vineland Premium Outlets** — 8200 Vineland Ave | Abre às 10h. Horário estendido na semana da Black Friday |
 | **11h50** | **Marshalls** — Vineland Pointe, 7655 Lake St | Ao lado do outlet |
-| **12h35** | Almoço — **Sofrito Latin Cafe**, 8607 Palm Pkwy | Cozinha latina de balcão, US$ 3–15 |
+| **12h35** | Almoço — **Shake Shack**, 8200 Vineland Ave | Balcão no próprio outlet. Pedido leve: o Homecomin’ é às 19h30 |
 | **13h35** | **Ross** — 3231 Vineland Rd | Ao lado do Publix, a 600 m do Walmart do dia 10 |
 | **14h15** | **Walgreens** (5935 W Irlo Bronson) e **posto** (7-Eleven, 5880 W Irlo Bronson) | Vitaminas e cosméticos. No posto, paguem dentro da loja |
 | **15h00** | **Devolver o carro — Avis do Old Town** | Tanque cheio. Tolerância de 29 min |
